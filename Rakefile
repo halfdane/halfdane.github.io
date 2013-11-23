@@ -2,6 +2,7 @@ require "rubygems"
 require 'rake'
 require 'yaml'
 require 'time'
+require 'jekyll-import'
 
 SOURCE = "."
 CONFIG = {
@@ -24,7 +25,7 @@ module JB
       :theme_packages => "_theme_packages",
       :posts => "_posts"
     }
-    
+
     def self.base
       SOURCE
     end
@@ -36,9 +37,15 @@ module JB
       path.compact!
       File.__send__ :join, path
     end
-  
+
   end #Path
 end #JB
+
+task :import do
+  JekyllImport::Importers::WordpressDotCom.run({
+    "source" => "wordpress.xml"
+  })
+end
 
 # Usage: rake post title="A Title" [date="2012-02-09"] [tags=[tag1,tag2]] [category="category"]
 desc "Begin a new post in #{CONFIG['posts']}"
@@ -58,7 +65,7 @@ task :post do
   if File.exist?(filename)
     abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
   end
-  
+
   puts "Creating new post: #{filename}"
   open(filename, 'w') do |post|
     post.puts "---"
@@ -84,7 +91,7 @@ task :page do
   if File.exist?(filename)
     abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
   end
-  
+
   mkdir_p File.dirname(filename)
   puts "Creating new page: #{filename}"
   open(filename, 'w') do |post|
@@ -106,7 +113,7 @@ end # task :preview
 task :switch_theme => "theme:switch"
 
 namespace :theme do
-  
+
   # Public: Switch from one theme to another for your blog.
   #
   # name - String, Required. name of the theme you want to switch to.
@@ -141,16 +148,16 @@ namespace :theme do
           page.puts "---"
           page.puts "layout: default"
           page.puts "---"
-        end 
+        end
         page.puts "{% include JB/setup %}"
-        page.puts "{% include themes/#{theme_name}/#{File.basename(filename)} %}" 
+        page.puts "{% include themes/#{theme_name}/#{File.basename(filename)} %}"
       end
     end
-    
+
     puts "=> Theme successfully switched!"
     puts "=> Reload your web-page to check it out =)"
   end # task :switch
-  
+
   # Public: Install a theme using the theme packager.
   # Version 0.1.0 simple 1:1 file matching.
   #
@@ -174,7 +181,7 @@ namespace :theme do
     end
 
     packaged_theme_path = JB::Path.build(:theme_packages, :node => name)
-    
+
     abort("rake aborted!
       => ERROR: 'name' cannot be blank") if name.empty?
     abort("rake aborted! 
@@ -183,19 +190,19 @@ namespace :theme do
       => To download+install run: `rake theme:install git='[PUBLIC-CLONE-URL]'`
       => example : rake theme:install git='git@github.com:jekyllbootstrap/theme-the-program.git'
     ") unless FileTest.directory?(packaged_theme_path)
-    
+
     manifest = verify_manifest(packaged_theme_path)
-    
+
     # Get relative paths to packaged theme files
     # Exclude directories as they'll be recursively created. Exclude meta-data files.
     packaged_theme_files = []
     FileUtils.cd(packaged_theme_path) {
-      Dir.glob("**/*.*") { |f| 
+      Dir.glob("**/*.*") { |f|
         next if ( FileTest.directory?(f) || f =~ /^(manifest|readme|packager)/i )
-        packaged_theme_files << f 
+        packaged_theme_files << f
       }
     }
-    
+
     # Mirror each file into the framework making sure to prompt if already exists.
     packaged_theme_files.each do |filename|
       file_install_path = File.join(JB::Path.base, filename)
@@ -206,7 +213,7 @@ namespace :theme do
         cp_r File.join(packaged_theme_path, filename), file_install_path
       end
     end
-    
+
     puts "=> #{name} theme has been installed!"
     puts "=> ---"
     if ask("=> Want to switch themes now?", ['y', 'n']) == 'y'
@@ -234,12 +241,12 @@ namespace :theme do
     abort("rake aborted: name cannot be blank") if name.empty?
     abort("rake aborted: '#{theme_path}' directory not found.") unless FileTest.directory?(theme_path)
     abort("rake aborted: '#{asset_path}' directory not found.") unless FileTest.directory?(asset_path)
-    
+
     ## Mirror theme's template directory (_includes)
     packaged_theme_path = JB::Path.build(:themes, :root => JB::Path.build(:theme_packages, :node => name))
     mkdir_p packaged_theme_path
     cp_r theme_path, packaged_theme_path
-    
+
     ## Mirror theme's asset directory
     packaged_theme_assets_path = JB::Path.build(:theme_assets, :root => JB::Path.build(:theme_packages, :node => name))
     mkdir_p packaged_theme_assets_path
@@ -250,10 +257,10 @@ namespace :theme do
     open(JB::Path.build(:theme_packages, :node => "#{name}/packager.yml"), "w") do |page|
       page.puts packager.to_yaml
     end
-    
+
     puts "=> '#{name}' theme is packaged and available at: #{JB::Path.build(:theme_packages, :node => name)}"
   end
-  
+
 end # end namespace :theme
 
 # Internal: Download and process a theme from a git url.

@@ -1,0 +1,1 @@
+<div><a href="/assets/{{ include.img }}"><img {% if include.title %}alt="{{ include.title }}" {% endif %}src="/assets/{{ include.img }}"/>{{ include.text }}</a></div>

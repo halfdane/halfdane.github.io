@@ -7,7 +7,15 @@ tags : [intro, beginner, jekyll, tutorial]
 {% include JB/setup %}
 
 This Jekyll introduction will outline specifically  what Jekyll is and why you would want to use it.
+
+{% include image img='vogel.by.anira..JPG' text='helo' title="bird" %}
+<!-- more -->
+{% include image img='mug.jpg' text='helo' title="bird" %}
+
 Directly following the intro we'll learn exactly _how_ Jekyll does what it does.
+
+
+
 
 ## Overview
 
