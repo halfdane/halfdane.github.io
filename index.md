@@ -7,10 +7,10 @@ title: Canned Nerd
 <ul>
     {% for post in site.posts limit 4 %}
     <li>
-        <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
-        <span>Veröffentlicht am {{ post.date | date_to_string }}</span>
+        <h2><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h2>
+        <small><span>Veröffentlicht am {{ post.date | date_to_string }}</span></small>
         {{ post.content | split:"<!-- more -->" | first }}
-        {% if post.content | size > 300 %}<a href="{{ BASE_PATH }}{{ post.url }}"><strong>Read more</strong></a>{% endif %}
+        {% if post.content contains "<!-- more -->" %}<div><a href="{{ BASE_PATH }}{{ post.url }}"><strong>Weiterlesen</strong></a></div>{% endif %}
     </li>
     {% endfor %}
 </ul>

@@ -1,8 +1,9 @@
 ---
 layout: post
 category : lessons
-tagline: "Supporting tagline"
+tagline: "Something else"
 tags : [intro, beginner, jekyll, tutorial]
+group: post
 ---
 {% include JB/setup %}
 
