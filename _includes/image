@@ -1,1 +1,8 @@
-<div><a href="/assets/{{ include.img }}"><img {% if include.title %}alt="{{ include.title }}" {% endif %}src="/assets/{{ include.img }}"/>{{ include.text }}</a></div>
+<figure>
+    <a href="/assets/{{ include.img }}">
+        <span class="rounded-img" style="background: url(/assets/{{ include.img }}) no-repeat center center;">
+            <img {% if include.title %}alt="{{ include.title }}" {% endif %}src="/assets/{{ include.img }}" style="opacity: 0;"/>
+        </span>
+        <figcaption class="simple-caption">{{ include.text }}</figcaption>
+    </a>
+</figure>

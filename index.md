@@ -4,7 +4,7 @@ title: Navigating by sight
 ---
 {% include JB/setup %}
 
-<ul>
+<ul class="postslist">
     {% for post in site.posts limit 4 %}
     <li>
         <h2><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h2>

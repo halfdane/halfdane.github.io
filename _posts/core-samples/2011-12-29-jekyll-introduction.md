@@ -9,9 +9,13 @@ group: post
 
 This Jekyll introduction will outline specifically  what Jekyll is and why you would want to use it.
 
-{% include image img='vogel.by.anira..JPG' text='helo' title="bird" %}
+Ich kann auf hübsche Weise Bilder (mit Captions) einbinden. Ein Vogel:
+{% include image img='vogel.by.anira..JPG' text='Das ist einer der hübscheren Vögel' title="bird" %}
+
 <!-- more -->
-{% include image img='mug.jpg' text='helo' title="bird" %}
+
+Und eine Tasse:
+{% include image img='mug.jpg' title="bird" %}
 
 Directly following the intro we'll learn exactly _how_ Jekyll does what it does.
 
