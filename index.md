@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Canned Nerd
+title: Navigating by sight
 ---
 {% include JB/setup %}
 
