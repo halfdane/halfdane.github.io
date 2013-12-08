@@ -11,6 +11,7 @@ title: Navigating by sight
         <small><span>Veröffentlicht am {{ post.date | date_to_string }}</span></small>
         {{ post.content | split:"<!-- more -->" | first }}
         {% if post.content contains "<!-- more -->" %}<div><a href="{{ BASE_PATH }}{{ post.url }}"><strong>Weiterlesen</strong></a></div>{% endif %}
+        <a href="http://halfdane.github.com{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.url }}"></a>
     </li>
     {% endfor %}
 </ul>
