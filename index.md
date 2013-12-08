@@ -1,8 +1,9 @@
 ---
 layout: page
-title: Navigating by sight
+title: Navigate by sight
 ---
 {% include JB/setup %}
+
 <ul class="postslist">
     {% for post in site.posts limit 4 %}
     <li>
