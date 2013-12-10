@@ -1,37 +1,47 @@
-ul.nav li.dropdown:hover ul.dropdown-menu {
-    display: block;
-    margin-top: 0px
+* {
+    margin: 0;
+    padding: 0;
 }
 
-p {
-    font-family: 'Cabin', Helvetica, Arial, sans-serif;
-    line-height: 1.8em;
-    font-size: 1.5em;
+body {
+    background: #fff url('/assets/img/gridbg.gif');
+    background-size: 17px auto;
+
+    font: 2.1rem/1.5 'Cabin', Helvetica, Arial, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Lobster', Georgia, Times, serif;
 }
 
+p {
+    margin-bottom: 2.9rem;
+}
+
 h1 {
-    font-size: 6em;
-    line-height: 1em;
+    font-size: 250%;
+    margin: 1.2em 0 0.26em 0;
 }
 
 h2 {
-    font-size: 3em;
-    line-height: 0.8em;
+    font-size: 220%;
+    margin: 1.2em 0 0.26em 0;
 }
 
+/*
 h3 {
     font-size: 2.4em;
-    line-height: 0.7em;
 }
 
 h4 {
     font-size: 1.4em;
 }
+*/
 
+ul.nav li.dropdown:hover ul.dropdown-menu {
+    display: block;
+    margin-top: 0px
+}
 ul.postslist {
     list-style: none;
 }
@@ -49,7 +59,69 @@ figure {
     text-align: center;
 }
 
-img,
-object {
+img, object {
     max-width: 100%;
+}
+
+@media screen and (max-width : 535px) {
+    /*smallish screens*/
+    .navbar .brand .tagline {
+        display: none;
+    }
+}
+
+@media screen and (max-width : 480px) {
+    /*phone styles*/
+    h1 {
+        font-size: 2.2em;
+        line-height: 0.7em;
+    }
+
+    h2 {
+        font-size: 1.4em;
+        line-height: 0.5em;
+    }
+
+    h3 {
+        font-size: 1.2em;
+        line-height: 0.5em;
+    }
+
+    h4 {
+        font-size: 1em;
+        line-height: 0.5em;
+    }
+
+    p {
+        font-size: 0.9em;
+        line-height: 1.2em;
+    }
+}
+
+@media screen and (min-width : 481px) and (max-width : 991px) {
+    /*tablet styles*/
+    h1 {
+        font-size: 3em;
+        line-height: 0.8em;
+    }
+
+    h2 {
+        font-size: 2.2em;
+        line-height: 0.7em;
+    }
+
+    h3 {
+        font-size: 1.4em;
+        line-height: 0.5em;
+    }
+
+    h4 {
+        font-size: 1.2em;
+        line-height: 0.5em;
+    }
+
+    p {
+        font-size: 1.1em;
+        line-height: 1.3em;
+    }
 }
