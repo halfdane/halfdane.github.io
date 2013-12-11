@@ -65,17 +65,17 @@ html {
 }
 @media screen and (min-width: 1024px) and (max-width: 1400px) {
     body {
-        font-size: 67%;
+        font-size: 80%;
     }
 }
 @media screen and (min-width: 800px) and (max-width: 1024px) {
     body {
-        font-size: 55%;
+        font-size: 70%;
     }
 }
 @media screen and (max-width: 800px) {
     body {
-        font-size: 40%;
+        font-size: 60%;
     }
 }
 h1, .alpha,
