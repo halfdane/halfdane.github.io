@@ -217,6 +217,7 @@ figure {
     box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
     text-align: center;
     float: left;
+    margin-right: 1em;
 }
 
 /*button*/
@@ -280,13 +281,13 @@ figure {
     }
     .postslist .post {
         display: block;
-        width: 100%;
+        width: auto;
         overflow: visible;
         min-height: 0;
         margin-left: 0;
         margin-right: 0;
-        padding-right: 0;
-        padding-left: 0;
+        padding-right: 1em;
+        padding-left: 1em;
         -webkit-border-radius: 0;
         -moz-border-radius: 0;
         border-radius: 0;
@@ -296,17 +297,24 @@ figure {
     }
 }
 @media screen and (max-width: 800px) {
+    h2, .beta,
+    h3, .gamma,
+    h4, .delta,
+    h5, .epsilon,
+    h6, .zeta {
+        font-family: 'Cabin', Helvetica, Arial, sans-serif;
+        margin-bottom: 0;
+    }
     .postslist {
         width: 100%;
     }
     .postslist .post {
         display: block;
-        width: 100%;
+        width: auto;
         overflow: visible;
         min-height: 0;
         margin: 0;
-        padding-right: 0;
-        padding-left: 0;
+        padding: 1em;
         -webkit-border-radius: 0;
         -moz-border-radius: 0;
         border-radius: 0;
