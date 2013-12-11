@@ -2,7 +2,7 @@
 layout: post
 title: "Initiale Position der Seite falsch – a Scrollspy Mystery [solved]"
 description: ""
-category: computer
+category: html
 tags: [ html, html forms, javascript, scrollspy]
 group: post
 ---
