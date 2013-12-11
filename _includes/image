@@ -2,6 +2,6 @@
 <figure>
     <a href="{{ ASSET_PATH }}/img/{{ include.img }}">
     <img {% if include.title %}alt="{{ include.title }}" {% endif %}src="{{ ASSET_PATH }}/img/{{ include.img }}"/>
-    <figcaption>{{ include.text }}</figcaption>
+    {%if include.text %}<figcaption>{{ include.text }}</figcaption>{% endif %}
     </a>
 </figure>

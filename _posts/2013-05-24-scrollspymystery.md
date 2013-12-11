@@ -5,6 +5,7 @@ description: ""
 category: html
 tags: [ html, html forms, javascript, scrollspy]
 group: post
+image: scrollspy_mystery.png
 ---
 
 Auf einer internen Seite, die Twitter-Bootstrap nicht ganz unähnlich ist, trat das Problem auf,
