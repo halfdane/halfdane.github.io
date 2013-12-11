@@ -1,7 +1,5 @@
 {% include JB/setup %}
 <figure>
-    <a href="{{ ASSET_PATH }}/img/{{ include.img }}">
     <img {% if include.title %}alt="{{ include.title }}" {% endif %}src="{{ ASSET_PATH }}/img/{{ include.img }}"/>
     {%if include.text %}<figcaption>{{ include.text }}</figcaption>{% endif %}
-    </a>
 </figure>

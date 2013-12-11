@@ -40,4 +40,4 @@ Und so sieht's aus: <span class="js_baseline_trigger btn">Click for raster</span
 
 
 
-<script src="{{ ASSET_PATH }}/js/baseline.js"></script>
+<script src="{{ ASSET_PATH }}/js/display_halfdane_baseline.js"></script>

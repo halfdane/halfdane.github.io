@@ -27,8 +27,18 @@ textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border
 body,figure,form{margin:0;}p,pre,dl,menu,ol,ul{margin:1em 0;}
 
 img {
-    max-width: 100%;
-    height: auto;
+    max-height: 100%;
+    width: auto;
+}
+
+/*colors */
+body {
+    color: #685356;
+    /*background-color: #dfdad8;*/
+}
+a {
+    color: #b1672f;
+    text-decoration: none;
 }
 
 /*typography & vertical rhythm*/
@@ -42,6 +52,31 @@ body {
 }
 html {
     font-size: 100%;
+}
+@media screen and (min-width: 1800px) {
+    body {
+        font-size: 150%;
+    }
+}
+@media screen and (min-width: 1400px) and (max-width: 1800px) {
+    body {
+        font-size: 100%;
+    }
+}
+@media screen and (min-width: 1024px) and (max-width: 1400px) {
+    body {
+        font-size: 67%;
+    }
+}
+@media screen and (min-width: 800px) and (max-width: 1024px) {
+    body {
+        font-size: 55%;
+    }
+}
+@media screen and (max-width: 800px) {
+    body {
+        font-size: 40%;
+    }
 }
 h1, .alpha,
 h2, .beta,
@@ -108,15 +143,6 @@ li {
     margin: 0;
     list-style: none;
 }
-/*colors */
-body {
-    color: #685356;
-    background-color: #dfdad8;
-}
-a {
-    color: #b1672f;
-    text-decoration: none;
-}
 
 /*navbar*/
 /*main*/
@@ -138,6 +164,9 @@ nav ul li a {
 nav ul li a:hover {
     color: #fff;
 }
+.brand {
+    color: #999;
+}
 
 /*submenus*/
 .dropdown-menu {
@@ -148,6 +177,7 @@ nav ul li a:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
     border-top-right-radius: 0;
     border-top-left-radius: 0;
+    position: absolute;
     margin-top: 0;
     padding-top: 0.2em;
     padding-bottom: 0.2em;
@@ -157,7 +187,6 @@ nav ul li a:hover {
     display: none;
 
     background: #ffffff;
-    position: absolute;
 }
 .dropdown:hover .dropdown-menu,
 .dropdown:focus .dropdown-menu {
@@ -176,6 +205,7 @@ nav ul li a:hover {
 
 /*images*/
 figure {
+    line-height: 0;
     display: inline-block;
     border: solid 1px #000;
     overflow: hidden;
@@ -226,9 +256,7 @@ figure {
     width: 30%;
     margin: 0.7%;
     padding: 0.7%;
-
     vertical-align:top;
-
     display: inline-block;
     min-height: 30em;
     overflow: hidden;
@@ -244,4 +272,53 @@ figure {
 .page-header {
     text-align: center;
     border-bottom: 1px solid #b58c64;
+}
+
+@media screen and (min-width: 800px) and (max-width: 1024px) {
+    .postslist {
+        width: 100%;
+    }
+    .postslist .post {
+        display: block;
+        width: 100%;
+        overflow: visible;
+        min-height: 0;
+        margin-left: 0;
+        margin-right: 0;
+        padding-right: 0;
+        padding-left: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+    }
+    .post h2 {
+        clear: none;
+    }
+}
+@media screen and (max-width: 800px) {
+    .postslist {
+        width: 100%;
+    }
+    .postslist .post {
+        display: block;
+        width: 100%;
+        overflow: visible;
+        min-height: 0;
+        margin: 0;
+        padding-right: 0;
+        padding-left: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+        border-top: 1px solid #685356;
+    }
+    .post h2 {
+        clear: none;
+    }
+    .excerpt {
+        display: none;
+    }
+    .postslist figure {
+        display: none;
+    }
 }
