@@ -1,7 +1,2 @@
 _site
 .idea
-.awestruct/
-.sass-cache/
-_site/
-_tmp/
-Gemfile.lock
