@@ -7,10 +7,10 @@ branches:
   - develop
 before_install:
 - git --no-pager log -1 --oneline
-- travis_retry gem install jekyll
 script:
 - jekyll build
 after_success:
+- echo "vendor" >> .gitignore
 - git fetch origin master:master
 - git checkout master
 - mv _site/* .
