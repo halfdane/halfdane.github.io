@@ -15,7 +15,7 @@ after_success:
 - git fetch origin master:master
 - git checkout master
 - mv _site/* .
-- git add -f --all
+- git add .
 - git config --global user.email "halfdane@gmx.net"
 - git config --global user.name "halfdane"
 - git commit -m "[ci skip] snapshot $(date '+%m/%d/%y %H:%M')"
