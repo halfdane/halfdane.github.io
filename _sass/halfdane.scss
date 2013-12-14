@@ -187,26 +187,26 @@ li {
 
 /*navbar*/
 /*main*/
-nav ul {
-  font-size: 150%;
-  background-color: $nav_bg;
-  list-style: none;
-  display: inline-table;
-  width: 100%;
-}
+nav {
+  ul {
+    font-size: 150%;
+    background-color: $nav_bg;
+    list-style: none;
+    display: inline-table;
+    width: 100%;
 
-nav ul li {
-  float: left;
-}
-
-nav ul li a {
-  display: block;
-  padding: 0.4em 0.5em;
-  color: $nav_txt;
-}
-
-nav ul li a:hover {
-  color: $nav_txt_hover;
+    li {
+      float: left;
+      a {
+        display: block;
+        padding: 0.4em 0.5em;
+        color: $nav_txt;
+      }
+      a:hover {
+        color: $nav_txt_hover;
+      }
+    }
+  }
 }
 
 .brand {
