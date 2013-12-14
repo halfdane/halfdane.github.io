@@ -10,12 +10,11 @@ before_install:
 script:
 - jekyll build
 after_success:
-- echo "$REPO_URL"
+- git checkout master
 - cd _site
-- git status
 - git add -f --all
 - git config --global user.email "halfdane@gmx.net"
 - git config --global user.name "halfdane"
 - git commit -m "snapshot $(date '+%m/%d/%y %H:%M')"
-- git push "https://${GH_TOKEN}@github.com/halfdane/halfdane.github.io" master
+- git push "https://${GH_TOKEN}@github.com/halfdane/halfdane.github.io" origin master --force
 - cd ..
