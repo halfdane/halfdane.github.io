@@ -44,10 +44,6 @@
 <nav>
     <div class="menu">
         <ul>
-            <li>
-                <a class="brand" href="{{ HOME_PATH }}"><span class="title">{{ site.title }}</span><span
-                        class="tagline"> - {{ site.tagline }}</span></a>
-            </li>
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b class="caret"></b> Einträge</a>
                 <ul class="dropdown-menu">
@@ -55,6 +51,10 @@
                     <li><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
                     {% endfor %}
                 </ul>
+            </li>
+            <li>
+                <a class="brand" href="{{ HOME_PATH }}"><span class="title">{{ site.title }}</span><span
+                        class="tagline"> - {{ site.tagline }}</span></a>
             </li>
             {% assign pages_list = site.pages %}
             {% assign group = 'navigation' %}
