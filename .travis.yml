@@ -10,15 +10,15 @@ branches:
 before_install:
 - travis_retry gem install jekyll
 script:
-  - pwd
   - jekyll build
 
-#after_script:
-#  - cd _site
-#  - git status
-#  - git add --all
-#  - git config --global user.email "halfdane@gmx.net"
-#  - git config --global user.name "halfdane"
-#  - git commit -m "snapshot $(date '+%m/%d/%y %H:%M')"
-#  - git push "$REPO_URL" master | grep -v http
-#  - cd ..
+after_success:
+  - echo "$REPO_URL"
+  - cd _site
+  - git status
+  - git add --all
+  - git config --global user.email "halfdane@gmx.net"
+  - git config --global user.name "halfdane"
+  - git commit -m "snapshot $(date '+%m/%d/%y %H:%M')"
+  - git push "$REPO_URL" master | grep -v http
+  - cd ..
