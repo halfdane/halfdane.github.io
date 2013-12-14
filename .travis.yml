@@ -9,7 +9,9 @@ before_install:
 - travis_retry gem install jekyll
 script:
   - pwd
-  - ls
+  - ls -R
+  - jekyll build
+  - ls -R
 
 #after_script:
 #  - cd _site
