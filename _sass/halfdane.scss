@@ -54,10 +54,6 @@ $pageheader_line_color: $p_main;
 $col_border: $black;
 $postlist_tile_bg: $white;
 
-body {
-  color: $col_main_txt;
-  background-color: $col_main_txt_bg;
-}
 
 /*typography & vertical rhythm*/
 .baseline {
@@ -67,6 +63,8 @@ body {
 }
 
 body {
+  color: $col_main_txt;
+  background-color: $col_main_txt_bg;
   font-family: 'Cabin', Helvetica, Arial, sans-serif;
 }
 
@@ -186,8 +184,11 @@ li {
 }
 
 /*navbar*/
-/*main*/
 nav {
+  .brand {
+    color: $nav_brand;
+  }
+
   ul {
     font-size: 150%;
     background-color: $nav_bg;
@@ -197,60 +198,58 @@ nav {
 
     li {
       float: left;
-      a {
-        display: block;
-        padding: 0.4em 0.5em;
-        color: $nav_txt;
-      }
-      a:hover {
-        color: $nav_txt_hover;
-      }
+    }
+    li a {
+      display: block;
+      padding: 0.4em 0.5em;
+      color: $nav_txt;
+    }
+
+    li a:hover {
+      color: $nav_txt_hover;
     }
   }
+
+  .dropdown:hover .dropdown-menu,
+  .dropdown:focus .dropdown-menu {
+    display: block;
+  }
+
+  .dropdown-menu {
+    font-size: 60%;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    position: absolute;
+    margin-top: 0;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    min-width: 160px;
+    width: auto;
+
+    display: none;
+
+    background: $dropdown_bg;
+
+    li {
+      float: none;
+    }
+
+    li a {
+      color: $col_main_txt;
+    }
+
+    li a:hover,
+    li a:focus {
+      background-color: $col_dropdown_hover_bg;
+    }
+  }
+
 }
 
-.brand {
-  color: $nav_brand;
-}
-
-/*submenus*/
-.dropdown-menu {
-  font-size: 60%;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-  border-top-right-radius: 0;
-  border-top-left-radius: 0;
-  position: absolute;
-  margin-top: 0;
-  padding-top: 0.2em;
-  padding-bottom: 0.2em;
-  min-width: 160px;
-  width: auto;
-
-  display: none;
-
-  background: $dropdown_bg;
-}
-
-.dropdown:hover .dropdown-menu,
-.dropdown:focus .dropdown-menu {
-  display: block;
-}
-
-.dropdown-menu li {
-  float: none;
-}
-
-.dropdown-menu li a {
-  color: $col_main_txt;
-}
-
-.dropdown-menu li a:hover,
-.dropdown-menu li a:focus {
-  background-color: $col_dropdown_hover_bg;
-}
 
 /*images*/
 figure {

@@ -11,6 +11,8 @@ before_install:
 script:
 - jekyll build
 after_success:
+- ls -la
+- la -la ../
 - git fetch origin master:master
 - git checkout master
 - ls | grep -v _site | xargs rm -rf
