@@ -1,0 +1,19 @@
+language: ruby
+env:
+  global:
+  - secure: HwmN5JNvbwnQiiKks6Awt8SL6LP3LClXTJsMpcVOrxNETtb7Ftv7nJw/IyV1YpkQZ3uJCGfQNPrUXw6+qQbcz5eFO4sTiAJzgMnu4Y6Or5OsRia+76noU30XnNbvLTW9ICke6viApW/Edi3+oAe0kdmS12fVt4lZfiEGZAQ8kUg=
+branches:
+  only:
+    - master
+before_install:
+- travis_retry gem install jekyll
+script: jekyll build
+after_script:
+  - cd _site
+  - git status
+  - git add --all
+  - git config --global user.email "halfdane@gmx.net"
+  - git config --global user.name "halfdane"
+  - git commit -m "snapshot $(date '+%m/%d/%y %H:%M')"
+  - git push "$REPO_URL" master | grep -v http
+  - cd ..
