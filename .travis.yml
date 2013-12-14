@@ -6,13 +6,14 @@ branches:
   only:
   - develop
 before_install:
+- git --no-pager log -1 --oneline
 - travis_retry gem install jekyll
 script:
 - jekyll build
 after_success:
 - git fetch origin master:master
 - git checkout master
-- cd _site
+- mv _site/* .
 - git add -f --all
 - git config --global user.email "halfdane@gmx.net"
 - git config --global user.name "halfdane"
