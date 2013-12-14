@@ -1,7 +1,9 @@
 language: ruby
-env:
-  global:
-  - secure: HwmN5JNvbwnQiiKks6Awt8SL6LP3LClXTJsMpcVOrxNETtb7Ftv7nJw/IyV1YpkQZ3uJCGfQNPrUXw6+qQbcz5eFO4sTiAJzgMnu4Y6Or5OsRia+76noU30XnNbvLTW9ICke6viApW/Edi3+oAe0kdmS12fVt4lZfiEGZAQ8kUg=
+#env:
+#  global:
+#  - secure: HwmN5JNvbwnQiiKks6Awt8SL6LP3LClXTJsMpcVOrxNETtb7Ftv7nJw/IyV1YpkQZ3uJCGfQNPrUXw6+qQbcz5eFO4sTiAJzgMnu4Y6Or5OsRia+76noU30XnNbvLTW9ICke6viApW/Edi3+oAe0kdmS12fVt4lZfiEGZAQ8kUg=
+#  - secure: Zwvhi257USs55XeNnvlQhDjxhv5/r34+F/WJd+bgKp41WDBbJXwsODzx+VKxe75DD5NxrzZehV4Eifytd6GfZjcK21/wsdQSCvP5hkQiB9M95Z6uEHoGt5ox2oVhXKe/XrN6cFyh/q30rAYGNXzOjDxf9h2Ey1yaqPqwKgqzEnQ=
+
 branches:
   only:
     - develop
@@ -9,9 +11,7 @@ before_install:
 - travis_retry gem install jekyll
 script:
   - pwd
-  - ls -R
   - jekyll build
-  - ls -R
 
 #after_script:
 #  - cd _site
