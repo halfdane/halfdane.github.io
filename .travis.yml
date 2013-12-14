@@ -10,9 +10,8 @@ before_install:
 - travis_retry gem install jekyll
 script:
 - jekyll build
+- jekyll build
 after_success:
-- ls -R assets
-- ls -R _site/assets
 - git fetch origin master:master
 - git checkout master
 - ls | grep -v _site | xargs rm -rf
@@ -23,7 +22,6 @@ after_success:
 - git config --global user.email "halfdane@gmx.net"
 - git config --global user.name "halfdane"
 - git status
-- ls -R
 - git commit -m "[ci skip] snapshot $(date '+%m/%d/%y %H:%M')"
 - git push "https://${GH_TOKEN}@github.com/halfdane/halfdane.github.io"
 - cd ..
