@@ -1,21 +1,21 @@
 language: ruby
 env:
   global:
-  - secure: qchcUCfgWiQaMSbRADrpYPW8WRkyQEW/XhSjFjqeICvCIRysFYUfPuc2oHQhCVTdRxvllQmDHSLznA1IMJEZQ4K5Dn+xd7ZC9hXYO1+SwB8b0IOpe/t9Tqvlt8iRGm2acCBOL6UpuZXfVKPnRSY15MZ/VrxyMkBD11H08oFZ0nM=
+  - secure: yeOQtJceFV1fQ1Tbo/8Qp6GQXtH9+u3+9yEg+mtAM4cUwt6U2fKye70GlIRyDaB36DFXbGH10+3ES+/ZeJge3uWsSBL4e6h6Lip/vXd2XWROiGTdU/FzM0sJ2dYlPkHvozFgIsbBPkRwmj1cl0WYO6m0tGbVqScy6yhgfXjqBAw=
 branches:
   only:
-    - develop
+  - develop
 before_install:
 - travis_retry gem install jekyll
 script:
-  - jekyll build
+- jekyll build
 after_success:
-  - echo "$REPO_URL"
-  - cd _site
-  - git status
-  - git add -f --all
-  - git config --global user.email "halfdane@gmx.net"
-  - git config --global user.name "halfdane"
-  - git commit -m "snapshot $(date '+%m/%d/%y %H:%M')"
-  - git push https://${GH_TOKEN}@github.com/halfdane/halfdane.github.io master
-  - cd ..
+- echo "$REPO_URL"
+- cd _site
+- git status
+- git add -f --all
+- git config --global user.email "halfdane@gmx.net"
+- git config --global user.name "halfdane"
+- git commit -m "snapshot $(date '+%m/%d/%y %H:%M')"
+- git push "https://${GH_TOKEN}@github.com/halfdane/halfdane.github.io" master
+- cd ..
