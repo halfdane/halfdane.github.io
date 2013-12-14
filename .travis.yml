@@ -17,6 +17,6 @@ after_success:
 - git add -f --all
 - git config --global user.email "halfdane@gmx.net"
 - git config --global user.name "halfdane"
-- git commit -m "snapshot $(date '+%m/%d/%y %H:%M')"
+- git commit -m "[ci skip] snapshot $(date '+%m/%d/%y %H:%M')"
 - git push "https://${GH_TOKEN}@github.com/halfdane/halfdane.github.io"
 - cd ..
