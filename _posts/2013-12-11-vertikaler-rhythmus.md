@@ -5,6 +5,7 @@ category: html
 tags: [html,css,layout,typhographie]
 image: baseline.png
 ---
+
 Was von vielen kompetenten Designern offenbar für sehr wichtig gehalten wird,
 ist der vertikale Rhythmus, also das Ausrichten der Schriftzeilen (und der anderen Elemente) an einem
 konsistenten Raster, nämlich genau den Schrifzeilen eines regulären Absatzes.
@@ -38,6 +39,4 @@ fett gewesen :)
 
 Und so sieht's aus: <span class="js_baseline_trigger btn">Click for raster</span>
 
-
-
-<script src="{{ ASSET_PATH }}/js/display_halfdane_baseline.js"></script>
+<script src="{{ ASSET_PATH }}/js/display_halfdane_baseline.js"> </script>
