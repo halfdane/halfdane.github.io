@@ -5,8 +5,8 @@
         <description>Canned Nerd - Halfdane</description>
         <link>http://halfdane.github.io</link>
         <link>http://halfdane.github.io</link>
-        <lastBuildDate>2013-12-14T16:22:47+00:00</lastBuildDate>
-        <pubDate>2013-12-14T16:22:47+00:00</pubDate>
+        <lastBuildDate>2013-12-15T21:25:54+00:00</lastBuildDate>
+        <pubDate>2013-12-15T21:25:54+00:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -26,7 +26,7 @@
 &lt;p&gt;Ich habe 21 Pixel als Schriftgröße und 31 Pixel als Linienabstand gewählt und das generierte CSS einfach direkt übernommen - naja, die Überschriften habe ich dann doch nicht fett gemacht, sondern 500 als Gewicht gewählt. Das wäre dann doch zu fett gewesen :)&lt;/p&gt;
 
 &lt;p&gt;Und so sieht&amp;#8217;s aus: &lt;span class='js_baseline_trigger btn'&gt;Click for raster&lt;/span&gt;&lt;/p&gt;
-&lt;script src='/assets/js/display_halfdane_baseline.js' /&gt;</description>
+&lt;script src='/assets/js/display_halfdane_baseline.js'&gt; &lt;/script&gt;</description>
                 <link>http://halfdane.github.io/html/2013/12/11/vertikaler-rhythmus</link>
                 <guid>http://halfdane.github.io/html/2013/12/11/vertikaler-rhythmus</guid>
                 <pubDate>2013-12-11T00:00:00+00:00</pubDate>
