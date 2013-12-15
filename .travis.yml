@@ -12,9 +12,9 @@ script:
 - jekyll build
 - jekyll build
 after_success:
+- ls | grep -v _site | xargs rm -rf
 - git fetch origin master:master
 - git checkout master
-- ls | grep -v _site | xargs rm -rf
 - mv _site/* .
 - mv _site/.* .
 - rmdir _site
