@@ -1,0 +1,5 @@
+{
+  "name": "halfdane"
+, "files": [ { "git": 1 }, { "directory": ".", "filters": ["*.*", "*.h"], "recursive": 1 } ]
+}
+ 
