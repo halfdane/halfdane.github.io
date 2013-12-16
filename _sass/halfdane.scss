@@ -1,3 +1,6 @@
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+@import url(http://fonts.googleapis.com/css?family=Cabin);
+
 /*colors http://colorschemedesigner.com/#4162GgMrr5vgt*/
 /*always good:*/
 $white: #fff;
@@ -44,12 +47,12 @@ $postlist_tile_bg: $white;
 body {
   color: $col_main_txt;
   background-color: $col_main_txt_bg;
-  font-family: 'Cabin', Helvetica, Arial, sans-serif;
+  font-family: 'Cabin', Georgia, "Times New Roman", Times, serif;
 }
 
 #{headings()},
 #{nest(headings(), a)} {
-  font-family: 'Lobster', Georgia, Times, serif;
+  font-family: 'Lobster', Helvetica, Arial, sans-serif;
   color: $col_header_txt;
 }
 
