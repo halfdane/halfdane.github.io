@@ -41,68 +41,73 @@ $pageheader_line_color: $p_main;
 $col_border: $black;
 $postlist_tile_bg: $white;
 
-/*typography & vertical rhythm*/
 body {
   color: $col_main_txt;
   background-color: $col_main_txt_bg;
   font-family: 'Cabin', Helvetica, Arial, sans-serif;
 }
+
 #{headings()},
 #{nest(headings(), a)} {
   font-family: 'Lobster', Georgia, Times, serif;
   color: $col_header_txt;
 }
 
+/*typography & vertical rhythm*/
+@import "compass/typography/vertical_rhythm";
+$base-font-size: 16px;
+$base-line-height: 22px;
+$relative-font-sizing : true;
 
-$FONT_SIZE: 130;
-$BROWSER_FONT: 16;
-$PAGE_FONT: $BROWSER_FONT * ($FONT_SIZE/100);
-$LINE_HEIGHT: 1.5;
-
-$BASELINE: $PAGE_FONT * $LINE_HEIGHT;
+@import "compass/layout/grid-background";
+$grid-background-baseline-height: $base-line-height;
+$show-column-grid-backgrounds: false;
 
 html {
-        font-size: percentage($FONT_SIZE/100);
-        line-height: $LINE_HEIGHT;
+  @include establish-baseline;
 }
 
 .baseline {
-  background-image: linear-gradient(hsla(200, 100%, 70%, .5) 1px, transparent 1px);
-  background-size: auto $LINE_HEIGHT + em;
+  @include grid-background;
 }
 
-h1, h2, h3, h4, p.intro { 
-  text-rendering: optimizeLegibility; 
+h1, h2, h3, h4, p.intro {
+  text-rendering: optimizeLegibility;
 }
 
-@mixin fontsize($size) {
-    font-size: ($size* $LINE_HEIGHT) + rem; 
-    line-height: (ceil($size)* $LINE_HEIGHT)+rem;
-    margin-bottom: $LINE_HEIGHT +rem;
+@mixin font($relation, $top: 1, $bottom: 1) {
+  $px: $relation * $base-font-size;
+  @include adjust-font-size-to($px);
+  @include rhythm($top, 0, 0, $bottom, $px);
 }
+
 h1 {
-    @include fontsize(2);
+  @include font(4, 0, 1);
+  text-align: center;
 }
 
 h2 {
-    @include fontsize(1.167);
+  @include font(2, 0, 0);
 }
 
 h3 {
-    @include fontsize(1.5);
+  @include font(1.5, 0, 0);
 }
 
-h4, .delta {
-    @include fontsize(1.167);
+nav ul {
+  @include font(1.5, 0);
 }
 
-p,
-blockquote {
+p, blockquote, figcaption, ul{
+  @include font(1, 0);
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
-  margin-bottom: $LINE_HEIGHT + rem; 
+}
+
+small {
+  @include font(0.7, 0);
 }
 
 a {
@@ -114,7 +119,6 @@ a:hover {
   text-decoration: underline;
 }
 
-
 /*navbar*/
 nav {
   .brand {
@@ -122,9 +126,6 @@ nav {
   }
 
   ul {
-    font-size: 110%;
-    line-height: $LINE_HEIGHT+rem;
-    margin-bottom: 1+rem;
     background-color: $nav_bg;
     list-style: none;
     display: inline-table;
@@ -134,8 +135,8 @@ nav {
       float: left;
     }
     li a {
+      padding: 0 0.5em;
       display: block;
-      padding: 0.4em 0.5em;
       color: $nav_txt;
     }
 
@@ -154,7 +155,8 @@ figure {
   -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
   box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
   text-align: center;
-  margin-right: 1em;
+  margin: 0 1em;
+  float: left;
 }
 
 /*button*/
@@ -169,22 +171,24 @@ figure {
   text-align: center;
   cursor: pointer
 }
+
 .btn:hover {
   color: $col_button_hover;
 }
+
 .btn:active {
   position: relative;
   top: 1px;
 }
 
-
 .content {
-    margin-left: 5%;
-    margin-right: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  overflow: hidden;
 }
 
 .postslist_wrapper {
-    text-align: center;
+  text-align: center;
 }
 
 /*specials for mainpage*/
@@ -192,8 +196,7 @@ figure {
   display: inline-block;
 
   figure {
-    margin-top: 0.3rem;
-    height: 10*$LINE_HEIGHT + rem;
+    height: rhythm(10, $base-font-size);
   }
 
   figure img {
@@ -206,8 +209,7 @@ figure {
 
   .post {
     width: 30%;
-    margin: 0.7%;
-    padding: 0.7%;
+    padding: 0 1%;
     vertical-align: top;
     display: inline-block;
     min-height: 30em;
@@ -219,11 +221,6 @@ figure {
     }
   }
 
-}
-
-.page-header {
-  text-align: center;
-  border-bottom: 1px solid $pageheader_line_color;
 }
 
 @media screen and (min-width: 800px) and (max-width: 1024px) {
