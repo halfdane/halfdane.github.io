@@ -18,7 +18,6 @@
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <!-- Le styles -->
     <link href="/assets/css/syntax.css?body=1" rel="stylesheet" type="text/css" media="all">
-    <link href="/assets/scss/screen.css?body=1" rel="stylesheet" type="text/css" media="all">
     <link href="/assets/scss/halfdane.css?body=1" rel="stylesheet" type="text/css" media="all">
     
 
@@ -55,33 +54,33 @@
   
     
       
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
       	
       	<li><a href="/about.html">About</a></li>
       	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
       
     
   
@@ -132,7 +131,13 @@
 
 <p>Ich habe 21 Pixel als Schriftgröße und 31 Pixel als Linienabstand gewählt und das generierte CSS einfach direkt übernommen - naja, die Überschriften habe ich dann doch nicht fett gemacht, sondern 500 als Gewicht gewählt. Das wäre dann doch zu fett gewesen :)</p>
 
-<p>Und so sieht&#8217;s aus: <span class='js_baseline_trigger btn'>Click for raster</span></p>
+<p>P.S.: Aber ich kann&#8217;s natürlich nicht lassen - nachdem ich zu meiner Bestürzung feststellen konnte, dass eine prozentuale Fontsize nicht ausreicht, um in responsive-Stufen den Rhythmus zu erhalten, hatte ich die Nase voll: die Stylesheets werden jetzt mit <a href='http://sass-lang.com/'>SASS</a> berechnet.</p>
+
+<p>P.P.S.: Der Erniedrigungen sind kein Ende: jetzt muss ich vor mir selbst auch noch zugeben, dass ich nicht in der Lage bin, die Baseline-Berechnungen korrekt selbst zu programmieren. Es gibt einfach zu viele Sonderfälle für meinen Geschmack: das fängt mit dem seltsamen Verhalten der prozentualen Werte an und hört mit dem Kollabieren aneinandergrenzender Margins noch lange nicht auf.</p>
+
+<p>Da ich ohnehin schon SASS dabei hatte, kann ich auch gleich die Baseline-Funktionen von dort benutzen. War immer noch etwas Arbeit, aber jetzt funktioniert&#8217;s auf allen Seiten und beim Verkleinern (Vergrößern) des Browsers.</p>
+
+<p>Ich benutze das auf allen Seiten des Blogs, und das Raster sieht so aus: <span class='js_baseline_trigger btn'>Click for raster</span></p>
 <script src='/assets/js/display_halfdane_baseline.js'> </script>
         </div>
 
