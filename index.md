@@ -9,8 +9,10 @@ title: Navigate by sight
         {% for post in site.posts limit:3 %}
             <div class="post">
                 {% if post.image %}{% include image img=post.image title=post.title %}{% endif %}
-                <h2><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h2>
-                <div class="excerpt">{{ post.excerpt }}</div>
+                <div class="text">
+                    <h2><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h2>
+                    <div class="excerpt">{{ post.excerpt }}</div>
+                </div>
             </div>
         {% endfor %}
     </div>

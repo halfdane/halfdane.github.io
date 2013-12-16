@@ -37,6 +37,20 @@ einfach direkt übernommen - naja, die Überschriften habe ich dann doch nicht f
 sondern 500 als Gewicht gewählt. Das wäre dann doch zu
 fett gewesen :)
 
-Und so sieht's aus: <span class="js_baseline_trigger btn">Click for raster</span>
+P.S.: Aber ich kann's natürlich nicht lassen - nachdem ich zu meiner Bestürzung
+feststellen konnte, dass eine prozentuale Fontsize nicht ausreicht, um in responsive-Stufen den
+Rhythmus zu erhalten, hatte ich die Nase voll: die Stylesheets werden jetzt mit
+[SASS](http://sass-lang.com/) berechnet.
+
+P.P.S.: Der Erniedrigungen sind kein Ende: jetzt muss ich vor mir selbst auch noch zugeben, dass ich
+nicht in der Lage bin, die Baseline-Berechnungen korrekt selbst zu programmieren. Es gibt einfach
+zu viele Sonderfälle für meinen Geschmack: das fängt mit dem seltsamen Verhalten der prozentualen
+Werte an und hört mit dem Kollabieren aneinandergrenzender Margins noch lange nicht auf.
+
+Da ich ohnehin schon SASS dabei hatte, kann ich auch gleich die Baseline-Funktionen von dort benutzen.
+War immer noch etwas Arbeit, aber jetzt funktioniert's auf allen Seiten und beim Verkleinern
+(Vergrößern) des Browsers.
+
+Ich benutze das auf allen Seiten des Blogs, und das Raster sieht so aus: <span class="js_baseline_trigger btn">Click for raster</span>
 
 <script src="{{ ASSET_PATH }}/js/display_halfdane_baseline.js"> </script>
