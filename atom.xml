@@ -4,7 +4,7 @@
  <title>Canned Nerd</title>
  <link href="http://halfdane.github.io/" rel="self"/>
  <link href="http://halfdane.github.io"/>
- <updated>2013-12-17T11:05:56+00:00</updated>
+ <updated>2013-12-17T11:24:53+00:00</updated>
  <id>http://halfdane.github.io</id>
  <author>
    <name>Halfdane</name>
@@ -184,6 +184,36 @@ ich kann mit einem einfachen Include selber Bilder einbinden
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;figure&gt;
     &lt;img alt=&quot;bird&quot; src=&quot;/assets/img/mug.jpg&quot;/&gt;
+    
+&lt;/figure&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Irisblende^2</title>
+   <link href="http://halfdane.github.io/diy/2013/08/31/irisblende"/>
+   <updated>2013-08-31T00:00:00+00:00</updated>
+   <id>http://halfdane.github.io/diy/2013/08/31/irisblende</id>
+   <content type="html">&lt;p&gt;Diese &lt;a href=&quot;http://www.instructables.com/id/Cardboard-Aperture-v2/&quot;&gt;Blende&lt;/a&gt;
+lässt sich recht einfach nachbauen und nachdem ich
+letzte Woche einen größeren Prototypen aus Wellpappe gemacht habe und alles gut
+funktioniert hat, habe ich mich heute an eine verkleinerte Version gemacht.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;/assets/img/iris1.jpg&quot;/&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Eine fertige Blende auf der rechten Seite, zusammen mit dem Werkzeug sowie den
+Einzelteilen für eine weitere.
+Als Scharniere für die rippenförmigen Lamellen habe ich Reißzwecken benutzt und
+mit einem Seitenschneider abgeknipst, damit man sich nicht verletzt.&lt;/p&gt;
+
+&lt;p&gt;Denn wenn man zwei kleine Blenden hat, bleibt einem ja gar nichts anderes übrig,
+als eine nerdige Steampunk-Brille daraus zu machen :&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;/assets/img/iris2.jpg&quot;/&gt;
     
 &lt;/figure&gt;
 </content>

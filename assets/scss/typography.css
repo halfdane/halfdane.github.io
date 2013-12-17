@@ -95,7 +95,7 @@ p, blockquote, figcaption, ul, pre, code {
 }
 
 /* line 66, ../../_sass/typography.scss */
-small {
+small, .pagination {
   font-size: 0.61805em;
   line-height: 2.00324em;
   margin-top: 0em;

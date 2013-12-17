@@ -165,7 +165,7 @@ p, blockquote, figcaption, ul, pre, code {
 }
 
 /* line 66, ../../_sass/typography.scss */
-small {
+small, .pagination {
   font-size: 0.61805em;
   line-height: 2.00324em;
   margin-top: 0em;
@@ -249,8 +249,21 @@ nav ul li a:hover {
   color: white;
 }
 
-/*button*/
 /* line 65, ../../_sass/halfdane.scss */
+.pagination .next {
+  float: left;
+}
+/* line 68, ../../_sass/halfdane.scss */
+.pagination .prev {
+  float: right;
+}
+/* line 71, ../../_sass/halfdane.scss */
+.pagination hr {
+  clear: both;
+}
+
+/*button*/
+/* line 77, ../../_sass/halfdane.scss */
 .btn {
   background-color: #575499;
   border: 1px solid #685356;
@@ -263,25 +276,25 @@ nav ul li a:hover {
   cursor: pointer;
 }
 
-/* line 77, ../../_sass/halfdane.scss */
+/* line 89, ../../_sass/halfdane.scss */
 .btn:hover {
   color: white;
 }
 
-/* line 81, ../../_sass/halfdane.scss */
+/* line 93, ../../_sass/halfdane.scss */
 .btn:active {
   position: relative;
   top: 1px;
 }
 
 /*images*/
-/* line 87, ../../_sass/halfdane.scss */
+/* line 99, ../../_sass/halfdane.scss */
 img {
   width: auto;
   max-height: 30%;
 }
 
-/* line 92, ../../_sass/halfdane.scss */
+/* line 104, ../../_sass/halfdane.scss */
 figure {
   line-height: 0;
   display: inline-block;
@@ -296,33 +309,33 @@ figure {
 }
 
 /*specials for mainpage*/
-/* line 107, ../../_sass/halfdane.scss */
+/* line 119, ../../_sass/halfdane.scss */
 .postslist_wrapper {
   text-align: center;
 }
 
-/* line 111, ../../_sass/halfdane.scss */
+/* line 123, ../../_sass/halfdane.scss */
 .postslist {
   display: inline-block;
 }
-/* line 113, ../../_sass/halfdane.scss */
+/* line 125, ../../_sass/halfdane.scss */
 .postslist figure {
   float: none;
 }
 
 @media screen and (min-width: 1024px) {
-  /* line 120, ../../_sass/halfdane.scss */
+  /* line 132, ../../_sass/halfdane.scss */
   .postslist figure {
     height: 12.38095em;
   }
-  /* line 123, ../../_sass/halfdane.scss */
+  /* line 135, ../../_sass/halfdane.scss */
   .postslist figure img {
     width: 100%;
     height: 100%;
     max-width: 100%;
     max-height: 100%;
   }
-  /* line 129, ../../_sass/halfdane.scss */
+  /* line 141, ../../_sass/halfdane.scss */
   .postslist .post {
     display: inline-block;
     width: 30%;
@@ -332,27 +345,27 @@ figure {
     overflow: hidden;
     text-align: left;
   }
-  /* line 138, ../../_sass/halfdane.scss */
+  /* line 150, ../../_sass/halfdane.scss */
   .postslist .post h2 {
     clear: both;
   }
 }
 @media screen and (max-width: 1024px) {
-  /* line 145, ../../_sass/halfdane.scss */
+  /* line 157, ../../_sass/halfdane.scss */
   .content {
     overflow: hidden;
   }
 
-  /* line 148, ../../_sass/halfdane.scss */
+  /* line 160, ../../_sass/halfdane.scss */
   .postslist {
     width: 100%;
   }
-  /* line 150, ../../_sass/halfdane.scss */
+  /* line 162, ../../_sass/halfdane.scss */
   .postslist figure {
     height: 100%;
     margin: 0;
   }
-  /* line 154, ../../_sass/halfdane.scss */
+  /* line 166, ../../_sass/halfdane.scss */
   .postslist .post {
     display: block;
     width: auto;
@@ -363,24 +376,24 @@ figure {
     border-top: 1px solid #685356;
     text-align: left;
   }
-  /* line 164, ../../_sass/halfdane.scss */
+  /* line 176, ../../_sass/halfdane.scss */
   .postslist .post .text {
     display: inline-block;
     vertical-align: top;
     padding-left: 1%;
   }
-  /* line 169, ../../_sass/halfdane.scss */
+  /* line 181, ../../_sass/halfdane.scss */
   .postslist .post h2 {
     clear: none;
   }
 }
 @media screen and (min-width: 1800px) {
-  /* line 176, ../../_sass/halfdane.scss */
+  /* line 188, ../../_sass/halfdane.scss */
   body {
     font-size: 150%;
   }
 
-  /* line 179, ../../_sass/halfdane.scss */
+  /* line 191, ../../_sass/halfdane.scss */
   .content {
     margin-left: 10%;
     margin-right: 10%;
@@ -388,12 +401,12 @@ figure {
   }
 }
 @media screen and (min-width: 1024px) and (max-width: 1800px) {
-  /* line 187, ../../_sass/halfdane.scss */
+  /* line 199, ../../_sass/halfdane.scss */
   body {
     font-size: 100%;
   }
 
-  /* line 190, ../../_sass/halfdane.scss */
+  /* line 202, ../../_sass/halfdane.scss */
   .content {
     margin-left: 5%;
     margin-right: 5%;
@@ -401,77 +414,77 @@ figure {
   }
 }
 @media screen and (min-width: 1024px) and (max-width: 1400px) {
-  /* line 198, ../../_sass/halfdane.scss */
+  /* line 210, ../../_sass/halfdane.scss */
   body {
     font-size: 0.71429em;
     line-height: 1.73333em;
   }
 }
 @media screen and (min-width: 800px) and (max-width: 1024px) {
-  /* line 204, ../../_sass/halfdane.scss */
+  /* line 216, ../../_sass/halfdane.scss */
   body {
     font-size: 0.66667em;
     line-height: 1.85714em;
   }
 
-  /* line 207, ../../_sass/halfdane.scss */
+  /* line 219, ../../_sass/halfdane.scss */
   .content {
     margin: 0 2%;
   }
 
-  /* line 210, ../../_sass/halfdane.scss */
+  /* line 222, ../../_sass/halfdane.scss */
   .postslist figure img {
     width: 12.38095em;
     height: 12.38095em;
   }
 
-  /* line 214, ../../_sass/halfdane.scss */
+  /* line 226, ../../_sass/halfdane.scss */
   .post .text {
     width: 70%;
   }
 }
 @media screen and (max-width: 800px) {
-  /* line 220, ../../_sass/halfdane.scss */
+  /* line 232, ../../_sass/halfdane.scss */
   body {
     font-size: 0.57143em;
     line-height: 2.16667em;
   }
 
-  /* line 224, ../../_sass/halfdane.scss */
+  /* line 236, ../../_sass/halfdane.scss */
   h2, h3, h4, h5, h6,
   h2 a, h3 a, h4 a, h5 a, h6 a {
     font-family: 'Cabin', Helvetica, Arial, sans-serif;
     margin-bottom: 0;
   }
 
-  /* line 228, ../../_sass/halfdane.scss */
+  /* line 240, ../../_sass/halfdane.scss */
   .content {
     margin: 0;
   }
 
-  /* line 231, ../../_sass/halfdane.scss */
+  /* line 243, ../../_sass/halfdane.scss */
   figure {
     margin: 0;
   }
 
-  /* line 234, ../../_sass/halfdane.scss */
+  /* line 246, ../../_sass/halfdane.scss */
   .postslist figure img {
     width: 3.71429em;
     height: 3.71429em;
   }
 
-  /* line 238, ../../_sass/halfdane.scss */
+  /* line 250, ../../_sass/halfdane.scss */
   .post .text {
     width: 80%;
   }
 
-  /* line 241, ../../_sass/halfdane.scss */
+  /* line 253, ../../_sass/halfdane.scss */
   img {
     width: 800px;
     max-width: 100%;
   }
 
-  /* line 245, ../../_sass/halfdane.scss */
+  /* line 257, ../../_sass/halfdane.scss */
   .excerpt {
     display: none;
   }
