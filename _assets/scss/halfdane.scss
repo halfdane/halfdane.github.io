@@ -40,7 +40,7 @@ nav {
   ul {
     $local_fontsize: 1.2 * $base-font-size;
     @include adjust-font-size-to($local_fontsize);
-    margin-bottom: rhythm(0.6, $local_fontsize);
+    margin: 0 0 rhythm(0.6, $local_fontsize) 0;
     background-color: $nav_bg;
     list-style: none;
     display: inline-table;

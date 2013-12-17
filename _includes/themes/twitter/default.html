@@ -18,9 +18,10 @@
 
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <!-- Le styles -->
-    <link href="{{ ASSET_PATH }}/css/syntax.css?body=1" rel="stylesheet" type="text/css" media="all">
-    <link href="{{ ASSET_PATH }}/scss/halfdane.css?body=1" rel="stylesheet" type="text/css" media="all">
-    
+    {% css_asset_tag global %}
+    - /_assets/scss/halfdane.scss
+    - /_assets/css/syntax.css
+    {% endcss_asset_tag %}
 
     <!-- Le fav and touch icons -->
     <!-- Update these with your own images

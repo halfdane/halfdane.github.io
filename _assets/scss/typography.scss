@@ -79,3 +79,8 @@ pre {
   @include leader(0.5, $base-font-size, padding);
   @include trailer(0.5, $base-font-size, padding);
 }
+
+ol, ul {
+  list-style: square;
+  margin-left: 1em;
+}
