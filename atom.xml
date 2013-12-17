@@ -4,7 +4,7 @@
  <title>Canned Nerd</title>
  <link href="http://halfdane.github.io/" rel="self"/>
  <link href="http://halfdane.github.io"/>
- <updated>2013-12-17T07:07:10+00:00</updated>
+ <updated>2013-12-17T07:17:24+00:00</updated>
  <id>http://halfdane.github.io</id>
  <author>
    <name>Halfdane</name>
@@ -89,10 +89,39 @@
  </entry>
  
  <entry>
+   <title>Blender Anfänger</title>
+   <link href="http://halfdane.github.io/html5/2013/05/29/blender_beginner"/>
+   <updated>2013-05-29T00:00:00+00:00</updated>
+   <id>http://halfdane.github.io/html5/2013/05/29/blender_beginner</id>
+   <content type="html">&lt;p&gt;Ich habe inzwischen beschlossen, dass ich mit Blender doch ganz gut umgehen können muss, um bei Shapeways auf einen grünen Zweig zu kommen: die anpassbaren Modelle dort finde ich eher unbefriedigend.&lt;/p&gt;
+
+&lt;p&gt;Blender hat zwar eine steile Lernkurve, aber 1. kommt mir das Zupass und 2. steigt die Arbeitsgeschwindigkeit danach offenbar exponentiell.&lt;/p&gt;
+
+&lt;p&gt;Nach den ersten Tutorials hatte ich dieses beeindruckende Ergebnis:&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img alt='Ein sehr simples Schwein aus einfachen Primitiven' src='/assets/img/blender_pig.png' /&gt;
+    
+&lt;/figure&gt;
+&lt;p&gt;Oder auch so etwas:&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img alt='Ein Leuchtturm mit kleinem Häuschen anbei. Nicht mehr total primitiv, aber auch nicht besonders toll.' src='/assets/img/blender_lighthouse.png' /&gt;
+    
+&lt;/figure&gt;
+&lt;p&gt;Eher nicht so super – zumindest nichts, was ich unbedingt gedruckt haben wollte&amp;#8230;&lt;/p&gt;
+
+&lt;p&gt;Beim nächsten Versuch wollte ich gerne mit Flüssigkeitssimulationen spielen und das Ergebnis war dann schon etwas beeindruckender:&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img alt='Eindrucksvolles Bild von Wasser, das in ein Glass gegossen wird.' src='/assets/img/blender_water.png' /&gt;
+    
+&lt;/figure&gt;
+&lt;p&gt;Das ist zwar immer noch nicht mit einem 3D-Drucker druckbar, aber zumindest muss ich mich damit nicht mehr verstecken :)&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
    <title>Tensegrity</title>
-   <link href="http://halfdane.github.io/html5/2013/05/27/tensegrity"/>
-   <updated>2013-05-27T00:00:00+00:00</updated>
-   <id>http://halfdane.github.io/html5/2013/05/27/tensegrity</id>
+   <link href="http://halfdane.github.io/html5/2013/05/24/tensegrity"/>
+   <updated>2013-05-24T00:00:00+00:00</updated>
+   <id>http://halfdane.github.io/html5/2013/05/24/tensegrity</id>
    <content type="html">&lt;p&gt;Nachdem ich bereits vor Wochen auf der MAKE-Webseite über die Anleitung zu einem schnuckeligen, kleinen &lt;a href='http://makezine.com/2013/04/29/diy-tensegrity/'&gt;Tensegrity-Objekt&lt;/a&gt; gestolpert bin und das erstmal nur bei meiner &lt;a href='http://www.highdefdigest.com/blog/twin-peaks-cooper-tapes/'&gt;Diane&lt;/a&gt; geparkt habe, hatte ich heute mal eine Viertelstunde Muse:&lt;/p&gt;
 &lt;figure&gt;
     &lt;img alt='Tensegrity-Objekt' src='/assets/img/cam00009.jpg' /&gt;
