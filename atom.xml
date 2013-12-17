@@ -4,7 +4,7 @@
  <title>Canned Nerd</title>
  <link href="http://halfdane.github.io/" rel="self"/>
  <link href="http://halfdane.github.io"/>
- <updated>2013-12-17T11:24:53+00:00</updated>
+ <updated>2013-12-17T11:35:00+00:00</updated>
  <id>http://halfdane.github.io</id>
  <author>
    <name>Halfdane</name>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>Vertikaler Rhythmus</title>
-   <link href="http://halfdane.github.io/html/2013/12/11/vertikaler-rhythmus"/>
+   <link href="http://halfdane.github.io/2013/12/11/vertikaler-rhythmus"/>
    <updated>2013-12-11T00:00:00+00:00</updated>
-   <id>http://halfdane.github.io/html/2013/12/11/vertikaler-rhythmus</id>
+   <id>http://halfdane.github.io/2013/12/11/vertikaler-rhythmus</id>
    <content type="html">&lt;p&gt;Was von vielen kompetenten Designern offenbar für sehr wichtig gehalten wird,
 ist der vertikale Rhythmus, also das Ausrichten der Schriftzeilen (und der anderen Elemente) an einem
 konsistenten Raster, nämlich genau den Schrifzeilen eines regulären Absatzes.
@@ -134,9 +134,9 @@ frei bleibt:&lt;/p&gt;
  
  <entry>
    <title>Jekyll, Markdown &amp; Bilder</title>
-   <link href="http://halfdane.github.io/html5/2013/12/08/jekyll"/>
+   <link href="http://halfdane.github.io/2013/12/08/jekyll"/>
    <updated>2013-12-08T00:00:00+00:00</updated>
-   <id>http://halfdane.github.io/html5/2013/12/08/jekyll</id>
+   <id>http://halfdane.github.io/2013/12/08/jekyll</id>
    <content type="html">&lt;p&gt;Eine der Sachen, die ich bei Markdown nicht so gut gelungen finde sind Bilder,
 insbesondere mit Bildunterschriften.
 Dafür gibt es ja seit HTML5 das &lt;code&gt;figure&lt;/code&gt;-Tag, das zusammen mit &lt;code&gt;img&lt;/code&gt; und &lt;code&gt;figcaption&lt;/code&gt;
@@ -191,9 +191,9 @@ ich kann mit einem einfachen Include selber Bilder einbinden
  
  <entry>
    <title>Irisblende^2</title>
-   <link href="http://halfdane.github.io/diy/2013/08/31/irisblende"/>
+   <link href="http://halfdane.github.io/2013/08/31/irisblende2"/>
    <updated>2013-08-31T00:00:00+00:00</updated>
-   <id>http://halfdane.github.io/diy/2013/08/31/irisblende</id>
+   <id>http://halfdane.github.io/2013/08/31/irisblende2</id>
    <content type="html">&lt;p&gt;Diese &lt;a href=&quot;http://www.instructables.com/id/Cardboard-Aperture-v2/&quot;&gt;Blende&lt;/a&gt;
 lässt sich recht einfach nachbauen und nachdem ich
 letzte Woche einen größeren Prototypen aus Wellpappe gemacht habe und alles gut
@@ -221,9 +221,9 @@ als eine nerdige Steampunk-Brille daraus zu machen :&lt;/p&gt;
  
  <entry>
    <title>Shabby chic Ringhalter</title>
-   <link href="http://halfdane.github.io/html5/2013/08/22/ringhalter"/>
+   <link href="http://halfdane.github.io/2013/08/22/ringhalter"/>
    <updated>2013-08-22T00:00:00+00:00</updated>
-   <id>http://halfdane.github.io/html5/2013/08/22/ringhalter</id>
+   <id>http://halfdane.github.io/2013/08/22/ringhalter</id>
    <content type="html">&lt;p&gt;T. wünscht sich eine Aufbewahrungsmöglichkeit für ihre Ringe.
 Randbedingungen sind: es soll nicht herumstehen und muss nur etwa zehn Ringe halten.&lt;/p&gt;
 
@@ -250,9 +250,9 @@ Sieht doch prima aus, oder?&lt;/p&gt;
  
  <entry>
    <title>Wandhalterung für Gitarren</title>
-   <link href="http://halfdane.github.io/html5/2013/08/19/Gitarrenhalter"/>
+   <link href="http://halfdane.github.io/2013/08/19/Gitarrenhalter"/>
    <updated>2013-08-19T00:00:00+00:00</updated>
-   <id>http://halfdane.github.io/html5/2013/08/19/Gitarrenhalter</id>
+   <id>http://halfdane.github.io/2013/08/19/Gitarrenhalter</id>
    <content type="html">&lt;p&gt;Klingen ja schön, stehen aber ständig im Weg. Und die käuflichen Halterungen sind echt nicht so wahnsinnig schön.&lt;/p&gt;
 
 &lt;figure&gt;
@@ -279,9 +279,9 @@ bei rund 7cm abgeschnitten.&lt;/p&gt;
  
  <entry>
    <title>Automatischer Toggle für 2G / 3G</title>
-   <link href="http://halfdane.github.io/html5/2013/05/30/3gToggle"/>
+   <link href="http://halfdane.github.io/2013/05/30/3gToggle"/>
    <updated>2013-05-30T00:00:00+00:00</updated>
-   <id>http://halfdane.github.io/html5/2013/05/30/3gToggle</id>
+   <id>http://halfdane.github.io/2013/05/30/3gToggle</id>
    <content type="html">&lt;p&gt;Eine der wenigen Apps, für die ich Geld auszugeben bereit war, ist Tasker &lt;a name=&quot;reference1&quot;&gt; &lt;/a&gt;[&lt;a href=&quot;#footnote1&quot;&gt;1&lt;/a&gt;] – die ultimative Allzweckwaffe für Nerds. Zumindest auf einem gerooteten Telefon.&lt;/p&gt;
 
 &lt;p&gt;Mit diesem Profil z.B. schalte ich automatisch auf den stromsparenden 2G Modus, wenn der Bildschirm aus ist. Und beim einschalten natürlich wieder zurück.
@@ -310,9 +310,9 @@ Die anderen Apps sind Titanium Backup und das Spiel Osmos.&lt;/p&gt;
  
  <entry>
    <title>Blender Anfänger</title>
-   <link href="http://halfdane.github.io/html5/2013/05/29/blender_beginner"/>
+   <link href="http://halfdane.github.io/2013/05/29/blender_beginner"/>
    <updated>2013-05-29T00:00:00+00:00</updated>
-   <id>http://halfdane.github.io/html5/2013/05/29/blender_beginner</id>
+   <id>http://halfdane.github.io/2013/05/29/blender_beginner</id>
    <content type="html">&lt;p&gt;Ich habe inzwischen beschlossen, dass ich mit Blender doch ganz gut umgehen können muss,
 um bei Shapeways auf einen grünen Zweig zu kommen: die anpassbaren Modelle dort finde
 ich eher unbefriedigend.&lt;/p&gt;
@@ -351,9 +351,9 @@ aber zumindest muss ich mich damit nicht mehr verstecken :)&lt;/p&gt;
  
  <entry>
    <title>Tensegrity</title>
-   <link href="http://halfdane.github.io/html5/2013/05/24/tensegrity"/>
+   <link href="http://halfdane.github.io/2013/05/24/tensegrity"/>
    <updated>2013-05-24T00:00:00+00:00</updated>
-   <id>http://halfdane.github.io/html5/2013/05/24/tensegrity</id>
+   <id>http://halfdane.github.io/2013/05/24/tensegrity</id>
    <content type="html">&lt;p&gt;Nachdem ich bereits vor Wochen auf der MAKE-Webseite über die
 Anleitung zu einem schnuckeligen, kleinen &lt;a href=&quot;http://makezine.com/2013/04/29/diy-tensegrity/&quot;&gt;Tensegrity-Objekt&lt;/a&gt;
 gestolpert bin und
@@ -373,9 +373,9 @@ geparkt habe, hatte ich heute mal eine Viertelstunde Muse:&lt;/p&gt;
  
  <entry>
    <title>Initiale Position der Seite falsch – a Scrollspy Mystery [solved]</title>
-   <link href="http://halfdane.github.io/html/2013/05/24/scrollspymystery"/>
+   <link href="http://halfdane.github.io/2013/05/24/scrollspymystery"/>
    <updated>2013-05-24T00:00:00+00:00</updated>
-   <id>http://halfdane.github.io/html/2013/05/24/scrollspymystery</id>
+   <id>http://halfdane.github.io/2013/05/24/scrollspymystery</id>
    <content type="html">&lt;p&gt;Auf einer internen Seite, die Twitter-Bootstrap nicht ganz unähnlich ist, trat das Problem auf,
 dass der Browser irgendwo in die Mitte der Seite gesprungen ist
 (also etwa so: &lt;a href=&quot;http://twitter.github.io/bootstrap/base-css.html#forms&quot;&gt;http://twitter.github.io/bootstrap/base-css.html#forms&lt;/a&gt; aber ohne #forms am Ende ).&lt;/p&gt;
@@ -402,9 +402,9 @@ das Verhalten der Seite zu zerbrechen – und dass nicht immer die anderen Schul
  
  <entry>
    <title>Transparenter SSH-Login via Jumpbox</title>
-   <link href="http://halfdane.github.io/computer/2013/05/23/sshjump"/>
+   <link href="http://halfdane.github.io/2013/05/23/sshjump"/>
    <updated>2013-05-23T00:00:00+00:00</updated>
-   <id>http://halfdane.github.io/computer/2013/05/23/sshjump</id>
+   <id>http://halfdane.github.io/2013/05/23/sshjump</id>
    <content type="html">&lt;p&gt;Man kommt ja auf live Umgebungen (oder auf die Maschinen von Kunden) meist nur über eine
 dedizierte Jumpbox, auf die man sich einloggt um dann von dort aus auf den eigentlichen Server zu kommen.&lt;/p&gt;
 
@@ -430,9 +430,9 @@ app-live- anfangen über die jump box geroutet werden.&lt;/p&gt;
  
  <entry>
    <title>Shapeways</title>
-   <link href="http://halfdane.github.io/3d/2013/05/11/shapeways"/>
+   <link href="http://halfdane.github.io/2013/05/11/shapeways"/>
    <updated>2013-05-11T00:00:00+00:00</updated>
-   <id>http://halfdane.github.io/3d/2013/05/11/shapeways</id>
+   <id>http://halfdane.github.io/2013/05/11/shapeways</id>
    <content type="html">&lt;p&gt;Dass 3D-Drucken “die Zukunft der Fabrikation ist” und eine zweite industrielle Revolution
 verursachen wird, interessiert mich nicht so sehr wie die Tatsache, dass ich
 damit irgendwelche Sachen aus meinem Computer herstellen kann.&lt;/p&gt;

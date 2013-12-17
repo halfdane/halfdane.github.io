@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <title>Automatischer Toggle für 2G / 3G</title>
+    
+    <meta name="description" content="">
+    
+    <meta name="author" content="Halfdane">
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <!-- Le styles -->
+    <link href="/assets/css/syntax.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/assets/scss/halfdane.css?body=1" rel="stylesheet" type="text/css" media="all">
+    
+
+    <!-- Le fav and touch icons -->
+    <!-- Update these with your own images
+      <link rel="shortcut icon" href="images/favicon.ico">
+      <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+    -->
+
+    <!-- atom & rss feed -->
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate"
+          title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate"
+          title="Sitewide RSS Feed">
+
+</head>
+
+<body>
+
+<nav>
+    <div class="menu">
+        <ul>
+            <li>
+                <a class="brand" href="/"><span class="title">Canned Nerd</span><span
+                        class="tagline"> - navigate by sight</span></a>
+            </li>
+            
+            
+            
+
+
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/about.html">About</a></li>
+      	
+      
+    
+  
+
+
+
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+
+    <div class="content">
+        
+<div class="pagination">
+    <ul>
+        
+        <li class="next"><a href="/2013/08/19/Gitarrenhalter"
+                            title="Wandhalterung für Gitarren">&larr; Wandhalterung für Gitarren</a></li>
+        
+        
+        <li class="prev"><a href="/2013/05/29/blender_beginner"
+                            title="Blender Anfänger">Blender Anfänger &rarr;</a></li>
+        
+    </ul>
+</div>
+
+<div class="page-header">
+    <h1>Automatischer Toggle für 2G / 3G 
+    </h1>
+</div>
+
+<p class="date">
+    <small>30 May 2013</small>
+</p>
+<div class="content">
+    <p>Eine der wenigen Apps, für die ich Geld auszugeben bereit war, ist Tasker <a name="reference1"> </a>[<a href="#footnote1">1</a>] – die ultimative Allzweckwaffe für Nerds. Zumindest auf einem gerooteten Telefon.</p>
+
+<p>Mit diesem Profil z.B. schalte ich automatisch auf den stromsparenden 2G Modus, wenn der Bildschirm aus ist. Und beim einschalten natürlich wieder zurück.
+Umgeschaltet wird aber nur, wenn nicht gerade telefoniert wird oder es klingelt:</p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="ss">Profile</span><span class="p">:</span> <span class="no">G2</span> <span class="no">When</span> <span class="no">Off</span>
+<span class="ss">State</span><span class="p">:</span> <span class="no">Display</span> <span class="no">State</span> <span class="o">[</span> <span class="ss">Is</span><span class="p">:</span><span class="no">Off</span> <span class="o">]</span>
+<span class="ss">Enter</span><span class="p">:</span> <span class="no">To</span> <span class="mi">2</span><span class="n">G</span> <span class="k">if</span> <span class="n">allowed</span>
+<span class="ss">A1</span><span class="p">:</span> <span class="no">Wait</span> <span class="o">[</span> <span class="ss">MS</span><span class="p">:</span><span class="mi">0</span> <span class="ss">Seconds</span><span class="p">:</span><span class="mi">7</span> <span class="ss">Minutes</span><span class="p">:</span><span class="mi">0</span> <span class="ss">Hours</span><span class="p">:</span><span class="mi">0</span> <span class="ss">Days</span><span class="p">:</span><span class="mi">0</span> <span class="o">]</span>
+<span class="ss">A2</span><span class="p">:</span> <span class="no">If</span> <span class="o">[</span> <span class="o">%</span><span class="no">SCREEN</span> <span class="o">~</span> <span class="n">off</span> <span class="o">]</span>
+<span class="ss">A3</span><span class="p">:</span> <span class="no">If</span> <span class="o">[</span> <span class="o">%</span><span class="no">PHONING</span> <span class="o">=</span> <span class="mi">0</span> <span class="o">]</span>
+<span class="ss">A4</span><span class="p">:</span> <span class="no">Mobile</span> <span class="no">Data</span> <span class="mi">2</span><span class="n">G</span><span class="o">/</span><span class="mi">3</span><span class="n">G</span> <span class="o">[</span> <span class="ss">Mode</span><span class="p">:</span><span class="mi">2</span><span class="n">G</span> <span class="no">Only</span> <span class="o">]</span>
+
+<span class="ss">Exit</span><span class="p">:</span> <span class="no">To</span> <span class="mi">3</span><span class="n">G</span> <span class="k">if</span> <span class="n">allowed</span>
+<span class="ss">A1</span><span class="p">:</span> <span class="no">If</span> <span class="o">[</span> <span class="o">%</span><span class="no">PHONING</span> <span class="o">=</span> <span class="mi">0</span> <span class="o">]</span>
+<span class="ss">A2</span><span class="p">:</span> <span class="no">Mobile</span> <span class="no">Data</span> <span class="mi">2</span><span class="n">G</span><span class="o">/</span><span class="mi">3</span><span class="n">G</span> <span class="o">[</span> <span class="ss">Mode</span><span class="p">:</span><span class="mi">3</span><span class="n">G</span> <span class="no">Preferred</span> <span class="o">]</span>
+</code></pre></div>
+<p>Die Variable PHONING wird von anderen Profilen auf 1 gesetzt, wenn es klingelt oder abgehoben ist, und auf 0, wenn wieder aufgelegt wird.</p>
+
+<p>Auf diese Weise reicht der Akku auch bei intensiver Nutzung locker den ganzen Tag.</p>
+
+<p><a name="footnote1"> </a>
+[<a href="#reference1">1</a>]
+Die anderen Apps sind Titanium Backup und das Spiel Osmos.</p>
+
+</div>
+
+<div class="pagination">
+    <hr>
+    <ul>
+        
+        <li class="next"><a href="/2013/08/19/Gitarrenhalter"
+                            title="Wandhalterung für Gitarren">&larr; Wandhalterung für Gitarren</a></li>
+        
+            
+        <li class="prev"><a href="/2013/05/29/blender_beginner"
+                            title="Blender Anfänger">Blender Anfänger &rarr;</a></li>
+        
+    </ul>
+    <hr>
+</div>
+
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'halfdane'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+
+    </div>
+    <hr>
+    <footer>
+        <p>&copy; 2013 Halfdane</p>
+    </footer>
+
+</div>
+
+
+</body>
+</html>
+
