@@ -13,7 +13,9 @@ Aufgrund von etwas almost completely, but not quite, unlike einer Kneipenwette.
 Es fing ganz spaßig an: ich kann mich auch gut erinnern, das ich Luftmaschen in der
 3. Klasse auch schon mochte, aber nie so recht darüber hinaus kam.
 
-{% include image img='space1.jpg' title="Detailansicht" text="Und damit ich nicht auf die Idee komme, nochmal mit so etwas anzufangen, noch eine besonders langweilige Detailansicht."%}
+{% image space1.jpg "Detailansicht" %}
+Und damit ich nicht auf die Idee komme, nochmal mit so etwas anzufangen, noch eine besonders langweilige Detailansicht.
+{% endimage %}
 
 Aber das sollte sich diesmal ändern, schließlich wollte ich auch keine Topflappen
 oder ähnliche Kinkerlitzchen häkeln, sondern eine Decke – und zwar eine Männerdecke, d.h.

@@ -15,7 +15,9 @@ goldenen Schnitt berechnen (und zwar für jedes Überschriften-Level einzeln) un
 an Überschriften- und Absatz-Elemente hängen, der genau so abgepasst ist, dass die nächste Schriftzeile
 ins Raster passt.
 
-{% include image img='baseline.png' title="Seite mit baseline" %}
+{% image baseline.png "Seite mit baseline" %}
+Ausschnitt der Seite im alten Design - die Baseline ist sichbar.
+{% endimage %}
 
 Dazu kommt, dass ich das Raster (und die Schriften) unbedingt in `em` haben will, damit
 es gut (und mit [wenig Aufwand](http://joshnh.com/2011/07/26/are-you-using-ems-with-your-media-queries/))

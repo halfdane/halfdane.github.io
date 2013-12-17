@@ -12,8 +12,6 @@ Auf einer internen Seite, die Twitter-Bootstrap nicht ganz unähnlich ist, trat 
 dass der Browser irgendwo in die Mitte der Seite gesprungen ist
 (also etwa so: http://twitter.github.io/bootstrap/base-css.html#forms aber ohne #forms am Ende ).
 
-<!-- more -->
-
 Meine erste Vermutung war, dass der Scrollspy-Code buggy sein müsse
 (Fehler machen immer nur die anderen, right?), aber auch ganz ohne Javascript sprang der
 Browser in die Mitte der Seite :/

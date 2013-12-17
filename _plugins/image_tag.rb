@@ -8,7 +8,7 @@
 # https://github.com/sebarmeli/JAIL
 
 module Jekyll
-  class ImageTag < Liquid::Tag
+  class ImageTag < Liquid::Block
     @url = nil
     @title = nil
     @caption = nil
@@ -47,7 +47,7 @@ module Jekyll
     end
 
     def render(context)
-      source = "<figure>"
+      source = "<figure class=\"cap-left\">"
 
       # Retina
       if @config['retina']
@@ -83,7 +83,11 @@ module Jekyll
         source += "<img src=\"#{@url}\" alt=\"#{@title}\">"
       end
 
-      source += "<figcaption>#{@caption}</figcaption>" if @caption
+      site = context.registers[:site]
+      converter = site.getConverterImpl(::Jekyll::Converters::Markdown)
+      output = converter.convert(super(context))
+
+      source += "<figcaption>#{@caption}#{output}</figcaption>" if (@caption || output)
       source += "</figure>"
 
       source

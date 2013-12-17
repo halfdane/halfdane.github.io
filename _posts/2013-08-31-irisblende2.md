@@ -13,7 +13,9 @@ lässt sich recht einfach nachbauen und nachdem ich
 letzte Woche einen größeren Prototypen aus Wellpappe gemacht habe und alles gut
 funktioniert hat, habe ich mich heute an eine verkleinerte Version gemacht.
 
-{% include image img='iris1.jpg' %}
+{% image iris1.jpg "Einzelteile der Irisblende" %}
+Blenden-Einzelteile und fertige Irisblende
+{% endimage %}
 
 Eine fertige Blende auf der rechten Seite, zusammen mit dem Werkzeug sowie den
 Einzelteilen für eine weitere.
@@ -23,4 +25,6 @@ mit einem Seitenschneider abgeknipst, damit man sich nicht verletzt.
 Denn wenn man zwei kleine Blenden hat, bleibt einem ja gar nichts anderes übrig,
 als eine nerdige Steampunk-Brille daraus zu machen :
 
-{% include image img='iris2.jpg' %}
+{% image iris2.jpg "Nerd" %}
+Halfdane ist ein Nerd :)
+{% endimage %}

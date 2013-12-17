@@ -17,18 +17,24 @@ Blender hat zwar eine steile Lernkurve, aber 1. kommt mir das Zupass und
 
 Nach den ersten Tutorials hatte ich dieses beeindruckende Ergebnis:
 
-{% include image img='blender_pig.png' title="Ein sehr simples Schwein aus einfachen Primitiven" %}
+{% image blender_pig.png "Ein sehr simples Schwein aus einfachen Primitiven" %}
+Ein sehr simples Schwein aus einfachen Primitiven
+{% endimage %}
 
 Oder auch so etwas:
 
-{% include image img='blender_lighthouse.png' title="Ein Leuchtturm mit kleinem Häuschen anbei. Nicht mehr total primitiv, aber auch nicht besonders toll." %}
+{% image blender_lighthouse.png "Simpler Leuchtturm" %}
+Ein Leuchtturm mit kleinem Häuschen anbei. Nicht mehr total primitiv, aber auch nicht besonders toll.
+{% endimage %}
 
 Eher nicht so super – zumindest nichts, was ich unbedingt gedruckt haben wollte...
 
 Beim nächsten Versuch wollte ich gerne mit Flüssigkeitssimulationen spielen
 und das Ergebnis war dann schon etwas beeindruckender:
 
-{% include image img='blender_water.png' title="Eindrucksvolles Bild von Wasser, das in ein Glass gegossen wird." %}
+{% image blender_water.png "Fett" %}
+Eindrucksvolles Bild von simuliertem Wasser, das in ein simuliertes Glass gegossen wird.
+{% endimage %}
 
 Das ist zwar immer noch nicht mit einem 3D-Drucker druckbar,
 aber zumindest muss ich mich damit nicht mehr verstecken :)

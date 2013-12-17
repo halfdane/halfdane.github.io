@@ -14,7 +14,9 @@ gestolpert bin und
 das erstmal nur bei meiner [Diane](http://www.highdefdigest.com/blog/twin-peaks-cooper-tapes/)
 geparkt habe, hatte ich heute mal eine Viertelstunde Muse:
 
-{% include image img='cam00009.jpg' title="Tensegrity-Objekt" %}
+{% image cam00009.jpg "Tensegrity-Objekt" %}
+Das Objekt stellt sich selbstständig auf.
+{% endimage %}
 
 <div class="clearfix"> </div>
 

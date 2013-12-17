@@ -10,7 +10,9 @@ image: gitarren1.jpg
 
 Klingen ja schön, stehen aber ständig im Weg. Und die käuflichen Halterungen sind echt nicht so wahnsinnig schön.
 
-{% include image img='gitarren1.jpg' title="Drei Gitarren platzsparend an der Wand" %}
+{% image gitarren1.jpg "Drei Gitarren an der Wand" %}
+Drei Gitarren platzsparend an der Wand
+{% endimage %}
 
 Aus einem ungenutzten Buchen-Regalbrett habe ich einen 5,7cm breiten und 3,5cm tiefen Schlitz ausgesägt - das
 passt für alle unsere Saiteninstrumente gleichermaßen.
@@ -22,4 +24,6 @@ bei rund 7cm abgeschnitten.
 
 An die Wand geworfen – fertig.
 
-{% include image img='gitarren2.jpg' title="Halter mit Fingern" %}
+{% image gitarren2.jpg "Halter mit Fingern" %}
+Nahansicht des Halters mit "Fingern".
+{% endimage %}

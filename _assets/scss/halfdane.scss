@@ -1,6 +1,7 @@
 @import "compass/reset";
 @import "colors";
 @import "typography";
+@import "figure";
 
 body {
   color: $col_main_txt;
@@ -99,19 +100,6 @@ nav {
 img {
   width: auto;
   max-height: 30%;
-}
-
-figure {
-  line-height: 0;
-  display: inline-block;
-  border: solid 1px $col_border;
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
-  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
-  text-align: center;
-  margin: 0 1em 0 0;
-  float: left;
-  height: auto;
 }
 
 /*specials for mainpage*/
