@@ -2,15 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf8d26b6-9aac-44de-917c-c8258df2f482" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archive.html" afterPath="$PROJECT_DIR$/archive.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/2013-08-31-irisblende.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_sass/halfdane.scss" afterPath="$PROJECT_DIR$/_sass/halfdane.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/themes/twitter/post.html" afterPath="$PROJECT_DIR$/_includes/themes/twitter/post.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_sass/typography.scss" afterPath="$PROJECT_DIR$/_sass/typography.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="halfdane.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387262749771" ignored="false" />
     <file path="/index.md" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387208296219" ignored="false" />
-    <file path="/halfdane.scss" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387277513734" ignored="false" />
+    <file path="/halfdane.scss" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387279115844" ignored="false" />
     <file path="/default.html" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387269032451" ignored="false" />
     <file path="/2013-12-11-vertikaler-rhythmus.md" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387275600398" ignored="false" />
     <file path="/dummy.txt" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387261946551" ignored="false" />
@@ -20,11 +22,12 @@
     <file path="/2013-05-27-tensegrity.md" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387263544109" ignored="false" />
     <file path="/2013-05-25-blender_beginner.md" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387264235499" ignored="false" />
     <file path="/2013-05-30-3gToggle.md" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387267845268" ignored="false" />
-    <file path="$PROJECT_DIR$/_site/assets/css/style.css" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387267364204" ignored="false" />
-    <file path="/typography.scss" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387278026890" ignored="false" />
+    <file path="/typography.scss" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387278685661" ignored="false" />
     <file path="/2013-12-08-jekyll.md" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387272268315" ignored="false" />
     <file path="/2013-08-19-Gitarrenhalter.md" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387277405879" ignored="false" />
     <file path="/2013-08-22-ringhalter.md" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387277723254" ignored="false" />
+    <file path="/2013-08-31-irisblende.md" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387278257339" ignored="false" />
+    <file path="/post.html" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387279009238" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,10 +86,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="halfdane.scss" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="halfdane.scss" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_sass/halfdane.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="11" selection-start="247" selection-end="247" vertical-scroll-proportion="0.0">
+            <state line="71" column="16" selection-start="1078" selection-end="1078" vertical-scroll-proportion="0.73260075">
               <folding />
             </state>
           </provider>
@@ -110,19 +113,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="typography.scss" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="typography.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_sass/typography.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="19" selection-start="1492" selection-end="1492" vertical-scroll-proportion="0.54971856">
+            <state line="65" column="18" selection-start="1790" selection-end="1790" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2013-05-30-3gToggle.md" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/2013-05-30-3gToggle.md">
+      <file leaf-file-name="2013-08-31-irisblende.md" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_posts/2013-08-31-irisblende.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="7" selection-start="599" selection-end="599" vertical-scroll-proportion="0.0">
+            <state line="11" column="0" selection-start="203" selection-end="203" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -146,28 +149,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/default.html">
+      <file leaf-file-name="post.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/post.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="5" selection-start="1598" selection-end="1598" vertical-scroll-proportion="-11.034483">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2013-12-08-jekyll.md" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/2013-12-08-jekyll.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="11" selection-start="1026" selection-end="1026" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2013-12-11-vertikaler-rhythmus.md" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/2013-12-11-vertikaler-rhythmus.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="0" selection-start="771" selection-end="836" vertical-scroll-proportion="0.0">
+            <state line="43" column="8" selection-start="1456" selection-end="1456" vertical-scroll-proportion="-12.413794">
               <folding />
             </state>
           </provider>
@@ -207,8 +192,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/_posts/2013-05-25-blender_beginner.md" />
-        <option value="$PROJECT_DIR$/_config.yml" />
         <option value="$PROJECT_DIR$/_posts/2013-05-30-3gToggle.md" />
         <option value="$PROJECT_DIR$/assets/css/syntax.css" />
         <option value="$PROJECT_DIR$/_sass/colors.scss" />
@@ -218,11 +201,13 @@
         <option value="$PROJECT_DIR$/_includes/themes/twitter/default.html" />
         <option value="$PROJECT_DIR$/_posts/2013-06-30-3gToggle.md" />
         <option value="$PROJECT_DIR$/_posts/2013-08-19-Gitarrenhalter.md" />
-        <option value="$PROJECT_DIR$/_sass/halfdane.scss" />
         <option value="$PROJECT_DIR$/_posts/2013-08-22-ringhalter.md" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/archive.html" />
+        <option value="$PROJECT_DIR$/_posts/2013-08-31-irisblende.md" />
         <option value="$PROJECT_DIR$/_sass/typography.scss" />
+        <option value="$PROJECT_DIR$/_includes/themes/twitter/post.html" />
+        <option value="$PROJECT_DIR$/_sass/halfdane.scss" />
       </list>
     </option>
   </component>
@@ -300,6 +285,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="_includes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="halfdane.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="halfdane.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="_includes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twitter" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -647,27 +654,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/_config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="128" column="0" selection-start="4272" selection-end="4272" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/syntax.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_includes/image">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="23" selection-end="235" vertical-scroll-proportion="0.035650622">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/scss/halfdane.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="123" column="0" selection-start="4206" selection-end="4206" vertical-scroll-proportion="0.7777778">
@@ -696,13 +682,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/default.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="5" selection-start="1598" selection-end="1598" vertical-scroll-proportion="-11.034483">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2013-12-08-jekyll.md">
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="11" selection-start="1026" selection-end="1026" vertical-scroll-proportion="0.0">
@@ -713,13 +692,6 @@
     <entry file="file://$PROJECT_DIR$/_posts/2013-12-11-vertikaler-rhythmus.md">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="0" selection-start="771" selection-end="836" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2013-08-19-Gitarrenhalter.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="282" selection-end="368" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -738,6 +710,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2013-08-19-Gitarrenhalter.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="282" selection-end="368" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2013-08-31-irisblende.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="203" selection-end="203" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/default.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="5" selection-start="1598" selection-end="1598" vertical-scroll-proportion="-0.4313346">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/archive.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="1" selection-start="53" selection-end="53" vertical-scroll-proportion="-2.7586207">
@@ -745,16 +745,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_sass/halfdane.scss">
+    <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/post.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="11" selection-start="247" selection-end="247" vertical-scroll-proportion="0.0">
+        <state line="43" column="8" selection-start="1456" selection-end="1456" vertical-scroll-proportion="-12.413794">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_sass/typography.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="19" selection-start="1492" selection-end="1492" vertical-scroll-proportion="0.54971856">
+        <state line="65" column="18" selection-start="1790" selection-end="1790" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_sass/halfdane.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="16" selection-start="1078" selection-end="1078" vertical-scroll-proportion="0.73260075">
           <folding />
         </state>
       </provider>

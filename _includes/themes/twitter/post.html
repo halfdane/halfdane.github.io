@@ -1,3 +1,16 @@
+<div class="pagination">
+    <ul>
+        {% if page.next %}
+        <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}"
+                            title="{{ page.next.title }}">&larr; {{ page.next.title }}</a></li>
+        {% endif %}
+        {% if page.previous %}
+        <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}"
+                            title="{{ page.previous.title }}">{{ page.previous.title }} &rarr;</a></li>
+        {% endif %}
+    </ul>
+</div>
+
 <div class="page-header">
     <h1>{{ page.title }} {% if page.tagline %}
         <small>{{page.tagline}}</small>
@@ -5,34 +18,29 @@
     </h1>
 </div>
 
-<div class="row-fluid post-full">
-    <div class="span8">
-        <p class="date">
-            <small>{{ page.date | date_to_long_string }}</small>
-        </p>
-        <div class="content">
-            {{ content }}
-        </div>
-
-        <hr>
-        <div class="pagination">
-            <ul>
-                {% if page.next %}
-                <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}"
-                                    title="{{ page.next.title }}">&larr; Späterer Beitrag</a></li>
-                {% else %}
-                <li class="next disabled"><a>&larr; Späterer Beitrag</a>
-                    {% endif %}
-                <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Alle Beiträge</a></li>
-                {% if page.previous %}
-                <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}"
-                                    title="{{ page.previous.title }}">Früherer Beitrag &rarr;</a></li>
-                {% else %}
-                <li class="prev disabled"><a>Früherer Beitrag &rarr;</a></li>
-                {% endif %}
-            </ul>
-        </div>
-        <hr>
-        {% include JB/comments %}
-    </div>
+<p class="date">
+    <small>{{ page.date | date_to_long_string }}</small>
+</p>
+<div class="content">
+    {{ content }}
 </div>
+
+<div class="pagination">
+    <hr>
+    <ul>
+        {% if page.next %}
+        <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}"
+                            title="{{ page.next.title }}">&larr; {{ page.next.title }}</a></li>
+        {% else %}
+        <li class="next disabled"><a>&larr; Späterer Beitrag</a>
+            {% endif %}
+            {% if page.previous %}
+        <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}"
+                            title="{{ page.previous.title }}">{{ page.previous.title }} &rarr;</a></li>
+        {% else %}
+        <li class="prev disabled"><a>Früherer Beitrag &rarr;</a></li>
+        {% endif %}
+    </ul>
+    <hr>
+</div>
+{% include JB/comments %}

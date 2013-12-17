@@ -61,6 +61,18 @@ nav {
   }
 }
 
+.pagination {
+  .next {
+    float: left;
+  }
+  .prev {
+    float: right;
+  }
+  hr {
+    clear: both;
+  }
+}
+
 /*button*/
 .btn {
   background-color: $col_button_bg;

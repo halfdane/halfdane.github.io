@@ -63,7 +63,7 @@ p, blockquote, figcaption, ul, pre, code {
   hyphens: auto;
 }
 
-small {
+small, .pagination {
   @include font(1/1.618, 0);
 }
 
