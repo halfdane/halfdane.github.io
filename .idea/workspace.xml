@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf8d26b6-9aac-44de-917c-c8258df2f482" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/2013-05-27-tensegrity.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Unnamed.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/ant.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_sass/halfdane.scss" afterPath="$PROJECT_DIR$/_sass/halfdane.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/2013-05-29-blender_beginner.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/2013-05-27-tensegrity.md" afterPath="$PROJECT_DIR$/_posts/2013-05-24-tensegrity.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="halfdane.github.io.iws" />
@@ -22,6 +18,13 @@
     <file path="/fragment.java" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387262562618" ignored="false" />
     <file path="/Rakefile" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387262688852" ignored="false" />
     <file path="/2013-05-27-tensegrity.md" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387263544109" ignored="false" />
+    <file path="/2013-05-25-blender_beginner.md" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387264235499" ignored="false" />
+    <file path="$PROJECT_DIR$/_site/tags.html" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387264294030" ignored="false" />
+    <file path="$PROJECT_DIR$/_site/rss.xml" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387264294030" ignored="false" />
+    <file path="$PROJECT_DIR$/_site/index.html" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387264294030" ignored="false" />
+    <file path="$PROJECT_DIR$/_site/archive.html" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387264294030" ignored="false" />
+    <file path="$PROJECT_DIR$/_site/atom.xml" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387264294030" ignored="false" />
+    <file path="$PROJECT_DIR$/_site/html5/2013/12/08/jekyll/index.html" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387264294030" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,19 +101,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="halfdane.scss" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="halfdane.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_sass/halfdane.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="121" column="14" selection-start="2361" selection-end="2361" vertical-scroll-proportion="0.4513889">
+            <state line="121" column="14" selection-start="2361" selection-end="2361" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2013-05-27-tensegrity.md" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/2013-05-27-tensegrity.md">
+      <file leaf-file-name="2013-05-29-blender_beginner.md" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_posts/2013-05-29-blender_beginner.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="23" selection-start="585" selection-end="585" vertical-scroll-proportion="0.0">
+            <state line="25" column="58" selection-start="912" selection-end="912" vertical-scroll-proportion="0.33174226">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2013-05-24-tensegrity.md" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_posts/2013-05-24-tensegrity.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="0" selection-start="496" selection-end="560" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -204,6 +216,7 @@
         <option value="$PROJECT_DIR$/Rakefile" />
         <option value="$PROJECT_DIR$/_posts/2013-05-27-tensegrity.md" />
         <option value="$PROJECT_DIR$/_sass/halfdane.scss" />
+        <option value="$PROJECT_DIR$/_posts/2013-05-25-blender_beginner.md" />
       </list>
     </option>
   </component>
@@ -339,6 +352,11 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="options.searchVisible" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/_posts" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.build">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -552,7 +570,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1600" height="865" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -571,7 +589,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28774193" sideWeight="0.67085075" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28774193" sideWeight="0.67085075" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32914925" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34170154" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -641,13 +659,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/_sass/halfdane.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="319" column="12" selection-start="5755" selection-end="5755" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="0" selection-start="43" selection-end="43" vertical-scroll-proportion="0.0">
@@ -730,6 +741,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/_sass/halfdane.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="121" column="14" selection-start="2361" selection-end="2361" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2013-05-24-tensegrity.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="0" selection-start="496" selection-end="560" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2013-12-08-jekyll.md">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="75" selection-start="693" selection-end="768" vertical-scroll-proportion="0.0">
@@ -737,16 +762,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2013-05-27-tensegrity.md">
+    <entry file="file://$PROJECT_DIR$/_posts/2013-05-29-blender_beginner.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="23" selection-start="585" selection-end="585" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_sass/halfdane.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="121" column="14" selection-start="2361" selection-end="2361" vertical-scroll-proportion="0.4513889">
+        <state line="25" column="58" selection-start="912" selection-end="912" vertical-scroll-proportion="0.33174226">
           <folding />
         </state>
       </provider>
