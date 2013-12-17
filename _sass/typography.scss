@@ -43,16 +43,16 @@ $relative-font-sizing: true;
 }
 
 h1 {
-  @include font(4, 0, 1);
+  @include font(2.5*1.618, 0, 1);
   text-align: center;
 }
 
 h2 {
-  @include font(2, 0, 0);
+  @include font(2*1.618, 0, 0);
 }
 
 h3 {
-  @include font(1.5, 0, 0);
+  @include font(1.5*1.618, 0, 0);
 }
 
 p, blockquote, figcaption, ul, pre, code {
@@ -64,7 +64,7 @@ p, blockquote, figcaption, ul, pre, code {
 }
 
 small {
-  @include font(0.7, 0);
+  @include font(1/1.618, 0);
 }
 
 pre {

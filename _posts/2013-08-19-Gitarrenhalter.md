@@ -1,0 +1,25 @@
+---
+layout: post
+title: "Wandhalterung für Gitarren"
+description: ""
+category: html5
+tags: [liquid, jekyll, images, css3, html5]
+group: post
+image: gitarren1.jpg
+---
+
+Klingen ja schön, stehen aber ständig im Weg. Und die käuflichen Halterungen sind echt nicht so wahnsinnig schön.
+
+{% include image img='gitarren1.jpg' title="Drei Gitarren platzsparend an der Wand" %}
+
+Aus einem ungenutzten Buchen-Regalbrett habe ich einen 5,7cm breiten und 3,5cm tiefen Schlitz ausgesägt - das
+passt für alle unsere Saiteninstrumente gleichermaßen.
+Die "Finger" sind nur etwa 0,65cm dick, das ist bei dem Holz stabil genug.
+
+Die Instrumente brauchen nach hinten etwa fünfeinhalb cm Platz zum schwingen, und
+da das senkrecht angeschraubte Stück fast 2cm stark ist, habe ich das Fingerstück
+bei rund 7cm abgeschnitten.
+
+An die Wand geworfen – fertig.
+
+{% include image img='gitarren2.jpg' title="Halter mit Fingern" %}
