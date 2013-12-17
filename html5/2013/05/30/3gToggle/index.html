@@ -3,7 +3,7 @@
 <html lang="de">
 <head>
     <meta charset="utf-8">
-    <title>Blender Anfänger</title>
+    <title>Automatischer Toggle für 2G / 3G</title>
     
     <meta name="description" content="">
     
@@ -110,51 +110,49 @@
     <div class="content">
         
 <div class="page-header">
-    <h1>Blender Anfänger 
+    <h1>Automatischer Toggle für 2G / 3G 
     </h1>
 </div>
 
 <div class="row-fluid post-full">
     <div class="span8">
         <p class="date">
-            <small>29 May 2013</small>
+            <small>30 May 2013</small>
         </p>
         <div class="content">
-            <p>Ich habe inzwischen beschlossen, dass ich mit Blender doch ganz gut umgehen können muss, um bei Shapeways auf einen grünen Zweig zu kommen: die anpassbaren Modelle dort finde ich eher unbefriedigend.</p>
+            <p>Eine der wenigen Apps, für die ich Geld auszugeben bereit war, ist Tasker <a name='reference1'> </a>[<a href='#footnote1'>1</a>] – die ultimative Allzweckwaffe für Nerds. Zumindest auf einem gerooteten Telefon.</p>
 
-<p>Blender hat zwar eine steile Lernkurve, aber 1. kommt mir das Zupass und 2. steigt die Arbeitsgeschwindigkeit danach offenbar exponentiell.</p>
+<p>Mit diesem Profil z.B. schalte ich automatisch auf den stromsparenden 2G Modus, wenn der Bildschirm aus ist. Und beim einschalten natürlich wieder zurück. Umgeschaltet wird aber nur, wenn nicht gerade telefoniert wird oder es klingelt:</p>
+<div class='highlight'><pre><code class='html'>Profile: G2 When Off
+State: Display State [ Is:Off ]
+Enter: To 2G if allowed
+A1: Wait [ MS:0 Seconds:7 Minutes:0 Hours:0 Days:0 ]
+A2: If [ %SCREEN ~ off ]
+A3: If [ %PHONING = 0 ]
+A4: Mobile Data 2G/3G [ Mode:2G Only ]
 
-<p>Nach den ersten Tutorials hatte ich dieses beeindruckende Ergebnis:</p>
-<figure>
-    <img alt='Ein sehr simples Schwein aus einfachen Primitiven' src='/assets/img/blender_pig.png' />
-    
-</figure>
-<p>Oder auch so etwas:</p>
-<figure>
-    <img alt='Ein Leuchtturm mit kleinem Häuschen anbei. Nicht mehr total primitiv, aber auch nicht besonders toll.' src='/assets/img/blender_lighthouse.png' />
-    
-</figure>
-<p>Eher nicht so super – zumindest nichts, was ich unbedingt gedruckt haben wollte&#8230;</p>
+Exit: To 3G if allowed
+A1: If [ %PHONING = 0 ]
+A2: Mobile Data 2G/3G [ Mode:3G Preferred ]
+</code></pre></div>
+<p>Die Variable PHONING wird von anderen Profilen auf 1 gesetzt, wenn es klingelt oder abgehoben ist, und auf 0, wenn wieder aufgelegt wird.</p>
 
-<p>Beim nächsten Versuch wollte ich gerne mit Flüssigkeitssimulationen spielen und das Ergebnis war dann schon etwas beeindruckender:</p>
-<figure>
-    <img alt='Eindrucksvolles Bild von Wasser, das in ein Glass gegossen wird.' src='/assets/img/blender_water.png' />
-    
-</figure>
-<p>Das ist zwar immer noch nicht mit einem 3D-Drucker druckbar, aber zumindest muss ich mich damit nicht mehr verstecken :)</p>
+<p>Auf diese Weise reicht der Akku auch bei intensiver Nutzung locker den ganzen Tag.</p>
+<a name='footnote1'> </a>
+<p>[<a href='#reference1'>1</a>] Die anderen Apps sind Titanium Backup und das Spiel Osmos.</p>
         </div>
 
         <hr>
         <div class="pagination">
             <ul>
                 
-                <li class="next"><a href="/html5/2013/05/30/3gToggle"
-                                    title="Automatischer Toggle für 2G / 3G">&larr; Späterer Beitrag</a></li>
+                <li class="next"><a href="/html5/2013/12/08/jekyll"
+                                    title="Jekyll, Markdown &amp; Bilder">&larr; Späterer Beitrag</a></li>
                 
                 <li><a href="/archive.html">Alle Beiträge</a></li>
                 
-                <li class="prev"><a href="/html5/2013/05/24/tensegrity"
-                                    title="Tensegrity">Früherer Beitrag &rarr;</a></li>
+                <li class="prev"><a href="/html5/2013/05/29/blender_beginner"
+                                    title="Blender Anfänger">Früherer Beitrag &rarr;</a></li>
                 
             </ul>
         </div>

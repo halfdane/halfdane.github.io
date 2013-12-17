@@ -4,7 +4,7 @@
  <title>Canned Nerd</title>
  <link href="http://halfdane.github.io/" rel="self"/>
  <link href="http://halfdane.github.io"/>
- <updated>2013-12-17T07:17:24+00:00</updated>
+ <updated>2013-12-17T07:46:14+00:00</updated>
  <id>http://halfdane.github.io</id>
  <author>
    <name>Halfdane</name>
@@ -86,6 +86,33 @@
     &lt;img alt='bird' src='/assets/img/mug.jpg' /&gt;
     
 &lt;/figure&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Automatischer Toggle für 2G / 3G</title>
+   <link href="http://halfdane.github.io/html5/2013/05/30/3gToggle"/>
+   <updated>2013-05-30T00:00:00+00:00</updated>
+   <id>http://halfdane.github.io/html5/2013/05/30/3gToggle</id>
+   <content type="html">&lt;p&gt;Eine der wenigen Apps, für die ich Geld auszugeben bereit war, ist Tasker &lt;a name='reference1'&gt; &lt;/a&gt;[&lt;a href='#footnote1'&gt;1&lt;/a&gt;] – die ultimative Allzweckwaffe für Nerds. Zumindest auf einem gerooteten Telefon.&lt;/p&gt;
+
+&lt;p&gt;Mit diesem Profil z.B. schalte ich automatisch auf den stromsparenden 2G Modus, wenn der Bildschirm aus ist. Und beim einschalten natürlich wieder zurück. Umgeschaltet wird aber nur, wenn nicht gerade telefoniert wird oder es klingelt:&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='html'&gt;Profile: G2 When Off
+State: Display State [ Is:Off ]
+Enter: To 2G if allowed
+A1: Wait [ MS:0 Seconds:7 Minutes:0 Hours:0 Days:0 ]
+A2: If [ %SCREEN ~ off ]
+A3: If [ %PHONING = 0 ]
+A4: Mobile Data 2G/3G [ Mode:2G Only ]
+
+Exit: To 3G if allowed
+A1: If [ %PHONING = 0 ]
+A2: Mobile Data 2G/3G [ Mode:3G Preferred ]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Die Variable PHONING wird von anderen Profilen auf 1 gesetzt, wenn es klingelt oder abgehoben ist, und auf 0, wenn wieder aufgelegt wird.&lt;/p&gt;
+
+&lt;p&gt;Auf diese Weise reicht der Akku auch bei intensiver Nutzung locker den ganzen Tag.&lt;/p&gt;
+&lt;a name='footnote1'&gt; &lt;/a&gt;
+&lt;p&gt;[&lt;a href='#reference1'&gt;1&lt;/a&gt;] Die anderen Apps sind Titanium Backup und das Spiel Osmos.&lt;/p&gt;</content>
  </entry>
  
  <entry>

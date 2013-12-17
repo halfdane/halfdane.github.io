@@ -11,6 +11,7 @@ http://halfdane.github.io/index.html
 
 http://halfdane.github.io/html/2013/12/11/vertikaler-rhythmus
 http://halfdane.github.io/html5/2013/12/08/jekyll
+http://halfdane.github.io/html5/2013/05/30/3gToggle
 http://halfdane.github.io/html5/2013/05/29/blender_beginner
 http://halfdane.github.io/html5/2013/05/24/tensegrity
 http://halfdane.github.io/html/2013/05/24/scrollspymystery
