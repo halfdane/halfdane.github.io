@@ -47,10 +47,77 @@ nicht in der Lage bin, die Baseline-Berechnungen korrekt selbst zu programmieren
 zu viele Sonderfälle für meinen Geschmack: das fängt mit dem seltsamen Verhalten der prozentualen
 Werte an und hört mit dem Kollabieren aneinandergrenzender Margins noch lange nicht auf.
 
-Da ich ohnehin schon SASS dabei hatte, kann ich auch gleich die Baseline-Funktionen von dort benutzen.
+Da ich ohnehin schon SASS dabei hatte, kann ich auch gleich die Baseline-Funktionen von Compass benutzen.
 War immer noch etwas Arbeit, aber jetzt funktioniert's auf allen Seiten und beim Verkleinern
 (Vergrößern) des Browsers.
 
 Ich benutze das auf allen Seiten des Blogs, und das Raster sieht so aus: <span class="js_baseline_trigger btn">Click for raster</span>
 
-<script src="{{ ASSET_PATH }}/js/display_halfdane_baseline.js"> </script>
+<script src="{{ ASSET_PATH }}/js/display_halfdane_baseline.js" > </script>
+
+Dank Compass sieht der Baseline-Code nur noch in etwa so aus:
+
+```scss
+@import "compass/typography/vertical_rhythm";
+$base-font-size       : 21px;
+$base-line-height     : 26px;
+$relative-font-sizing: true;
+@include establish-baseline;
+
+@mixin font($relation, $top: 1, $bottom: 1) {
+  $px: $relation * $base-font-size;
+  @include adjust-font-size-to($px);
+  @include rhythm($top, 0, 0, $bottom, $px);
+}
+
+h1 {
+  @include font(4, 0, 1);
+  text-align: center;
+}
+
+h2 {
+  @include font(2, 0, 0);
+}
+
+h3 {
+  @include font(1.5, 0, 0);
+}
+
+p, blockquote, figcaption, ul, pre, code {
+  @include font(1, 0);
+}
+
+small {
+  @include font(0.7, 0);
+}
+```
+
+Für die sexy Code-Ansicht habe ich dann noch ein bisschen draufgelegt, damit die
+Zebrastreifen hinter den Zeilen automatisch erzeugt werden und oben und unten jeweils eine halbe Zeile
+frei bleibt:
+
+```scss
+pre {
+  /*Ja, das ist übertrieben - sue me!*/
+  font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+
+  padding: 0 0.8rem 0 1.2rem;
+  border: 1px solid #ccc;
+  border-left: 1rem solid #ccc;
+
+  /*Im Layout oben und unten je eine halbe Zeile Platz*/
+  @include leader(0.5, $base-font-size, padding);
+  @include trailer(0.5, $base-font-size, padding);
+
+  /*erst eine Zeile klar, dann eine Zeile Dunkel*/
+  background-image: linear-gradient(transparent rhythm(1, $base-font-size), #ececec rhythm(1, $base-font-size));
+
+  /*nach zwei Zeilen nicht einfach weiter grau lassen -> repeat*/
+  /*ich hätte zwar erwartet, dass 2 der richtige Wert sein müsse
+  (zwei Zeilen), aber da gibt es vielleicht Rundungsfehler*/
+  background-size: auto rhythm(2.01, $base-font-size);
+
+  /*den Hintergrund eine halbe Zeile nach unten schieben, damit er zum verschobenen Layout passt */
+  background-position: 0 rhythm(0.5, $base-font-size);
+}
+```

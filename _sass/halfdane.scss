@@ -1,112 +1,15 @@
 @import "compass/reset";
-
-@import url(http://fonts.googleapis.com/css?family=Lobster);
-@import url(http://fonts.googleapis.com/css?family=Cabin);
-
-/*colors http://colorschemedesigner.com/#4162GgMrr5vgt*/
-/*always good:*/
-$white: #fff;
-$black: #000;
-$off_black: #685356;
-
-/*** Primary Color: bluish*/
-$p_main: #575499;
-$p_dark: #565392;
-$p_very_dark: #4B488F;
-$p_light: #706DB3;
-$p_very_light: #7875B3;
-
-/*** Complementary Color: yellowish*/
-$c_main: #DBBF68;
-$c_dark: #D1B868;
-$c_very_dark: #CDB259;
-$c_light: #E4CB7C;
-$c_very_light: #E4CE88;
-
-/*semantic colors*/
-$nav_bg: $p_main;
-$nav_txt: $p_very_light;
-$nav_txt_hover: $white;
-$nav_brand: $c_main;
-
-$col_dropdown_hover_bg: $p_main;
-$dropdown_bg: $white;
-
-$col_main_txt: $off_black;
-$col_main_txt_bg: $white;
-
-$col_button_bg: $p_main;
-$col_button_txt: $c_main;
-$col_button_hover: $white;
-
-$col_link_txt: $c_main;
-$col_header_txt: $p_very_dark;
-$pageheader_line_color: $p_main;
-
-$col_border: $black;
-$postlist_tile_bg: $white;
+@import "colors";
+@import "typography";
 
 body {
   color: $col_main_txt;
   background-color: $col_main_txt_bg;
-  font-family: 'Cabin', Georgia, "Times New Roman", Times, serif;
 }
 
 #{headings()},
 #{nest(headings(), a)} {
-  font-family: 'Lobster', Helvetica, Arial, sans-serif;
   color: $col_header_txt;
-  text-rendering: optimizeLegibility;
-}
-
-/*typography & vertical rhythm*/
-@import "compass/typography/vertical_rhythm";
-$base-font-size: 16px;
-$base-line-height: 22px;
-$relative-font-sizing: true;
-
-@import "compass/layout/grid-background";
-$grid-background-baseline-height: $base-line-height;
-$show-column-grid-backgrounds: false;
-
-html {
-  @include establish-baseline;
-}
-
-.baseline {
-  background-image: linear-gradient(hsla(200, 100%, 70%, .5) 1px, transparent 1px);
-  background-size: auto rhythm(1, $base-font-size);
-}
-
-@mixin font($relation, $top: 1, $bottom: 1) {
-  $px: $relation * $base-font-size;
-  @include adjust-font-size-to($px);
-  @include rhythm($top, 0, 0, $bottom, $px);
-}
-
-h1 {
-  @include font(4, 0, 1);
-  text-align: center;
-}
-
-h2 {
-  @include font(2, 0, 0);
-}
-
-h3 {
-  @include font(1.5, 0, 0);
-}
-
-p, blockquote, figcaption, ul {
-  @include font(1, 0);
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
-}
-
-small {
-  @include font(0.7, 0);
 }
 
 a {
@@ -130,8 +33,9 @@ nav {
   }
 
   ul {
-    @include adjust-font-size-to(18px);
-    margin-bottom: 1em;
+    $local_fontsize: 1.3 * $base-font-size;
+    @include adjust-font-size-to($local_fontsize);
+    margin-bottom: rhythm(0.6, $local_fontsize);
     background-color: $nav_bg;
     list-style: none;
     display: inline-table;
@@ -141,7 +45,7 @@ nav {
       float: left;
     }
     li a {
-      padding: rhythm(0.5, $base-font-size) 0.5em;
+      padding: rhythm(0.2, $local_fontsize) 0.5em;
       display: block;
       color: $nav_txt;
     }
@@ -175,6 +79,11 @@ nav {
 }
 
 /*images*/
+img {
+  width: auto;
+  max-height: 30%;
+}
+
 figure {
   line-height: 0;
   display: inline-block;
@@ -185,6 +94,7 @@ figure {
   text-align: center;
   margin: 0 1em 0 0;
   float: left;
+  height: auto;
 }
 
 /*specials for mainpage*/

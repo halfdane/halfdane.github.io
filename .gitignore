@@ -1,4 +1,4 @@
 _site
 vendor
-_sass/.sass-cache
+.sass-cache
 assets/scss
