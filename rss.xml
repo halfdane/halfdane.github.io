@@ -5,8 +5,8 @@
         <description>Canned Nerd - Halfdane</description>
         <link>http://halfdane.github.io</link>
         <link>http://halfdane.github.io</link>
-        <lastBuildDate>2013-12-16T17:49:26+00:00</lastBuildDate>
-        <pubDate>2013-12-16T17:49:26+00:00</pubDate>
+        <lastBuildDate>2013-12-17T07:07:10+00:00</lastBuildDate>
+        <pubDate>2013-12-17T07:07:10+00:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -84,6 +84,19 @@
                 <link>http://halfdane.github.io/html5/2013/12/08/jekyll</link>
                 <guid>http://halfdane.github.io/html5/2013/12/08/jekyll</guid>
                 <pubDate>2013-12-08T00:00:00+00:00</pubDate>
+        </item>
+
+        <item>
+                <title>Tensegrity</title>
+                <description>&lt;p&gt;Nachdem ich bereits vor Wochen auf der MAKE-Webseite über die Anleitung zu einem schnuckeligen, kleinen &lt;a href='http://makezine.com/2013/04/29/diy-tensegrity/'&gt;Tensegrity-Objekt&lt;/a&gt; gestolpert bin und das erstmal nur bei meiner &lt;a href='http://www.highdefdigest.com/blog/twin-peaks-cooper-tapes/'&gt;Diane&lt;/a&gt; geparkt habe, hatte ich heute mal eine Viertelstunde Muse:&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img alt='Tensegrity-Objekt' src='/assets/img/cam00009.jpg' /&gt;
+    
+&lt;/figure&gt;&lt;div class='clearfix'&gt; &lt;/div&gt;
+&lt;p&gt;Funktioniert :-)&lt;/p&gt;</description>
+                <link>http://halfdane.github.io/html5/2013/05/27/tensegrity</link>
+                <guid>http://halfdane.github.io/html5/2013/05/27/tensegrity</guid>
+                <pubDate>2013-05-27T00:00:00+00:00</pubDate>
         </item>
 
         <item>
