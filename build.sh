@@ -1,5 +1,5 @@
 #!/bin/bash
 
-source /home/vollerthun/.rvm/scripts/rvm
-
-jekyll build
+if [[ $2 != *__* ]] && [[ $2 != *.idea* ]] && [[ $2 != *_site* ]]; then
+    jekyll build
+fi

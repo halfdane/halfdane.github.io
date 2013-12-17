@@ -4,3 +4,4 @@ gem "jekyll-import"
 gem "sequel"
 gem 'compass'
 gem 'sass'
+gem 'jekyll-asset-pipeline'
