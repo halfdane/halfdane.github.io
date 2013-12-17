@@ -6,7 +6,7 @@ title: Navigate by sight
 
 <div class="postslist_wrapper">
     <div class="postslist">
-        {% for post in site.posts limit:3 %}
+        {% for post in site.posts %}
             <div class="post">
                 {% if post.image %}{% include image img=post.image title=post.title %}{% endif %}
                 <div class="text">
