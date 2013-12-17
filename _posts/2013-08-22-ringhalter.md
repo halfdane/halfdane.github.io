@@ -11,7 +11,7 @@ image: ringhalter.jpg
 T. wünscht sich eine Aufbewahrungsmöglichkeit für ihre Ringe.
 Randbedingungen sind: es soll nicht herumstehen und muss nur etwa zehn Ringe halten.
 
-{% include image img='ringhalter.jpg' title="Der Ringhalter and der Wand" %}
+{% image ringhalter.jpg "Der Ringhalter and der Wand" %}
 
 In den schön geschnitzten goldenen Bilderrahmen vom Flohmarkt habe ich vier
 schmale Rollen aus einem alten (aber sauberen :-) Handtuch geklebt und zunächst

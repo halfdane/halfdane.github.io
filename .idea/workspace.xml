@@ -2,23 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf8d26b6-9aac-44de-917c-c8258df2f482" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/2013-11-03-hakeldecke-mit-space-invaders.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_plugins/jekyll_asset_pipeline.rb" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sass/config.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/css/style.css" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_plugins/generator_scss.rb" afterPath="$PROJECT_DIR$/generator_scss.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_sass/colors.scss" afterPath="$PROJECT_DIR$/_assets/scss/colors.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_sass/halfdane.scss" afterPath="$PROJECT_DIR$/_assets/scss/halfdane.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_sass/ie.scss" afterPath="$PROJECT_DIR$/_assets/scss/ie.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_sass/print.scss" afterPath="$PROJECT_DIR$/_assets/scss/print.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_sass/typography.scss" afterPath="$PROJECT_DIR$/_assets/scss/typography.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/css/syntax.css" afterPath="$PROJECT_DIR$/_assets/css/syntax.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2013-08-31-irisblende2.md" afterPath="$PROJECT_DIR$/_posts/2013-08-31-irisblende2.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_config.yml" afterPath="$PROJECT_DIR$/_config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.sh" afterPath="$PROJECT_DIR$/build.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/themes/twitter/default.html" afterPath="$PROJECT_DIR$/_includes/themes/twitter/default.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_plugins/image_tag.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2013-08-22-ringhalter.md" afterPath="$PROJECT_DIR$/_posts/2013-08-22-ringhalter.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="halfdane.github.io.iws" />
@@ -38,7 +23,7 @@
     <file path="/typography.scss" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387300610998" ignored="false" />
     <file path="/2013-12-08-jekyll.md" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387272268315" ignored="false" />
     <file path="/2013-08-19-Gitarrenhalter.md" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387277405879" ignored="false" />
-    <file path="/2013-08-22-ringhalter.md" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387277723254" ignored="false" />
+    <file path="/2013-08-22-ringhalter.md" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387307738455" ignored="false" />
     <file path="/2013-08-31-irisblende.md" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387278257339" ignored="false" />
     <file path="/post.html" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387279009238" ignored="false" />
     <file path="/2013-08-31-irisblende2.md" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387299235827" ignored="false" />
@@ -47,6 +32,7 @@
     <file path="/jekyll_asset_pipeline.rb" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387305889847" ignored="false" />
     <file path="/config.rb" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387306027901" ignored="false" />
     <file path="/_config.yml" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387306188240" ignored="false" />
+    <file path="/image_tag.rb" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387307809144" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,28 +100,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="typography.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_assets/scss/typography.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="82" column="6" selection-start="2254" selection-end="2254" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="2013-08-31-irisblende2.md" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_posts/2013-08-31-irisblende2.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="0" selection-start="411" selection-end="446" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.sh" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="13" selection-end="13" vertical-scroll-proportion="0.0">
+            <state line="16" column="0" selection-start="411" selection-end="446" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -168,19 +136,46 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_config.yml" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="_config.yml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="134" column="17" selection-start="4465" selection-end="4465" vertical-scroll-proportion="0.0">
+            <state line="134" column="17" selection-start="4465" selection-end="4465" vertical-scroll-proportion="0.7305389">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="default.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/default.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="0" selection-start="568" selection-end="568" vertical-scroll-proportion="0.15649453">
+            <state line="17" column="0" selection-start="568" selection-end="568" vertical-scroll-proportion="-3.4482758">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="image_tag.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_plugins/image_tag.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="40" selection-start="921" selection-end="921" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2013-08-22-ringhalter.md" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_posts/2013-08-22-ringhalter.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="9" selection-start="321" selection-end="321" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="image" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_includes/image">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="94" selection-start="105" selection-end="126" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -217,8 +212,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/archive.html" />
         <option value="$PROJECT_DIR$/_posts/2013-08-31-irisblende.md" />
         <option value="$PROJECT_DIR$/_includes/themes/twitter/post.html" />
         <option value="$PROJECT_DIR$/_sass/halfdane.scss" />
@@ -233,6 +226,8 @@
         <option value="$PROJECT_DIR$/_config.yml" />
         <option value="$PROJECT_DIR$/_includes/themes/twitter/default.html" />
         <option value="$PROJECT_DIR$/_assets/scss/halfdane.scss" />
+        <option value="$PROJECT_DIR$/_plugins/image_tag.rb" />
+        <option value="$PROJECT_DIR$/_posts/2013-08-22-ringhalter.md" />
       </list>
     </option>
   </component>
@@ -297,6 +292,48 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="json" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="halfdane.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="halfdane.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="_posts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="halfdane.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="halfdane.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="_plugins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="halfdane.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="halfdane.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="_includes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -574,7 +611,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1600" height="865" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32914925" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -593,7 +630,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17935483" sideWeight="0.82984656" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17935483" sideWeight="0.82984656" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17015342" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -663,20 +700,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="33" selection-start="163" selection-end="163" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2013-08-19-Gitarrenhalter.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="282" selection-end="368" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/page.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -714,7 +737,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2013-08-31-irisblende2.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="411" selection-end="446" vertical-scroll-proportion="0.0">
+        <state line="16" column="0" selection-start="411" selection-end="446" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -729,13 +752,6 @@
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="27" selection-start="134" selection-end="134" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="134" column="17" selection-start="4465" selection-end="4465" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -763,7 +779,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/default.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="568" selection-end="568" vertical-scroll-proportion="0.15649453">
+        <state line="17" column="0" selection-start="568" selection-end="568" vertical-scroll-proportion="-3.4482758">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_includes/image">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="94" selection-start="105" selection-end="126" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2013-08-22-ringhalter.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="9" selection-start="321" selection-end="321" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_plugins/image_tag.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="40" selection-start="921" selection-end="921" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="134" column="17" selection-start="4465" selection-end="4465" vertical-scroll-proportion="0.7305389">
           <folding />
         </state>
       </provider>
