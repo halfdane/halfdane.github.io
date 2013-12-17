@@ -4,7 +4,7 @@
  <title>Canned Nerd</title>
  <link href="http://halfdane.github.io/" rel="self"/>
  <link href="http://halfdane.github.io"/>
- <updated>2013-12-17T10:28:30+00:00</updated>
+ <updated>2013-12-17T11:03:48+00:00</updated>
  <id>http://halfdane.github.io</id>
  <author>
    <name>Halfdane</name>
@@ -184,6 +184,64 @@ ich kann mit einem einfachen Include selber Bilder einbinden
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;figure&gt;
     &lt;img alt=&quot;bird&quot; src=&quot;/assets/img/mug.jpg&quot;/&gt;
+    
+&lt;/figure&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Shabby chic Ringhalter</title>
+   <link href="http://halfdane.github.io/html5/2013/08/22/ringhalter"/>
+   <updated>2013-08-22T00:00:00+00:00</updated>
+   <id>http://halfdane.github.io/html5/2013/08/22/ringhalter</id>
+   <content type="html">&lt;p&gt;T. wünscht sich eine Aufbewahrungsmöglichkeit für ihre Ringe.
+Randbedingungen sind: es soll nicht herumstehen und muss nur etwa zehn Ringe halten.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img alt=&quot;Der Ringhalter and der Wand&quot; src=&quot;/assets/img/ringhalter.jpg&quot;/&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;In den schön geschnitzten goldenen Bilderrahmen vom Flohmarkt habe ich vier
+schmale Rollen aus einem alten (aber sauberen :-) Handtuch geklebt und zunächst
+prototypisch mit weißem Stoff bezogen.
+Ein kleiner Test mit Schlüsselringen und Einkaufswagen-Chips ist vielversprechend:
+vermutlich passt die richtige Anzahl an Ringen hinein.&lt;/p&gt;
+
+&lt;p&gt;Um den erwünschten Shabby Chic Look zu bekommen, habe ich noch den Rahmen sehr,
+sehr dünn mit weißer Wandfarbe gestrichen, so dass das Gold noch durchschimmern kann.
+Und damit nicht alles so weiß ist, hat N. noch einen schönen bunten Stoff gefunden, den
+ich statt des Prototyps benutzen konnte.&lt;/p&gt;
+
+&lt;p&gt;Auf dem Bild oben habe ich das Ergebnis mal mit zwei Schlüsselringen an die Wand gehängt.
+Sieht doch prima aus, oder?&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Wandhalterung für Gitarren</title>
+   <link href="http://halfdane.github.io/html5/2013/08/19/Gitarrenhalter"/>
+   <updated>2013-08-19T00:00:00+00:00</updated>
+   <id>http://halfdane.github.io/html5/2013/08/19/Gitarrenhalter</id>
+   <content type="html">&lt;p&gt;Klingen ja schön, stehen aber ständig im Weg. Und die käuflichen Halterungen sind echt nicht so wahnsinnig schön.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img alt=&quot;Drei Gitarren platzsparend an der Wand&quot; src=&quot;/assets/img/gitarren1.jpg&quot;/&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Aus einem ungenutzten Buchen-Regalbrett habe ich einen 5,7cm breiten und 3,5cm tiefen Schlitz ausgesägt - das
+passt für alle unsere Saiteninstrumente gleichermaßen.
+Die &amp;quot;Finger&amp;quot; sind nur etwa 0,65cm dick, das ist bei dem Holz stabil genug.&lt;/p&gt;
+
+&lt;p&gt;Die Instrumente brauchen nach hinten etwa fünfeinhalb cm Platz zum schwingen, und
+da das senkrecht angeschraubte Stück fast 2cm stark ist, habe ich das Fingerstück
+bei rund 7cm abgeschnitten.&lt;/p&gt;
+
+&lt;p&gt;An die Wand geworfen – fertig.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img alt=&quot;Halter mit Fingern&quot; src=&quot;/assets/img/gitarren2.jpg&quot;/&gt;
     
 &lt;/figure&gt;
 </content>

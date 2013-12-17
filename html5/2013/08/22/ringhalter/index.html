@@ -3,7 +3,7 @@
 <html lang="de">
 <head>
     <meta charset="utf-8">
-    <title>Transparenter SSH-Login via Jumpbox</title>
+    <title>Shabby chic Ringhalter</title>
     
     <meta name="description" content="">
     
@@ -110,36 +110,37 @@
     <div class="content">
         
 <div class="page-header">
-    <h1>Transparenter SSH-Login via Jumpbox 
+    <h1>Shabby chic Ringhalter 
     </h1>
 </div>
 
 <div class="row-fluid post-full">
     <div class="span8">
         <p class="date">
-            <small>23 May 2013</small>
+            <small>22 August 2013</small>
         </p>
         <div class="content">
-            <p>Man kommt ja auf live Umgebungen (oder auf die Maschinen von Kunden) meist nur über eine
-dedizierte Jumpbox, auf die man sich einloggt um dann von dort aus auf den eigentlichen Server zu kommen.</p>
+            <p>T. wünscht sich eine Aufbewahrungsmöglichkeit für ihre Ringe.
+Randbedingungen sind: es soll nicht herumstehen und muss nur etwa zehn Ringe halten.</p>
 
-<!-- more -->
+<figure>
+    <img alt="Der Ringhalter and der Wand" src="/assets/img/ringhalter.jpg"/>
+    
+</figure>
 
-<p>Um den Workflow zu vereinfachen und den Zwischen-Login zu vermeiden, habe
-ich bisher meist einen Ssh-Tunnel benutzt, aber das funktioniert nur, wenn auf der
-Jumpbox Port-Forwarding erlaubt ist – bei kompetenten Admins also meistens nicht :-\</p>
+<p>In den schön geschnitzten goldenen Bilderrahmen vom Flohmarkt habe ich vier
+schmale Rollen aus einem alten (aber sauberen :-) Handtuch geklebt und zunächst
+prototypisch mit weißem Stoff bezogen.
+Ein kleiner Test mit Schlüsselringen und Einkaufswagen-Chips ist vielversprechend:
+vermutlich passt die richtige Anzahl an Ringen hinein.</p>
 
-<p>Um so erfreuter habe ich festgestellt, dass die meisten einigermaßen aktuellen Implementierungen
-so etwas out-of-the-box können.</p>
+<p>Um den erwünschten Shabby Chic Look zu bekommen, habe ich noch den Rahmen sehr,
+sehr dünn mit weißer Wandfarbe gestrichen, so dass das Gold noch durchschimmern kann.
+Und damit nicht alles so weiß ist, hat N. noch einen schönen bunten Stoff gefunden, den
+ich statt des Prototyps benutzen konnte.</p>
 
-<div class="highlight"><pre><code class="html">Host app-live-*
-     ProxyCommand ssh -W %h:%p access-live-box.domain.name
-</code></pre></div>
-
-<p>Diese Zeilen in der ~/.ssh/config führen dazu, dass ssh Verbindungen zu allen boxen, die mit
-app-live- anfangen über die jump box geroutet werden.</p>
-
-<p>Wie gewohnt können auch mehrere Space separierte Einträge in der Host-Zeile sein.</p>
+<p>Auf dem Bild oben habe ich das Ergebnis mal mit zwei Schlüsselringen an die Wand gehängt.
+Sieht doch prima aus, oder?</p>
 
         </div>
 
@@ -147,13 +148,13 @@ app-live- anfangen über die jump box geroutet werden.</p>
         <div class="pagination">
             <ul>
                 
-                <li class="next"><a href="/html/2013/05/24/scrollspymystery"
-                                    title="Initiale Position der Seite falsch – a Scrollspy Mystery [solved]">&larr; Späterer Beitrag</a></li>
+                <li class="next"><a href="/html5/2013/12/08/jekyll"
+                                    title="Jekyll, Markdown &amp; Bilder">&larr; Späterer Beitrag</a></li>
                 
                 <li><a href="/archive.html">Alle Beiträge</a></li>
                 
-                <li class="prev"><a href="/3d/2013/05/11/shapeways"
-                                    title="Shapeways">Früherer Beitrag &rarr;</a></li>
+                <li class="prev"><a href="/html5/2013/08/19/Gitarrenhalter"
+                                    title="Wandhalterung für Gitarren">Früherer Beitrag &rarr;</a></li>
                 
             </ul>
         </div>

@@ -51,19 +51,19 @@ html {
 
 /* line 45, ../../_sass/typography.scss */
 h1 {
-  font-size: 4em;
-  line-height: 1.2381em;
+  font-size: 4.045em;
+  line-height: 1.22432em;
   margin-top: 0em;
   padding-top: 0em;
   padding-bottom: 0em;
-  margin-bottom: 0.30952em;
+  margin-bottom: 0.30608em;
   text-align: center;
 }
 
 /* line 50, ../../_sass/typography.scss */
 h2 {
-  font-size: 2em;
-  line-height: 1.2381em;
+  font-size: 3.236em;
+  line-height: 1.1478em;
   margin-top: 0em;
   padding-top: 0em;
   padding-bottom: 0em;
@@ -72,8 +72,8 @@ h2 {
 
 /* line 54, ../../_sass/typography.scss */
 h3 {
-  font-size: 1.5em;
-  line-height: 1.65079em;
+  font-size: 2.427em;
+  line-height: 1.5304em;
   margin-top: 0em;
   padding-top: 0em;
   padding-bottom: 0em;
@@ -96,12 +96,12 @@ p, blockquote, figcaption, ul, pre, code {
 
 /* line 66, ../../_sass/typography.scss */
 small {
-  font-size: 0.7em;
-  line-height: 1.76871em;
+  font-size: 0.61805em;
+  line-height: 2.00324em;
   margin-top: 0em;
   padding-top: 0em;
   padding-bottom: 0em;
-  margin-bottom: 1.76871em;
+  margin-bottom: 2.00324em;
 }
 
 /* line 70, ../../_sass/typography.scss */
