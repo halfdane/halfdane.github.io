@@ -70,141 +70,182 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /*** Primary Color: bluish*/
 /*** Complementary Color: yellowish*/
 /*semantic colors*/
-/* line 49, ../../_sass/halfdane.scss */
+/*typography*/
+/* line 5, ../../_sass/typography.scss */
 body {
-  color: #685356;
-  background-color: white;
   font-family: 'Cabin', Georgia, "Times New Roman", Times, serif;
 }
 
-/* line 56, ../../_sass/halfdane.scss */
+/* line 10, ../../_sass/typography.scss */
 h1, h2, h3, h4, h5, h6,
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   font-family: 'Lobster', Helvetica, Arial, sans-serif;
-  color: #4b488f;
   text-rendering: optimizeLegibility;
 }
 
-/*typography & vertical rhythm*/
+/* line 15, ../../_sass/typography.scss */
+pre {
+  font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+  overflow: auto;
+  white-space: pre-wrap;
+  /* CSS3 browsers  */
+  white-space: -moz-pre-wrap !important;
+  /* 1999+ Mozilla  */
+  white-space: -pre-wrap;
+  /* Opera 4 thru 6 */
+  white-space: -o-pre-wrap;
+  /* Opera 7 and up */
+  word-wrap: break-word;
+  /* IE 5.5+ and up */
+}
+
+/*vertical rhythm*/
 /* line 61, ../../vendor/bundle/ruby/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
-html * html {
-  font-size: 100%;
+* html {
+  font-size: 131.25%;
 }
+
 /* line 64, ../../vendor/bundle/ruby/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
-html html {
-  font-size: 16px;
-  line-height: 1.375em;
+html {
+  font-size: 21px;
+  line-height: 1.2381em;
 }
 
-/* line 76, ../../_sass/halfdane.scss */
+/* line 33, ../../_sass/typography.scss */
 .baseline {
+  font-size: 1em;
+  line-height: 1.2381em;
   background-image: linear-gradient(rgba(102, 204, 255, 0.5) 1px, transparent 1px);
-  background-size: auto 1.375em;
+  background-size: auto 1.2381em;
 }
 
-/* line 87, ../../_sass/halfdane.scss */
+/* line 45, ../../_sass/typography.scss */
 h1 {
   font-size: 4em;
-  line-height: 1.375em;
+  line-height: 1.2381em;
   margin-top: 0em;
   padding-top: 0em;
   padding-bottom: 0em;
-  margin-bottom: 0.34375em;
+  margin-bottom: 0.30952em;
   text-align: center;
 }
 
-/* line 92, ../../_sass/halfdane.scss */
+/* line 50, ../../_sass/typography.scss */
 h2 {
   font-size: 2em;
-  line-height: 1.375em;
+  line-height: 1.2381em;
   margin-top: 0em;
   padding-top: 0em;
   padding-bottom: 0em;
   margin-bottom: 0em;
 }
 
-/* line 96, ../../_sass/halfdane.scss */
+/* line 54, ../../_sass/typography.scss */
 h3 {
   font-size: 1.5em;
-  line-height: 1.83333em;
+  line-height: 1.65079em;
   margin-top: 0em;
   padding-top: 0em;
   padding-bottom: 0em;
   margin-bottom: 0em;
 }
 
-/* line 100, ../../_sass/halfdane.scss */
-p, blockquote, figcaption, ul {
+/* line 58, ../../_sass/typography.scss */
+p, blockquote, figcaption, ul, pre, code {
   font-size: 1em;
-  line-height: 1.375em;
+  line-height: 1.2381em;
   margin-top: 0em;
   padding-top: 0em;
   padding-bottom: 0em;
-  margin-bottom: 1.375em;
+  margin-bottom: 1.2381em;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
 }
 
-/* line 108, ../../_sass/halfdane.scss */
+/* line 66, ../../_sass/typography.scss */
 small {
   font-size: 0.7em;
-  line-height: 1.96429em;
+  line-height: 1.76871em;
   margin-top: 0em;
   padding-top: 0em;
   padding-bottom: 0em;
-  margin-bottom: 1.96429em;
+  margin-bottom: 1.76871em;
 }
 
-/* line 112, ../../_sass/halfdane.scss */
+/* line 70, ../../_sass/typography.scss */
+pre {
+  padding: 0 0.8rem 0 1.2rem;
+  border: 1px solid #ccc;
+  border-left: 1rem solid #ccc;
+  background-image: linear-gradient(transparent 1.2381em, #ececec 1.2381em);
+  background-size: auto 2.48857em;
+  background-position: 0 0.61905em;
+  padding-top: 0.61905em;
+  padding-bottom: 0.61905em;
+}
+
+/* line 5, ../../_sass/halfdane.scss */
+body {
+  color: #685356;
+  background-color: white;
+}
+
+/* line 11, ../../_sass/halfdane.scss */
+h1, h2, h3, h4, h5, h6,
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  color: #4b488f;
+}
+
+/* line 15, ../../_sass/halfdane.scss */
 a {
   color: #dbbf68;
   text-decoration: none;
 }
 
-/* line 117, ../../_sass/halfdane.scss */
+/* line 20, ../../_sass/halfdane.scss */
 a:hover {
   text-decoration: underline;
 }
 
-/* line 121, ../../_sass/halfdane.scss */
+/* line 24, ../../_sass/halfdane.scss */
 .clearfix {
   clear: both;
 }
 
 /*navbar*/
-/* line 128, ../../_sass/halfdane.scss */
+/* line 31, ../../_sass/halfdane.scss */
 nav .brand {
   color: #dbbf68;
 }
-/* line 132, ../../_sass/halfdane.scss */
+/* line 35, ../../_sass/halfdane.scss */
 nav ul {
-  font-size: 1.125em;
-  line-height: 1.22222em;
-  margin-bottom: 1em;
+  font-size: 1.3em;
+  line-height: 1.90476em;
+  margin-bottom: 0.57143em;
   background-color: #575499;
   list-style: none;
   display: inline-table;
   width: 100%;
 }
-/* line 140, ../../_sass/halfdane.scss */
+/* line 44, ../../_sass/halfdane.scss */
 nav ul li {
   float: left;
 }
-/* line 143, ../../_sass/halfdane.scss */
+/* line 47, ../../_sass/halfdane.scss */
 nav ul li a {
-  padding: 0.6875em 0.5em;
+  padding: 0.19048em 0.5em;
   display: block;
   color: #7875b3;
 }
-/* line 149, ../../_sass/halfdane.scss */
+/* line 53, ../../_sass/halfdane.scss */
 nav ul li a:hover {
   color: white;
 }
 
 /*button*/
-/* line 156, ../../_sass/halfdane.scss */
+/* line 60, ../../_sass/halfdane.scss */
 .btn {
   background-color: #575499;
   border: 1px solid #685356;
@@ -217,19 +258,25 @@ nav ul li a:hover {
   cursor: pointer;
 }
 
-/* line 168, ../../_sass/halfdane.scss */
+/* line 72, ../../_sass/halfdane.scss */
 .btn:hover {
   color: white;
 }
 
-/* line 172, ../../_sass/halfdane.scss */
+/* line 76, ../../_sass/halfdane.scss */
 .btn:active {
   position: relative;
   top: 1px;
 }
 
 /*images*/
-/* line 178, ../../_sass/halfdane.scss */
+/* line 82, ../../_sass/halfdane.scss */
+img {
+  width: auto;
+  max-height: 30%;
+}
+
+/* line 87, ../../_sass/halfdane.scss */
 figure {
   line-height: 0;
   display: inline-block;
@@ -240,36 +287,37 @@ figure {
   text-align: center;
   margin: 0 1em 0 0;
   float: left;
+  height: auto;
 }
 
 /*specials for mainpage*/
-/* line 192, ../../_sass/halfdane.scss */
+/* line 102, ../../_sass/halfdane.scss */
 .postslist_wrapper {
   text-align: center;
 }
 
-/* line 196, ../../_sass/halfdane.scss */
+/* line 106, ../../_sass/halfdane.scss */
 .postslist {
   display: inline-block;
 }
-/* line 198, ../../_sass/halfdane.scss */
+/* line 108, ../../_sass/halfdane.scss */
 .postslist figure {
   float: none;
 }
 
 @media screen and (min-width: 1024px) {
-  /* line 205, ../../_sass/halfdane.scss */
+  /* line 115, ../../_sass/halfdane.scss */
   .postslist figure {
-    height: 13.75em;
+    height: 12.38095em;
   }
-  /* line 208, ../../_sass/halfdane.scss */
+  /* line 118, ../../_sass/halfdane.scss */
   .postslist figure img {
     width: 100%;
     height: 100%;
     max-width: 100%;
     max-height: 100%;
   }
-  /* line 214, ../../_sass/halfdane.scss */
+  /* line 124, ../../_sass/halfdane.scss */
   .postslist .post {
     display: inline-block;
     width: 30%;
@@ -279,55 +327,55 @@ figure {
     overflow: hidden;
     text-align: left;
   }
-  /* line 223, ../../_sass/halfdane.scss */
+  /* line 133, ../../_sass/halfdane.scss */
   .postslist .post h2 {
     clear: both;
   }
 }
 @media screen and (max-width: 1024px) {
-  /* line 230, ../../_sass/halfdane.scss */
+  /* line 140, ../../_sass/halfdane.scss */
   .content {
     overflow: hidden;
   }
 
-  /* line 233, ../../_sass/halfdane.scss */
+  /* line 143, ../../_sass/halfdane.scss */
   .postslist {
     width: 100%;
   }
-  /* line 235, ../../_sass/halfdane.scss */
+  /* line 145, ../../_sass/halfdane.scss */
   .postslist figure {
     height: 100%;
     margin: 0;
   }
-  /* line 239, ../../_sass/halfdane.scss */
+  /* line 149, ../../_sass/halfdane.scss */
   .postslist .post {
     display: block;
     width: auto;
     margin: 0;
-    padding: 1.375em 0;
+    padding: 1.2381em 0;
     min-height: 0;
     overflow: visible;
     border-top: 1px solid #685356;
     text-align: left;
   }
-  /* line 249, ../../_sass/halfdane.scss */
+  /* line 159, ../../_sass/halfdane.scss */
   .postslist .post .text {
     display: inline-block;
     vertical-align: top;
     padding-left: 1%;
   }
-  /* line 254, ../../_sass/halfdane.scss */
+  /* line 164, ../../_sass/halfdane.scss */
   .postslist .post h2 {
     clear: none;
   }
 }
 @media screen and (min-width: 1800px) {
-  /* line 261, ../../_sass/halfdane.scss */
+  /* line 171, ../../_sass/halfdane.scss */
   body {
     font-size: 150%;
   }
 
-  /* line 264, ../../_sass/halfdane.scss */
+  /* line 174, ../../_sass/halfdane.scss */
   .content {
     margin-left: 10%;
     margin-right: 10%;
@@ -335,12 +383,12 @@ figure {
   }
 }
 @media screen and (min-width: 1024px) and (max-width: 1800px) {
-  /* line 272, ../../_sass/halfdane.scss */
+  /* line 182, ../../_sass/halfdane.scss */
   body {
     font-size: 100%;
   }
 
-  /* line 275, ../../_sass/halfdane.scss */
+  /* line 185, ../../_sass/halfdane.scss */
   .content {
     margin-left: 5%;
     margin-right: 5%;
@@ -348,77 +396,77 @@ figure {
   }
 }
 @media screen and (min-width: 1024px) and (max-width: 1400px) {
-  /* line 283, ../../_sass/halfdane.scss */
+  /* line 193, ../../_sass/halfdane.scss */
   body {
-    font-size: 0.9375em;
-    line-height: 1.46667em;
+    font-size: 0.71429em;
+    line-height: 1.73333em;
   }
 }
 @media screen and (min-width: 800px) and (max-width: 1024px) {
-  /* line 289, ../../_sass/halfdane.scss */
+  /* line 199, ../../_sass/halfdane.scss */
   body {
-    font-size: 0.875em;
-    line-height: 1.57143em;
+    font-size: 0.66667em;
+    line-height: 1.85714em;
   }
 
-  /* line 292, ../../_sass/halfdane.scss */
+  /* line 202, ../../_sass/halfdane.scss */
   .content {
     margin: 0 2%;
   }
 
-  /* line 295, ../../_sass/halfdane.scss */
+  /* line 205, ../../_sass/halfdane.scss */
   .postslist figure img {
-    width: 13.75em;
-    height: 13.75em;
+    width: 12.38095em;
+    height: 12.38095em;
   }
 
-  /* line 299, ../../_sass/halfdane.scss */
+  /* line 209, ../../_sass/halfdane.scss */
   .post .text {
     width: 70%;
   }
 }
 @media screen and (max-width: 800px) {
-  /* line 305, ../../_sass/halfdane.scss */
+  /* line 215, ../../_sass/halfdane.scss */
   body {
-    font-size: 0.75em;
-    line-height: 1.83333em;
+    font-size: 0.57143em;
+    line-height: 2.16667em;
   }
 
-  /* line 309, ../../_sass/halfdane.scss */
+  /* line 219, ../../_sass/halfdane.scss */
   h2, h3, h4, h5, h6,
   h2 a, h3 a, h4 a, h5 a, h6 a {
     font-family: 'Cabin', Helvetica, Arial, sans-serif;
     margin-bottom: 0;
   }
 
-  /* line 313, ../../_sass/halfdane.scss */
+  /* line 223, ../../_sass/halfdane.scss */
   .content {
     margin: 0;
   }
 
-  /* line 316, ../../_sass/halfdane.scss */
+  /* line 226, ../../_sass/halfdane.scss */
   figure {
     margin: 0;
   }
 
-  /* line 319, ../../_sass/halfdane.scss */
+  /* line 229, ../../_sass/halfdane.scss */
   .postslist figure img {
-    width: 4.125em;
-    height: 4.125em;
+    width: 3.71429em;
+    height: 3.71429em;
   }
 
-  /* line 323, ../../_sass/halfdane.scss */
+  /* line 233, ../../_sass/halfdane.scss */
   .post .text {
     width: 80%;
   }
 
-  /* line 326, ../../_sass/halfdane.scss */
+  /* line 236, ../../_sass/halfdane.scss */
   img {
     width: 800px;
     max-width: 100%;
   }
 
-  /* line 330, ../../_sass/halfdane.scss */
+  /* line 240, ../../_sass/halfdane.scss */
   .excerpt {
     display: none;
   }

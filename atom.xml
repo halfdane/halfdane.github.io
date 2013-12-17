@@ -4,7 +4,7 @@
  <title>Canned Nerd</title>
  <link href="http://halfdane.github.io/" rel="self"/>
  <link href="http://halfdane.github.io"/>
- <updated>2013-12-17T07:46:14+00:00</updated>
+ <updated>2013-12-17T10:28:30+00:00</updated>
  <id>http://halfdane.github.io</id>
  <author>
    <name>Halfdane</name>
@@ -17,27 +17,119 @@
    <link href="http://halfdane.github.io/html/2013/12/11/vertikaler-rhythmus"/>
    <updated>2013-12-11T00:00:00+00:00</updated>
    <id>http://halfdane.github.io/html/2013/12/11/vertikaler-rhythmus</id>
-   <content type="html">&lt;p&gt;Was von vielen kompetenten Designern offenbar für sehr wichtig gehalten wird, ist der vertikale Rhythmus, also das Ausrichten der Schriftzeilen (und der anderen Elemente) an einem konsistenten Raster, nämlich genau den Schrifzeilen eines regulären Absatzes. Dazu muss man so crazy Dinge machen wie die Baseline berechnen (gewünschte Höhe der Schrift durch Höhe der Zeilen teilen), für Überschriften eine Skalierung nach dem goldenen Schnitt berechnen (und zwar für jedes Überschriften-Level einzeln) und einen unteren Margin an Überschriften- und Absatz-Elemente hängen, der genau so abgepasst ist, dass die nächste Schriftzeile ins Raster passt.&lt;/p&gt;
+   <content type="html">&lt;p&gt;Was von vielen kompetenten Designern offenbar für sehr wichtig gehalten wird,
+ist der vertikale Rhythmus, also das Ausrichten der Schriftzeilen (und der anderen Elemente) an einem
+konsistenten Raster, nämlich genau den Schrifzeilen eines regulären Absatzes.
+Dazu muss man so crazy Dinge machen wie die Baseline berechnen
+(gewünschte Höhe der Schrift durch Höhe der Zeilen teilen), für Überschriften eine Skalierung nach dem
+goldenen Schnitt berechnen (und zwar für jedes Überschriften-Level einzeln) und einen unteren Margin
+an Überschriften- und Absatz-Elemente hängen, der genau so abgepasst ist, dass die nächste Schriftzeile
+ins Raster passt.&lt;/p&gt;
+
 &lt;figure&gt;
-    &lt;img alt='Seite mit baseline' src='/assets/img/baseline.png' /&gt;
+    &lt;img alt=&quot;Seite mit baseline&quot; src=&quot;/assets/img/baseline.png&quot;/&gt;
     
 &lt;/figure&gt;
-&lt;p&gt;Dazu kommt, dass ich das Raster (und die Schriften) unbedingt in &lt;code&gt;em&lt;/code&gt; haben will, damit es gut (und mit &lt;a href='http://joshnh.com/2011/07/26/are-you-using-ems-with-your-media-queries/'&gt;wenig Aufwand&lt;/a&gt;) skaliert, wenn ich für die Responsiveness (das wird dann der nächste Eintrag) andere Größen benutzen möchte. Und die Schriftgröße soll bitte nicht 14 oder 16 sein, sondern eine richtig große Schrift - das heißt insbesondere, dass ich keine der fertigen baselines von einer anderen Seite klauen kann :/&lt;/p&gt;
+
+&lt;p&gt;Dazu kommt, dass ich das Raster (und die Schriften) unbedingt in &lt;code&gt;em&lt;/code&gt; haben will, damit
+es gut (und mit &lt;a href=&quot;http://joshnh.com/2011/07/26/are-you-using-ems-with-your-media-queries/&quot;&gt;wenig Aufwand&lt;/a&gt;)
+skaliert, wenn ich für die Responsiveness (das wird dann der nächste Eintrag)
+andere Größen benutzen möchte.
+Und die Schriftgröße soll bitte nicht 14 oder 16 sein, sondern eine richtig große Schrift - das
+heißt insbesondere, dass ich keine der fertigen baselines
+von einer anderen Seite klauen kann :/&lt;/p&gt;
 
 &lt;p&gt;Puh!&lt;/p&gt;
 
-&lt;p&gt;Zum Glück hat &lt;a href='http://joshnh.com/'&gt;Joshua Hibbert&lt;/a&gt; einen &lt;a href='http://joshnh.com/tools/em-baseline-generator.html'&gt;wunderbaren Baseline-Generator&lt;/a&gt; gebaut, der die Verhältnisse in &lt;code&gt;em&lt;/code&gt; und relativen Größen ausdrücken kann! Dankeschön, ich war schon drauf und dran die Idee in die Tonne zu kloppen.&lt;/p&gt;
+&lt;p&gt;Zum Glück hat &lt;a href=&quot;http://joshnh.com/&quot;&gt;Joshua Hibbert&lt;/a&gt; einen
+&lt;a href=&quot;http://joshnh.com/tools/em-baseline-generator.html&quot;&gt;wunderbaren Baseline-Generator&lt;/a&gt; gebaut,
+der die Verhältnisse in &lt;code&gt;em&lt;/code&gt; und relativen Größen ausdrücken kann!
+Dankeschön, ich war schon drauf und dran die Idee in die Tonne zu kloppen.&lt;/p&gt;
 
-&lt;p&gt;Ich habe 21 Pixel als Schriftgröße und 31 Pixel als Linienabstand gewählt und das generierte CSS einfach direkt übernommen - naja, die Überschriften habe ich dann doch nicht fett gemacht, sondern 500 als Gewicht gewählt. Das wäre dann doch zu fett gewesen :)&lt;/p&gt;
+&lt;p&gt;Ich habe 21 Pixel als Schriftgröße und 31 Pixel als Linienabstand gewählt und das generierte CSS
+einfach direkt übernommen - naja, die Überschriften habe ich dann doch nicht fett gemacht,
+sondern 500 als Gewicht gewählt. Das wäre dann doch zu
+fett gewesen :)&lt;/p&gt;
 
-&lt;p&gt;P.S.: Aber ich kann&amp;#8217;s natürlich nicht lassen - nachdem ich zu meiner Bestürzung feststellen konnte, dass eine prozentuale Fontsize nicht ausreicht, um in responsive-Stufen den Rhythmus zu erhalten, hatte ich die Nase voll: die Stylesheets werden jetzt mit &lt;a href='http://sass-lang.com/'&gt;SASS&lt;/a&gt; berechnet.&lt;/p&gt;
+&lt;p&gt;P.S.: Aber ich kann&amp;#39;s natürlich nicht lassen - nachdem ich zu meiner Bestürzung
+feststellen konnte, dass eine prozentuale Fontsize nicht ausreicht, um in responsive-Stufen den
+Rhythmus zu erhalten, hatte ich die Nase voll: die Stylesheets werden jetzt mit
+&lt;a href=&quot;http://sass-lang.com/&quot;&gt;SASS&lt;/a&gt; berechnet.&lt;/p&gt;
 
-&lt;p&gt;P.P.S.: Der Erniedrigungen sind kein Ende: jetzt muss ich vor mir selbst auch noch zugeben, dass ich nicht in der Lage bin, die Baseline-Berechnungen korrekt selbst zu programmieren. Es gibt einfach zu viele Sonderfälle für meinen Geschmack: das fängt mit dem seltsamen Verhalten der prozentualen Werte an und hört mit dem Kollabieren aneinandergrenzender Margins noch lange nicht auf.&lt;/p&gt;
+&lt;p&gt;P.P.S.: Der Erniedrigungen sind kein Ende: jetzt muss ich vor mir selbst auch noch zugeben, dass ich
+nicht in der Lage bin, die Baseline-Berechnungen korrekt selbst zu programmieren. Es gibt einfach
+zu viele Sonderfälle für meinen Geschmack: das fängt mit dem seltsamen Verhalten der prozentualen
+Werte an und hört mit dem Kollabieren aneinandergrenzender Margins noch lange nicht auf.&lt;/p&gt;
 
-&lt;p&gt;Da ich ohnehin schon SASS dabei hatte, kann ich auch gleich die Baseline-Funktionen von dort benutzen. War immer noch etwas Arbeit, aber jetzt funktioniert&amp;#8217;s auf allen Seiten und beim Verkleinern (Vergrößern) des Browsers.&lt;/p&gt;
+&lt;p&gt;Da ich ohnehin schon SASS dabei hatte, kann ich auch gleich die Baseline-Funktionen von Compass benutzen.
+War immer noch etwas Arbeit, aber jetzt funktioniert&amp;#39;s auf allen Seiten und beim Verkleinern
+(Vergrößern) des Browsers.&lt;/p&gt;
 
-&lt;p&gt;Ich benutze das auf allen Seiten des Blogs, und das Raster sieht so aus: &lt;span class='js_baseline_trigger btn'&gt;Click for raster&lt;/span&gt;&lt;/p&gt;
-&lt;script src='/assets/js/display_halfdane_baseline.js'&gt; &lt;/script&gt;</content>
+&lt;p&gt;Ich benutze das auf allen Seiten des Blogs, und das Raster sieht so aus: &lt;span class=&quot;js_baseline_trigger btn&quot;&gt;Click for raster&lt;/span&gt;&lt;/p&gt;
+
+&lt;script src=&quot;/assets/js/display_halfdane_baseline.js&quot; &gt; &lt;/script&gt;
+
+&lt;p&gt;Dank Compass sieht der Baseline-Code nur noch in etwa so aus:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;scss language-scss&quot; data-lang=&quot;scss&quot;&gt;&lt;span class=&quot;k&quot;&gt;@import&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;compass/typography/vertical_rhythm&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$base-font-size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;       :&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;21&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$base-line-height&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;     :&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;26&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$relative-font-sizing&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n-Pseudo&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;@include&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt; establish-baseline&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;@mixin&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt; font&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$relation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$top&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$bottom&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nv&quot;&gt;$px&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$relation&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$base-font-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;@include&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt; adjust-font-size-to&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;@include&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt; rhythm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$top&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$bottom&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;h1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;@include&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt; font&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;text-align&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;center&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;h2&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;@include&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt; font&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;h3&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;@include&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt; font&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;.5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;blockquote&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;figcaption&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;ul&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;pre&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;code&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;@include&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt; font&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;small&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;@include&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt; font&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;.7&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Für die sexy Code-Ansicht habe ich dann noch ein bisschen draufgelegt, damit die
+Zebrastreifen hinter den Zeilen automatisch erzeugt werden und oben und unten jeweils eine halbe Zeile
+frei bleibt:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;scss language-scss&quot; data-lang=&quot;scss&quot;&gt;&lt;span class=&quot;nt&quot;&gt;pre&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;cm&quot;&gt;/*Ja, das ist übertrieben - sue me!*/&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;font-family&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Consolas&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Andale Mono WT&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Andale Mono&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Lucida Console&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Lucida Sans Typewriter&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;DejaVu Sans Mono&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Bitstream Vera Sans Mono&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Liberation Mono&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Nimbus Mono L&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Monaco&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Courier New&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Courier&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;monospace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;na&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;.8&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;rem&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;.2&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;rem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;px&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;solid&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;#ccc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;border-left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;rem&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;solid&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;#ccc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;cm&quot;&gt;/*Im Layout oben und unten je eine halbe Zeile Platz*/&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;@include&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt; leader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;.5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$base-font-size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;@include&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt; trailer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;.5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$base-font-size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+  &lt;span class=&quot;cm&quot;&gt;/*erst eine Zeile klar, dann eine Zeile Dunkel*/&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;background-image&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;linear-gradient&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;transparent&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;rhythm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$base-font-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;#ececec&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;rhythm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$base-font-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+
+  &lt;span class=&quot;cm&quot;&gt;/*nach zwei Zeilen nicht einfach weiter grau lassen -&amp;gt; repeat*/&lt;/span&gt;
+  &lt;span class=&quot;cm&quot;&gt;/*ich hätte zwar erwartet, dass 2 der richtige Wert sein müsse&lt;/span&gt;
+&lt;span class=&quot;cm&quot;&gt;  (zwei Zeilen), aber da gibt es vielleicht Rundungsfehler*/&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;background-size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;auto&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;rhythm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;.01&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$base-font-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+  &lt;span class=&quot;cm&quot;&gt;/*den Hintergrund eine halbe Zeile nach unten schieben, damit er zum verschobenen Layout passt */&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;background-position&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;rhythm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;.5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$base-font-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
  </entry>
  
  <entry>
@@ -45,47 +137,56 @@
    <link href="http://halfdane.github.io/html5/2013/12/08/jekyll"/>
    <updated>2013-12-08T00:00:00+00:00</updated>
    <id>http://halfdane.github.io/html5/2013/12/08/jekyll</id>
-   <content type="html">&lt;p&gt;Eine der Sachen, die ich bei Markdown nicht so gut gelungen finde sind Bilder, insbesondere mit Bildunterschriften. Dafür gibt es ja seit HTML5 das &lt;code&gt;figure&lt;/code&gt;-Tag, das zusammen mit &lt;code&gt;img&lt;/code&gt; und &lt;code&gt;figcaption&lt;/code&gt; genau das macht, was Blogger und Designer seit Jahrzehnten nachzubauen versuchen. Dank der Liquid-Template-Sprache, die ich hier einsetzen kann, muss mich das nicht stören, ich kann mit einem einfachen Include selber Bilder einbinden (allerdings vor allem technisch, nicht schön - bin schließlich kein Designer :):&lt;/p&gt;
+   <content type="html">&lt;p&gt;Eine der Sachen, die ich bei Markdown nicht so gut gelungen finde sind Bilder,
+insbesondere mit Bildunterschriften.
+Dafür gibt es ja seit HTML5 das &lt;code&gt;figure&lt;/code&gt;-Tag, das zusammen mit &lt;code&gt;img&lt;/code&gt; und &lt;code&gt;figcaption&lt;/code&gt;
+genau das macht, was Blogger und Designer seit Jahrzehnten nachzubauen versuchen.
+Dank der Liquid-Template-Sprache, die ich hier einsetzen kann, muss mich das nicht stören,
+ich kann mit einem einfachen Include selber Bilder einbinden
+(allerdings vor allem technisch, nicht schön - bin schließlich kein Designer :):&lt;/p&gt;
+
 &lt;figure&gt;
-    &lt;img alt='bird' src='/assets/img/vogel.by.anira..JPG' /&gt;
+    &lt;img alt=&quot;bird&quot; src=&quot;/assets/img/vogel.by.anira..JPG&quot;/&gt;
     &lt;figcaption&gt;Nice Bird&lt;/figcaption&gt;
-&lt;/figure&gt;&lt;!-- more --&gt;
-&lt;p&gt;(Das Bild habe ich bei &lt;a href='http://www.the-inspiring-life.com/2013/01/ein-logo-fur-meinen-blog.html'&gt;the inspiring live&lt;/a&gt; gefunden.)&lt;/p&gt;
+&lt;/figure&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;(Das Bild habe ich bei &lt;a href=&quot;http://www.the-inspiring-life.com/2013/01/ein-logo-fur-meinen-blog.html&quot;&gt;the inspiring live&lt;/a&gt; gefunden.)&lt;/p&gt;
 
 &lt;p&gt;Und das geht so:&lt;/p&gt;
 
 &lt;p&gt;In &lt;code&gt;\_includes&lt;/code&gt; eine Datei namens &lt;code&gt;image&lt;/code&gt; erstellen, die folgenden Code enthält:&lt;/p&gt;
-&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='html'&gt;&lt;span class='nt'&gt;&amp;lt;figure&amp;gt;&lt;/span&gt;
-  &lt;span class='nt'&gt;&amp;lt;a&lt;/span&gt; &lt;span class='na'&gt;href=&lt;/span&gt;&lt;span class='s'&gt;&amp;quot;/assets/{{ include.img }}&amp;quot;&lt;/span&gt;&lt;span class='nt'&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class='nt'&gt;&amp;lt;span&lt;/span&gt; &lt;span class='na'&gt;class=&lt;/span&gt;&lt;span class='s'&gt;&amp;quot;rounded-img&amp;quot;&lt;/span&gt; &lt;span class='na'&gt;style=&lt;/span&gt;&lt;span class='s'&gt;&amp;quot;background: url(/assets/{{ include.img }}) no-repeat center center;&amp;quot;&lt;/span&gt;&lt;span class='nt'&gt;&amp;gt;&lt;/span&gt;
-      &lt;span class='nt'&gt;&amp;lt;img&lt;/span&gt; &lt;span class='err'&gt;{%&lt;/span&gt; &lt;span class='na'&gt;if&lt;/span&gt; &lt;span class='na'&gt;include&lt;/span&gt;&lt;span class='err'&gt;.&lt;/span&gt;&lt;span class='na'&gt;title&lt;/span&gt; &lt;span class='err'&gt;%}&lt;/span&gt;&lt;span class='na'&gt;alt=&lt;/span&gt;&lt;span class='s'&gt;&amp;quot;{{ include.title }}&amp;quot;&lt;/span&gt; &lt;span class='err'&gt;{%&lt;/span&gt; &lt;span class='na'&gt;endif&lt;/span&gt; &lt;span class='err'&gt;%}&lt;/span&gt;&lt;span class='na'&gt;src=&lt;/span&gt;&lt;span class='s'&gt;&amp;quot;/assets/{{ include.img }}&amp;quot;&lt;/span&gt; &lt;span class='na'&gt;style=&lt;/span&gt;&lt;span class='s'&gt;&amp;quot;opacity: 0;&amp;quot;&lt;/span&gt;&lt;span class='nt'&gt;/&amp;gt;&lt;/span&gt;
-    &lt;span class='nt'&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
-    &lt;span class='nt'&gt;&amp;lt;figcaption&amp;gt;&lt;/span&gt;{{ include.text }}&lt;span class='nt'&gt;&amp;lt;/figcaption&amp;gt;&lt;/span&gt;
-  &lt;span class='nt'&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
-&lt;span class='nt'&gt;&amp;lt;/figure&amp;gt;&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html+erb language-html+erb&quot; data-lang=&quot;html+erb&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;figure&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;{%&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;%}&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;alt=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;{{ include.title }}&amp;quot;&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;{%&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;endif&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;%}&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;{{ ASSET_PATH }}/img/{{ include.img }}&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+    {%if include.text %}&lt;span class=&quot;nt&quot;&gt;&amp;lt;figcaption&amp;gt;&lt;/span&gt;{{ include.text }}&lt;span class=&quot;nt&quot;&gt;&amp;lt;/figcaption&amp;gt;&lt;/span&gt;{% endif %}
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/figure&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Das Bild auf der Seite einbinden:&lt;/p&gt;
-&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='html'&gt;{% include image img=&amp;quot;vogel.by.anira..JPG&amp;quot; text=&amp;quot;Nice Bird&amp;quot; title=&amp;quot;bird&amp;quot; %}
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;image&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;img&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;vogel.by.anira..JPG&amp;quot;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;Nice Bird&amp;quot;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;bird&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Ein bisschen aufhübschen mit CSS&lt;/p&gt;
-&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='css'&gt;&lt;span class='nc'&gt;.rounded-img&lt;/span&gt; &lt;span class='p'&gt;{&lt;/span&gt;
-    &lt;span class='k'&gt;display&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='k'&gt;inline&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='k'&gt;block&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
-    &lt;span class='k'&gt;border&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='k'&gt;solid&lt;/span&gt; &lt;span class='m'&gt;1px&lt;/span&gt; &lt;span class='m'&gt;#000&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
-    &lt;span class='k'&gt;overflow&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='k'&gt;hidden&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
-    &lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='n'&gt;webkit&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='k'&gt;border&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='n'&gt;radius&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='m'&gt;10px&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
-    &lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='n'&gt;moz&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='k'&gt;border&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='n'&gt;radius&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='m'&gt;10px&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
-    &lt;span class='k'&gt;border&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='n'&gt;radius&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='m'&gt;10px&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
-    &lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='n'&gt;webkit&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='n'&gt;box&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='n'&gt;shadow&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='m'&gt;0&lt;/span&gt; &lt;span class='m'&gt;1px&lt;/span&gt; &lt;span class='m'&gt;3px&lt;/span&gt; &lt;span class='n'&gt;rgba&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='m'&gt;0&lt;/span&gt;&lt;span class='o'&gt;,&lt;/span&gt; &lt;span class='m'&gt;0&lt;/span&gt;&lt;span class='o'&gt;,&lt;/span&gt; &lt;span class='m'&gt;0&lt;/span&gt;&lt;span class='o'&gt;,&lt;/span&gt; &lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='m'&gt;4&lt;/span&gt;&lt;span class='p'&gt;);&lt;/span&gt;
-    &lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='n'&gt;moz&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='n'&gt;box&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='n'&gt;shadow&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='m'&gt;0&lt;/span&gt; &lt;span class='m'&gt;1px&lt;/span&gt; &lt;span class='m'&gt;3px&lt;/span&gt; &lt;span class='n'&gt;rgba&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='m'&gt;0&lt;/span&gt;&lt;span class='o'&gt;,&lt;/span&gt; &lt;span class='m'&gt;0&lt;/span&gt;&lt;span class='o'&gt;,&lt;/span&gt; &lt;span class='m'&gt;0&lt;/span&gt;&lt;span class='o'&gt;,&lt;/span&gt; &lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='m'&gt;4&lt;/span&gt;&lt;span class='p'&gt;);&lt;/span&gt;
-    &lt;span class='n'&gt;box&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='n'&gt;shadow&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='m'&gt;0&lt;/span&gt; &lt;span class='m'&gt;1px&lt;/span&gt; &lt;span class='m'&gt;3px&lt;/span&gt; &lt;span class='n'&gt;rgba&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='m'&gt;0&lt;/span&gt;&lt;span class='o'&gt;,&lt;/span&gt; &lt;span class='m'&gt;0&lt;/span&gt;&lt;span class='o'&gt;,&lt;/span&gt; &lt;span class='m'&gt;0&lt;/span&gt;&lt;span class='o'&gt;,&lt;/span&gt; &lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='m'&gt;4&lt;/span&gt;&lt;span class='p'&gt;);&lt;/span&gt;
-&lt;span class='p'&gt;}&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nt&quot;&gt;figure&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;line-height&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;inline&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;solid&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1px&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;col_border&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;webkit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;box&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shadow&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;3px&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rgba&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;moz&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;box&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shadow&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;3px&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rgba&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;box&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shadow&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;3px&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rgba&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;text-align&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;center&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1em&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;auto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Fertig. Wenn ich keine Bildunterschrift will, lasse ich das Attribut einfach weg:&lt;/p&gt;
-&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='html'&gt;{% include image img=&amp;#39;mug.jpg&amp;#39; title=&amp;quot;bird&amp;quot; %}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;figure&gt;
-    &lt;img alt='bird' src='/assets/img/mug.jpg' /&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;image&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;img&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;mug.jpg&amp;#39;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;bird&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure&gt;
+    &lt;img alt=&quot;bird&quot; src=&quot;/assets/img/mug.jpg&quot;/&gt;
     
-&lt;/figure&gt;</content>
+&lt;/figure&gt;
+</content>
  </entry>
  
  <entry>
@@ -93,26 +194,30 @@
    <link href="http://halfdane.github.io/html5/2013/05/30/3gToggle"/>
    <updated>2013-05-30T00:00:00+00:00</updated>
    <id>http://halfdane.github.io/html5/2013/05/30/3gToggle</id>
-   <content type="html">&lt;p&gt;Eine der wenigen Apps, für die ich Geld auszugeben bereit war, ist Tasker &lt;a name='reference1'&gt; &lt;/a&gt;[&lt;a href='#footnote1'&gt;1&lt;/a&gt;] – die ultimative Allzweckwaffe für Nerds. Zumindest auf einem gerooteten Telefon.&lt;/p&gt;
+   <content type="html">&lt;p&gt;Eine der wenigen Apps, für die ich Geld auszugeben bereit war, ist Tasker &lt;a name=&quot;reference1&quot;&gt; &lt;/a&gt;[&lt;a href=&quot;#footnote1&quot;&gt;1&lt;/a&gt;] – die ultimative Allzweckwaffe für Nerds. Zumindest auf einem gerooteten Telefon.&lt;/p&gt;
 
-&lt;p&gt;Mit diesem Profil z.B. schalte ich automatisch auf den stromsparenden 2G Modus, wenn der Bildschirm aus ist. Und beim einschalten natürlich wieder zurück. Umgeschaltet wird aber nur, wenn nicht gerade telefoniert wird oder es klingelt:&lt;/p&gt;
-&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='html'&gt;Profile: G2 When Off
-State: Display State [ Is:Off ]
-Enter: To 2G if allowed
-A1: Wait [ MS:0 Seconds:7 Minutes:0 Hours:0 Days:0 ]
-A2: If [ %SCREEN ~ off ]
-A3: If [ %PHONING = 0 ]
-A4: Mobile Data 2G/3G [ Mode:2G Only ]
+&lt;p&gt;Mit diesem Profil z.B. schalte ich automatisch auf den stromsparenden 2G Modus, wenn der Bildschirm aus ist. Und beim einschalten natürlich wieder zurück.
+Umgeschaltet wird aber nur, wenn nicht gerade telefoniert wird oder es klingelt:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;ss&quot;&gt;Profile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;G2&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;When&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Off&lt;/span&gt;
+&lt;span class=&quot;ss&quot;&gt;State&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Display&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;State&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;Is&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Off&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;ss&quot;&gt;Enter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;To&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;G&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;allowed&lt;/span&gt;
+&lt;span class=&quot;ss&quot;&gt;A1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Wait&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;MS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;Seconds&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;Minutes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;Hours&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;Days&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;ss&quot;&gt;A2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;If&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;SCREEN&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;~&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;off&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;ss&quot;&gt;A3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;If&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;PHONING&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;ss&quot;&gt;A4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Mobile&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Data&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;G&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;G&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;Mode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;G&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Only&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
 
-Exit: To 3G if allowed
-A1: If [ %PHONING = 0 ]
-A2: Mobile Data 2G/3G [ Mode:3G Preferred ]
+&lt;span class=&quot;ss&quot;&gt;Exit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;To&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;G&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;allowed&lt;/span&gt;
+&lt;span class=&quot;ss&quot;&gt;A1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;If&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;PHONING&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;ss&quot;&gt;A2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Mobile&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Data&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;G&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;G&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;Mode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;G&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Preferred&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Die Variable PHONING wird von anderen Profilen auf 1 gesetzt, wenn es klingelt oder abgehoben ist, und auf 0, wenn wieder aufgelegt wird.&lt;/p&gt;
 
 &lt;p&gt;Auf diese Weise reicht der Akku auch bei intensiver Nutzung locker den ganzen Tag.&lt;/p&gt;
-&lt;a name='footnote1'&gt; &lt;/a&gt;
-&lt;p&gt;[&lt;a href='#reference1'&gt;1&lt;/a&gt;] Die anderen Apps sind Titanium Backup und das Spiel Osmos.&lt;/p&gt;</content>
+
+&lt;p&gt;&lt;a name=&quot;footnote1&quot;&gt; &lt;/a&gt;
+[&lt;a href=&quot;#reference1&quot;&gt;1&lt;/a&gt;]
+Die anderen Apps sind Titanium Backup und das Spiel Osmos.&lt;/p&gt;
+</content>
  </entry>
  
  <entry>
@@ -120,28 +225,40 @@ A2: Mobile Data 2G/3G [ Mode:3G Preferred ]
    <link href="http://halfdane.github.io/html5/2013/05/29/blender_beginner"/>
    <updated>2013-05-29T00:00:00+00:00</updated>
    <id>http://halfdane.github.io/html5/2013/05/29/blender_beginner</id>
-   <content type="html">&lt;p&gt;Ich habe inzwischen beschlossen, dass ich mit Blender doch ganz gut umgehen können muss, um bei Shapeways auf einen grünen Zweig zu kommen: die anpassbaren Modelle dort finde ich eher unbefriedigend.&lt;/p&gt;
+   <content type="html">&lt;p&gt;Ich habe inzwischen beschlossen, dass ich mit Blender doch ganz gut umgehen können muss,
+um bei Shapeways auf einen grünen Zweig zu kommen: die anpassbaren Modelle dort finde
+ich eher unbefriedigend.&lt;/p&gt;
 
-&lt;p&gt;Blender hat zwar eine steile Lernkurve, aber 1. kommt mir das Zupass und 2. steigt die Arbeitsgeschwindigkeit danach offenbar exponentiell.&lt;/p&gt;
+&lt;p&gt;Blender hat zwar eine steile Lernkurve, aber 1. kommt mir das Zupass und
+2. steigt die Arbeitsgeschwindigkeit danach offenbar exponentiell.&lt;/p&gt;
 
 &lt;p&gt;Nach den ersten Tutorials hatte ich dieses beeindruckende Ergebnis:&lt;/p&gt;
-&lt;figure&gt;
-    &lt;img alt='Ein sehr simples Schwein aus einfachen Primitiven' src='/assets/img/blender_pig.png' /&gt;
-    
-&lt;/figure&gt;
-&lt;p&gt;Oder auch so etwas:&lt;/p&gt;
-&lt;figure&gt;
-    &lt;img alt='Ein Leuchtturm mit kleinem Häuschen anbei. Nicht mehr total primitiv, aber auch nicht besonders toll.' src='/assets/img/blender_lighthouse.png' /&gt;
-    
-&lt;/figure&gt;
-&lt;p&gt;Eher nicht so super – zumindest nichts, was ich unbedingt gedruckt haben wollte&amp;#8230;&lt;/p&gt;
 
-&lt;p&gt;Beim nächsten Versuch wollte ich gerne mit Flüssigkeitssimulationen spielen und das Ergebnis war dann schon etwas beeindruckender:&lt;/p&gt;
 &lt;figure&gt;
-    &lt;img alt='Eindrucksvolles Bild von Wasser, das in ein Glass gegossen wird.' src='/assets/img/blender_water.png' /&gt;
+    &lt;img alt=&quot;Ein sehr simples Schwein aus einfachen Primitiven&quot; src=&quot;/assets/img/blender_pig.png&quot;/&gt;
     
 &lt;/figure&gt;
-&lt;p&gt;Das ist zwar immer noch nicht mit einem 3D-Drucker druckbar, aber zumindest muss ich mich damit nicht mehr verstecken :)&lt;/p&gt;</content>
+
+&lt;p&gt;Oder auch so etwas:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img alt=&quot;Ein Leuchtturm mit kleinem Häuschen anbei. Nicht mehr total primitiv, aber auch nicht besonders toll.&quot; src=&quot;/assets/img/blender_lighthouse.png&quot;/&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Eher nicht so super – zumindest nichts, was ich unbedingt gedruckt haben wollte...&lt;/p&gt;
+
+&lt;p&gt;Beim nächsten Versuch wollte ich gerne mit Flüssigkeitssimulationen spielen
+und das Ergebnis war dann schon etwas beeindruckender:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img alt=&quot;Eindrucksvolles Bild von Wasser, das in ein Glass gegossen wird.&quot; src=&quot;/assets/img/blender_water.png&quot;/&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Das ist zwar immer noch nicht mit einem 3D-Drucker druckbar,
+aber zumindest muss ich mich damit nicht mehr verstecken :)&lt;/p&gt;
+</content>
  </entry>
  
  <entry>
@@ -149,12 +266,21 @@ A2: Mobile Data 2G/3G [ Mode:3G Preferred ]
    <link href="http://halfdane.github.io/html5/2013/05/24/tensegrity"/>
    <updated>2013-05-24T00:00:00+00:00</updated>
    <id>http://halfdane.github.io/html5/2013/05/24/tensegrity</id>
-   <content type="html">&lt;p&gt;Nachdem ich bereits vor Wochen auf der MAKE-Webseite über die Anleitung zu einem schnuckeligen, kleinen &lt;a href='http://makezine.com/2013/04/29/diy-tensegrity/'&gt;Tensegrity-Objekt&lt;/a&gt; gestolpert bin und das erstmal nur bei meiner &lt;a href='http://www.highdefdigest.com/blog/twin-peaks-cooper-tapes/'&gt;Diane&lt;/a&gt; geparkt habe, hatte ich heute mal eine Viertelstunde Muse:&lt;/p&gt;
+   <content type="html">&lt;p&gt;Nachdem ich bereits vor Wochen auf der MAKE-Webseite über die
+Anleitung zu einem schnuckeligen, kleinen &lt;a href=&quot;http://makezine.com/2013/04/29/diy-tensegrity/&quot;&gt;Tensegrity-Objekt&lt;/a&gt;
+gestolpert bin und
+das erstmal nur bei meiner &lt;a href=&quot;http://www.highdefdigest.com/blog/twin-peaks-cooper-tapes/&quot;&gt;Diane&lt;/a&gt;
+geparkt habe, hatte ich heute mal eine Viertelstunde Muse:&lt;/p&gt;
+
 &lt;figure&gt;
-    &lt;img alt='Tensegrity-Objekt' src='/assets/img/cam00009.jpg' /&gt;
+    &lt;img alt=&quot;Tensegrity-Objekt&quot; src=&quot;/assets/img/cam00009.jpg&quot;/&gt;
     
-&lt;/figure&gt;&lt;div class='clearfix'&gt; &lt;/div&gt;
-&lt;p&gt;Funktioniert :-)&lt;/p&gt;</content>
+&lt;/figure&gt;
+
+&lt;div class=&quot;clearfix&quot;&gt; &lt;/div&gt;
+
+&lt;p&gt;Funktioniert :-)&lt;/p&gt;
+</content>
  </entry>
  
  <entry>
@@ -162,17 +288,28 @@ A2: Mobile Data 2G/3G [ Mode:3G Preferred ]
    <link href="http://halfdane.github.io/html/2013/05/24/scrollspymystery"/>
    <updated>2013-05-24T00:00:00+00:00</updated>
    <id>http://halfdane.github.io/html/2013/05/24/scrollspymystery</id>
-   <content type="html">&lt;p&gt;Auf einer internen Seite, die Twitter-Bootstrap nicht ganz unähnlich ist, trat das Problem auf, dass der Browser irgendwo in die Mitte der Seite gesprungen ist (also etwa so: http://twitter.github.io/bootstrap/base-css.html#forms aber ohne #forms am Ende ).&lt;/p&gt;
+   <content type="html">&lt;p&gt;Auf einer internen Seite, die Twitter-Bootstrap nicht ganz unähnlich ist, trat das Problem auf,
+dass der Browser irgendwo in die Mitte der Seite gesprungen ist
+(also etwa so: &lt;a href=&quot;http://twitter.github.io/bootstrap/base-css.html#forms&quot;&gt;http://twitter.github.io/bootstrap/base-css.html#forms&lt;/a&gt; aber ohne #forms am Ende ).&lt;/p&gt;
+
 &lt;!-- more --&gt;
-&lt;p&gt;Meine erste Vermutung war, dass der Scrollspy-Code buggy sein müsse (Fehler machen immer nur die anderen, right?), aber auch ganz ohne Javascript sprang der Browser in die Mitte der Seite :/&lt;/p&gt;
+
+&lt;p&gt;Meine erste Vermutung war, dass der Scrollspy-Code buggy sein müsse
+(Fehler machen immer nur die anderen, right?), aber auch ganz ohne Javascript sprang der
+Browser in die Mitte der Seite :/&lt;/p&gt;
 
 &lt;p&gt;In meiner Verwirrung habe ich auch noch das CSS abgeschaltet, aber da lag’s natürlich nicht dran.&lt;/p&gt;
 
-&lt;p&gt;Letztendlich war der Fehler doch selbstverschuldet: in einer Form in der Mitte der Seite hatte ein Eingabefeld das Attribut “autofocus”, und der Browser hat den Cursor dann dahin gesetzt. Inklusive scrollen.&lt;/p&gt;
+&lt;p&gt;Letztendlich war der Fehler doch selbstverschuldet: in einer Form in der Mitte der
+Seite hatte ein Eingabefeld das Attribut “autofocus”, und der Browser hat den Cursor
+dann dahin gesetzt. Inklusive scrollen.&lt;/p&gt;
 
-&lt;p&gt;Ein völlig korrektes Verhalten – mit dem Entfernen des Attributes funktioniert die Seite jetzt auch wieder richtig.&lt;/p&gt;
+&lt;p&gt;Ein völlig korrektes Verhalten – mit dem Entfernen des Attributes funktioniert die Seite jetzt auch
+wieder richtig.&lt;/p&gt;
 
-&lt;p&gt;Das zeigt mir mal wieder, dass es auch mit reinem HTML durchaus möglich ist, das Verhalten der Seite zu zerbrechen – und dass nicht immer die anderen Schuld sind.&lt;/p&gt;</content>
+&lt;p&gt;Das zeigt mir mal wieder, dass es auch mit reinem HTML durchaus möglich ist,
+das Verhalten der Seite zu zerbrechen – und dass nicht immer die anderen Schuld sind.&lt;/p&gt;
+</content>
  </entry>
  
  <entry>
@@ -180,17 +317,27 @@ A2: Mobile Data 2G/3G [ Mode:3G Preferred ]
    <link href="http://halfdane.github.io/computer/2013/05/23/sshjump"/>
    <updated>2013-05-23T00:00:00+00:00</updated>
    <id>http://halfdane.github.io/computer/2013/05/23/sshjump</id>
-   <content type="html">&lt;p&gt;Man kommt ja auf live Umgebungen (oder auf die Maschinen von Kunden) meist nur über eine dedizierte Jumpbox, auf die man sich einloggt um dann von dort aus auf den eigentlichen Server zu kommen.&lt;/p&gt;
-&lt;!-- more --&gt;
-&lt;p&gt;Um den Workflow zu vereinfachen und den Zwischen-Login zu vermeiden, habe ich bisher meist einen Ssh-Tunnel benutzt, aber das funktioniert nur, wenn auf der Jumpbox Port-Forwarding erlaubt ist – bei kompetenten Admins also meistens nicht :-\&lt;/p&gt;
+   <content type="html">&lt;p&gt;Man kommt ja auf live Umgebungen (oder auf die Maschinen von Kunden) meist nur über eine
+dedizierte Jumpbox, auf die man sich einloggt um dann von dort aus auf den eigentlichen Server zu kommen.&lt;/p&gt;
 
-&lt;p&gt;Um so erfreuter habe ich festgestellt, dass die meisten einigermaßen aktuellen Implementierungen so etwas out-of-the-box können.&lt;/p&gt;
-&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='html'&gt;Host app-live-*
+&lt;!-- more --&gt;
+
+&lt;p&gt;Um den Workflow zu vereinfachen und den Zwischen-Login zu vermeiden, habe
+ich bisher meist einen Ssh-Tunnel benutzt, aber das funktioniert nur, wenn auf der
+Jumpbox Port-Forwarding erlaubt ist – bei kompetenten Admins also meistens nicht :-\&lt;/p&gt;
+
+&lt;p&gt;Um so erfreuter habe ich festgestellt, dass die meisten einigermaßen aktuellen Implementierungen
+so etwas out-of-the-box können.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;Host app-live-*
      ProxyCommand ssh -W %h:%p access-live-box.domain.name
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Diese Zeilen in der ~/.ssh/config führen dazu, dass ssh Verbindungen zu allen boxen, die mit app-live- anfangen über die jump box geroutet werden.&lt;/p&gt;
 
-&lt;p&gt;Wie gewohnt können auch mehrere Space separierte Einträge in der Host-Zeile sein.&lt;/p&gt;</content>
+&lt;p&gt;Diese Zeilen in der ~/.ssh/config führen dazu, dass ssh Verbindungen zu allen boxen, die mit
+app-live- anfangen über die jump box geroutet werden.&lt;/p&gt;
+
+&lt;p&gt;Wie gewohnt können auch mehrere Space separierte Einträge in der Host-Zeile sein.&lt;/p&gt;
+</content>
  </entry>
  
  <entry>
@@ -198,13 +345,26 @@ A2: Mobile Data 2G/3G [ Mode:3G Preferred ]
    <link href="http://halfdane.github.io/3d/2013/05/11/shapeways"/>
    <updated>2013-05-11T00:00:00+00:00</updated>
    <id>http://halfdane.github.io/3d/2013/05/11/shapeways</id>
-   <content type="html">&lt;p&gt;Dass 3D-Drucken “die Zukunft der Fabrikation ist” und eine zweite industrielle Revolution verursachen wird, interessiert mich nicht so sehr wie die Tatsache, dass ich damit irgendwelche Sachen aus meinem Computer herstellen kann.&lt;/p&gt;
+   <content type="html">&lt;p&gt;Dass 3D-Drucken “die Zukunft der Fabrikation ist” und eine zweite industrielle Revolution
+verursachen wird, interessiert mich nicht so sehr wie die Tatsache, dass ich
+damit irgendwelche Sachen aus meinem Computer herstellen kann.&lt;/p&gt;
+
 &lt;!-- more --&gt;
-&lt;p&gt;Sachen machen, das finde ich toll – leider kann ich nur mit Holz einerseits und ‘nem Lötkolben andererseits vernünftig umgehen. Glas, Metall, Keramik und Plastik sind mir völlig unzugänglich.&lt;/p&gt;
 
-&lt;p&gt;Nachdem ich die Firma für ein paar Jahre aus den Augen verloren hatte, ist sie mir jetzt wieder durch einen Bericht über einen Investor ins Auge gesprungen, der wer weiß wieviele Millionen Dollar da reinstecken will – industrielle Revolution, weisse Bescheid.&lt;/p&gt;
+&lt;p&gt;Sachen machen, das finde ich toll – leider kann ich nur mit Holz einerseits und ‘nem
+Lötkolben andererseits vernünftig umgehen.
+Glas, Metall, Keramik und Plastik sind mir völlig unzugänglich.&lt;/p&gt;
 
-&lt;p&gt;Ich nutze die Gelegenheit, um endlich mal mein eigenes kleines Modell zu erstellen und drucken zu lassen. Am besten fange ich mit einem einfachen, customizable Modell an und arbeite mich von dort aus an Blender heran :-)&lt;/p&gt;</content>
+&lt;p&gt;Nachdem ich die Firma für ein paar Jahre aus den Augen verloren hatte, ist sie mir
+jetzt wieder durch einen Bericht über einen Investor ins Auge gesprungen, der wer
+weiß wieviele Millionen Dollar da reinstecken will – industrielle Revolution,
+weisse Bescheid.&lt;/p&gt;
+
+&lt;p&gt;Ich nutze die Gelegenheit, um endlich mal mein eigenes kleines Modell zu erstellen und
+drucken zu lassen.
+Am besten fange ich mit einem einfachen, customizable Modell an und arbeite mich von
+dort aus an Blender heran :-)&lt;/p&gt;
+</content>
  </entry>
  
  
