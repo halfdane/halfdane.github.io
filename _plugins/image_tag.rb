@@ -42,7 +42,7 @@ module Jekyll
 
       # Build url
       # Only works if no trailing slash in `root_url`, and no leading in `url`
-      @url = [@config['root_url'], @url].join('/')
+      @url = [@config['root_url'], @url].join('/') unless (@url=~/^http/)
       @lazy_placeholder_url = [@config['root_url'], @config['lazy_placeholder']].join('/')
     end
 
