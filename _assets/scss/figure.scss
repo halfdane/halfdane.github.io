@@ -8,6 +8,25 @@ figure {
   @include leader(0.2, $base-font-size);
 }
 
+figure.left {
+  margin: 0 rhythm(1, $base-font-size) 20px 0;
+  float: left;
+}
+
+figure.right {
+  margin: 0 0 20px rhythm(1, $base-font-size);
+  float: right;
+}
+
+figure.p50 {
+  max-width: 50%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 figure.cap-left {
   figcaption {
     position: absolute;

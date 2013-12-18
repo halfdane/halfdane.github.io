@@ -1,0 +1,44 @@
+nav {
+  .brand {
+    color: $nav_brand;
+  }
+
+  ul {
+    $local_fontsize: 1.2 * $base-font-size;
+    @include adjust-font-size-to($local_fontsize);
+    margin: 0 0 rhythm(0.6, $local_fontsize) 0;
+    font-weight: lighter;
+    background-color: $nav_bg;
+    list-style: none;
+    display: inline-table;
+    width: 100%;
+
+    li {
+      float: left;
+    }
+    li a {
+      padding: rhythm(0.2, $local_fontsize) 0.5em;
+      display: block;
+      color: $nav_txt;
+    }
+
+    li a:hover {
+      color: $nav_txt_hover;
+    }
+  }
+}
+
+.pagination {
+  ul {
+    list-style: none;
+  }
+  .next {
+    float: left;
+  }
+  .prev {
+    float: right;
+  }
+  hr {
+    clear: both;
+  }
+}

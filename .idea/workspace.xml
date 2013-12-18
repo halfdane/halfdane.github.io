@@ -2,18 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf8d26b6-9aac-44de-917c-c8258df2f482" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_assets/scss/postlist.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_assets/scss/colors.scss" afterPath="$PROJECT_DIR$/_assets/scss/colors.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_assets/scss/navi.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2013-05-29-blender_beginner.md" afterPath="$PROJECT_DIR$/_posts/2013-05-29-blender_beginner.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2013-08-22-ringhalter.md" afterPath="$PROJECT_DIR$/_posts/2013-08-22-ringhalter.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2013-08-31-irisblende2.md" afterPath="$PROJECT_DIR$/_posts/2013-08-31-irisblende2.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2013-12-08-jekyll.md" afterPath="$PROJECT_DIR$/_posts/2013-12-08-jekyll.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/themes/twitter/default.html" afterPath="$PROJECT_DIR$/_includes/themes/twitter/default.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_assets/scss/figure.scss" afterPath="$PROJECT_DIR$/_assets/scss/figure.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_assets/scss/halfdane.scss" afterPath="$PROJECT_DIR$/_assets/scss/halfdane.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_assets/scss/typography.scss" afterPath="$PROJECT_DIR$/_assets/scss/typography.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_plugins/image_tag.rb" afterPath="$PROJECT_DIR$/_plugins/image_tag.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/themes/twitter/post.html" afterPath="$PROJECT_DIR$/_includes/themes/twitter/post.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_assets/scss/postlist.scss" afterPath="$PROJECT_DIR$/_assets/scss/postlist.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="halfdane.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387348107881" ignored="false" />
+    <file path="/Dummy.txt" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387375318255" ignored="false" />
     <file path="/index.md" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387208296219" ignored="false" />
-    <file path="/halfdane.scss" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387363900569" ignored="false" />
+    <file path="/halfdane.scss" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387374512624" ignored="false" />
     <file path="/default.html" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387310135677" ignored="false" />
     <file path="/2013-12-11-vertikaler-rhythmus.md" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387354171133" ignored="false" />
     <file path="/dummy.txt" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387261946551" ignored="false" />
@@ -24,27 +30,28 @@
     <file path="/2013-05-25-blender_beginner.md" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387264235499" ignored="false" />
     <file path="/2013-05-30-3gToggle.md" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387267845268" ignored="false" />
     <file path="/typography.scss" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387354071777" ignored="false" />
-    <file path="/2013-12-08-jekyll.md" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387313539842" ignored="false" />
+    <file path="/2013-12-08-jekyll.md" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387375662119" ignored="false" />
     <file path="/2013-08-19-Gitarrenhalter.md" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387311757544" ignored="false" />
-    <file path="/2013-08-22-ringhalter.md" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387309757651" ignored="false" />
+    <file path="/2013-08-22-ringhalter.md" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387374640504" ignored="false" />
     <file path="/2013-08-31-irisblende.md" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387278257339" ignored="false" />
-    <file path="/post.html" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387279009238" ignored="false" />
-    <file path="/2013-08-31-irisblende2.md" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387311910896" ignored="false" />
+    <file path="/post.html" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387372963016" ignored="false" />
+    <file path="/2013-08-31-irisblende2.md" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387373510047" ignored="false" />
     <file path="/2013-11-03-hakeldecke-mit-space-invaders.md" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387311973352" ignored="false" />
     <file path="/Gemfile" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387304803821" ignored="false" />
     <file path="/jekyll_asset_pipeline.rb" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387305889847" ignored="false" />
     <file path="/config.rb" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387306027901" ignored="false" />
     <file path="/_config.yml" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387306188240" ignored="false" />
-    <file path="/image_tag.rb" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387348622174" ignored="false" />
-    <file path="/figure.scss" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387353948103" ignored="false" />
+    <file path="/image_tag.rb" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387374420861" ignored="false" />
+    <file path="/figure.scss" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387375438073" ignored="false" />
     <file path="/2013-05-24-tensegrity.md" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387310412302" ignored="false" />
-    <file path="/2013-05-29-blender_beginner.md" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387310570191" ignored="false" />
+    <file path="/2013-05-29-blender_beginner.md" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387375521631" ignored="false" />
     <file path="/a.dummy" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387353885312" ignored="false" />
     <file path="/colors.scss" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387364404461" ignored="false" />
     <file path="/page.html" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387353621607" ignored="false" />
     <file path="/display_halfdane_baseline.js" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387354110743" ignored="false" />
     <file path="/index.html" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387361651815" ignored="false" />
-    <file path="/postlist.scss" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387365537591" ignored="false" />
+    <file path="/postlist.scss" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387372434944" ignored="false" />
+    <file path="/temp.rb" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387374446018" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,37 +110,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="2013-12-11-vertikaler-rhythmus.md" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/2013-12-11-vertikaler-rhythmus.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="14" selection-start="3090" selection-end="3090" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="colors.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_assets/scss/colors.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="16" selection-start="586" selection-end="602" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="halfdane.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_assets/scss/halfdane.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="17" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0">
+            <state line="11" column="0" selection-start="191" selection-end="218" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
+      <file leaf-file-name="postlist.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_assets/scss/postlist.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="18" selection-start="549" selection-end="549" vertical-scroll-proportion="-10.344828">
+            <state line="29" column="13" selection-start="965" selection-end="965" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="navi.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_assets/scss/navi.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="43" column="1" selection-start="665" selection-end="665" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -142,52 +140,61 @@
       <file leaf-file-name="post.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/post.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="35" selection-start="572" selection-end="572" vertical-scroll-proportion="-1.3793104">
+            <state line="25" column="6" selection-start="771" selection-end="771" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="typography.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_assets/scss/typography.scss">
+      <file leaf-file-name="2013-08-31-irisblende2.md" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_posts/2013-08-31-irisblende2.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="31" selection-start="1455" selection-end="1455" vertical-scroll-proportion="0.0">
+            <state line="22" column="68" selection-start="779" selection-end="779" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="postlist.scss" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/_assets/scss/postlist.scss">
+      <file leaf-file-name="2013-08-22-ringhalter.md" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_posts/2013-08-22-ringhalter.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="39" selection-start="111" selection-end="111" vertical-scroll-proportion="0.03305785">
+            <state line="13" column="68" selection-start="380" selection-end="380" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="display_halfdane_baseline.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/display_halfdane_baseline.js">
+      <file leaf-file-name="2013-05-29-blender_beginner.md" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_posts/2013-05-29-blender_beginner.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="3" selection-start="93" selection-end="93" vertical-scroll-proportion="0.0">
+            <state line="26" column="65" selection-start="843" selection-end="843" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/default.html">
+      <file leaf-file-name="2013-12-08-jekyll.md" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_posts/2013-12-08-jekyll.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="6" selection-start="1509" selection-end="1525" vertical-scroll-proportion="-20.655172">
+            <state line="16" column="0" selection-start="383" selection-end="383" vertical-scroll-proportion="0.4790419">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="page.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/page.html">
+      <file leaf-file-name="image_tag.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_plugins/image_tag.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="13" selection-start="106" selection-end="106" vertical-scroll-proportion="-0.6896552">
+            <state line="22" column="44" selection-start="583" selection-end="583" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="figure.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_assets/scss/figure.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="9" selection-start="360" selection-end="360" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -224,22 +231,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/_posts/2013-08-19-Gitarrenhalter.md" />
-        <option value="$PROJECT_DIR$/_posts/2013-08-31-irisblende2.md" />
-        <option value="$PROJECT_DIR$/_posts/2013-11-03-hakeldecke-mit-space-invaders.md" />
-        <option value="$PROJECT_DIR$/_posts/2013-12-08-jekyll.md" />
-        <option value="$PROJECT_DIR$/_plugins/image_tag.rb" />
-        <option value="$PROJECT_DIR$/_includes/themes/twitter/post.html" />
-        <option value="$PROJECT_DIR$/_assets/scss/figure.scss" />
-        <option value="$PROJECT_DIR$/_includes/themes/twitter/page.html" />
         <option value="$PROJECT_DIR$/_posts/2013-12-11-vertikaler-rhythmus.md" />
         <option value="$PROJECT_DIR$/assets/js/display_halfdane_baseline.js" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/_assets/scss/halfdane.scss" />
         <option value="$PROJECT_DIR$/_assets/scss/colors.scss" />
-        <option value="$PROJECT_DIR$/_includes/themes/twitter/default.html" />
         <option value="$PROJECT_DIR$/_assets/scss/typography.scss" />
+        <option value="$PROJECT_DIR$/_includes/themes/twitter/default.html" />
+        <option value="$PROJECT_DIR$/_assets/scss/navi.scss" />
+        <option value="$PROJECT_DIR$/_includes/themes/twitter/post.html" />
+        <option value="$PROJECT_DIR$/_posts/2013-08-31-irisblende2.md" />
+        <option value="$PROJECT_DIR$/_plugins/image_tag.rb" />
+        <option value="$PROJECT_DIR$/_posts/2013-08-22-ringhalter.md" />
+        <option value="$PROJECT_DIR$/_assets/scss/halfdane.scss" />
         <option value="$PROJECT_DIR$/_assets/scss/postlist.scss" />
+        <option value="$PROJECT_DIR$/_assets/scss/figure.scss" />
+        <option value="$PROJECT_DIR$/_posts/2013-05-29-blender_beginner.md" />
+        <option value="$PROJECT_DIR$/_posts/2013-12-08-jekyll.md" />
       </list>
     </option>
   </component>
@@ -273,7 +280,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -348,6 +355,70 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="_posts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="halfdane.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="halfdane.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="_plugins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="halfdane.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="halfdane.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="_includes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="halfdane.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="halfdane.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="_includes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twitter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="halfdane.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="halfdane.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="_assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -372,22 +443,22 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="139" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="149" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="recentsLimit" value="5" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
-    <property name="MemberChooser.sorted" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="139" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="recentsLimit" value="5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="155" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1064" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1064" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1064" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="155" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="149" />
     <property name="GoToClass.includeJavaFiles" value="false" />
@@ -476,6 +547,19 @@
       <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -504,19 +588,6 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="" />
@@ -533,13 +604,6 @@
       <method>
         <option name="Make" enabled="false" />
       </method>
-    </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
-      <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -560,6 +624,13 @@
       </option>
       <envs />
       <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
@@ -637,7 +708,6 @@
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32914925" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -651,11 +721,12 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17935483" sideWeight="0.67085075" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1948387" sideWeight="0.67085075" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17015342" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32914925" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34170154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
@@ -720,86 +791,14 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/_posts/2013-11-03-hakeldecke-mit-space-invaders.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="35" selection-start="542" selection-end="542" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2013-12-08-jekyll.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="25" selection-start="1955" selection-end="1955" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_plugins/image_tag.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="102" selection-start="3162" selection-end="3162" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.sass-cache/4377e877fba50cba4e726eed460fdfc624c7de8b/colors.scssc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="9" selection-start="1712" selection-end="1712" vertical-scroll-proportion="0.33333334">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/resources/html5-schema/phrase.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="23" selection-start="2198" selection-end="2198" vertical-scroll-proportion="0.33233532">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_assets/scss/figure.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="21" selection-start="168" selection-end="168" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="13" selection-start="106" selection-end="106" vertical-scroll-proportion="-0.6896552">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/post.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="35" selection-start="572" selection-end="572" vertical-scroll-proportion="-1.3793104">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/display_halfdane_baseline.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="3" selection-start="93" selection-end="93" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2013-12-11-vertikaler-rhythmus.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="14" selection-start="3090" selection-end="3090" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="58" column="14" selection-start="3090" selection-end="3090" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="18" selection-start="549" selection-end="549" vertical-scroll-proportion="-10.344828">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_assets/scss/halfdane.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="17" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -811,23 +810,91 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/default.html">
+    <entry file="file://$PROJECT_DIR$/_assets/scss/typography.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="6" selection-start="1509" selection-end="1525" vertical-scroll-proportion="-20.655172">
+        <state line="30" column="28" selection-start="1099" selection-end="1099" vertical-scroll-proportion="0.38404727">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_assets/scss/typography.scss">
+    <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/default.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="31" selection-start="1455" selection-end="1455" vertical-scroll-proportion="0.0">
+        <state line="41" column="5" selection-start="1508" selection-end="1508" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_assets/scss/navi.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="1" selection-start="665" selection-end="665" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/post.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="6" selection-start="771" selection-end="771" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="129" column="9" selection-start="4279" selection-end="4288" vertical-scroll-proportion="0.5808383" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2013-08-31-irisblende2.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="68" selection-start="779" selection-end="779" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_plugins/image_tag.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="44" selection-start="583" selection-end="583" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2013-08-22-ringhalter.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="68" selection-start="380" selection-end="380" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_assets/scss/halfdane.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="191" selection-end="218" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_assets/scss/postlist.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="39" selection-start="111" selection-end="111" vertical-scroll-proportion="0.03305785">
+        <state line="29" column="13" selection-start="965" selection-end="965" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_assets/scss/figure.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="9" selection-start="360" selection-end="360" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2013-05-29-blender_beginner.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="65" selection-start="843" selection-end="843" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2013-12-08-jekyll.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="0" selection-start="383" selection-end="383" vertical-scroll-proportion="0.4790419">
           <folding />
         </state>
       </provider>

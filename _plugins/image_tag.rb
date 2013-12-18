@@ -11,19 +11,19 @@ module Jekyll
   class ImageTag < Liquid::Block
     @url = nil
     @title = nil
-    @caption = nil
+    @css = nil
 
-    IMAGE_URL_WITH_TITLE_AND_CAPTION = /(\S+)(\s+)"(.*?)"(\s+)"(.*?)"/i
+    IMAGE_URL_WITH_TITLE_AND_CSS = /(\S+)(\s+)"(.*?)"(\s+)"(.*?)"/i
     IMAGE_URL_WITH_TITLE = /(\S+)(\s+)"(.*?)"/i
     IMAGE_URL = /(\S+)/i
 
     def initialize(tag_name, markup, tokens)
       super
-
-      if markup =~ IMAGE_URL_WITH_TITLE_AND_CAPTION
+      @css="left cap-left"
+      if markup =~ IMAGE_URL_WITH_TITLE_AND_CSS
         @url     = $1
         @title   = $3
-        @caption = $5
+        @css = $5
       elsif markup =~ IMAGE_URL_WITH_TITLE
         @url   = $1
         @title = $3
@@ -47,7 +47,7 @@ module Jekyll
     end
 
     def render(context)
-      source = "<figure class=\"cap-left\">"
+      source = "<figure class=\"#{@css}\">"
 
       # Retina
       if @config['retina']
@@ -87,7 +87,7 @@ module Jekyll
       converter = site.getConverterImpl(::Jekyll::Converters::Markdown)
       output = converter.convert(super(context))
 
-      source += "<figcaption>#{@caption}#{output}</figcaption>" unless (@caption.to_s == "" && output.to_s == "")
+      source += "<figcaption>#{output}</figcaption>" unless (output.to_s == "")
       source += "</figure>"
 
       source

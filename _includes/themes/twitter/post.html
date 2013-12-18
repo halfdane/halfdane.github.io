@@ -16,11 +16,13 @@
     {% endif %}
 </h1>
 
-<p class="date">
-    <small>{{ page.date | date_to_long_string }}</small>
-</p>
-<div class="content">
-    {{ content }}
+<div class="post">
+    <p class="date">
+        <small>{{ page.date | date_to_long_string }}</small>
+    </p>
+    <div class="content">
+        {{ content }}
+    </div>
 </div>
 
 <div class="pagination">

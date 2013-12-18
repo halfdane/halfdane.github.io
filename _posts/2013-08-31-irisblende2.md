@@ -22,8 +22,8 @@ Einzelteilen für eine weitere.
 Als Scharniere für die rippenförmigen Lamellen habe ich Reißzwecken benutzt und
 mit einem Seitenschneider abgeknipst, damit man sich nicht verletzt.
 
-Denn wenn man zwei kleine Blenden hat, bleibt einem ja gar nichts anderes übrig,
-als eine nerdige Steampunk-Brille daraus zu machen :
+<p class="clearfix">Denn wenn man zwei kleine Blenden hat, bleibt einem ja gar nichts anderes übrig,
+als eine nerdige Steampunk-Brille daraus zu machen :</p>
 
 {% image iris2.jpg "Nerd" %}
 Halfdane ist ein Nerd :)

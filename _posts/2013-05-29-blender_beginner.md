@@ -17,15 +17,17 @@ Blender hat zwar eine steile Lernkurve, aber 1. kommt mir das Zupass und
 
 Nach den ersten Tutorials hatte ich dieses beeindruckende Ergebnis:
 
-{% image blender_pig.png "Ein sehr simples Schwein aus einfachen Primitiven" %}
+{% image blender_pig.png "Ein sehr simples Schwein aus einfachen Primitiven" "cap-left p50" %}
 Ein sehr simples Schwein aus einfachen Primitiven
 {% endimage %}
+<div class="clearfix"/>
 
 Oder auch so etwas:
 
-{% image blender_lighthouse.png "Simpler Leuchtturm" %}
+{% image blender_lighthouse.png "Simpler Leuchtturm" "cap-left p50" %}
 Ein Leuchtturm mit kleinem Häuschen anbei. Nicht mehr total primitiv, aber auch nicht besonders toll.
 {% endimage %}
+<div class="clearfix"/>
 
 Eher nicht so super – zumindest nichts, was ich unbedingt gedruckt haben wollte...
 

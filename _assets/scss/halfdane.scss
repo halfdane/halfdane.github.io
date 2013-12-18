@@ -3,10 +3,15 @@
 @import "typography";
 @import "figure";
 @import "postlist";
+@import "navi";
 
 body {
   color: $col_main_txt;
   background-color: $col_main_txt_bg;
+}
+
+.post {
+  margin: 0 15%;
 }
 
 #{headings()},
@@ -32,52 +37,6 @@ a:hover {
   clear: both;
 }
 
-/*navbar*/
-nav {
-  .brand {
-    color: $nav_brand;
-  }
-
-  ul {
-    $local_fontsize: 1.2 * $base-font-size;
-    @include adjust-font-size-to($local_fontsize);
-    margin: 0 0 rhythm(0.6, $local_fontsize) 0;
-    font-weight: lighter;
-    background-color: $nav_bg;
-    list-style: none;
-    display: inline-table;
-    width: 100%;
-
-    li {
-      float: left;
-    }
-    li a {
-      padding: rhythm(0.2, $local_fontsize) 0.5em;
-      display: block;
-      color: $nav_txt;
-    }
-
-    li a:hover {
-      color: $nav_txt_hover;
-    }
-  }
-}
-
-.pagination {
-  ul {
-    list-style: none;
-  }
-  .next {
-    float: left;
-  }
-  .prev {
-    float: right;
-  }
-  hr {
-    clear: both;
-  }
-}
-
 /*button*/
 .btn {
   background-color: $col_button_bg;
@@ -98,11 +57,4 @@ nav {
 .btn:active {
   position: relative;
   top: 1px;
-}
-
-/*images*/
-img {
-  width: auto;
-  max-height: rhythm(10, $base-font-size);
-  height: rhythm(10, $base-font-size);
 }
