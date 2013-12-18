@@ -4,7 +4,7 @@
  <title>Canned Nerd</title>
  <link href="http://halfdane.github.io/" rel="self"/>
  <link href="http://halfdane.github.io"/>
- <updated>2013-12-18T07:38:09+00:00</updated>
+ <updated>2013-12-18T10:40:07+00:00</updated>
  <id>http://halfdane.github.io</id>
  <author>
    <name>Halfdane</name>
@@ -66,7 +66,7 @@ War immer noch etwas Arbeit, aber jetzt funktioniert&amp;#39;s auf allen Seiten 
 
 &lt;p&gt;Ich benutze das auf allen Seiten des Blogs, und das Raster sieht so aus: &lt;span class=&quot;js_baseline_trigger btn&quot;&gt;Click for raster&lt;/span&gt;&lt;/p&gt;
 
-&lt;script src=&quot;/js/display_halfdane_baseline.js&quot; &gt; &lt;/script&gt;
+&lt;script src=&quot;/assets/js/display_halfdane_baseline.js&quot; &gt; &lt;/script&gt;
 
 &lt;p&gt;Dank Compass sieht der Baseline-Code nur noch in etwa so aus:&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;scss language-scss&quot; data-lang=&quot;scss&quot;&gt;&lt;span class=&quot;k&quot;&gt;@import&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;compass/typography/vertical_rhythm&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
