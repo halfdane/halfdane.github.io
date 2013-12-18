@@ -31,7 +31,6 @@ $relative-font-sizing: true;
 @include establish-baseline;
 
 .baseline {
-  @include adjust-font-size-to($base-font-size);
   background-image: linear-gradient(hsla(200, 100%, 70%, .5) 1px, transparent 1px);
   background-size: auto rhythm(1, $base-font-size);
 }
@@ -44,7 +43,6 @@ $relative-font-sizing: true;
 
 h1 {
   @include font(2.5*1.618, 0, 1);
-
   text-align: center;
 }
 

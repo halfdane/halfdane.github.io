@@ -1,0 +1,163 @@
+.postslist_wrapper {
+  text-align: center;
+}
+
+/*some computer monitor*/
+@media screen and (min-width: 1024px) {
+  .postslist {
+    $local_borders: rhythm(0.5, $base-font-size);
+
+    position: relative;
+
+    @include experimental(box-sizing, border-box);
+    background-image: linear-gradient(0deg, $postlist_border $local_borders, $postlist_tile_bg $local_borders, $postlist_tile_bg 99%);
+    background-image: -moz-linear-gradient(0deg, $postlist_border $local_borders, $postlist_tile_bg $local_borders, $postlist_tile_bg 99%);
+    background-image: -webkit-linear-gradient(0deg, $postlist_border $local_borders, $postlist_tile_bg $local_borders, $postlist_tile_bg 99%);
+    background-size: 33.3334% 100px;
+    border-bottom: $local_borders solid $postlist_border;
+    border-right: $local_borders solid $postlist_border;
+    box-shadow: 0px 0px 0.5*$local_borders shade($postlist_border, 10%);
+    border-radius: 0.5*$local_borders;
+
+    margin: 0.5*$local_borders;
+
+    figure {
+      text-align: center;
+      float: none;
+      margin-right: 0;
+    }
+
+    .postlist_layout {
+      font-size: 0;
+    }
+
+    .post {
+      font-size: 1rem;
+      display: inline-block;
+      text-align: left;
+
+      width: 33.3334%;
+      vertical-align: top;
+      @include experimental(box-sizing, border-box);
+      padding: 2*$local_borders $local_borders $local_borders 2*$local_borders;
+    }
+    .post:nth-child(3n+1):before {
+      content: '';
+      position: absolute;
+      margin-top: (-2*$local_borders);
+      display: block;
+      left: 0;
+      right: -$local_borders;
+      border-top: $local_borders solid $postlist_border;
+      border-radius: 0.5*$local_borders;
+    }
+  }
+}
+
+/*smaller than computer*/
+@media screen and (max-width: 1024px) {
+  .content {
+    overflow: hidden;
+  }
+  .postslist {
+    figure {
+      max-height:  rhythm(10, $base-font-size);
+      margin: 0;
+      float: none;
+      display: inline-block;
+    }
+    .post {
+      display: block;
+      width: auto;
+      margin: 0;
+      padding: rhythm(1, $base-font-size) 0;
+      border: rhythm(1, $base-font-size) solid $postlist_border;
+      min-height: 0;
+      overflow: visible;
+      text-align: left;
+    }
+    .post .text {
+      display: inline-block;
+      vertical-align: top;
+      padding-left: 1%;
+    }
+  }
+}
+
+/*very large monitor*/
+@media screen and (min-width: 1800px) {
+  body {
+    font-size: 150%;
+  }
+  .content {
+    margin-left: 10%;
+    margin-right: 10%;
+    overflow: hidden;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1800px) {
+  body {
+    font-size: 100%;
+  }
+  .content {
+    margin-left: 2%;
+    margin-right: 2%;
+    overflow: hidden;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1400px) {
+  body {
+    @include adjust-font-size-to(15px);
+  }
+}
+
+/*Tablet*/
+@media screen and (min-width: 800px) and (max-width: 1024px) {
+  body {
+    @include adjust-font-size-to(14px);
+  }
+  .content {
+    margin: 0 2%;
+  }
+  .postslist figure img {
+    width: rhythm(10, $base-font-size);
+    height: rhythm(10, $base-font-size);
+  }
+  .post .text {
+    width: 70%;
+  }
+}
+
+/*phone*/
+@media screen and (max-width: 800px) {
+  body {
+    @include adjust-font-size-to(12px);
+  }
+  #{headings(2, 6)},
+  #{nest(headings(2, 6), a)} {
+    font-family: 'Cabin', Helvetica, Arial, sans-serif;
+    margin-bottom: 0;
+  }
+  .content {
+    margin: 0;
+  }
+  figure {
+    margin: 0;
+  }
+  .postslist figure img {
+    width: rhythm(3, $base-font-size);
+    height: rhythm(3, $base-font-size);
+  }
+  .post .text {
+    width: 80%;
+  }
+  img {
+    width: 800px;
+    max-width: 100%;
+  }
+  .excerpt {
+    display: none;
+  }
+}

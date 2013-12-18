@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf8d26b6-9aac-44de-917c-c8258df2f482" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2013-12-11-vertikaler-rhythmus.md" afterPath="$PROJECT_DIR$/_posts/2013-12-11-vertikaler-rhythmus.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_assets/scss/postlist.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_assets/scss/colors.scss" afterPath="$PROJECT_DIR$/_assets/scss/colors.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/themes/twitter/default.html" afterPath="$PROJECT_DIR$/_includes/themes/twitter/default.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_assets/scss/figure.scss" afterPath="$PROJECT_DIR$/_assets/scss/figure.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_assets/scss/halfdane.scss" afterPath="$PROJECT_DIR$/_assets/scss/halfdane.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/themes/twitter/page.html" afterPath="$PROJECT_DIR$/_includes/themes/twitter/page.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/themes/twitter/post.html" afterPath="$PROJECT_DIR$/_includes/themes/twitter/post.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_assets/scss/typography.scss" afterPath="$PROJECT_DIR$/_assets/scss/typography.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -16,7 +13,7 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387348107881" ignored="false" />
     <file path="/index.md" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387208296219" ignored="false" />
-    <file path="/halfdane.scss" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387362476226" ignored="false" />
+    <file path="/halfdane.scss" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387363900569" ignored="false" />
     <file path="/default.html" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387310135677" ignored="false" />
     <file path="/2013-12-11-vertikaler-rhythmus.md" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387354171133" ignored="false" />
     <file path="/dummy.txt" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387261946551" ignored="false" />
@@ -43,10 +40,11 @@
     <file path="/2013-05-24-tensegrity.md" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387310412302" ignored="false" />
     <file path="/2013-05-29-blender_beginner.md" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387310570191" ignored="false" />
     <file path="/a.dummy" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387353885312" ignored="false" />
-    <file path="/colors.scss" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387351182298" ignored="false" />
+    <file path="/colors.scss" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387364404461" ignored="false" />
     <file path="/page.html" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387353621607" ignored="false" />
     <file path="/display_halfdane_baseline.js" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387354110743" ignored="false" />
     <file path="/index.html" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387361651815" ignored="false" />
+    <file path="/postlist.scss" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387365537591" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +115,7 @@
       <file leaf-file-name="colors.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_assets/scss/colors.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="24" selection-start="484" selection-end="484" vertical-scroll-proportion="0.0">
+            <state line="31" column="16" selection-start="586" selection-end="602" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -126,7 +124,7 @@
       <file leaf-file-name="halfdane.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_assets/scss/halfdane.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="117" column="19" selection-start="1806" selection-end="1806" vertical-scroll-proportion="0.0">
+            <state line="4" column="17" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -153,7 +151,16 @@
       <file leaf-file-name="typography.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_assets/scss/typography.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="2" selection-start="1385" selection-end="1419" vertical-scroll-proportion="0.0">
+            <state line="44" column="31" selection-start="1455" selection-end="1455" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="postlist.scss" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_assets/scss/postlist.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="39" selection-start="111" selection-end="111" vertical-scroll-proportion="0.03305785">
               <folding />
             </state>
           </provider>
@@ -168,19 +175,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="figure.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_assets/scss/figure.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="21" selection-start="168" selection-end="168" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="default.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="default.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/default.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="5" selection-start="1508" selection-end="1508" vertical-scroll-proportion="0.9374022">
+            <state line="41" column="6" selection-start="1509" selection-end="1525" vertical-scroll-proportion="-20.655172">
               <folding />
             </state>
           </provider>
@@ -226,22 +224,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/_posts/2013-05-29-blender_beginner.md" />
         <option value="$PROJECT_DIR$/_posts/2013-08-19-Gitarrenhalter.md" />
         <option value="$PROJECT_DIR$/_posts/2013-08-31-irisblende2.md" />
         <option value="$PROJECT_DIR$/_posts/2013-11-03-hakeldecke-mit-space-invaders.md" />
         <option value="$PROJECT_DIR$/_posts/2013-12-08-jekyll.md" />
         <option value="$PROJECT_DIR$/_plugins/image_tag.rb" />
-        <option value="$PROJECT_DIR$/_assets/scss/colors.scss" />
         <option value="$PROJECT_DIR$/_includes/themes/twitter/post.html" />
         <option value="$PROJECT_DIR$/_assets/scss/figure.scss" />
         <option value="$PROJECT_DIR$/_includes/themes/twitter/page.html" />
-        <option value="$PROJECT_DIR$/_assets/scss/typography.scss" />
         <option value="$PROJECT_DIR$/_posts/2013-12-11-vertikaler-rhythmus.md" />
         <option value="$PROJECT_DIR$/assets/js/display_halfdane_baseline.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/_assets/scss/halfdane.scss" />
+        <option value="$PROJECT_DIR$/_assets/scss/colors.scss" />
         <option value="$PROJECT_DIR$/_includes/themes/twitter/default.html" />
+        <option value="$PROJECT_DIR$/_assets/scss/typography.scss" />
+        <option value="$PROJECT_DIR$/_assets/scss/postlist.scss" />
       </list>
     </option>
   </component>
@@ -722,13 +720,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/_posts/2013-08-31-irisblende2.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="916" selection-end="984" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2013-11-03-hakeldecke-mit-space-invaders.md">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="35" selection-start="542" selection-end="542" vertical-scroll-proportion="0.0">
@@ -792,16 +783,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_assets/scss/colors.scss">
+    <entry file="file://$PROJECT_DIR$/_posts/2013-12-11-vertikaler-rhythmus.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="24" selection-start="484" selection-end="484" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_assets/scss/typography.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="2" selection-start="1385" selection-end="1419" vertical-scroll-proportion="0.0">
+        <state line="58" column="14" selection-start="3090" selection-end="3090" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -813,23 +797,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2013-12-11-vertikaler-rhythmus.md">
+    <entry file="file://$PROJECT_DIR$/_assets/scss/halfdane.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="14" selection-start="3090" selection-end="3090" vertical-scroll-proportion="0.0">
+        <state line="4" column="17" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_assets/scss/halfdane.scss">
+    <entry file="file://$PROJECT_DIR$/_assets/scss/colors.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="19" selection-start="1806" selection-end="1806" vertical-scroll-proportion="0.0">
+        <state line="31" column="16" selection-start="586" selection-end="602" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/default.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="5" selection-start="1508" selection-end="1508" vertical-scroll-proportion="0.9374022">
+        <state line="41" column="6" selection-start="1509" selection-end="1525" vertical-scroll-proportion="-20.655172">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_assets/scss/typography.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="31" selection-start="1455" selection-end="1455" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_assets/scss/postlist.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="39" selection-start="111" selection-end="111" vertical-scroll-proportion="0.03305785">
           <folding />
         </state>
       </provider>
