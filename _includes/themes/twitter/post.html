@@ -31,14 +31,10 @@
         {% if page.next %}
         <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}"
                             title="{{ page.next.title }}">&larr; {{ page.next.title }}</a></li>
-        {% else %}
-        <li class="next disabled"><a>&larr; Späterer Beitrag</a>
-            {% endif %}
-            {% if page.previous %}
+        {% endif %}
+        {% if page.previous %}
         <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}"
                             title="{{ page.previous.title }}">{{ page.previous.title }} &rarr;</a></li>
-        {% else %}
-        <li class="prev disabled"><a>Früherer Beitrag &rarr;</a></li>
         {% endif %}
     </ul>
     <hr>

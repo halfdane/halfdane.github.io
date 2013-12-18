@@ -49,7 +49,8 @@ nicht in der Lage bin, die Baseline-Berechnungen korrekt selbst zu programmieren
 zu viele Sonderfälle für meinen Geschmack: das fängt mit dem seltsamen Verhalten der prozentualen
 Werte an und hört mit dem Kollabieren aneinandergrenzender Margins noch lange nicht auf.
 
-Da ich ohnehin schon SASS dabei hatte, kann ich auch gleich die Baseline-Funktionen von Compass benutzen.
+Da ich ohnehin schon SASS dabei hatte, kann ich auch gleich die Baseline-Funktionen von
+[Compass](http://compass-style.org/reference/compass/typography/vertical_rhythm/) benutzen.
 War immer noch etwas Arbeit, aber jetzt funktioniert's auf allen Seiten und beim Verkleinern
 (Vergrößern) des Browsers.
 
@@ -123,3 +124,10 @@ pre {
   background-position: 0 rhythm(0.5, $base-font-size);
 }
 ```
+
+Bei der Recherche habe ich einiges an sehr lesenswerten Artikeln gefunden:
+
+- http://alistapart.com/article/settingtypeontheweb
+- http://alistapart.com/article/more-meaningful-typography
+- http://24ways.org/2006/compose-to-a-vertical-rhythm/
+- http://atendesigngroup.com/blog/vertical-rhythm-compass

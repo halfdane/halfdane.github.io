@@ -87,7 +87,7 @@ module Jekyll
       converter = site.getConverterImpl(::Jekyll::Converters::Markdown)
       output = converter.convert(super(context))
 
-      source += "<figcaption>#{@caption}#{output}</figcaption>" if (@caption || output)
+      source += "<figcaption>#{@caption}#{output}</figcaption>" unless (@caption.to_s == "" && output.to_s == "")
       source += "</figure>"
 
       source

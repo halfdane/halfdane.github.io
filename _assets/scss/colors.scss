@@ -1,31 +1,19 @@
-/*colors http://colorschemedesigner.com/#4162GgMrr5vgt*/
-/*always good:*/
+@import "compass/utilities/color/contrast";
 $white: #fff;
 $black: #000;
 $off_black: #685356;
 
-/*** Primary Color: bluish*/
-$p_main: #575499;
-$p_dark: #565392;
-$p_very_dark: #4B488F;
-$p_light: #706DB3;
-$p_very_light: #7875B3;
+$p_main: darkblue;
+$p_very_light: tint($p_main, 50%);
 
 /*** Complementary Color: yellowish*/
-$c_main: #DBBF68;
-$c_dark: #D1B868;
-$c_very_dark: #CDB259;
-$c_light: #E4CB7C;
-$c_very_light: #E4CE88;
+$c_main: shade(#F8DE7E, 10%);
 
 /*semantic colors*/
 $nav_bg: $p_main;
 $nav_txt: $p_very_light;
 $nav_txt_hover: $white;
 $nav_brand: $c_main;
-
-$col_dropdown_hover_bg: $p_main;
-$dropdown_bg: $white;
 
 $col_main_txt: $off_black;
 $col_main_txt_bg: $white;
@@ -34,8 +22,8 @@ $col_button_bg: $p_main;
 $col_button_txt: $c_main;
 $col_button_hover: $white;
 
-$col_link_txt: $c_main;
-$col_header_txt: $p_very_dark;
+$col_link_decoration: $p_main;
+$col_header_txt: $p_main;
 $pageheader_line_color: $p_main;
 
 $col_border: $black;

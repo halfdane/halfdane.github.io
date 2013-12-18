@@ -13,18 +13,18 @@ body {
 #{nest(headings(), "a:hover")} {
   color: $col_header_txt;
   border: 0;
+  font-weight: inherit;
 }
 
 a {
-  border-bottom: 1px dotted #000;
-  color: $black;
+  color: $col_main_txt;
+  border-bottom: 1px dotted $col_link_decoration;
   text-decoration: none;
-  font-weight: 400;
+  font-weight: bold;
 }
 
 a:hover {
-  color: $col_link_txt;
-  border-bottom: 1px dotted $col_link_txt;
+  border-bottom: 1px dotted $col_link_decoration;
 }
 
 .clearfix {
@@ -63,6 +63,9 @@ nav {
 }
 
 .pagination {
+  ul {
+    list-style: none;
+  }
   .next {
     float: left;
   }

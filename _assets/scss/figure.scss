@@ -9,14 +9,18 @@ figure {
 figure.cap-left {
   figcaption {
     position: absolute;
-    background: black;
-    background: rgba(0, 0, 0, 0.75);
+    background: $black;
+    background: rgba(0, 0, 0, 0.70);
     color: white;
     padding: 10px 20px;
     opacity: 0;
     -webkit-transition: all 0.6s ease;
     -moz-transition: all 0.6s ease;
     -o-transition: all 0.6s ease;
+  }
+
+  a {
+    color: white;
   }
 
   &:hover figcaption {
@@ -27,7 +31,7 @@ figure.cap-left {
     content: "?";
     position: absolute;
     font-weight: 800;
-    background: black;
+    background: $black;
     background: rgba(255, 255, 255, 0.75);
     text-shadow: 0 0 5px white;
     color: black;
