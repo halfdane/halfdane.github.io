@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf8d26b6-9aac-44de-917c-c8258df2f482" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_assets/scss/navi.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2013-05-29-blender_beginner.md" afterPath="$PROJECT_DIR$/_posts/2013-05-29-blender_beginner.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2013-08-22-ringhalter.md" afterPath="$PROJECT_DIR$/_posts/2013-08-22-ringhalter.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2013-08-31-irisblende2.md" afterPath="$PROJECT_DIR$/_posts/2013-08-31-irisblende2.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2013-12-08-jekyll.md" afterPath="$PROJECT_DIR$/_posts/2013-12-08-jekyll.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/themes/twitter/default.html" afterPath="$PROJECT_DIR$/_includes/themes/twitter/default.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_assets/scss/figure.scss" afterPath="$PROJECT_DIR$/_assets/scss/figure.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_assets/scss/halfdane.scss" afterPath="$PROJECT_DIR$/_assets/scss/halfdane.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_plugins/image_tag.rb" afterPath="$PROJECT_DIR$/_plugins/image_tag.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/themes/twitter/post.html" afterPath="$PROJECT_DIR$/_includes/themes/twitter/post.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_assets/scss/postlist.scss" afterPath="$PROJECT_DIR$/_assets/scss/postlist.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="halfdane.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,7 +40,7 @@
     <file path="/colors.scss" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387364404461" ignored="false" />
     <file path="/page.html" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387353621607" ignored="false" />
     <file path="/display_halfdane_baseline.js" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387354110743" ignored="false" />
-    <file path="/index.html" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387361651815" ignored="false" />
+    <file path="/index.html" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387375807981" ignored="false" />
     <file path="/postlist.scss" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387372434944" ignored="false" />
     <file path="/temp.rb" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387374446018" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -119,19 +110,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="postlist.scss" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="postlist.scss" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_assets/scss/postlist.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="13" selection-start="965" selection-end="965" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="navi.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_assets/scss/navi.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="1" selection-start="665" selection-end="665" vertical-scroll-proportion="0.0">
+            <state line="21" column="3" selection-start="872" selection-end="872" vertical-scroll-proportion="0.64122134">
               <folding />
             </state>
           </provider>
@@ -173,10 +155,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2013-12-08-jekyll.md" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="2013-12-08-jekyll.md" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_posts/2013-12-08-jekyll.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="383" selection-end="383" vertical-scroll-proportion="0.4790419">
+            <state line="18" column="81" selection-start="665" selection-end="665" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="59" selection-start="501" selection-end="501" vertical-scroll-proportion="-8.965517">
               <folding />
             </state>
           </provider>
@@ -233,7 +224,6 @@
       <list>
         <option value="$PROJECT_DIR$/_posts/2013-12-11-vertikaler-rhythmus.md" />
         <option value="$PROJECT_DIR$/assets/js/display_halfdane_baseline.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/_assets/scss/colors.scss" />
         <option value="$PROJECT_DIR$/_assets/scss/typography.scss" />
         <option value="$PROJECT_DIR$/_includes/themes/twitter/default.html" />
@@ -243,10 +233,11 @@
         <option value="$PROJECT_DIR$/_plugins/image_tag.rb" />
         <option value="$PROJECT_DIR$/_posts/2013-08-22-ringhalter.md" />
         <option value="$PROJECT_DIR$/_assets/scss/halfdane.scss" />
-        <option value="$PROJECT_DIR$/_assets/scss/postlist.scss" />
         <option value="$PROJECT_DIR$/_assets/scss/figure.scss" />
         <option value="$PROJECT_DIR$/_posts/2013-05-29-blender_beginner.md" />
+        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/_posts/2013-12-08-jekyll.md" />
+        <option value="$PROJECT_DIR$/_assets/scss/postlist.scss" />
       </list>
     </option>
   </component>
@@ -796,13 +787,6 @@
         <state line="58" column="14" selection-start="3090" selection-end="3090" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="18" selection-start="549" selection-end="549" vertical-scroll-proportion="-10.344828">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_assets/scss/colors.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="16" selection-start="586" selection-end="602" vertical-scroll-proportion="0.0">
@@ -871,13 +855,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_assets/scss/postlist.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="13" selection-start="965" selection-end="965" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_assets/scss/figure.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="9" selection-start="360" selection-end="360" vertical-scroll-proportion="0.0">
@@ -892,9 +869,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="59" selection-start="501" selection-end="501" vertical-scroll-proportion="-8.965517">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2013-12-08-jekyll.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="383" selection-end="383" vertical-scroll-proportion="0.4790419">
+        <state line="18" column="81" selection-start="665" selection-end="665" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_assets/scss/postlist.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="3" selection-start="872" selection-end="872" vertical-scroll-proportion="0.64122134">
           <folding />
         </state>
       </provider>
