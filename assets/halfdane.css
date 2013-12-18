@@ -267,7 +267,7 @@ figure.cap-left:hover:before {
   margin: 0.30952em;
   /*computer*/
   /*smaller than computer*/ }
-  .postslist figure {
+  .postslist > figure {
     text-align: center;
     float: none;
     margin: 0; }
