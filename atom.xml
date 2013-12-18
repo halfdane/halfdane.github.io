@@ -4,7 +4,7 @@
  <title>Canned Nerd</title>
  <link href="http://halfdane.github.io/" rel="self"/>
  <link href="http://halfdane.github.io"/>
- <updated>2013-12-18T10:40:07+00:00</updated>
+ <updated>2013-12-18T14:18:24+00:00</updated>
  <id>http://halfdane.github.io</id>
  <author>
    <name>Halfdane</name>
@@ -26,7 +26,7 @@ goldenen Schnitt berechnen (und zwar für jedes Überschriften-Level einzeln) un
 an Überschriften- und Absatz-Elemente hängen, der genau so abgepasst ist, dass die nächste Schriftzeile
 ins Raster passt.&lt;/p&gt;
 
-&lt;figure class=&quot;cap-left&quot;&gt;&lt;img src=&quot;/assets/img/baseline.png&quot; alt=&quot;Seite mit baseline&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Ausschnitt der Seite im alten Design - die Baseline ist sichbar.&lt;/p&gt;
+&lt;figure class=&quot;left cap-left&quot;&gt;&lt;img src=&quot;/assets/img/baseline.png&quot; alt=&quot;Seite mit baseline&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Ausschnitt der Seite im alten Design - die Baseline ist sichbar.&lt;/p&gt;
 &lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Dazu kommt, dass ich das Raster (und die Schriften) unbedingt in &lt;code&gt;em&lt;/code&gt; haben will, damit
@@ -145,18 +145,18 @@ frei bleibt:&lt;/p&gt;
    <link href="http://halfdane.github.io/2013/12/08/jekyll"/>
    <updated>2013-12-08T00:00:00+00:00</updated>
    <id>http://halfdane.github.io/2013/12/08/jekyll</id>
-   <content type="html">&lt;p&gt;Eine der Sachen, die ich bei Markdown nicht so gut gelungen finde sind Bilder,
+   <content type="html">&lt;figure class=&quot;right cap-left p50&quot;&gt;&lt;img src=&quot;/assets/img/vogel.by.anira..JPG&quot; alt=&quot;Nice Bird&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Das Bild habe ich bei
+&lt;a href=&quot;http://www.the-inspiring-life.com/2013/01/ein-logo-fur-meinen-blog.html&quot;&gt;the inspiring live&lt;/a&gt;
+gefunden.&lt;/p&gt;
+&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Eine der Sachen, die ich bei Markdown nicht so gut gelungen finde sind Bilder,
 insbesondere mit Bildunterschriften.
 Dafür gibt es ja seit HTML5 das &lt;code&gt;figure&lt;/code&gt;-Tag, das zusammen mit &lt;code&gt;img&lt;/code&gt; und &lt;code&gt;figcaption&lt;/code&gt;
 genau das macht, was Blogger und Designer seit Jahrzehnten nachzubauen versuchen.
 Dank der Liquid-Template-Sprache, die ich hier einsetzen kann, muss mich das nicht stören,
 ich kann mit einem einfachen Include selber Bilder einbinden
 (allerdings vor allem technisch, nicht schön - bin schließlich kein Designer :):&lt;/p&gt;
-
-&lt;figure class=&quot;cap-left&quot;&gt;&lt;img src=&quot;/assets/img/vogel.by.anira..JPG&quot; alt=&quot;Nice Bird&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Das Bild habe ich bei
-&lt;a href=&quot;http://www.the-inspiring-life.com/2013/01/ein-logo-fur-meinen-blog.html&quot;&gt;the inspiring live&lt;/a&gt;
-gefunden.&lt;/p&gt;
-&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Und das geht so:&lt;/p&gt;
 
@@ -186,7 +186,7 @@ gefunden.&lt;/p&gt;
 &lt;p&gt;Fertig. Wenn ich keine Bildunterschrift will, lasse ich das Attribut einfach weg:&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby language-ruby&quot; data-lang=&quot;ruby&quot;&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;image&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;img&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;mug.jpg&amp;#39;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;bird&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;figure class=&quot;cap-left&quot;&gt;&lt;img src=&quot;/assets/img/mug.jpg&quot; alt=&quot;mug&quot;&gt;&lt;/figure&gt;
+&lt;figure class=&quot;left cap-left&quot;&gt;&lt;img src=&quot;/assets/img/mug.jpg&quot; alt=&quot;mug&quot;&gt;&lt;/figure&gt;
 </content>
  </entry>
  
@@ -201,7 +201,7 @@ Aufgrund von etwas almost completely, but not quite, unlike einer Kneipenwette.
 Es fing ganz spaßig an: ich kann mich auch gut erinnern, das ich Luftmaschen in der
 3. Klasse auch schon mochte, aber nie so recht darüber hinaus kam.&lt;/p&gt;
 
-&lt;figure class=&quot;cap-left&quot;&gt;&lt;img src=&quot;/assets/img/space1.jpg&quot; alt=&quot;Detailansicht&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Und damit ich nicht auf die Idee komme, nochmal mit so etwas anzufangen, noch eine besonders langweilige Detailansicht.&lt;/p&gt;
+&lt;figure class=&quot;left cap-left&quot;&gt;&lt;img src=&quot;/assets/img/space1.jpg&quot; alt=&quot;Detailansicht&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Und damit ich nicht auf die Idee komme, nochmal mit so etwas anzufangen, noch eine besonders langweilige Detailansicht.&lt;/p&gt;
 &lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Aber das sollte sich diesmal ändern, schließlich wollte ich auch keine Topflappen
@@ -264,7 +264,7 @@ lässt sich recht einfach nachbauen und nachdem ich
 letzte Woche einen größeren Prototypen aus Wellpappe gemacht habe und alles gut
 funktioniert hat, habe ich mich heute an eine verkleinerte Version gemacht.&lt;/p&gt;
 
-&lt;figure class=&quot;cap-left&quot;&gt;&lt;img src=&quot;/assets/img/iris1.jpg&quot; alt=&quot;Einzelteile der Irisblende&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Blenden-Einzelteile und fertige Irisblende&lt;/p&gt;
+&lt;figure class=&quot;left cap-left&quot;&gt;&lt;img src=&quot;/assets/img/iris1.jpg&quot; alt=&quot;Einzelteile der Irisblende&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Blenden-Einzelteile und fertige Irisblende&lt;/p&gt;
 &lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Eine fertige Blende auf der rechten Seite, zusammen mit dem Werkzeug sowie den
@@ -272,10 +272,10 @@ Einzelteilen für eine weitere.
 Als Scharniere für die rippenförmigen Lamellen habe ich Reißzwecken benutzt und
 mit einem Seitenschneider abgeknipst, damit man sich nicht verletzt.&lt;/p&gt;
 
-&lt;p&gt;Denn wenn man zwei kleine Blenden hat, bleibt einem ja gar nichts anderes übrig,
+&lt;p class=&quot;clearfix&quot;&gt;Denn wenn man zwei kleine Blenden hat, bleibt einem ja gar nichts anderes übrig,
 als eine nerdige Steampunk-Brille daraus zu machen :&lt;/p&gt;
 
-&lt;figure class=&quot;cap-left&quot;&gt;&lt;img src=&quot;/assets/img/iris2.jpg&quot; alt=&quot;Nerd&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Halfdane ist ein Nerd :)&lt;/p&gt;
+&lt;figure class=&quot;left cap-left&quot;&gt;&lt;img src=&quot;/assets/img/iris2.jpg&quot; alt=&quot;Nerd&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Halfdane ist ein Nerd :)&lt;/p&gt;
 &lt;/figcaption&gt;&lt;/figure&gt;
 </content>
  </entry>
@@ -288,7 +288,7 @@ als eine nerdige Steampunk-Brille daraus zu machen :&lt;/p&gt;
    <content type="html">&lt;p&gt;T. wünscht sich eine Aufbewahrungsmöglichkeit für ihre Ringe.
 Randbedingungen sind: es soll nicht herumstehen und muss nur etwa zehn Ringe halten.&lt;/p&gt;
 
-&lt;figure class=&quot;cap-left&quot;&gt;&lt;img src=&quot;/assets/img/ringhalter.jpg&quot; alt=&quot;Der Ringhalter an der Wand&quot;&gt;&lt;figcaption&gt;&lt;p&gt;So sieht&amp;#39;s in Aktion aus&lt;/p&gt;
+&lt;figure class=&quot;right cap-left&quot;&gt;&lt;img src=&quot;/assets/img/ringhalter.jpg&quot; alt=&quot;Der Ringhalter an der Wand&quot;&gt;&lt;figcaption&gt;&lt;p&gt;So sieht&amp;#39;s in Aktion aus&lt;/p&gt;
 &lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;In den schön geschnitzten goldenen Bilderrahmen vom Flohmarkt habe ich vier
@@ -314,7 +314,7 @@ Sieht doch prima aus, oder?&lt;/p&gt;
    <id>http://halfdane.github.io/2013/08/19/Gitarrenhalter</id>
    <content type="html">&lt;p&gt;Klingen ja schön, stehen aber ständig im Weg. Und die käuflichen Halterungen sind echt nicht so wahnsinnig schön.&lt;/p&gt;
 
-&lt;figure class=&quot;cap-left&quot;&gt;&lt;img src=&quot;/assets/img/gitarren1.jpg&quot; alt=&quot;Drei Gitarren an der Wand&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Drei Gitarren platzsparend an der Wand&lt;/p&gt;
+&lt;figure class=&quot;left cap-left&quot;&gt;&lt;img src=&quot;/assets/img/gitarren1.jpg&quot; alt=&quot;Drei Gitarren an der Wand&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Drei Gitarren platzsparend an der Wand&lt;/p&gt;
 &lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Aus einem ungenutzten Buchen-Regalbrett habe ich einen 5,7cm breiten und 3,5cm tiefen Schlitz ausgesägt - das
@@ -327,7 +327,7 @@ bei rund 7cm abgeschnitten.&lt;/p&gt;
 
 &lt;p&gt;An die Wand geworfen – fertig.&lt;/p&gt;
 
-&lt;figure class=&quot;cap-left&quot;&gt;&lt;img src=&quot;/assets/img/gitarren2.jpg&quot; alt=&quot;Halter mit Fingern&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Nahansicht des Halters mit &amp;quot;Fingern&amp;quot;.&lt;/p&gt;
+&lt;figure class=&quot;left cap-left&quot;&gt;&lt;img src=&quot;/assets/img/gitarren2.jpg&quot; alt=&quot;Halter mit Fingern&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Nahansicht des Halters mit &amp;quot;Fingern&amp;quot;.&lt;/p&gt;
 &lt;/figcaption&gt;&lt;/figure&gt;
 </content>
  </entry>
@@ -377,20 +377,24 @@ ich eher unbefriedigend.&lt;/p&gt;
 
 &lt;p&gt;Nach den ersten Tutorials hatte ich dieses beeindruckende Ergebnis:&lt;/p&gt;
 
-&lt;figure class=&quot;cap-left&quot;&gt;&lt;img src=&quot;/assets/img/blender_pig.png&quot; alt=&quot;Ein sehr simples Schwein aus einfachen Primitiven&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Ein sehr simples Schwein aus einfachen Primitiven&lt;/p&gt;
+&lt;figure class=&quot;cap-left p50&quot;&gt;&lt;img src=&quot;/assets/img/blender_pig.png&quot; alt=&quot;Ein sehr simples Schwein aus einfachen Primitiven&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Ein sehr simples Schwein aus einfachen Primitiven&lt;/p&gt;
 &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;div class=&quot;clearfix&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;Oder auch so etwas:&lt;/p&gt;
 
-&lt;figure class=&quot;cap-left&quot;&gt;&lt;img src=&quot;/assets/img/blender_lighthouse.png&quot; alt=&quot;Simpler Leuchtturm&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Ein Leuchtturm mit kleinem Häuschen anbei. Nicht mehr total primitiv, aber auch nicht besonders toll.&lt;/p&gt;
+&lt;figure class=&quot;cap-left p50&quot;&gt;&lt;img src=&quot;/assets/img/blender_lighthouse.png&quot; alt=&quot;Simpler Leuchtturm&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Ein Leuchtturm mit kleinem Häuschen anbei. Nicht mehr total primitiv, aber auch nicht besonders toll.&lt;/p&gt;
 &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;div class=&quot;clearfix&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;Eher nicht so super – zumindest nichts, was ich unbedingt gedruckt haben wollte...&lt;/p&gt;
 
 &lt;p&gt;Beim nächsten Versuch wollte ich gerne mit Flüssigkeitssimulationen spielen
 und das Ergebnis war dann schon etwas beeindruckender:&lt;/p&gt;
 
-&lt;figure class=&quot;cap-left&quot;&gt;&lt;img src=&quot;/assets/img/blender_water.png&quot; alt=&quot;Fett&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Eindrucksvolles Bild von simuliertem Wasser, das in ein simuliertes Glass gegossen wird.&lt;/p&gt;
+&lt;figure class=&quot;left cap-left&quot;&gt;&lt;img src=&quot;/assets/img/blender_water.png&quot; alt=&quot;Fett&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Eindrucksvolles Bild von simuliertem Wasser, das in ein simuliertes Glass gegossen wird.&lt;/p&gt;
 &lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Das ist zwar immer noch nicht mit einem 3D-Drucker druckbar,
@@ -409,7 +413,7 @@ gestolpert bin und
 das erstmal nur bei meiner &lt;a href=&quot;http://www.highdefdigest.com/blog/twin-peaks-cooper-tapes/&quot;&gt;Diane&lt;/a&gt;
 geparkt habe, hatte ich heute mal eine Viertelstunde Muse:&lt;/p&gt;
 
-&lt;figure class=&quot;cap-left&quot;&gt;&lt;img src=&quot;/assets/img/cam00009.jpg&quot; alt=&quot;Tensegrity-Objekt&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Das Objekt stellt sich selbstständig auf.&lt;/p&gt;
+&lt;figure class=&quot;left cap-left&quot;&gt;&lt;img src=&quot;/assets/img/cam00009.jpg&quot; alt=&quot;Tensegrity-Objekt&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Das Objekt stellt sich selbstständig auf.&lt;/p&gt;
 &lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;div class=&quot;clearfix&quot;&gt; &lt;/div&gt;
