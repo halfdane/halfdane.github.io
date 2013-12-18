@@ -56,7 +56,7 @@ War immer noch etwas Arbeit, aber jetzt funktioniert's auf allen Seiten und beim
 
 Ich benutze das auf allen Seiten des Blogs, und das Raster sieht so aus: <span class="js_baseline_trigger btn">Click for raster</span>
 
-<script src="{{ ASSET_PATH }}/js/display_halfdane_baseline.js" > </script>
+<script src="/assets/js/display_halfdane_baseline.js" > </script>
 
 Dank Compass sieht der Baseline-Code nur noch in etwa so aus:
 

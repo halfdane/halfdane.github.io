@@ -44,6 +44,7 @@ $relative-font-sizing: true;
 
 h1 {
   @include font(2.5*1.618, 0, 1);
+
   text-align: center;
 }
 

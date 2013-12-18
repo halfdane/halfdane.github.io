@@ -3,7 +3,9 @@ figure {
   position: relative;
   float: left;
   overflow: hidden;
-  margin: 0 20px 20px 0;
+  margin: 0 rhythm(1, $base-font-size) 20px 0;
+  height: auto;
+  @include leader(0.2, $base-font-size);
 }
 
 figure.cap-left {
