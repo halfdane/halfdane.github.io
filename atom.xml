@@ -4,7 +4,7 @@
  <title>Canned Nerd</title>
  <link href="http://halfdane.github.io/" rel="self"/>
  <link href="http://halfdane.github.io"/>
- <updated>2013-12-17T19:15:57+00:00</updated>
+ <updated>2013-12-18T06:32:21+00:00</updated>
  <id>http://halfdane.github.io</id>
  <author>
    <name>Halfdane</name>
@@ -26,10 +26,8 @@ goldenen Schnitt berechnen (und zwar für jedes Überschriften-Level einzeln) un
 an Überschriften- und Absatz-Elemente hängen, der genau so abgepasst ist, dass die nächste Schriftzeile
 ins Raster passt.&lt;/p&gt;
 
-&lt;figure&gt;
-    &lt;img alt=&quot;Seite mit baseline&quot; src=&quot;/assets/img/baseline.png&quot;/&gt;
-    
-&lt;/figure&gt;
+&lt;figure class=&quot;cap-left&quot;&gt;&lt;img src=&quot;/assets/img/baseline.png&quot; alt=&quot;Seite mit baseline&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Ausschnitt der Seite im alten Design - die Baseline ist sichbar.&lt;/p&gt;
+&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Dazu kommt, dass ich das Raster (und die Schriften) unbedingt in &lt;code&gt;em&lt;/code&gt; haben will, damit
 es gut (und mit &lt;a href=&quot;http://joshnh.com/2011/07/26/are-you-using-ems-with-your-media-queries/&quot;&gt;wenig Aufwand&lt;/a&gt;)
@@ -67,7 +65,7 @@ War immer noch etwas Arbeit, aber jetzt funktioniert&amp;#39;s auf allen Seiten 
 
 &lt;p&gt;Ich benutze das auf allen Seiten des Blogs, und das Raster sieht so aus: &lt;span class=&quot;js_baseline_trigger btn&quot;&gt;Click for raster&lt;/span&gt;&lt;/p&gt;
 
-&lt;script src=&quot;/assets/js/display_halfdane_baseline.js&quot; &gt; &lt;/script&gt;
+&lt;script src=&quot;/js/display_halfdane_baseline.js&quot; &gt; &lt;/script&gt;
 
 &lt;p&gt;Dank Compass sieht der Baseline-Code nur noch in etwa so aus:&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;scss language-scss&quot; data-lang=&quot;scss&quot;&gt;&lt;span class=&quot;k&quot;&gt;@import&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;compass/typography/vertical_rhythm&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -145,28 +143,24 @@ Dank der Liquid-Template-Sprache, die ich hier einsetzen kann, muss mich das nic
 ich kann mit einem einfachen Include selber Bilder einbinden
 (allerdings vor allem technisch, nicht schön - bin schließlich kein Designer :):&lt;/p&gt;
 
-&lt;figure&gt;
-    &lt;img alt=&quot;bird&quot; src=&quot;/assets/img/vogel.by.anira..JPG&quot;/&gt;
-    &lt;figcaption&gt;Nice Bird&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;!-- more --&gt;
-
-&lt;p&gt;(Das Bild habe ich bei &lt;a href=&quot;http://www.the-inspiring-life.com/2013/01/ein-logo-fur-meinen-blog.html&quot;&gt;the inspiring live&lt;/a&gt; gefunden.)&lt;/p&gt;
+&lt;figure class=&quot;cap-left&quot;&gt;&lt;img src=&quot;/assets/img/vogel.by.anira..JPG&quot; alt=&quot;Nice Bird&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Das Bild habe ich bei
+&lt;a href=&quot;http://www.the-inspiring-life.com/2013/01/ein-logo-fur-meinen-blog.html&quot;&gt;the inspiring live&lt;/a&gt;
+gefunden.&lt;/p&gt;
+&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Und das geht so:&lt;/p&gt;
 
 &lt;p&gt;In &lt;code&gt;\_includes&lt;/code&gt; eine Datei namens &lt;code&gt;image&lt;/code&gt; erstellen, die folgenden Code enthält:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html+erb language-html+erb&quot; data-lang=&quot;html+erb&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;figure&amp;gt;&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html+erb language-html+erb&quot; data-lang=&quot;html+erb&quot;&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;figure&amp;gt;&lt;/span&gt;
     &lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;{%&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;%}&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;alt=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;{{ include.title }}&amp;quot;&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;{%&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;endif&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;%}&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;{{ ASSET_PATH }}/img/{{ include.img }}&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
     {%if include.text %}&lt;span class=&quot;nt&quot;&gt;&amp;lt;figcaption&amp;gt;&lt;/span&gt;{{ include.text }}&lt;span class=&quot;nt&quot;&gt;&amp;lt;/figcaption&amp;gt;&lt;/span&gt;{% endif %}
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/figure&amp;gt;&lt;/span&gt;
+ &lt;span class=&quot;nt&quot;&gt;&amp;lt;/figure&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Das Bild auf der Seite einbinden:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;image&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;img&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;vogel.by.anira..JPG&amp;quot;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;Nice Bird&amp;quot;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;bird&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby language-ruby&quot; data-lang=&quot;ruby&quot;&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;image&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;img&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;vogel.by.anira..JPG&amp;quot;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;Nice Bird&amp;quot;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;bird&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Ein bisschen aufhübschen mit CSS&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nt&quot;&gt;figure&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css language-css&quot; data-lang=&quot;css&quot;&gt; &lt;span class=&quot;nt&quot;&gt;figure&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;line-height&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;inline&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;solid&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1px&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;col_border&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -177,15 +171,12 @@ ich kann mit einem einfachen Include selber Bilder einbinden
     &lt;span class=&quot;k&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1em&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;auto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Fertig. Wenn ich keine Bildunterschrift will, lasse ich das Attribut einfach weg:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;image&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;img&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;mug.jpg&amp;#39;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;bird&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby language-ruby&quot; data-lang=&quot;ruby&quot;&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;image&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;img&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;mug.jpg&amp;#39;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;bird&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;figure&gt;
-    &lt;img alt=&quot;bird&quot; src=&quot;/assets/img/mug.jpg&quot;/&gt;
-    
-&lt;/figure&gt;
+&lt;figure class=&quot;cap-left&quot;&gt;&lt;img src=&quot;/assets/img/mug.jpg&quot; alt=&quot;mug&quot;&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;/figure&gt;
 </content>
  </entry>
  
@@ -200,10 +191,8 @@ Aufgrund von etwas almost completely, but not quite, unlike einer Kneipenwette.
 Es fing ganz spaßig an: ich kann mich auch gut erinnern, das ich Luftmaschen in der
 3. Klasse auch schon mochte, aber nie so recht darüber hinaus kam.&lt;/p&gt;
 
-&lt;figure&gt;
-    &lt;img alt=&quot;Detailansicht&quot; src=&quot;/assets/img/space1.jpg&quot;/&gt;
-    &lt;figcaption&gt;Und damit ich nicht auf die Idee komme, nochmal mit so etwas anzufangen, noch eine besonders langweilige Detailansicht.&lt;/figcaption&gt;
-&lt;/figure&gt;
+&lt;figure class=&quot;cap-left&quot;&gt;&lt;img src=&quot;/assets/img/space1.jpg&quot; alt=&quot;Detailansicht&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Und damit ich nicht auf die Idee komme, nochmal mit so etwas anzufangen, noch eine besonders langweilige Detailansicht.&lt;/p&gt;
+&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Aber das sollte sich diesmal ändern, schließlich wollte ich auch keine Topflappen
 oder ähnliche Kinkerlitzchen häkeln, sondern eine Decke – und zwar eine Männerdecke, d.h.&lt;/p&gt;
@@ -265,10 +254,8 @@ lässt sich recht einfach nachbauen und nachdem ich
 letzte Woche einen größeren Prototypen aus Wellpappe gemacht habe und alles gut
 funktioniert hat, habe ich mich heute an eine verkleinerte Version gemacht.&lt;/p&gt;
 
-&lt;figure&gt;
-    &lt;img src=&quot;/assets/img/iris1.jpg&quot;/&gt;
-    
-&lt;/figure&gt;
+&lt;figure class=&quot;cap-left&quot;&gt;&lt;img src=&quot;/assets/img/iris1.jpg&quot; alt=&quot;Einzelteile der Irisblende&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Blenden-Einzelteile und fertige Irisblende&lt;/p&gt;
+&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Eine fertige Blende auf der rechten Seite, zusammen mit dem Werkzeug sowie den
 Einzelteilen für eine weitere.
@@ -278,10 +265,8 @@ mit einem Seitenschneider abgeknipst, damit man sich nicht verletzt.&lt;/p&gt;
 &lt;p&gt;Denn wenn man zwei kleine Blenden hat, bleibt einem ja gar nichts anderes übrig,
 als eine nerdige Steampunk-Brille daraus zu machen :&lt;/p&gt;
 
-&lt;figure&gt;
-    &lt;img src=&quot;/assets/img/iris2.jpg&quot;/&gt;
-    
-&lt;/figure&gt;
+&lt;figure class=&quot;cap-left&quot;&gt;&lt;img src=&quot;/assets/img/iris2.jpg&quot; alt=&quot;Nerd&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Halfdane ist ein Nerd :)&lt;/p&gt;
+&lt;/figcaption&gt;&lt;/figure&gt;
 </content>
  </entry>
  
@@ -293,10 +278,8 @@ als eine nerdige Steampunk-Brille daraus zu machen :&lt;/p&gt;
    <content type="html">&lt;p&gt;T. wünscht sich eine Aufbewahrungsmöglichkeit für ihre Ringe.
 Randbedingungen sind: es soll nicht herumstehen und muss nur etwa zehn Ringe halten.&lt;/p&gt;
 
-&lt;figure&gt;
-    &lt;img alt=&quot;Der Ringhalter and der Wand&quot; src=&quot;/assets/img/ringhalter.jpg&quot;/&gt;
-    
-&lt;/figure&gt;
+&lt;figure class=&quot;cap-left&quot;&gt;&lt;img src=&quot;/assets/img/ringhalter.jpg&quot; alt=&quot;Der Ringhalter an der Wand&quot;&gt;&lt;figcaption&gt;&lt;p&gt;So sieht&amp;#39;s in Aktion aus&lt;/p&gt;
+&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;In den schön geschnitzten goldenen Bilderrahmen vom Flohmarkt habe ich vier
 schmale Rollen aus einem alten (aber sauberen :-) Handtuch geklebt und zunächst
@@ -321,10 +304,8 @@ Sieht doch prima aus, oder?&lt;/p&gt;
    <id>http://halfdane.github.io/2013/08/19/Gitarrenhalter</id>
    <content type="html">&lt;p&gt;Klingen ja schön, stehen aber ständig im Weg. Und die käuflichen Halterungen sind echt nicht so wahnsinnig schön.&lt;/p&gt;
 
-&lt;figure&gt;
-    &lt;img alt=&quot;Drei Gitarren platzsparend an der Wand&quot; src=&quot;/assets/img/gitarren1.jpg&quot;/&gt;
-    
-&lt;/figure&gt;
+&lt;figure class=&quot;cap-left&quot;&gt;&lt;img src=&quot;/assets/img/gitarren1.jpg&quot; alt=&quot;Drei Gitarren an der Wand&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Drei Gitarren platzsparend an der Wand&lt;/p&gt;
+&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Aus einem ungenutzten Buchen-Regalbrett habe ich einen 5,7cm breiten und 3,5cm tiefen Schlitz ausgesägt - das
 passt für alle unsere Saiteninstrumente gleichermaßen.
@@ -336,10 +317,8 @@ bei rund 7cm abgeschnitten.&lt;/p&gt;
 
 &lt;p&gt;An die Wand geworfen – fertig.&lt;/p&gt;
 
-&lt;figure&gt;
-    &lt;img alt=&quot;Halter mit Fingern&quot; src=&quot;/assets/img/gitarren2.jpg&quot;/&gt;
-    
-&lt;/figure&gt;
+&lt;figure class=&quot;cap-left&quot;&gt;&lt;img src=&quot;/assets/img/gitarren2.jpg&quot; alt=&quot;Halter mit Fingern&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Nahansicht des Halters mit &amp;quot;Fingern&amp;quot;.&lt;/p&gt;
+&lt;/figcaption&gt;&lt;/figure&gt;
 </content>
  </entry>
  
@@ -388,27 +367,21 @@ ich eher unbefriedigend.&lt;/p&gt;
 
 &lt;p&gt;Nach den ersten Tutorials hatte ich dieses beeindruckende Ergebnis:&lt;/p&gt;
 
-&lt;figure&gt;
-    &lt;img alt=&quot;Ein sehr simples Schwein aus einfachen Primitiven&quot; src=&quot;/assets/img/blender_pig.png&quot;/&gt;
-    
-&lt;/figure&gt;
+&lt;figure class=&quot;cap-left&quot;&gt;&lt;img src=&quot;/assets/img/blender_pig.png&quot; alt=&quot;Ein sehr simples Schwein aus einfachen Primitiven&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Ein sehr simples Schwein aus einfachen Primitiven&lt;/p&gt;
+&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Oder auch so etwas:&lt;/p&gt;
 
-&lt;figure&gt;
-    &lt;img alt=&quot;Ein Leuchtturm mit kleinem Häuschen anbei. Nicht mehr total primitiv, aber auch nicht besonders toll.&quot; src=&quot;/assets/img/blender_lighthouse.png&quot;/&gt;
-    
-&lt;/figure&gt;
+&lt;figure class=&quot;cap-left&quot;&gt;&lt;img src=&quot;/assets/img/blender_lighthouse.png&quot; alt=&quot;Simpler Leuchtturm&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Ein Leuchtturm mit kleinem Häuschen anbei. Nicht mehr total primitiv, aber auch nicht besonders toll.&lt;/p&gt;
+&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Eher nicht so super – zumindest nichts, was ich unbedingt gedruckt haben wollte...&lt;/p&gt;
 
 &lt;p&gt;Beim nächsten Versuch wollte ich gerne mit Flüssigkeitssimulationen spielen
 und das Ergebnis war dann schon etwas beeindruckender:&lt;/p&gt;
 
-&lt;figure&gt;
-    &lt;img alt=&quot;Eindrucksvolles Bild von Wasser, das in ein Glass gegossen wird.&quot; src=&quot;/assets/img/blender_water.png&quot;/&gt;
-    
-&lt;/figure&gt;
+&lt;figure class=&quot;cap-left&quot;&gt;&lt;img src=&quot;/assets/img/blender_water.png&quot; alt=&quot;Fett&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Eindrucksvolles Bild von simuliertem Wasser, das in ein simuliertes Glass gegossen wird.&lt;/p&gt;
+&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Das ist zwar immer noch nicht mit einem 3D-Drucker druckbar,
 aber zumindest muss ich mich damit nicht mehr verstecken :)&lt;/p&gt;
@@ -426,10 +399,8 @@ gestolpert bin und
 das erstmal nur bei meiner &lt;a href=&quot;http://www.highdefdigest.com/blog/twin-peaks-cooper-tapes/&quot;&gt;Diane&lt;/a&gt;
 geparkt habe, hatte ich heute mal eine Viertelstunde Muse:&lt;/p&gt;
 
-&lt;figure&gt;
-    &lt;img alt=&quot;Tensegrity-Objekt&quot; src=&quot;/assets/img/cam00009.jpg&quot;/&gt;
-    
-&lt;/figure&gt;
+&lt;figure class=&quot;cap-left&quot;&gt;&lt;img src=&quot;/assets/img/cam00009.jpg&quot; alt=&quot;Tensegrity-Objekt&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Das Objekt stellt sich selbstständig auf.&lt;/p&gt;
+&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;div class=&quot;clearfix&quot;&gt; &lt;/div&gt;
 
@@ -445,8 +416,6 @@ geparkt habe, hatte ich heute mal eine Viertelstunde Muse:&lt;/p&gt;
    <content type="html">&lt;p&gt;Auf einer internen Seite, die Twitter-Bootstrap nicht ganz unähnlich ist, trat das Problem auf,
 dass der Browser irgendwo in die Mitte der Seite gesprungen ist
 (also etwa so: &lt;a href=&quot;http://twitter.github.io/bootstrap/base-css.html#forms&quot;&gt;http://twitter.github.io/bootstrap/base-css.html#forms&lt;/a&gt; aber ohne #forms am Ende ).&lt;/p&gt;
-
-&lt;!-- more --&gt;
 
 &lt;p&gt;Meine erste Vermutung war, dass der Scrollspy-Code buggy sein müsse
 (Fehler machen immer nur die anderen, right?), aber auch ganz ohne Javascript sprang der
@@ -474,19 +443,15 @@ das Verhalten der Seite zu zerbrechen – und dass nicht immer die anderen Schul
    <content type="html">&lt;p&gt;Man kommt ja auf live Umgebungen (oder auf die Maschinen von Kunden) meist nur über eine
 dedizierte Jumpbox, auf die man sich einloggt um dann von dort aus auf den eigentlichen Server zu kommen.&lt;/p&gt;
 
-&lt;!-- more --&gt;
-
 &lt;p&gt;Um den Workflow zu vereinfachen und den Zwischen-Login zu vermeiden, habe
 ich bisher meist einen Ssh-Tunnel benutzt, aber das funktioniert nur, wenn auf der
 Jumpbox Port-Forwarding erlaubt ist – bei kompetenten Admins also meistens nicht :-\&lt;/p&gt;
 
 &lt;p&gt;Um so erfreuter habe ich festgestellt, dass die meisten einigermaßen aktuellen Implementierungen
 so etwas out-of-the-box können.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;Host app-live-*
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html language-html&quot; data-lang=&quot;html&quot;&gt;Host app-live-*
      ProxyCommand ssh -W %h:%p access-live-box.domain.name
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;p&gt;Diese Zeilen in der ~/.ssh/config führen dazu, dass ssh Verbindungen zu allen boxen, die mit
 app-live- anfangen über die jump box geroutet werden.&lt;/p&gt;
 
@@ -502,8 +467,6 @@ app-live- anfangen über die jump box geroutet werden.&lt;/p&gt;
    <content type="html">&lt;p&gt;Dass 3D-Drucken “die Zukunft der Fabrikation ist” und eine zweite industrielle Revolution
 verursachen wird, interessiert mich nicht so sehr wie die Tatsache, dass ich
 damit irgendwelche Sachen aus meinem Computer herstellen kann.&lt;/p&gt;
-
-&lt;!-- more --&gt;
 
 &lt;p&gt;Sachen machen, das finde ich toll – leider kann ich nur mit Holz einerseits und ‘nem
 Lötkolben andererseits vernünftig umgehen.

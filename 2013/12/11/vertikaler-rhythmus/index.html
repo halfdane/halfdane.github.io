@@ -37,7 +37,7 @@
 
 </head>
 
-<body>
+<body class="baseline">
 
 <nav>
     <div class="menu">
@@ -131,10 +131,8 @@ goldenen Schnitt berechnen (und zwar für jedes Überschriften-Level einzeln) un
 an Überschriften- und Absatz-Elemente hängen, der genau so abgepasst ist, dass die nächste Schriftzeile
 ins Raster passt.</p>
 
-<figure>
-    <img alt="Seite mit baseline" src="/assets/img/baseline.png"/>
-    
-</figure>
+<figure class="cap-left"><img src="/assets/img/baseline.png" alt="Seite mit baseline"><figcaption><p>Ausschnitt der Seite im alten Design - die Baseline ist sichbar.</p>
+</figcaption></figure>
 
 <p>Dazu kommt, dass ich das Raster (und die Schriften) unbedingt in <code>em</code> haben will, damit
 es gut (und mit <a href="http://joshnh.com/2011/07/26/are-you-using-ems-with-your-media-queries/">wenig Aufwand</a>)
@@ -172,7 +170,7 @@ War immer noch etwas Arbeit, aber jetzt funktioniert&#39;s auf allen Seiten und 
 
 <p>Ich benutze das auf allen Seiten des Blogs, und das Raster sieht so aus: <span class="js_baseline_trigger btn">Click for raster</span></p>
 
-<script src="/assets/js/display_halfdane_baseline.js" > </script>
+<script src="/js/display_halfdane_baseline.js" > </script>
 
 <p>Dank Compass sieht der Baseline-Code nur noch in etwa so aus:</p>
 <div class="highlight"><pre><code class="scss language-scss" data-lang="scss"><span class="k">@import</span> <span class="s2">&quot;compass/typography/vertical_rhythm&quot;</span><span class="p">;</span>

@@ -39,7 +39,7 @@
 
 </head>
 
-<body>
+<body class="baseline">
 
 <nav>
     <div class="menu">
@@ -135,28 +135,24 @@ Dank der Liquid-Template-Sprache, die ich hier einsetzen kann, muss mich das nic
 ich kann mit einem einfachen Include selber Bilder einbinden
 (allerdings vor allem technisch, nicht schön - bin schließlich kein Designer :):</p>
 
-<figure>
-    <img alt="bird" src="/assets/img/vogel.by.anira..JPG"/>
-    <figcaption>Nice Bird</figcaption>
-</figure>
-
-<!-- more -->
-
-<p>(Das Bild habe ich bei <a href="http://www.the-inspiring-life.com/2013/01/ein-logo-fur-meinen-blog.html">the inspiring live</a> gefunden.)</p>
+<figure class="cap-left"><img src="/assets/img/vogel.by.anira..JPG" alt="Nice Bird"><figcaption><p>Das Bild habe ich bei
+<a href="http://www.the-inspiring-life.com/2013/01/ein-logo-fur-meinen-blog.html">the inspiring live</a>
+gefunden.</p>
+</figcaption></figure>
 
 <p>Und das geht so:</p>
 
 <p>In <code>\_includes</code> eine Datei namens <code>image</code> erstellen, die folgenden Code enthält:</p>
-<div class="highlight"><pre><code class="html+erb language-html+erb" data-lang="html+erb"><span class="nt">&lt;figure&gt;</span>
+<div class="highlight"><pre><code class="html+erb language-html+erb" data-lang="html+erb"> <span class="nt">&lt;figure&gt;</span>
     <span class="nt">&lt;img</span> <span class="err">{%</span> <span class="na">if</span> <span class="na">include</span><span class="err">.</span><span class="na">title</span> <span class="err">%}</span><span class="na">alt=</span><span class="s">&quot;{{ include.title }}&quot;</span> <span class="err">{%</span> <span class="na">endif</span> <span class="err">%}</span><span class="na">src=</span><span class="s">&quot;{{ ASSET_PATH }}/img/{{ include.img }}&quot;</span><span class="nt">/&gt;</span>
     {%if include.text %}<span class="nt">&lt;figcaption&gt;</span>{{ include.text }}<span class="nt">&lt;/figcaption&gt;</span>{% endif %}
-<span class="nt">&lt;/figure&gt;</span>
+ <span class="nt">&lt;/figure&gt;</span>
 </code></pre></div>
 <p>Das Bild auf der Seite einbinden:</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="p">{</span><span class="o">%</span> <span class="kp">include</span> <span class="n">image</span> <span class="n">img</span><span class="o">=</span><span class="s2">&quot;vogel.by.anira..JPG&quot;</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Nice Bird&quot;</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;bird&quot;</span> <span class="o">%</span><span class="p">}</span>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"> <span class="p">{</span><span class="o">%</span> <span class="kp">include</span> <span class="n">image</span> <span class="n">img</span><span class="o">=</span><span class="s2">&quot;vogel.by.anira..JPG&quot;</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Nice Bird&quot;</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;bird&quot;</span> <span class="o">%</span><span class="p">}</span>
 </code></pre></div>
 <p>Ein bisschen aufhübschen mit CSS</p>
-<div class="highlight"><pre><code class="css language-css" data-lang="css"><span class="nt">figure</span> <span class="p">{</span>
+<div class="highlight"><pre><code class="css language-css" data-lang="css"> <span class="nt">figure</span> <span class="p">{</span>
     <span class="k">line-height</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
     <span class="k">display</span><span class="o">:</span> <span class="k">inline</span><span class="o">-</span><span class="k">block</span><span class="p">;</span>
     <span class="k">border</span><span class="o">:</span> <span class="k">solid</span> <span class="m">1px</span> <span class="err">$</span><span class="n">col_border</span><span class="p">;</span>
@@ -167,15 +163,12 @@ ich kann mit einem einfachen Include selber Bilder einbinden
     <span class="k">margin</span><span class="o">:</span> <span class="m">0</span> <span class="m">1em</span> <span class="m">0</span> <span class="m">0</span><span class="p">;</span>
     <span class="k">float</span><span class="o">:</span> <span class="k">left</span><span class="p">;</span>
     <span class="k">height</span><span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
-<span class="p">}</span>
+ <span class="p">}</span>
 </code></pre></div>
 <p>Fertig. Wenn ich keine Bildunterschrift will, lasse ich das Attribut einfach weg:</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="p">{</span><span class="o">%</span> <span class="kp">include</span> <span class="n">image</span> <span class="n">img</span><span class="o">=</span><span class="s1">&#39;mug.jpg&#39;</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;bird&quot;</span> <span class="o">%</span><span class="p">}</span>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"> <span class="p">{</span><span class="o">%</span> <span class="kp">include</span> <span class="n">image</span> <span class="n">img</span><span class="o">=</span><span class="s1">&#39;mug.jpg&#39;</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;bird&quot;</span> <span class="o">%</span><span class="p">}</span>
 </code></pre></div>
-<figure>
-    <img alt="bird" src="/assets/img/mug.jpg"/>
-    
-</figure>
+<figure class="cap-left"><img src="/assets/img/mug.jpg" alt="mug"><figcaption></figcaption></figure>
 
 </div>
 
