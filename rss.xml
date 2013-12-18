@@ -5,8 +5,8 @@
         <description>Canned Nerd - Halfdane</description>
         <link>http://halfdane.github.io</link>
         <link>http://halfdane.github.io</link>
-        <lastBuildDate>2013-12-18T06:32:21+00:00</lastBuildDate>
-        <pubDate>2013-12-18T06:32:21+00:00</pubDate>
+        <lastBuildDate>2013-12-18T07:38:09+00:00</lastBuildDate>
+        <pubDate>2013-12-18T07:38:09+00:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -54,7 +54,8 @@ nicht in der Lage bin, die Baseline-Berechnungen korrekt selbst zu programmieren
 zu viele Sonderfälle für meinen Geschmack: das fängt mit dem seltsamen Verhalten der prozentualen
 Werte an und hört mit dem Kollabieren aneinandergrenzender Margins noch lange nicht auf.&lt;/p&gt;
 
-&lt;p&gt;Da ich ohnehin schon SASS dabei hatte, kann ich auch gleich die Baseline-Funktionen von Compass benutzen.
+&lt;p&gt;Da ich ohnehin schon SASS dabei hatte, kann ich auch gleich die Baseline-Funktionen von
+&lt;a href=&quot;http://compass-style.org/reference/compass/typography/vertical_rhythm/&quot;&gt;Compass&lt;/a&gt; benutzen.
 War immer noch etwas Arbeit, aber jetzt funktioniert&amp;#39;s auf allen Seiten und beim Verkleinern
 (Vergrößern) des Browsers.&lt;/p&gt;
 
@@ -122,7 +123,16 @@ frei bleibt:&lt;/p&gt;
   &lt;span class=&quot;cm&quot;&gt;/*den Hintergrund eine halbe Zeile nach unten schieben, damit er zum verschobenen Layout passt */&lt;/span&gt;
   &lt;span class=&quot;na&quot;&gt;background-position&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;rhythm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;.5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$base-font-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Bei der Recherche habe ich einiges an sehr lesenswerten Artikeln gefunden:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://alistapart.com/article/settingtypeontheweb&quot;&gt;http://alistapart.com/article/settingtypeontheweb&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://alistapart.com/article/more-meaningful-typography&quot;&gt;http://alistapart.com/article/more-meaningful-typography&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://24ways.org/2006/compose-to-a-vertical-rhythm/&quot;&gt;http://24ways.org/2006/compose-to-a-vertical-rhythm/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://atendesigngroup.com/blog/vertical-rhythm-compass&quot;&gt;http://atendesigngroup.com/blog/vertical-rhythm-compass&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
                 <link>http://halfdane.github.io/2013/12/11/vertikaler-rhythmus</link>
                 <guid>http://halfdane.github.io/2013/12/11/vertikaler-rhythmus</guid>
                 <pubDate>2013-12-11T00:00:00+00:00</pubDate>
@@ -171,7 +181,7 @@ gefunden.&lt;/p&gt;
 &lt;p&gt;Fertig. Wenn ich keine Bildunterschrift will, lasse ich das Attribut einfach weg:&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby language-ruby&quot; data-lang=&quot;ruby&quot;&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;image&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;img&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;mug.jpg&amp;#39;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;bird&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;figure class=&quot;cap-left&quot;&gt;&lt;img src=&quot;/assets/img/mug.jpg&quot; alt=&quot;mug&quot;&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&quot;cap-left&quot;&gt;&lt;img src=&quot;/assets/img/mug.jpg&quot; alt=&quot;mug&quot;&gt;&lt;/figure&gt;
 </description>
                 <link>http://halfdane.github.io/2013/12/08/jekyll</link>
                 <guid>http://halfdane.github.io/2013/12/08/jekyll</guid>

@@ -47,9 +47,6 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block; }
 
-/*colors http://colorschemedesigner.com/#4162GgMrr5vgt*/
-/*always good:*/
-/*** Primary Color: bluish*/
 /*** Complementary Color: yellowish*/
 /*semantic colors*/
 /*typography*/
@@ -158,13 +155,15 @@ figure {
 figure.cap-left figcaption {
   position: absolute;
   background: black;
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.7);
   color: white;
   padding: 10px 20px;
   opacity: 0;
   -webkit-transition: all 0.6s ease;
   -moz-transition: all 0.6s ease;
   -o-transition: all 0.6s ease; }
+figure.cap-left a {
+  color: white; }
 figure.cap-left:hover figcaption {
   opacity: 1; }
 figure.cap-left:before {
@@ -239,30 +238,30 @@ body {
 h1, h2, h3, h4, h5, h6,
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
-  color: #4b488f;
-  border: 0; }
+  color: darkblue;
+  border: 0;
+  font-weight: inherit; }
 
 a {
-  border-bottom: 1px dotted #000;
-  color: black;
+  color: #685356;
+  border-bottom: 1px dotted darkblue;
   text-decoration: none;
-  font-weight: 400; }
+  font-weight: bold; }
 
 a:hover {
-  color: #dbbf68;
-  border-bottom: 1px dotted #dbbf68; }
+  border-bottom: 1px dotted darkblue; }
 
 .clearfix {
   clear: both; }
 
 /*navbar*/
 nav .brand {
-  color: #dbbf68; }
+  color: #dfc771; }
 nav ul {
   font-size: 1.2em;
   line-height: 2.06349em;
   margin: 0 0 0.61905em 0;
-  background-color: #575499;
+  background-color: darkblue;
   list-style: none;
   display: inline-table;
   width: 100%; }
@@ -271,10 +270,12 @@ nav ul {
   nav ul li a {
     padding: 0.20635em 0.5em;
     display: block;
-    color: #7875b3; }
+    color: #7f7fc5; }
   nav ul li a:hover {
     color: white; }
 
+.pagination ul {
+  list-style: none; }
 .pagination .next {
   float: left; }
 .pagination .prev {
@@ -284,9 +285,9 @@ nav ul {
 
 /*button*/
 .btn {
-  background-color: #575499;
+  background-color: darkblue;
   border: 1px solid #685356;
-  color: #dbbf68;
+  color: #dfc771;
   text-indent: 0;
   display: inline-block;
   font-weight: bold;
