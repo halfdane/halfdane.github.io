@@ -19,10 +19,14 @@
 
   margin: 0.5*$local_borders;
 
-  >figure {
+  figure {
     text-align: center;
     float: none;
     margin: 0;
+    img {
+      max-width: 100%;
+      max-height: rhythm(10, $base-font-size);
+    }
   }
 
   .post {
@@ -112,10 +116,6 @@
   }
   .content {
     margin: 0 2%;
-  }
-  .postslist figure img {
-    width: rhythm(10, $base-font-size);
-    height: rhythm(10, $base-font-size);
   }
   .post .text {
     width: 70%;
