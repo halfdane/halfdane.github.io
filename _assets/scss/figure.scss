@@ -1,8 +1,10 @@
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 figure {
-  display: block;
   position: relative;
-  float: left;
-  overflow: hidden;
   margin: 0 rhythm(1, $base-font-size) 20px 0;
   height: auto;
   @include leader(0.2, $base-font-size);
@@ -18,13 +20,11 @@ figure.right {
   float: right;
 }
 
+figure.p30 {
+  max-width: 30%;
+}
 figure.p50 {
   max-width: 50%;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
 }
 
 figure.cap-left {

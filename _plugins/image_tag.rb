@@ -19,11 +19,14 @@ module Jekyll
 
     def initialize(tag_name, markup, tokens)
       super
-      @css="left cap-left"
+      @css=""
       if markup =~ IMAGE_URL_WITH_TITLE_AND_CSS
         @url     = $1
         @title   = $3
-        @css = $5
+        givenCss = $5
+        @css = [@css, "left"].join(' ') unless givenCss.to_s =~ /\bleft\b|\bright\b/
+        @css = [@css, "cap-left"].join(' ') unless givenCss.to_s =~ /\bcap-/
+        @css = [@css, givenCss.to_s].join(' ')
       elsif markup =~ IMAGE_URL_WITH_TITLE
         @url   = $1
         @title = $3
@@ -90,6 +93,7 @@ module Jekyll
       source += "<figcaption>#{output}</figcaption>" unless (output.to_s == "")
       source += "</figure>"
 
+      source += "<div class=\"clearfix\"> </div>" if @css =~ /\bbreak\b/
       source
     end
 
