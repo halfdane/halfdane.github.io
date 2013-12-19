@@ -267,10 +267,13 @@ figure.cap-left:hover:before {
   margin: 0.30952em;
   /*computer*/
   /*smaller than computer*/ }
-  .postslist > figure {
+  .postslist figure {
     text-align: center;
     float: none;
     margin: 0; }
+    .postslist figure img {
+      max-width: 100%;
+      max-height: 12.38095em; }
   .postslist .post {
     margin: 0;
     text-align: left;
@@ -352,10 +355,6 @@ figure.cap-left:hover:before {
 
   .content {
     margin: 0 2%; }
-
-  .postslist figure img {
-    width: 12.38095em;
-    height: 12.38095em; }
 
   .post .text {
     width: 70%; } }
