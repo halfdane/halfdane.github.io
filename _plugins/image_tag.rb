@@ -24,9 +24,6 @@ module Jekyll
         @url     = $1
         @title   = $3
         givenCss = $5
-        @css = [@css, "left"].join(' ') unless givenCss.to_s =~ /\bleft\b|\bright\b/
-        @css = [@css, "cap-left"].join(' ') unless givenCss.to_s =~ /\bcap-/
-        @css = [@css, givenCss.to_s].join(' ')
       elsif markup =~ IMAGE_URL_WITH_TITLE
         @url   = $1
         @title = $3
@@ -34,6 +31,10 @@ module Jekyll
         @url = $1
         @title = ""
       end
+
+      @css += " left" unless (!givenCss.nil? && givenCss =~ /\bleft\b|\bright\b/)
+      @css += " cap-left" unless (!givenCss.nil? && givenCss =~ /\bcap-/)
+      @css += " " + givenCss unless givenCss.nil?
 
       # Config options
       @config = Jekyll.configuration({})['images'] || {}
@@ -50,7 +51,7 @@ module Jekyll
     end
 
     def render(context)
-      source = "<figure class=\"#{@css}\">"
+      source = "<div><figure class=\"#{@css}\">"
 
       # Retina
       if @config['retina']
@@ -94,6 +95,8 @@ module Jekyll
       source += "</figure>"
 
       source += "<div class=\"clearfix\"> </div>" if @css =~ /\bbreak\b/
+      source += "</div>"
+
       source
     end
 
