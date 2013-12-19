@@ -283,6 +283,8 @@ figure.cap-left:hover:before {
     padding: 1.2381em 0.61905em 0.61905em 1.2381em; }
   .postslist .post .text {
     vertical-align: top; }
+    .postslist .post .text figure {
+      display: none; }
   @media screen and (min-width: 1024px) {
     .postslist {
       background-size: 33.3334% 100px; }
