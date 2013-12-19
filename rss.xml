@@ -5,8 +5,8 @@
         <description>Canned Nerd - Halfdane</description>
         <link>http://halfdane.github.io</link>
         <link>http://halfdane.github.io</link>
-        <lastBuildDate>2013-12-18T14:39:41+00:00</lastBuildDate>
-        <pubDate>2013-12-18T14:39:41+00:00</pubDate>
+        <lastBuildDate>2013-12-19T10:17:22+00:00</lastBuildDate>
+        <pubDate>2013-12-19T10:17:22+00:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -21,7 +21,7 @@ goldenen Schnitt berechnen (und zwar für jedes Überschriften-Level einzeln) un
 an Überschriften- und Absatz-Elemente hängen, der genau so abgepasst ist, dass die nächste Schriftzeile
 ins Raster passt.&lt;/p&gt;
 
-&lt;figure class=&quot;left cap-left&quot;&gt;&lt;img src=&quot;/assets/img/baseline.png&quot; alt=&quot;Seite mit baseline&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Ausschnitt der Seite im alten Design - die Baseline ist sichbar.&lt;/p&gt;
+&lt;figure class=&quot;&quot;&gt;&lt;img src=&quot;/assets/img/baseline.png&quot; alt=&quot;Seite mit baseline&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Ausschnitt der Seite im alten Design - die Baseline ist sichbar.&lt;/p&gt;
 &lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Dazu kommt, dass ich das Raster (und die Schriften) unbedingt in &lt;code&gt;em&lt;/code&gt; haben will, damit
@@ -140,7 +140,7 @@ frei bleibt:&lt;/p&gt;
 
         <item>
                 <title>Jekyll, Markdown &amp; Bilder</title>
-                <description>&lt;figure class=&quot;right cap-left p50&quot;&gt;&lt;img src=&quot;/assets/img/vogel.by.anira..JPG&quot; alt=&quot;Nice Bird&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Das Bild habe ich bei
+                <description>&lt;figure class=&quot; right cap-left p50&quot;&gt;&lt;img src=&quot;/assets/img/vogel.by.anira..JPG&quot; alt=&quot;Nice Bird&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Das Bild habe ich bei
 &lt;a href=&quot;http://www.the-inspiring-life.com/2013/01/ein-logo-fur-meinen-blog.html&quot;&gt;the inspiring live&lt;/a&gt;
 gefunden.&lt;/p&gt;
 &lt;/figcaption&gt;&lt;/figure&gt;
@@ -181,11 +181,73 @@ ich kann mit einem einfachen Include selber Bilder einbinden
 &lt;p&gt;Fertig. Wenn ich keine Bildunterschrift will, lasse ich das Attribut einfach weg:&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby language-ruby&quot; data-lang=&quot;ruby&quot;&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;image&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;img&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;mug.jpg&amp;#39;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;bird&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;figure class=&quot;left cap-left&quot;&gt;&lt;img src=&quot;/assets/img/mug.jpg&quot; alt=&quot;mug&quot;&gt;&lt;/figure&gt;
+&lt;figure class=&quot;&quot;&gt;&lt;img src=&quot;/assets/img/mug.jpg&quot; alt=&quot;mug&quot;&gt;&lt;/figure&gt;
 </description>
                 <link>http://halfdane.github.io/2013/12/08/jekyll</link>
                 <guid>http://halfdane.github.io/2013/12/08/jekyll</guid>
                 <pubDate>2013-12-08T00:00:00+00:00</pubDate>
+        </item>
+
+        <item>
+                <title>Buddelschiff (1: Schiffsrumpf und Masten)</title>
+                <description>&lt;figure class=&quot; cap-left right p30&quot;&gt;&lt;img src=&quot;http://upload.wikimedia.org/wikipedia/commons/b/b4/Rickmer_Rickmers_Hafen_Hamburg.jpg&quot; alt=&quot;Rickmer Rickmers&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Rickmer Rickmers im Hafen von Hamburg (&lt;a href=&quot;http://commons.wikimedia.org&quot;&gt;Wikipedia&lt;/a&gt;)&lt;/p&gt;
+&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Ach nee, die lieben...
+Ich habe kürzlich von R., S. und H. eine schöne Fläche Whisky geschenkt bekommen,
+der auch wirklich sehr lecker ist.
+Überreicht wurde mit die Flasche mit der Maßgabe, da sollte ein Buddelschiff rein,
+und zwar nicht so’n lüttes, sondern ein Dreimaster!
+Kann doch nicht so schwer sein – wird ja ganz klein.&lt;/p&gt;
+
+&lt;p&gt;Dann kann das Schiff ja eigentlich nur die Rickmer Rickmers werden, denn die passt perfekt:
+sie wurde gebaut in Bremerhaven und hat nach einigem herumfahren jetzt einen festen Platz in Hamburg.
+Es ist ein sogenanntes Dreimast-Vollschiff und die technischen Zeichnungen
+von der zugehörigen Museumsseite sind hoffentlich eine Hilfe.&lt;/p&gt;
+
+&lt;p&gt;Ich wollte eigentlich erst einen großen Eintrag für das ganze Projekt machen wenn
+ich ganz fertig bin, aber ich sehe dass ich schon jetzt so viel zu schreiben habe, dass ich das lieber aufteile.&lt;/p&gt;
+
+&lt;p&gt;Ich baue jetzt erstmal einen Prototypen und übe ein bisschen:
+mit einer Laubsäge habe ich einen Rumpf aus Balsaholz gesägt, in der Hoffnung, dass man es
+gut formen kann, weil es so weich ist.
+Für meinen Geschmack sogar etwas zu weich, weil beim Versuch daran herum zu schnitzen leicht
+Risse in der Oberfläche entstehen und das Ganze etwas roh wirkt.
+Also werde ich für den richtigen Rumpf wohl doch kein Balsa nehmen.&lt;/p&gt;
+
+&lt;figure class=&quot; left cap-left break&quot;&gt;&lt;img src=&quot;/assets/img/buddel1.jpg&quot; alt=&quot;Der Rumpf des Buddelschiffes&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Für den Testbau  reicht ein Zweimaster frei nach Schnauze.&lt;/p&gt;
+&lt;/figcaption&gt;&lt;/figure&gt;&lt;div class=&quot;clearfix&quot;&gt; &lt;/div&gt;
+
+Am Hauptmast hängen die Rahen als Querbalken und daran werden dann letztlich die Segel befestigt.
+Ich gebe mir noch keine große Mühe, das Holz zu formen oder die Zahnstocher auf die
+richtige Länge zu bringen - ich nehm’s einfach wie es kommt.
+
+&lt;figure class=&quot; left cap-left break&quot;&gt;&lt;img src=&quot;/assets/img/buddel2.jpg&quot; alt=&quot;Schaschlikspieß mit Zahnstochern&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Schaschlikspieß mit Zahnstochern:
+Mit dem frisch bestellten 0,5mm Bohrer sind die Löcher in den Hauptmast und die Rahen sogar ganz gut zu machen.&lt;/p&gt;
+&lt;/figcaption&gt;&lt;/figure&gt;&lt;div class=&quot;clearfix&quot;&gt; &lt;/div&gt;
+
+Am hinteren Mast (dem Besan) wollte ich gerne einen Gaffel (der obere schräge Balken) und einen
+Baum (der untere waagerechte Balken) haben, weil das die Rickmer Rickmers auch hat.
+
+&lt;figure class=&quot; left cap-left whatever&quot;&gt;&lt;img src=&quot;/assets/img/buddel3.jpg&quot; alt=&quot;Der hintere Mast mit Gaffel&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Schaschlikspieß mit Zahnstochern:
+Der hintere Mast mit Gaffel. Die Befestigung des Baumes wird sich später als Problem herausstellen.&lt;/p&gt;
+&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Man kann gut die weiteren Löcher im Mast erkennen, mit denen er einerseits am Schiffsrumpf
+befestigt werden wird und andererseits aufgerichtet werden kann.
+Der Faden, mit dem der Gaffel und der Baum in Position gehalten werden, ist schon dran.&lt;/p&gt;
+
+&lt;p&gt;Um die Zanhstocher hin- und herklappen zu können, muss die Schlaufe etwas Spiel haben, was dann
+später dazu führt, dass die beiden Teile &lt;em&gt;neben&lt;/em&gt; dem Mast hängen - das sollte noch besser werden.
+Durch das Loch ganz am rechten Ende wird ein Draht gezogen, an dem der
+Mast auf dem Schiffsrumpf hin- und herklappen kann.&lt;/p&gt;
+
+&lt;p&gt;Im nächsten Eintrag befestige ich dann die Masten und das stehende Gut
+(die Seile für die Masten und die Balken) am Schiff.&lt;/p&gt;
+</description>
+                <link>http://halfdane.github.io/2013/11/12/buddel1</link>
+                <guid>http://halfdane.github.io/2013/11/12/buddel1</guid>
+                <pubDate>2013-11-12T00:00:00+00:00</pubDate>
         </item>
 
         <item>
@@ -196,7 +258,7 @@ Aufgrund von etwas almost completely, but not quite, unlike einer Kneipenwette.
 Es fing ganz spaßig an: ich kann mich auch gut erinnern, das ich Luftmaschen in der
 3. Klasse auch schon mochte, aber nie so recht darüber hinaus kam.&lt;/p&gt;
 
-&lt;figure class=&quot;right cap-left&quot;&gt;&lt;img src=&quot;/assets/img/space1.jpg&quot; alt=&quot;Detailansicht&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Und damit ich nicht auf die Idee komme, nochmal mit so etwas anzufangen, noch eine besonders langweilige Detailansicht.&lt;/p&gt;
+&lt;figure class=&quot; right cap-left&quot;&gt;&lt;img src=&quot;/assets/img/space1.jpg&quot; alt=&quot;Detailansicht&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Und damit ich nicht auf die Idee komme, nochmal mit so etwas anzufangen, noch eine besonders langweilige Detailansicht.&lt;/p&gt;
 &lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Aber das sollte sich diesmal ändern, schließlich wollte ich auch keine Topflappen
@@ -215,12 +277,12 @@ oder ähnliche Kinkerlitzchen häkeln, sondern eine Decke – und zwar eine Män
 
 &lt;p&gt;Also Luftmaschen sind immer noch nicht schwer:&lt;/p&gt;
 
-&lt;figure class=&quot;left cap-left&quot;&gt;&lt;img src=&quot;http://www.labbe.de/zzzebra/handarbeiten/haekeln_luftmaschen1.gif&quot; alt=&quot;Luftmaschen&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Beispielhaft bei &lt;a href=&quot;http://www.labbe.de&quot;&gt;labbe.de&lt;/a&gt;&lt;/p&gt;
+&lt;figure class=&quot;&quot;&gt;&lt;img src=&quot;http://www.labbe.de/zzzebra/handarbeiten/haekeln_luftmaschen1.gif&quot; alt=&quot;Luftmaschen&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Beispielhaft bei &lt;a href=&quot;http://www.labbe.de&quot;&gt;labbe.de&lt;/a&gt;&lt;/p&gt;
 &lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p class=&quot;clearfix&quot;&gt;Stäbchen fand ich schon schwieriger:&lt;/p&gt;
 
-&lt;figure class=&quot;left cap-left&quot;&gt;&lt;img src=&quot;http://www.labbe.de/zzzebra/handarbeiten/haekeln_staebchen2.gif&quot; alt=&quot;Luftmaschen&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Wieder &lt;a href=&quot;http://www.labbe.de&quot;&gt;labbe.de&lt;/a&gt;&lt;/p&gt;
+&lt;figure class=&quot;&quot;&gt;&lt;img src=&quot;http://www.labbe.de/zzzebra/handarbeiten/haekeln_staebchen2.gif&quot; alt=&quot;Luftmaschen&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Wieder &lt;a href=&quot;http://www.labbe.de&quot;&gt;labbe.de&lt;/a&gt;&lt;/p&gt;
 &lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p class=&quot;clearfix&quot;&gt;&lt;/p&gt;
@@ -228,7 +290,7 @@ oder ähnliche Kinkerlitzchen häkeln, sondern eine Decke – und zwar eine Män
 &lt;p&gt;Um Wellen zu häkeln, ist es das vermutlich das einfachste, in regelmäßigen Abständen
 Maschen zu- und abzunehmen, zum Beispiel so:&lt;/p&gt;
 
-&lt;figure class=&quot;left cap-left&quot;&gt;&lt;img src=&quot;/assets/img/space2.jpg&quot; alt=&quot;Wellen&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Anleitungen wie Wellen gehäkelt werden, gibt es dutzendfach im Internet, aber das hier ist meine :)&lt;/p&gt;
+&lt;figure class=&quot;&quot;&gt;&lt;img src=&quot;/assets/img/space2.jpg&quot; alt=&quot;Wellen&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Anleitungen wie Wellen gehäkelt werden, gibt es dutzendfach im Internet, aber das hier ist meine :)&lt;/p&gt;
 &lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Vier Stäbchen, zwei mal zwei Maschen abnehmen, vier Stäbchen, zwei mal zwei Maschen zunehmen.
@@ -251,7 +313,7 @@ mindestens eine halbe Stunde pro Reihe.&lt;/p&gt;
 
 &lt;p&gt;Gut zwei Monate später, habe ich 42 (:) Knäuel Wolle verhäkelt und gut zwei Kilogramm Decke produziert:&lt;/p&gt;
 
-&lt;figure class=&quot;left cap-left&quot;&gt;&lt;img src=&quot;/assets/img/space3.jpg&quot; alt=&quot;Unendliche Weiten&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Jeder Farbblock etwa 5-6 Reihen, zu je einer halben bis einer ganzen Stunde macht: EINE EWIGKEIT!&lt;/p&gt;
+&lt;figure class=&quot;&quot;&gt;&lt;img src=&quot;/assets/img/space3.jpg&quot; alt=&quot;Unendliche Weiten&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Jeder Farbblock etwa 5-6 Reihen, zu je einer halben bis einer ganzen Stunde macht: EINE EWIGKEIT!&lt;/p&gt;
 &lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p class=&quot;clearfix&quot;&gt;&lt;/p&gt;
@@ -260,7 +322,7 @@ mindestens eine halbe Stunde pro Reihe.&lt;/p&gt;
 Und K. hat mich auf die Idee gebracht, dass man nicht nur auf Internetseiten und
 Programmen Eastereggs verstecken kann:&lt;/p&gt;
 
-&lt;figure class=&quot;left cap-left&quot;&gt;&lt;img src=&quot;/assets/img/space4.jpg&quot; alt=&quot;Easteregg&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Up-Up-Down-Down-Left-Right-Left-Right-B-A&lt;/p&gt;
+&lt;figure class=&quot;&quot;&gt;&lt;img src=&quot;/assets/img/space4.jpg&quot; alt=&quot;Easteregg&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Up-Up-Down-Down-Left-Right-Left-Right-B-A&lt;/p&gt;
 &lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Statt des Wellenmusters habe ich hier einfach nur Stäbchen geradeaus gehäkelt und immer zwei als ein Pixel benutzt. Die jeweils andere Farbe läuft untenrum zwischen den Schlaufen fast unsichtbar mit. Keine Ahnung, ob man das so macht, aber es scheint zu funktionieren :-)&lt;/p&gt;
@@ -279,7 +341,7 @@ lässt sich recht einfach nachbauen und nachdem ich
 letzte Woche einen größeren Prototypen aus Wellpappe gemacht habe und alles gut
 funktioniert hat, habe ich mich heute an eine verkleinerte Version gemacht.&lt;/p&gt;
 
-&lt;figure class=&quot;left cap-left&quot;&gt;&lt;img src=&quot;/assets/img/iris1.jpg&quot; alt=&quot;Einzelteile der Irisblende&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Blenden-Einzelteile und fertige Irisblende&lt;/p&gt;
+&lt;figure class=&quot;&quot;&gt;&lt;img src=&quot;/assets/img/iris1.jpg&quot; alt=&quot;Einzelteile der Irisblende&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Blenden-Einzelteile und fertige Irisblende&lt;/p&gt;
 &lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Eine fertige Blende auf der rechten Seite, zusammen mit dem Werkzeug sowie den
@@ -290,7 +352,7 @@ mit einem Seitenschneider abgeknipst, damit man sich nicht verletzt.&lt;/p&gt;
 &lt;p class=&quot;clearfix&quot;&gt;Denn wenn man zwei kleine Blenden hat, bleibt einem ja gar nichts anderes übrig,
 als eine nerdige Steampunk-Brille daraus zu machen :&lt;/p&gt;
 
-&lt;figure class=&quot;left cap-left&quot;&gt;&lt;img src=&quot;/assets/img/iris2.jpg&quot; alt=&quot;Nerd&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Halfdane ist ein Nerd :)&lt;/p&gt;
+&lt;figure class=&quot;&quot;&gt;&lt;img src=&quot;/assets/img/iris2.jpg&quot; alt=&quot;Nerd&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Halfdane ist ein Nerd :)&lt;/p&gt;
 &lt;/figcaption&gt;&lt;/figure&gt;
 </description>
                 <link>http://halfdane.github.io/2013/08/31/irisblende2</link>
@@ -303,7 +365,7 @@ als eine nerdige Steampunk-Brille daraus zu machen :&lt;/p&gt;
                 <description>&lt;p&gt;T. wünscht sich eine Aufbewahrungsmöglichkeit für ihre Ringe.
 Randbedingungen sind: es soll nicht herumstehen und muss nur etwa zehn Ringe halten.&lt;/p&gt;
 
-&lt;figure class=&quot;right cap-left&quot;&gt;&lt;img src=&quot;/assets/img/ringhalter.jpg&quot; alt=&quot;Der Ringhalter an der Wand&quot;&gt;&lt;figcaption&gt;&lt;p&gt;So sieht&amp;#39;s in Aktion aus&lt;/p&gt;
+&lt;figure class=&quot; right cap-left&quot;&gt;&lt;img src=&quot;/assets/img/ringhalter.jpg&quot; alt=&quot;Der Ringhalter an der Wand&quot;&gt;&lt;figcaption&gt;&lt;p&gt;So sieht&amp;#39;s in Aktion aus&lt;/p&gt;
 &lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;In den schön geschnitzten goldenen Bilderrahmen vom Flohmarkt habe ich vier
@@ -329,7 +391,7 @@ Sieht doch prima aus, oder?&lt;/p&gt;
                 <title>Wandhalterung für Gitarren</title>
                 <description>&lt;p&gt;Klingen ja schön, stehen aber ständig im Weg. Und die käuflichen Halterungen sind echt nicht so wahnsinnig schön.&lt;/p&gt;
 
-&lt;figure class=&quot;left cap-left&quot;&gt;&lt;img src=&quot;/assets/img/gitarren1.jpg&quot; alt=&quot;Drei Gitarren an der Wand&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Drei Gitarren platzsparend an der Wand&lt;/p&gt;
+&lt;figure class=&quot;&quot;&gt;&lt;img src=&quot;/assets/img/gitarren1.jpg&quot; alt=&quot;Drei Gitarren an der Wand&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Drei Gitarren platzsparend an der Wand&lt;/p&gt;
 &lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Aus einem ungenutzten Buchen-Regalbrett habe ich einen 5,7cm breiten und 3,5cm tiefen Schlitz ausgesägt - das
@@ -342,7 +404,7 @@ bei rund 7cm abgeschnitten.&lt;/p&gt;
 
 &lt;p&gt;An die Wand geworfen – fertig.&lt;/p&gt;
 
-&lt;figure class=&quot;left cap-left&quot;&gt;&lt;img src=&quot;/assets/img/gitarren2.jpg&quot; alt=&quot;Halter mit Fingern&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Nahansicht des Halters mit &amp;quot;Fingern&amp;quot;.&lt;/p&gt;
+&lt;figure class=&quot;&quot;&gt;&lt;img src=&quot;/assets/img/gitarren2.jpg&quot; alt=&quot;Halter mit Fingern&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Nahansicht des Halters mit &amp;quot;Fingern&amp;quot;.&lt;/p&gt;
 &lt;/figcaption&gt;&lt;/figure&gt;
 </description>
                 <link>http://halfdane.github.io/2013/08/19/Gitarrenhalter</link>
@@ -392,14 +454,14 @@ ich eher unbefriedigend.&lt;/p&gt;
 
 &lt;p&gt;Nach den ersten Tutorials hatte ich dieses beeindruckende Ergebnis:&lt;/p&gt;
 
-&lt;figure class=&quot;cap-left p50&quot;&gt;&lt;img src=&quot;/assets/img/blender_pig.png&quot; alt=&quot;Ein sehr simples Schwein aus einfachen Primitiven&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Ein sehr simples Schwein aus einfachen Primitiven&lt;/p&gt;
+&lt;figure class=&quot; cap-left p50&quot;&gt;&lt;img src=&quot;/assets/img/blender_pig.png&quot; alt=&quot;Ein sehr simples Schwein aus einfachen Primitiven&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Ein sehr simples Schwein aus einfachen Primitiven&lt;/p&gt;
 &lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;div class=&quot;clearfix&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;Oder auch so etwas:&lt;/p&gt;
 
-&lt;figure class=&quot;cap-left p50&quot;&gt;&lt;img src=&quot;/assets/img/blender_lighthouse.png&quot; alt=&quot;Simpler Leuchtturm&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Ein Leuchtturm mit kleinem Häuschen anbei. Nicht mehr total primitiv, aber auch nicht besonders toll.&lt;/p&gt;
+&lt;figure class=&quot; cap-left p50&quot;&gt;&lt;img src=&quot;/assets/img/blender_lighthouse.png&quot; alt=&quot;Simpler Leuchtturm&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Ein Leuchtturm mit kleinem Häuschen anbei. Nicht mehr total primitiv, aber auch nicht besonders toll.&lt;/p&gt;
 &lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;div class=&quot;clearfix&quot;/&gt;&lt;/p&gt;
@@ -409,7 +471,7 @@ ich eher unbefriedigend.&lt;/p&gt;
 &lt;p&gt;Beim nächsten Versuch wollte ich gerne mit Flüssigkeitssimulationen spielen
 und das Ergebnis war dann schon etwas beeindruckender:&lt;/p&gt;
 
-&lt;figure class=&quot;left cap-left&quot;&gt;&lt;img src=&quot;/assets/img/blender_water.png&quot; alt=&quot;Fett&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Eindrucksvolles Bild von simuliertem Wasser, das in ein simuliertes Glass gegossen wird.&lt;/p&gt;
+&lt;figure class=&quot;&quot;&gt;&lt;img src=&quot;/assets/img/blender_water.png&quot; alt=&quot;Fett&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Eindrucksvolles Bild von simuliertem Wasser, das in ein simuliertes Glass gegossen wird.&lt;/p&gt;
 &lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Das ist zwar immer noch nicht mit einem 3D-Drucker druckbar,
@@ -428,7 +490,7 @@ gestolpert bin und
 das erstmal nur bei meiner &lt;a href=&quot;http://www.highdefdigest.com/blog/twin-peaks-cooper-tapes/&quot;&gt;Diane&lt;/a&gt;
 geparkt habe, hatte ich heute mal eine Viertelstunde Muse:&lt;/p&gt;
 
-&lt;figure class=&quot;left cap-left&quot;&gt;&lt;img src=&quot;/assets/img/cam00009.jpg&quot; alt=&quot;Tensegrity-Objekt&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Das Objekt stellt sich selbstständig auf.&lt;/p&gt;
+&lt;figure class=&quot;&quot;&gt;&lt;img src=&quot;/assets/img/cam00009.jpg&quot; alt=&quot;Tensegrity-Objekt&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Das Objekt stellt sich selbstständig auf.&lt;/p&gt;
 &lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;div class=&quot;clearfix&quot;&gt; &lt;/div&gt;

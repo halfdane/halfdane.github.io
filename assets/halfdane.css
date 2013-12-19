@@ -143,11 +143,12 @@ ol, ul {
   list-style: square;
   margin-left: 1em; }
 
+img {
+  max-width: 100%;
+  height: auto; }
+
 figure {
-  display: block;
   position: relative;
-  float: left;
-  overflow: hidden;
   margin: 0 1.2381em 20px 0;
   height: auto;
   margin-top: 0.24762em; }
@@ -160,12 +161,11 @@ figure.right {
   margin: 0 0 20px 1.2381em;
   float: right; }
 
+figure.p30 {
+  max-width: 30%; }
+
 figure.p50 {
   max-width: 50%; }
-
-img {
-  max-width: 100%;
-  height: auto; }
 
 figure.cap-left figcaption {
   position: absolute;
