@@ -26,7 +26,6 @@
   }
 
   .post {
-
     margin: 0;
     text-align: left;
     vertical-align: top;
@@ -35,6 +34,9 @@
   }
   .post .text {
     vertical-align: top;
+    figure {
+      display: none;
+    }
   }
 
   @mixin before_post($children) {

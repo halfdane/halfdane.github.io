@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf8d26b6-9aac-44de-917c-c8258df2f482" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/2013-11-12-buddel1.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_assets/scss/figure.scss" afterPath="$PROJECT_DIR$/_assets/scss/figure.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_plugins/image_tag.rb" afterPath="$PROJECT_DIR$/_plugins/image_tag.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/2013-11-13-buddel2.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2013-11-12-buddel1.md" afterPath="$PROJECT_DIR$/_posts/2013-11-12-buddel1.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_config.yml" afterPath="$PROJECT_DIR$/_config.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_assets/scss/postlist.scss" afterPath="$PROJECT_DIR$/_assets/scss/postlist.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="halfdane.github.io.iws" />
@@ -32,7 +33,7 @@
     <file path="/Gemfile" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387304803821" ignored="false" />
     <file path="/jekyll_asset_pipeline.rb" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387305889847" ignored="false" />
     <file path="/config.rb" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387306027901" ignored="false" />
-    <file path="/_config.yml" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387306188240" ignored="false" />
+    <file path="/_config.yml" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387449188209" ignored="false" />
     <file path="/image_tag.rb" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387447770685" ignored="false" />
     <file path="/figure.scss" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387447210441" ignored="false" />
     <file path="/2013-05-24-tensegrity.md" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387310412302" ignored="false" />
@@ -42,9 +43,10 @@
     <file path="/page.html" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387353621607" ignored="false" />
     <file path="/display_halfdane_baseline.js" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387354110743" ignored="false" />
     <file path="/index.html" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387375807981" ignored="false" />
-    <file path="/postlist.scss" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387372434944" ignored="false" />
+    <file path="/postlist.scss" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387450126852" ignored="false" />
     <file path="/temp.rb" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387374446018" ignored="false" />
-    <file path="/2013-11-12-buddel1.md" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387447593460" ignored="false" />
+    <file path="/2013-11-12-buddel1.md" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387449375109" ignored="false" />
+    <file path="/2013-11-13-buddel2.md" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387449961561" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,10 +105,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="postlist.scss" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="postlist.scss" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_assets/scss/postlist.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="3" selection-start="872" selection-end="872" vertical-scroll-proportion="0.0">
+            <state line="38" column="5" selection-start="1227" selection-end="1227" vertical-scroll-proportion="0.6376812">
               <folding />
             </state>
           </provider>
@@ -151,16 +153,34 @@
       <file leaf-file-name="2013-11-12-buddel1.md" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_posts/2013-11-12-buddel1.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="0" selection-start="2959" selection-end="2959" vertical-scroll-proportion="0.0">
+            <state line="46" column="71" selection-start="3350" selection-end="3350" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="figure.scss" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="2013-11-13-buddel2.md" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_posts/2013-11-13-buddel2.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="40" column="82" selection-start="2125" selection-end="2125" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_config.yml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_config.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="127" column="2" selection-start="4258" selection-end="4258" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="figure.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_assets/scss/figure.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="21" selection-start="74" selection-end="74" vertical-scroll-proportion="0.17391305">
+            <state line="6" column="21" selection-start="74" selection-end="74" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -197,8 +217,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/_assets/scss/colors.scss" />
-        <option value="$PROJECT_DIR$/_assets/scss/typography.scss" />
         <option value="$PROJECT_DIR$/_includes/themes/twitter/default.html" />
         <option value="$PROJECT_DIR$/_assets/scss/navi.scss" />
         <option value="$PROJECT_DIR$/_includes/themes/twitter/post.html" />
@@ -207,18 +225,81 @@
         <option value="$PROJECT_DIR$/_posts/2013-05-29-blender_beginner.md" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/_posts/2013-12-08-jekyll.md" />
-        <option value="$PROJECT_DIR$/_assets/scss/postlist.scss" />
         <option value="$PROJECT_DIR$/_posts/2013-11-03-hakeldecke-mit-space-invaders.md" />
         <option value="$PROJECT_DIR$/_assets/scss/halfdane.scss" />
         <option value="$PROJECT_DIR$/_plugins/image_tag.rb" />
-        <option value="$PROJECT_DIR$/_posts/2013-11-12-buddel1.md" />
         <option value="$PROJECT_DIR$/_assets/scss/figure.scss" />
+        <option value="$PROJECT_DIR$/_config.yml" />
+        <option value="$PROJECT_DIR$/_posts/2013-11-12-buddel1.md" />
+        <option value="$PROJECT_DIR$/_posts/2013-11-13-buddel2.md" />
+        <option value="$PROJECT_DIR$/_assets/scss/postlist.scss" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="width" value="1600" />
     <option name="height" value="865" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Android Lint</id>
+          </State>
+          <State>
+            <id>Control FlowGroovy</id>
+          </State>
+          <State>
+            <id>Control flow issues</id>
+          </State>
+          <State>
+            <id>Control flow issuesJavaScript</id>
+          </State>
+          <State>
+            <id>Error handling</id>
+          </State>
+          <State>
+            <id>Error handlingGroovy</id>
+          </State>
+          <State>
+            <id>Error handlingJavaScript</id>
+          </State>
+          <State>
+            <id>Groovy</id>
+          </State>
+          <State>
+            <id>JavaScript</id>
+          </State>
+          <State>
+            <id>JavaScript validity issuesJavaScript</id>
+          </State>
+          <State>
+            <id>Naming conventions</id>
+          </State>
+          <State>
+            <id>Probable bugs</id>
+          </State>
+          <State>
+            <id>Probable bugsJavaScript</id>
+          </State>
+          <State>
+            <id>Ruby</id>
+          </State>
+          <State>
+            <id>XPath</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Abstraction issues</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -444,7 +525,7 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
-    <property name="options.lastSelected" value="preferences.keymap" />
+    <property name="options.lastSelected" value="editor" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="options.searchVisible" value="true" />
@@ -761,18 +842,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/post.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="6" selection-start="771" selection-end="771" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="129" column="9" selection-start="4279" selection-end="4288" vertical-scroll-proportion="0.5808383" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2013-08-31-irisblende2.md">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="68" selection-start="779" selection-end="779" vertical-scroll-proportion="0.0" />
@@ -819,13 +888,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_assets/scss/postlist.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="3" selection-start="872" selection-end="872" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2013-11-03-hakeldecke-mit-space-invaders.md">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="166" vertical-scroll-proportion="0.0">
@@ -847,16 +909,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2013-11-12-buddel1.md">
+    <entry file="file://$PROJECT_DIR$/_assets/scss/figure.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="0" selection-start="2959" selection-end="2959" vertical-scroll-proportion="0.0">
+        <state line="6" column="21" selection-start="74" selection-end="74" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_assets/scss/figure.scss">
+    <entry file="file://$PROJECT_DIR$/_posts/2013-11-12-buddel1.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="21" selection-start="74" selection-end="74" vertical-scroll-proportion="0.17391305">
+        <state line="46" column="71" selection-start="3350" selection-end="3350" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="127" column="2" selection-start="4258" selection-end="4258" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2013-11-13-buddel2.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="82" selection-start="2125" selection-end="2125" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_assets/scss/postlist.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="5" selection-start="1227" selection-end="1227" vertical-scroll-proportion="0.6376812">
           <folding />
         </state>
       </provider>
