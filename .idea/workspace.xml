@@ -2,24 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf8d26b6-9aac-44de-917c-c8258df2f482" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_plugins/gallery_tag.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_assets/css/slideshow-theme.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2013-11-12-buddel1.md" afterPath="$PROJECT_DIR$/_posts/2013-11-12-buddel1.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2013-11-13-buddel2.md" afterPath="$PROJECT_DIR$/_posts/2013-11-13-buddel2.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2013-12-08-jekyll.md" afterPath="$PROJECT_DIR$/_posts/2013-12-08-jekyll.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2013-12-11-vertikaler-rhythmus.md" afterPath="$PROJECT_DIR$/_posts/2013-12-11-vertikaler-rhythmus.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/about.md" afterPath="$PROJECT_DIR$/about.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/themes/twitter/default.html" afterPath="$PROJECT_DIR$/_includes/themes/twitter/default.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_assets/scss/figure.scss" afterPath="$PROJECT_DIR$/_assets/scss/figure.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_assets/scss/halfdane.scss" afterPath="$PROJECT_DIR$/_assets/scss/halfdane.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_assets/css/jquery.swipeshow.css" afterPath="$PROJECT_DIR$/_assets/css/jquery.swipeshow.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_assets/scss/navi.scss" afterPath="$PROJECT_DIR$/_assets/scss/navi.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/themes/twitter/page.html" afterPath="$PROJECT_DIR$/_includes/themes/twitter/page.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/themes/twitter/post.html" afterPath="$PROJECT_DIR$/_includes/themes/twitter/post.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_assets/scss/postlist.scss" afterPath="$PROJECT_DIR$/_assets/scss/postlist.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_assets/scss/typography.scss" afterPath="$PROJECT_DIR$/_assets/scss/typography.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="halfdane.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,7 +39,7 @@
     <file path="/page.html" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387551823717" ignored="false" />
     <file path="/display_halfdane_baseline.js" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387354110743" ignored="false" />
     <file path="/index.html" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387549446399" ignored="false" />
-    <file path="/postlist.scss" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387552144176" ignored="false" />
+    <file path="/postlist.scss" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387553328826" ignored="false" />
     <file path="/temp.rb" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387374446018" ignored="false" />
     <file path="/2013-11-12-buddel1.md" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387449375109" ignored="false" />
     <file path="/2013-11-13-buddel2.md" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387545313135" ignored="false" />
@@ -149,15 +132,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2013-12-11-vertikaler-rhythmus.md" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/2013-12-11-vertikaler-rhythmus.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="0" selection-start="122" selection-end="122" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="post.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/post.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -185,10 +159,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="figure.scss" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="figure.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_assets/scss/figure.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="90" column="6" selection-start="1560" selection-end="1560" vertical-scroll-proportion="0.39814815">
+            <state line="90" column="6" selection-start="1560" selection-end="1560" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="postlist.scss" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_assets/scss/postlist.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="90" column="18" selection-start="2354" selection-end="2354" vertical-scroll-proportion="0.6944444">
               <folding />
             </state>
           </provider>
@@ -252,13 +235,13 @@
         <option value="$PROJECT_DIR$/_assets/scss/typography.scss" />
         <option value="$PROJECT_DIR$/about.md" />
         <option value="$PROJECT_DIR$/_includes/themes/twitter/page.html" />
-        <option value="$PROJECT_DIR$/_assets/scss/postlist.scss" />
         <option value="$PROJECT_DIR$/_posts/2013-12-11-vertikaler-rhythmus.md" />
         <option value="$PROJECT_DIR$/_posts/2013-12-08-jekyll.md" />
         <option value="$PROJECT_DIR$/_assets/scss/halfdane.scss" />
         <option value="$PROJECT_DIR$/_includes/themes/twitter/post.html" />
         <option value="$PROJECT_DIR$/_posts/2013-11-12-buddel1.md" />
         <option value="$PROJECT_DIR$/_assets/scss/figure.scss" />
+        <option value="$PROJECT_DIR$/_assets/scss/postlist.scss" />
       </list>
     </option>
   </component>
@@ -911,13 +894,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_assets/scss/postlist.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="14" selection-start="1774" selection-end="1774" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2013-12-11-vertikaler-rhythmus.md">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="0" selection-start="122" selection-end="122" vertical-scroll-proportion="0.0">
@@ -983,7 +959,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_assets/scss/figure.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="6" selection-start="1560" selection-end="1560" vertical-scroll-proportion="0.39814815">
+        <state line="90" column="6" selection-start="1560" selection-end="1560" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_assets/scss/postlist.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="90" column="18" selection-start="2354" selection-end="2354" vertical-scroll-proportion="0.6944444">
           <folding />
         </state>
       </provider>

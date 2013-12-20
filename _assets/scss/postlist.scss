@@ -82,10 +82,13 @@
   @media screen and (max-width: rhythm(50, $base-font-size)) {
     @include resize_responsive(1);
     figure {
-      max-height: rhythm(10, $base-font-size);
-      width: 20%;
+      max-width: 20%;
+      height: auto;
       display: inline-block;
       margin: 0;
+    }
+    figure img {
+      height: auto;
     }
     .post .text {
       display: inline-block;
