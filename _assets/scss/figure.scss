@@ -3,13 +3,6 @@ img {
   height: auto;
 }
 
-figure {
-  position: relative;
-  margin: 0 rhythm(1, $base-font-size) 20px 0;
-  height: auto;
-  @include leader(0.2, $base-font-size);
-}
-
 figure.left {
   margin: 0 rhythm(1, $base-font-size) 20px 0;
   float: left;
@@ -27,13 +20,19 @@ figure.p50 {
   max-width: 50%;
 }
 
-figure.cap-left {
+figure {
+  position: relative;
+  margin: 0 rhythm(1, $base-font-size) 20px 0;
+  height: auto;
+  @include leader(0.2, $base-font-size);
+
   figcaption {
     position: absolute;
     background: $black;
     background: rgba(0, 0, 0, 0.70);
     color: white;
-    padding: 10px 20px;
+    padding: 0 20px;
+    margin: 0;
     opacity: 0;
     -webkit-transition: all 0.6s ease;
     -moz-transition: all 0.6s ease;
@@ -71,60 +70,47 @@ figure.cap-left {
   &:hover:before {
     opacity: 0;
   }
+
+  &.cap-left:before {
+    bottom: 10px;
+    left: 10px;
+  }
+
+  &.cap-left figcaption {
+    bottom: 0;
+    left: -30%;
+  }
+
+  &.cap-left:hover figcaption {
+    left: 0;
+  }
 }
 
-.cap-left:before {
-  bottom: 10px;
-  left: 10px;
-}
+.swipeshow {
+  width: auto;
+  max-width: 100%;
+  height: rhythm(10, $base-font-size);
+  width: rhythm(21, $base-font-size);
 
-.cap-left figcaption {
-  bottom: 0;
-  left: -30%;
-}
+  img {
+    width: rhythm(21, $base-font-size);
+  }
 
-.cap-left:hover figcaption {
-  left: 0;
-}
+  .dots {
+    position: absolute;
+    top: rhythm(1, $base-font-size);
+    left: rhythm(1, $base-font-size);
 
-.cap-right:before {
-  bottom: 10px;
-  right: 10px;
-}
+    .dot-item {
+      width: 24px;
+      height: 24px;
+      -webkit-border-radius: 12px;
+      -moz-border-radius: 12px;
+      border-radius: 12px;
+    }
 
-.cap-right figcaption {
-  bottom: 0;
-  right: -30%;
-}
-
-.cap-right:hover figcaption {
-  right: 0;
-}
-
-.cap-top:before {
-  top: 10px;
-  left: 10px;
-}
-
-.cap-top figcaption {
-  left: 0;
-  top: -30%;
-}
-
-.cap-top:hover figcaption {
-  top: 0;
-}
-
-.cap-bot:before {
-  bottom: 10px;
-  left: 10px;
-}
-
-.cap-bot figcaption {
-  left: 0;
-  bottom: -30%;
-}
-
-.cap-bot:hover figcaption {
-  bottom: 0;
+    .dot-item.active {
+      background-color: $nav_bg;
+    }
+  }
 }

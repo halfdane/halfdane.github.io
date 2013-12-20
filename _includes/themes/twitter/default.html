@@ -19,6 +19,7 @@
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <!-- Le styles -->
     {% css_asset_tag global %}
+    - /_assets/css/jquery.swipeshow.css
     - /_assets/scss/halfdane.scss
     - /_assets/css/syntax.css
     {% endcss_asset_tag %}
@@ -31,6 +32,10 @@
       <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
     -->
 
+    <script src='/assets/js/jquery.swipeshow.min.js'></script>
+    <script>$(function() {
+        $(".swipeshow").swipeshow();
+    });</script>
     <!-- atom & rss feed -->
     <link href="{{ BASE_PATH }}{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate"
           title="Sitewide ATOM Feed">

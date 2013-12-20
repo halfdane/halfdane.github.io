@@ -32,8 +32,8 @@ module Jekyll
         @title = ""
       end
 
-      @css += " left" unless (!givenCss.nil? && givenCss =~ /\bleft\b|\bright\b/)
       @css += " cap-left" unless (!givenCss.nil? && givenCss =~ /\bcap-/)
+      @css += " left" unless (!givenCss.nil? && givenCss =~ /\bleft\b|\bright\b/)
       @css += " " + givenCss unless givenCss.nil?
 
       # Config options
@@ -51,7 +51,7 @@ module Jekyll
     end
 
     def render(context)
-      source = "<div><figure class=\"#{@css}\">"
+      source = "<figure class=\"#{@css}\">"
 
       # Retina
       if @config['retina']
@@ -93,10 +93,7 @@ module Jekyll
 
       source += "<figcaption>#{output}</figcaption>" unless (output.to_s == "")
       source += "</figure>"
-
       source += "<div class=\"clearfix\"> </div>" if @css =~ /\bbreak\b/
-      source += "</div>"
-
       source
     end
 

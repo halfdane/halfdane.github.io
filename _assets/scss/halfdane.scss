@@ -37,6 +37,10 @@ a:hover {
   clear: both;
 }
 
+.hidden {
+  visibility: hidden;
+}
+
 /*button*/
 .btn {
   background-color: $col_button_bg;
