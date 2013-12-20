@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf8d26b6-9aac-44de-917c-c8258df2f482" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_assets/scss/postlist.scss" afterPath="$PROJECT_DIR$/_assets/scss/postlist.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_assets/scss/figure.scss" afterPath="$PROJECT_DIR$/_assets/scss/figure.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_assets/css/slideshow-theme.css" afterPath="$PROJECT_DIR$/_assets/css/slideshow-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_assets/scss/typography.scss" afterPath="$PROJECT_DIR$/_assets/scss/typography.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="halfdane.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,7 +34,7 @@
     <file path="/config.rb" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387306027901" ignored="false" />
     <file path="/_config.yml" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387449188209" ignored="false" />
     <file path="/image_tag.rb" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387529140263" ignored="false" />
-    <file path="/figure.scss" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387552885614" ignored="false" />
+    <file path="/figure.scss" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387554627282" ignored="false" />
     <file path="/2013-05-24-tensegrity.md" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387450382965" ignored="false" />
     <file path="/2013-05-29-blender_beginner.md" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387456663037" ignored="false" />
     <file path="/a.dummy" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387550677361" ignored="false" />
@@ -44,7 +47,7 @@
     <file path="/2013-11-12-buddel1.md" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387449375109" ignored="false" />
     <file path="/2013-11-13-buddel2.md" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387545313135" ignored="false" />
     <file path="/2013-05-23-sshjump.md" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387450279528" ignored="false" />
-    <file path="/slideshow-theme.css" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387544135913" ignored="false" />
+    <file path="/slideshow-theme.css" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387554218445" ignored="false" />
     <file path="/gallery_tag.rb" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387545350131" ignored="false" />
     <file path="/navi.scss" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387550954092" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -105,33 +108,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="halfdane.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_assets/scss/halfdane.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="1" selection-start="368" selection-end="368" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2013-12-08-jekyll.md" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/2013-12-08-jekyll.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="14" selection-start="371" selection-end="371" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="image_tag.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_plugins/image_tag.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="96" column="12" selection-start="3483" selection-end="3483" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="post.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/post.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -159,19 +135,46 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="figure.scss" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="figure.scss" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_assets/scss/figure.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="90" column="6" selection-start="1560" selection-end="1560" vertical-scroll-proportion="0.0">
+            <state line="29" column="16" selection-start="517" selection-end="517" vertical-scroll-proportion="0.30232558">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="postlist.scss" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="typography.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_assets/scss/typography.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="65" column="15" selection-start="1686" selection-end="1686" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="slideshow-theme.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_assets/css/slideshow-theme.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="96" column="18" selection-start="1854" selection-end="1854" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="postlist.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_assets/scss/postlist.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="90" column="18" selection-start="2354" selection-end="2354" vertical-scroll-proportion="0.6944444">
+            <state line="90" column="18" selection-start="2354" selection-end="2354" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="about.md" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/about.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="5" selection-start="879" selection-end="879" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -226,22 +229,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/_assets/css/slideshow-theme.css" />
         <option value="$PROJECT_DIR$/_plugins/gallery_tag.rb" />
         <option value="$PROJECT_DIR$/_posts/2013-11-13-buddel2.md" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/_includes/themes/twitter/default.html" />
         <option value="$PROJECT_DIR$/_assets/scss/navi.scss" />
-        <option value="$PROJECT_DIR$/_assets/scss/typography.scss" />
-        <option value="$PROJECT_DIR$/about.md" />
         <option value="$PROJECT_DIR$/_includes/themes/twitter/page.html" />
         <option value="$PROJECT_DIR$/_posts/2013-12-11-vertikaler-rhythmus.md" />
         <option value="$PROJECT_DIR$/_posts/2013-12-08-jekyll.md" />
         <option value="$PROJECT_DIR$/_assets/scss/halfdane.scss" />
         <option value="$PROJECT_DIR$/_includes/themes/twitter/post.html" />
         <option value="$PROJECT_DIR$/_posts/2013-11-12-buddel1.md" />
-        <option value="$PROJECT_DIR$/_assets/scss/figure.scss" />
         <option value="$PROJECT_DIR$/_assets/scss/postlist.scss" />
+        <option value="$PROJECT_DIR$/about.md" />
+        <option value="$PROJECT_DIR$/_assets/css/slideshow-theme.css" />
+        <option value="$PROJECT_DIR$/_assets/scss/typography.scss" />
+        <option value="$PROJECT_DIR$/_assets/scss/figure.scss" />
       </list>
     </option>
   </component>
@@ -774,7 +777,7 @@
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32914925" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.09205021" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -788,7 +791,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19870968" sideWeight="0.67085075" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19870968" sideWeight="0.9079498" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17015342" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -859,30 +862,9 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="3" selection-start="45" selection-end="45" vertical-scroll-proportion="-2.0689654">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_config.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="30" selection-start="580" selection-end="580" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_assets/scss/typography.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="8" selection-start="1645" selection-end="1645" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/about.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="65" selection-start="426" selection-end="426" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -957,16 +939,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_assets/scss/figure.scss">
+    <entry file="file://$PROJECT_DIR$/_assets/scss/postlist.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="6" selection-start="1560" selection-end="1560" vertical-scroll-proportion="0.0">
+        <state line="90" column="18" selection-start="2354" selection-end="2354" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_assets/scss/postlist.scss">
+    <entry file="file://$PROJECT_DIR$/about.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="18" selection-start="2354" selection-end="2354" vertical-scroll-proportion="0.6944444">
+        <state line="22" column="5" selection-start="879" selection-end="879" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_assets/css/slideshow-theme.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="96" column="18" selection-start="1854" selection-end="1854" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_assets/scss/typography.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="15" selection-start="1686" selection-end="1686" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_assets/scss/figure.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="16" selection-start="517" selection-end="517" vertical-scroll-proportion="0.30232558">
           <folding />
         </state>
       </provider>

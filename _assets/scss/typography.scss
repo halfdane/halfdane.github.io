@@ -63,7 +63,7 @@ h4, h6 {
   text-align: center;
 }
 
-p, blockquote, figcaption, ul, pre, code {
+p, blockquote, ul, pre, code {
   @include font(1, 0);
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
