@@ -19,7 +19,8 @@
 
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <!-- Le styles -->
-    <link href='/assets/halfdane.css' rel='stylesheet' type='text/css' />
+    <link href='/assets/jquery.swipeshow.css' rel='stylesheet' type='text/css' />
+<link href='/assets/halfdane.css' rel='stylesheet' type='text/css' />
 <link href='/assets/syntax.css' rel='stylesheet' type='text/css' />
 
 
@@ -31,6 +32,10 @@
       <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
     -->
 
+    <script src='/assets/js/jquery.swipeshow.min.js'></script>
+    <script>$(function() {
+        $(".swipeshow").swipeshow();
+    });</script>
     <!-- atom & rss feed -->
     <link href="/atom.xml" type="application/atom+xml" rel="alternate"
           title="Sitewide ATOM Feed">
@@ -72,17 +77,17 @@
   
     
       
+    
+  
+    
+      
+    
+  
+    
+      
       	
       	<li><a href="/about.html">About</a></li>
       	
-      
-    
-  
-    
-      
-    
-  
-    
       
     
   
@@ -126,10 +131,10 @@
         <small>08 December 2013</small>
     </p>
     <div class="content">
-        <div><figure class=" right cap-left p50"><img src="/assets/img/vogel.by.anira..JPG" alt="Nice Bird"><figcaption><p>Das Bild habe ich bei
+        <figure class=" right cap-left p50"><img src="/assets/img/vogel.by.anira..JPG" alt="Nice Bird"><figcaption><p>Das Bild habe ich bei
 <a href="http://www.the-inspiring-life.com/2013/01/ein-logo-fur-meinen-blog.html">the inspiring live</a>
 gefunden.</p>
-</figcaption></figure></div>
+</figcaption></figure>
 
 <p>Eine der Sachen, die ich bei Markdown nicht so gut gelungen finde sind Bilder, insbesondere mit Bildunterschriften. Dafür gibt es ja seit HTML5 das <code>figure</code>-Tag, das zusammen mit <code>img</code> und <code>figcaption</code> genau das macht, was Blogger und Designer seit Jahrzehnten nachzubauen versuchen. Dank der Liquid-Template-Sprache, die ich hier einsetzen kann, muss mich das nicht stören, ich kann mit einem einfachen Include selber Bilder einbinden (allerdings vor allem technisch, nicht schön - bin schließlich kein Designer :):</p>
 
@@ -161,7 +166,7 @@ gefunden.</p>
 <p>Fertig. Wenn ich keine Bildunterschrift will, lasse ich das Attribut einfach weg:</p>
 <div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"> <span class="p">{</span><span class="o">%</span> <span class="kp">include</span> <span class="n">image</span> <span class="n">img</span><span class="o">=</span><span class="s1">&#39;mug.jpg&#39;</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;bird&quot;</span> <span class="o">%</span><span class="p">}</span>
 </code></pre></div>
-<div><figure class=" left cap-left"><img src="/assets/img/mug.jpg" alt="mug"></figure></div>
+<figure class=" cap-left left"><img src="/assets/img/mug.jpg" alt="mug"></figure>
 
     </div>
 </div>

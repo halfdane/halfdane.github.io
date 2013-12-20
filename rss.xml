@@ -5,8 +5,8 @@
         <description>Canned Nerd - Halfdane</description>
         <link>http://halfdane.github.io</link>
         <link>http://halfdane.github.io</link>
-        <lastBuildDate>2013-12-19T15:08:10+00:00</lastBuildDate>
-        <pubDate>2013-12-19T15:08:10+00:00</pubDate>
+        <lastBuildDate>2013-12-20T09:39:35+00:00</lastBuildDate>
+        <pubDate>2013-12-20T09:39:35+00:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -14,8 +14,8 @@
                 <title>Vertikaler Rhythmus</title>
                 <description>&lt;p&gt;Was von vielen kompetenten Designern offenbar für sehr wichtig gehalten wird, ist der vertikale Rhythmus, also das Ausrichten der Schriftzeilen (und der anderen Elemente) an einem konsistenten Raster, nämlich genau den Schrifzeilen eines regulären Absatzes. Dazu muss man so crazy Dinge machen wie die Baseline berechnen (gewünschte Höhe der Schrift durch Höhe der Zeilen teilen), für Überschriften eine Skalierung nach dem goldenen Schnitt berechnen (und zwar für jedes Überschriften-Level einzeln) und einen unteren Margin an Überschriften- und Absatz-Elemente hängen, der genau so abgepasst ist, dass die nächste Schriftzeile ins Raster passt.&lt;/p&gt;
 
-&lt;div&gt;&lt;figure class=&quot; left cap-left&quot;&gt;&lt;img src=&quot;/assets/img/baseline.png&quot; alt=&quot;Seite mit baseline&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Ausschnitt der Seite im alten Design - die Baseline ist sichbar.&lt;/p&gt;
-&lt;/figcaption&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;figure class=&quot; cap-left left&quot;&gt;&lt;img src=&quot;/assets/img/baseline.png&quot; alt=&quot;Seite mit baseline&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Ausschnitt der Seite im alten Design - die Baseline ist sichbar.&lt;/p&gt;
+&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Dazu kommt, dass ich das Raster (und die Schriften) unbedingt in &lt;code&gt;em&lt;/code&gt; haben will, damit
 es gut (und mit &lt;a href=&quot;http://joshnh.com/2011/07/26/are-you-using-ems-with-your-media-queries/&quot;&gt;wenig Aufwand&lt;/a&gt;)
@@ -133,10 +133,10 @@ frei bleibt:&lt;/p&gt;
 
         <item>
                 <title>Jekyll, Markdown &amp; Bilder</title>
-                <description>&lt;div&gt;&lt;figure class=&quot; right cap-left p50&quot;&gt;&lt;img src=&quot;/assets/img/vogel.by.anira..JPG&quot; alt=&quot;Nice Bird&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Das Bild habe ich bei
+                <description>&lt;figure class=&quot; right cap-left p50&quot;&gt;&lt;img src=&quot;/assets/img/vogel.by.anira..JPG&quot; alt=&quot;Nice Bird&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Das Bild habe ich bei
 &lt;a href=&quot;http://www.the-inspiring-life.com/2013/01/ein-logo-fur-meinen-blog.html&quot;&gt;the inspiring live&lt;/a&gt;
 gefunden.&lt;/p&gt;
-&lt;/figcaption&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Eine der Sachen, die ich bei Markdown nicht so gut gelungen finde sind Bilder, insbesondere mit Bildunterschriften. Dafür gibt es ja seit HTML5 das &lt;code&gt;figure&lt;/code&gt;-Tag, das zusammen mit &lt;code&gt;img&lt;/code&gt; und &lt;code&gt;figcaption&lt;/code&gt; genau das macht, was Blogger und Designer seit Jahrzehnten nachzubauen versuchen. Dank der Liquid-Template-Sprache, die ich hier einsetzen kann, muss mich das nicht stören, ich kann mit einem einfachen Include selber Bilder einbinden (allerdings vor allem technisch, nicht schön - bin schließlich kein Designer :):&lt;/p&gt;
 
@@ -168,7 +168,7 @@ gefunden.&lt;/p&gt;
 &lt;p&gt;Fertig. Wenn ich keine Bildunterschrift will, lasse ich das Attribut einfach weg:&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby language-ruby&quot; data-lang=&quot;ruby&quot;&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;image&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;img&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;mug.jpg&amp;#39;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;bird&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;div&gt;&lt;figure class=&quot; left cap-left&quot;&gt;&lt;img src=&quot;/assets/img/mug.jpg&quot; alt=&quot;mug&quot;&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;figure class=&quot; cap-left left&quot;&gt;&lt;img src=&quot;/assets/img/mug.jpg&quot; alt=&quot;mug&quot;&gt;&lt;/figure&gt;
 </description>
                 <link>http://halfdane.github.io/2013/12/08/jekyll</link>
                 <guid>http://halfdane.github.io/2013/12/08/jekyll</guid>
@@ -179,32 +179,38 @@ gefunden.&lt;/p&gt;
                 <title>Buddelschiff (2: Takeln)</title>
                 <description>&lt;p&gt;Beim Anbringen der Takelage (die &lt;del&gt;Taue&lt;/del&gt; Fitzelfäden, mit denen Masten und Segel gehalten werden) habe ich mich ein wenig mitreißen lassen – jeder Mast ist mit drei bis fünf der Dinger am Bug befestigt und die Rahen (an die die Segel gehängt werden) noch mit jeweils zwei – offenbar mag ich so kleine Tüddelsachen :)&lt;/p&gt;
 
-&lt;div&gt;&lt;figure class=&quot; left cap-left break&quot;&gt;&lt;img src=&quot;/assets/img/buddel4.jpg&quot; alt=&quot;Aufgetakelt&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Fertig getakelt und mit aufgerichteten Masten - fesch.&lt;/p&gt;
-&lt;/figcaption&gt;&lt;/figure&gt;&lt;div class=&quot;clearfix&quot;&gt; &lt;/div&gt;&lt;/div&gt;
+&lt;figure class=&quot; cap-left left break&quot;&gt;&lt;img src=&quot;/assets/img/buddel4.jpg&quot; alt=&quot;Aufgetakelt&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Fertig getakelt und mit aufgerichteten Masten - fesch. Beim Anbringen der Takelage (die &lt;del&gt;Taue&lt;/del&gt; Fitzelfäden, mit denen Masten und Segel gehalten werden) habe ich mich ein wenig mitreißen lassen – jeder Mast ist mit drei bis fünf der Dinger am Bug befestigt und die Rahen (an die die Segel gehängt werden) noch mit jeweils zwei – offenbar mag ich so kleine Tüddelsachen :)&lt;/p&gt;
+&lt;/figcaption&gt;&lt;/figure&gt;&lt;div class=&quot;clearfix&quot;&gt; &lt;/div&gt;
 
-&lt;div&gt;&lt;figure class=&quot; left cap-left break&quot;&gt;&lt;img src=&quot;/assets/img/buddel5.jpg&quot; alt=&quot;Aufgetakelt&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Das Scharnier des Masts ist aus Draht – hier die Unterseite. War allerdings etwas zu dick, deswegen richten die Masten sich nur schwergängig auf. Muss ich nochmal überdenken :)&lt;/p&gt;
-&lt;/figcaption&gt;&lt;/figure&gt;&lt;div class=&quot;clearfix&quot;&gt; &lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;swipeshow&quot;&gt;
+&lt;div class=&quot;slides&quot;&gt;
+&lt;figure class=&quot; cap-left left slide&quot;&gt;&lt;img src=&quot;/assets/img/buddel5.jpg&quot; alt=&quot;Aufgetakelt&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Das Scharnier des Masts ist aus Draht – hier die Unterseite. War allerdings etwas zu dick, deswegen richten die Masten sich nur schwergängig auf. Muss ich nochmal überdenken :)&lt;/p&gt;
+&lt;/figcaption&gt;&lt;/figure&gt;
 
-&lt;div&gt;&lt;figure class=&quot; left cap-left break&quot;&gt;&lt;img src=&quot;/assets/img/buddel6.jpg&quot; alt=&quot;Stagen&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Stage, an denen man die Masten aufrichten kann - einer für den Hauptmast (vorne) und einer für den Besanmast (hinten).
+&lt;figure class=&quot; cap-left left slide&quot;&gt;&lt;img src=&quot;/assets/img/buddel6.jpg&quot; alt=&quot;Stagen&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Stage, an denen man die Masten aufrichten kann - einer für den Hauptmast (vorne) und einer für den Besanmast (hinten).
 Die Fäden gehen &lt;em&gt;durch&lt;/em&gt; den Klüverbaum :)&lt;/p&gt;
-&lt;/figcaption&gt;&lt;/figure&gt;&lt;div class=&quot;clearfix&quot;&gt; &lt;/div&gt;&lt;/div&gt;
+&lt;/figcaption&gt;&lt;/figure&gt;
 
-&lt;div&gt;&lt;figure class=&quot; left cap-left break&quot;&gt;&lt;img src=&quot;/assets/img/buddel7.jpg&quot; alt=&quot;Wanten&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Der Anfang der Wanten, mit denen der Mast seitlich befestigt wird.&lt;/p&gt;
-&lt;/figcaption&gt;&lt;/figure&gt;&lt;div class=&quot;clearfix&quot;&gt; &lt;/div&gt;&lt;/div&gt;
+&lt;figure class=&quot; cap-left left slide&quot;&gt;&lt;img src=&quot;/assets/img/buddel7.jpg&quot; alt=&quot;Wanten&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Der Anfang der Wanten, mit denen der Mast seitlich befestigt wird.&lt;/p&gt;
+&lt;/figcaption&gt;&lt;/figure&gt;
 
-&lt;div&gt;&lt;figure class=&quot; left cap-left break&quot;&gt;&lt;img src=&quot;/assets/img/buddel8.jpg&quot; alt=&quot;Stage geht durch Hauptmast&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Viel zu viele Wanten am Hauptmast - aber man kann gut sehen, wie die Stage für den Besanmast durch den Hauptmast durchgeht.&lt;/p&gt;
-&lt;/figcaption&gt;&lt;/figure&gt;&lt;div class=&quot;clearfix&quot;&gt; &lt;/div&gt;&lt;/div&gt;
+&lt;figure class=&quot; cap-left left slide&quot;&gt;&lt;img src=&quot;/assets/img/buddel8.jpg&quot; alt=&quot;Stage geht durch Hauptmast&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Viel zu viele Wanten am Hauptmast - aber man kann gut sehen, wie die Stage für den Besanmast durch den Hauptmast durchgeht.&lt;/p&gt;
+&lt;/figcaption&gt;&lt;/figure&gt;
 
-&lt;div&gt;&lt;figure class=&quot; left cap-left break&quot;&gt;&lt;img src=&quot;/assets/img/buddel9.jpg&quot; alt=&quot;Galeonsfigur Detail&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Weils grade gut passte (und weil ich wissen wollte, ob es geht) habe ich noch eine microkleine Galeonsfigur in einen Zahnstocher geschnitzt. Ja, ich mag diese Tüddelsachen!&lt;/p&gt;
-&lt;/figcaption&gt;&lt;/figure&gt;&lt;div class=&quot;clearfix&quot;&gt; &lt;/div&gt;&lt;/div&gt;
+&lt;figure class=&quot; cap-left left slide&quot;&gt;&lt;img src=&quot;/assets/img/buddel9.jpg&quot; alt=&quot;Galeonsfigur Detail&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Weils grade gut passte (und weil ich wissen wollte, ob es geht) habe ich noch eine microkleine Galeonsfigur in einen Zahnstocher geschnitzt. Ja, ich mag diese Tüddelsachen!&lt;/p&gt;
+&lt;/figcaption&gt;&lt;/figure&gt;
 
-&lt;div&gt;&lt;figure class=&quot; left cap-left break&quot;&gt;&lt;img src=&quot;/assets/img/buddel10.jpg&quot; alt=&quot;Galeonsfigur&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Der ganze Zahnstocher mit Galeonsfigur ganz oben.&lt;/p&gt;
-&lt;/figcaption&gt;&lt;/figure&gt;&lt;div class=&quot;clearfix&quot;&gt; &lt;/div&gt;&lt;/div&gt;
+&lt;figure class=&quot; cap-left left slide&quot;&gt;&lt;img src=&quot;/assets/img/buddel10.jpg&quot; alt=&quot;Galeonsfigur&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Der ganze Zahnstocher mit Galeonsfigur ganz oben.&lt;/p&gt;
+&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;/div&gt;
+&lt;div class='dots'&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/p&gt;
 
 &lt;p&gt;Ich habe mich dabei übrigens grob am Takelplan der Rickmer Rickmers orientiert – nur mit viel weniger Segeln und Masten. Und kleiner.&lt;/p&gt;
 
-&lt;div&gt;&lt;figure class=&quot; left cap-left break&quot;&gt;&lt;img src=&quot;http://www.rickmer-rickmers.de/uploads/RTEmagicC_takelplan-rickmer-rickmers_03.gif.gif&quot; alt=&quot;Takelplan der Rickmer Rickmers&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Takelplan der &lt;a href=&quot;http://www.rickmer-rickmers.de/museum/seitenriss/&quot;&gt;Rickmer Rickmers&lt;/a&gt;&lt;/p&gt;
-&lt;/figcaption&gt;&lt;/figure&gt;&lt;div class=&quot;clearfix&quot;&gt; &lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;figure class=&quot; cap-left left break&quot;&gt;&lt;img src=&quot;http://www.rickmer-rickmers.de/uploads/RTEmagicC_takelplan-rickmer-rickmers_03.gif.gif&quot; alt=&quot;Takelplan der Rickmer Rickmers&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Takelplan der &lt;a href=&quot;http://www.rickmer-rickmers.de/museum/seitenriss/&quot;&gt;Rickmer Rickmers&lt;/a&gt;&lt;/p&gt;
+&lt;/figcaption&gt;&lt;/figure&gt;&lt;div class=&quot;clearfix&quot;&gt; &lt;/div&gt;&lt;/p&gt;
 </description>
                 <link>http://halfdane.github.io/2013/11/13/buddel2</link>
                 <guid>http://halfdane.github.io/2013/11/13/buddel2</guid>
@@ -213,8 +219,8 @@ Die Fäden gehen &lt;em&gt;durch&lt;/em&gt; den Klüverbaum :)&lt;/p&gt;
 
         <item>
                 <title>Buddelschiff (1: Schiffsrumpf und Masten)</title>
-                <description>&lt;div&gt;&lt;figure class=&quot; cap-left right p30&quot;&gt;&lt;img src=&quot;http://upload.wikimedia.org/wikipedia/commons/b/b4/Rickmer_Rickmers_Hafen_Hamburg.jpg&quot; alt=&quot;Rickmer Rickmers&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Rickmer Rickmers im Hafen von Hamburg (&lt;a href=&quot;http://commons.wikimedia.org&quot;&gt;Wikipedia&lt;/a&gt;)&lt;/p&gt;
-&lt;/figcaption&gt;&lt;/figure&gt;&lt;/div&gt;
+                <description>&lt;figure class=&quot; cap-left right p30&quot;&gt;&lt;img src=&quot;http://upload.wikimedia.org/wikipedia/commons/b/b4/Rickmer_Rickmers_Hafen_Hamburg.jpg&quot; alt=&quot;Rickmer Rickmers&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Rickmer Rickmers im Hafen von Hamburg (&lt;a href=&quot;http://commons.wikimedia.org&quot;&gt;Wikipedia&lt;/a&gt;)&lt;/p&gt;
+&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Ach nee, die lieben...
 Ich habe kürzlich von R., S. und H. eine schöne Fläche Whisky geschenkt bekommen, der auch wirklich sehr lecker ist. Überreicht wurde mit die Flasche mit der Maßgabe, da sollte ein Buddelschiff rein, und zwar nicht so’n lüttes, sondern ein Dreimaster! Kann doch nicht so schwer sein – wird ja ganz klein.&lt;/p&gt;
@@ -225,20 +231,20 @@ Ich habe kürzlich von R., S. und H. eine schöne Fläche Whisky geschenkt bekom
 
 &lt;p&gt;Ich baue jetzt erstmal einen Prototypen und übe ein bisschen: mit einer Laubsäge habe ich einen Rumpf aus Balsaholz gesägt, in der Hoffnung, dass man es gut formen kann, weil es so weich ist. Für meinen Geschmack sogar etwas zu weich, weil beim Versuch daran herum zu schnitzen leicht Risse in der Oberfläche entstehen und das Ganze etwas roh wirkt. Also werde ich für den richtigen Rumpf wohl doch kein Balsa nehmen.&lt;/p&gt;
 
-&lt;div&gt;&lt;figure class=&quot; left cap-left break&quot;&gt;&lt;img src=&quot;/assets/img/buddel1.jpg&quot; alt=&quot;Der Rumpf des Buddelschiffes&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Für den Testbau  reicht ein Zweimaster frei nach Schnauze.&lt;/p&gt;
-&lt;/figcaption&gt;&lt;/figure&gt;&lt;div class=&quot;clearfix&quot;&gt; &lt;/div&gt;&lt;/div&gt;
+&lt;figure class=&quot; cap-left left break&quot;&gt;&lt;img src=&quot;/assets/img/buddel1.jpg&quot; alt=&quot;Der Rumpf des Buddelschiffes&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Für den Testbau  reicht ein Zweimaster frei nach Schnauze.&lt;/p&gt;
+&lt;/figcaption&gt;&lt;/figure&gt;&lt;div class=&quot;clearfix&quot;&gt; &lt;/div&gt;
 
-&lt;p&gt;Am Hauptmast hängen die Rahen als Querbalken und daran werden dann letztlich die Segel befestigt. Ich gebe mir noch keine große Mühe, das Holz zu formen oder die Zahnstocher auf die richtige Länge zu bringen - ich nehm’s einfach wie es kommt.&lt;/p&gt;
+Am Hauptmast hängen die Rahen als Querbalken und daran werden dann letztlich die Segel befestigt. Ich gebe mir noch keine große Mühe, das Holz zu formen oder die Zahnstocher auf die richtige Länge zu bringen - ich nehm’s einfach wie es kommt.
 
-&lt;div&gt;&lt;figure class=&quot; left cap-left break&quot;&gt;&lt;img src=&quot;/assets/img/buddel2.jpg&quot; alt=&quot;Schaschlikspieß mit Zahnstochern&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Schaschlikspieß mit Zahnstochern:
+&lt;figure class=&quot; cap-left left break&quot;&gt;&lt;img src=&quot;/assets/img/buddel2.jpg&quot; alt=&quot;Schaschlikspieß mit Zahnstochern&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Schaschlikspieß mit Zahnstochern:
 Mit dem frisch bestellten 0,5mm Bohrer sind die Löcher in den Hauptmast und die Rahen sogar ganz gut zu machen.&lt;/p&gt;
-&lt;/figcaption&gt;&lt;/figure&gt;&lt;div class=&quot;clearfix&quot;&gt; &lt;/div&gt;&lt;/div&gt;
+&lt;/figcaption&gt;&lt;/figure&gt;&lt;div class=&quot;clearfix&quot;&gt; &lt;/div&gt;
 
-&lt;p&gt;Am hinteren Mast (dem Besan) wollte ich gerne einen Gaffel (der obere schräge Balken) und einen Baum (der untere waagerechte Balken) haben, weil das die Rickmer Rickmers auch hat.&lt;/p&gt;
+Am hinteren Mast (dem Besan) wollte ich gerne einen Gaffel (der obere schräge Balken) und einen Baum (der untere waagerechte Balken) haben, weil das die Rickmer Rickmers auch hat.
 
-&lt;div&gt;&lt;figure class=&quot; left cap-left whatever&quot;&gt;&lt;img src=&quot;/assets/img/buddel3.jpg&quot; alt=&quot;Der hintere Mast mit Gaffel&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Schaschlikspieß mit Zahnstochern:
+&lt;figure class=&quot; cap-left left whatever&quot;&gt;&lt;img src=&quot;/assets/img/buddel3.jpg&quot; alt=&quot;Der hintere Mast mit Gaffel&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Schaschlikspieß mit Zahnstochern:
 Der hintere Mast mit Gaffel. Die Befestigung des Baumes wird sich später als Problem herausstellen.&lt;/p&gt;
-&lt;/figcaption&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Man kann gut die weiteren Löcher im Mast erkennen, mit denen er einerseits am Schiffsrumpf befestigt werden wird und andererseits aufgerichtet werden kann. Der Faden, mit dem der Gaffel und der Baum in Position gehalten werden, ist schon dran.&lt;/p&gt;
 
@@ -256,8 +262,8 @@ Der hintere Mast mit Gaffel. Die Befestigung des Baumes wird sich später als Pr
                 <description>&lt;p&gt;Ich hätte es eigentlich wissen müssen: häkeln ist echt langweilig! Dummerweise kam ich nun nicht drumherum.
 Aufgrund von etwas almost completely, but not quite, unlike einer Kneipenwette. Es fing ganz spaßig an: ich kann mich auch gut erinnern, das ich Luftmaschen in der 3. Klasse auch schon mochte, aber nie so recht darüber hinaus kam.&lt;/p&gt;
 
-&lt;div&gt;&lt;figure class=&quot; right cap-left&quot;&gt;&lt;img src=&quot;/assets/img/space1.jpg&quot; alt=&quot;Detailansicht&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Und damit ich nicht auf die Idee komme, nochmal mit so etwas anzufangen, noch eine besonders langweilige Detailansicht.&lt;/p&gt;
-&lt;/figcaption&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;figure class=&quot; right cap-left&quot;&gt;&lt;img src=&quot;/assets/img/space1.jpg&quot; alt=&quot;Detailansicht&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Und damit ich nicht auf die Idee komme, nochmal mit so etwas anzufangen, noch eine besonders langweilige Detailansicht.&lt;/p&gt;
+&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Aber das sollte sich diesmal ändern, schließlich wollte ich auch keine Topflappen oder ähnliche Kinkerlitzchen häkeln, sondern eine Decke – und zwar eine Männerdecke, d.h.&lt;/p&gt;
 
@@ -273,17 +279,17 @@ Aufgrund von etwas almost completely, but not quite, unlike einer Kneipenwette. 
 &lt;p&gt;Groß halt. Etwa einsfuffzig mal einsachzig? Abgemacht.&lt;/p&gt;
 
 &lt;p&gt;Also Luftmaschen sind immer noch nicht schwer:
-&lt;div&gt;&lt;figure class=&quot; left cap-left break&quot;&gt;&lt;img src=&quot;http://www.labbe.de/zzzebra/handarbeiten/haekeln_luftmaschen1.gif&quot; alt=&quot;Luftmaschen&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Beispielhaft bei &lt;a href=&quot;http://www.labbe.de&quot;&gt;labbe.de&lt;/a&gt;&lt;/p&gt;
-&lt;/figcaption&gt;&lt;/figure&gt;&lt;div class=&quot;clearfix&quot;&gt; &lt;/div&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;figure class=&quot; cap-left left break&quot;&gt;&lt;img src=&quot;http://www.labbe.de/zzzebra/handarbeiten/haekeln_luftmaschen1.gif&quot; alt=&quot;Luftmaschen&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Beispielhaft bei &lt;a href=&quot;http://www.labbe.de&quot;&gt;labbe.de&lt;/a&gt;&lt;/p&gt;
+&lt;/figcaption&gt;&lt;/figure&gt;&lt;div class=&quot;clearfix&quot;&gt; &lt;/div&gt;&lt;/p&gt;
 
 &lt;p&gt;Stäbchen fand ich schon schwieriger:
-&lt;div&gt;&lt;figure class=&quot; left cap-left break&quot;&gt;&lt;img src=&quot;http://www.labbe.de/zzzebra/handarbeiten/haekeln_staebchen2.gif&quot; alt=&quot;Luftmaschen&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Wieder &lt;a href=&quot;http://www.labbe.de&quot;&gt;labbe.de&lt;/a&gt;&lt;/p&gt;
-&lt;/figcaption&gt;&lt;/figure&gt;&lt;div class=&quot;clearfix&quot;&gt; &lt;/div&gt;&lt;/div&gt;
+&lt;figure class=&quot; cap-left left break&quot;&gt;&lt;img src=&quot;http://www.labbe.de/zzzebra/handarbeiten/haekeln_staebchen2.gif&quot; alt=&quot;Luftmaschen&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Wieder &lt;a href=&quot;http://www.labbe.de&quot;&gt;labbe.de&lt;/a&gt;&lt;/p&gt;
+&lt;/figcaption&gt;&lt;/figure&gt;&lt;div class=&quot;clearfix&quot;&gt; &lt;/div&gt;
 Um Wellen zu häkeln, ist es das vermutlich das einfachste, in regelmäßigen Abständen
 Maschen zu- und abzunehmen, zum Beispiel so:&lt;/p&gt;
 
-&lt;div&gt;&lt;figure class=&quot; left cap-left&quot;&gt;&lt;img src=&quot;/assets/img/space2.jpg&quot; alt=&quot;Wellen&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Anleitungen wie Wellen gehäkelt werden, gibt es dutzendfach im Internet, aber das hier ist meine :)&lt;/p&gt;
-&lt;/figcaption&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;figure class=&quot; cap-left left&quot;&gt;&lt;img src=&quot;/assets/img/space2.jpg&quot; alt=&quot;Wellen&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Anleitungen wie Wellen gehäkelt werden, gibt es dutzendfach im Internet, aber das hier ist meine :)&lt;/p&gt;
+&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Vier Stäbchen, zwei mal zwei Maschen abnehmen, vier Stäbchen, zwei mal zwei Maschen zunehmen. Immer und immer wieder.&lt;/p&gt;
 
@@ -306,13 +312,13 @@ Meine Güte, worauf hatte ich mich eingelassen: bei dem Tempo würde mir bis Mit
 
 &lt;p&gt;Gut zwei Monate später, habe ich 42 (:) Knäuel Wolle verhäkelt und gut zwei Kilogramm Decke produziert:&lt;/p&gt;
 
-&lt;div&gt;&lt;figure class=&quot; left cap-left break&quot;&gt;&lt;img src=&quot;/assets/img/space3.jpg&quot; alt=&quot;Unendliche Weiten&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Jeder Farbblock etwa 5-6 Reihen, zu je einer halben bis einer ganzen Stunde macht: EINE EWIGKEIT!&lt;/p&gt;
-&lt;/figcaption&gt;&lt;/figure&gt;&lt;div class=&quot;clearfix&quot;&gt; &lt;/div&gt;&lt;/div&gt;
+&lt;figure class=&quot; cap-left left break&quot;&gt;&lt;img src=&quot;/assets/img/space3.jpg&quot; alt=&quot;Unendliche Weiten&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Jeder Farbblock etwa 5-6 Reihen, zu je einer halben bis einer ganzen Stunde macht: EINE EWIGKEIT!&lt;/p&gt;
+&lt;/figcaption&gt;&lt;/figure&gt;&lt;div class=&quot;clearfix&quot;&gt; &lt;/div&gt;
 
-&lt;p&gt;Dank N. ist das Ergebnis nicht einfarbig olivgrün, sondern richtig schön. Und K. hat mich auf die Idee gebracht, dass man nicht nur auf Internetseiten und Programmen Eastereggs verstecken kann:&lt;/p&gt;
+Dank N. ist das Ergebnis nicht einfarbig olivgrün, sondern richtig schön. Und K. hat mich auf die Idee gebracht, dass man nicht nur auf Internetseiten und Programmen Eastereggs verstecken kann:
 
-&lt;div&gt;&lt;figure class=&quot; left cap-left&quot;&gt;&lt;img src=&quot;/assets/img/space4.jpg&quot; alt=&quot;Easteregg&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Up-Up-Down-Down-Left-Right-Left-Right-B-A&lt;/p&gt;
-&lt;/figcaption&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;figure class=&quot; cap-left left&quot;&gt;&lt;img src=&quot;/assets/img/space4.jpg&quot; alt=&quot;Easteregg&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Up-Up-Down-Down-Left-Right-Left-Right-B-A&lt;/p&gt;
+&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Statt des Wellenmusters habe ich hier einfach nur Stäbchen geradeaus gehäkelt und immer zwei als ein Pixel benutzt. Die jeweils andere Farbe läuft untenrum zwischen den Schlaufen fast unsichtbar mit. Keine Ahnung, ob man das so macht, aber es scheint zu funktionieren :-)&lt;/p&gt;
 
@@ -327,15 +333,15 @@ Meine Güte, worauf hatte ich mich eingelassen: bei dem Tempo würde mir bis Mit
                 <title>Irisblende^2</title>
                 <description>&lt;p&gt;Diese &lt;a href=&quot;http://www.instructables.com/id/Cardboard-Aperture-v2/&quot;&gt;Blende&lt;/a&gt; lässt sich recht einfach nachbauen und nachdem ich letzte Woche einen größeren Prototypen aus Wellpappe gemacht habe und alles gut funktioniert hat, habe ich mich heute an eine verkleinerte Version gemacht.&lt;/p&gt;
 
-&lt;div&gt;&lt;figure class=&quot; left cap-left&quot;&gt;&lt;img src=&quot;/assets/img/iris1.jpg&quot; alt=&quot;Einzelteile der Irisblende&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Blenden-Einzelteile und fertige Irisblende&lt;/p&gt;
-&lt;/figcaption&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;figure class=&quot; cap-left left&quot;&gt;&lt;img src=&quot;/assets/img/iris1.jpg&quot; alt=&quot;Einzelteile der Irisblende&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Blenden-Einzelteile und fertige Irisblende&lt;/p&gt;
+&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Eine fertige Blende auf der rechten Seite, zusammen mit dem Werkzeug sowie den Einzelteilen für eine weitere. Als Scharniere für die rippenförmigen Lamellen habe ich Reißzwecken benutzt und mit einem Seitenschneider abgeknipst, damit man sich nicht verletzt.&lt;/p&gt;
 
 &lt;p class=&quot;clearfix&quot;&gt;Denn wenn man zwei kleine Blenden hat, bleibt einem ja gar nichts anderes übrig, als eine nerdige Steampunk-Brille daraus zu machen :&lt;/p&gt;
 
-&lt;div&gt;&lt;figure class=&quot; left cap-left&quot;&gt;&lt;img src=&quot;/assets/img/iris2.jpg&quot; alt=&quot;Nerd&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Halfdane ist ein Nerd :)&lt;/p&gt;
-&lt;/figcaption&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;figure class=&quot; cap-left left&quot;&gt;&lt;img src=&quot;/assets/img/iris2.jpg&quot; alt=&quot;Nerd&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Halfdane ist ein Nerd :)&lt;/p&gt;
+&lt;/figcaption&gt;&lt;/figure&gt;
 </description>
                 <link>http://halfdane.github.io/2013/08/31/irisblende2</link>
                 <guid>http://halfdane.github.io/2013/08/31/irisblende2</guid>
@@ -346,8 +352,8 @@ Meine Güte, worauf hatte ich mich eingelassen: bei dem Tempo würde mir bis Mit
                 <title>Shabby chic Ringhalter</title>
                 <description>&lt;p&gt;T. wünscht sich eine Aufbewahrungsmöglichkeit für ihre Ringe. Randbedingungen sind: es soll nicht herumstehen und muss nur etwa zehn Ringe halten.&lt;/p&gt;
 
-&lt;div&gt;&lt;figure class=&quot; right cap-left&quot;&gt;&lt;img src=&quot;/assets/img/ringhalter.jpg&quot; alt=&quot;Der Ringhalter an der Wand&quot;&gt;&lt;figcaption&gt;&lt;p&gt;So sieht&amp;#39;s in Aktion aus&lt;/p&gt;
-&lt;/figcaption&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;figure class=&quot; right cap-left&quot;&gt;&lt;img src=&quot;/assets/img/ringhalter.jpg&quot; alt=&quot;Der Ringhalter an der Wand&quot;&gt;&lt;figcaption&gt;&lt;p&gt;So sieht&amp;#39;s in Aktion aus&lt;/p&gt;
+&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;In den schön geschnitzten goldenen Bilderrahmen vom Flohmarkt habe ich vier schmale Rollen aus einem alten (aber sauberen :-) Handtuch geklebt und zunächst prototypisch mit weißem Stoff bezogen. Ein kleiner Test mit Schlüsselringen und Einkaufswagen-Chips ist vielversprechend: vermutlich passt die richtige Anzahl an Ringen hinein.&lt;/p&gt;
 
@@ -366,17 +372,17 @@ Meine Güte, worauf hatte ich mich eingelassen: bei dem Tempo würde mir bis Mit
                 <title>Wandhalterung für Gitarren</title>
                 <description>&lt;p&gt;Klingen ja schön, stehen aber ständig im Weg. Und die käuflichen Halterungen sind echt nicht so wahnsinnig schön.&lt;/p&gt;
 
-&lt;div&gt;&lt;figure class=&quot; left cap-left break&quot;&gt;&lt;img src=&quot;/assets/img/gitarren1.jpg&quot; alt=&quot;Drei Gitarren an der Wand&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Drei Gitarren platzsparend an der Wand&lt;/p&gt;
-&lt;/figcaption&gt;&lt;/figure&gt;&lt;div class=&quot;clearfix&quot;&gt; &lt;/div&gt;&lt;/div&gt;
+&lt;figure class=&quot; cap-left left break&quot;&gt;&lt;img src=&quot;/assets/img/gitarren1.jpg&quot; alt=&quot;Drei Gitarren an der Wand&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Drei Gitarren platzsparend an der Wand&lt;/p&gt;
+&lt;/figcaption&gt;&lt;/figure&gt;&lt;div class=&quot;clearfix&quot;&gt; &lt;/div&gt;
 
-&lt;p&gt;Aus einem ungenutzten Buchen-Regalbrett habe ich einen 5,7cm breiten und 3,5cm tiefen Schlitz ausgesägt - das passt für alle unsere Saiteninstrumente gleichermaßen. Die &amp;quot;Finger&amp;quot; sind nur etwa 0,65cm dick, das ist bei dem Holz stabil genug.&lt;/p&gt;
+Aus einem ungenutzten Buchen-Regalbrett habe ich einen 5,7cm breiten und 3,5cm tiefen Schlitz ausgesägt - das passt für alle unsere Saiteninstrumente gleichermaßen. Die &quot;Finger&quot; sind nur etwa 0,65cm dick, das ist bei dem Holz stabil genug.
 
-&lt;p&gt;Die Instrumente brauchen nach hinten etwa fünfeinhalb cm Platz zum schwingen, und da das senkrecht angeschraubte Stück fast 2cm stark ist, habe ich das Fingerstück bei rund 7cm abgeschnitten.&lt;/p&gt;
+Die Instrumente brauchen nach hinten etwa fünfeinhalb cm Platz zum schwingen, und da das senkrecht angeschraubte Stück fast 2cm stark ist, habe ich das Fingerstück bei rund 7cm abgeschnitten.
 
-&lt;p&gt;An die Wand geworfen – fertig.&lt;/p&gt;
+An die Wand geworfen – fertig.
 
-&lt;div&gt;&lt;figure class=&quot; left cap-left&quot;&gt;&lt;img src=&quot;/assets/img/gitarren2.jpg&quot; alt=&quot;Halter mit Fingern&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Nahansicht des Halters mit &amp;quot;Fingern&amp;quot;.&lt;/p&gt;
-&lt;/figcaption&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;figure class=&quot; cap-left left&quot;&gt;&lt;img src=&quot;/assets/img/gitarren2.jpg&quot; alt=&quot;Halter mit Fingern&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Nahansicht des Halters mit &amp;quot;Fingern&amp;quot;.&lt;/p&gt;
+&lt;/figcaption&gt;&lt;/figure&gt;
 </description>
                 <link>http://halfdane.github.io/2013/08/19/Gitarrenhalter</link>
                 <guid>http://halfdane.github.io/2013/08/19/Gitarrenhalter</guid>
@@ -421,20 +427,21 @@ Die anderen Apps sind Titanium Backup und das Spiel Osmos.&lt;/p&gt;
 
 &lt;p&gt;Nach den ersten Tutorials hatte ich dieses beeindruckende Ergebnis:&lt;/p&gt;
 
-&lt;div&gt;&lt;figure class=&quot; left cap-left break p50&quot;&gt;&lt;img src=&quot;/assets/img/blender_pig.png&quot; alt=&quot;Ein sehr simples Schwein aus einfachen Primitiven&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Ein sehr simples Schwein aus einfachen Primitiven&lt;/p&gt;
-&lt;/figcaption&gt;&lt;/figure&gt;&lt;div class=&quot;clearfix&quot;&gt; &lt;/div&gt;&lt;/div&gt;
+&lt;figure class=&quot; cap-left left break p50&quot;&gt;&lt;img src=&quot;/assets/img/blender_pig.png&quot; alt=&quot;Ein sehr simples Schwein aus einfachen Primitiven&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Ein sehr simples Schwein aus einfachen Primitiven&lt;/p&gt;
+&lt;/figcaption&gt;&lt;/figure&gt;&lt;div class=&quot;clearfix&quot;&gt; &lt;/div&gt;
 
-&lt;p&gt;Oder auch so etwas:&lt;/p&gt;
+Oder auch so etwas:
 
-&lt;div&gt;&lt;figure class=&quot; left cap-left break p50&quot;&gt;&lt;img src=&quot;/assets/img/blender_lighthouse.png&quot; alt=&quot;Simpler Leuchtturm&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Ein Leuchtturm mit kleinem Häuschen anbei. Nicht mehr total primitiv, aber auch nicht besonders toll.&lt;/p&gt;
-&lt;/figcaption&gt;&lt;/figure&gt;&lt;div class=&quot;clearfix&quot;&gt; &lt;/div&gt;&lt;/div&gt;
+&lt;figure class=&quot; cap-left left break p50&quot;&gt;&lt;img src=&quot;/assets/img/blender_lighthouse.png&quot; alt=&quot;Simpler Leuchtturm&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Ein Leuchtturm mit kleinem Häuschen anbei. Nicht mehr total primitiv, aber auch nicht besonders toll.&lt;/p&gt;
+&lt;/figcaption&gt;&lt;/figure&gt;&lt;div class=&quot;clearfix&quot;&gt; &lt;/div&gt;
 
-&lt;p&gt;Eher nicht so super – zumindest nichts, was ich unbedingt gedruckt haben wollte...&lt;/p&gt;
+Eher nicht so super – zumindest nichts, was ich unbedingt gedruckt haben wollte...
 
-&lt;p&gt;Beim nächsten Versuch wollte ich gerne mit Flüssigkeitssimulationen spielen und das Ergebnis war dann schon etwas beeindruckender:&lt;/p&gt;
 
-&lt;div&gt;&lt;figure class=&quot; left cap-left&quot;&gt;&lt;img src=&quot;/assets/img/blender_water.png&quot; alt=&quot;Fett&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Eindrucksvolles Bild von simuliertem Wasser, das in ein simuliertes Glass gegossen wird.&lt;/p&gt;
-&lt;/figcaption&gt;&lt;/figure&gt;&lt;/div&gt;
+Beim nächsten Versuch wollte ich gerne mit Flüssigkeitssimulationen spielen und das Ergebnis war dann schon etwas beeindruckender:
+
+&lt;figure class=&quot; cap-left left&quot;&gt;&lt;img src=&quot;/assets/img/blender_water.png&quot; alt=&quot;Fett&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Eindrucksvolles Bild von simuliertem Wasser, das in ein simuliertes Glass gegossen wird.&lt;/p&gt;
+&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Das ist zwar immer noch nicht mit einem 3D-Drucker druckbar, aber zumindest muss ich mich damit nicht mehr verstecken :)&lt;/p&gt;
 </description>
@@ -447,8 +454,8 @@ Die anderen Apps sind Titanium Backup und das Spiel Osmos.&lt;/p&gt;
                 <title>Tensegrity</title>
                 <description>&lt;p&gt;Nachdem ich bereits vor Wochen auf der MAKE-Webseite über die Anleitung zu einem schnuckeligen, kleinen &lt;a href=&quot;http://makezine.com/2013/04/29/diy-tensegrity/&quot;&gt;Tensegrity-Objekt&lt;/a&gt; gestolpert bin und das erstmal nur bei meiner &lt;a href=&quot;http://www.highdefdigest.com/blog/twin-peaks-cooper-tapes/&quot;&gt;Diane&lt;/a&gt; geparkt habe, hatte ich heute mal eine Viertelstunde Muse:&lt;/p&gt;
 
-&lt;div&gt;&lt;figure class=&quot; left cap-left break&quot;&gt;&lt;img src=&quot;/assets/img/cam00009.jpg&quot; alt=&quot;Tensegrity-Objekt&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Das Objekt stellt sich selbstständig auf.&lt;/p&gt;
-&lt;/figcaption&gt;&lt;/figure&gt;&lt;div class=&quot;clearfix&quot;&gt; &lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;figure class=&quot; cap-left left break&quot;&gt;&lt;img src=&quot;/assets/img/cam00009.jpg&quot; alt=&quot;Tensegrity-Objekt&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Das Objekt stellt sich selbstständig auf.&lt;/p&gt;
+&lt;/figcaption&gt;&lt;/figure&gt;&lt;div class=&quot;clearfix&quot;&gt; &lt;/div&gt;&lt;/p&gt;
 
 &lt;p&gt;Funktioniert :-)&lt;/p&gt;
 </description>
