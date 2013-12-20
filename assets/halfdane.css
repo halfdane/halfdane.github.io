@@ -110,15 +110,13 @@ h3 {
   padding-bottom: 0em;
   margin-bottom: 0em; }
 
-h4 {
+h4, h6 {
   font-size: 1.618em;
   line-height: 1.5304em;
   margin-top: 0em;
   padding-top: 0em;
   padding-bottom: 0em;
-  margin-bottom: 0em; }
-
-h4, h6 {
+  margin-bottom: 0em;
   text-align: center; }
 
 p, blockquote, ul, pre, code {
@@ -134,12 +132,12 @@ p, blockquote, ul, pre, code {
   hyphens: auto; }
 
 small, .pagination {
-  font-size: 0.61805em;
-  line-height: 2.00324em;
+  font-size: 0.8em;
+  line-height: 1.54762em;
   margin-top: 0em;
   padding-top: 0em;
   padding-bottom: 0em;
-  margin-bottom: 2.00324em; }
+  margin-bottom: 1.54762em; }
 
 pre {
   padding: 0 0.8rem 0 1.2rem;
@@ -159,14 +157,6 @@ img {
   max-width: 100%;
   height: auto; }
 
-figure.left {
-  margin: 0 1.2381em 20px 0;
-  float: left; }
-
-figure.right {
-  margin: 0 0 20px 1.2381em;
-  float: right; }
-
 figure.p30 {
   max-width: 30%; }
 
@@ -176,11 +166,15 @@ figure.p50 {
 figure {
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.4);
   position: relative;
-  margin: 0 1.2381em 20px 0;
-  height: auto;
-  margin-top: 0.24762em;
+  margin: auto;
+  height: 12.38095em;
+  max-width: 26em;
+  margin-top: 1.2381em;
+  margin-bottom: 1.2381em;
   overflow: hidden;
   line-height: 0; }
+  figure img {
+    width: 100%; }
   figure figcaption {
     position: absolute;
     left: 0;
@@ -196,9 +190,12 @@ figure {
 .swipeshow {
   height: 12.38095em;
   max-width: 26em;
-  margin: 0; }
-  .swipeshow img {
-    width: 100%; }
+  margin: auto;
+  margin-top: 1.2381em;
+  margin-bottom: 1.2381em; }
+  .swipeshow:after {
+    content: "";
+    clear: both; }
 
 .postslist_wrapper {
   text-align: center; }
@@ -389,6 +386,19 @@ nav ul {
   float: right; }
 .pagination hr {
   clear: both; }
+
+.fullpost {
+  max-width: 50em;
+  margin: auto;
+  /*
+    @include experimental(column-count, 2);
+    @include experimental(column-gap, 40px);
+    @include experimental(column-rule, 2px dotted red);
+  
+    figure {
+      @include experimental(column-span, all);
+    }
+    */ }
 
 body {
   color: #685356;
