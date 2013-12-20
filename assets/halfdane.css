@@ -339,10 +339,12 @@ figure {
         border-top: 0.61905em solid #eeeeee;
         border-radius: 0.30952em; }
       .postslist figure {
-        max-height: 12.38095em;
-        width: 20%;
+        max-width: 20%;
+        height: auto;
         display: inline-block;
         margin: 0; }
+      .postslist figure img {
+        height: auto; }
       .postslist .post .text {
         display: inline-block;
         padding-left: 1%;
