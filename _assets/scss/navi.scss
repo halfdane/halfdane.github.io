@@ -31,9 +31,13 @@ nav {
 .pagination {
   ul {
     list-style: none;
+    text-align: center;
   }
   .next {
     float: left;
+  }
+  li {
+    display: inline-block;
   }
   .prev {
     float: right;

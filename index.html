@@ -10,7 +10,7 @@ title: Navigate by sight
         {% for post in site.posts %}<div class="post">
                 {% if post.image %}{% include image img=post.image title=post.title %}{% endif %}
                 <div class="text">
-                    <h2><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h2>
+                    <h3><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h3>
                     <div class="excerpt">{{ post.excerpt | textilize }}</div>
                 </div>
             </div>{% endfor %}

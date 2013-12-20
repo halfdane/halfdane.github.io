@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
     <meta charset="utf-8">
-    <title>{{ page.title }}</title>
+    <title>Halfdane's Canned Nerd{{ page.title }}</title>
     {% if page.description %}
     <meta name="description" content="{{ page.description }}">
     {% endif %}
@@ -20,6 +20,7 @@
     <!-- Le styles -->
     {% css_asset_tag global %}
     - /_assets/css/jquery.swipeshow.css
+    - /_assets/css/slideshow-theme.css
     - /_assets/scss/halfdane.scss
     - /_assets/css/syntax.css
     {% endcss_asset_tag %}
@@ -46,7 +47,7 @@
 
 <body>
 
-<nav>
+<!-- nav>
     <div class="menu">
         <ul>
             <li>
@@ -58,10 +59,9 @@
             {% include JB/pages_list %}
         </ul>
     </div>
-</nav>
+</nav -->
 
 <div class="container">
-
     <div class="content">
         {{ content }}
     </div>

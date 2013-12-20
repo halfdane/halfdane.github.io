@@ -6,8 +6,8 @@ body {
   font-family: 'Cabin', Georgia, "Times New Roman", Times, serif;
 }
 
-#{headings()},
-#{nest(headings(), a)} {
+#{headings(1, 5)},
+#{nest(headings(1, 5), a)} {
   font-family: 'Lobster', Helvetica, Arial, sans-serif;
   text-rendering: optimizeLegibility;
 }
@@ -42,16 +42,25 @@ $relative-font-sizing: true;
 }
 
 h1 {
-  @include font(2.5*1.618, 0, 1);
+  @include font(2.5*1.618, 0, 0);
   text-align: center;
 }
 
 h2 {
   @include font(1.618*1.618, 0, 0);
+  text-align: center;
 }
 
 h3 {
-  @include font(1.5*1.618, 0, 0);
+  @include font(1.2*1.618, 0, 0);
+}
+
+h4 {
+  @include font(1.618, 0, 0);
+}
+
+h4, h6 {
+  text-align: center;
 }
 
 p, blockquote, figcaption, ul, pre, code {

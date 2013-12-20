@@ -24,12 +24,13 @@
     float: none;
     margin: 0;
     img {
-      max-width: 100%;
-      max-height: rhythm(10, $base-font-size);
+      width: 100%;
+      height: rhythm(10, $base-font-size);
     }
   }
 
   .post {
+    display: block;
     margin: 0;
     text-align: left;
     vertical-align: top;
@@ -43,8 +44,20 @@
     }
   }
 
-  @mixin before_post($children) {
-    .post:nth-child(#{$children}n+1):before {
+
+  @mixin resize_responsive($columns) {
+      background-size: percentage(1/$columns) 100px;
+
+      .postlist_layout {
+        font-size: 0;
+      }
+      .post {
+        @include establish-baseline;
+        display: inline-block;
+        width: percentage(1/$columns);
+      }
+
+    .post:nth-child(#{$columns}n+1):before {
       content: '';
       position: absolute;
       margin-top: (-2*$local_borders);
@@ -54,102 +67,63 @@
       border-top: $local_borders solid $postlist_border;
       border-radius: 0.5*$local_borders;
     }
+
   }
 
-  /*computer*/
-  @media screen and (min-width: 1024px) {
-    background-size: 33.3334% 100px;
+  /*large screen*/
+  @include resize_responsive(3);
 
-    .postlist_layout {
-      font-size: 0;
-    }
-    .post {
-      @include establish-baseline;
-      display: inline-block;
-      width: 33.3334%;
-    }
-    @include before_post(3);
+  /*small screen*/
+  @media screen and (max-width: rhythm(60, $base-font-size)) {
+    @include resize_responsive(2);
   }
 
-  /*smaller than computer*/
-  @media screen and (max-width: 1024px) {
-    background-size: 100% 100px;
+  /*very small screen*/
+  @media screen and (max-width: rhythm(50, $base-font-size)) {
+    @include resize_responsive(1);
     figure {
       max-height: rhythm(10, $base-font-size);
+      width: 20%;
       display: inline-block;
-    }
-    .post {
-      display: block;
+      margin: 0;
     }
     .post .text {
       display: inline-block;
       padding-left: 1%;
+      max-width: 78%;
     }
-    @include before_post(1);
+  }
+
+  @media screen and (max-width: rhythm(40, $base-font-size)) {
+    .excerpt {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: rhythm(20, $base-font-size)) {
+    figure {
+      display: none;
+    }
   }
 }
 
-/*very large monitor*/
-@media screen and (min-width: 1800px) {
-  body {
-    @include adjust-font-size-to(1.5*$base-font-size);
+@media screen and (max-width: rhythm(40, $base-font-size)) {
+  h1 {
+    @include font(2.5, 0, 0);
   }
-  .content {
-    margin: 0 10%;
+  h2 {
+    @include font(1.618, 0, 0);
   }
-}
-
-/*regular monitor*/
-@media screen and (min-width: 1024px) and (max-width: 1800px) {
-  body {
-    @include adjust-font-size-to($base-font-size);
-  }
-  .content {
-    margin: 0 2%;
-  }
-}
-
-/*Tablet*/
-@media screen and (min-width: 800px) and (max-width: 1024px) {
-  body {
-    @include adjust-font-size-to(14px);
-  }
-  .content {
-    margin: 0 2%;
-  }
-  .post .text {
-    width: 70%;
-  }
-}
-
-/*phone*/
-@media screen and (max-width: 800px) {
-  body {
-    @include adjust-font-size-to(12px);
+  h3 {
+    @include font(1.2, 0, 0);
   }
   #{headings(2, 6)},
   #{nest(headings(2, 6), a)} {
     font-family: 'Cabin', Helvetica, Arial, sans-serif;
-    margin-bottom: 0;
   }
-  .content {
-    margin: 0 1%;
-  }
-  figure {
-    margin: 0;
-  }
-  .postslist figure img {
-    width: rhythm(3, $base-font-size);
-    height: rhythm(3, $base-font-size);
-  }
-  .post .text {
-    width: 80%;
-  }
-  img {
-    width: 800px;
-    max-width: 100%;
-  }
-  .excerpt {
-    display: none;
-  }
+}
+
+.content {
+  max-width: 1500px;
+  margin: 0 2%;
 }

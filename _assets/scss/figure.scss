@@ -21,10 +21,12 @@ figure.p50 {
 }
 
 figure {
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.4);
   position: relative;
   margin: 0 rhythm(1, $base-font-size) 20px 0;
   height: auto;
   @include leader(0.2, $base-font-size);
+  overflow: hidden;
 
   figcaption {
     position: absolute;
@@ -47,7 +49,14 @@ figure {
     opacity: 1;
   }
 
-  &:before {
+  &:hover:before {
+    opacity: 0;
+  }
+
+  &.cap-left:before {
+    bottom: 10px;
+    left: 10px;
+
     content: "?";
     position: absolute;
     font-weight: 800;
@@ -67,15 +76,6 @@ figure {
     opacity: 0.75;
   }
 
-  &:hover:before {
-    opacity: 0;
-  }
-
-  &.cap-left:before {
-    bottom: 10px;
-    left: 10px;
-  }
-
   &.cap-left figcaption {
     bottom: 0;
     left: -30%;
@@ -87,30 +87,12 @@ figure {
 }
 
 .swipeshow {
-  width: auto;
-  max-width: 100%;
   height: rhythm(10, $base-font-size);
-  width: rhythm(21, $base-font-size);
+  max-width: rhythm(21, $base-font-size);
+  margin: 0;
 
   img {
-    width: rhythm(21, $base-font-size);
+    width: 100%;
   }
 
-  .dots {
-    position: absolute;
-    top: rhythm(1, $base-font-size);
-    left: rhythm(1, $base-font-size);
-
-    .dot-item {
-      width: 24px;
-      height: 24px;
-      -webkit-border-radius: 12px;
-      -moz-border-radius: 12px;
-      border-radius: 12px;
-    }
-
-    .dot-item.active {
-      background-color: $nav_bg;
-    }
-  }
 }
