@@ -55,11 +55,8 @@ h3 {
   @include font(1.2*1.618, 0, 0);
 }
 
-h4 {
-  @include font(1.618, 0, 0);
-}
-
 h4, h6 {
+  @include font(1.618, 0, 0);
   text-align: center;
 }
 
@@ -72,7 +69,7 @@ p, blockquote, ul, pre, code {
 }
 
 small, .pagination {
-  @include font(1/1.618, 0);
+  @include font(0.8, 0);
 }
 
 pre {

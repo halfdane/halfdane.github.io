@@ -1,0 +1,13 @@
+.fullpost {
+  max-width: 50em;
+  margin: auto;
+/*
+  @include experimental(column-count, 2);
+  @include experimental(column-gap, 40px);
+  @include experimental(column-rule, 2px dotted red);
+
+  figure {
+    @include experimental(column-span, all);
+  }
+  */
+}

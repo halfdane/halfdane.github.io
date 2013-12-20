@@ -1,5 +1,6 @@
 <div class="pagination">
-    <h6><a href="/about.html">Halfdane's </a></h6><h4><a href="/">Canned Nerd: Navigate by sight</a></h4>
+    <h6><a href="/about.html">Halfdane's </a></h6>
+    <h4><a href="/">Canned Nerd: Navigate by sight</a></h4>
     <ul>
         {% if page.next %}
         <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}"
@@ -17,7 +18,7 @@
     {% endif %}
 </h1>
 
-<div class="post">
+<div class="fullpost">
     <p class="date">
         <small>{{ page.date | date_to_long_string }}</small>
     </p>

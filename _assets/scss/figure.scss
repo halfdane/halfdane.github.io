@@ -3,16 +3,6 @@ img {
   height: auto;
 }
 
-figure.left {
-  margin: 0 rhythm(1, $base-font-size) 20px 0;
-  float: left;
-}
-
-figure.right {
-  margin: 0 0 20px rhythm(1, $base-font-size);
-  float: right;
-}
-
 figure.p30 {
   max-width: 30%;
 }
@@ -23,11 +13,17 @@ figure.p50 {
 figure {
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.4);
   position: relative;
-  margin: 0 rhythm(1, $base-font-size) 20px 0;
-  height: auto;
-  @include leader(0.2, $base-font-size);
+  margin: auto;
+  height: rhythm(10, $base-font-size);
+  max-width: rhythm(21, $base-font-size);
+  @include leader(1, $base-font-size);
+  @include trailer(1, $base-font-size);
   overflow: hidden;
   line-height: 0;
+
+  img {
+    width: 100%;
+  }
 
   figcaption {
     position: absolute;
@@ -47,10 +43,12 @@ figure {
 .swipeshow {
   height: rhythm(10, $base-font-size);
   max-width: rhythm(21, $base-font-size);
-  margin: 0;
+  margin: auto;
+  @include leader(1, $base-font-size);
+  @include trailer(1, $base-font-size);
 
-  img {
-    width: 100%;
+  &:after {
+    content: "";
+    clear: both;
   }
-
 }

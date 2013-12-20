@@ -17,6 +17,7 @@
     <![endif]-->
 
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="/assets/js/display_halfdane_baseline.js" ></script>
     <!-- Le styles -->
     {% css_asset_tag global %}
     - /_assets/css/jquery.swipeshow.css
@@ -67,9 +68,10 @@
     </div>
     <hr>
     <footer>
-        <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}</p>
+        <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}
+            <span class="js_baseline_trigger btn">Click for raster</span>
+        </p>
     </footer>
-
 </div>
 
 {% include JB/analytics %}
