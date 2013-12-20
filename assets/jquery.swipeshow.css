@@ -79,9 +79,3 @@ html.swipeshow-grabbed * {
 .swipeshow .slide:first-child {
     visibility: visible;
 }
-
-/* Defaults: OVERRIDE THIS! */
-.swipeshow {
-    width: 100px;
-    height: 100px;
-}
