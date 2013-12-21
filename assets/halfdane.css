@@ -1,5 +1,5 @@
-@import url(http://fonts.googleapis.com/css?family=Lobster);
-@import url(http://fonts.googleapis.com/css?family=Cabin);
+@import url(//fonts.googleapis.com/css?family=Lobster);
+@import url(//fonts.googleapis.com/css?family=Cabin);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -131,7 +131,10 @@ p, blockquote, ul, pre, code {
   -ms-hyphens: auto;
   hyphens: auto; }
 
-small, .pagination {
+hr {
+  margin: -1px; }
+
+small, .pagination, figcaption {
   font-size: 0.8em;
   line-height: 1.54762em;
   margin-top: 0em;
@@ -157,45 +160,52 @@ img {
   max-width: 100%;
   height: auto; }
 
-figure.p30 {
-  max-width: 30%; }
-
-figure.p50 {
-  max-width: 50%; }
-
 figure {
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.4);
+  display: block;
+  margin: 0 auto;
   position: relative;
-  margin: auto;
-  height: 12.38095em;
-  max-width: 26em;
-  margin-top: 1.2381em;
-  margin-bottom: 1.2381em;
   overflow: hidden;
-  line-height: 0; }
+  line-height: 0;
+  margin-bottom: 0.61905em;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.4); }
   figure img {
     width: 100%; }
   figure figcaption {
     position: absolute;
     left: 0;
     bottom: 0;
+    margin: 0;
     opacity: 0.70;
-    background: black;
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
+    background: white;
     width: 100%; }
     figure figcaption p {
       margin: 0; }
 
+figure.p20,
+.swipeshow.p20 {
+  max-width: 10em; }
+figure.p30,
+.swipeshow.p30 {
+  max-width: 20em; }
+figure.p50,
+.swipeshow.p50 {
+  max-width: 30em; }
+figure.left,
+.swipeshow.left {
+  float: left; }
+figure.right,
+.swipeshow.right {
+  float: right; }
+
 .swipeshow {
-  height: 12.38095em;
-  max-width: 26em;
-  margin: auto;
-  margin-top: 1.2381em;
-  margin-bottom: 1.2381em; }
-  .swipeshow:after {
-    content: "";
-    clear: both; }
+  height: 24em;
+  max-width: 40em;
+  margin: 0 auto;
+  margin-bottom: 0.61905em; }
+  .swipeshow figure {
+    box-shadow: 0; }
+  .swipeshow.p50 {
+    height: 18em; }
 
 .postslist_wrapper {
   text-align: center; }
@@ -352,9 +362,14 @@ figure {
   h2 a, h3 a, h4 a, h5 a, h6 a {
     font-family: 'Cabin', Helvetica, Arial, sans-serif; } }
 .content {
-  max-width: 1500px;
-  margin: 0 2%; }
+  max-width: 1550px; }
 
+@media screen and (max-width: 1550px) {
+  .content {
+    margin: 0 2%; } }
+@media screen and (min-width: 1550px) {
+  .content {
+    margin: 0 auto; } }
 nav .brand {
   color: #dfc771; }
 nav ul {
