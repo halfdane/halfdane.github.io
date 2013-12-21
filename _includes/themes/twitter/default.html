@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
     <meta charset="utf-8">
-    <title>Halfdane's Canned Nerd{{ page.title }}</title>
+    <title>Halfdane's Canned Nerd - {{ page.title }}</title>
     {% if page.description %}
     <meta name="description" content="{{ page.description }}">
     {% endif %}
@@ -17,10 +17,12 @@
     <![endif]-->
 
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-    <script src="/assets/js/display_halfdane_baseline.js" ></script>
+    <script src='/assets/js/swipe.js'></script>
+
+    <script src="/assets/js/halfdane.js" ></script>
+
     <!-- Le styles -->
     {% css_asset_tag global %}
-    - /_assets/css/jquery.swipeshow.css
     - /_assets/css/slideshow-theme.css
     - /_assets/scss/halfdane.scss
     - /_assets/css/syntax.css
@@ -33,11 +35,6 @@
       <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
       <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
     -->
-
-    <script src='/assets/js/jquery.swipeshow.min.js'></script>
-    <script>$(function() {
-        $(".swipeshow").swipeshow();
-    });</script>
     <!-- atom & rss feed -->
     <link href="{{ BASE_PATH }}{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate"
           title="Sitewide ATOM Feed">

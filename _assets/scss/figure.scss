@@ -4,6 +4,7 @@ img {
 }
 
 figure {
+  height: auto;
   display: block;
   margin: 0 auto;
   position: relative;
@@ -31,7 +32,7 @@ figure {
 }
 
 figure,
-.swipeshow {
+.slideshow {
   &.p20 {
     max-width: 10em;
   }
@@ -49,17 +50,27 @@ figure,
   }
 }
 
-.swipeshow {
-  height: 24em;
-  max-width: 40em;
+.slideshow {
   margin: 0 auto;
   @include trailer(0.5, $base-font-size);
 
   figure {
     box-shadow: 0;
+    margin: 0;
   }
+}
 
-  &.p50 {
-    height: 18em;
-  }
+.swipe {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+}
+.swipe-wrap {
+  overflow: hidden;
+  position: relative;
+}
+.swipe-wrap > * {
+  float:left;
+  width:100%;
+  position: relative;
 }
