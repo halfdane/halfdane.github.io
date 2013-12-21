@@ -10,7 +10,7 @@ image: gitarren1.jpg
 
 Klingen ja schön, stehen aber ständig im Weg. Und die käuflichen Halterungen sind echt nicht so wahnsinnig schön.
 
-{% image gitarren1.jpg "Drei Gitarren an der Wand" "break" %}
+{% image gitarren1.jpg "Drei Gitarren an der Wand" "p50" %}
 Drei Gitarren platzsparend an der Wand
 {% endimage %}
 
@@ -20,6 +20,6 @@ Die Instrumente brauchen nach hinten etwa fünfeinhalb cm Platz zum schwingen, u
 
 An die Wand geworfen – fertig.
 
-{% image gitarren2.jpg "Halter mit Fingern" %}
+{% image gitarren2.jpg "Halter mit Fingern" "p30" %}
 Nahansicht des Halters mit "Fingern".
 {% endimage %}

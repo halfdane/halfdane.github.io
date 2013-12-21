@@ -10,7 +10,7 @@ image: space3.jpg
 Ich hätte es eigentlich wissen müssen: häkeln ist echt langweilig! Dummerweise kam ich nun nicht drumherum.
 Aufgrund von etwas almost completely, but not quite, unlike einer Kneipenwette. Es fing ganz spaßig an: ich kann mich auch gut erinnern, das ich Luftmaschen in der 3. Klasse auch schon mochte, aber nie so recht darüber hinaus kam.
 
-{% image space1.jpg "Detailansicht" "right cap-left" %}
+{% image space1.jpg "Detailansicht" "right" %}
 Und damit ich nicht auf die Idee komme, nochmal mit so etwas anzufangen, noch eine besonders langweilige Detailansicht.
 {% endimage %}
 
@@ -26,18 +26,18 @@ Aber das sollte sich diesmal ändern, schließlich wollte ich auch keine Topflap
 Groß halt. Etwa einsfuffzig mal einsachzig? Abgemacht.
 
 Also Luftmaschen sind immer noch nicht schwer:
-{% image http://www.labbe.de/zzzebra/handarbeiten/haekeln_luftmaschen1.gif "Luftmaschen" "break" %}
+{% image http://www.labbe.de/zzzebra/handarbeiten/haekeln_luftmaschen1.gif "Luftmaschen" "p30" %}
 Beispielhaft bei [labbe.de](http://www.labbe.de)
 {% endimage %}
 
 Stäbchen fand ich schon schwieriger:
-{% image http://www.labbe.de/zzzebra/handarbeiten/haekeln_staebchen2.gif "Luftmaschen" "break" %}
+{% image http://www.labbe.de/zzzebra/handarbeiten/haekeln_staebchen2.gif "Luftmaschen" "p30" %}
 Wieder [labbe.de](http://www.labbe.de)
 {% endimage %}
 Um Wellen zu häkeln, ist es das vermutlich das einfachste, in regelmäßigen Abständen
 Maschen zu- und abzunehmen, zum Beispiel so:
 
-{% image space2.jpg "Wellen" %}
+{% image space2.jpg "Wellen" "p30" %}
 Anleitungen wie Wellen gehäkelt werden, gibt es dutzendfach im Internet, aber das hier ist meine :)
 {% endimage %}
 

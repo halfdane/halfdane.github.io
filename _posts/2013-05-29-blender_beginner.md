@@ -14,13 +14,13 @@ Blender hat zwar eine steile Lernkurve, aber 1. kommt mir das Zupass und 2. stei
 
 Nach den ersten Tutorials hatte ich dieses beeindruckende Ergebnis:
 
-{% image blender_pig.png "Ein sehr simples Schwein aus einfachen Primitiven" "break p50" %}
+{% image blender_pig.png "Ein sehr simples Schwein aus einfachen Primitiven" "p50" %}
 Ein sehr simples Schwein aus einfachen Primitiven
 {% endimage %}
 
 Oder auch so etwas:
 
-{% image blender_lighthouse.png "Simpler Leuchtturm" "break p50" %}
+{% image blender_lighthouse.png "Simpler Leuchtturm" "p50" %}
 Ein Leuchtturm mit kleinem Häuschen anbei. Nicht mehr total primitiv, aber auch nicht besonders toll.
 {% endimage %}
 

@@ -19,7 +19,7 @@ module Jekyll
 
     def initialize(tag_name, markup, tokens)
       super
-      @css=""
+      @css="cap-left"
       if markup =~ IMAGE_URL_WITH_TITLE_AND_CSS
         @url     = $1
         @title   = $3
@@ -32,8 +32,6 @@ module Jekyll
         @title = ""
       end
 
-      @css += " cap-left" unless (!givenCss.nil? && givenCss =~ /\bcap-/)
-      @css += " left" unless (!givenCss.nil? && givenCss =~ /\bleft\b|\bright\b/)
       @css += " " + givenCss unless givenCss.nil?
 
       # Config options
@@ -93,7 +91,6 @@ module Jekyll
 
       source += "<figcaption>#{output}</figcaption>" unless (output.to_s == "")
       source += "</figure>"
-      source += "<div class=\"clearfix\"> </div>" if @css =~ /\bbreak\b/
       source
     end
 

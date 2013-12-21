@@ -10,7 +10,7 @@ image: ringhalter.jpg
 
 T. wünscht sich eine Aufbewahrungsmöglichkeit für ihre Ringe. Randbedingungen sind: es soll nicht herumstehen und muss nur etwa zehn Ringe halten.
 
-{% image ringhalter.jpg "Der Ringhalter an der Wand" "right cap-left" %}
+{% image ringhalter.jpg "Der Ringhalter an der Wand" "right" %}
 So sieht's in Aktion aus
 {% endimage %}
 

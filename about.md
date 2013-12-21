@@ -20,7 +20,7 @@ aber auch Freunde und Verwandte setzen mir häufig einen Floh ins Ohr.
 Ich weiß häufig noch nicht so genau, was ich als nächstes machen werde, obwohl ich seit einem halben Jahr
  meine persönliche [Diane](http://www.highdefdigest.com/blog/twin-peaks-cooper-tapes/) als Ideenspeicher benutze, damit mir nichts mehr flöten geht.
 
-### #
+### &#35;
 Vielleicht findest Du hier ja etwas, das Dich interessiert – oder auch ärgert.
 Dann schreib doch bitte einen Kommentar: du kannst sicher sein,
 dass ich alle Kommentare lese und darauf antworte.

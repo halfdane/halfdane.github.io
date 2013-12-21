@@ -3,23 +3,14 @@ img {
   height: auto;
 }
 
-figure.p30 {
-  max-width: 30%;
-}
-figure.p50 {
-  max-width: 50%;
-}
-
 figure {
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.4);
+  display: block;
+  margin: 0 auto;
   position: relative;
-  margin: auto;
-  height: rhythm(10, $base-font-size);
-  max-width: rhythm(21, $base-font-size);
-  @include leader(1, $base-font-size);
-  @include trailer(1, $base-font-size);
   overflow: hidden;
   line-height: 0;
+  @include trailer(0.5, $base-font-size);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.4);
 
   img {
     width: 100%;
@@ -29,10 +20,9 @@ figure {
     position: absolute;
     left: 0;
     bottom: 0;
+    margin: 0;
     opacity: 0.70;
-    background: $black;
-    background: rgba(0, 0, 0, 0.70);
-    color: white;
+    background: $white;
     width: 100%;
     p {
       margin: 0;
@@ -40,15 +30,36 @@ figure {
   }
 }
 
+figure,
 .swipeshow {
-  height: rhythm(10, $base-font-size);
-  max-width: rhythm(21, $base-font-size);
-  margin: auto;
-  @include leader(1, $base-font-size);
-  @include trailer(1, $base-font-size);
+  &.p20 {
+    max-width: 10em;
+  }
+  &.p30 {
+    max-width: 20em;
+  }
+  &.p50 {
+    max-width: 30em;
+  }
+  &.left {
+    float: left;
+  }
+  &.right {
+    float: right;
+  }
+}
 
-  &:after {
-    content: "";
-    clear: both;
+.swipeshow {
+  height: 24em;
+  max-width: 40em;
+  margin: 0 auto;
+  @include trailer(0.5, $base-font-size);
+
+  figure {
+    box-shadow: 0;
+  }
+
+  &.p50 {
+    height: 18em;
   }
 }

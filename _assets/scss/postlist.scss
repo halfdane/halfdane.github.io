@@ -126,7 +126,19 @@
   }
 }
 
+$local_max_content: 1550px;
 .content {
-  max-width: 1500px;
-  margin: 0 2%;
+  max-width: $local_max_content;
+}
+
+@media screen and (max-width: #{$local_max_content}) {
+  .content {
+    margin: 0 2%;
+  }
+}
+
+@media screen and (min-width: #{$local_max_content}) {
+  .content {
+    margin: 0 auto;
+  }
 }
