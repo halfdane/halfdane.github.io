@@ -161,6 +161,7 @@ img {
   height: auto; }
 
 figure {
+  height: auto;
   display: block;
   margin: 0 auto;
   position: relative;
@@ -182,30 +183,41 @@ figure {
       margin: 0; }
 
 figure.p20,
-.swipeshow.p20 {
+.slideshow.p20 {
   max-width: 10em; }
 figure.p30,
-.swipeshow.p30 {
+.slideshow.p30 {
   max-width: 20em; }
 figure.p50,
-.swipeshow.p50 {
+.slideshow.p50 {
   max-width: 30em; }
 figure.left,
-.swipeshow.left {
+.slideshow.left {
   float: left; }
 figure.right,
-.swipeshow.right {
+.slideshow.right {
   float: right; }
 
-.swipeshow {
-  height: 24em;
-  max-width: 40em;
+.slideshow {
   margin: 0 auto;
   margin-bottom: 0.61905em; }
-  .swipeshow figure {
-    box-shadow: 0; }
-  .swipeshow.p50 {
-    height: 18em; }
+  .slideshow figure {
+    box-shadow: 0;
+    margin: 0; }
+
+.swipe {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative; }
+
+.swipe-wrap {
+  overflow: hidden;
+  position: relative; }
+
+.swipe-wrap > * {
+  float: left;
+  width: 100%;
+  position: relative; }
 
 .postslist_wrapper {
   text-align: center; }

@@ -5,8 +5,8 @@
         <description>Canned Nerd - Halfdane</description>
         <link>http://halfdane.github.io</link>
         <link>http://halfdane.github.io</link>
-        <lastBuildDate>2013-12-21T19:18:47+00:00</lastBuildDate>
-        <pubDate>2013-12-21T19:18:47+00:00</pubDate>
+        <lastBuildDate>2013-12-21T20:40:16+00:00</lastBuildDate>
+        <pubDate>2013-12-21T20:40:16+00:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -184,7 +184,7 @@ gefunden.&lt;/p&gt;
 
 &lt;p&gt;Eine kleine Übersicht der einzelnen Arbeitsschritte:&lt;/p&gt;
 
-&lt;div class='swipeshow slideshow p50'&gt;&lt;div class='slides'&gt;&lt;figure class=&quot;cap-left slide&quot;&gt;&lt;img src=&quot;/assets/img/buddel5.jpg&quot; alt=&quot;Scharnier am Mast&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Das Scharnier des Masts ist aus Draht – hier die Unterseite. War allerdings etwas zu dick, deswegen richten die Masten sich nur schwergängig auf. Muss ich nochmal überdenken :)&lt;/p&gt;
+&lt;div id='slider' class='slideshow swipe p50'&gt;&lt;div class='swipe-wrap'&gt;&lt;figure class=&quot;cap-left slide&quot;&gt;&lt;img src=&quot;/assets/img/buddel5.jpg&quot; alt=&quot;Scharnier am Mast&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Das Scharnier des Masts ist aus Draht – hier die Unterseite. War allerdings etwas zu dick, deswegen richten die Masten sich nur schwergängig auf. Muss ich nochmal überdenken :)&lt;/p&gt;
 &lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;figure class=&quot;cap-left slide&quot;&gt;&lt;img src=&quot;/assets/img/buddel6.jpg&quot; alt=&quot;Stagen&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Stage, an denen man die Masten aufrichten kann - einer für den Hauptmast (vorne) und einer für den Besanmast (hinten).
