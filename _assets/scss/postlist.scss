@@ -44,18 +44,17 @@
     }
   }
 
-
   @mixin resize_responsive($columns) {
-      background-size: percentage(1/$columns) 100px;
+    background-size: percentage(1/$columns) 100px;
 
-      .postlist_layout {
-        font-size: 0;
-      }
-      .post {
-        @include establish-baseline;
-        display: inline-block;
-        width: percentage(1/$columns);
-      }
+    .postlist_layout {
+      font-size: 0;
+    }
+    .post {
+      @include establish-baseline;
+      display: inline-block;
+      width: percentage(1/$columns);
+    }
 
     .post:nth-child(#{$columns}n+1):before {
       content: '';
@@ -67,7 +66,6 @@
       border-top: $local_borders solid $postlist_border;
       border-radius: 0.5*$local_borders;
     }
-
   }
 
   /*large screen*/
@@ -86,9 +84,9 @@
       height: auto;
       display: inline-block;
       margin: 0;
-    }
-    figure img {
-      height: auto;
+      img {
+        height: auto;
+      }
     }
     .post .text {
       display: inline-block;
@@ -102,23 +100,17 @@
       display: none;
     }
   }
-
-  @media screen and (max-width: rhythm(20, $base-font-size)) {
-    figure {
-      display: none;
-    }
-  }
 }
 
 @media screen and (max-width: rhythm(40, $base-font-size)) {
   h1 {
-    @include font(2.5, 0, 0);
-  }
-  h2 {
     @include font(1.618, 0, 0);
   }
-  h3 {
+  h2 {
     @include font(1.2, 0, 0);
+  }
+  h3 {
+    @include font(1.1, 0, 0);
   }
   #{headings(2, 6)},
   #{nest(headings(2, 6), a)} {
