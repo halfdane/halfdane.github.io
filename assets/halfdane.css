@@ -320,8 +320,8 @@ figure.right,
         height: auto;
         display: inline-block;
         margin: 0; }
-      .postslist figure img {
-        height: auto; }
+        .postslist figure img {
+          height: auto; }
       .postslist .post .text {
         display: inline-block;
         padding-left: 1%;
@@ -329,20 +329,9 @@ figure.right,
   @media screen and (max-width: 49.52381em) {
     .postslist .excerpt {
       display: none; } }
-  @media screen and (max-width: 24.7619em) {
-    .postslist figure {
-      display: none; } }
 
 @media screen and (max-width: 49.52381em) {
   h1 {
-    font-size: 2.5em;
-    line-height: 1.48571em;
-    margin-top: 0em;
-    padding-top: 0em;
-    padding-bottom: 0em;
-    margin-bottom: 0em; }
-
-  h2 {
     font-size: 1.618em;
     line-height: 1.5304em;
     margin-top: 0em;
@@ -350,9 +339,17 @@ figure.right,
     padding-bottom: 0em;
     margin-bottom: 0em; }
 
-  h3 {
+  h2 {
     font-size: 1.2em;
     line-height: 2.06349em;
+    margin-top: 0em;
+    padding-top: 0em;
+    padding-bottom: 0em;
+    margin-bottom: 0em; }
+
+  h3 {
+    font-size: 1.1em;
+    line-height: 2.25108em;
     margin-top: 0em;
     padding-top: 0em;
     padding-bottom: 0em;
