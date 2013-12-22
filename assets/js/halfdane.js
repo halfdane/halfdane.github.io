@@ -5,7 +5,7 @@ var activate_slideshows = function () {
 
 
         var swipe = Swipe(e, {
-            auto: 3000,
+            //auto: 3000,
             continuous: true,
             callback: function (pos) {
                 $navi.children('.dot-item').removeClass('active');
