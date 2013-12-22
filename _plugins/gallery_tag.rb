@@ -20,7 +20,7 @@ module Jekyll
       converter = site.getConverterImpl(::Jekyll::Converters::Markdown)
       output = converter.convert(super(context))
 
-      source = "<div id='slider' class='slideshow swipe #{@css}'><div class='swipe-wrap'>"
+      source = "<div class='slideshow swipe #{@css}'><div class='swipe-wrap'>"
       source += "#{output}" unless (output.nil?)
       source += "</div><button class='previous'></button><button class='next'></button><div class='dots'></div></div>"
       source
