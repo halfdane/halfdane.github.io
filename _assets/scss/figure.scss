@@ -3,36 +3,42 @@ img {
   height: auto;
 }
 
-figure {
-  height: auto;
+figure,
+.slideshow {
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.4);
+
   display: block;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
-  line-height: 0;
+
   @include trailer(0.5, $base-font-size);
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.4);
+
+  line-height: 0;
 
   img {
     width: 100%;
+  }
+
+  * {
+    margin: 0;
+  }
+
+  figure {
+    box-shadow: none;
+    margin: 0;
   }
 
   figcaption {
     position: absolute;
     left: 0;
     bottom: 0;
-    margin: 0;
     opacity: 0.70;
     background: $white;
     width: 100%;
-    p {
-      margin: 0;
-    }
+    height: auto;
   }
-}
 
-figure,
-.slideshow {
   &.p20 {
     max-width: 10em;
   }
@@ -44,30 +50,20 @@ figure,
   }
   &.left {
     float: left;
+    margin: 0;
+    margin-right: 1em;
   }
   &.right {
     float: right;
-  }
-}
-
-.slideshow {
-  margin: 0 auto;
-  @include trailer(0.5, $base-font-size);
-
-  figure {
-    box-shadow: 0;
     margin: 0;
+    margin-left: 1em;
   }
 }
 
-.swipe {
-  overflow: hidden;
-  visibility: hidden;
-  position: relative;
-}
 .swipe-wrap {
   overflow: hidden;
   position: relative;
+  height: 100%;
 }
 .swipe-wrap > * {
   float:left;
