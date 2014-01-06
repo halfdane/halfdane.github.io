@@ -40,10 +40,16 @@ figure,
   }
 
   &.p20 {
+    max-width: 5em;
+  }
+  &.p20 {
     max-width: 10em;
   }
   &.p30 {
     max-width: 20em;
+  }
+  &.p40 {
+    max-width: 25em;
   }
   &.p50 {
     max-width: 30em;
