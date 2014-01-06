@@ -190,10 +190,16 @@ figure,
     height: auto; }
   figure.p20,
   .slideshow.p20 {
+    max-width: 5em; }
+  figure.p20,
+  .slideshow.p20 {
     max-width: 10em; }
   figure.p30,
   .slideshow.p30 {
     max-width: 20em; }
+  figure.p40,
+  .slideshow.p40 {
+    max-width: 25em; }
   figure.p50,
   .slideshow.p50 {
     max-width: 30em; }
