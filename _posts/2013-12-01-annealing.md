@@ -2,10 +2,10 @@
 layout: post
 title: "TSP in JavaScript (Simulated Annealing)"
 description: ""
-category: diy/Stoff, diy/Holz
-tags: [buddelschiff, Holz, Microbohrer, Modellbau, Zahnstocher]
+category: computer
+tags: [javascript, html5, tsp, simulated annealing]
 group: post
-image: buddel3-1.jpg
+image: tsp_annealing.png
 ---
 Um meine JavaScript-Kenntnisse zu vertiefen, habe mich daran gemacht einen Graphen aus Knoten und Kanten zu implementieren. Und weil das zu einfach ist, soll darauf das Travelling Salesman Problem gelöst werden :)
 
@@ -16,6 +16,8 @@ Im Kern besteht die Idee darin, paarweise zufällig gewählte Kanten einer Tour 
 Ausgangspunkt ist eine zufällige Tour.
 
 ```javascript
+
+
 function acceptanceProbability(energy,
                                 newEnergy,
                                 temperature) {
@@ -33,6 +35,8 @@ function acceptanceProbability(energy,
 Nach jedem Durchgang verringert sich die Temperatur und wenn sie unter 1 gefallen ist, wird das bis dahin beste Ergebnis akzeptiert, daher "Simulated Annealing" - simulierte Erstarrung.
 
 ```javascript
+
+
 function solve() {
     // Set initial temp
     var temp = 10000,
@@ -54,6 +58,8 @@ function solve() {
 Drumherum schwirrt noch ein ganzer Sack Code, der für die Liste der Punkte, die Berechnung der euklidischen Distanz zwischen zwei Punkten, die aktuelle Tour, ihre Gesamtlänge und noch viel mehr zuständig ist:
 
 ```javascript
+
+
 ...
 function distanceTo (point, otherPoint) {
     var xDistance = Math.abs(point.x - otherPoint.x),
