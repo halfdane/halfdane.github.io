@@ -70,7 +70,8 @@ code {
   white-space: -o-pre-wrap;
   /* Opera 7 and up */
   word-wrap: break-word;
-  /* IE 5.5+ and up */ }
+  /* IE 5.5+ and up */
+  display: inline-block; }
 
 /*vertical rhythm*/
 * html {
@@ -82,7 +83,7 @@ html {
 
 .baseline {
   background-image: linear-gradient(rgba(102, 204, 255, 0.5) 1px, transparent 1px);
-  background-size: auto 1.2381em; }
+  background-size: auto 26px; }
 
 h1 {
   font-size: 4.045em;
@@ -119,7 +120,7 @@ h4, h6 {
   margin-bottom: 0em;
   text-align: center; }
 
-p, blockquote, ul, pre, code {
+p, blockquote, ul, pre {
   font-size: 1em;
   line-height: 1.2381em;
   margin-top: 0em;
@@ -146,11 +147,11 @@ pre {
   padding: 0 0.8rem 0 1.2rem;
   border: 1px solid #ccc;
   border-left: 1rem solid #ccc;
-  background-image: linear-gradient(transparent 1.2381em, #ececec 1.2381em);
-  background-size: auto 2.48857em;
-  background-position: 0 0.61905em;
-  padding-top: 0.61905em;
-  padding-bottom: 0.61905em; }
+  background-image: linear-gradient(transparent 26px, #ececec 26px);
+  background-size: auto 52px;
+  background-position: 0 13px;
+  padding-top: 13px;
+  padding-bottom: 13px; }
 
 ol, ul {
   list-style: square;
@@ -456,7 +457,6 @@ p:empty {
 /*button*/
 .btn {
   background-color: darkblue;
-  border: 1px solid #685356;
   color: #dfc771;
   text-indent: 0;
   display: inline-block;

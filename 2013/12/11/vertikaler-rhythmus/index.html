@@ -127,7 +127,7 @@
     </p>
     <p>Was von vielen kompetenten Designern offenbar für sehr wichtig gehalten wird, ist der vertikale Rhythmus, also das Ausrichten der Schriftzeilen (und der anderen Elemente) an einem konsistenten Raster, nämlich genau den Schrifzeilen eines regulären Absatzes. Dazu muss man so crazy Dinge machen wie die Baseline berechnen (gewünschte Höhe der Schrift durch Höhe der Zeilen teilen), für Überschriften eine Skalierung nach dem goldenen Schnitt berechnen (und zwar für jedes Überschriften-Level einzeln) und einen unteren Margin an Überschriften- und Absatz-Elemente hängen, der genau so abgepasst ist, dass die nächste Schriftzeile ins Raster passt.</p>
 
-<figure class="cap-left p20"><img src="/assets/img/baseline.png" alt="Seite mit baseline"><figcaption><p>Ausschnitt der Seite im alten Design - die Baseline ist sichbar.</p>
+<figure class="cap-left p20 left"><img src="/assets/img/baseline.png" alt="Seite mit baseline"><figcaption><p>Ausschnitt der Seite im alten Design - die Baseline ist sichbar.</p>
 </figcaption></figure>
 
 <p>Dazu kommt, dass ich das Raster (und die Schriften) unbedingt in <code>em</code> haben will, damit
@@ -141,9 +141,7 @@ von einer anderen Seite klauen kann :/</p>
 <p>Puh!</p>
 
 <p>Zum Glück hat <a href="http://joshnh.com/">Joshua Hibbert</a> einen
-<a href="http://joshnh.com/tools/em-baseline-generator.html">wunderbaren Baseline-Generator</a> gebaut,
-der die Verhältnisse in <code>em</code> und relativen Größen ausdrücken kann!
-Dankeschön, ich war schon drauf und dran die Idee in die Tonne zu kloppen.</p>
+<a href="http://joshnh.com/tools/em-baseline-generator.html">wunderbaren Baseline-Generator</a> gebaut, der die Verhältnisse in <code>em</code> und relativen Größen ausdrücken kann! Dankeschön, ich war schon drauf und dran die Idee in die Tonne zu kloppen.</p>
 
 <p>Ich habe 21 Pixel als Schriftgröße und 31 Pixel als Linienabstand gewählt und das generierte CSS
 einfach direkt übernommen - naja, die Überschriften habe ich dann doch nicht fett gemacht,

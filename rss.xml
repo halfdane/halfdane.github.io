@@ -5,8 +5,8 @@
         <description>Canned Nerd - Halfdane</description>
         <link>http://halfdane.github.io</link>
         <link>http://halfdane.github.io</link>
-        <lastBuildDate>2014-01-06T15:12:09+00:00</lastBuildDate>
-        <pubDate>2014-01-06T15:12:09+00:00</pubDate>
+        <lastBuildDate>2014-01-06T15:53:42+00:00</lastBuildDate>
+        <pubDate>2014-01-06T15:53:42+00:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -14,7 +14,7 @@
                 <title>Vertikaler Rhythmus</title>
                 <description>&lt;p&gt;Was von vielen kompetenten Designern offenbar für sehr wichtig gehalten wird, ist der vertikale Rhythmus, also das Ausrichten der Schriftzeilen (und der anderen Elemente) an einem konsistenten Raster, nämlich genau den Schrifzeilen eines regulären Absatzes. Dazu muss man so crazy Dinge machen wie die Baseline berechnen (gewünschte Höhe der Schrift durch Höhe der Zeilen teilen), für Überschriften eine Skalierung nach dem goldenen Schnitt berechnen (und zwar für jedes Überschriften-Level einzeln) und einen unteren Margin an Überschriften- und Absatz-Elemente hängen, der genau so abgepasst ist, dass die nächste Schriftzeile ins Raster passt.&lt;/p&gt;
 
-&lt;figure class=&quot;cap-left p20&quot;&gt;&lt;img src=&quot;/assets/img/baseline.png&quot; alt=&quot;Seite mit baseline&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Ausschnitt der Seite im alten Design - die Baseline ist sichbar.&lt;/p&gt;
+&lt;figure class=&quot;cap-left p20 left&quot;&gt;&lt;img src=&quot;/assets/img/baseline.png&quot; alt=&quot;Seite mit baseline&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Ausschnitt der Seite im alten Design - die Baseline ist sichbar.&lt;/p&gt;
 &lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Dazu kommt, dass ich das Raster (und die Schriften) unbedingt in &lt;code&gt;em&lt;/code&gt; haben will, damit
@@ -28,9 +28,7 @@ von einer anderen Seite klauen kann :/&lt;/p&gt;
 &lt;p&gt;Puh!&lt;/p&gt;
 
 &lt;p&gt;Zum Glück hat &lt;a href=&quot;http://joshnh.com/&quot;&gt;Joshua Hibbert&lt;/a&gt; einen
-&lt;a href=&quot;http://joshnh.com/tools/em-baseline-generator.html&quot;&gt;wunderbaren Baseline-Generator&lt;/a&gt; gebaut,
-der die Verhältnisse in &lt;code&gt;em&lt;/code&gt; und relativen Größen ausdrücken kann!
-Dankeschön, ich war schon drauf und dran die Idee in die Tonne zu kloppen.&lt;/p&gt;
+&lt;a href=&quot;http://joshnh.com/tools/em-baseline-generator.html&quot;&gt;wunderbaren Baseline-Generator&lt;/a&gt; gebaut, der die Verhältnisse in &lt;code&gt;em&lt;/code&gt; und relativen Größen ausdrücken kann! Dankeschön, ich war schon drauf und dran die Idee in die Tonne zu kloppen.&lt;/p&gt;
 
 &lt;p&gt;Ich habe 21 Pixel als Schriftgröße und 31 Pixel als Linienabstand gewählt und das generierte CSS
 einfach direkt übernommen - naja, die Überschriften habe ich dann doch nicht fett gemacht,
