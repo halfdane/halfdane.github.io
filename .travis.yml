@@ -8,6 +8,7 @@ branches:
 before_install:
 - git --no-pager log -1 --oneline
 - travis_retry gem install jekyll
+- bundle install
 script:
 - jekyll build
 - jekyll build
