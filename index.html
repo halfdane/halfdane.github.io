@@ -6,14 +6,23 @@ title: Navigate by sight
 
 <div class="postslist_wrapper">
     <div class="postlist_layout">
-    <div class="postslist">
-        {% for post in site.posts %}<div class="post">
-                {% if post.image %}{% include image img=post.image title=post.title %}{% endif %}
-                <div class="text">
-                    <h3><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h3>
-                    <div class="excerpt">{{ post.excerpt | textilize }}</div>
-                </div>
-            </div>{% endfor %}
-    </div>
+        <div class="postslist">
+            {% for post in site.posts limit: 6 %}<div class="post">
+                    {% if post.image %}{% include image img=post.image title=post.title %}{% endif %}
+                    <div class="text">
+                        <h3><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h3>
+                        <div class="excerpt">{{ post.excerpt | textilize }}</div>
+                    </div>
+                </div>{% endfor %}
+        </div>
+        <div class="postslist">
+            {% for post in site.posts offset: 6 %}<div class="post">
+            {% if post.image %}{% include image img=post.image title=post.title %}{% endif %}
+            <div class="text">
+                <h3><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h3>
+                <div class="excerpt">{{ post.excerpt | textilize }}</div>
+            </div>
+        </div>{% endfor %}
+        </div>
     </div>
 </div>
