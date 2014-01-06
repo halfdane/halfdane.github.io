@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <title>Halfdane's Canned Nerd - TSP in JavaScript (Simulated Annealing)</title>
+    
+    <meta name="description" content="">
+    
+    <meta name="author" content="Halfdane">
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src='/assets/js/swipe.js'></script>
+
+    <script src="/assets/js/halfdane.js" ></script>
+
+    <!-- Le styles -->
+    <link href='/assets/slideshow-theme.css' rel='stylesheet' type='text/css' />
+<link href='/assets/halfdane.css' rel='stylesheet' type='text/css' />
+<link href='/assets/syntax.css' rel='stylesheet' type='text/css' />
+
+
+    <!-- Le fav and touch icons -->
+    <!-- Update these with your own images
+      <link rel="shortcut icon" href="images/favicon.ico">
+      <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+    -->
+    <!-- atom & rss feed -->
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate"
+          title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate"
+          title="Sitewide RSS Feed">
+
+</head>
+
+<body>
+
+<!-- nav>
+    <div class="menu">
+        <ul>
+            <li>
+                <a class="brand" href="/"><span class="title">Canned Nerd</span><span
+                        class="tagline"> - navigate by sight</span></a>
+            </li>
+            
+            
+            
+
+
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/about.html">About</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+
+
+
+        </ul>
+    </div>
+</nav -->
+
+<div class="container">
+    <div class="content">
+        
+<div class="pagination">
+    <h6><a href="/about.html">Halfdane's </a></h6>
+    <h4><a href="/">Canned Nerd: Navigate by sight</a></h4>
+    <ul>
+        
+        <li class="next"><a href="/2013/12/08/jekyll"
+                            title="Jekyll, Markdown &amp; Bilder">&larr; Jekyll, Markdown &amp; Bilder</a></li>
+        
+        
+        <li class="prev"><a href="/2013/11/23/buddel3"
+                            title="Buddelschiff (3: Segel)">Buddelschiff (3: Segel) &rarr;</a></li>
+        
+    </ul>
+</div>
+
+<h1>TSP in JavaScript (Simulated Annealing) 
+</h1>
+
+<div class="fullpost">
+    <p class="date">
+        <small>01 December 2013</small>
+    </p>
+    <p>Um meine JavaScript-Kenntnisse zu vertiefen, habe mich daran gemacht einen Graphen aus Knoten und Kanten zu implementieren. Und weil das zu einfach ist, soll darauf das Travelling Salesman Problem gelöst werden :)</p>
+
+<p>An einige Algorithmen dazu konnte ich mich noch ganz gut aus meinem Studium erinnern, aber ehrlich gesagt hatte ich nicht so viel Lust, die alten Unterlagen nochmal herauszukramen. Glücklicherweise konnte ich Inspiration auf dieser <a href="http://www.theprojectspot.com/tutorial-post/simulated-annealing-algorithm-for-beginners/6">Seite</a> finden. Diese Implementierung muss dann ja nur noch nach JavaScript portiert werden.</p>
+
+<p>Im Kern besteht die Idee darin, paarweise zufällig gewählte Kanten einer Tour zu vertauschen und zu prüfen, ob das Ergebnis besser ist als die bislang beste Tour. Die Wahrscheinlichkeit, dass eine schlechtere Lösung akzeptiert wird (um ein lokales Minimum zu vermeiden) ist direkt abhängig von der &quot;Temperatur&quot;.</p>
+
+<p>Ausgangspunkt ist eine zufällige Tour.</p>
+<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">acceptanceProbability</span><span class="p">(</span><span class="nx">energy</span><span class="p">,</span>
+                                <span class="nx">newEnergy</span><span class="p">,</span>
+                                <span class="nx">temperature</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// If the new solution is better, accept it</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">newEnergy</span> <span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span> <span class="nx">energy</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="mf">1.0</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="c1">// If the new solution is worse,</span>
+    <span class="c1">//calculate an acceptance probability</span>
+    <span class="k">return</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">exp</span><span class="p">(</span>
+        <span class="p">(</span><span class="nx">energy</span> <span class="o">-</span> <span class="nx">newEnergy</span><span class="p">)</span> <span class="o">/</span> <span class="nx">temperature</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Nach jedem Durchgang verringert sich die Temperatur und wenn sie unter 1 gefallen ist, wird das bis dahin beste Ergebnis akzeptiert, daher &quot;Simulated Annealing&quot; - simulierte Erstarrung.</p>
+<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">solve</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// Set initial temp</span>
+    <span class="kd">var</span> <span class="nx">temp</span> <span class="o">=</span> <span class="mi">10000</span><span class="p">,</span>
+        <span class="c1">// Cooling rate</span>
+        <span class="nx">coolingRate</span> <span class="o">=</span> <span class="mf">0.001</span><span class="p">;</span>
+
+    <span class="p">...</span>
+
+    <span class="k">while</span> <span class="p">(</span><span class="nx">temp</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="p">...</span>
+
+        <span class="c1">// Cool system</span>
+        <span class="nx">temp</span> <span class="o">*=</span> <span class="mi">1</span> <span class="o">-</span> <span class="nx">coolingRate</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Drumherum schwirrt noch ein ganzer Sack Code, der für die Liste der Punkte, die Berechnung der euklidischen Distanz zwischen zwei Punkten, die aktuelle Tour, ihre Gesamtlänge und noch viel mehr zuständig ist:</p>
+<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><span class="p">...</span>
+<span class="kd">function</span> <span class="nx">distanceTo</span> <span class="p">(</span><span class="nx">point</span><span class="p">,</span> <span class="nx">otherPoint</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">xDistance</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">abs</span><span class="p">(</span><span class="nx">point</span><span class="p">.</span><span class="nx">x</span> <span class="o">-</span> <span class="nx">otherPoint</span><span class="p">.</span><span class="nx">x</span><span class="p">),</span>
+        <span class="nx">yDistance</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">abs</span><span class="p">(</span><span class="nx">point</span><span class="p">.</span><span class="nx">y</span> <span class="o">-</span> <span class="nx">otherPoint</span><span class="p">.</span><span class="nx">y</span><span class="p">),</span>
+        <span class="c1">// Skip Math.sqrt - real distance is not</span>
+        <span class="c1">// important, as long as relative distance</span>
+        <span class="c1">// is correct. And it&#39;s soo slow!</span>
+        <span class="nx">distance</span> <span class="o">=</span> <span class="p">(</span><span class="nx">xDistance</span> <span class="o">*</span> <span class="nx">xDistance</span><span class="p">)</span>
+                <span class="o">+</span> <span class="p">(</span><span class="nx">yDistance</span> <span class="o">*</span> <span class="nx">yDistance</span><span class="p">);</span>
+
+        <span class="k">return</span> <span class="nx">distance</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">...</span>
+</code></pre></div>
+<p>Der ganze Kladderadatsch wird dann mit einem Array von Punkten gefüttert und gestartet:</p>
+<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">points</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="nx">x</span><span class="o">:</span> <span class="mi">60</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mi">200</span><span class="p">},</span>
+    <span class="p">{</span><span class="nx">x</span><span class="o">:</span> <span class="mi">180</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mi">200</span><span class="p">},</span>
+    <span class="p">{</span><span class="nx">x</span><span class="o">:</span> <span class="mi">80</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mi">180</span><span class="p">},</span>
+    <span class="p">{</span><span class="nx">x</span><span class="o">:</span> <span class="mi">140</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mi">180</span><span class="p">},</span>
+    <span class="p">{</span><span class="nx">x</span><span class="o">:</span> <span class="mi">20</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mi">160</span><span class="p">},</span>
+    <span class="p">{</span><span class="nx">x</span><span class="o">:</span> <span class="mi">100</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mi">160</span><span class="p">},</span>
+    <span class="p">{</span><span class="nx">x</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mi">160</span><span class="p">},</span>
+    <span class="p">{</span><span class="nx">x</span><span class="o">:</span> <span class="mi">140</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mi">140</span><span class="p">},</span>
+    <span class="p">{</span><span class="nx">x</span><span class="o">:</span> <span class="mi">40</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mi">120</span><span class="p">},</span>
+    <span class="p">{</span><span class="nx">x</span><span class="o">:</span> <span class="mi">100</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mi">120</span><span class="p">},</span>
+    <span class="p">{</span><span class="nx">x</span><span class="o">:</span> <span class="mi">180</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mi">100</span><span class="p">},</span>
+    <span class="p">{</span><span class="nx">x</span><span class="o">:</span> <span class="mi">60</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mi">80</span><span class="p">},</span>
+    <span class="p">{</span><span class="nx">x</span><span class="o">:</span> <span class="mi">120</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mi">80</span><span class="p">},</span>
+    <span class="p">{</span><span class="nx">x</span><span class="o">:</span> <span class="mi">180</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mi">60</span><span class="p">},</span>
+    <span class="p">{</span><span class="nx">x</span><span class="o">:</span> <span class="mi">20</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mi">40</span><span class="p">},</span>
+    <span class="p">{</span><span class="nx">x</span><span class="o">:</span> <span class="mi">100</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mi">40</span><span class="p">},</span>
+    <span class="p">{</span><span class="nx">x</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mi">40</span><span class="p">},</span>
+    <span class="p">{</span><span class="nx">x</span><span class="o">:</span> <span class="mi">20</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mi">20</span><span class="p">},</span>
+    <span class="p">{</span><span class="nx">x</span><span class="o">:</span> <span class="mi">60</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mi">20</span><span class="p">},</span>
+    <span class="p">{</span><span class="nx">x</span><span class="o">:</span> <span class="mi">160</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mi">20</span><span class="p">}</span>
+<span class="p">];</span>
+
+<span class="nx">halfdane</span><span class="p">.</span><span class="nx">tsp</span><span class="p">.</span><span class="nx">createAnnealing</span><span class="p">(</span><span class="nx">points</span><span class="p">).</span><span class="nx">solve</span><span class="p">();</span>
+</code></pre></div>
+<p>Insgesamt würde ich beim Anschauen des Ergebnisses sagen: ja, es funktioniert, aber mit den paar Punkten hätte ich das auch manuell machen können.</p>
+
+<figure class="cap-left p20"><img src="/assets/img/tsp_before.png" alt="Ausgangstour"><figcaption><p>Ausgangstour</p>
+</figcaption></figure>
+
+<figure class="cap-left p20"><img src="/assets/img/tsp_annealing.png" alt="Ergebnis"><figcaption><p>Nach der simulierten Erstarrung</p>
+</figcaption></figure>
+
+<p>Bei größeren Punktmengen wird die Rechenzeit seeehr lang und das Ergebnis ist trotzdem nicht so richtig beeindruckend:</p>
+
+<figure class="cap-left p20"><img src="/assets/img/tsp_before1.png" alt="100 Punkte Ausgangstour"><figcaption><p>100 Punkte vor dem Durchlauf</p>
+</figcaption></figure>
+
+<figure class="cap-left p20"><img src="/assets/img/tsp_annealing1.png" alt="100 Punkte Ergebnis"><figcaption><p>Die Ergebnistour</p>
+</figcaption></figure>
+
+<p>... und das waren nur 100 Punkte. Ich wollte eigentlich eher 20-mal so viele. Und das soll auf einem Handy laufen, nicht auf einer Workstation :/ Tja, nicht umsonst gehört das TSP zu der Klasse der echt richtig schwierigen Probleme (ja, das ist nicht der richtige Name - verklag&#39; mich).</p>
+
+</div>
+
+<div class="pagination">
+    <hr>
+    <ul>
+        
+        <li class="next"><a href="/2013/12/08/jekyll"
+                            title="Jekyll, Markdown &amp; Bilder">&larr; Jekyll, Markdown &amp; Bilder</a></li>
+        
+        <li><h6><a href="/about.html">Halfdane's </a></h6><h4><a href="/">Canned Nerd: Navigate by sight</a></h4></li>
+        
+        <li class="prev"><a href="/2013/11/23/buddel3"
+                            title="Buddelschiff (3: Segel)">Buddelschiff (3: Segel) &rarr;</a></li>
+        
+    </ul>
+    <hr>
+</div>
+
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'halfdane'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+
+    </div>
+    <hr>
+    <footer>
+        <p>&copy; 2014 Halfdane
+            <span class="js_baseline_trigger btn">Click for raster</span>
+        </p>
+    </footer>
+</div>
+
+
+</body>
+</html>
+
