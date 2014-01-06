@@ -121,4 +121,3 @@ Die Ergebnistour
 {% endimage %}
 
 ... und das waren nur 100 Punkte. Ich wollte eigentlich eher 20-mal so viele. Und das soll auf einem Handy laufen, nicht auf einer Workstation :/ Tja, nicht umsonst gehört das TSP zu der Klasse der echt richtig schwierigen Probleme (ja, das ist nicht der richtige Name - verklag' mich).
-
