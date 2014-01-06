@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf8d26b6-9aac-44de-917c-c8258df2f482" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_assets/scss/postlist.scss" afterPath="$PROJECT_DIR$/_assets/scss/postlist.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2013-12-01-annealing.md" afterPath="$PROJECT_DIR$/_posts/2013-12-01-annealing.md" />
     </list>
     <ignored path="halfdane.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -128,10 +127,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2013-12-01-annealing.md" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="2013-12-01-annealing.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_posts/2013-12-01-annealing.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="50" selection-start="151" selection-end="151" vertical-scroll-proportion="0.0">
+            <state line="58" column="53" selection-start="2336" selection-end="2336" vertical-scroll-proportion="0.5701754">
               <folding />
             </state>
           </provider>
@@ -182,10 +181,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="postlist.scss" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="postlist.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_assets/scss/postlist.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="111" column="3" selection-start="2717" selection-end="2717" vertical-scroll-proportion="0.6871345">
+            <state line="84" column="21" selection-start="2195" selection-end="2195" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -253,9 +252,9 @@
         <option value="$PROJECT_DIR$/_posts/2013-12-11-vertikaler-rhythmus.md" />
         <option value="$PROJECT_DIR$/_assets/scss/halfdane.scss" />
         <option value="$PROJECT_DIR$/_assets/scss/typography.scss" />
-        <option value="$PROJECT_DIR$/_posts/2013-12-01-annealing.md" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/_assets/scss/postlist.scss" />
+        <option value="$PROJECT_DIR$/_posts/2013-12-01-annealing.md" />
       </list>
     </option>
   </component>
@@ -861,13 +860,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2013-12-01-annealing.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="50" selection-start="151" selection-end="151" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="47" selection-start="709" selection-end="709" vertical-scroll-proportion="-11.25">
@@ -877,7 +869,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_assets/scss/postlist.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="111" column="3" selection-start="2717" selection-end="2717" vertical-scroll-proportion="0.6871345">
+        <state line="84" column="21" selection-start="2195" selection-end="2195" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2013-12-01-annealing.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="53" selection-start="2336" selection-end="2336" vertical-scroll-proportion="0.5701754">
           <folding />
         </state>
       </provider>

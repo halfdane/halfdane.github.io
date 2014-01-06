@@ -16,13 +16,11 @@ Im Kern besteht die Idee darin, paarweise zufällig gewählte Kanten einer Tour 
 Ausgangspunkt ist eine zufällige Tour.
 
 ```javascript
-
-
 function acceptanceProbability(energy,
                                 newEnergy,
                                 temperature) {
     // If the new solution is better, accept it
-    if (newEnergy &lt; energy) {
+    if (newEnergy < energy) {
         return 1.0;
     }
     // If the new solution is worse,
@@ -35,8 +33,6 @@ function acceptanceProbability(energy,
 Nach jedem Durchgang verringert sich die Temperatur und wenn sie unter 1 gefallen ist, wird das bis dahin beste Ergebnis akzeptiert, daher "Simulated Annealing" - simulierte Erstarrung.
 
 ```javascript
-
-
 function solve() {
     // Set initial temp
     var temp = 10000,
@@ -58,8 +54,6 @@ function solve() {
 Drumherum schwirrt noch ein ganzer Sack Code, der für die Liste der Punkte, die Berechnung der euklidischen Distanz zwischen zwei Punkten, die aktuelle Tour, ihre Gesamtlänge und noch viel mehr zuständig ist:
 
 ```javascript
-
-
 ...
 function distanceTo (point, otherPoint) {
     var xDistance = Math.abs(point.x - otherPoint.x),
