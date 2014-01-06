@@ -245,7 +245,6 @@ figure,
   border-radius: 0.30952em;
   margin: 0.30952em;
   /*large screen*/
-  background-size: 33.33333% 100px;
   /*small screen*/
   /*very small screen*/ }
   .postslist figure {
@@ -270,39 +269,74 @@ figure,
     vertical-align: top; }
     .postslist .post .text figure {
       display: none; }
-  .postslist .postlist_layout {
-    font-size: 0; }
-  .postslist .post {
-    display: inline-block;
-    width: 33.33333%; }
-    .postslist .post * html {
-      font-size: 131.25%; }
-    .postslist .post html {
-      font-size: 21px;
-      line-height: 1.2381em; }
-  .postslist .post:nth-child(3n+1):before {
-    content: '';
-    position: absolute;
-    margin-top: -1.2381em;
-    display: block;
-    left: 0;
-    right: -0.61905em;
-    border-top: 0.61905em solid #eeeeee;
-    border-radius: 0.30952em; }
-  @media screen and (max-width: 74.28571em) {
-    .postslist {
-      background-size: 50% 100px; }
-      .postslist .postlist_layout {
+  @media screen and (min-width: 74.28571em) {
+    .postslist:nth-child(-n+1) {
+      background-size: 33.33333% 100px; }
+      .postslist:nth-child(-n+1) .postlist_layout {
         font-size: 0; }
-      .postslist .post {
+      .postslist:nth-child(-n+1) .post {
         display: inline-block;
-        width: 50%; }
-        .postslist .post * html {
+        width: 33.33333%; }
+        .postslist:nth-child(-n+1) .post * html {
           font-size: 131.25%; }
-        .postslist .post html {
+        .postslist:nth-child(-n+1) .post html {
           font-size: 21px;
           line-height: 1.2381em; }
-      .postslist .post:nth-child(2n+1):before {
+      .postslist:nth-child(-n+1) .post:nth-child(3n+1):before {
+        content: '';
+        position: absolute;
+        margin-top: -1.2381em;
+        display: block;
+        left: 0;
+        right: -0.61905em;
+        border-top: 0.61905em solid #eeeeee;
+        border-radius: 0.30952em; } }
+  .postslist:nth-child(n+2) {
+    background-size: 100% 100px; }
+    .postslist:nth-child(n+2) .postlist_layout {
+      font-size: 0; }
+    .postslist:nth-child(n+2) .post {
+      display: inline-block;
+      width: 100%; }
+      .postslist:nth-child(n+2) .post * html {
+        font-size: 131.25%; }
+      .postslist:nth-child(n+2) .post html {
+        font-size: 21px;
+        line-height: 1.2381em; }
+    .postslist:nth-child(n+2) .post:nth-child(1n+1):before {
+      content: '';
+      position: absolute;
+      margin-top: -1.2381em;
+      display: block;
+      left: 0;
+      right: -0.61905em;
+      border-top: 0.61905em solid #eeeeee;
+      border-radius: 0.30952em; }
+    .postslist:nth-child(n+2) figure {
+      max-width: 20%;
+      height: auto;
+      display: inline-block;
+      margin: 0; }
+      .postslist:nth-child(n+2) figure img {
+        height: auto; }
+    .postslist:nth-child(n+2) .post .text {
+      display: inline-block;
+      padding-left: 1%;
+      max-width: 78%; }
+  @media screen and (max-width: 74.28571em) {
+    .postslist:nth-child(-n+1) {
+      background-size: 50% 100px; }
+      .postslist:nth-child(-n+1) .postlist_layout {
+        font-size: 0; }
+      .postslist:nth-child(-n+1) .post {
+        display: inline-block;
+        width: 50%; }
+        .postslist:nth-child(-n+1) .post * html {
+          font-size: 131.25%; }
+        .postslist:nth-child(-n+1) .post html {
+          font-size: 21px;
+          line-height: 1.2381em; }
+      .postslist:nth-child(-n+1) .post:nth-child(2n+1):before {
         content: '';
         position: absolute;
         margin-top: -1.2381em;
@@ -312,19 +346,19 @@ figure,
         border-top: 0.61905em solid #eeeeee;
         border-radius: 0.30952em; } }
   @media screen and (max-width: 61.90476em) {
-    .postslist {
+    .postslist:nth-child(-n+1) {
       background-size: 100% 100px; }
-      .postslist .postlist_layout {
+      .postslist:nth-child(-n+1) .postlist_layout {
         font-size: 0; }
-      .postslist .post {
+      .postslist:nth-child(-n+1) .post {
         display: inline-block;
         width: 100%; }
-        .postslist .post * html {
+        .postslist:nth-child(-n+1) .post * html {
           font-size: 131.25%; }
-        .postslist .post html {
+        .postslist:nth-child(-n+1) .post html {
           font-size: 21px;
           line-height: 1.2381em; }
-      .postslist .post:nth-child(1n+1):before {
+      .postslist:nth-child(-n+1) .post:nth-child(1n+1):before {
         content: '';
         position: absolute;
         margin-top: -1.2381em;
@@ -333,14 +367,14 @@ figure,
         right: -0.61905em;
         border-top: 0.61905em solid #eeeeee;
         border-radius: 0.30952em; }
-      .postslist figure {
+      .postslist:nth-child(-n+1) figure {
         max-width: 20%;
         height: auto;
         display: inline-block;
         margin: 0; }
-        .postslist figure img {
+        .postslist:nth-child(-n+1) figure img {
           height: auto; }
-      .postslist .post .text {
+      .postslist:nth-child(-n+1) .post .text {
         display: inline-block;
         padding-left: 1%;
         max-width: 78%; } }
