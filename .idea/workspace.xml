@@ -2,16 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf8d26b6-9aac-44de-917c-c8258df2f482" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/img/buddel_f_plan1.jpg" afterPath="$PROJECT_DIR$/assets/img/buddel_f_plan1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/img/buddel_f_plan2.jpg" afterPath="$PROJECT_DIR$/assets/img/buddel_f_plan2.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/img/buddel_f_plan3.jpg" afterPath="$PROJECT_DIR$/assets/img/buddel_f_plan3.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/img/buddel_f_plan4.jpg" afterPath="$PROJECT_DIR$/assets/img/buddel_f_plan4.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/img/buddel_f_stapellauf03.jpg" afterPath="$PROJECT_DIR$/assets/img/buddel_f_stapellauf03.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/img/buddel_f_stapellauf04.jpg" afterPath="$PROJECT_DIR$/assets/img/buddel_f_stapellauf04.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/img/buddel_f_stapellauf07.jpg" afterPath="$PROJECT_DIR$/assets/img/buddel_f_stapellauf07.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_drafts/2014-01-14-buddelfinal.md" afterPath="$PROJECT_DIR$/_drafts/2014-01-14-buddelfinal.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="halfdane.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1389340405320" ignored="false" />
+    <file path="/Dummy.txt" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1389359948270" ignored="false" />
     <file path="/index.md" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387208296219" ignored="false" />
     <file path="/halfdane.scss" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387558866122" ignored="false" />
     <file path="/default.html" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387654276018" ignored="false" />
@@ -62,7 +61,7 @@
     <file path="/.travis.yml" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1389012498921" ignored="false" />
     <file path="/a.js" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1389019184488" ignored="false" />
     <file path="$USER_HOME$/otto/lhotse-order/order-system/src/main/webapp/static-resources/js/order/public/catalogorder/010_catalogOrder.js" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1389022068883" ignored="false" />
-    <file path="/2014-01-14-buddelfinal.md" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1389359421450" ignored="false" />
+    <file path="/2014-01-14-buddelfinal.md" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1389360636347" ignored="false" />
     <file path="$USER_HOME$/otto/lhotse-order/tomcat-server/configuration.properties" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1389348836673" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -132,12 +131,9 @@
       <file leaf-file-name="2014-01-14-buddelfinal.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_drafts/2014-01-14-buddelfinal.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="148" column="34" selection-start="9575" selection-end="9575" vertical-scroll-proportion="0.85160756">
+            <state line="209" column="14" selection-start="11504" selection-end="11504" vertical-scroll-proportion="0.842615">
               <folding />
             </state>
-          </provider>
-          <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-            <state />
           </provider>
         </entry>
       </file>
@@ -300,7 +296,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -440,21 +435,22 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="139" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="149" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="142" />
-    <property name="MemberChooser.sorted" value="false" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="142" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="155" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1064" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1067" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1064" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="159" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="152" />
     <property name="GoToClass.includeJavaFiles" value="false" />
@@ -547,19 +543,6 @@
       <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -588,6 +571,19 @@
       <listeners />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="" />
@@ -604,6 +600,13 @@
       <method>
         <option name="Make" enabled="false" />
       </method>
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
+      <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -624,13 +627,6 @@
       </option>
       <envs />
       <patterns />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
@@ -702,7 +698,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="-3" width="2564" height="1414" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32938388" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -721,7 +717,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.199284" sideWeight="0.83175355" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19888623" sideWeight="0.83175355" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17015342" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -812,9 +808,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2013-11-23-buddel3.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="14" selection-start="1121" selection-end="1248" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="24" column="14" selection-start="1121" selection-end="1248" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_site/assets/img/buddel_f_segel2.jpg">
@@ -844,16 +838,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_assets/scss/postlist.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="21" selection-start="2195" selection-end="2195" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="84" column="21" selection-start="2195" selection-end="2195" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2013-12-01-annealing.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="53" selection-start="2336" selection-end="2336" vertical-scroll-proportion="-6.1538463">
-          <folding />
-        </state>
+        <state line="58" column="53" selection-start="2336" selection-end="2336" vertical-scroll-proportion="-6.1538463" />
       </provider>
       <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
         <state />
@@ -886,7 +876,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_drafts/2014-01-14-buddelfinal.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="148" column="34" selection-start="9575" selection-end="9575" vertical-scroll-proportion="0.85160756">
+        <state line="209" column="14" selection-start="11504" selection-end="11504" vertical-scroll-proportion="0.842615">
           <folding />
         </state>
       </provider>

@@ -152,6 +152,65 @@ Die Stagen laufen wirklich _durch_ den Klüverbaum
 {% endgallery %}
 
 ## Stapellauf
+Jetzt kommt der Augenblick ~~in dem der Elefant das Wasser lässt~~ der Wahrheit: durch diese hohle Gasse muss es passen. Und was nicht passt wird passend gemacht, denn bangemachen gilt nicht und so jung kommen wir nicht mehr zusammen. Egal, einen Heiermann ins Phrasenschwein und ab dafür.
+
+Tatsächlich gab es ein paar Momente, in denen ich etwas ins Schwitzen kam - etwa als mir klarwurde, dass die Aufbauten auf dem Oberdeck verhindern, dass die Masten sich ganz einklappen lassen. Aber Deckaufbauten können auch wieder entfernt werden, so dass die Masten doch durchpassen.
+
+Oder als der Leim in den Löchern des Kiels bereits angezogen war und die Teile nicht mehr auseinander fielen, aber auch noch nicht richtig zusammen steckten. Mit einem ~~frustrierten~~ wütendenden Druck auf das verklemmte Scheißding von Kiel ist er dann doch noch an die richtige Stelle gerutscht.
+
+Oder als... ach schiet op, nu isses ja drin inner buddel.
+
+{% gallery "p50" %}
+{% image buddel_f_stapellauf01.jpg "" %}
+{% endimage %}
+
+{% image buddel_f_stapellauf02.jpg "" %}
+{% endimage %}
+
+{% image buddel_f_stapellauf03.jpg "" %}
+{% endimage %}
+
+{% image buddel_f_stapellauf04.jpg "" %}
+{% endimage %}
+
+{% image buddel_f_stapellauf05.jpg "" %}
+{% endimage %}
+
+{% image buddel_f_stapellauf06.jpg "" %}
+{% endimage %}
+
+{% image buddel_f_stapellauf07.jpg "" %}
+{% endimage %}
+
+{% image buddel_f_stapellauf08.jpg "" %}
+{% endimage %}
+
+{% image buddel_f_stapellauf09.jpg "" %}
+{% endimage %}
+
+{% image buddel_f_stapellauf10.jpg "" %}
+{% endimage %}
+
+{% image buddel_f_stapellauf11.jpg "" %}
+{% endimage %}
+
+{% image buddel_f_stapellauf12.jpg "" %}
+{% endimage %}
+
+{% image buddel_f_stapellauf13.jpg "" %}
+{% endimage %}
+
+{% image buddel_f_stapellauf14.jpg "" %}
+{% endimage %}
+
+{% image buddel_f_stapellauf15.jpg "" %}
+{% endimage %}
+
+{% image buddel_f_stapellauf16.jpg "" %}
+{% endimage %}
+
+{% endgallery %}
+
 
 ## Wasser
 
