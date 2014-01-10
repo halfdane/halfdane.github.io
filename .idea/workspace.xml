@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf8d26b6-9aac-44de-917c-c8258df2f482" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_drafts/.2014-01-14-buddelfinal.md.swo" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_drafts/jekyll-introduction-draft.md" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/img/buddel_f_plan1.jpg" afterPath="$PROJECT_DIR$/assets/img/buddel_f_plan1.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/img/buddel_f_plan2.jpg" afterPath="$PROJECT_DIR$/assets/img/buddel_f_plan2.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/img/buddel_f_plan3.jpg" afterPath="$PROJECT_DIR$/assets/img/buddel_f_plan3.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/img/buddel_f_plan4.jpg" afterPath="$PROJECT_DIR$/assets/img/buddel_f_plan4.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_drafts/2014-01-14-buddelfinal.md" afterPath="$PROJECT_DIR$/_drafts/2014-01-14-buddelfinal.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -52,7 +54,6 @@
     <file path="/navi.scss" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387550954092" ignored="false" />
     <file path="/post.scss" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387561410724" ignored="false" />
     <file path="$PROJECT_DIR$/_site/assets/jquery.swipeshow.css" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387563578478" ignored="false" />
-    <file path="$PROJECT_DIR$/_site/assets/syntax.css" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387563578478" ignored="false" />
     <file path="/clear_tag.rb" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387649033798" ignored="false" />
     <file path="/halfdane.js" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1387658005353" ignored="false" />
     <file path="/2013-11-23-buddel3.md" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1388999116580" ignored="false" />
@@ -61,7 +62,8 @@
     <file path="/.travis.yml" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1389012498921" ignored="false" />
     <file path="/a.js" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1389019184488" ignored="false" />
     <file path="$USER_HOME$/otto/lhotse-order/order-system/src/main/webapp/static-resources/js/order/public/catalogorder/010_catalogOrder.js" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1389022068883" ignored="false" />
-    <file path="/2014-01-14-buddelfinal.md" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1389343597716" ignored="false" />
+    <file path="/2014-01-14-buddelfinal.md" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1389359421450" ignored="false" />
+    <file path="$USER_HOME$/otto/lhotse-order/tomcat-server/configuration.properties" changelist="bf8d26b6-9aac-44de-917c-c8258df2f482" time="1389348836673" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +76,11 @@
   </component>
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
+  </component>
+  <component name="DatabaseView">
+    <flatten value="false" />
+    <groupTables value="false" />
+    <sortChildren value="false" />
   </component>
   <component name="DebuggerManager">
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
@@ -122,22 +129,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="2013-12-01-annealing.md" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/2013-12-01-annealing.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="53" selection-start="2336" selection-end="2336" vertical-scroll-proportion="-6.1538463">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-            <state />
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="2014-01-14-buddelfinal.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_drafts/2014-01-14-buddelfinal.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="106" column="36" selection-start="6871" selection-end="6871" vertical-scroll-proportion="0.9258038">
+            <state line="148" column="34" selection-start="9575" selection-end="9575" vertical-scroll-proportion="0.85160756">
               <folding />
             </state>
           </provider>
@@ -146,28 +141,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="buddel_f_masten1.jpg" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/img/buddel_f_masten1.jpg">
+      <file leaf-file-name="buddel_f_kiellegung2.jpg" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_site/assets/img/buddel_f_kiellegung2.jpg">
           <provider selected="true" editor-type-id="images">
             <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2013-11-23-buddel3.md" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/2013-11-23-buddel3.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="14" selection-start="1121" selection-end="1248" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="postlist.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_assets/scss/postlist.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="84" column="21" selection-start="2195" selection-end="2195" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
+      <file leaf-file-name="buddel_f_kiellegung4.jpg" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_site/assets/img/buddel_f_kiellegung4.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -345,6 +329,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="_site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="halfdane.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="halfdane.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="_site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -356,6 +358,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="halfdane.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="_site" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -702,7 +708,7 @@
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25536993" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -794,71 +800,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/img/buddel_f_rohrumpf2.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/img/buddel_f_rohrumpf3.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/img/buddel_f_rohrumpf4.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/img/buddel_f_rohrumpf5.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/img/buddel_f_rohrumpf6.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/img/buddel_f_rohrumpf7.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/img/buddel_f_rohrumpf8.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/img/buddel_f_rohrumpf9.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/img/buddel_f_masten2.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/img/buddel_f_masten3.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/img/buddel_f_masten4.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/img/buddel_f_masten5.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/img/buddel_f_masten6.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/img/buddel_f_masten1.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -869,9 +810,83 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2013-11-23-buddel3.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="14" selection-start="1121" selection-end="1248" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_site/assets/img/buddel_f_segel2.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_site/assets/img/buddel_f_segel1.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_site/assets/img/buddel_f_segel3.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_site/assets/img/buddel_f_segel4.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_site/assets/img/buddel_f_segel5.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_assets/scss/postlist.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="84" column="21" selection-start="2195" selection-end="2195" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2013-12-01-annealing.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="53" selection-start="2336" selection-end="2336" vertical-scroll-proportion="-6.1538463">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_site/assets/img/buddel_f_kiellegung1.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_site/assets/img/buddel_f_kiellegung3.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_site/assets/img/buddel_f_kiellegung2.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_site/assets/img/buddel_f_kiellegung5.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_site/assets/img/buddel_f_kiellegung4.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/_drafts/2014-01-14-buddelfinal.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="36" selection-start="6871" selection-end="6871" vertical-scroll-proportion="0.9258038">
+        <state line="148" column="34" selection-start="9575" selection-end="9575" vertical-scroll-proportion="0.85160756">
           <folding />
         </state>
       </provider>
