@@ -22,11 +22,11 @@ Um ein Gefühl dafür zu bekommen, wie so ein umklappbarer Mast auf dem Rumpf be
 {% endimage %}
 
 {% image buddel_f_plan3.jpg "Rumpf in Teilen und Segeldetails" %}
-Der Rumpf soll auf jeden Fall mehrteilig in die Flasche und das geht ja nicht von selbst. Rechts und unten sind Detailansichten der Segelarten, die an dem Schiff vorkommen. Ich freue mich besonders über das Gaffelsegel am Besan :)
+Der Rumpf soll auf jeden Fall mehrteilig in die Flasche und das geht ja nicht von selbst. Rechts und unten sind Detailansichten der Segelarten, die an dem Schiff vorkommen. Ich freue mich besonders über das Gaffelsegel am Besanmast :)
 {% endimage %}
 
 {% image buddel_f_plan4.jpg "Rah-Details und Szenerie in der Flasche" %}
-Um ein bisschen Dynamik in die Flasche zu bringen, soll das Schiff mit geblähten Segeln durch Wellen stampfen in dem Moment eingefroren sein, in dem es gerade auf einen Wellenkamm steigt. Das Wasser soll grau eingefärbt und stürmisch aufgepeitscht sein. Dieser Teil des Plans hat sich als zu kompliziert für mich herausgestellt, also bin ich letzlich auf klares und nur leicht gewelltes Wasser umgestiegen.
+Um ein bisschen Dynamik in die Flasche zu bringen, soll das Schiff mit geblähten Segeln durch Wellen stampfen in dem Moment eingefroren sein, in dem es gerade auf einen Wellenkamm steigt. Das Wasser soll grau eingefärbt und stürmisch aufgepeitscht sein. Dieser Teil des Plans hat sich als zu kompliziert für mich herausgestellt, und ich bin letzlich auf klares und nur leicht gewelltes Wasser umgestiegen.
 Also eher friedliche Südsee als wilder Kattegat.
 {% endimage %}
 
@@ -39,7 +39,7 @@ Damit die Flasche nicht auf dem Regal immer im Weg steht, soll sie an der Wand h
 
 
 ## Kiellegung und Rumpf
-Den Rumpf habe ich aus zwei nebeneinander gelegten Vierkanthölzern ausgesägt, und noch einen Kiel darunter. Damit die Teile in der Flasche richtig zusammenflutschen, sind sie mit Holzdübel und Loch versehen. Der Schiffsrumpf lässt sich mit einer Laubsäge eigentlich nur dann gut formen, wenn die Vierkanthölzer wie ein Stück zusammenhägen, sonst verschieben die Teile sich gegeneinander und passen am Ende überhaupt nicht zusammen. Ich habe sie mit doppelseitigem Klebeband verklebt.
+Den Rumpf habe ich aus zwei nebeneinander gelegten Vierkanthölzern ausgesägt, und noch einen Kiel darunter befestigt. Damit die Teile in der Flasche richtig zusammenflutschen, sind sie mit Holzdübel und Loch versehen. Der Schiffsrumpf lässt sich mit einer Laubsäge eigentlich nur dann gut formen, wenn die Vierkanthölzer wie ein Stück zusammenhägen, sonst verschieben die Teile sich gegeneinander und passen am Ende überhaupt nicht zusammen. Ich habe sie mit doppelseitigem Klebeband verklebt.
 
 Insgesamt habe ich für diesen Schritt drei Durchgänge gebraucht. Die besondere Schwierigkeit war für mich, dass die Teile ja in der Flasche fast von selbst zusammenfallen sollen, und nicht auf halbem Wege stecken bleiben oder nicht richtig passen. Zu diesem Zeitpunkt ist mir auch klar geworden, dass die Teile des Rumpfs auf gar keinen Fall durch den Flaschenhals passen würden, wenn die Masten mit den ganzen Segeln direkt darauf montiert wären. Aus einer 2mm-Leiste habe ich also noch ein "Oberdeck" geformt und die Masten darauf montiert. Auf dem Rumpf sind links und rechts (Back- und Steuerbords :) schmale Leistenstücke geklebt, damit das Oberdeck nicht seitlich verrutscht.
 
@@ -71,7 +71,7 @@ Der Hauptrumpf passt durch den Flaschenhals.
 {% endimage %}
 
 {% image buddel_f_rohrumpf7.jpg "Hauptrumpf passt in Flasche 2" %}
-Passt grade mal so - an dem Nippel rechts am Flaschenhals musste noch ein bisschen ab damit es geht.
+Passt grade mal so - vom Nippel rechts am Flaschenhals musste noch ein bisschen ab, damit es geht.
 {% endimage %}
 
 {% image buddel_f_rohrumpf8.jpg "Innenansicht" %}
@@ -81,7 +81,7 @@ Der Rumpf ohne linkes Hauptrumpf-Teil - eine Innenansicht.
 {% endgallery %}
 
 ## Masten, Rahen und Gaffel
-Es sind diesmal wesentlich mehr Masten als beim Prototypen, und schon da haben sie die Hauptarbeit verursacht. Aber bangemachen gilt nicht: die Zahnstocher und Schaschlickspieße maßstabsgerecht (naja, frei nach Schnauze) zugeschnitten und weiß lackiert - B. fand es angemessen, dass zumindest eines seiner Playmobil-Männchen hilft. Ja, und in Anbetracht der fürchterlichen Menge von Rahen auf der Rickmers fiel mit die Entscheidung leicht, ein bisschen zu schummeln und keine sechs Segel an jeden Mast zu hängen, sondern höchstens vier, das erleichtert die Arbeit weil mehr Platz ist und es sieht auch nicht so pisselig klitzeklein aus.
+Es sind diesmal wesentlich mehr Masten als beim Prototypen, und schon da haben sie die Hauptarbeit verursacht. Aber bangemachen gilt nicht: die Zahnstocher und Schaschlickspieße maßstabsgerecht (naja, frei nach Schnauze) zugeschnitten und weiß lackiert - B. fand es angemessen, dass zumindest eines seiner Playmobil-Männchen hilft. Ja, und in Anbetracht der fürchterlichen Menge von Rahen auf der Rickmers fiel mit die Entscheidung leicht, ein bisschen zu schummeln und keine sechs Segel an jeden Mast zu hängen sondern höchstens vier, das erleichtert die Arbeit weil mehr Platz ist und es sieht auch nicht so pisselig klitzeklein aus.
 
 {% gallery "p50" %}
 {% image buddel_f_masten2.jpg "Zugeschnittene Masten und Rahen" %}
@@ -213,5 +213,26 @@ Oder als... ach schiet op, nu isses ja drin inner buddel.
 
 
 ## Wasser
+Traditionell wird vom Rumpf eines Buddelschiffs nur die obere Hälfte benutzt, und auf blaue Knete oder Fensterkitt gedrückt. Das soll dann das Wasser darstellen. Mir schwebt für den Rumpf allerdings etwas anderes vor, deswegen besteht die Konstruktion ja auch aus drei Teilen plus Oberdeck. Ich möchte gerne das ganze Schiff sehen, und zwar nicht wie im Trockendock, sondern auf großer Fahrt, zwecks diesen Behufes sind ja auch die Segel schon gebläht. 
+Deswegen muss das Wasser durchsichtig sein. Ist zwar nicht besonders traditionell, aber das ist dann halt so. 
+Eigentlich wollte ich Epoxy (Gießharz) mit Tusche etwas abtönen und die Oberfläche dann zu wilden Atlantikwellen aufpeitschen, durch die das Schiff stampft, aber Epoxy zieht lange fiese Fäden wenn man es berührt und versaut damit so ziemlich den Effekt. Außerdem stinkt es, ist nicht leicht zu verarbeiten und vergibt keine Fehler. Nicht grade optimal für den letzten Schliff -  ich habe eigentlich keine Lust, das ganze Ding jetzt noch zu versauen. 
+
+Zum Glück ist mir noch eingefallen, dass es Ende der Achtziger so furchtbar kitschige durchsichtige Kerzen mit Glitter gab. Vorzugsweise in einer Sektflöte. Ein Glück nicht, weil die Welt nicht ohne besser dran gewesen wäre, sondern weil dieses Gel immer noch gekauft werden kann und flüssig wird, wenn man es erhitzt. Danach dann wieder gelatineartig fest. 
+
+Ein paar Experimente haben gezeigt, dass diese Substanz in Kochtopf auf kleinster Stufe schön dünnflüssig und fast blasenfrei gerät. Beim Abkühlen muss man warten, bis das Gel beim Kippen nicht mehr mitschwappt, dann kann die Oberfläche modelliert werden, ohne dass es klebt oder Fäden zieht. 
+
+Der Wermutstropfen ist die Erkenntnis, dass es sich nicht gut einfärben lässt (ist halt hydrophob) und dass die modellierten Formen weich wirken. Atlantikwellen gehen dann nur mit massiven Nacharbeiten, z. B. mit Silikon und Farbe für die Gischt. Oder halt kein Atlantik. Bei mir stampft die Rickmer Rickmers jetzt durch ruhige Südseewellen. So what?! 
+
+Die Plastikfolie, die als Rutsche durch den Flaschenhals dienen sollte, ist beim ersten Experiment direkt geschmolzen, aber die leere Milchtüte hat ihren Zweck sehr schön erfüllt. 
+
+Galerie Wasser 
 
 ## Korken, Ständer und Wandhalterung
+Auch wenn ich stolz auf das Schiff bin und es recht gelungen finde, möchte ich es eigentlich nicht so gerne im Regal herumstehen haben. Da nimmt es nur Platz weg, verstaubt und fällt runter. 
+Eine Wandhalterung, die das problemlose Auf- und Abhängen der Flasche erlaubt, sowie ein Kragen für den Flaschenhals, damit sie nicht umkippt, gehören auf jeden Fall noch gemacht. 
+
+Außerdem habe ich bei meinen Recherchen den Eindruck gewonnen, dass es zum guten Ton gehört, auf eine Flasche mit einem unmöglichen Schiff drin noch einen unmöglichen Korken zu setzen, der eigentlich gar nicht durch den Hals passen dürfte und insbesondere nicht entfernt werden kann ohne die Flasche zu zerbrechen. 
+
+Das alles möchte ich schon noch machen, aber ehrlich gesagt reicht es dann auch. Aus ein paar Bambus-Frühstücksbrettchen, die ich auf dem Weg zu B.s Schule im 1€-Shop geschossen habe, habe ich einen Ständer gesägt, der die Flasche am Hals fest umschließt, so dass sie aufrecht auf dem Tisch stehen kann. In ein weiteres Brettchen habe ich einen Schlitz gesägt, so dass dieser Kragen/Ständer hineinrutschen kann und es dann an die Wand geschraubt. Da ist es aus dem Weg und kann trotzdem ohne weiteres jederzeit abgenommen werden. 
+
+Galerie Ständer 
