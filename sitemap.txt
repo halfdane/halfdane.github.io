@@ -1,13 +1,13 @@
 
-http://halfdane.github.io/rss.xml
 http://halfdane.github.io/sitemap.txt
-http://halfdane.github.io/pages.html
-http://halfdane.github.io/tags.html
+http://halfdane.github.io/index.html
 http://halfdane.github.io/archive.html
+http://halfdane.github.io/about.html
 http://halfdane.github.io/json/index.html
 http://halfdane.github.io/atom.xml
-http://halfdane.github.io/about.html
-http://halfdane.github.io/index.html
+http://halfdane.github.io/pages.html
+http://halfdane.github.io/tags.html
+http://halfdane.github.io/rss.xml
 
 http://halfdane.github.io/2013/12/11/vertikaler-rhythmus
 http://halfdane.github.io/2013/12/08/jekyll
