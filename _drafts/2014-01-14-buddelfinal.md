@@ -160,29 +160,39 @@ Oder als der Leim in den Löchern des Kiels bereits angezogen war und die Teile 
 
 Oder als... ach schiet op, nu isses ja drin inner buddel.
 
+Da meine Finger beim besten Willen nicht in die Flasche passen wollten, habe ich die Hängestangen eines kaputten Wäscheständers zweckentfremdet. Der eine hat einen Haken ans Ende bekommen, ein weiterer eine Öse. Einen sehr feinen Pinsel, einen Zahnstocher und die Abbrech-Klinge eines Teppichmessers habe ich auch noch an Stangen untergebracht. Diese Werkzeuge haben mir gute Dienste geleistet, insbesondere beim kaschieren kleiner Fehler, die beim reinschieben entstanden sind. 
+
 {% gallery "p50" %}
-{% image buddel_f_stapellauf01.jpg "" %}
+{% image buddel_f_stapellauf01.jpg "Einzelteile" %}
+Die fertigen Einzelteile, bereit zur Endmontage in der Flasche. 
 {% endimage %}
 
-{% image buddel_f_stapellauf02.jpg "" %}
+{% image buddel_f_stapellauf02.jpg "Teile mit Flasche und Werkzeug" %}
+Die Schiffsteile und die Werkzeuge, mit denen sie in der Flasche hantiert werden können. 
 {% endimage %}
 
-{% image buddel_f_stapellauf03.jpg "" %}
+{% image buddel_f_stapellauf03.jpg "Rumpf vor der Montage" %}
+Die beiden Rumpfteile vor der Montage. 
 {% endimage %}
 
-{% image buddel_f_stapellauf04.jpg "" %}
+{% image buddel_f_stapellauf04.jpg "Rumpf nach der Montage" %}
+Die beiden Teile sind nicht so locker zusammen gerutscht wie geplant, aber letztendlich hat's geklappt. Ein Tropfen Leim hält sie in Position. 
 {% endimage %}
 
-{% image buddel_f_stapellauf05.jpg "" %}
+{% image buddel_f_stapellauf05.jpg "Blick durch den Flaschenhals" %}
+Ja, es ist wirklich drin. 
 {% endimage %}
 
-{% image buddel_f_stapellauf06.jpg "" %}
+{% image buddel_f_stapellauf06.jpg "Kieltransport" %}
+Ein Faden um den Kiel und durch die Drahtöse gibt die nötige Stabilität, um das Teil auf den Rumpf kleben zu können. 
 {% endimage %}
 
-{% image buddel_f_stapellauf07.jpg "" %}
+{% image buddel_f_stapellauf07.jpg "Fertiger Rumpf im Kopfstand" %}
+Drei montierte Rumpfteile im Kopfstand -  möge diese Übung gelingen. 
 {% endimage %}
 
-{% image buddel_f_stapellauf08.jpg "" %}
+{% image buddel_f_stapellauf08.jpg "Fertiger Rumpf richtig herum." %}
+Tadaa, der fertige Rumpf in der Flasche. 
 {% endimage %}
 
 {% image buddel_f_stapellauf09.jpg "" %}
