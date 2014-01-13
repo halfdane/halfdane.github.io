@@ -154,13 +154,13 @@ Die Stagen laufen wirklich _durch_ den Klüverbaum
 ## Stapellauf
 Jetzt kommt der Augenblick ~~in dem der Elefant das Wasser lässt~~ der Wahrheit: durch diese hohle Gasse muss es passen. Und was nicht passt wird passend gemacht, denn bangemachen gilt nicht und so jung kommen wir nicht mehr zusammen. Egal, einen Heiermann ins Phrasenschwein und ab dafür.
 
-Tatsächlich gab es ein paar Momente, in denen ich etwas ins Schwitzen kam - etwa als mir klarwurde, dass die Aufbauten auf dem Oberdeck verhindern, dass die Masten sich ganz einklappen lassen. Aber Deckaufbauten können auch wieder entfernt werden, so dass die Masten doch durchpassen.
+Tatsächlich gab es ein paar Momente, in denen ich etwas ins Schwitzen kam - etwa als mir klarwurde, dass die Aufbauten auf dem Oberdeck verhindern, dass die Masten sich ganz einklappen lassen. Aber Deckaufbauten können auch wieder entfernt werden, so dass die Masten doch durchpassen - die Aufbauten sind dann hinterher in die Flasche gekommen gaanz, ganz vorsichtig zwischen den Wanten hindurchnavigiert worden.
 
 Oder als der Leim in den Löchern des Kiels bereits angezogen war und die Teile nicht mehr auseinander fielen, aber auch noch nicht richtig zusammen steckten. Mit einem ~~frustrierten~~ wütendenden Druck auf das verklemmte Scheißding von Kiel ist er dann doch noch an die richtige Stelle gerutscht.
 
-Oder als... ach schiet op, nu isses ja drin inner buddel.
+Oder als... ach schiet op, nu is dat shipp ja drin inner buddel.
 
-Da meine Finger beim besten Willen nicht in die Flasche passen wollten, habe ich die Hängestangen eines kaputten Wäscheständers zweckentfremdet. Der eine hat einen Haken ans Ende bekommen, ein weiterer eine Öse. Einen sehr feinen Pinsel, einen Zahnstocher und die Abbrech-Klinge eines Teppichmessers habe ich auch noch an Stangen untergebracht. Diese Werkzeuge haben mir gute Dienste geleistet, insbesondere beim kaschieren kleiner Fehler, die beim reinschieben entstanden sind. 
+Da meine Finger beim besten Willen nicht in die Flasche passen wollten, habe ich die Hängestangen eines kaputten Wäscheständers zweckentfremdet. Der eine hat einen Haken ans Ende bekommen, ein weiterer eine Öse. Einen sehr feinen Pinsel, einen Zahnstocher und die Abbrech-Klinge eines Teppichmessers habe ich auch noch an Stangen untergebracht. Diese Werkzeuge haben mir gute Dienste geleistet, insbesondere beim kaschieren der diversen kleinen Fehler, die beim Reinschieben des Oberdecks mit den Masten entstanden sind.
 
 {% gallery "p50" %}
 {% image buddel_f_stapellauf01.jpg "Einzelteile" %}
@@ -184,7 +184,7 @@ Ja, es ist wirklich drin.
 {% endimage %}
 
 {% image buddel_f_stapellauf06.jpg "Kieltransport" %}
-Ein Faden um den Kiel und durch die Drahtöse gibt die nötige Stabilität, um das Teil auf den Rumpf kleben zu können. 
+Ein Faden um den Kiel und durch die Drahtöse gibt die nötige Stabilität, um ihn auf den Rumpf kleben zu können.
 {% endimage %}
 
 {% image buddel_f_stapellauf07.jpg "Fertiger Rumpf im Kopfstand" %}
@@ -195,32 +195,41 @@ Drei montierte Rumpfteile im Kopfstand -  möge diese Übung gelingen.
 Tadaa, der fertige Rumpf in der Flasche. 
 {% endimage %}
 
-{% image buddel_f_stapellauf09.jpg "" %}
+{% image buddel_f_stapellauf09.jpg "Noch ein Blick durch den Flaschenhals" %}
+Ja, ist immer noch drin.
 {% endimage %}
 
-{% image buddel_f_stapellauf10.jpg "" %}
+{% image buddel_f_stapellauf10.jpg "Oberdeck: bereit halten" %}
+Das letzte mal außerhalb der Flasche.
 {% endimage %}
 
-{% image buddel_f_stapellauf11.jpg "" %}
+{% image buddel_f_stapellauf11.jpg "Oberdeck in Flaschenhals: 1" %}
+Passt es? Ugh, Stückchen ...
 {% endimage %}
 
-{% image buddel_f_stapellauf12.jpg "" %}
+{% image buddel_f_stapellauf12.jpg "Oberdeck in Flaschenhals: 2" %}
+... für Stückchen ...
 {% endimage %}
 
-{% image buddel_f_stapellauf13.jpg "" %}
+{% image buddel_f_stapellauf13.jpg "Oberdeck in Flaschenhals: 3" %}
+... für Stückchen ...
 {% endimage %}
 
-{% image buddel_f_stapellauf14.jpg "" %}
+{% image buddel_f_stapellauf14.jpg "Oberdeck in Flaschenhals: 4" %}
+... bis es ganz drin ist.
+
+Das Aufsetzen auf den Rumpf hat fast zwei Stunden gedauert und brauchte em Ende auch noch ein Gutteil roher Gewalt. Notiz an mich selbst: beim nächsten Buddelschiff (haha, also niemals) die Teile mit mehr Luft planen.
 {% endimage %}
 
-{% image buddel_f_stapellauf15.jpg "" %}
+{% image buddel_f_stapellauf16.jpg "Fertig" %}
+Die Masten sind aufgerichtet und die Fäden verklebt und abgeschnitten.
 {% endimage %}
 
-{% image buddel_f_stapellauf16.jpg "" %}
+{% image buddel_f_stapellauf15.jpg "Pause" %}
+Für heute ist Schluss. Die Buddel bekommt ein Nachquartier im Bücherregal.
 {% endimage %}
 
 {% endgallery %}
-
 
 ## Wasser
 Traditionell wird vom Rumpf eines Buddelschiffs nur die obere Hälfte benutzt, und auf blaue Knete oder Fensterkitt gedrückt. Das soll dann das Wasser darstellen. Mir schwebt für den Rumpf allerdings etwas anderes vor, deswegen besteht die Konstruktion ja auch aus drei Teilen plus Oberdeck. Ich möchte gerne das ganze Schiff sehen, und zwar nicht wie im Trockendock, sondern auf großer Fahrt, zwecks diesen Behufes sind ja auch die Segel schon gebläht. 
