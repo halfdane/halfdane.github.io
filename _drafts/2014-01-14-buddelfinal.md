@@ -244,7 +244,30 @@ Der Wermutstropfen ist die Erkenntnis, dass es sich nicht gut einfärben lässt 
 
 Die Plastikfolie, die als Rutsche durch den Flaschenhals dienen sollte, ist beim ersten Experiment direkt geschmolzen, aber die leere Milchtüte hat ihren Zweck sehr schön erfüllt. 
 
-Galerie Wasser 
+{% gallery "p50" %}
+{% image buddel_f_wasser1.jpg "Zutaten" %}
+Zutaten: eine Tüte Milch und ... Kerzengel?
+
+Lecker :/
+{% endimage %}
+
+{% image buddel_f_wasser2.jpg "Wie Götterspeise" %}
+Kalt hat das Gel etwa die Konsistenz von sehr, sehr fester Götterspeise.
+{% endimage %}
+
+{% image buddel_f_wasser3.jpg "Kein Gießen" %}
+Vom Reingießen gibt's kein Bild, da brauchte ich beide Hände. Dafür noch eins vom Gel im Topf.
+{% endimage %}
+
+{% image buddel_f_wasser5.jpg "Drin" %}
+Das Wasser ist glücklich drin gelandet.
+{% endimage %}
+
+{% image buddel_f_wasser4.jpg "Kein Atlantik" %}
+Auch ohne Brille und mit zusammengekniffenen Augen wird daraus kein aufgepeitschter Atlantik ...
+{% endimage %}
+
+{% endgallery%}
 
 ## Korken, Ständer und Wandhalterung
 Auch wenn ich stolz auf das Schiff bin und es recht gelungen finde, möchte ich es eigentlich nicht so gerne im Regal herumstehen haben. Da nimmt es nur Platz weg, verstaubt und fällt runter. 
@@ -252,6 +275,8 @@ Eine Wandhalterung, die das problemlose Auf- und Abhängen der Flasche erlaubt, 
 
 Außerdem habe ich bei meinen Recherchen den Eindruck gewonnen, dass es zum guten Ton gehört, auf eine Flasche mit einem unmöglichen Schiff drin noch einen unmöglichen Korken zu setzen, der eigentlich gar nicht durch den Hals passen dürfte und insbesondere nicht entfernt werden kann ohne die Flasche zu zerbrechen. 
 
-Das alles möchte ich schon noch machen, aber ehrlich gesagt reicht es dann auch. Aus ein paar Bambus-Frühstücksbrettchen, die ich auf dem Weg zu B.s Schule im 1€-Shop geschossen habe, habe ich einen Ständer gesägt, der die Flasche am Hals fest umschließt, so dass sie aufrecht auf dem Tisch stehen kann. In ein weiteres Brettchen habe ich einen Schlitz gesägt, so dass dieser Kragen/Ständer hineinrutschen kann und es dann an die Wand geschraubt. Da ist es aus dem Weg und kann trotzdem ohne weiteres jederzeit abgenommen werden. 
+Das alles möchte ich schon noch machen, aber ehrlich gesagt reicht es dann auch. Aus ein paar Bambus-Frühstücksbrettchen, die ich auf dem Weg zu B.s Schule im 1€-Shop geschossen habe, habe ich einen Ständer gesägt, der die Flasche am Hals fest umschließt, so dass sie aufrecht auf dem Tisch stehen kann. Damit die Flasche nicht in diesem Ständer herumrutscht oder sich dreht, ist ein kleines Stückchen Stoff darin eingeklemmt.
+
+Für die Wandhalterung habe ich mich mit meiner guten alten Oberfräse an einem weiteren Brettchen ausgetobt, so dass  der Ständer hineinrutschen kann in Position gehalten wird. Das ganze Konstrukt wird an die Wand geschraubt. Dann ist die Buddel aus dem Weg und kann trotzdem jederzeit ab- und aufgehängt werden.
 
 Galerie Ständer 
