@@ -279,4 +279,18 @@ Das alles möchte ich schon noch machen, aber ehrlich gesagt reicht es dann auch
 
 Für die Wandhalterung habe ich mich mit meiner guten alten Oberfräse an einem weiteren Brettchen ausgetobt, so dass  der Ständer hineinrutschen kann in Position gehalten wird. Das ganze Konstrukt wird an die Wand geschraubt. Dann ist die Buddel aus dem Weg und kann trotzdem jederzeit ab- und aufgehängt werden.
 
+Der unmögliche Korken ist der Rest vom Vierkantholz mit einem Loch im einen Ende, durch das ich ein Stückchen Rundholz geschoben habe. Dabei kam mir das Werkzeug mit der Öse am Ende gerade recht: mit einem Faden durch die Öse blieb das Rundholz stabil und konnte in das Loch gefädelt werden. Ein weiterer Faden hat es dann an die richtige Position gezogen und ich hab dann nur noch einen Tropfen Leim an den Rand getan. Am anderen Ende (das aus der Flasche heraus guckt) ist ein Schaschlik-Spieß, auf den der Flaschendeckel einfach aufgefädelt und verleimt werden kann. Nach dem Trocknen Spieß ab - fertig. 
+
+Fast. 
+
+Noch an die Wand werfen, aber dann lass ich es auch gut sein. 
+
 Galerie Ständer 
+
+## Fazit, Fehler und Fragen 
+Das hat Spaß gemacht. Dank der Hilfe vieler Internetseiten und YouTube Videos konnte ich dieses unmögliche Projekt tatsächlich zufriedenstellend beenden. 
+Als Informations- und Inspirations-Quellen kam folgendes zum Einsatz:
+
+
+Natürlich klappt niemals alles, und auch wenn ich froh und stolz bin, möchte ich die Probleme und Fehler nicht verschweigen:
+- das Wasser. Es gibt offenbar einen guten Grund, warum kein Schwein transparentes Wasser in Buddelschiffe macht: es ist unfassbar schwer, es realistisch hinzubekommen. 
