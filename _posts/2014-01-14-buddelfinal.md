@@ -5,7 +5,7 @@ description: ""
 category: diy/Stoff, diy/Holz
 tags: [buddelschiff, Holz, Microbohrer, Modellbau, Zahnstocher]
 group: post
-image: buddel_f_stapellauf15.jpg
+image: buddel_f.jpg
 ---
 Genug experimentiert, jetzt geht es los. Mit dem Prototypen habe ich gelernt, wie ich die Mastscharniere, die Segel, den Rumpf und die Takelage haben möchte. Nun geht's darum, die gemachten Fehler und gewonnenen Erkenntnisse in ein Buddelschiff zu übertragen, das rockt!
 
@@ -309,6 +309,11 @@ Und auch wieder rein: Hält.
 {% endgallery %}
 
 ## Fazit(Quellen), Fehler und Fragen
+
+{% image buddel_f.jpg "Done"  %} 
+The deed is done. 
+{% endimage %} 
+
 Das hat Spaß gemacht. Dank der Hilfe vieler Internetseiten (allen voran [Ships in bottles](http://www.shipbottle.ru/english/), die verrät wirklich jeden Zaubertrick!) konnte ich dieses unmögliche Projekt tatsächlich zufriedenstellend beenden.
 Als Informations- und Inspirations-Quellen kam folgendes zum Einsatz:
 
