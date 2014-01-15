@@ -248,16 +248,16 @@ figure,
   /*small screen*/
   /*very small screen*/ }
   .postslist figure {
+    display: inline-block;
     text-align: center;
     float: none;
     margin: 0; }
     .postslist figure img {
-      width: 100%;
+      width: auto;
       height: 12.38095em; }
   .postslist .post {
     display: block;
     margin: 0;
-    text-align: left;
     vertical-align: top;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -265,9 +265,10 @@ figure,
     -o-box-sizing: border-box;
     box-sizing: border-box;
     padding: 1.2381em 0.61905em 0.61905em 1.2381em;
-    border-top: 0.61905em solid #eeeeee; }
+    border-top: 0.30952em solid #eeeeee; }
   .postslist .post .text {
-    vertical-align: top; }
+    vertical-align: top;
+    text-align: left; }
     .postslist .post .text figure {
       display: none; }
   @media screen and (min-width: 74.28571em) {
@@ -276,6 +277,7 @@ figure,
       .postslist:nth-child(-n+1) .postlist_layout {
         font-size: 0; }
       .postslist:nth-child(-n+1) .post {
+        text-align: center;
         display: inline-block;
         width: 33.33333%; }
         .postslist:nth-child(-n+1) .post * html {
@@ -297,6 +299,7 @@ figure,
     .postslist:nth-child(n+2) .postlist_layout {
       font-size: 0; }
     .postslist:nth-child(n+2) .post {
+      text-align: left;
       display: inline-block;
       width: 100%; }
       .postslist:nth-child(n+2) .post * html {
@@ -330,6 +333,7 @@ figure,
       .postslist:nth-child(-n+1) .postlist_layout {
         font-size: 0; }
       .postslist:nth-child(-n+1) .post {
+        text-align: center;
         display: inline-block;
         width: 50%; }
         .postslist:nth-child(-n+1) .post * html {
@@ -352,6 +356,7 @@ figure,
       .postslist:nth-child(-n+1) .postlist_layout {
         font-size: 0; }
       .postslist:nth-child(-n+1) .post {
+        text-align: left;
         display: inline-block;
         width: 100%; }
         .postslist:nth-child(-n+1) .post * html {

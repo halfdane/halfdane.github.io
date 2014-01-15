@@ -4,3 +4,4 @@ gem "sequel"
 gem 'compass'
 gem 'sass'
 gem 'jekyll-asset-pipeline'
+gem 'mini_magick'
