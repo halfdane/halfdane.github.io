@@ -7,10 +7,11 @@ tags: [buddelschiff, Holz, Microbohrer, Modellbau, Zahnstocher]
 group: post
 image: buddel_f.jpg
 ---
-Genug experimentiert, jetzt geht es los. Mit dem Prototypen habe ich gelernt, wie ich die Mastscharniere, die Segel, den Rumpf und die Takelage haben möchte. Nun geht's darum, die gemachten Fehler und gewonnenen Erkenntnisse in ein Buddelschiff zu übertragen, das rockt!
+Genug experimentiert, jetzt geht es los. Mit dem Prototypen ([Rumpf und Masten](/2013/11/12/buddel1/), [Takelage](/2013/11/13/buddel2/), [Segel](/2013/11/23/buddel3/)) habe ich gelernt, wie ich die Mastscharniere, die Segel, den Rumpf und die Takelage haben möchte. Nun geht's darum, die gemachten Fehler und gewonnenen Erkenntnisse in ein Buddelschiff zu übertragen das rockt!
+
 
 ## Pläne
-Den Rumpf nicht aus Balsaholz zu machen hatte ich mich ja schon recht früh entschieden, auch dass er so groß sein sollte, das er nur in mehreren Teilen durch den Flaschenhals kommt. Zusammen mit der Flaschenform, auf die ich ja nun keinen Einfluss hatte, und der Entscheidung, die Rickmer Rickmers zu bauen, ist das alles mehr als genug, um ein paar Pläne zu zeichnen:
+Den Rumpf nicht aus Balsaholz zu machen hatte ich mich ja schon recht früh entschieden, auch dass er so groß sein sollte, das er nur in mehreren Teilen durch den Flaschenhals kommt. Zusammen mit der Flaschenform, auf die ich ja nun keinen Einfluss hatte, und der Entscheidung, die Rickmer Rickmers zu bauen ist das alles mehr als genug, um ein paar Pläne zu zeichnen:
 
 {% gallery "p50" %}
 {% image buddel_f_plan1.jpg "Schiff in der Buddel als Übersicht" %}
@@ -329,11 +330,12 @@ Natürlich klappt niemals alles, und auch wenn ich froh und stolz bin, möchte i
 - Das Wasser. Es gibt offenbar einen guten Grund, warum kein Schwein transparentes Wasser in Buddelschiffe macht: es ist unfassbar schwer, es realistisch hinzubekommen. Ich hab's einfach aufgegeben und es genommen, wie's kam. Et kütt wiet kütt.
 - Die Passform der verschiedenen Teile des Rumpfs war zu stramm und es sind Ritzen dazwischen geblieben. Teilweise konnte ich die einigermaßen mit Farbe kaschieren, aber insbesondere das Oberdeck ist wegen der Segel schlecht zugänglich. Da ist die Ritze gut zu sehen.
 - Der Großmast ist ein kleines bisschen zu lang und passt nicht ganz aufrecht in die Flasche. Das ist nicht so schlimm und kaum zu sehen, aber weil die Wanten und Stagen auf einen senkrechten Mast abgestimmt sind, sieht man die Fäden schon recht deutlich herumschlackern.
+- Die Größenverhältnisse stimmen hinten und vorne nicht: der Rumpf ist zu breit für die Länge und die Masten nicht hoch genug für den Rumpf. Dafür sind die Rahen zu breit und die Anzahl der Segel stimmt nicht. Außerdem sind die Deckaufbauten falsch und die Form des Rumpfes passt eher zu einer Kogge als zur Rickmer Rickmers.
 
 Nichts Schlimmes also, und auch nichts was mir den Tag verderben könnte. Aber was bleibt wenn die Party vorbei ist, sind die üblichen Fragen:
 
 - Warum sollte jemand mehr als ein einziges Buddelschiff machen?
-- Wohin mit dem Buddelschiff wenn's fertig ist?
+- Was jetzt?
 - Und der Klassiker: Wie genau funktionieren eigentlich Magneten?
 
-Falls jemand die Antwort kennt oder sich sonstwie mitteilen möchte, z.B. um zu sagen wie unfassbar toll dieses Buddelschiff ist, oder um selbst ein paar Fragen loszuwerden: hinterlasst eine Nachricht nach dem Piep oder in den Kommentaren.
+Falls jemand die Antwort kennt oder sich sonstwie mitteilen möchte, z.B. um zu sagen wie unfassbar toll dieses Buddelschiff ist oder um selbst ein paar Fragen loszuwerden: hinterlasst eine Nachricht nach dem Piep oder in den Kommentaren.

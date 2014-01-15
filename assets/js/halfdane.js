@@ -34,7 +34,12 @@ var register_baseline_trigger = function () {
     })
 };
 
+var lazyload_images = function() {
+    $("img").unveil(200);
+};
+
 $(function () {
     activate_slideshows();
     register_baseline_trigger();
+    lazyload_images();
 });
