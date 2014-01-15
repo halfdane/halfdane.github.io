@@ -110,15 +110,15 @@ Als Segeltuch kommt sehr feiner Baumwollstoff, der etwa 10 Minuten mit zwei Löf
 Die Segel für den Fockmast: Bramsegel, Marssegel und Focksegel. Drei müssen reichen.
 {% endimage %}
 
-{% image buddel_f_masten3.jpg "Segelplan für Großmast" %}
+{% image buddel_f_segel3.jpg "Segelplan für Großmast" %}
 Die Segel für den Großmast: Bramsegel, Obermars- und Marssegel sowie Großsegel.
 {% endimage %}
 
-{% image buddel_f_masten4.jpg "Großmast mit Segeln vorne" %}
+{% image buddel_f_segel4.jpg "Großmast mit Segeln vorne" %}
 Vorderansicht der vier Segel am Großmast.
 {% endimage %}
 
-{% image buddel_f_masten5.jpg "Großmast mit Segeln hinten" %}
+{% image buddel_f_segel5.jpg "Großmast mit Segeln hinten" %}
 Hinteransicht: Jedes Segel ist mit vier Fäden an der oberen Rahe befestigt und mit den beiden äußeren Fäden an der darunterliegenden. Die zwei Fäden des untersten Segels werden am Deck festgeklebt.
 {% endimage %}
 
@@ -131,7 +131,9 @@ Die Taue werden in stehendes Gut (halten Masten fest) und laufendes Gut (zum Ein
 
 Ach, und am hintersten Mast die Besanschot.
 
-Und zwischen den Masten die Stagen, die bis vorne durch den Klüverbaum gehen... Vielleicht ist das mit dem Durchdrehen doch zu spät gekommen.
+Und zwischen den Masten die Stagen, die bis vorne durch den Klüverbaum gehen.
+
+Hmm, vielleicht ist das mit dem Durchdrehen doch zu spät gekommen.
 
 Der Rumpf ist mit wasserlöslicher Acrylfarbe in Weiß, Grün und Rot bemalt. Mehr oder weniger so ähnlich wie die richtige Rickmer Rickmers, wenn man nicht zu genau hinschaut.
 
@@ -157,11 +159,11 @@ Jetzt kommt der Augenblick ~~in dem der Elefant das Wasser lässt~~ der Wahrheit
 
 Tatsächlich gab es ein paar Momente, in denen ich etwas ins Schwitzen kam - etwa als mir klarwurde, dass die Aufbauten auf dem Oberdeck verhindern, dass die Masten sich ganz einklappen lassen. Aber Deckaufbauten können auch wieder entfernt werden, so dass die Masten doch durchpassen - die Aufbauten sind dann hinterher in die Flasche gekommen gaanz, ganz vorsichtig zwischen den Wanten hindurchnavigiert worden.
 
-Oder als der Leim in den Löchern des Kiels bereits angezogen war und die Teile nicht mehr auseinander fielen, aber auch noch nicht richtig zusammen steckten. Mit einem ~~frustrierten~~ wütendenden Druck auf das verklemmte Scheißding von Kiel ist er dann doch noch an die richtige Stelle gerutscht.
+Oder als der Leim in den Löchern des Kiels bereits angezogen war und die Teile nicht mehr auseinander fielen, aber auch noch nicht richtig zusammen steckten. Mit einem wütendenden Druck auf das verklemmte Scheißding von Kiel ist er dann doch noch an die richtige Stelle gerutscht.
 
 Oder als... ach schiet op, nu is dat shipp ja drin inner buddel.
 
-Da meine Finger beim besten Willen nicht in die Flasche passen wollten, habe ich die Hängestangen eines kaputten Wäscheständers zweckentfremdet. Der eine hat einen Haken ans Ende bekommen, ein weiterer eine Öse. Einen sehr feinen Pinsel, einen Zahnstocher und die Abbrech-Klinge eines Teppichmessers habe ich auch noch an Stangen untergebracht. Diese Werkzeuge haben mir gute Dienste geleistet, insbesondere beim kaschieren der diversen kleinen Fehler, die beim Reinschieben des Oberdecks mit den Masten entstanden sind.
+Zur Unterstützung der habe ich die Hängestangen eines kaputten Wäscheständers zweckentfremdet: Der eine hat einen Haken ans Ende bekommen, ein weiterer eine Öse. Einen sehr feinen Pinsel, einen Zahnstocher und die Abbrech-Klinge eines Teppichmessers habe ich auch noch an Stangen untergebracht. Diese Werkzeuge haben mir gute Dienste geleistet, insbesondere beim kaschieren der diversen kleinen Fehler, die beim Reinschieben des Oberdecks mit den Masten entstanden sind.
 
 {% gallery "p50" %}
 {% image buddel_f_stapellauf01.jpg "Einzelteile" %}
@@ -201,11 +203,13 @@ Ja, ist immer noch drin.
 {% endimage %}
 
 {% image buddel_f_stapellauf10.jpg "Oberdeck: bereit halten" %}
-Das letzte mal außerhalb der Flasche.
+Das letzte Mal außerhalb der Flasche.
 {% endimage %}
 
 {% image buddel_f_stapellauf11.jpg "Oberdeck in Flaschenhals: 1" %}
-Passt es? Ugh, Stückchen ...
+Passt es?
+
+Ugh, Stückchen ...
 {% endimage %}
 
 {% image buddel_f_stapellauf12.jpg "Oberdeck in Flaschenhals: 2" %}
