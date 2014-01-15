@@ -264,7 +264,8 @@ figure,
     -ms-box-sizing: border-box;
     -o-box-sizing: border-box;
     box-sizing: border-box;
-    padding: 1.2381em 0.61905em 0.61905em 1.2381em; }
+    padding: 1.2381em 0.61905em 0.61905em 1.2381em;
+    border-top: 0.61905em solid #eeeeee; }
   .postslist .post .text {
     vertical-align: top; }
     .postslist .post .text figure {
