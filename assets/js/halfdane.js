@@ -3,15 +3,17 @@ var activate_slideshows = function () {
         var $slideshow = $(e);
         var $navi = $slideshow.find('.dots');
 
-
         var swipe = Swipe(e, {
             //auto: 3000,
             continuous: true,
             callback: function (pos) {
                 $navi.children('.dot-item').removeClass('active');
                 $($navi.children('.dot-item')[pos]).addClass('active');
+
+                $slideshow.find('img').eq(pos).unveil();
             }
         });
+        $slideshow.find('img').first().unveil(200);
 
         $slideshow.children('.swipe-wrap').children().each(function (i, e) {
             $navi.append('<button class="dot-item" data-index="'+i+'"><span class="dot"></span></button>');
@@ -35,7 +37,7 @@ var register_baseline_trigger = function () {
 };
 
 var lazyload_images = function() {
-    $("img").unveil(200);
+    $('img:not(.swipe img)').unveil(200);
 };
 
 $(window).load(function () {
