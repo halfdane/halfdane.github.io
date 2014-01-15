@@ -136,3 +136,15 @@ asset_pipeline:
   output_path: assets     # Default = assets
   display_path: nil       # Default = nil
   gzip: false             # Default = false
+
+mini_magick:
+  thumbnail:
+    source: assets/img
+    destination: assets/img/thumbnails
+    commands:
+      - resize: "350x260"
+  normal:
+    source: assets/img
+    destination: assets/img/normal
+    commands:
+      - resize: "640x480^"
