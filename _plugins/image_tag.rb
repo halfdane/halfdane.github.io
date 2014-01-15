@@ -47,23 +47,30 @@ module Jekyll
     end
 
     def render(context)
-      imageTitle = Liquid::Template.parse(@title).render context
-      imageUrl = Liquid::Template.parse(@url).render context
-
-      imageUrl = ["normal", imageUrl].join('/') unless (@css=~/thumbnail/)
-      imageUrl = ["thumbnails", imageUrl].join('/') if (@css=~/thumbnail/)
-
-      # Build url
-      # Only works if no trailing slash in `root_url`, and no leading in `url`
-      imageUrl = [@config['root_url'], imageUrl].join('/') unless (imageUrl=~/^http/)
-
-      source = "<figure class=\"#{@css}\">"
-
-      source += "<img src=\"/assets/img/loader.gif\" data-src=\"#{imageUrl}\" alt=\"#{imageTitle}\">"
-
       site = context.registers[:site]
       converter = site.getConverterImpl(::Jekyll::Converters::Markdown)
       output = converter.convert(super(context))
+
+      imageTitle = Liquid::Template.parse(@title).render context
+      imageUrl = Liquid::Template.parse(@url).render context
+
+      originalUrl = imageUrl
+
+      # Build url
+      # Only works if no trailing slash in `root_url`, and no leading in `url`
+      if (imageUrl !~ /^http/)
+        imageUrl = ["normal", imageUrl].join('/') unless (@css=~/thumbnail/)
+        imageUrl = ["thumbnails", imageUrl].join('/') if (@css=~/thumbnail/)
+
+        imageUrl = [@config['root_url'], imageUrl].join('/')
+        originalUrl = [@config['root_url'], originalUrl].join('/')
+      end
+
+      source = "<figure class=\"#{@css}\">"
+
+      source += "<a href=\"#{originalUrl}\" title=\"#{output}\" class=\"lightbox\">"
+      source += "<img src=\"/assets/img/loader.gif\" data-src=\"#{imageUrl}\" alt=\"#{imageTitle}\">"
+      source += "</a>"
 
       source += "<figcaption>#{output}</figcaption>" unless (output.to_s == "")
       source += "</figure>"

@@ -37,11 +37,28 @@ var register_baseline_trigger = function () {
 };
 
 var lazyload_images = function() {
+    $('img:first').unveil();
     $('img:not(.swipe img)').unveil(200);
+};
+
+var prepareLightboxes = function() {
+    var popupOptions = {
+        type: 'image',
+        gallery:{enabled:true},
+        disableOn: 500
+    };
+
+    $('.swipe').each(function(index, element){
+        $(element).find('a.lightbox').magnificPopup(popupOptions);
+    });
+
+    $('a.lightbox:not(.swipe a.lightbox)').magnificPopup(popupOptions);
 };
 
 $(window).load(function () {
     activate_slideshows();
-    register_baseline_trigger();
     lazyload_images();
+    prepareLightboxes();
+
+    register_baseline_trigger();
 });
