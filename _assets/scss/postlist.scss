@@ -21,11 +21,12 @@
   margin: 0.5*$local_borders;
 
   figure {
+    display: inline-block;
     text-align: center;
     float: none;
     margin: 0;
     img {
-      width: 100%;
+      width: auto;
       height: rhythm(10, $base-font-size);
     }
   }
@@ -33,14 +34,14 @@
   .post {
     display: block;
     margin: 0;
-    text-align: left;
     vertical-align: top;
     @include experimental(box-sizing, border-box);
     padding: 2*$local_borders $local_borders $local_borders 2*$local_borders;
-    border-top: $local_borders solid $postlist_border;
+    border-top: $local_borders/2 solid $postlist_border;
   }
   .post .text {
     vertical-align: top;
+    text-align: left;
     figure {
       display: none;
     }
@@ -54,6 +55,11 @@
     }
     .post {
       @include establish-baseline;
+      @if $columns > 1 {
+        text-align: center;
+      } @else {
+        text-align: left;
+      }
       display: inline-block;
       width: percentage(1/$columns);
     }

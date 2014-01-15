@@ -38,7 +38,7 @@ module Jekyll
       @css += " " + givenCss unless givenCss.nil?
 
       # Config options
-      @config = Jekyll.configuration({})['images'] || {}
+      @config = Jekyll.configuration({})['images'] || {} if @config == nil
       @config['root_url']         ||= '/assets/img'
       @config['retina']           ||= false
       @config['retina_suffix']    ||= '@2x'
@@ -47,8 +47,11 @@ module Jekyll
     end
 
     def render(context)
-
+      imageTitle = Liquid::Template.parse(@title).render context
       imageUrl = Liquid::Template.parse(@url).render context
+
+      imageUrl = ["normal", imageUrl].join('/') unless (@css=~/thumbnail/)
+      imageUrl = ["thumbnails", imageUrl].join('/') if (@css=~/thumbnail/)
 
       # Build url
       # Only works if no trailing slash in `root_url`, and no leading in `url`
@@ -56,7 +59,7 @@ module Jekyll
 
       source = "<figure class=\"#{@css}\">"
 
-      source += "<img src=\"/assets/img/loader.gif\" data-src=\"#{imageUrl}\" alt=\"#{@title}\">"
+      source += "<img src=\"/assets/img/loader.gif\" data-src=\"#{imageUrl}\" alt=\"#{imageTitle}\">"
 
       site = context.registers[:site]
       converter = site.getConverterImpl(::Jekyll::Converters::Markdown)
