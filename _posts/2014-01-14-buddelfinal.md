@@ -13,7 +13,7 @@ Genug experimentiert, jetzt geht es los. Mit dem Prototypen ([Rumpf und Masten](
 ## Pläne
 Den Rumpf nicht aus Balsaholz zu machen hatte ich mich ja schon recht früh entschieden, auch dass er so groß sein sollte, das er nur in mehreren Teilen durch den Flaschenhals kommt. Zusammen mit der Flaschenform, auf die ich ja nun keinen Einfluss hatte, und der Entscheidung, die Rickmer Rickmers zu bauen ist das alles mehr als genug, um ein paar Pläne zu zeichnen:
 
-{% gallery "p50" %}
+{% gallery "p20" %}
 {% image buddel_f_plan1.jpg "Schiff in der Buddel als Übersicht" %}
 So hatte ich mir vorgestellt, dass das Schiff in der Buddel aussehen würde - bei der Anzahl der Segel und dem Mast/Rumpf-Verhältnis habe ich bei der Ausführung etwas geschummelt, aber insgesamt hat das meiste überraschend gut geklappt.
 {% endimage %}
@@ -311,7 +311,7 @@ Und auch wieder rein: Hält.
 
 ## Fazit(Quellen), Fehler und Fragen
 
-{% image buddel_f.jpg "Done"  %} 
+{% image buddel_f.jpg "Done" "p30" %}
 The deed is done. 
 {% endimage %} 
 
