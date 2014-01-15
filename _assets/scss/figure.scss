@@ -20,6 +20,10 @@ figure,
     width: 100%;
   }
 
+  img[src="/assets/img/loader.gif"] {
+    width: auto;
+  }
+
   * {
     margin: 0;
   }
