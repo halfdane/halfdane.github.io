@@ -13,6 +13,7 @@ module Jekyll
     @title = nil
     @css = nil
     @markup = nil
+    @@config = nil
 
     IMAGE_URL_WITH_TITLE_AND_CSS = /(\S+)(\s+)"(.*?)"(\s+)"(.*?)"/i
     IMAGE_URL_WITH_TITLE = /(\S+)(\s+)"(.*?)"/i
@@ -38,12 +39,12 @@ module Jekyll
       @css += " " + givenCss unless givenCss.nil?
 
       # Config options
-      @config = Jekyll.configuration({})['images'] || {} if @config == nil
-      @config['root_url']         ||= '/assets/img'
-      @config['retina']           ||= false
-      @config['retina_suffix']    ||= '@2x'
-      @config['lazy']             ||= false
-      @config['lazy_placeholder'] ||= ''
+      @@config = Jekyll.configuration({})['images'] || {} if @@config == nil
+      @@config['root_url']         ||= '/assets/img'
+      @@config['retina']           ||= false
+      @@config['retina_suffix']    ||= '@2x'
+      @@config['lazy']             ||= false
+      @@config['lazy_placeholder'] ||= ''
     end
 
     def render(context)
@@ -62,8 +63,8 @@ module Jekyll
         imageUrl = ["normal", imageUrl].join('/') unless (@css=~/thumbnail/)
         imageUrl = ["thumbnails", imageUrl].join('/') if (@css=~/thumbnail/)
 
-        imageUrl = [@config['root_url'], imageUrl].join('/')
-        originalUrl = [@config['root_url'], originalUrl].join('/')
+        imageUrl = [@@config['root_url'], imageUrl].join('/')
+        originalUrl = [@@config['root_url'], originalUrl].join('/')
       end
 
       source = "<figure class=\"#{@css}\">"
@@ -83,7 +84,7 @@ module Jekyll
       base = normal_url[0..-5]
       extension = normal_url[-3..-1]
       if extension == '.jpg' || extension == '.png'
-        retina_url = base + @config['retina_suffix'] + extension
+        retina_url = base + @@config['retina_suffix'] + extension
       end
       retina_url
     end
