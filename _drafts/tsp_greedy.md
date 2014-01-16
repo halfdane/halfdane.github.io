@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "TSP in JavaScript (Evolutionary)"
+title: "TSP in JavaScript (Greedy)"
 description: ""
 category: computer
-tags: [javascript, html5, tsp, evolutionary algorithm]
+tags: [javascript, html5, tsp, greedy algorithm]
 group: post
-image: tsp_evolutionary.png
+image: tsp_greedy.png
 ---
 Nachdem die "Simulated Annealing"-Strategie zur Lösung des Traveling Salesman Problems [nicht so beeindruckend war] (/2013/12/01/annealing/), versuche ich mich jetzt mal an der Implementierung eines evolutionären Algorithmus' in Javascript.
 
@@ -16,14 +16,4 @@ Ein evolutionärer Algorithmus definiert sich zunächst eine Population von denk
 Auf das TSP angewandt könnte man Rundtouren als Population verwenden und die Länge einer Tour als Fitness-Funktion. Die Rekombination zweier Touren könnte aus dem Beginn der einen Tour und dem Ende der anderen Tour bestehen und für die Mutation können Strecken innerhalb einer Tour paarweise vertauscht werden.
 
 Mit der Implementierung möchte ich mich wieder nicht so wahnsinnig lange aufhalten, aber zum Glück gibt es wieder Inspiration in Java bei [the Project Spot](http://www.theprojectspot.com/tutorial_post/applying-a-genetic-algorithm-to-the-travelling-salesman-problem/5), die lediglich portiert werden muss.
-
-
-blabla
-
-
-Auch hier gibt es für kleine Punktmengen eine zufriedenstellende Laufzeit und eine gute Lösung:
-
-
-Aber (wie schon beim [Simulated Annealing Algorithmus] (/2013/12/01/annealing/)) wird das ganze bei mittelgroßen Punktmengen (also z.B. 100 Punkten) ziemlich träge. Um überhaupt in endlicher Zeit ein Ergebnis zu bekommen muss also die Anzahl der Generationen reduziert werden und das schlägt sich dann natürlich in der Qualität nieder.
-
 

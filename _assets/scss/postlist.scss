@@ -33,6 +33,7 @@
 
   .post {
     display: block;
+    cursor: pointer;
     margin: 0;
     vertical-align: top;
     @include experimental(box-sizing, border-box);
@@ -45,6 +46,10 @@
     figure {
       display: none;
     }
+  }
+
+  .post * {
+    pointer-events: none;
   }
 
   @mixin resize_responsive($columns) {
