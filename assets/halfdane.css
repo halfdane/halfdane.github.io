@@ -270,6 +270,7 @@ figure,
       height: 12.38095em; }
   .postslist .post {
     display: block;
+    cursor: pointer;
     margin: 0;
     vertical-align: top;
     -webkit-box-sizing: border-box;
@@ -284,6 +285,8 @@ figure,
     text-align: left; }
     .postslist .post .text figure {
       display: none; }
+  .postslist .post * {
+    pointer-events: none; }
   @media screen and (min-width: 74.28571em) {
     .postslist:nth-child(-n+1) {
       background-size: 33.33333% 100px; }
