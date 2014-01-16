@@ -30,4 +30,4 @@ Alle Inhalte (Texte, Bilder, Designs, Layout u.ä.) auf diesen Seiten können vo
 
 Alle Quelltexte (HTML, CSS, Javascript, Java, Ruby, Jekyll u.ä.), die ich nicht selbst nur kopiert habe (ist dort dann deutlich gekennzeichnet) können studiert, benutzt, weiterentwickelt und weitergegeben werden, solange alle Benutzer des abgeleiteten Werks dieselben Rechte behalten. Das ist eine virale Lizenz, wie sie auch für den Linux Kernel benutzt wird: die [General Public License v.3] (http://www.gnu.de/documents/gpl.de.html). 
 
-Falls du damit nicht einverstanden bist, solltest du nichts von hier benutzen oder Kontakt zu mir aufnehmen. Mein Name ist halfdane und du kannst mich unter <name>@gmx.net erreichen.
+Falls du damit nicht einverstanden bist, solltest du nichts von hier benutzen oder Kontakt zu mir aufnehmen. Mein Name ist halfdane und du kannst mich unter & lt;name>@gmx.net erreichen.
