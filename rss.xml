@@ -5,8 +5,8 @@
         <description>Canned Nerd - Halfdane</description>
         <link>http://halfdane.github.io</link>
         <link>http://halfdane.github.io</link>
-        <lastBuildDate>2014-01-15T21:56:05+00:00</lastBuildDate>
-        <pubDate>2014-01-15T21:56:05+00:00</pubDate>
+        <lastBuildDate>2014-01-16T06:58:17+00:00</lastBuildDate>
+        <pubDate>2014-01-16T06:58:17+00:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -513,9 +513,11 @@ gefunden.&lt;/p&gt;
 
         <item>
                 <title>TSP in JavaScript (Simulated Annealing)</title>
-                <description>&lt;p&gt;Um meine JavaScript-Kenntnisse zu vertiefen, habe mich daran gemacht einen Graphen aus Knoten und Kanten zu implementieren. Und weil das zu einfach ist, soll darauf das Travelling Salesman Problem gelöst werden :)&lt;/p&gt;
+                <description>&lt;p&gt;Um meine JavaScript-Kenntnisse zu vertiefen, habe mich daran gemacht einen Graphen aus Knoten und Kanten zu implementieren. Und weil das zu einfach ist, soll darauf das Traveling Salesman Problem gelöst werden :)&lt;/p&gt;
 
-&lt;p&gt;An einige Algorithmen dazu konnte ich mich noch ganz gut aus meinem Studium erinnern, aber ehrlich gesagt hatte ich nicht so viel Lust, die alten Unterlagen nochmal herauszukramen. Glücklicherweise konnte ich Inspiration auf dieser &lt;a href=&quot;http://www.theprojectspot.com/tutorial-post/simulated-annealing-algorithm-for-beginners/6&quot;&gt;Seite&lt;/a&gt; finden. Diese Implementierung muss dann ja nur noch nach JavaScript portiert werden.&lt;/p&gt;
+&lt;p&gt;Für das TSP werden eine Reihe von Punkten (z.B. Städte auf einer Landkarte, können aber auch dreidimensional sein) sortiert. Aber nicht einfach irgendwie, sondern so dass beim Durchgehen der Punkte von einem zum nächsten die zurückgelegte Strecke möglichst kurz ist. Wie ein Handelsreisender, der Benzin sparen möchte, daher der Name. Das Problem ist für die Informatik interessant, weil es überraschend schwer ist, es optimal zu lösen. Ein Computer muss bei jedem einzelnen Punkt nämlich erstmal alle anderen Punkte prüfen und schauen, wo der neue an besten hinpasst. Bei vielen Punkten kann die Rechenzeit für eine optimale Lösung mehr Zeit in Anspruch nehmen, als z.B. das Universum existiert. Die Klasse der Probleme, zu der das TSP gehört wird von Profis daher auch &amp;quot;die echt richtig schweren Probleme&amp;quot; genannt. Allerdings ist das Problem nicht nur rein akademisch, sondern unter anderem für Logistik-Unternehmen relevant, also für den Post- oder Hermesboten oder für Containerschiffe. Die benutzen für ihre Tourenoptimierung dann keine optimalen Lösungen (keine Zeit), sondern Annäherungen, die &amp;quot;gut genug&amp;quot; sind. Und da gibt es einen ganzen Sack von Strategien, die ausgesprochen spannend sind - natürlich für eine ganz persönliche Definition von &amp;quot;spannend&amp;quot; :-D &lt;/p&gt;
+
+&lt;p&gt;An einige Algorithmen dazu kann ich mich noch ganz gut aus meinem Studium erinnern, aber ehrlich gesagt habe ich nicht so viel Lust, die alten Unterlagen nochmal herauszukramen. Glücklicherweise kann man Inspiration auf dieser &lt;a href=&quot;http://www.theprojectspot.com/tutorial-post/simulated-annealing-algorithm-for-beginners/6&quot;&gt;Seite&lt;/a&gt; finden. Diese Implementierung muss dann ja nur noch nach JavaScript portiert werden.&lt;/p&gt;
 
 &lt;p&gt;Im Kern besteht die Idee darin, paarweise zufällig gewählte Kanten einer Tour zu vertauschen und zu prüfen, ob das Ergebnis besser ist als die bislang beste Tour. Die Wahrscheinlichkeit, dass eine schlechtere Lösung akzeptiert wird (um ein lokales Minimum zu vermeiden) ist direkt abhängig von der &amp;quot;Temperatur&amp;quot;.&lt;/p&gt;
 
@@ -602,17 +604,17 @@ gefunden.&lt;/p&gt;
 &quot; class=&quot;lightbox&quot;&gt;&lt;img src=&quot;/assets/img/loader.gif&quot; data-src=&quot;/assets/img/normal/tsp_annealing.png&quot; alt=&quot;Ergebnis&quot;&gt;&lt;/a&gt;&lt;figcaption&gt;&lt;p&gt;Nach der simulierten Erstarrung&lt;/p&gt;
 &lt;/figcaption&gt;&lt;/figure&gt;
 
-&lt;p&gt;Bei größeren Punktmengen wird die Rechenzeit seeehr lang und das Ergebnis ist trotzdem nicht so richtig beeindruckend:&lt;/p&gt;
+&lt;p&gt;Bei größeren Punktmengen (z.B. 100 Punkte) wird die Rechenzeit schon seeehr lang und das Ergebnis ist trotzdem nicht so richtig beeindruckend:&lt;/p&gt;
 
 &lt;figure class=&quot;cap-left p20&quot;&gt;&lt;a href=&quot;/assets/img/tsp_before1.png&quot; title=&quot;&lt;p&gt;100 Punkte vor dem Durchlauf&lt;/p&gt;
-&quot; class=&quot;lightbox&quot;&gt;&lt;img src=&quot;/assets/img/loader.gif&quot; data-src=&quot;/assets/img/normal/tsp_before1.png&quot; alt=&quot;100 Punkte Ausgangstour&quot;&gt;&lt;/a&gt;&lt;figcaption&gt;&lt;p&gt;100 Punkte vor dem Durchlauf&lt;/p&gt;
+&quot; class=&quot;lightbox&quot;&gt;&lt;img src=&quot;/assets/img/loader.gif&quot; data-src=&quot;/assets/img/normal/tsp_before1.png&quot; alt=&quot;Ausgangstour&quot;&gt;&lt;/a&gt;&lt;figcaption&gt;&lt;p&gt;100 Punkte vor dem Durchlauf&lt;/p&gt;
 &lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;figure class=&quot;cap-left p20&quot;&gt;&lt;a href=&quot;/assets/img/tsp_annealing1.png&quot; title=&quot;&lt;p&gt;Die Ergebnistour&lt;/p&gt;
-&quot; class=&quot;lightbox&quot;&gt;&lt;img src=&quot;/assets/img/loader.gif&quot; data-src=&quot;/assets/img/normal/tsp_annealing1.png&quot; alt=&quot;100 Punkte Ergebnis&quot;&gt;&lt;/a&gt;&lt;figcaption&gt;&lt;p&gt;Die Ergebnistour&lt;/p&gt;
+&quot; class=&quot;lightbox&quot;&gt;&lt;img src=&quot;/assets/img/loader.gif&quot; data-src=&quot;/assets/img/normal/tsp_annealing1.png&quot; alt=&quot;Ergebnis&quot;&gt;&lt;/a&gt;&lt;figcaption&gt;&lt;p&gt;Die Ergebnistour&lt;/p&gt;
 &lt;/figcaption&gt;&lt;/figure&gt;
 
-&lt;p&gt;... und das waren nur 100 Punkte. Ich wollte eigentlich eher 20-mal so viele. Und das soll auf einem Handy laufen, nicht auf einer Workstation :/ Tja, nicht umsonst gehört das TSP zu der Klasse der echt richtig schwierigen Probleme (ja, das ist nicht der richtige Name - verklag&amp;#39; mich).&lt;/p&gt;
+&lt;p&gt;... und das waren jetzt wirklich nur nur 100 Punkte. Ich wollte eigentlich eher 20-mal so viele. Und das soll auf einem Handy laufen, nicht auf einer Workstation :/ Tja, nicht umsonst gehört das TSP zu der Klasse der echt richtig schwierigen Probleme :).&lt;/p&gt;
 </description>
                 <link>http://halfdane.github.io/2013/12/01/annealing</link>
                 <guid>http://halfdane.github.io/2013/12/01/annealing</guid>
