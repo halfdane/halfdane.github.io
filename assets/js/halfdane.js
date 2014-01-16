@@ -52,7 +52,14 @@ var prepareLightboxes = function() {
         $(element).find('a.lightbox').magnificPopup(popupOptions);
     });
 
-    $('a.lightbox:not(.swipe a.lightbox)').magnificPopup(popupOptions);
+    $('.fullpost a.lightbox:not(.swipe a.lightbox)').magnificPopup(popupOptions);
+    $('.postslist a.lightbox').on('click', function() { return false});
+};
+
+var handlePostlistClicks = function() {
+    $('.postslist .post').on('click', function() {
+        window.location.href=$(this).find('h3 a').attr('href');
+    });
 };
 
 $(window).load(function () {
@@ -61,4 +68,5 @@ $(window).load(function () {
     prepareLightboxes();
 
     register_baseline_trigger();
+    handlePostlistClicks();
 });
