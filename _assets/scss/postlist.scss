@@ -40,6 +40,9 @@
     padding: 2*$local_borders $local_borders $local_borders 2*$local_borders;
     border-top: $local_borders/2 solid $postlist_border;
   }
+  .post:hover {
+    background-image: linear-gradient(90deg, $postlist_border $local_borders, shade($postlist_border, 10%) $local_borders, shade($postlist_border, 10%) 99%);
+  }
   .post .text {
     vertical-align: top;
     text-align: left;
