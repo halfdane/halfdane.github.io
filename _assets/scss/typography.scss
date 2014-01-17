@@ -24,6 +24,10 @@ code {
   display: inline-block;
 }
 
+p > code {
+  display: inline;
+}
+
 /*vertical rhythm*/
 @import "compass/typography/vertical_rhythm";
 $base-font-size       : 21px;
@@ -86,8 +90,8 @@ pre {
   background-size: auto 2*$base-line-height;
   background-position: 0 0.5*$base-line-height;
 
-  padding-top: 0.5*$base-line-height;
-  padding-bottom: 0.5*$base-line-height;
+  @include trailer(0.5, $base-line-height, padding);
+  @include leader(0.5, $base-line-height, padding);
 }
 
 ol, ul {
