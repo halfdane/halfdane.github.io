@@ -280,6 +280,8 @@ figure,
     box-sizing: border-box;
     padding: 1.2381em 0.61905em 0.61905em 1.2381em;
     border-top: 0.30952em solid #eeeeee; }
+  .postslist .post:hover {
+    background-image: linear-gradient(90deg, #eeeeee 0.61905em, #d6d6d6 0.61905em, #d6d6d6 99%); }
   .postslist .post .text {
     vertical-align: top;
     text-align: left; }

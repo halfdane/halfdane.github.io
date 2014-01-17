@@ -10,17 +10,17 @@ var activate_slideshows = function () {
                 $navi.children('.dot-item').removeClass('active');
                 $($navi.children('.dot-item')[pos]).addClass('active');
 
-                $slideshow.find('img').eq(pos).unveil();
+                $slideshow.find('img').eq(pos).unveil(0);
             }
         });
         $slideshow.find('img').first().unveil(200);
 
         $slideshow.children('.swipe-wrap').children().each(function (i, e) {
-            $navi.append('<button class="dot-item" data-index="'+i+'"><span class="dot"></span></button>');
+            $navi.append('<button class="dot-item" data-index="' + i + '"><span class="dot"></span></button>');
         });
 
         $navi.children('.dot-item:first').addClass('active');
-        $navi.children('.dot-item').on('click', function() {
+        $navi.children('.dot-item').on('click', function () {
             var $this = $(this);
             swipe.slide($this.data('index'), 300);
         });
@@ -36,31 +36,38 @@ var register_baseline_trigger = function () {
     })
 };
 
-var lazyload_images = function() {
-    $('img:first').unveil();
-    $('img:not(.swipe img)').unveil(200);
+var equalizeBlockHeights = function () {
+    $('.postslist:first .post').removeAttr('style');
+    halfdane.equalheight_blocks($('.postslist:first .post'));
 };
 
-var prepareLightboxes = function() {
+var lazyload_images = function () {
+    $('img:not(.swipe img)').unveil(200, function() {
+        equalizeBlockHeights();
+    });
+};
+
+var prepareLightboxes = function () {
     var popupOptions = {
         type: 'image',
-        gallery:{enabled:true},
+        gallery: {enabled: true},
         disableOn: 500
     };
 
-    $('.swipe').each(function(index, element){
+    $('.swipe').each(function (index, element) {
         $(element).find('a.lightbox').magnificPopup(popupOptions);
     });
 
     $('.fullpost a.lightbox:not(.swipe a.lightbox)').magnificPopup(popupOptions);
-    $('.postslist a.lightbox').on('click', function() { return false});
+    $('.postslist a.lightbox').on('click', function () { return false});
 };
 
-var handlePostlistClicks = function() {
-    $('.postslist .post').on('click', function() {
-        window.location.href=$(this).find('h3 a').attr('href');
+var handlePostlistClicks = function () {
+    $('.postslist .post').on('click', function () {
+        window.location.href = $(this).find('h3 a').attr('href');
     });
 };
+
 
 $(window).load(function () {
     activate_slideshows();
@@ -70,3 +77,5 @@ $(window).load(function () {
     register_baseline_trigger();
     handlePostlistClicks();
 });
+
+$(window).resize(equalizeBlockHeights);
