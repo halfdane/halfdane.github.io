@@ -11,7 +11,7 @@ title: Navigate by sight
                     {% if post.image %}{% image {{post.image}} "{{post.title}}" "thumbnail" %}{% endimage %}{% endif %}
                     <div class="text">
                         <h3><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h3>
-                        <div class="excerpt">{{ post.excerpt | textilize }}</div>
+                        <div class="excerpt">{{ post.excerpt }}</div>
                     </div>
                 </div>{% endfor %}
         </div>
@@ -20,7 +20,7 @@ title: Navigate by sight
             {% if post.image %}{% image {{post.image}} "{{post.title}}" "thumbnail" %}{% endimage %}{% endif %}
             <div class="text">
                 <h3><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h3>
-                <div class="excerpt">{{ post.excerpt | textilize }}</div>
+                <div class="excerpt">{{ post.excerpt }}</div>
             </div>
         </div>{% endfor %}
         </div>
