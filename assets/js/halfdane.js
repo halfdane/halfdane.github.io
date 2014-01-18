@@ -1,4 +1,6 @@
 var activate_slideshows = function () {
+    'use strict';
+
     $('.swipe').each(function (i, e) {
         var $slideshow = $(e);
         var $navi = $slideshow.find('.dots');
@@ -31,23 +33,31 @@ var activate_slideshows = function () {
 };
 
 var register_baseline_trigger = function () {
+    'use strict';
+
     $('.js_baseline_trigger').on('click', function () {
         $('body').toggleClass('baseline');
-    })
+    });
 };
 
 var equalizeBlockHeights = function () {
+    'use strict';
+
     $('.postslist:first .post').removeAttr('style');
     halfdane.equalheight_blocks($('.postslist:first .post'));
 };
 
 var lazyload_images = function () {
+    'use strict';
+
     $('img:not(.swipe img)').unveil(200, function() {
         equalizeBlockHeights();
     });
 };
 
 var prepareLightboxes = function () {
+    'use strict';
+
     var popupOptions = {
         type: 'image',
         gallery: {enabled: true},
@@ -59,10 +69,12 @@ var prepareLightboxes = function () {
     });
 
     $('.fullpost a.lightbox:not(.swipe a.lightbox)').magnificPopup(popupOptions);
-    $('.postslist a.lightbox').on('click', function () { return false});
+    $('.postslist a.lightbox').on('click', function () { return false;});
 };
 
 var handlePostlistClicks = function () {
+    'use strict';
+
     $('.postslist .post').on('click', function () {
         window.location.href = $(this).find('h3 a').attr('href');
     });
@@ -70,6 +82,8 @@ var handlePostlistClicks = function () {
 
 
 $(window).load(function () {
+    'use strict';
+
     activate_slideshows();
     lazyload_images();
     prepareLightboxes();
