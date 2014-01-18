@@ -10,8 +10,8 @@ before_install:
 - travis_retry gem install jekyll
 - bundle install
 script:
-- jekyll build
-- jekyll build
+- rake build
+- rake build
 after_success:
 - ls | grep -v _site | xargs rm -rf
 - git fetch origin master:master

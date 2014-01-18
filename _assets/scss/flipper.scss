@@ -1,0 +1,49 @@
+.picture_demo {
+  position: fixed;
+  height:100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.panel {
+  float: left;
+  width: 100px;
+  height: 100px;
+  position: relative;
+
+  @include experimental(perspective, 600);
+
+  .front, .back {
+    float: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+
+    @include experimental(transform-style, preserve-3d);
+    @include experimental(backface-visibility, hidden);
+    @include experimental(transition, all .4s ease-in-out);
+  }
+
+  .front {
+    z-index: 900;
+    @include experimental(transform, rotateX(0deg) rotateY(0deg));
+  }
+  .back {
+    z-index: 800;
+    @include experimental(transform, rotateY(180deg));
+  }
+
+  &.flip {
+    .front {
+      @include experimental(transform, rotateY(180deg));
+    }
+    .back {
+      @include experimental(transform, rotateX(0deg) rotateY(0deg));
+    }
+  }
+}
+
+
