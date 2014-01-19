@@ -5,23 +5,25 @@
         <description>Canned Nerd - Halfdane</description>
         <link>http://halfdane.github.io</link>
         <link>http://halfdane.github.io</link>
-        <lastBuildDate>2014-01-18T16:19:02+00:00</lastBuildDate>
-        <pubDate>2014-01-18T16:19:02+00:00</pubDate>
+        <lastBuildDate>2014-01-19T13:40:51+00:00</lastBuildDate>
+        <pubDate>2014-01-19T13:40:51+00:00</pubDate>
         <ttl>1800</ttl>
 
 
         <item>
                 <title>Livestream-Bildergallerie</title>
-                <description>&lt;p&gt;Als kleines Gimmick am Rande hatten Schmiddie und ich die Idee, man könne die aktuellen Käufe auf der OTTO-Seite darstellen, damit wir eine Idee davon bekommen, was da überhaupt passiert. Bei rund 100 Kaufvorgängen pro Minute, die jeweils mehrere Produkte enthalten, gibt es eigentlich nur die Möglichkeit, zu abstrahieren. Statistiken haben wir schon genug, wir wollen etwas weniger praktisches. Also zeigen wir die Bilder der Produkte, die gerade gekauft werden :)&lt;/p&gt;
+                <description>&lt;p&gt;Als kleines Gimmick am Rande hatten Schmiddie und ich die Idee, man könne die aktuellen Käufe auf der OTTO-Seite darstellen, damit wir eine Vorstellung davon bekommen, was da überhaupt passiert. Bei rund 100 Kaufvorgängen pro Minute, die jeweils mehrere Produkte enthalten, gibt es eigentlich nur die Möglichkeit zu abstrahieren. Statistiken haben wir schon genug, wir wollen etwas weniger praktisches. Also zeigen wir die Bilder der Produkte, die gerade gekauft werden :) Genaugenommen war das alles Schmiddies Idee, mich hat er ja bloß angesprochen weil ich an der Bezahlstrecke arbeite...&lt;/p&gt;
 
-&lt;p&gt;Ich möchte den Bildschirm, oder einen Teil davon, mit kleinen Produktbildern füllen und bei neuen Käufen dreht sich die Kachel um und zeigt das Bild des neu gekauften Produktes. Der Aufwand soll sich in Grenzen halten, deswegen bauen wir das einfach in Javascript.&lt;/p&gt;
+&lt;p&gt;Ich möchte den Bildschirm (oder einen Teil davon) mit kleinen Produktbildern füllen und bei neuen Käufen dreht sich die Kachel um und zeigt das Bild des neu gekauften Produktes. Der Aufwand soll sich in Grenzen halten, deswegen baue ich das einfach in Javascript.&lt;/p&gt;
 
-&lt;p&gt;Jedes neue Bild wird an eine Kachel gehängt und wenn es fertig geladen ist, wird die Kachel gedreht:&lt;/p&gt;
+&lt;div class=&quot;small_picture_demo&quot;&gt;&lt;/div&gt;
+
+&lt;p&gt;Jedes neue Bild wird an eine Kachel gehängt und wenn es fertig geladen ist wird die Kachel gedreht:&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;nextImage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;src&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;imgUrl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;load&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;nx&quot;&gt;$frame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toggleClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;flip&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Jede Kachel enthält zwei Bilder (vorne und hinten) und durch das Zufügen und Entfernen der &lt;code&gt;flip&lt;/code&gt;-Klasse wird jeweils eine CSS3-Transition gestartet, die ich aus einem JSFiddle angepasst habe. Dank SASS ist sogar ganz übersichtlich:&lt;/p&gt;
+&lt;p&gt;Jede Kachel enthält zwei Bilder (vorne und hinten) und durch das Zufügen und Entfernen der &lt;code&gt;flip&lt;/code&gt;-Klasse wird jeweils eine CSS3-Transition gestartet, die ich aus einem &lt;a href=&quot;http://jsfiddle.net/EZSlaver/5AWSJ/3/&quot;&gt;JSFiddle&lt;/a&gt; angepasst habe. Dank &lt;a href=&quot;http://sass-lang.com/&quot;&gt;SASS&lt;/a&gt; ist sogar ganz übersichtlich:&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;scss language-scss&quot; data-lang=&quot;scss&quot;&gt;&lt;span class=&quot;nc&quot;&gt;.panel&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;na&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
   &lt;span class=&quot;na&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -62,7 +64,7 @@
   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Diese Variante erlaubt eine sehr einfache HTML-Struktur, die einfach zwei Kindelemente eines Elements drehen kann, indem das &lt;code&gt;.panel&lt;/code&gt; ein &lt;code&gt;.flip&lt;/code&gt; bekommt:&lt;/p&gt;
+&lt;p&gt;Diese Variante erlaubt eine sehr einfache HTML-Struktur, mit der man zwei Kindelemente eines Elements drehen kann, indem das &lt;code&gt;.panel&lt;/code&gt; ein &lt;code&gt;.flip&lt;/code&gt; bekommt:&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;panel flip&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
   &lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;front&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;...&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
   &lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;back&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;...&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
@@ -104,16 +106,8 @@
 
     &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$targetElement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
         &lt;span class=&quot;nx&quot;&gt;$target&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$targetElement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-        &lt;span class=&quot;nx&quot;&gt;createFrame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-
-        &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;frame&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;.panel&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;inRow&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;floor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
-        &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;inCol&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ceil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
-        &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;frameCount&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;inRow&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;inCol&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
         &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;frameCount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
             &lt;span class=&quot;nx&quot;&gt;createFrame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
         &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
@@ -126,11 +120,15 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Die &lt;code&gt;init&lt;/code&gt;-Funktion bekommt das Dom-Element, in dem die Kacheln einsortiert werden sollen und mit &lt;code&gt;halfdane.picture_display.show(pictureUrl);&lt;/code&gt; wird das übergebene Bild in einer zufälligen Kachel angezeigt.&lt;/p&gt;
 
-&lt;p&gt;Für die Demo habe ich einfach hundert Bilder von der Google-Bildersuche gemopst und iteriere darüber. Die Kacheln werden in einem &lt;code&gt;div&lt;/code&gt; angezeigt, das die gesamte Seite einnimmt. Klick oder Tastendruck beendet die Demo.&lt;/p&gt;
+&lt;p&gt;Für die Demo habe ich einfach hundert Bilder von der Google-Bildersuche gemopst und iteriere darüber. Die Kacheln werden in einem &lt;code&gt;div&lt;/code&gt; angezeigt, das die gesamte Seite einnimmt.&lt;/p&gt;
+
+&lt;p&gt;Klick oder Tastendruck beendet die Demo.&lt;/p&gt;
 
 &lt;script src=&quot;/assets/js/picture_display.js&quot; &gt;&lt;/script&gt;
 
-&lt;p&gt;&lt;span class=&quot;btn&quot; onclick=&quot;halfdane.picture_demo(); return false;&quot;&gt;Click zum Start&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;btn&quot; onclick=&quot;halfdane.picture_demo.run(); return false;&quot;&gt;Click zum Start&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;Der Code ändert sich vermutlich auch noch ein bisschen, die aktuelle Version ist immer hier: &lt;a href=&quot;/assets/js/picture_display.js&quot;&gt;/assets/js/picture_display.js&lt;/a&gt;&lt;/p&gt;
 </description>
                 <link>http://halfdane.github.io/2014/01/18/picture_display</link>
                 <guid>http://halfdane.github.io/2014/01/18/picture_display</guid>

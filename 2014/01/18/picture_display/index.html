@@ -71,16 +71,18 @@
         <small>18 January 2014</small>
     </p>
     <div class="text">
-    <p>Als kleines Gimmick am Rande hatten Schmiddie und ich die Idee, man könne die aktuellen Käufe auf der OTTO-Seite darstellen, damit wir eine Idee davon bekommen, was da überhaupt passiert. Bei rund 100 Kaufvorgängen pro Minute, die jeweils mehrere Produkte enthalten, gibt es eigentlich nur die Möglichkeit, zu abstrahieren. Statistiken haben wir schon genug, wir wollen etwas weniger praktisches. Also zeigen wir die Bilder der Produkte, die gerade gekauft werden :)</p>
+    <p>Als kleines Gimmick am Rande hatten Schmiddie und ich die Idee, man könne die aktuellen Käufe auf der OTTO-Seite darstellen, damit wir eine Vorstellung davon bekommen, was da überhaupt passiert. Bei rund 100 Kaufvorgängen pro Minute, die jeweils mehrere Produkte enthalten, gibt es eigentlich nur die Möglichkeit zu abstrahieren. Statistiken haben wir schon genug, wir wollen etwas weniger praktisches. Also zeigen wir die Bilder der Produkte, die gerade gekauft werden :) Genaugenommen war das alles Schmiddies Idee, mich hat er ja bloß angesprochen weil ich an der Bezahlstrecke arbeite...</p>
 
-<p>Ich möchte den Bildschirm, oder einen Teil davon, mit kleinen Produktbildern füllen und bei neuen Käufen dreht sich die Kachel um und zeigt das Bild des neu gekauften Produktes. Der Aufwand soll sich in Grenzen halten, deswegen bauen wir das einfach in Javascript.</p>
+<p>Ich möchte den Bildschirm (oder einen Teil davon) mit kleinen Produktbildern füllen und bei neuen Käufen dreht sich die Kachel um und zeigt das Bild des neu gekauften Produktes. Der Aufwand soll sich in Grenzen halten, deswegen baue ich das einfach in Javascript.</p>
 
-<p>Jedes neue Bild wird an eine Kachel gehängt und wenn es fertig geladen ist, wird die Kachel gedreht:</p>
+<div class="small_picture_demo"></div>
+
+<p>Jedes neue Bild wird an eine Kachel gehängt und wenn es fertig geladen ist wird die Kachel gedreht:</p>
 <div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><span class="nx">nextImage</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;src&#39;</span><span class="p">,</span> <span class="nx">imgUrl</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;load&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
     <span class="nx">$frame</span><span class="p">.</span><span class="nx">toggleClass</span><span class="p">(</span><span class="s1">&#39;flip&#39;</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div>
-<p>Jede Kachel enthält zwei Bilder (vorne und hinten) und durch das Zufügen und Entfernen der <code>flip</code>-Klasse wird jeweils eine CSS3-Transition gestartet, die ich aus einem JSFiddle angepasst habe. Dank SASS ist sogar ganz übersichtlich:</p>
+<p>Jede Kachel enthält zwei Bilder (vorne und hinten) und durch das Zufügen und Entfernen der <code>flip</code>-Klasse wird jeweils eine CSS3-Transition gestartet, die ich aus einem <a href="http://jsfiddle.net/EZSlaver/5AWSJ/3/">JSFiddle</a> angepasst habe. Dank <a href="http://sass-lang.com/">SASS</a> ist sogar ganz übersichtlich:</p>
 <div class="highlight"><pre><code class="scss language-scss" data-lang="scss"><span class="nc">.panel</span> <span class="p">{</span>
   <span class="na">float</span><span class="o">:</span> <span class="no">left</span><span class="p">;</span>
   <span class="na">width</span><span class="o">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
@@ -121,7 +123,7 @@
   <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>Diese Variante erlaubt eine sehr einfache HTML-Struktur, die einfach zwei Kindelemente eines Elements drehen kann, indem das <code>.panel</code> ein <code>.flip</code> bekommt:</p>
+<p>Diese Variante erlaubt eine sehr einfache HTML-Struktur, mit der man zwei Kindelemente eines Elements drehen kann, indem das <code>.panel</code> ein <code>.flip</code> bekommt:</p>
 <div class="highlight"><pre><code class="html language-html" data-lang="html"><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;panel flip&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">&quot;front&quot;</span> <span class="na">src=</span><span class="s">&quot;...&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">&quot;back&quot;</span> <span class="na">src=</span><span class="s">&quot;...&quot;</span><span class="nt">&gt;</span>
@@ -163,16 +165,8 @@
 
     <span class="kd">function</span> <span class="nx">init</span><span class="p">(</span><span class="nx">$targetElement</span><span class="p">)</span> <span class="p">{</span>
         <span class="nx">$target</span> <span class="o">=</span> <span class="nx">$targetElement</span><span class="p">;</span>
-
-        <span class="nx">createFrame</span><span class="p">();</span>
-
-        <span class="kd">var</span> <span class="nx">frame</span> <span class="o">=</span> <span class="nx">$target</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s1">&#39;.panel&#39;</span><span class="p">);</span>
-        <span class="kd">var</span> <span class="nx">inRow</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">$target</span><span class="p">.</span><span class="nx">width</span><span class="p">()</span> <span class="o">/</span> <span class="nx">frame</span><span class="p">.</span><span class="nx">width</span><span class="p">());</span>
-        <span class="kd">var</span> <span class="nx">inCol</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">ceil</span><span class="p">(</span><span class="nx">$target</span><span class="p">.</span><span class="nx">height</span><span class="p">()</span> <span class="o">/</span> <span class="nx">frame</span><span class="p">.</span><span class="nx">height</span><span class="p">());</span>
-        <span class="kd">var</span> <span class="nx">frameCount</span> <span class="o">=</span> <span class="nx">inRow</span><span class="o">*</span><span class="nx">inCol</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
         <span class="kd">var</span> <span class="nx">i</span><span class="p">;</span>
-
-        <span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">frameCount</span><span class="p">;</span> <span class="nx">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">200</span><span class="p">;</span> <span class="nx">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
             <span class="nx">createFrame</span><span class="p">();</span>
         <span class="p">}</span>
     <span class="p">}</span>
@@ -185,11 +179,15 @@
 </code></pre></div>
 <p>Die <code>init</code>-Funktion bekommt das Dom-Element, in dem die Kacheln einsortiert werden sollen und mit <code>halfdane.picture_display.show(pictureUrl);</code> wird das übergebene Bild in einer zufälligen Kachel angezeigt.</p>
 
-<p>Für die Demo habe ich einfach hundert Bilder von der Google-Bildersuche gemopst und iteriere darüber. Die Kacheln werden in einem <code>div</code> angezeigt, das die gesamte Seite einnimmt. Klick oder Tastendruck beendet die Demo.</p>
+<p>Für die Demo habe ich einfach hundert Bilder von der Google-Bildersuche gemopst und iteriere darüber. Die Kacheln werden in einem <code>div</code> angezeigt, das die gesamte Seite einnimmt.</p>
+
+<p>Klick oder Tastendruck beendet die Demo.</p>
 
 <script src="/assets/js/picture_display.js" ></script>
 
-<p><span class="btn" onclick="halfdane.picture_demo(); return false;">Click zum Start</span></p>
+<p><span class="btn" onclick="halfdane.picture_demo.run(); return false;">Click zum Start</span></p>
+
+<p>Der Code ändert sich vermutlich auch noch ein bisschen, die aktuelle Version ist immer hier: <a href="/assets/js/picture_display.js">/assets/js/picture_display.js</a></p>
 
     </div>
 </div>

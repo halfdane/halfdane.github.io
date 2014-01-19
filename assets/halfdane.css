@@ -492,6 +492,9 @@ nav ul {
   padding: 0 0.1em 0 0;
   /*pad it out slightly*/ }
 
+.small_picture_demo {
+  height: 10em; }
+
 .picture_demo {
   position: fixed;
   height: 100%;
