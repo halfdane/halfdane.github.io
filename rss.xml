@@ -5,8 +5,8 @@
         <description>Canned Nerd - Halfdane</description>
         <link>http://halfdane.github.io</link>
         <link>http://halfdane.github.io</link>
-        <lastBuildDate>2014-01-19T13:40:51+00:00</lastBuildDate>
-        <pubDate>2014-01-19T13:40:51+00:00</pubDate>
+        <lastBuildDate>2014-01-19T13:55:15+00:00</lastBuildDate>
+        <pubDate>2014-01-19T13:55:15+00:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -123,8 +123,6 @@
 &lt;p&gt;Für die Demo habe ich einfach hundert Bilder von der Google-Bildersuche gemopst und iteriere darüber. Die Kacheln werden in einem &lt;code&gt;div&lt;/code&gt; angezeigt, das die gesamte Seite einnimmt.&lt;/p&gt;
 
 &lt;p&gt;Klick oder Tastendruck beendet die Demo.&lt;/p&gt;
-
-&lt;script src=&quot;/assets/js/picture_display.js&quot; &gt;&lt;/script&gt;
 
 &lt;p&gt;&lt;span class=&quot;btn&quot; onclick=&quot;halfdane.picture_demo.run(); return false;&quot;&gt;Click zum Start&lt;/span&gt;&lt;/p&gt;
 
