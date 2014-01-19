@@ -3,7 +3,7 @@
 var halfdane = halfdane || {};
 halfdane.tsp = halfdane.tsp || {};
 
-halfdane.tsp.createAnnealing = function (pointSet) {
+halfdane.tsp.createAnnealing = function (pointSet, drawEdgesFunction) {
     'use strict';
 
     var tourManager = halfdane.tsp.createTourManager(pointSet),
@@ -18,7 +18,7 @@ halfdane.tsp.createAnnealing = function (pointSet) {
         return Math.exp((engery - newEngery) / temperature);
     }
 
-    function solve(drawEdgesFunction) {
+    function solve() {
         // Set initial temp
         var temp = 10000,
         // Cooling rate
@@ -26,7 +26,7 @@ halfdane.tsp.createAnnealing = function (pointSet) {
         // Initialize intial solution
             currentSolution = createTour().usingTourManagersPoints();
 
-        drawEdgesFunction(currentSolution.tour, temp);
+        drawEdgesFunction(currentSolution.tour, 'temp: ' + temp);
 
         // Set as current best
         var best = createTour().usingCities(currentSolution.tour);
@@ -60,13 +60,13 @@ halfdane.tsp.createAnnealing = function (pointSet) {
             // Keep track of the best solution found
             if (currentSolution.getDistance() < best.getDistance()) {
                 best = createTour().usingCities(currentSolution.tour);
-                drawEdgesFunction(best.tour, temp);
+                drawEdgesFunction(best.tour, 'temp: ' + temp);
             }
 
             // Cool system
             temp *= 1 - coolingRate;
         }
-        drawEdgesFunction(best.tour, temp);
+        drawEdgesFunction(best.tour, 'temp: ' + temp);
 
         return best.tour;
     }
@@ -100,31 +100,5 @@ halfdane.tsp.annealingTest = function () {
         {x: 160, y: 20}
     ];
 
-    function createContext() {
-        return $('<canvas></canvas>')
-            .attr('height', 300)
-            .attr('width', 200)
-            .appendTo($('.target'))
-            [0]
-            .getContext('2d');
-    }
-
-
-    function drawEdges(points, temperature) {
-        setTimeout(function () {
-            var context = createContext();
-            context.beginPath();
-            context.moveTo(points[points.length - 1].x, points[points.length - 1].y);
-            $(points).each(function (index, point) {
-                context.lineTo(point.x, point.y);
-            });
-            context.closePath();
-            context.stroke();
-            context.fillStyle = '#000';
-            context.textBaseline = 'bottom';
-            context.fillText('temp: ' + temperature, 10, 250);
-        }, 10);
-    }
-
-    halfdane.tsp.createAnnealing(points).solve(drawEdges);
+    halfdane.tsp.createAnnealing(points, halfdane.drawEdges).solve();
 };

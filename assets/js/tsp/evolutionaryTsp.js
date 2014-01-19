@@ -1,7 +1,7 @@
 var halfdane = halfdane || {};
 halfdane.tsp = halfdane.tsp || {};
 
-halfdane.tsp.createEvolutionary = function (pointSet) {
+halfdane.tsp.createEvolutionary = function (pointSet, drawEdgesFunction) {
     'use strict';
 
     var tourManager = halfdane.tsp.createTourManager(pointSet),
@@ -40,7 +40,7 @@ halfdane.tsp.createEvolutionary = function (pointSet) {
             // Loop and create individuals
             for (i = 0; i < populationSize; i++) {
                 if (initialise) {
-                    var newTour = createTour.usingTourManagersPoints();
+                    var newTour = createTour().usingTourManagersPoints();
                     p.tours.push(newTour);
                 } else {
                     p.tours.push(undefined);
@@ -53,7 +53,7 @@ halfdane.tsp.createEvolutionary = function (pointSet) {
         createGA = function () {
             var ga = {};
 
-            ga.mutationRate = 0.015;
+            ga.mutationRate = 0.055;
             ga.tournamentSize = 5;
             ga.elitism = true;
 
@@ -119,7 +119,7 @@ halfdane.tsp.createEvolutionary = function (pointSet) {
                         // Loop to find a spare position in the child's tour
                         for (ii = 0; ii < child.tourSize(); ii += 1) {
                             // Spare position found, add city
-                            if (child.getCity(ii) == null) {
+                            if (child.getCity(ii) === null) {
                                 child.setCity(ii, parent2.getCity(i));
                                 break;
                             }
@@ -171,12 +171,14 @@ halfdane.tsp.createEvolutionary = function (pointSet) {
         return function solve() {
             var pop = createPopulation(50, true),
                 i;
-            console.log("Initial solution distance: " + pop.getFittest().getDistance());
+            drawEdgesFunction(pop.getFittest().tour, "Ausgangstour");
             pop = ga.evolvePopulation(pop);
-            for (i = 0; i < 100; i += 1) {
+            for (i = 0; i <= 100; i += 1) {
                 pop = ga.evolvePopulation(pop);
+                if (i%10 ===0) {
+                    drawEdgesFunction(pop.getFittest().tour, "Fittest of generation "+i);
+                }
             }
-            console.log("Final solution distance: " + pop.getFittest().getDistance());
             return pop.getFittest().tour;
         };
     }
@@ -185,6 +187,8 @@ halfdane.tsp.createEvolutionary = function (pointSet) {
 };
 
 halfdane.tsp.evolutionaryTest = function () {
+    'use strict';
+
     var points = [
         {x: 60, y: 200},
         {x: 180, y: 200},
@@ -208,7 +212,5 @@ halfdane.tsp.evolutionaryTest = function () {
         {x: 160, y: 20}
     ];
 
-    halfdane.tsp.createEvolutionary(points).solve();
+    halfdane.tsp.createEvolutionary(points, halfdane.drawEdges).solve();
 };
-
-halfdane.tsp.evolutionaryTest();
