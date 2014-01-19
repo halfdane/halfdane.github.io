@@ -7,22 +7,18 @@ title: Navigate by sight
 <div class="postslist_wrapper">
     <div class="postlist_layout">
         <div class="postslist">
-            {% for post in site.posts limit: 6 %}<div class="post">
-                    {% if post.image %}{% image {{post.image}} "{{post.title}}" "thumbnail" %}{% endimage %}{% endif %}
-                    <div class="text">
-                        <h3><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h3>
-                        <div class="excerpt">{{ post.excerpt }}</div>
-                    </div>
-                </div>{% endfor %}
+            {% for post in site.posts limit: 6 %}{%include index_post post=post %}{% endfor %}
         </div>
-        <div class="postslist">
-            {% for post in site.posts offset: 6 %}<div class="post">
-            {% if post.image %}{% image {{post.image}} "{{post.title}}" "thumbnail" %}{% endimage %}{% endif %}
-            <div class="text">
-                <h3><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h3>
-                <div class="excerpt">{{ post.excerpt }}</div>
-            </div>
-        </div>{% endfor %}
+        {% for post in site.posts offset: 6 %}
+            {% capture currentyear %}{{post.date | date: "%B %Y"}}{% endcapture %}
+            {% if currentyear != year %}
+            {% unless forloop.first %}</div>{% endunless %}
+                <h3>{{ currentyear }}</h3>
+                <div class="postslist">
+                {% capture year %}{{currentyear}}{% endcapture %}
+            {% endif %}
+            {%include index_post post=post %}
+        {% endfor %}
         </div>
     </div>
 </div>
