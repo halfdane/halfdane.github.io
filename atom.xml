@@ -4,7 +4,7 @@
  <title>Canned Nerd</title>
  <link href="http://halfdane.github.io/" rel="self"/>
  <link href="http://halfdane.github.io"/>
- <updated>2014-01-19T15:25:49+00:00</updated>
+ <updated>2014-01-19T19:14:16+00:00</updated>
  <id>http://halfdane.github.io</id>
  <author>
    <name>Halfdane</name>
@@ -758,6 +758,14 @@ gefunden.&lt;/p&gt;
 &lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;... und das waren jetzt wirklich nur nur 100 Punkte. Ich wollte eigentlich eher 20-mal so viele. Und das soll auf einem Handy laufen, nicht auf einer Workstation :/ Tja, nicht umsonst gehört das TSP zu der Klasse der echt richtig schwierigen Probleme :).&lt;/p&gt;
+
+&lt;p&gt;[UPDATE 19.1.2014]&lt;/p&gt;
+
+&lt;p&gt;Ich habe den Code jetzt mal eingebunden und eine Live-Demo vorbereitet - mit 20 Punkten, damit es nicht so lange dauert.
+Die Ausgabe ist zunächst die initiale Tour und dann bei jeder Verbesserung ein weiteres Bild. Unten im Bild wird die aktuelle Temperatur angezeigt.&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;target&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;btn&quot; onclick=&quot;halfdane.tsp.annealingTest(); return false;&quot;&gt;Click zum Start&lt;/span&gt;&lt;/p&gt;
 </content>
  </entry>
  

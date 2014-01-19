@@ -5,8 +5,8 @@
         <description>Canned Nerd - Halfdane</description>
         <link>http://halfdane.github.io</link>
         <link>http://halfdane.github.io</link>
-        <lastBuildDate>2014-01-19T15:25:49+00:00</lastBuildDate>
-        <pubDate>2014-01-19T15:25:49+00:00</pubDate>
+        <lastBuildDate>2014-01-19T19:14:16+00:00</lastBuildDate>
+        <pubDate>2014-01-19T19:14:16+00:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -753,6 +753,14 @@ gefunden.&lt;/p&gt;
 &lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;... und das waren jetzt wirklich nur nur 100 Punkte. Ich wollte eigentlich eher 20-mal so viele. Und das soll auf einem Handy laufen, nicht auf einer Workstation :/ Tja, nicht umsonst gehört das TSP zu der Klasse der echt richtig schwierigen Probleme :).&lt;/p&gt;
+
+&lt;p&gt;[UPDATE 19.1.2014]&lt;/p&gt;
+
+&lt;p&gt;Ich habe den Code jetzt mal eingebunden und eine Live-Demo vorbereitet - mit 20 Punkten, damit es nicht so lange dauert.
+Die Ausgabe ist zunächst die initiale Tour und dann bei jeder Verbesserung ein weiteres Bild. Unten im Bild wird die aktuelle Temperatur angezeigt.&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;target&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;btn&quot; onclick=&quot;halfdane.tsp.annealingTest(); return false;&quot;&gt;Click zum Start&lt;/span&gt;&lt;/p&gt;
 </description>
                 <link>http://halfdane.github.io/2013/12/01/annealing</link>
                 <guid>http://halfdane.github.io/2013/12/01/annealing</guid>
