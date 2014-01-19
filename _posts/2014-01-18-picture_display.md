@@ -6,7 +6,7 @@ category: computer/javascript
 tags: [javascript, html5, tsp]
 group: post
 image: picturedisplay.png
-resources: [/assets/js/picture_display.js]
+resources: [/assets/js/picture_display/picture_display.js]
 ---
 Als kleines Gimmick am Rande hatten Schmiddie und ich die Idee, man könne die aktuellen Käufe auf der OTTO-Seite darstellen, damit wir eine Vorstellung davon bekommen, was da überhaupt passiert. Bei rund 100 Kaufvorgängen pro Minute, die jeweils mehrere Produkte enthalten, gibt es eigentlich nur die Möglichkeit zu abstrahieren. Statistiken haben wir schon genug, wir wollen etwas weniger praktisches. Also zeigen wir die Bilder der Produkte, die gerade gekauft werden :) Genaugenommen war das alles Schmiddies Idee, mich hat er ja bloß angesprochen weil ich an der Bezahlstrecke arbeite...
 

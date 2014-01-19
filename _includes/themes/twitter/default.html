@@ -16,6 +16,11 @@
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
+    <style>
+        @import url(//fonts.googleapis.com/css?family=Lobster);
+        @import url(//fonts.googleapis.com/css?family=Cabin);
+    </style>
+
     <!-- Le styles -->
     {% css_asset_tag global %}
     - /_assets/css/slideshow-theme.css
@@ -56,14 +61,16 @@
 
 {% include JB/analytics %}
 
-<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-<script src='/assets/js/swipe.js'></script>
-<script src='/assets/js/jquery.unveil.min.js'></script>
-<script src='/assets/js/jquery.magnific-popup.min.js'></script>
-<script src="/assets/js/equalHeightBlocks.js" ></script>
-<script src="/assets/js/halfdane.js" ></script>
+{% javascript_asset_tag global %}
+- /_assets/js/jquery-1.10.1.min.js
+- /_assets/js/swipe.js
+- /_assets/js/jquery.unveil.min.js
+- /_assets/js/jquery.magnific-popup.min.js
+- /_assets/js/equalHeightBlocks.js
+- /_assets/js/halfdane.js
+{% endjavascript_asset_tag %}
 {% for resource in page.resources %}
-{% if resource contains '/assets/js' %}<script src="{{ resource }}" ></script>{% else %}<link href="{{ resource }}" rel="stylesheet" type="text/css">{% endif %}
+{% if resource contains 'js' %}<script src="{{ resource }}" ></script>{% else %}<link href="/assets/css{{ resource }}" rel="stylesheet" type="text/css">{% endif %}
 {% endfor %}
 </body>
 </html>

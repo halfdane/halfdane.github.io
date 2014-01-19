@@ -100,20 +100,29 @@ end # task :page
 desc "Launch preview environment"
 task :preview do
   edit_config("provider",  "false")
-  system "jekyll serve -w --drafts"
+  edit_config("compress",  "false")
+  edit_config("bundle",  "false")
+  system "jekyll serve -w"
 end # task :preview
 
 desc "Build for production"
 task :build do
   edit_config("provider",  "disqus")
+  edit_config("compress",  "true")
+  edit_config("bundle",  "true")
   system "jekyll build"
-end # task :preview
+end # task :build
+
+desc "Preview for production"
+task :production => [:build] do
+  system "jekyll serve -w"
+end # task :production
 
 
 def edit_config(option_name, value)
   config = File.read("_config.yml")
-  regexp = Regexp.new('(^\s*' + option_name + '\s*:\s*)(\S+)(\s*)$')
-  config.sub!(regexp,'\1'+value+'\3')
+  regexp = Regexp.new('(^\s*' + option_name + '\s*:\s*)(\S*)(\s*)$')
+  config.gsub!(regexp,'\1'+value+'\3')
   File.open("_config.yml", 'w') {|f| f.write(config)}
 end
 
