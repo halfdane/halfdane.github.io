@@ -1,7 +1,9 @@
 require 'open3'
 require 'jekyll_asset_pipeline'
+require 'yui/compressor'
 
 module JekyllAssetPipeline
+
 
   class SassConverter < JekyllAssetPipeline::Converter
 
@@ -24,6 +26,26 @@ SASS Error >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
       eos
       ) if e.length > 0
       return o
+    end
+  end
+
+  class CssCompressor < JekyllAssetPipeline::Compressor
+    def self.filetype
+      '.css'
+    end
+
+    def compress
+      return YUI::CssCompressor.new.compress(@content)
+    end
+  end
+
+  class JavaScriptCompressor < JekyllAssetPipeline::Compressor
+    def self.filetype
+      '.js'
+    end
+
+    def compress
+      return YUI::JavaScriptCompressor.new(munge: true).compress(@content)
     end
   end
 end

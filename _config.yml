@@ -78,7 +78,7 @@ JB :
   # Set 'provider' to false to turn commenting off globally.
   #
   comments :
-    provider : false
+    provider : disqus
     disqus :
       short_name : halfdane
     livefyre :
@@ -96,8 +96,7 @@ JB :
   # Set 'provider' to false to turn analytics off globally.
   #        
   analytics :
-    provider : google 
-    google : 
+    google :
         tracking_id : 'UA-123-12'
     getclicky :
       site_id : 
@@ -112,8 +111,6 @@ JB :
   # Set 'provider' to the sharing provider you want to use.
   # Set 'provider' to false to turn sharing off globally.
   #
-  sharing :
-    provider : false
     
   # Settings for all other include helpers can be defined by creating 
   # a hash with key named for the given helper. ex:
@@ -127,15 +124,15 @@ JB :
   # where [HELPER] is the name of the helper you are overriding.
   
 markdown: redcarpet
-redcarpet:
+redcarpet: 
   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data", "strikethrough" ]
 
 asset_pipeline:
-  bundle: false            # Default = true
-  compress: false          # Default = true
-  output_path: assets     # Default = assets
-  display_path: nil       # Default = nil
-  gzip: false             # Default = false
+  bundle : true
+  compress : true
+  output_path : assets
+  display_path : nil
+  gzip : false
 
 mini_magick:
   thumbnail:
