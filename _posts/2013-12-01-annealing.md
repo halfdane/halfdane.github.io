@@ -128,8 +128,14 @@ Die Ergebnistour
 
 [UPDATE 19.1.2014]
 
-Ich habe den Code jetzt mal eingebunden und eine Live-Demo vorbereitet - mit 20 Punkten, damit es nicht so lange dauert.
+Ich habe den Code jetzt mal eingebunden und eine Live-Demo vorbereitet - mit 20 Punkten, damit es nicht so lange dauert. Tut es natürlich trotzdem :P
+
 Die Ausgabe ist zunächst die initiale Tour und dann bei jeder Verbesserung ein weiteres Bild. Unten im Bild wird die aktuelle Temperatur angezeigt.
 
 <span class="target"></span>
 <span class="btn" onclick="halfdane.tsp.annealingTest(); return false;">Click zum Start</span>
+
+Der zugehörige Code ist hier verfügbar:
+
+- [Helfer-Funktionen für Distanz und Touren-Verwaltung](/assets/js/tsp/tspBase.js)
+- [der eigentliche Annealing-Algorithmus](/assets/js/tsp/annealingTsp.js)
