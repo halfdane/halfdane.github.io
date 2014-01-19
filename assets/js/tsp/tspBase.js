@@ -53,6 +53,8 @@ halfdane.tsp.createTourManager = function (initialPoints) {
 };
 
 halfdane.tsp.tourCreator = function (tourManager) {
+    'use strict';
+
     return function () {
         var t = {};
         t.tour = [];
@@ -68,7 +70,7 @@ halfdane.tsp.tourCreator = function (tourManager) {
         };
 
         t.usingCities = function (cities) {
-            $(cities).each(function(index, city) {
+            $(cities).each(function (index, city) {
                 t.setCity(index, city);
             });
             return t;
@@ -83,7 +85,7 @@ halfdane.tsp.tourCreator = function (tourManager) {
             t.usingTourManagersPoints();
             // Randomly reorder the tour
             t.tour.sort(function () {
-                return 0.5 - Math.random()
+                return 0.5 - Math.random();
             });
 
             return t;
@@ -158,5 +160,29 @@ halfdane.tsp.tourCreator = function (tourManager) {
         };
 
         return t;
-    }
+    };
+};
+
+halfdane.drawEdges = function (points, string) {
+    'use strict';
+
+    setTimeout(function () {
+        var context = $('<canvas></canvas>')
+            .attr('height', 300)
+            .attr('width', 200)
+            .appendTo($('.target'))
+            [0]
+            .getContext('2d');
+
+        context.beginPath();
+        context.moveTo(points[points.length - 1].x, points[points.length - 1].y);
+        $(points).each(function (index, point) {
+            context.lineTo(point.x, point.y);
+        });
+        context.closePath();
+        context.stroke();
+        context.fillStyle = '#000';
+        context.textBaseline = 'bottom';
+        context.fillText(string, 10, 250);
+    }, 10);
 };
