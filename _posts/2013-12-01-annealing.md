@@ -6,6 +6,7 @@ category: computer/javascript
 tags: [javascript, html5, tsp, simulated annealing]
 group: post
 image: tsp_annealing.png
+resources: [/assets/js/tsp/tspBase.js, /assets/js/tsp/annealingTsp.js]
 ---
 Um meine JavaScript-Kenntnisse zu vertiefen, habe mich daran gemacht einen Graphen aus Knoten und Kanten zu implementieren. Und weil das zu einfach ist, soll darauf das Traveling Salesman Problem gelöst werden :)
 
@@ -123,3 +124,12 @@ Die Ergebnistour
 {% endimage %}
 
 ... und das waren jetzt wirklich nur nur 100 Punkte. Ich wollte eigentlich eher 20-mal so viele. Und das soll auf einem Handy laufen, nicht auf einer Workstation :/ Tja, nicht umsonst gehört das TSP zu der Klasse der echt richtig schwierigen Probleme :).
+
+
+[UPDATE 19.1.2014]
+
+Ich habe den Code jetzt mal eingebunden und eine Live-Demo vorbereitet - mit 20 Punkten, damit es nicht so lange dauert.
+Die Ausgabe ist zunächst die initiale Tour und dann bei jeder Verbesserung ein weiteres Bild. Unten im Bild wird die aktuelle Temperatur angezeigt.
+
+<span class="target"></span>
+<span class="btn" onclick="halfdane.tsp.annealingTest(); return false;">Click zum Start</span>
