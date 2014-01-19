@@ -4,13 +4,13 @@ var halfdane = halfdane || {};
 halfdane.picture_display = halfdane.picture_display || (function () {
     'use strict';
 
-    var $target;
-
-    function createFrame() {
+    function createFrame($target, adjustedWidth, adjustedHeight) {
         var ottoLogo = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF0aIE_awrS2dM7y36nR9s7yMFIW4Bkvyy_B8Swe9hsv419_gtwQ';
         $('<span></span>')
             .addClass('panel')
             .appendTo($target)
+            .height(adjustedHeight)
+            .width(adjustedWidth)
             .append($('<img>').addClass('front').attr('src', ottoLogo))
             .append($('<img>').addClass('back').attr('src', ottoLogo));
     }
@@ -27,74 +27,94 @@ halfdane.picture_display = halfdane.picture_display || (function () {
         });
     }
 
-    function show(imgUrl) {
-        var $elements = $target.find('.panel');
-        var randomIndex = Math.floor(Math.random() * $elements.length);
-        showInFrame($($elements.get(randomIndex)), imgUrl);
+    function show($target) {
+        return function (imgUrl) {
+            var $elements = $target.find('.panel');
+            var randomIndex = Math.floor(Math.random() * $elements.length);
+            showInFrame($($elements.get(randomIndex)), imgUrl);
+        };
     }
 
     function init($targetElement) {
-        $target = $targetElement;
+        var testDiv = $('<span></span>').addClass('panel').appendTo('body');
+        var inRow = Math.floor($targetElement.width() / testDiv.width());
+        var inCol = Math.floor($targetElement.height() / testDiv.height());
 
-        createFrame();
+        testDiv.remove();
 
-        var frame = $target.find('.panel');
-        var inRow = Math.floor($target.width() / frame.width());
-        var inCol = Math.ceil($target.height() / frame.height());
-        var frameCount = inRow * inCol - 1;
+        var adjustedWidth = $targetElement.width() / inRow;
+        var adjustedHeight = $targetElement.height() / inCol;
+
+        var frameCount = inRow * inCol;
         var i;
-
         for (i = 0; i < frameCount; i += 1) {
-            createFrame();
+            createFrame($targetElement, adjustedWidth, adjustedHeight);
         }
+
+        return {
+            show: show($targetElement)
+        };
     }
 
     return {
-        show: show,
         init: init
     };
 }());
 
-halfdane.picture_demo = function () {
+halfdane.picture_demo = halfdane.picture_demo || (function () {
     "use strict";
 
-    var keepRunning = true;
-    var demoDiv = $('<div></div>')
-        .addClass('picture_demo')
-        .appendTo('body');
+    var keepRunning;
+    var demoDiv;
 
-    function showIndexOfArray(index) {
-        if (!keepRunning) {
-            demoDiv.remove();
-            return;
-        }
-
+    function showIndexOfArray(index, pictureDisp, sleep, givenFunction) {
         var array = halfdane.pictures;
-        halfdane.picture_display.show(array[index]);
+        pictureDisp.show(array[index]);
 
         if (index >= array.length) {
             index = -1;
         }
         setTimeout(function () {
-            showIndexOfArray(index + 1);
-        }, 2);
+            var reloadingFunction = givenFunction || showIndexOfArray
+            reloadingFunction(index + 1, pictureDisp, sleep, reloadingFunction);
+        }, sleep);
     }
 
+    function showIndexOfArrayWithStop(index, pictureDisp, sleep) {
+        if (!keepRunning) {
+            demoDiv.remove();
+            return;
+        }
 
-    halfdane.picture_display.init(demoDiv);
-    showIndexOfArray(0);
+        showIndexOfArray(index, pictureDisp, sleep, showIndexOfArrayWithStop);
+    }
 
-    demoDiv.focus();
-    demoDiv.on('click', function () {
-        keepRunning = false;
+    function runFullscreen() {
+        demoDiv = $('<div></div>')
+            .addClass('picture_demo')
+            .appendTo('body');
+        keepRunning = true;
+
+        showIndexOfArrayWithStop(0, halfdane.picture_display.init(demoDiv), 2);
+
+        demoDiv.focus();
+        demoDiv.on('click', function () {
+            keepRunning = false;
+        });
+
+        $(window).on("keydown", function () {
+            keepRunning = false;
+        });
+    }
+
+    $(window).on('load', function() {
+        showIndexOfArray(0, halfdane.picture_display.init($('.small_picture_demo')), 50);
     });
 
-    $(window).on("keydown", function () {
-        keepRunning = false;
-    });
-
-
-};
+    return {
+        run: runFullscreen
+    };
+}());
 
 
 halfdane.pictures = [

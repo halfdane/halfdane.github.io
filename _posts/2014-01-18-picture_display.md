@@ -7,11 +7,13 @@ tags: [javascript, html5, tsp]
 group: post
 image: picturedisplay.png
 ---
-Als kleines Gimmick am Rande hatten Schmiddie und ich die Idee, man könne die aktuellen Käufe auf der OTTO-Seite darstellen, damit wir eine Idee davon bekommen, was da überhaupt passiert. Bei rund 100 Kaufvorgängen pro Minute, die jeweils mehrere Produkte enthalten, gibt es eigentlich nur die Möglichkeit, zu abstrahieren. Statistiken haben wir schon genug, wir wollen etwas weniger praktisches. Also zeigen wir die Bilder der Produkte, die gerade gekauft werden :)
+Als kleines Gimmick am Rande hatten Schmiddie und ich die Idee, man könne die aktuellen Käufe auf der OTTO-Seite darstellen, damit wir eine Vorstellung davon bekommen, was da überhaupt passiert. Bei rund 100 Kaufvorgängen pro Minute, die jeweils mehrere Produkte enthalten, gibt es eigentlich nur die Möglichkeit zu abstrahieren. Statistiken haben wir schon genug, wir wollen etwas weniger praktisches. Also zeigen wir die Bilder der Produkte, die gerade gekauft werden :) Genaugenommen war das alles Schmiddies Idee, mich hat er ja bloß angesprochen weil ich an der Bezahlstrecke arbeite...
 
-Ich möchte den Bildschirm, oder einen Teil davon, mit kleinen Produktbildern füllen und bei neuen Käufen dreht sich die Kachel um und zeigt das Bild des neu gekauften Produktes. Der Aufwand soll sich in Grenzen halten, deswegen bauen wir das einfach in Javascript.
+Ich möchte den Bildschirm (oder einen Teil davon) mit kleinen Produktbildern füllen und bei neuen Käufen dreht sich die Kachel um und zeigt das Bild des neu gekauften Produktes. Der Aufwand soll sich in Grenzen halten, deswegen baue ich das einfach in Javascript.
 
-Jedes neue Bild wird an eine Kachel gehängt und wenn es fertig geladen ist, wird die Kachel gedreht:
+<div class="small_picture_demo"></div>
+
+Jedes neue Bild wird an eine Kachel gehängt und wenn es fertig geladen ist wird die Kachel gedreht:
 
 ```javascript
 nextImage.attr('src', imgUrl).on('load', function () {
@@ -19,7 +21,7 @@ nextImage.attr('src', imgUrl).on('load', function () {
 });
 ```
 
-Jede Kachel enthält zwei Bilder (vorne und hinten) und durch das Zufügen und Entfernen der `flip`-Klasse wird jeweils eine CSS3-Transition gestartet, die ich aus einem JSFiddle angepasst habe. Dank SASS ist sogar ganz übersichtlich:
+Jede Kachel enthält zwei Bilder (vorne und hinten) und durch das Zufügen und Entfernen der `flip`-Klasse wird jeweils eine CSS3-Transition gestartet, die ich aus einem [JSFiddle](http://jsfiddle.net/EZSlaver/5AWSJ/3/) angepasst habe. Dank [SASS](http://sass-lang.com/) ist sogar ganz übersichtlich:
 
 ```scss
 .panel {
@@ -63,7 +65,7 @@ Jede Kachel enthält zwei Bilder (vorne und hinten) und durch das Zufügen und E
 }
 ```
 
-Diese Variante erlaubt eine sehr einfache HTML-Struktur, die einfach zwei Kindelemente eines Elements drehen kann, indem das `.panel` ein `.flip` bekommt:
+Diese Variante erlaubt eine sehr einfache HTML-Struktur, mit der man zwei Kindelemente eines Elements drehen kann, indem das `.panel` ein `.flip` bekommt:
 
 ```html
 <span class="panel flip">
@@ -110,16 +112,8 @@ halfdane.picture_display = halfdane.picture_display || (function () {
 
     function init($targetElement) {
         $target = $targetElement;
-
-        createFrame();
-
-        var frame = $target.find('.panel');
-        var inRow = Math.floor($target.width() / frame.width());
-        var inCol = Math.ceil($target.height() / frame.height());
-        var frameCount = inRow*inCol -1;
         var i;
-
-        for (i = 0; i < frameCount; i += 1) {
+        for (i = 0; i < 200; i += 1) {
             createFrame();
         }
     }
@@ -133,7 +127,11 @@ halfdane.picture_display = halfdane.picture_display || (function () {
 
 Die `init`-Funktion bekommt das Dom-Element, in dem die Kacheln einsortiert werden sollen und mit `halfdane.picture_display.show(pictureUrl);` wird das übergebene Bild in einer zufälligen Kachel angezeigt.
 
-Für die Demo habe ich einfach hundert Bilder von der Google-Bildersuche gemopst und iteriere darüber. Die Kacheln werden in einem `div` angezeigt, das die gesamte Seite einnimmt. Klick oder Tastendruck beendet die Demo.
+Für die Demo habe ich einfach hundert Bilder von der Google-Bildersuche gemopst und iteriere darüber. Die Kacheln werden in einem `div` angezeigt, das die gesamte Seite einnimmt.
+
+Klick oder Tastendruck beendet die Demo.
 
 <script src="/assets/js/picture_display.js" ></script>
-<span class="btn" onclick="halfdane.picture_demo(); return false;">Click zum Start</span>
+<span class="btn" onclick="halfdane.picture_demo.run(); return false;">Click zum Start</span>
+
+Der Code ändert sich vermutlich auch noch ein bisschen, die aktuelle Version ist immer hier: [/assets/js/picture_display.js](/assets/js/picture_display.js)
