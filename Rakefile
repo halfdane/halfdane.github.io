@@ -102,7 +102,7 @@ task :preview do
   edit_config("provider",  "false")
   edit_config("compress",  "false")
   edit_config("bundle",  "false")
-  system "jekyll serve -w"
+  system "jekyll serve -w --drafts"
 end # task :preview
 
 desc "Build for production"
