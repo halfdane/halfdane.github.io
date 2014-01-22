@@ -12,10 +12,11 @@ Jetzt hab ich die Nase voll! Diese ganzen randomisierten Näherungsalgorithmen s
 Die lange, unverständliche Erklärung zum Traveling Salesman Problem gibt's immer noch bei Wikipedia und immer noch finde ich meine besser:
 
 >
-Langer, langer Text. 
+Für das TSP werden eine Reihe von Punkten (z.B. Städte auf einer Landkarte, können aber auch dreidimensional sein) sortiert. Aber nicht einfach irgendwie, sondern so dass beim Durchgehen der Punkte von einem zum nächsten die zurückgelegte Strecke möglichst kurz ist. Wie ein Handelsreisender, der Benzin sparen möchte, daher der Name. Das Problem ist für die Informatik interessant, weil es überraschend schwer ist, es optimal zu lösen. Ein Computer muss bei jedem einzelnen Punkt nämlich erstmal alle anderen Punkte prüfen und schauen, wo der neue an besten hinpasst. Bei vielen Punkten kann die Rechenzeit für eine optimale Lösung mehr Zeit in Anspruch nehmen, als z.B. das Universum existiert. Die Klasse der Probleme, zu der das TSP gehört wird von Profis daher auch "die echt richtig schweren Probleme" genannt. Allerdings ist das Problem nicht nur rein akademisch, sondern unter anderem für Logistik-Unternehmen relevant, also für den Post- oder Hermesboten oder für Containerschiffe. Die benutzen für ihre Tourenoptimierung dann keine optimalen Lösungen (keine Zeit), sondern Annäherungen, die "gut genug" sind. Und da gibt es einen ganzen Sack von Strategien, die ausgesprochen spannend sind - natürlich für eine ganz persönliche Definition von "spannend" :-D
+
 
 ## Gieriger Beppo 
-Ein Greedy (gieriger) Algorithmus versucht erst gar nicht so clever zu sein wie z.B. Simulated Annealing oder evolutionäre Strategien. Man geht den Problemraum einfach Schritt für Schritt durch und wählt immer nur den gerade für den aktuellen Punkt besten nächsten Schritt. Dabei schaut man sich nicht um oder versucht einen Überblick übers große Ganze zu bekommen, sondern bewegt sich wie Beppo Straßenkehrer in Momo Besenstrich um Besenstrich vorwärts. Am Ende ist die ganze Straße gefegt und man hat sich nicht mal angestrengt.
+Ein Greedy (gieriger) Algorithmus versucht erst gar nicht so clever zu sein wie z.B. Simulated Annealing oder evolutionäre Strategien. Man geht den Problemraum einfach Schritt für Schritt durch und wählt immer nur den gerade für den aktuellen Punkt besten nächsten Schritt. Dabei schaut man sich nicht um oder versucht einen Überblick übers große Ganze zu bekommen, sondern bewegt sich wie [Beppo Straßenkehrer in Momo](http://de.wikipedia.org/wiki/Momo_(Roman)#Personen) Besenstrich um Besenstrich vorwärts. Am Ende ist die ganze Straße gefegt und man hat sich nicht mal angestrengt.
 
 Es ist offensichtlich, dass man sich auf diese Weise höchstens eine gerade Straße entlang bewegen kann, während man sich in einem Labyrinth wie dem TSP (ein Gewirr von Städten und Straßen) leicht verzettelt, aber so lange Beppo irgendwie durchkommt ist ihm das eigentlich egal.
 
@@ -27,9 +28,31 @@ Diese erste, etwas naive Strategie hat mir aber klar gemacht, dass ich mich doch
 Und soo schnell war's jetzt echt auch nicht. 
 
 ## Die Paten
-The Godfathers of TSP-Optimierung sind vermutlich Lin und Kernighan, die einen nach ihnen benannten Algorithmus entworfen haben um eine nicht so gute Lösung in eine bessere Lösung zu überführen. Völlig unverständlich ist das natürlich auch bei [Wikipedia](http://de.m.wikipedia.org/wiki/Kernighan-Lin-Algorithmus) nachlesbar, aber eigentlich werden nur die Strecken der Tour immer paarweise vertauscht. Dabei wird jedesmal geschaut, ob's besser geworden ist. Variationen davon, die auch immer eigene Namen haben, vertauschen drei oder mehr Strecken, aber ich hab's mir einfach gemacht. 
+The Godfathers of TSP-Optimierung sind vermutlich Lin und Kernighan, die einen nach ihnen benannten Algorithmus entworfen haben um eine nicht so gute Lösung in eine bessere Lösung zu überführen. Völlig unverständlich ist das natürlich auch bei [Wikipedia](http://de.m.wikipedia.org/wiki/Kernighan-Lin-Algorithmus) nachlesbar, aber eigentlich werden nur die Städte der Tour immer paarweise vertauscht. Dabei wird jedesmal geschaut, ob's besser geworden ist. Variationen davon, die auch immer eigene Namen haben, vertauschen drei oder mehr Strecken, aber ich hab's mir einfach gemacht:
 
-Der ohnehin etwas schnarchige Beppo Straßenkehrer ist durch diese anschließende Optimierung natürlich total lahmarschig geworden, aber immerhin deutlich besser. Wenn nicht noch eine clevere Idee um die Ecke kommt, würde ich wohl dabei bleiben. 
+```javascript
+for (i = 0; i < tour.tourSize(); i += 1) {
+    // consecutively swap cities around
+    for (ii = i; ii < tour.tourSize(); ii += 1) {
+        if (ii === i) {
+            continue;
+        }
+
+        var newSolution = createTour().usingCities(tour.tour);
+
+        // Swap two cities
+        newSolution.setCity(ii, newSolution.getCity(i));
+        newSolution.setCity(i, newSolution.getCity(ii));
+
+        // Decide if we should accept the neighbour
+        if (tour.getDistance() > newSolution.getDistance()) {
+            tour = newSolution;
+        }
+    }
+}
+```
+
+Der ohnehin etwas schnarchige Beppo Straßenkehrer ist durch diese anschließende Optimierung natürlich total lahmarschig geworden, aber immerhin sieht die Tour deutlich besser aus. Wenn nicht noch eine clevere Idee um die Ecke kommt, würde ich wohl dabei bleiben.
 
 Glück gehabt, mir ist noch etwas eingefallen. Das ist zwar etwas unkonventionell (lies: ich habe während des Studiums nichts davon gehört), aber das muss ja nichts heißen. Mein Beppo braucht vor allem so viel Zeit, weil er in jeder neuen Stadt erstmal die Entfernung zu allen verbleibenden Städten berechnen muss. Ein Computer ist halt doch kein Mensch wie Beppo, der auf einen Blick sieht, welches die nächsten Städte sind. Es würde helfen, wenn er nicht immer alle Städte begutachten müsste, sondern nur ein paar. 
 
