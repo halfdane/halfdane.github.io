@@ -20,6 +20,16 @@ Die andere Veröffentlichung, TITEL, beschäftigt sich mit der Idee, ein Gittern
 
 Ich habe mich für eine dritte Variante entschieden, die zwar nicht ganz so gute Ergebnisse liefert wie die Gitternetz-Version, dafür aber schneller ist und nicht annähernd die algorithmische Komplexität hat. Soweit ich weiß, gibt es bislang noch keine Veröffentlichung dieser Variante, also handelt es sich was mich angeht um meine eigene Erfindung (yay \o/,  mein erster eigener Algorithmus). 
 
-Eine beliebige Menge von Punkten wird zufällig verteilt, wobei dunklere 
+Eine beliebige Menge von Punkten wird zufällig verteilt, wobei dunklere Bereiche des Bildes bevorzugt werden :
+
+CODE 
+
+Um klarere Konturen zu bekommen, kann in einem vorhergehenden Schritt der Kontrast erhöht werden oder andere Effekte wie Embossing zum Einsatz kommen. Bei meinen Bildern reichte bislang aber der Kontrast. 
+
+Bis zu diesem Punkt orientiert sich das Vorgehen an dem in ZWEI vorgestellten, aber anstatt die generierten Punkte als Eingabe für ein Voronoi-Gitter zu nutzen und das dann zu glätten, benutze ich eine einfache, modifizierte Kantenerkennung mit einem vergrößerten Kernel :
+
+CODE 
+
+Das Ergebnis kann sich sehen lassen und die Implementierung ist nicht annähernd so komplex wie die beiden anderen :-) 
 
 
