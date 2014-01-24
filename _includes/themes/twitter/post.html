@@ -1,6 +1,9 @@
+<a href="/">
+    <h6>Halfdane's </h6>
+    <h4>Canned Nerd: Navigate by sight</h4>
+</a>
+
 <div class="pagination">
-    <h6><a href="/about.html">Halfdane's </a></h6>
-    <h4><a href="/">Canned Nerd: Navigate by sight</a></h4>
     <ul>
         {% if page.next %}
         <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}"
@@ -19,9 +22,7 @@
 </h1>
 
 <div class="fullpost">
-    <p class="date">
-        <small>{{ page.date | date_to_long_string }}</small>
-    </p>
+    <div class="date">– {{ page.date | date: "%-d %B %Y" }} –</div>
     <div class="text">
     {{ content }}
     </div>
