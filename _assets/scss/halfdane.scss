@@ -16,14 +16,8 @@ body {
   margin: 0 auto;
 }
 
-#{headings()},
-#{nest(headings(), a)} {
+#{headings()} {
   color: $col_header_txt;
-  font-weight: normal;
-}
-
-a {
-  font-weight: 600;
 }
 
 p:empty {

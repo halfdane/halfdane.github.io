@@ -4,7 +4,7 @@ $black: #000;
 $off_black: #685356;
 $gray: #eee;
 
-$p_main: darkblue;
+$p_main: #373633;
 $p_very_light: tint($p_main, 50%);
 
 /*** Complementary Color: yellowish*/
@@ -29,7 +29,8 @@ $pageheader_line_color: $p_main;
 
 $col_border: $black;
 
-$postlist_border: $gray;
+$postlist_border: transparent;
+$postlist_hover: $gray;
 $postlist_tile_bg: transparent;
 
 

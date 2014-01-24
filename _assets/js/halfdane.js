@@ -76,7 +76,7 @@ var handlePostlistClicks = function () {
     'use strict';
 
     $('.postslist .post').on('click', function () {
-        window.location.href = $(this).find('h3 a').attr('href');
+        window.location.href = $(this).find('.more a').attr('href');
     });
 };
 

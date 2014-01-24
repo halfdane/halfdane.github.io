@@ -15,7 +15,7 @@
 
   border-bottom: $local_borders solid $postlist_border;
   border-right: $local_borders solid $postlist_border;
-  box-shadow: 0px 0px 0.5*$local_borders shade($postlist_border, 10%);
+  box-shadow: 0px 0px 0.5*$local_borders $postlist_border;
   border-radius: 0.5*$local_borders;
 
   margin: 0.5*$local_borders;
@@ -41,18 +41,25 @@
     border-top: $local_borders/2 solid $postlist_border;
   }
   .post:hover {
-    background-image: linear-gradient(90deg, $postlist_border $local_borders, shade($postlist_border, 10%) $local_borders, shade($postlist_border, 10%) 99%);
-  }
-  .post .text {
-    vertical-align: top;
-    text-align: left;
-    figure {
-      display: none;
-    }
+    background-image: linear-gradient(90deg, $postlist_hover $local_borders, $postlist_hover $local_borders, $postlist_hover 99%);
   }
 
-  .post * {
-    pointer-events: none;
+  .post {
+    *  {
+      pointer-events: none;
+    }
+
+    .text {
+      vertical-align: top;
+      text-align: left;
+      figure {
+        display: none;
+      }
+
+      h3 figure {
+        display: inline-block;
+      }
+    }
   }
 
   @mixin resize_responsive($columns) {
@@ -63,13 +70,22 @@
     }
     .post {
       @include establish-baseline;
+
       @if $columns > 1 {
         text-align: center;
+        h3, .date {
+          text-align: center;
+        }
       } @else {
         text-align: left;
+        h3, .date {
+          text-align: left;
+        }
       }
       display: inline-block;
       width: percentage(1/$columns);
+
+      border: 1px dashed #ccc;
     }
 
     .post:nth-child(#{$columns}n+1):before {
