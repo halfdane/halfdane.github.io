@@ -30,6 +30,19 @@ Bis zu diesem Punkt orientiert sich das Vorgehen an dem in ZWEI vorgestellten, a
 
 CODE 
 
-Das Ergebnis kann sich sehen lassen und die Implementierung ist nicht annähernd so komplex wie die beiden anderen :-) 
+Das Ergebnis kann sich sehen lassen und die Implementierung ist nicht annähernd so komplex wie die beiden anderen :-) Richtig gelungen sind die Bilder dann, wenn die Größe der Punkte abhängig von der Dunkelheit des Ausgangsbildes gewählt wird:
+
+BILDER 
+
+Drumherum schwirrt noch ein bisschen Logik, um ein Bild ins Dokument zu laden und Canvas-Elemente zu erzeugen, aber das wars schon. 
+
+Wie immer hier eine Live-Demo:
+DEMO 
+
+Und mit der Möglichkeit, ein eigenes Bild zu nutzen:
+DEMO 
+
+Der Code ist selbstverständlich auch wieder [frei](/about#license) verfügbar:
+
 
 
