@@ -3,7 +3,7 @@ layout: post
 title: "TSP in JavaScript (Greedy)"
 description: ""
 category: computer
-tags: [javascript, html5, tsp, greedy algorithm]
+tags: [javascript, html5, tsp, greedy algorithm, momo]
 group: post
 image: tsp_greedy.png
 ---
@@ -57,13 +57,22 @@ Der ohnehin etwas schnarchige Beppo Straßenkehrer ist durch diese anschließend
 Glück gehabt, mir ist noch etwas eingefallen. Das ist zwar etwas unkonventionell (lies: ich habe während des Studiums nichts davon gehört), aber das muss ja nichts heißen. Mein Beppo braucht vor allem so viel Zeit, weil er in jeder neuen Stadt erstmal die Entfernung zu allen verbleibenden Städten berechnen muss. Ein Computer ist halt doch kein Mensch wie Beppo, der auf einen Blick sieht, welches die nächsten Städte sind. Es würde helfen, wenn er nicht immer alle Städte begutachten müsste, sondern nur ein paar. 
 
 ## Beppo meets Delaunay 
-Für meine Diplomarbeit habe ich mich recht intensiv mit Dreicks- und Vierecksgittern beschäftigt, und auch wenn ich das meiste schon vergessen habe, konnte ich mich noch daran erinnern, dass die Delaunay-Triangulierung immer drei Punkte zusammenfasst, sodass im entstehenden Dreieck keine weiteren Punkte mehr sind. Die Punkte jedes Dreiecks sind einander also am nächsten. Und das Beste daran ist, dass man diese Triangulierung gut (schnell) berechnen kann. 
+Für meine Diplomarbeit habe ich mich recht intensiv mit Dreicks- und Vierecksgittern beschäftigt, und auch wenn ich das meiste schon vergessen habe, kann ich mich noch daran erinnern, dass die Delaunay-Triangulierung immer drei Punkte zusammenfasst, sodass im entstehenden Dreieck keine weiteren Punkte mehr sind. Die Punkte jedes Dreiecks sind einander also am nächsten. Und das Beste daran ist, dass man diese Triangulierung gut (schnell) berechnen kann. 
 
 Statt in einer ungeordneten Punktmenge lasse ich meinen Beppo also mal auf so einem Dreiecksgitter los: dann muss er nicht mehr alle Städte betrachten, sondern nur diejenigen, mit denen er über eine Dreieckskante verbunden ist. Dabei kann er auch sicher sein, dass es immer die nächstgelegenen Städte sind, denn das garantiert die Delaunay-Triangulierung. 
 
-Im Internet gibt's ja echt alles und so musste ich nicht lange suchen, um eine Implementierung in Javascript zu finden und lo and behold: da konnte mein Beppo aber flitzen. Und sieht gut dabei aus! Ganz ohne Lin-Kernighan. 
+Im Internet gibt's ja echt alles und so musste ich nicht lange suchen, um eine [Implementierung in Javascript](link) zu finden und lo and behold: da konnte mein Beppo aber flitzen. Und sieht gut dabei aus! Ganz ohne Lin-Kernighan. 
+
+Natürlich kann es immer noch passieren, dass Beppo sich in einen Bereich von Dreiecken begibt, aus dem es keinen einfachen Ausweg gibt, weil alle ausgehenden Kanten zu nächstgelegenen Städten schon benutzt sind. Der Einfachheit halber wählt Beppo dann irgendeine andere unbesuchte Stadt, ohne auf die Entfernung zu achten. 
+
+```javascript 
+Bewegung entlang der Dreieckskanten 
+
+```
 
 ## Beppo ist der beste 
 Auch tausend und mehr Städte bringen ihn nicht zum Schwitzen und das Ergebnis ist gut genug für meine Zwecke. Diesen Beppo ziehe ich jederzeit so aufgeblasenen Gesellen wie dem Annealing oder dem Evolutionary vor. 
 
 Als Beweis habe ich wie immer eine kleine Demo vorbereitet, nur diesmal nicht mit 20 Punkten, sondern mit 200,die zufällig gesetzt werden. Bei dieser Menge hätten die andern schon längst die Waffen gestreckt, aber nicht der Beppo :-) 
+
+DEMO 
