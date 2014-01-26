@@ -96,6 +96,7 @@ DEPENDENCIES
   jekyll-asset-pipeline
   mini_magick
   rainpress
+  rake
   sass
   sequel
   yui-compressor

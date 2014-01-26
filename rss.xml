@@ -5,10 +5,60 @@
         <description>Canned Nerd - Halfdane</description>
         <link>http://halfdane.github.io</link>
         <link>http://halfdane.github.io</link>
-        <lastBuildDate>2014-01-26T20:17:17+00:00</lastBuildDate>
-        <pubDate>2014-01-26T20:17:17+00:00</pubDate>
+        <lastBuildDate>2014-01-26T20:25:11+00:00</lastBuildDate>
+        <pubDate>2014-01-26T20:25:11+00:00</pubDate>
         <ttl>1800</ttl>
 
+
+        <item>
+                <title>Schriften _wirklich_ in Css einbinden</title>
+                <description>&lt;p&gt;Ja ja, embedded fonts in Css sind ein totgerittenes Pferd. Allerdings wird immer nur darüber geredet, wie ein Font-File auf einem Server referenziert wird, am besten auch noch über &lt;a href=&quot;http://www.google.com/fonts&quot;&gt;Google-Fonts&lt;/a&gt; und das ist einfach falsch, denn das ist eigentlich genau das Gegenteil eines eingebetteten Fonts.&lt;/p&gt;
+
+&lt;p&gt;Denn so liegt der ja nach wie vor auf dem Server und muss extra mit einem eigenen Request (oder bei Google-Fonts sogar mit zweien) abgeholt werden, bevor er dann im Browser benutzt werden kann. &lt;/p&gt;
+
+&lt;p&gt;Für die meisten Seiten ist die Verzögerung durch zwei überflüssige Requests kein Problem, selbst wenn die reine Anzahl von Requests der Hauptgrund für langsame Seiten ist. Die meisten Seiten sind halt trotzdem noch &amp;quot;schnell genug&amp;quot; oder haben nicht genug Publikum. 
+Dummerweise brauchen verschiedene Browser aber auch noch ganz eigene Fonts, so dass man ganz schnell bei zehn bis zwölf unnötigen requests ist, die auch noch jeder für sich fehlschlagen können.&lt;/p&gt;
+
+&lt;p&gt;Denn spätestens, wenn man sich vor Augen hält, dass Werbeblocker, Firewalls oder schlechte / langsame Verbindungen (hat da jemand Mobile First gesagt?) das Laden der Schrift auch völlig verhindern können und damit das gesamte Design der Seite plötzlich kaputt ist, wird klar, dass wir die Schriften auf diese Weise eigentlich kein bisschen einbetten, auch wenn wir das gerne behaupten. &lt;/p&gt;
+
+&lt;p&gt;Die Lösung wird bei Logos, Favicons und anderen kleinen Bildern schon lange völlig selbstverständlich benutzt: Data-Uri. Damit kann der komplette Inhalt einer Datei direkt im Quelltext anstelle einer Referenz angegeben werden. Damit wird die Css-Datei natürlich um so größer, aber das sind ja Daten, die der Browser ohnehin geladen hätte, nur jetzt ohne separaten Request.&lt;/p&gt;
+
+&lt;p&gt;Die Lobster-Schriftart, die ich für Überschriften einsetze, soll eigentlich so eingebunden werden:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;k&quot;&gt;@import&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(//&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;fonts&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.googleapis.com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;css&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;family&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;Lobster&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Damit wird eine weitere Css-Datei vom Google-Server geladen, die die Referenz auf die Woff-Datei mit der Schriftart enthält:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;k&quot;&gt;@font-face&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;font-family&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;Lobster&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;font-style&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;normal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;font-weight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;400&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;local&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Lobster&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;://&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;themes&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.googleusercontent.com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;static&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;fonts&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;lobster&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;v6&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;MWVf-Rwh4GLQVBEwbyI61Q&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.woff&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;woff&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Den ersten Request kann man sich sparen, indem man den Code einfach ins eigene css übernimmt. Für den zweiten muss die Datei zunächst base64-encoded werden. &lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash language-bash&quot; data-lang=&quot;bash&quot;&gt;wget &lt;span class=&quot;s1&quot;&gt;&amp;#39;http://themes.googleusercontent.com/static/fonts/lobster/v6/MWVf-Rwh4GLQVBEwbyI61Q.woff&amp;#39;&lt;/span&gt;
+base64 -w0 MWVf-Rwh4GLQVBEwbyI61Q.woff &amp;gt; lobster.b64.woff
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Der String aus der neuen Datei &lt;code&gt;lobster.b64.woff&lt;/code&gt; kann nun als Data-Uri im Css benutzt werden :&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nt&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;data:application/x-font-woff;base64,d09GRgABAAAAAD6sAAwAAAAAdQgAAQABAAAAAAAAAAAAAAAAAAAAAAA.....&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Dieselbe Strategie funktioniert natürlich auch mit TrueType-Fonts für Android-Browser. Dort funktioniert&amp;#39;s jetzt endlich auch. Danke, base64.&lt;/p&gt;
+
+&lt;p&gt;Aber mit SASS ist das sogar noch einfacher:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sass language-sass&quot; data-lang=&quot;sass&quot;&gt;&lt;span class=&quot;k&quot;&gt;@import&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;compass/css3&amp;quot;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;@include&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt; font-face&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;s2&quot;&gt;&amp;quot;Cabin&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;inline-font-files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;s1&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;cabin.woff&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;woff&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;s1&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;cabin.ttf&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;ttf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;s1&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;ie-fallback&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;DIE&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;IE7&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;DIE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;400&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;font-weight&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;normal&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;font-style&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+                <link>http://halfdane.github.io/2014/01/26/base64_fonts_in_css</link>
+                <guid>http://halfdane.github.io/2014/01/26/base64_fonts_in_css</guid>
+                <pubDate>2014-01-26T00:00:00+00:00</pubDate>
+        </item>
 
         <item>
                 <title>TSP in JavaScript (Evolutionary)</title>
