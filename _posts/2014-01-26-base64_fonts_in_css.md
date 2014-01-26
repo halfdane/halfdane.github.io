@@ -49,3 +49,18 @@ url('data:application/x-font-woff;base64,d09GRgABAAAAAD6sAAwAAAAAdQgAAQABAAAAAAA
 ```
 
 Dieselbe Strategie funktioniert natürlich auch mit TrueType-Fonts für Android-Browser. Dort funktioniert's jetzt endlich auch. Danke, base64.
+
+Aber mit SASS ist das sogar noch einfacher:
+
+```sass
+@import "compass/css3";
+@include font-face(
+    "Cabin",
+    inline-font-files(
+        'cabin.woff', woff,
+        'cabin.ttf', ttf),
+    '', // ie-fallback? DIE IE7, DIE!
+    400, // font-weight
+    normal  // font-style
+);
+```
