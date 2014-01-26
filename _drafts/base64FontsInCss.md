@@ -12,7 +12,7 @@ Ja ja, embedded fonts in Css sind ein totgerittenes Pferd. Allerdings wird immer
 Denn so liegt der ja nach wie vor auf dem Server und muss extra mit einem eigenen Request (oder bei Google-Fonts sogar mit zweien) abgeholt werden, bevor er dann im Browser benutzt werden kann. 
 
 Für die meisten Seiten ist die Verzögerung durch zwei überflüssige Requests kein Problem, selbst wenn die reine Anzahl von Requests der Hauptgrund für langsame Seiten ist. Die meisten Seiten sind halt trotzdem noch "schnell genug" oder haben nicht genug Publikum. 
-Dummerweise brauchen verschiedene browser aber auch noch ganz eigene Fonts, so dass man ganz schnell bei zehn bis zwölf unnötigen requests ist, die auch noch jeder für sich fehlschlagen können. 
+Dummerweise brauchen verschiedene Browser aber auch noch ganz eigene Fonts, so dass man ganz schnell bei zehn bis zwölf unnötigen requests ist, die auch noch jeder für sich fehlschlagen können.
 
 Denn spätestens, wenn man sich vor Augen hält, dass Werbeblocker, Firewalls oder schlechte / langsame Verbindungen (hat da jemand Mobile First gesagt?) das Laden der Schrift auch völlig verhindern können und damit das gesamte Design der Seite plötzlich kaputt ist, wird klar, dass wir die Schriften auf diese Weise eigentlich kein bisschen einbetten, auch wenn wir das gerne behaupten. 
 
@@ -48,4 +48,4 @@ Der String aus der neuen Datei `lobster.b64.woff` kann nun als Data-Uri im Css b
 url('data:application/x-font-woff;base64,d09GRgABAAAAAD6sAAwAAAAAdQgAAQABAAAAAAAAAAAAAAAAAAAAAAA.....')
 ```
 
-Seitdem ich diesen Blog umgestellt habe, wird die Schrift endlich auch im Android-Browser angezeigt. 
+Dieselbe Strategie funktioniert natürlich auch mit TrueType-Fonts für Android-Browser. Dort funktioniert's jetzt endlich auch. Danke, base64.
