@@ -1,9 +1,8 @@
-<div class="post">
+<div class="post" href="{{ BASE_PATH }}{{ post.url }}">
     {% if post.image %}{% image {{post.image}} "{{post.title}}" "thumbnail" %}{% endimage %}{% endif %}
     <div class="text">
         <h3>{{ post.title }}</h3>
         <div class="date"><span>– {{ post.date | date: "%-d %B %Y" }} –</span></div>
         <div class="excerpt">{{ post.excerpt }}</div>
-        <div class="more"><a href="{{ BASE_PATH }}{{ post.url }}">...mehr ></a></div>
     </div>
 </div>

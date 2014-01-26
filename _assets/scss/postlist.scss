@@ -83,8 +83,9 @@
         }
       }
       display: inline-block;
-      width: percentage(1/$columns);
+      width: percentage(0.9/$columns);
 
+      margin: 0.5em;
       border: 1px dashed #ccc;
       border-radius: 2*$local_borders;
     }
