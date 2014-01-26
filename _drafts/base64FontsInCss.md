@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Schriften_wirklich_ in Css einbinden"
+title: "Schriften _wirklich_ in Css einbinden"
 description: ""
 category: computer/css 
 tags: [css, fonts]
 group: post
 image: font_embed.png
 ---
-Ja, embedded fonts in Css ist ein totgerittenes Pferd. Allerdings wird immer nur darüber geredet, wie ein Font-File auf einem Server referenziert wird, am besten auch noch über [Google-Fonts](link) und das ist einfach falsch, denn das ist eigentlich genau das Gegenteil eines eingebetteten Fonts. 
+Ja ja, embedded fonts in Css sind ein totgerittenes Pferd. Allerdings wird immer nur darüber geredet, wie ein Font-File auf einem Server referenziert wird, am besten auch noch über [Google-Fonts](http://www.google.com/fonts) und das ist einfach falsch, denn das ist eigentlich genau das Gegenteil eines eingebetteten Fonts.
 
 Denn so liegt der ja nach wie vor auf dem Server und muss extra mit einem eigenen Request (oder bei Google-Fonts sogar mit zweien) abgeholt werden, bevor er dann im Browser benutzt werden kann. 
 
@@ -16,31 +16,36 @@ Dummerweise brauchen verschiedene browser aber auch noch ganz eigene Fonts, so d
 
 Denn spätestens, wenn man sich vor Augen hält, dass Werbeblocker, Firewalls oder schlechte / langsame Verbindungen (hat da jemand Mobile First gesagt?) das Laden der Schrift auch völlig verhindern können und damit das gesamte Design der Seite plötzlich kaputt ist, wird klar, dass wir die Schriften auf diese Weise eigentlich kein bisschen einbetten, auch wenn wir das gerne behaupten. 
 
-Die Lösung wird bei Logos, Favicons und anderen kleinen Bildern schon lange völlig selbstverständlich benutzt: Data-Url. Damit kann der komplette Inhalt einer Datei direkt im Quelltext anstelle einer Referenz angegeben werden. Damit wird die Css-Datei natürlich um so größer, aber das sind ja Daten, die der Browser ohnehin geladen hätte, nur jetzt ohne separaten Request. 
+Die Lösung wird bei Logos, Favicons und anderen kleinen Bildern schon lange völlig selbstverständlich benutzt: Data-Uri. Damit kann der komplette Inhalt einer Datei direkt im Quelltext anstelle einer Referenz angegeben werden. Damit wird die Css-Datei natürlich um so größer, aber das sind ja Daten, die der Browser ohnehin geladen hätte, nur jetzt ohne separaten Request.
 
 Die Lobster-Schriftart, die ich für Überschriften einsetze, soll eigentlich so eingebunden werden:
 
-```html+css
-@import(google.com/whatever.css)
+```css
+@import url(//fonts.googleapis.com/css?family=Lobster);
 ```
 
 Damit wird eine weitere Css-Datei vom Google-Server geladen, die die Referenz auf die Woff-Datei mit der Schriftart enthält:
 
 ```css
-Black bla 
+@font-face {
+  font-family: 'Lobster';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lobster'), url(http://themes.googleusercontent.com/static/fonts/lobster/v6/MWVf-Rwh4GLQVBEwbyI61Q.woff) format('woff');
+}
 ```
 
 Den ersten Request kann man sich sparen, indem man den Code einfach ins eigene css übernimmt. Für den zweiten muss die Datei zunächst base64-encoded werden. 
 
 ```bash
-wget 'http://Google.com/lobster.woff' 
-base64-encode -w0 lobster.woff > lobster.b64.woff
+wget 'http://themes.googleusercontent.com/static/fonts/lobster/v6/MWVf-Rwh4GLQVBEwbyI61Q.woff'
+base64 -w0 MWVf-Rwh4GLQVBEwbyI61Q.woff > lobster.b64.woff
 ```
 
-Der String aus der neuen Datei `lobster.b64.woff` kann nun als Data-Url im Css benutzt werden :
+Der String aus der neuen Datei `lobster.b64.woff` kann nun als Data-Uri im Css benutzt werden :
 
 ```css
-Whatever 
+url('data:application/x-font-woff;base64,d09GRgABAAAAAD6sAAwAAAAAdQgAAQABAAAAAAAAAAAAAAAAAAAAAAA.....')
 ```
 
 Seitdem ich diesen Blog umgestellt habe, wird die Schrift endlich auch im Android-Browser angezeigt. 
