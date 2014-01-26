@@ -86,6 +86,7 @@
       width: percentage(1/$columns);
 
       border: 1px dashed #ccc;
+      border-radius: 2*$local_borders;
     }
 
     .post:nth-child(#{$columns}n+1):before {

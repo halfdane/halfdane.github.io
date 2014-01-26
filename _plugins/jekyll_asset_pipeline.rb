@@ -1,6 +1,7 @@
 require 'open3'
 require 'jekyll_asset_pipeline'
 require 'yui/compressor'
+require 'rainpress'
 
 module JekyllAssetPipeline
 
@@ -35,7 +36,7 @@ SASS Error >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     end
 
     def compress
-      return YUI::CssCompressor.new.compress(@content)
+      return Rainpress.compress(@content)
     end
   end
 
