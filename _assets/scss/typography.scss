@@ -1,11 +1,13 @@
 /*typography*/
+
 body {
-  font-family: 'cabinregular', Georgia, "Times New Roman", Times, serif;
+  font-family: 'Cabin';
 }
 
 #{headings(1, 5)} {
-  font-family: 'lobster_1.4regular', Helvetica, Arial, sans-serif;
+  font-family: 'Lobster';
 }
+
 
 #{headings()} {
   text-rendering: optimizeLegibility;
