@@ -11,7 +11,6 @@ before_install:
 - bundle install
 script:
 - rake build
-- rake build
 after_success:
 - ls | grep -v _site | xargs rm -rf
 - git fetch origin master:master
