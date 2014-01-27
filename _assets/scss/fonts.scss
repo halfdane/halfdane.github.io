@@ -10,16 +10,12 @@
     normal  // font-style
 );
 
-@include font-face(
-    "Lobster",
-    inline-font-files(
-        'lobster-webfont.woff', woff,
-        'lobster-webfont.ttf', truetype,
-        'lobster-webfont.svg', svg),
-    'lobster-webfont.eot',
-    normal, // font-weight
-    normal  // font-style
-);
+@font-face {
+  font-family: 'Lobster';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Lobster'), url('http://themes.googleusercontent.com/font?kit=9LpJGtNuM1D8FAZ2BkJH2Q') format('truetype');
+}
 
 //
 //
