@@ -18,7 +18,7 @@ after_success:
 - ls | grep -v _site | xargs rm -rf
 - mv _site/* .
 - mv _site/.* .
-- rmdir _site
+- git rm -f _site
 - git add .
 - git config --global user.email "halfdane@gmx.net"
 - git config --global user.name "halfdane"

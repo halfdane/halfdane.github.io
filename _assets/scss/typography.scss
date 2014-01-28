@@ -1,14 +1,4 @@
 /*typography*/
-
-body {
-  font-family: 'Cabin';
-}
-
-#{headings(1, 5)} {
-  font-family: 'Lobster';
-}
-
-
 #{headings()} {
   text-rendering: optimizeLegibility;
   text-decoration: none;
