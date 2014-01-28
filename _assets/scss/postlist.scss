@@ -163,10 +163,6 @@
   h3 {
     @include font(1.1, 0, 0);
   }
-  #{headings(2, 6)},
-  #{nest(headings(2, 6), a)} {
-    font-family: 'Cabin', Helvetica, Arial, sans-serif;
-  }
 }
 
 $local_max_content: 1550px;
