@@ -1,21 +1,17 @@
-@import "compass/css3";
-@include font-face(
-    "Cabin",
-    inline-font-files(
-        'cabin-webfont.woff', woff,
-        'cabin-webfont.ttf', truetype,
-        'cabin-webfont.svg', svg),
-    'cabin-webfont.eot',
-    normal, // font-weight
-    normal  // font-style
-);
-
 @font-face {
   font-family: 'Lobster';
   font-style: normal;
   font-weight: normal;
   src: local('Lobster'), url('http://themes.googleusercontent.com/font?kit=9LpJGtNuM1D8FAZ2BkJH2Q') format('truetype');
 }
+@font-face {
+  font-family: 'Tangerine';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Tangerine'), url('http://themes.googleusercontent.com/font?kit=DTPeM3IROhnkz7aYG2a9sA') format('truetype');
+}
+.lobster { font-family: 'Lobster', arial, serif;}
+.tangerine{ font-family: 'Tangerine', serif; font-size: 36px}
 
 //
 //
