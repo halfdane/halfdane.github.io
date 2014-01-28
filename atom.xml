@@ -4,7 +4,7 @@
  <title>Canned Nerd</title>
  <link href="http://halfdane.github.io/" rel="self"/>
  <link href="http://halfdane.github.io"/>
- <updated>2014-01-28T07:39:11+00:00</updated>
+ <updated>2014-01-28T11:17:05+00:00</updated>
  <id>http://halfdane.github.io</id>
  <author>
    <name>Halfdane</name>
@@ -18,10 +18,6 @@
    <updated>2014-01-26T00:00:00+00:00</updated>
    <id>http://halfdane.github.io/2014/01/26/base64_fonts_in_css</id>
    <content type="html">&lt;p&gt;Ja ja, embedded fonts in Css sind ein totgerittenes Pferd. Allerdings wird immer nur darüber geredet, wie ein Font-File auf einem Server referenziert wird, am besten auch noch über &lt;a href=&quot;http://www.google.com/fonts&quot;&gt;Google-Fonts&lt;/a&gt; und das ist einfach falsch, denn das ist eigentlich genau das Gegenteil eines eingebetteten Fonts.&lt;/p&gt;
-
-&lt;p class=&quot;lobster&quot;&gt;lobster&lt;/p&gt;
-
-&lt;p class=&quot;tangerine&quot;&gt;tangerine&lt;/p&gt;
 
 &lt;p&gt;Denn so liegt der ja nach wie vor auf dem Server und muss extra mit einem eigenen Request (oder bei Google-Fonts sogar mit zweien) abgeholt werden, bevor er dann im Browser benutzt werden kann. &lt;/p&gt;
 
