@@ -7,10 +7,13 @@ branches:
   - develop
 before_install:
 - travis_retry gem install jekyll
+- bundle install
+before_script:
 - git config --global user.email "halfdane@gmx.net"
 - git config --global user.name "halfdane"
 - git clone --quiet --branch=master "https://${GH_TOKEN}@github.com/halfdane/halfdane.github.io" _site
-- bundle install
+- git rm -rf _site/assets/*.js
+- git rm -rf _site/assets/*.css
 script:
 - rake build
 after_success:
