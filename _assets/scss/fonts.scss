@@ -1,14 +1,24 @@
 @font-face {
-  font-family: 'Lobster';
-  font-style: normal;
+  font-family: 'Cabin';
   font-weight: normal;
-  src: local('Lobster'), url('http://themes.googleusercontent.com/font?kit=9LpJGtNuM1D8FAZ2BkJH2Q') format('truetype');
+  font-style: normal;
+  src: url('/assets/fonts/cabin-webfont.eot');
+  src: url('/assets/fonts/cabin-webfont.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/cabin-webfont.woff') format('woff'), url('/assets/fonts/cabin-webfont.ttf') format('truetype'), url('/assets/fonts/cabin-webfont.svg#cabinregular') format('svg');
+
 }
+
 @font-face {
-  font-family: 'Tangerine';
-  font-style: normal;
+  font-family: 'Lobster';
   font-weight: normal;
-  src: local('Tangerine'), url('http://themes.googleusercontent.com/font?kit=DTPeM3IROhnkz7aYG2a9sA') format('truetype');
+  font-style: normal;
+  src: url('/assets/fonts/lobster-webfont.eot');
+  src: url('/assets/fonts/lobster-webfont.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/lobster-webfont.woff') format('woff'), url('/assets/fonts/lobster-webfont.ttf') format('truetype'), url('/assets/fonts/lobster-webfont.svg') format('svg');
 }
-h1, h2, h3, h4, h5, .lobster { font-family: 'Lobster', arial, serif;}
-.tangerine{ font-family: 'Tangerine', serif; font-size: 36px}
+
+body {
+  font-family: 'Cabin';
+}
+
+#{headings(1, 5)} {
+  font-family: 'Lobster';
+}
