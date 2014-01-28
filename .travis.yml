@@ -12,7 +12,6 @@ before_script:
 - git config --global user.email "halfdane@gmx.net"
 - git config --global user.name "halfdane"
 - git clone --quiet --branch=master "https://${GH_TOKEN}@github.com/halfdane/halfdane.github.io" _site
-- git rm -rf *.css *.js
 script:
 - rake build
 after_success:
