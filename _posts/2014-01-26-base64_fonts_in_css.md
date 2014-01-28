@@ -9,9 +9,6 @@ image: font_embed.png
 ---
 Ja ja, embedded fonts in Css sind ein totgerittenes Pferd. Allerdings wird immer nur darüber geredet, wie ein Font-File auf einem Server referenziert wird, am besten auch noch über [Google-Fonts](http://www.google.com/fonts) und das ist einfach falsch, denn das ist eigentlich genau das Gegenteil eines eingebetteten Fonts.
 
-<p class="lobster">lobster</p>
-<p class="tangerine">tangerine</p>
-
 Denn so liegt der ja nach wie vor auf dem Server und muss extra mit einem eigenen Request (oder bei Google-Fonts sogar mit zweien) abgeholt werden, bevor er dann im Browser benutzt werden kann. 
 
 Für die meisten Seiten ist die Verzögerung durch zwei überflüssige Requests kein Problem, selbst wenn die reine Anzahl von Requests der Hauptgrund für langsame Seiten ist. Die meisten Seiten sind halt trotzdem noch "schnell genug" oder haben nicht genug Publikum. 
