@@ -6,22 +6,16 @@ branches:
   only:
   - develop
 before_install:
-- git --no-pager log -1 --oneline
 - travis_retry gem install jekyll
+- git config --global user.email "halfdane@gmx.net"
+- git config --global user.name "halfdane"
+- git clone --quiet --branch=master "https://${GH_TOKEN}@github.com/halfdane/halfdane.github.io" _site
 - bundle install
 script:
 - rake build
 after_success:
-- ls | grep -v _site | xargs rm -rf
-- git fetch origin master:master
-- git checkout master
-- ls | grep -v _site | xargs rm -rf
-- mv _site/* .
-- mv _site/.* .
-- git rm -f _site
+- cd _site
 - git add .
-- git config --global user.email "halfdane@gmx.net"
-- git config --global user.name "halfdane"
 - git commit -m "[ci skip] snapshot $(date '+%m/%d/%y %H:%M')"
 - git push "https://${GH_TOKEN}@github.com/halfdane/halfdane.github.io"
 - cd ..
