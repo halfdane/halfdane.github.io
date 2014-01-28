@@ -72,6 +72,29 @@
     <div class="text">
     <p>Ja ja, embedded fonts in Css sind ein totgerittenes Pferd. Allerdings wird immer nur darüber geredet, wie ein Font-File auf einem Server referenziert wird, am besten auch noch über <a href="http://www.google.com/fonts">Google-Fonts</a> und das ist einfach falsch, denn das ist eigentlich genau das Gegenteil eines eingebetteten Fonts.</p>
 
+
+        <style type="text/css">
+            <!--
+            @font-face {
+                font-family: 'Lobster';
+                font-style: normal;
+                font-weight: normal;
+                src: local('Lobster'), url('http://themes.googleusercontent.com/font?kit=9LpJGtNuM1D8FAZ2BkJH2Q') format('truetype');
+            }
+            @font-face {
+                font-family: 'Tangerine';
+                font-style: normal;
+                font-weight: normal;
+                src: local('Tangerine'), url('http://themes.googleusercontent.com/font?kit=DTPeM3IROhnkz7aYG2a9sA') format('truetype');
+            }
+            .lobster { font-family: 'Lobster', arial, serif;}
+            .tangerine{ font-family: 'Tangerine', serif; font-size: 36px}
+            -->
+        </style>
+
+        <p class=".lobster">Sollte das ein Lobster sein?</p>
+        <p class=".tangerine">Sollte das ein Tangerine sein?</p>
+
 <p>Denn so liegt der ja nach wie vor auf dem Server und muss extra mit einem eigenen Request (oder bei Google-Fonts sogar mit zweien) abgeholt werden, bevor er dann im Browser benutzt werden kann. </p>
 
 <p>Für die meisten Seiten ist die Verzögerung durch zwei überflüssige Requests kein Problem, selbst wenn die reine Anzahl von Requests der Hauptgrund für langsame Seiten ist. Die meisten Seiten sind halt trotzdem noch &quot;schnell genug&quot; oder haben nicht genug Publikum. 
