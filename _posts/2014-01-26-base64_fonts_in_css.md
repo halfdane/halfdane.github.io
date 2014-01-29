@@ -50,7 +50,7 @@ url('data:application/x-font-woff;base64,d09GRgABAAAAAD6sAAwAAAAAdQgAAQABAAAAAAA
 
 Dieselbe Strategie funktioniert natürlich auch mit TrueType-Fonts für Android-Browser. Dort funktioniert's jetzt endlich auch. Danke, base64.
 
-Aber mit SASS ist das sogar noch einfacher:
+Und mit [SASS](http://sass-lang.com/), das ist seit den Experimenten mit dem [Vertialen Rhytmus](/2013/12/11/vertikaler-rhythmus/) ja ohnehin benutze, ist das sogar noch einfacher, da wird das Encoding der Font-Files automatisch gemacht:
 
 ```sass
 @import "compass/css3";
