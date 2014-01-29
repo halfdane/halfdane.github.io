@@ -1,7 +1,7 @@
 <div class="post" href="{{ BASE_PATH }}{{ post.url }}">
-    <h3>{% if post.image %}{% image {{post.image}} "{{post.title}}" "thumbnail" %}{% endimage %}{% endif %}{{ post.title }}</h3>
+    {% if post.image %}{% image {{post.image}} "{{post.title}}" "thumbnail" %}{% endimage %}{% endif %}
     <div class="text">
-        <div class="date"><span>– {{ post.date | date: "%-d %B %Y" }} –</span></div>
+        <h3>{{ post.title }}</h3><span class="date">– {{ post.date | date: "%-d %B %Y" }} –</span>
         <div class="excerpt">{{ post.excerpt }}</div>
     </div>
 </div>
