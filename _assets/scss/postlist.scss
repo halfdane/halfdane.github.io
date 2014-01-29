@@ -34,11 +34,11 @@
 
   .post {
     display: block;
+    overflow: hidden;
     cursor: pointer;
     margin: 0;
     vertical-align: top;
     @include experimental(box-sizing, border-box);
-    padding: 2*$local_borders $local_borders $local_borders 2*$local_borders;
     border-top: $local_borders/2 solid $postlist_border;
   }
   .post:hover {
@@ -53,6 +53,7 @@
     .text {
       vertical-align: top;
       text-align: left;
+      padding: 0 $local_borders $local_borders 2*$local_borders;
       figure {
         display: none;
       }
@@ -74,20 +75,26 @@
 
       @if $columns > 1 {
         text-align: center;
-        h3, .date {
+        h3 {
           text-align: center;
         }
+        figure {
+          width: 100%;
+        }
       } @else {
-        text-align: left;
-        h3, .date {
+        figure {
+          float: left;
+        }
+        h3 {
           text-align: left;
+          display: inline-block;
         }
       }
       display: inline-block;
       width: percentage(0.9/$columns);
 
       margin: 0.5em;
-      border: 1px dashed #ccc;
+      border: 1px solid #ccc;
       border-radius: 2*$local_borders;
     }
 
@@ -143,25 +150,11 @@
   @media screen and (max-width: rhythm(50, $base-font-size)) {
     &:nth-child(-n+1) {
       @include one_column();
+      figure {
+        width: 100%;
+        max-width: none;
+      }
     }
-  }
-
-  @media screen and (max-width: rhythm(40, $base-font-size)) {
-    .excerpt {
-      display: none;
-    }
-  }
-}
-
-@media screen and (max-width: rhythm(40, $base-font-size)) {
-  h1 {
-    @include font(1.618, 0, 0);
-  }
-  h2 {
-    @include font(1.2, 0, 0);
-  }
-  h3 {
-    @include font(1.1, 0, 0);
   }
 }
 

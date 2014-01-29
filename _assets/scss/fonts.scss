@@ -10,16 +10,6 @@
     normal  // font-style
 );
 
-/*
-@font-face {
-  font-family: 'Cabin';
-  font-weight: normal;
-  font-style: normal;
-  src: url('/assets/fonts/cabin-webfont.eot');
-  src: url('/assets/fonts/cabin-webfont.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/cabin-webfont.woff') format('woff'), url('/assets/fonts/cabin-webfont.ttf') format('truetype'), url('/assets/fonts/cabin-webfont.svg#cabinregular') format('svg');
-}
-*/
-
 @include font-face(
     "Lobster",
     inline-font-files(
@@ -30,15 +20,6 @@
     normal, // font-weight
     normal  // font-style
 );
-/*
-@font-face {
-  font-family: 'Lobster';
-  font-weight: normal;
-  font-style: normal;
-  src: url('/assets/fonts/lobster-webfont.eot');
-  src: url('/assets/fonts/lobster-webfont.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/lobster-webfont.woff') format('woff'), url('/assets/fonts/lobster-webfont.ttf') format('truetype'), url('/assets/fonts/lobster-webfont.svg') format('svg');
-}
-*/
 
 body, body *, * {
   font-family: 'Cabin';
