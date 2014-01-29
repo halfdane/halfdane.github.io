@@ -4,7 +4,7 @@
  <title>Canned Nerd</title>
  <link href="http://halfdane.github.io/" rel="self"/>
  <link href="http://halfdane.github.io"/>
- <updated>2014-01-28T11:33:07+00:00</updated>
+ <updated>2014-01-29T06:43:19+00:00</updated>
  <id>http://halfdane.github.io</id>
  <author>
    <name>Halfdane</name>
@@ -48,7 +48,7 @@ base64 -w0 MWVf-Rwh4GLQVBEwbyI61Q.woff &amp;gt; lobster.b64.woff
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Dieselbe Strategie funktioniert natürlich auch mit TrueType-Fonts für Android-Browser. Dort funktioniert&amp;#39;s jetzt endlich auch. Danke, base64.&lt;/p&gt;
 
-&lt;p&gt;Aber mit SASS ist das sogar noch einfacher:&lt;/p&gt;
+&lt;p&gt;Und mit &lt;a href=&quot;http://sass-lang.com/&quot;&gt;SASS&lt;/a&gt;, das ist seit den Experimenten mit dem &lt;a href=&quot;/2013/12/11/vertikaler-rhythmus/&quot;&gt;Vertialen Rhytmus&lt;/a&gt; ja ohnehin benutze, ist das sogar noch einfacher, da wird das Encoding der Font-Files automatisch gemacht:&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sass language-sass&quot; data-lang=&quot;sass&quot;&gt;&lt;span class=&quot;k&quot;&gt;@import&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;compass/css3&amp;quot;;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;@include&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt; font-face&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
     &lt;span class=&quot;s2&quot;&gt;&amp;quot;Cabin&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
