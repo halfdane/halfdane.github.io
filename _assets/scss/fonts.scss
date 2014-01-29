@@ -1,12 +1,36 @@
+@import "compass/css3";
+@include font-face(
+    "Cabin",
+    inline-font-files(
+        'cabin-webfont.woff', woff,
+        'cabin-webfont.ttf', truetype,
+        'cabin-webfont.svg', svg),
+    'cabin-webfont.eot',
+    normal, // font-weight
+    normal  // font-style
+);
+
+/*
 @font-face {
   font-family: 'Cabin';
   font-weight: normal;
   font-style: normal;
   src: url('/assets/fonts/cabin-webfont.eot');
   src: url('/assets/fonts/cabin-webfont.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/cabin-webfont.woff') format('woff'), url('/assets/fonts/cabin-webfont.ttf') format('truetype'), url('/assets/fonts/cabin-webfont.svg#cabinregular') format('svg');
-
 }
+*/
 
+@include font-face(
+    "Lobster",
+    inline-font-files(
+        'lobster-webfont.woff', woff,
+        'lobster-webfont.ttf', truetype,
+        'lobster-webfont.svg', svg),
+    'lobster-webfont.eot',
+    normal, // font-weight
+    normal  // font-style
+);
+/*
 @font-face {
   font-family: 'Lobster';
   font-weight: normal;
@@ -14,8 +38,9 @@
   src: url('/assets/fonts/lobster-webfont.eot');
   src: url('/assets/fonts/lobster-webfont.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/lobster-webfont.woff') format('woff'), url('/assets/fonts/lobster-webfont.ttf') format('truetype'), url('/assets/fonts/lobster-webfont.svg') format('svg');
 }
+*/
 
-body {
+body, body *, * {
   font-family: 'Cabin';
 }
 
