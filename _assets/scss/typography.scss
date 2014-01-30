@@ -4,22 +4,6 @@
   font-weight: normal;
 }
 
-code {
-  font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
-
-  overflow: auto;
-  white-space: pre-wrap; /* CSS3 browsers  */
-  white-space: -moz-pre-wrap !important; /* 1999+ Mozilla  */
-  white-space: -pre-wrap; /* Opera 4 thru 6 */
-  white-space: -o-pre-wrap; /* Opera 7 and up */
-  word-wrap: break-word; /* IE 5.5+ and up */
-  display: inline-block;
-}
-
-p > code {
-  display: inline;
-}
-
 /*vertical rhythm*/
 @import "compass/typography/vertical_rhythm";
 $base-font-size: 21px;
@@ -64,6 +48,7 @@ h6 {
 
 p, blockquote, ul, pre {
   @include font(1, 0);
+  font-size: 1rem;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
@@ -85,19 +70,6 @@ small, .pagination, figcaption, .date {
 .date {
   text-align: center;
   font-style: italic;
-}
-
-pre {
-  padding: 0 0.8rem 0 1.2rem;
-  border: 1px solid #ccc;
-  border-left: 1rem solid #ccc;
-
-  background-image: linear-gradient(transparent $base-line-height, #ececec $base-line-height);
-  background-size: auto 2*$base-line-height;
-  background-position: 0 0.5*$base-line-height;
-
-  @include trailer(0.5, $base-line-height, padding);
-  @include leader(0.5, $base-line-height, padding);
 }
 
 ol, ul {
@@ -140,4 +112,55 @@ blockquote:before {
 
 blockquote p {
   display: inline;
+}
+
+
+pre {
+  counter-reset: line-numbering;
+  border: solid 1px #eee;
+
+  @include trailer(0.5, $base-line-height, margin);
+  @include leader(0.5, $base-line-height, margin);
+
+  white-space: pre;
+  overflow-x: auto;
+  overflow-y:hidden;
+  word-break: inherit;
+  word-wrap: inherit;
+}
+
+code a::before {
+  content: counter(line-numbering);
+  counter-increment: line-numbering;
+  padding-right: 1em; /* space after numbers */
+  width: 25px;
+  text-align: right;
+  opacity: 0.6;
+  display: inline-block;
+  color: #aaa;
+  background: #eee;
+  margin-right: 16px;
+  padding: 2px 10px;
+  font-size: 70%;
+  border-right: 1px solid #dedede;
+
+  @include experimental(touch-callout, none);
+  @include experimental(user-select, none);
+}
+
+code a:first-of-type::before {
+  @include leader(0.5, $base-line-height, padding);
+}
+
+code a:last-of-type::before {
+  @include trailer(0.5, $base-line-height, padding);
+}
+
+code a:only-of-type::before {
+  @include trailer(0.5, $base-line-height, padding);
+  @include leader(0.5, $base-line-height, padding);
+}
+
+code.inline-code {
+  background: #eee;
 }
