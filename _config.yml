@@ -123,7 +123,7 @@ JB :
   #   ./_includes/custom/[HELPER]
   # where [HELPER] is the name of the helper you are overriding.
   
-markdown: redcarpet
+markdown: redcarpet-pygments
 redcarpet: 
   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data", "strikethrough" ]
 
