@@ -18,7 +18,7 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href='/assets/global-4e9b05ae3b17d63b48dc2d8477bcafeb.css' rel='stylesheet' type='text/css' />
+    <link href='/assets/global-2da6753744cb4c6a6750849a4a277598.css' rel='stylesheet' type='text/css' />
 
 
     <!-- Le fav and touch icons -->
@@ -76,17 +76,17 @@
     <p>Eine der wenigen Apps, für die ich Geld auszugeben bereit war, ist Tasker <a name="reference1"> </a>[<a href="#footnote1">1</a>] – die ultimative Allzweckwaffe für Nerds. Zumindest auf einem gerooteten Telefon.</p>
 
 <p>Mit diesem Profil z.B. schalte ich automatisch auf den stromsparenden 2G Modus, wenn der Bildschirm aus ist. Und beim einschalten natürlich wieder zurück. Umgeschaltet wird aber nur, wenn nicht gerade telefoniert wird oder es klingelt:</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="ss">Profile</span><span class="p">:</span> <span class="no">G2</span> <span class="no">When</span> <span class="no">Off</span>
-<span class="ss">State</span><span class="p">:</span> <span class="no">Display</span> <span class="no">State</span> <span class="o">[</span> <span class="ss">Is</span><span class="p">:</span><span class="no">Off</span> <span class="o">]</span>
-<span class="ss">Enter</span><span class="p">:</span> <span class="no">To</span> <span class="mi">2</span><span class="n">G</span> <span class="k">if</span> <span class="n">allowed</span>
-<span class="ss">A1</span><span class="p">:</span> <span class="no">Wait</span> <span class="o">[</span> <span class="ss">MS</span><span class="p">:</span><span class="mi">0</span> <span class="ss">Seconds</span><span class="p">:</span><span class="mi">7</span> <span class="ss">Minutes</span><span class="p">:</span><span class="mi">0</span> <span class="ss">Hours</span><span class="p">:</span><span class="mi">0</span> <span class="ss">Days</span><span class="p">:</span><span class="mi">0</span> <span class="o">]</span>
-<span class="ss">A2</span><span class="p">:</span> <span class="no">If</span> <span class="o">[</span> <span class="o">%</span><span class="no">SCREEN</span> <span class="o">~</span> <span class="n">off</span> <span class="o">]</span>
-<span class="ss">A3</span><span class="p">:</span> <span class="no">If</span> <span class="o">[</span> <span class="o">%</span><span class="no">PHONING</span> <span class="o">=</span> <span class="mi">0</span> <span class="o">]</span>
-<span class="ss">A4</span><span class="p">:</span> <span class="no">Mobile</span> <span class="no">Data</span> <span class="mi">2</span><span class="n">G</span><span class="o">/</span><span class="mi">3</span><span class="n">G</span> <span class="o">[</span> <span class="ss">Mode</span><span class="p">:</span><span class="mi">2</span><span class="n">G</span> <span class="no">Only</span> <span class="o">]</span>
-
-<span class="ss">Exit</span><span class="p">:</span> <span class="no">To</span> <span class="mi">3</span><span class="n">G</span> <span class="k">if</span> <span class="n">allowed</span>
-<span class="ss">A1</span><span class="p">:</span> <span class="no">If</span> <span class="o">[</span> <span class="o">%</span><span class="no">PHONING</span> <span class="o">=</span> <span class="mi">0</span> <span class="o">]</span>
-<span class="ss">A2</span><span class="p">:</span> <span class="no">Mobile</span> <span class="no">Data</span> <span class="mi">2</span><span class="n">G</span><span class="o">/</span><span class="mi">3</span><span class="n">G</span> <span class="o">[</span> <span class="ss">Mode</span><span class="p">:</span><span class="mi">3</span><span class="n">G</span> <span class="no">Preferred</span> <span class="o">]</span>
+<div class="highlight"><pre><code class="ruby"><a name="line-1"></a><span class="ss">Profile</span><span class="p">:</span> <span class="no">G2</span> <span class="no">When</span> <span class="no">Off</span>
+<a name="line-2"></a><span class="ss">State</span><span class="p">:</span> <span class="no">Display</span> <span class="no">State</span> <span class="o">[</span> <span class="ss">Is</span><span class="p">:</span><span class="no">Off</span> <span class="o">]</span>
+<a name="line-3"></a><span class="ss">Enter</span><span class="p">:</span> <span class="no">To</span> <span class="mi">2</span><span class="n">G</span> <span class="k">if</span> <span class="n">allowed</span>
+<a name="line-4"></a><span class="ss">A1</span><span class="p">:</span> <span class="no">Wait</span> <span class="o">[</span> <span class="ss">MS</span><span class="p">:</span><span class="mi">0</span> <span class="ss">Seconds</span><span class="p">:</span><span class="mi">7</span> <span class="ss">Minutes</span><span class="p">:</span><span class="mi">0</span> <span class="ss">Hours</span><span class="p">:</span><span class="mi">0</span> <span class="ss">Days</span><span class="p">:</span><span class="mi">0</span> <span class="o">]</span>
+<a name="line-5"></a><span class="ss">A2</span><span class="p">:</span> <span class="no">If</span> <span class="o">[</span> <span class="o">%</span><span class="no">SCREEN</span> <span class="o">~</span> <span class="n">off</span> <span class="o">]</span>
+<a name="line-6"></a><span class="ss">A3</span><span class="p">:</span> <span class="no">If</span> <span class="o">[</span> <span class="o">%</span><span class="no">PHONING</span> <span class="o">=</span> <span class="mi">0</span> <span class="o">]</span>
+<a name="line-7"></a><span class="ss">A4</span><span class="p">:</span> <span class="no">Mobile</span> <span class="no">Data</span> <span class="mi">2</span><span class="n">G</span><span class="o">/</span><span class="mi">3</span><span class="n">G</span> <span class="o">[</span> <span class="ss">Mode</span><span class="p">:</span><span class="mi">2</span><span class="n">G</span> <span class="no">Only</span> <span class="o">]</span>
+<a name="line-8"></a>
+<a name="line-9"></a><span class="ss">Exit</span><span class="p">:</span> <span class="no">To</span> <span class="mi">3</span><span class="n">G</span> <span class="k">if</span> <span class="n">allowed</span>
+<a name="line-10"></a><span class="ss">A1</span><span class="p">:</span> <span class="no">If</span> <span class="o">[</span> <span class="o">%</span><span class="no">PHONING</span> <span class="o">=</span> <span class="mi">0</span> <span class="o">]</span>
+<a name="line-11"></a><span class="ss">A2</span><span class="p">:</span> <span class="no">Mobile</span> <span class="no">Data</span> <span class="mi">2</span><span class="n">G</span><span class="o">/</span><span class="mi">3</span><span class="n">G</span> <span class="o">[</span> <span class="ss">Mode</span><span class="p">:</span><span class="mi">3</span><span class="n">G</span> <span class="no">Preferred</span> <span class="o">]</span>
 </code></pre></div>
 <p>Die Variable PHONING wird von anderen Profilen auf 1 gesetzt, wenn es klingelt oder abgehoben ist, und auf 0, wenn wieder aufgelegt wird.</p>
 
@@ -147,7 +147,7 @@ Die anderen Apps sind Titanium Backup und das Spiel Osmos.</p>
 
 
 
-<script src='/assets/global-add230d4dc735f6f144c5e110ccc7f8a.js' type='text/javascript'></script>
+<script src='/assets/global-f2241940232155c1180d7e0ac73ff920.js' type='text/javascript'></script>
 
 
 </body>
