@@ -85,6 +85,7 @@
       border: 1px solid #ccc;
       border-radius: 2*$local_borders;
       @include background-clip(padding-box);
+      overflow: hidden;
     }
   }
 
