@@ -163,26 +163,33 @@ halfdane.tsp.tourCreator = function (tourManager) {
     };
 };
 
-halfdane.drawEdges = function (points, string) {
+halfdane.drawEdges = function (points, string, triangles) {
     'use strict';
 
-    setTimeout(function () {
-        var context = $('<canvas></canvas>')
-            .attr('height', 300)
-            .attr('width', 200)
-            .appendTo($('.target'))
-            [0]
-            .getContext('2d');
+    var context = $('<canvas></canvas>')
+        .attr('height', 300)
+        .attr('width', 200)
+        .appendTo($('.target'))
+        [0]
+        .getContext('2d');
 
-        context.beginPath();
-        context.moveTo(points[points.length - 1].x, points[points.length - 1].y);
-        $(points).each(function (index, point) {
-            context.lineTo(point.x, point.y);
+    if (triangles) {
+        context.strokeStyle = '#ddd';
+        $(triangles).each(function (index, triangle) {
+            triangle.draw(context);
         });
-        context.closePath();
-        context.stroke();
-        context.fillStyle = '#000';
-        context.textBaseline = 'bottom';
-        context.fillText(string, 10, 250);
-    }, 10);
+    }
+
+    context.strokeStyle = '#000';
+
+    context.beginPath();
+    context.moveTo(points[points.length - 1].x, points[points.length - 1].y);
+    $(points).each(function (index, point) {
+        context.lineTo(point.x, point.y);
+    });
+    context.closePath();
+    context.stroke();
+    context.fillStyle = '#000';
+    context.textBaseline = 'bottom';
+    context.fillText(string, 10, 250);
 };
