@@ -45,4 +45,20 @@ nav {
   hr {
     clear: both;
   }
+  .nextTitle, .prevTitle {
+    display: inline;
+  }
+  .nextWord, .prevWord {
+    display: none;
+  }
+
+  @media screen and (max-width: rhythm(50, $base-font-size)) {
+    .nextTitle, .prevTitle {
+      display: none;
+    }
+    .nextWord, .prevWord {
+      display: inline;
+    }
+  }
+
 }
