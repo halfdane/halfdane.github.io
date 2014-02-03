@@ -6,7 +6,7 @@ title: Navigate by sight
 
 <div class="postslist_wrapper">
     <div class="postlist_layout">
-        <div class="postslist latest">
+        <div class="postslist">
             {% for post in site.posts limit: 6 %}{%include index_post post=post %}{% endfor %}
         </div>
         {% for post in site.posts offset: 6 %}

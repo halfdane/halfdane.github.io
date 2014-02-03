@@ -107,25 +107,28 @@
     }
   }
 
-@include one_column();
-
   /*large screen*/
   @media screen and (min-width: rhythm(60, $base-font-size)) {
-    &.latest {
+    &:nth-child(-n+1) {
       @include resize_responsive(3);
     }
   }
 
+  &:nth-child(n+2) {
+    @include one_column();
+  }
+
   /*small screen*/
   @media screen and (max-width: rhythm(60, $base-font-size)) {
-    &.latest {
+    &:nth-child(-n+1) {
       @include resize_responsive(2);
     }
   }
 
   /*very small screen*/
   @media screen and (max-width: rhythm(50, $base-font-size)) {
-    & {
+    &:nth-child(-n+1) {
+      @include one_column();
       figure {
         width: 100%;
         max-width: none;
