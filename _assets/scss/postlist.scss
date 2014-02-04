@@ -35,6 +35,7 @@
       bottom: 0;
       right: 0;
       background-color: rgba(0, 0, 0, 0.2);
+      @include border-radius(2*$tile_borders);
     }
 
     & * {
@@ -62,6 +63,7 @@
       width: 100%;
       position: absolute;
       bottom: 0;
+      @include border-radius(2*$tile_borders);
     }
   }
 
