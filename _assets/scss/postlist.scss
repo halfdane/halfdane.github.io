@@ -13,20 +13,11 @@
     vertical-align: top;
     border: 1px solid $postlist_border;
 
-    -webkit-border-top-left-radius: 2*$tile_borders;
-    -webkit-border-top-right-radius: 2*$tile_borders;
-    -webkit-border-bottom-right-radius: 2*$tile_borders;
-    -webkit-border-bottom-left-radius: 2*$tile_borders;
+      @include border-radius(2*$tile_borders);
 
-    -moz-border-radius-topleft: 2*$tile_borders;
-    -moz-border-radius-topright: 2*$tile_borders;
-    -moz-border-radius-bottomright: 2*$tile_borders;
-    -moz-border-radius-bottomleft: 2*$tile_borders;
-
-    border-top-left-radius: 2*$tile_borders;
-    border-top-right-radius: 2*$tile_borders;
-    border-bottom-right-radius: 2*$tile_borders;
-    border-bottom-left-radius: 2*$tile_borders;
+      img {
+        @include border-radius(2*$tile_borders);
+      } 
   }
 
   .post {
