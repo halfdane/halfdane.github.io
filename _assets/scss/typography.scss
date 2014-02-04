@@ -69,6 +69,11 @@ small, .pagination, figcaption, .date {
   @include font(0.8, 0);
 }
 
+big {
+  font-size: 120%
+}
+
+
 .date {
   text-align: center;
   font-style: italic;
