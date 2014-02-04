@@ -75,8 +75,8 @@ var prepareLightboxes = function () {
 var handlePostlistClicks = function () {
     'use strict';
 
-    $('.postslist .post').on('click', function () {
-        window.location.href = $(this).attr('href');
+    $('.tilelist .post').on('click', function () {
+        window.location.href = $(this).find('.postlink').attr('href');
     });
 };
 
