@@ -63,7 +63,7 @@
       width: 100%;
       position: absolute;
       bottom: 0;
-      @include border-radius(2*$tile_borders);
+      @include border-bottom-radius(2*$tile_borders);
     }
   }
 
