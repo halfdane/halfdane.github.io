@@ -12,7 +12,7 @@
     margin: $tile_borders 1%;
     vertical-align: top;
     border: 1px solid $postlist_border;
-    border-radius: 2*$tile_borders;
+    @include border-radius(2*$tile_borders);
     @include background-clip(padding-box);
   }
 
