@@ -79,8 +79,12 @@ module Jekyll
         name, weight = tag
         size = size_min + ((size_max - size_min) * weight).to_f
         size = sprintf("%.#{@precision}f", size)
-        html << "<a style='font-size: #{size}#{unit}' href='/tags.html##{name}'>#{name}</a>\n"
+        html << "<a style='font-size: #{size}#{unit}' href='/tags/#{sanitize_str(name)}'>#{name}</a>\n"
       end
+    end
+
+    def sanitize_str(input)
+      input.gsub(/[^A-Za-z0-9 -]+/, '').gsub(/\s/, '-').gsub(/-{2,}/, '-').downcase
     end
 
     private

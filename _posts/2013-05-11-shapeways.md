@@ -3,7 +3,7 @@ layout: post
 title: "Shapeways"
 description: ""
 category: 3d
-tags: [3d, blender, linux, shapeways]
+tags: [blender, linux, shapeways]
 group: post
 ---
 
