@@ -4,21 +4,19 @@ title: Navigate by sight
 ---
 {% include JB/setup %}
 
-<div class="postslist_wrapper">
-    <div class="postlist_layout">
-        <div class="postslist">
-            {% for post in site.posts limit: 6 %}{%include index_post post=post %}{% endfor %}
-        </div>
-        {% for post in site.posts offset: 6 %}
-            {% capture currentyear %}{{post.date | date: "%B %Y"}}{% endcapture %}
-            {% if currentyear != year %}
-            {% unless forloop.first %}</div>{% endunless %}
-                <h3>{{ currentyear }}</h3>
-                <div class="postslist">
-                {% capture year %}{{currentyear}}{% endcapture %}
-            {% endif %}
-            {%include index_post post=post %}
-        {% endfor %}
-        </div>
-    </div>
+<div class="tilelist index">
+    {% for post in site.posts limit: 6 %}{%include index_post post=post %}{% endfor %}
 </div>
+
+
+<!--div class="tilelist">
+    <div class='tile cloud'>
+        {% tag_cloud %}
+    </div>
+</div -->
+
+<div class="tilelist">
+    {% for post in site.posts offset: 6 limit: 6 %}{%include index_post post=post %}{% endfor %}
+</div>
+
+<p><a href="archive.html">Alle Einträge</a></p>

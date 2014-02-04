@@ -43,8 +43,8 @@ var register_baseline_trigger = function () {
 var equalizeBlockHeights = function () {
     'use strict';
 
-    $('.postslist:first .post').removeAttr('style');
-    halfdane.equalheight_blocks($('.postslist:first .post'));
+    $('.tilelist .tile').removeAttr('style');
+    halfdane.equalheight_blocks($('.tilelist .tile'));
 };
 
 var lazyload_images = function () {
