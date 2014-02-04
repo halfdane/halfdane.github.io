@@ -11,7 +11,7 @@
     overflow: hidden;
     margin: $tile_borders 1%;
     vertical-align: top;
-    border: 1px solid #ccc;
+    border: 1px solid $postlist_border;
     border-radius: 2*$tile_borders;
     @include background-clip(padding-box);
   }
@@ -19,6 +19,7 @@
   .post {
     width: 30%;
     text-align: left;
+    position: relative;
 
     figure {
       max-width: 100%;
@@ -34,9 +35,18 @@
         display: none;
       }
     }
+
+    .postlink {
+      text-align: center;
+      background-color: $p_very_light;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+    }
   }
 
   .cloud {
+    padding: $tile_borders;
     width: 95%;
   }
 
