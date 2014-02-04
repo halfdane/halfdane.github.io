@@ -1,138 +1,63 @@
 @import "compass/css3/background-clip";
 
-.postslist_wrapper {
+.tilelist {
+  $tile_borders: rhythm(0.5, $base-font-size);
+
   text-align: center;
-}
+  display: inline-block;
 
-/*some computer monitor*/
-.postslist {
-  $local_borders: rhythm(0.5, $base-font-size);
-
-  position: relative;
-  margin: 0.5*$local_borders;
-
-  figure {
+  .tile {
     display: inline-block;
-    text-align: center;
-    float: none;
-    margin: 0;
-    max-width: 100%;
-    img {
-      width: auto;
-      height: rhythm(10, $base-font-size);
-    }
+    overflow: hidden;
+    margin: $tile_borders 1%;
+    vertical-align: top;
+    border: 1px solid #ccc;
+    border-radius: 2*$tile_borders;
+    @include background-clip(padding-box);
   }
 
   .post {
-    display: block;
-    overflow: hidden;
-    cursor: pointer;
-    margin: 0;
-    vertical-align: top;
+    width: 30%;
+    text-align: left;
 
-    &:hover {
-      background-color: $postlist_hover;
-    }
-
-    *  {
-      pointer-events: none;
-      cursor: pointer;
+    figure {
+      max-width: 100%;
+      img {
+        width: 100%;
+        height: rhythm(10, $base-font-size);
+      }
     }
 
     .text {
-      vertical-align: top;
-      text-align: left;
-      padding: 0 $local_borders $local_borders 2*$local_borders;
+      padding: 0 $tile_borders $tile_borders 2*$tile_borders;
       figure {
         display: none;
       }
-
-      h3 figure {
-        display: inline-block;
-      }
     }
   }
 
-  @mixin resize_responsive($columns) {
-    .postlist_layout {
-      font-size: 0;
-    }
-    .post {
-      @include establish-baseline;
-
-      @if $columns > 1 {
-        text-align: center;
-        width: percentage(0.9/$columns);
-        h3 {
-          text-align: center;
-        }
-        figure {
-          width: 100%;
-        }
-      } @else {
-        width: 100%;
-        figure {
-          float: left;
-        }
-        h3 {
-          text-align: left;
-          display: inline-block;
-        }
-      }
-      display: inline-block;
-
-      margin: 0.5em 0;
-      border: 1px solid #ccc;
-      border-radius: 2*$local_borders;
-      @include background-clip(padding-box);
-      overflow: hidden;
-    }
-  }
-
-  @mixin one_column() {
-    @include resize_responsive(1);
-    figure {
-      max-width: 20%;
-      height: auto;
-      display: inline-block;
-      margin: 0;
-      img {
-        height: auto;
-      }
-    }
-    .post .text {
-      display: inline-block;
-      padding-left: 1%;
-      max-width: 78%;
-    }
+  .cloud {
+    width: 95%;
   }
 
   /*large screen*/
   @media screen and (min-width: rhythm(60, $base-font-size)) {
-    &:nth-child(-n+1) {
-      @include resize_responsive(3);
-    }
-  }
 
-  &:nth-child(n+2) {
-    @include one_column();
   }
-
   /*small screen*/
   @media screen and (max-width: rhythm(60, $base-font-size)) {
-    &:nth-child(-n+1) {
-      @include resize_responsive(2);
+    .post {
+      width: 45%;
     }
   }
 
   /*very small screen*/
-  @media screen and (max-width: rhythm(50, $base-font-size)) {
-    &:nth-child(-n+1) {
-      @include one_column();
-      figure {
-        width: 100%;
-        max-width: none;
-      }
+  @media screen and (max-width: rhythm(40, $base-font-size)) {
+    .post {
+      width: 100%;
+    }
+    .tile {
+      margin: $tile_borders 0;
     }
   }
 }
@@ -157,9 +82,6 @@ $local_max_content: 1550px;
 @media screen and (max-width: rhythm(50, $base-font-size)) {
   .content {
     margin: 0 1ex;
-  }
-  .post {
-    width: 100%;
   }
   .post {
     width: 100%;
