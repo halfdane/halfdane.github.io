@@ -19,7 +19,7 @@
         <small>{{page.tagline}}</small>
         {% endif %}
     </h1>
-    <div class="date">– {{ page.date | date: "%-d %B %Y" }} –</div>
+    {% if page.date %} <div class="date">– {{ page.date | date: "%-d %B %Y" }} –</div>{% endif %}
     <div class="text">
     {{ content }}
     </div>
