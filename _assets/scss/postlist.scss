@@ -13,15 +13,15 @@
     vertical-align: top;
     border: 1px solid $postlist_border;
 
-      @include border-radius(2*$tile_borders);
+    @include border-radius(2*$tile_borders);
 
-      img {
-        @include border-top-radius(2*$tile_borders);
-      } 
+    img {
+      @include border-top-radius(2*$tile_borders);
+    }
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.4);
   }
 
   .post {
-    width: 30%;
     text-align: left;
     position: relative;
     padding-bottom: rhythm(1, $base-font-size);
@@ -64,6 +64,7 @@
       position: absolute;
       bottom: 0;
       @include border-bottom-radius(2*$tile_borders);
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.4);
     }
   }
 
@@ -72,9 +73,8 @@
     width: 95%;
   }
 
-  /*large screen*/
-  @media screen and (min-width: rhythm(60, $base-font-size)) {
-
+  .post {
+    width: 30%
   }
   /*small screen*/
   @media screen and (max-width: rhythm(60, $base-font-size)) {
