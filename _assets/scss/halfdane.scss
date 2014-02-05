@@ -2,11 +2,13 @@
 @import "fonts";
 @import "colors";
 @import "typography";
-@import "figure";
 @import "postlist";
+@import "categories";
+@import "figure";
 @import "navi";
 @import "post";
 @import "flipper";
+
 
 body {
   color: $col_main_txt;
