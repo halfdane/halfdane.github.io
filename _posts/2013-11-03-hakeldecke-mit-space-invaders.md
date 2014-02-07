@@ -2,7 +2,7 @@
 layout: post
 title: "Häkeldecke mit Space Invaders"
 description: ""
-category: diy/Stoff
+category: diy
 tags: [decke, häkeln, langweilig, welle]
 group: post
 image: space3.jpg
