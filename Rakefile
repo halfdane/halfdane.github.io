@@ -5,12 +5,12 @@ require 'time'
 
 SOURCE = "."
 CONFIG = {
-  'version' => "0.3.0",
-  'themes' => File.join(SOURCE, "_includes", "themes"),
-  'layouts' => File.join(SOURCE, "_layouts"),
-  'posts' => File.join(SOURCE, "_posts"),
-  'post_ext' => "md",
-  'theme_package_version' => "0.1.0"
+    'version' => "0.3.0",
+    'themes' => File.join(SOURCE, "_includes", "themes"),
+    'layouts' => File.join(SOURCE, "_layouts"),
+    'posts' => File.join(SOURCE, "_posts"),
+    'post_ext' => "md",
+    'theme_package_version' => "0.1.0"
 }
 
 # Path configuration helper
@@ -18,11 +18,11 @@ module JB
   class Path
     SOURCE = "."
     Paths = {
-      :layouts => "_layouts",
-      :themes => "_includes/themes",
-      :theme_assets => "assets/themes",
-      :theme_packages => "_theme_packages",
-      :posts => "_posts"
+        :layouts => "_layouts",
+        :themes => "_includes/themes",
+        :theme_assets => "assets/themes",
+        :theme_packages => "_theme_packages",
+        :posts => "_posts"
     }
 
     def self.base
@@ -63,9 +63,9 @@ task :post do
   open(filename, 'w') do |post|
     post.puts "---"
     post.puts "layout: post"
-    post.puts "title: \"#{title.gsub(/-/,' ')}\""
+    post.puts "title: \"#{title.gsub(/-/, ' ')}\""
     post.puts 'description: ""'
-    post.puts "category: \"#{category.gsub(/-/,' ')}\""
+    post.puts "category: \"#{category.gsub(/-/, ' ')}\""
     post.puts "tags: #{tags}"
     post.puts "---"
     post.puts "{% include JB/setup %}"
@@ -80,7 +80,7 @@ task :page do
   name = ENV["name"] || "new-page.md"
   filename = File.join(SOURCE, "#{name}")
   filename = File.join(filename, "index.html") if File.extname(filename) == ""
-  title = File.basename(filename, File.extname(filename)).gsub(/[\W\_]/, " ").gsub(/\b\w/){$&.upcase}
+  title = File.basename(filename, File.extname(filename)).gsub(/[\W\_]/, " ").gsub(/\b\w/) { $&.upcase }
   if File.exist?(filename)
     abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
   end
@@ -99,17 +99,19 @@ end # task :page
 
 desc "Launch preview environment"
 task :preview do
-  edit_config("provider",  "false")
-  edit_config("compress",  "false")
-  edit_config("bundle",  "false")
+  edit_config("provider", "false")
+  edit_config("compress", "false")
+  edit_config("bundle", "false")
+  edit_config("development_mode", "true")
   system "jekyll serve -w --drafts"
 end # task :preview
 
 desc "Build for production"
 task :build do
-  edit_config("provider",  "disqus")
-  edit_config("compress",  "true")
-  edit_config("bundle",  "true")
+  edit_config("provider", "disqus")
+  edit_config("compress", "true")
+  edit_config("bundle", "true")
+  edit_config("development_mode", "false")
   system "jekyll build"
 end # task :build
 
@@ -122,8 +124,8 @@ end # task :production
 def edit_config(option_name, value)
   config = File.read("_config.yml")
   regexp = Regexp.new('(^\s*' + option_name + '\s*:\s*)(\S*)(\s*)$')
-  config.gsub!(regexp,'\1'+value+'\3')
-  File.open("_config.yml", 'w') {|f| f.write(config)}
+  config.gsub!(regexp, '\1'+value+'\3')
+  File.open("_config.yml", 'w') { |f| f.write(config) }
 end
 
 #Load custom rake scripts

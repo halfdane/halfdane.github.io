@@ -9,7 +9,8 @@ layout: default
     <h1>Navigate by sight</h1>
 </a>
 
-<!--div class="categories">
+{% if site.development_mode %}
+<div class="categories" class="hidden">
     <ul>
         <li>
             <div class="category">
@@ -42,7 +43,8 @@ layout: default
             </div>
         </li>
     </ul>
-</div-->
+</div>
+{% endif %}
 
 <div class="tilelist index">
     {% for post in site.posts limit: 6 %}{%include index_post post=post %}{% endfor %}

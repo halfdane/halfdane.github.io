@@ -88,8 +88,10 @@ $(window).load(function () {
     lazyload_images();
     prepareLightboxes();
 
-    register_baseline_trigger();
     handlePostlistClicks();
+    halfdane.lazyloadCategories($(".categories"), $(".tilelist"));
+
+    register_baseline_trigger();
 });
 
 $(window).resize(equalizeBlockHeights);
