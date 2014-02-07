@@ -3,7 +3,6 @@
 @import "colors";
 @import "typography";
 @import "postlist";
-@import "categories";
 @import "figure";
 @import "navi";
 @import "post";
@@ -32,7 +31,7 @@ p:empty {
 }
 
 .hidden {
-  visibility: hidden;
+  display: none;
 }
 
 /*button*/

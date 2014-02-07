@@ -1,6 +1,7 @@
 var halfdane = halfdane || {};
 
 halfdane.equalheight_blocks = function ($selector) {
+    'use strict';
 
     //Inspired (read: stolen =) by http://css-tricks.com/equal-height-blocks-in-rows
     // not that it is necessary - the css builds blocks just fine,
@@ -17,6 +18,7 @@ halfdane.equalheight_blocks = function ($selector) {
     function columnConform() {
         var currentTallest = 0,
             currentRowStart = 0,
+            currentDiv,
             rowDivs = new Array();
 
         // find the tallest DIV in the row, and set the heights of all of the DIVs to match it.
