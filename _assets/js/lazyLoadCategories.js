@@ -20,16 +20,37 @@ halfdane.lazyloadCategories = function (categories_target_selector, remaining_co
         return null;
     }
 
-    if ($(categories_target_selector).length > 0) {
+    var $categories_target = $(categories_target_selector);
+    if ($categories_target.length > 0) {
         var targetWidth = getCssStyle(categories_target_selector, "width");
 
-        $(remaining_contents_selector)
-            .css({display: "inline-block"})
-            .animate({width: "80%"}, { duration: 200, queue: false });
-        $(categories_target_selector)
-            .css({display: "inline-block", width: 0})
-            .animate({width: targetWidth}, { duration: 200, queue: false }, function() {
-                halfdane.equalheight_blocks(categories_target_selector, remaining_contents_selector);
+        $.getJSON("json/categories.json", function (categoriesJson) {
+            var $categories = $('<ul></ul>').appendTo($categories_target);;
+            $(categoriesJson.categories).each(function (index, currentCategory) {
+                var $category = $('<li></li>')
+                    .addClass('tile')
+                    .append(
+                        $('<a></a>').attr('href', currentCategory.url).text(currentCategory.title)
+                    )
+                    .appendTo($categories);
+                var $posts = $('<ul></ul>').appendTo($category);
+                $(currentCategory.posts).each(function (index, currentPost) {
+                    var $post = $('<li></li>')
+                        .append(
+                            $('<a></a>').attr('href', currentPost.url).text(currentPost.title)
+                        )
+                        .appendTo($posts);
+                })
             });
+
+            $(remaining_contents_selector)
+                .css({display: "inline-block"})
+                .animate({width: "80%"}, { duration: 200, queue: false });
+            $categories_target
+                .css({display: "inline-block", width: 0})
+                .animate({width: targetWidth}, { duration: 200, queue: false }, function () {
+                    halfdane.equalheight_blocks(categories_target_selector, remaining_contents_selector);
+                });
+        });
     }
 };
