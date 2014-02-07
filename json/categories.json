@@ -1,0 +1,4 @@
+---
+title: json
+---
+{"homepage":"{{ site.production_url }}","name":"{{ site.title }}","description":"{{ site.tagline }}","author":"{{ site.author.name }}","categories":[{% for category in site.categories %}{"title":"{{ category[0] }}","url":"{{ site.production_url }}/categories/{{ category[0] }}","posts": [{% for post in category[1]%}{"url":"{{ site.production_url }}{{ post.url }}","title":"{{ post.title }}"}{% if forloop.rindex0 > 0 %},{% endif %}{% endfor %}]}{% if forloop.rindex0 > 0 %},{% endif %}{% endfor %}]}
