@@ -10,55 +10,28 @@ layout: default
 </a>
 
 {% if site.development_mode %}
-<div class="categories" class="hidden">
+<div class="categories hidden">
     <ul>
-        <li>
-            <div class="category">
-                <h1>Kategorie1</h1>
-                <ul>
-                    <li><a href="archive.html">Post1</a></li>
-                    <li><a href="archive.html">Post2</a></li>
-                    <li><a href="archive.html">Post3</a></li>
-                </ul>
-            </div>
-        </li>
-        <li>
-            <div class="category">
-                <h1>Kategorie2</h1>
-                <ul>
-                    <li><a href="archive.html">Post1</a></li>
-                    <li><a href="archive.html">Post2</a></li>
-                    <li><a href="archive.html">Post3</a></li>
-                </ul>
-            </div>
-        </li>
-        <li>
-            <div class="category">
-                <h1>Kategorie3</h1>
-                <ul>
-                    <li><a href="archive.html">Post1</a></li>
-                    <li><a href="archive.html">Post2</a></li>
-                    <li><a href="archive.html">Post3</a></li>
-                </ul>
-            </div>
-        </li>
+        {% include categories_list %}
     </ul>
 </div>
 {% endif %}
 
-<div class="tilelist index">
-    {% for post in site.posts limit: 6 %}{%include index_post post=post %}{% endfor %}
-</div>
-
-
-<div class="tilelist index">
-    <div class='tile cloud'>
-        {% tag_cloud font-size: 50 - 150%}
+<div class="js_tilelists">
+    <div class="tilelist index">
+        {% for post in site.posts limit: 6 %}{%include index_post post=post %}{% endfor %}
     </div>
-</div>
 
-<div class="tilelist index">
-    {% for post in site.posts offset: 6 limit: 6 %}{%include index_post post=post %}{% endfor %}
+
+    <div class="tilelist index">
+        <div class='tile cloud'>
+            {% tag_cloud font-size: 50 - 150%}
+        </div>
+    </div>
+
+    <div class="tilelist index">
+        {% for post in site.posts offset: 6 limit: 6 %}{%include index_post post=post %}{% endfor %}
+    </div>
 </div>
 
 <p><a href="archive.html">Alle Einträge</a></p>

@@ -50,9 +50,7 @@ var equalizeBlockHeights = function () {
 var lazyload_images = function () {
     'use strict';
 
-    $('img:not(.swipe img)').unveil(200, function() {
-        equalizeBlockHeights();
-    });
+    $('img:not(.swipe img)').unveil(200);
 };
 
 var prepareLightboxes = function () {
@@ -84,12 +82,14 @@ var handlePostlistClicks = function () {
 $(window).load(function () {
     'use strict';
 
-    activate_slideshows();
     lazyload_images();
+    activate_slideshows();
     prepareLightboxes();
 
+    equalizeBlockHeights();
+
+    halfdane.lazyloadCategories(".categories", ".js_tilelists");
     handlePostlistClicks();
-    halfdane.lazyloadCategories($(".categories"), $(".tilelist"));
 
     register_baseline_trigger();
 });
