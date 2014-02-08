@@ -1,7 +1,7 @@
 @import "compass/css3/background-clip";
 
+$tile_borders: rhythm(0.5, $base-font-size);
 .tilelist {
-  $tile_borders: rhythm(0.5, $base-font-size);
   vertical-align: top;
 
   text-align: center;
@@ -20,11 +20,16 @@
       @include border-top-radius(2*$tile_borders);
     }
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.4);
+
+    text-align: left;
+    position: relative;
+  }
+
+  .text {
+    padding: 0 $tile_borders $tile_borders 2*$tile_borders;
   }
 
   .post {
-    text-align: left;
-    position: relative;
     padding-bottom: rhythm(1, $base-font-size);
     cursor: pointer;
 
@@ -51,11 +56,8 @@
       }
     }
 
-    .text {
-      padding: 0 $tile_borders $tile_borders 2*$tile_borders;
-      figure {
-        display: none;
-      }
+    .text figure {
+      display: none;
     }
 
     .postlink {
@@ -73,35 +75,47 @@
     padding: $tile_borders;
     width: 95%;
   }
-
-  .post {
-    width: 30%
-  }
-  /*small screen*/
-  @media screen and (max-width: rhythm(60, $base-font-size)) {
-    .post {
-      width: 45%;
-    }
-  }
-
-  /*very small screen*/
-  @media screen and (max-width: rhythm(40, $base-font-size)) {
-    .post {
-      width: 100%;
-    }
-    .tile {
-      margin: $tile_borders 0;
-    }
-  }
 }
 
 .categories {
   display: inline-block;
-  width: 15%;
+  width: 20%;
   vertical-align: top;
+  .tile {
+    display: block;
+  }
+  ul, li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  li a {
+    background-color: $p_very_light;
+    display: block;
+    width: 100%;
+    @include border-top-radius(2*$tile_borders);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.4);
+    padding-left: 1em;
+  }
+
+  li li {
+    border: 1px solid $postlist_border;
+    padding: 0.5em 0 0 10%;
+    text-indent: -10%;
+    a {
+      background-color: transparent;
+      @include border-top-radius(0);
+      box-shadow: none;
+      width: 90%;
+    }
+  }
+  li li:hover {
+    background-color: $postlist_border;
+  }
 }
 
-$local_max_content: 1550px;
+$local_max_content: 1600px;
 .content {
   max-width: $local_max_content;
 }
@@ -117,12 +131,27 @@ $local_max_content: 1550px;
     margin: 0 auto;
   }
 }
-
+.post {
+  width: 30%
+}
+/*small screen*/
+@media screen and (max-width: rhythm(60, $base-font-size)) {
+  .post {
+    width: 45%;
+  }
+}
+/*very small screen*/
 @media screen and (max-width: rhythm(50, $base-font-size)) {
   .content {
     margin: 0 1ex;
   }
   .post {
     width: 100%;
+  }
+  .tile {
+    margin: $tile_borders 0;
+  }
+  .categories {
+    display: none;
   }
 }
