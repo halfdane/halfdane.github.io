@@ -12,7 +12,7 @@ halfdane.lazyloadCategories = function (categories_target_selector, remaining_co
             var rules = document.styleSheets[c].cssRules;
             for (var r = 0, lenR = rules.length; r < lenR; r++) {
                 var rule = rules[r];
-                if (rule.selectorText == ruleSelector && rule.style) {
+                if (rule.selectorText === ruleSelector && rule.style) {
                     return rule.style[cssprop]; // rule.cssText;
                 }
             }
@@ -21,11 +21,12 @@ halfdane.lazyloadCategories = function (categories_target_selector, remaining_co
     }
 
     var $categories_target = $(categories_target_selector);
-    if ($categories_target.length > 0) {
+    if ($categories_target.is(":visible")) {
         var targetWidth = getCssStyle(categories_target_selector, "width");
+        targetWidth = targetWidth.replace(/%/, "");
 
         $.getJSON("json/categories.json", function (categoriesJson) {
-            var $categories = $('<ul></ul>').appendTo($categories_target);;
+            var $categories = $('<ul></ul>').appendTo($categories_target);
             $(categoriesJson.categories).each(function (index, currentCategory) {
                 var $category = $('<li></li>')
                     .addClass('tile')
@@ -40,15 +41,15 @@ halfdane.lazyloadCategories = function (categories_target_selector, remaining_co
                             $('<a></a>').attr('href', currentPost.url).text(currentPost.title)
                         )
                         .appendTo($posts);
-                })
+                });
             });
 
             $(remaining_contents_selector)
                 .css({display: "inline-block"})
-                .animate({width: "80%"}, { duration: 200, queue: false });
+                .animate({width: 99-targetWidth+"%"}, { duration: 200, queue: false });
             $categories_target
                 .css({display: "inline-block", width: 0})
-                .animate({width: targetWidth}, { duration: 200, queue: false }, function () {
+                .animate({width: targetWidth+"%"}, { duration: 200, queue: false }, function () {
                     halfdane.equalheight_blocks(categories_target_selector, remaining_contents_selector);
                 });
         });
