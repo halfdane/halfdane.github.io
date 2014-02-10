@@ -6,15 +6,9 @@ category: diy
 tags: [buddelschiff, Holz, Stoff, Microbohrer, Modellbau, Zahnstocher]
 group: post
 image: buddel_f.jpg
+series: buddelschiff
 ---
 Genug experimentiert, jetzt geht es los. Mit dem Prototypen habe ich gelernt, wie ich die Mastscharniere, die Segel, den Rumpf und die Takelage haben möchte. Nun geht's darum, die gemachten Fehler und gewonnenen Erkenntnisse in ein Buddelschiff zu übertragen das rockt!
-
-Dieser Eintrag ist Teil einer kleinen Serie, die sich mit dem Buddelschiff beschäftigt. Es gibt die Einträge
-
-1. [Prototyp: Schiffsrumpf und Masten](/2013/11/12/buddel1/)
-2. [Prototyp: Takeln](/2013/11/13/buddel2/)
-3. [Prototyp: Segel](/2013/11/23/buddel3/)
-4. [Finales Buddelschiff](/2014/01/14/buddelfinal/) (dieser hier)
 
 ## Pläne
 Den Rumpf nicht aus Balsaholz zu machen hatte ich mich ja schon recht früh entschieden, auch dass er so groß sein sollte, das er nur in mehreren Teilen durch den Flaschenhals kommt. Zusammen mit der Flaschenform, auf die ich ja nun keinen Einfluss hatte, und der Entscheidung, die Rickmer Rickmers zu bauen ist das alles mehr als genug, um ein paar Pläne zu zeichnen:

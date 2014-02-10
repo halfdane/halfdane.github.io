@@ -7,6 +7,7 @@ tags: [javascript, html5, tsp, evolutionary algorithm]
 group: post
 image: tsp_evolutionary.png
 resources: [/assets/js/tsp/tspBase.js, /assets/js/tsp/evolutionaryTsp.js]
+series: js-tsp
 ---
 Nachdem die "Simulated Annealing"-Strategie zur Lösung des Traveling Salesman Problems [nicht so beeindruckend war] (/2013/12/01/annealing/), versuche ich mich jetzt mal an der Implementierung eines evolutionären Algorithmus' in Javascript.
 
