@@ -6,12 +6,15 @@ layout: default
 <a href="/">
     <h6>Halfdane's </h6>
     <h4>Canned Nerd</h4>
+
     <h1>Navigate by sight</h1>
 </a>
 
-<div class="tilelist categories"></div>
+<div class="categories">
+    <h3>Kategorien</h3>
+</div>
 
-<div class="js_tilelists">
+<div class="tilelist_posts">
     <div class="tilelist index">
         {% for post in site.posts limit: 6 %}{%include index_post post=post %}{% endfor %}
     </div>

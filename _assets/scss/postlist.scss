@@ -77,35 +77,38 @@ $tile_borders: rhythm(0.5, $base-font-size);
   }
 }
 
+.tilelist_posts {
+  display: inline-block;
+  width: 79%;
+}
+
 .categories {
   display: inline-block;
   width: 20%;
   vertical-align: top;
-  .tile {
+  ul {
     display: block;
-  }
-  ul, li {
-    padding: 0;
     margin: 0;
+  }
+  li {
+    padding: 0;
+    margin: 0.5em 0 0 0;
     list-style: none;
   }
 
   li a {
     background-color: $p_very_light;
     display: block;
-    width: 100%;
-    @include border-top-radius(2*$tile_borders);
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.4);
     padding-left: 1em;
   }
 
   li li {
+    margin: 0;
     border: 1px solid $postlist_border;
     padding: 0.5em 0 0 10%;
-    text-indent: -10%;
     a {
       background-color: transparent;
-      @include border-top-radius(0);
       box-shadow: none;
       width: 90%;
     }
@@ -153,5 +156,8 @@ $local_max_content: 1600px;
   }
   .categories {
     display: none;
+  }
+  .tilelist_posts {
+    width: 100%;
   }
 }
