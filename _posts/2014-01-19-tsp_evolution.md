@@ -2,8 +2,8 @@
 layout: post
 title: "TSP in JavaScript (Evolutionary)"
 description: ""
-category: computer
-tags: [javascript, html5, tsp, evolutionary algorithm]
+category: Javascript
+tags: [javascript, tsp, evolutionary algorithm]
 group: post
 image: tsp_evolutionary.png
 resources: [/assets/js/tsp/tspBase.js, /assets/js/tsp/evolutionaryTsp.js]

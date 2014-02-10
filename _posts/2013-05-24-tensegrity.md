@@ -2,8 +2,8 @@
 layout: post
 title: "Tensegrity"
 description: ""
-category: html5
-tags: [liquid, jekyll, images, css3, html5]
+category: diy
+tags: [holz, gummiband]
 group: post
 image: cam00009.jpg
 ---

@@ -2,8 +2,8 @@
 layout: post
 title: "TSP in JavaScript (Greedy)"
 description: ""
-category: computer
-tags: [javascript, html5, tsp, greedy algorithm, momo]
+category: Javascript
+tags: [javascript, tsp, greedy algorithm, momo]
 group: post
 image: tsp_greedy.png
 resources: [/assets/js/tsp/delaunay.js, /assets/js/tsp/tspBase.js, /assets/js/tsp/nearestNeighbourTsp.js]

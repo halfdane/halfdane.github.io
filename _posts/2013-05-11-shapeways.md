@@ -2,7 +2,7 @@
 layout: post
 title: "Shapeways"
 description: ""
-category: 3d
+category: nerdery
 tags: [blender, linux, shapeways]
 group: post
 ---

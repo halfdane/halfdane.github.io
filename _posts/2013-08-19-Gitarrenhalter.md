@@ -2,8 +2,8 @@
 layout: post
 title: "Wandhalterung für Gitarren"
 description: ""
-category: html5
-tags: [liquid, jekyll, images, css3, html5]
+category: diy
+tags: [holz, gitarre]
 group: post
 image: gitarren1.jpg
 ---

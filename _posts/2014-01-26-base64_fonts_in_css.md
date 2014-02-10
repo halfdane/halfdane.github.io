@@ -2,8 +2,8 @@
 layout: post
 title: "Schriften _wirklich_ in Css einbinden"
 description: ""
-category: computer/css 
-tags: [css, fonts]
+category: Html
+tags: [css, fonts, typhographie]
 group: post
 image: font_embed.png
 ---

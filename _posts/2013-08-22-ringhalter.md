@@ -2,8 +2,8 @@
 layout: post
 title: "Shabby chic Ringhalter"
 description: ""
-category: html5
-tags: [liquid, jekyll, images, css3, html5]
+category: diy
+tags: [stoff, rahmen, ringe]
 group: post
 image: ringhalter.jpg
 ---

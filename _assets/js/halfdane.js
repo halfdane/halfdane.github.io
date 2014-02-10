@@ -44,7 +44,7 @@ var equalizeBlockHeights = function () {
     'use strict';
 
     $('.tilelist .tile').removeAttr('style');
-    halfdane.equalheight_blocks($('.tilelist .tile'));
+    halfdane.equalheight_blocks($('.tilelist .tile').not('.cloud'));
 };
 
 var lazyload_images = function () {

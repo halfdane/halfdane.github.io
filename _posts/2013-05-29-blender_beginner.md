@@ -2,8 +2,8 @@
 layout: post
 title: "Blender Anfänger"
 description: ""
-category: html5
-tags: [liquid, jekyll, images, css3, html5]
+category: nerdery
+tags: [blender, linux, shapeways]
 group: post
 image: blender_water.png
 ---
