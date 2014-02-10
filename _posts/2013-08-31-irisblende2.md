@@ -3,7 +3,7 @@ layout: post
 title: "Irisblende^2"
 description: ""
 category: diy
-tags: [Blende, nerdy, Pappe]
+tags: [blende, pappe]
 group: post
 image: iris1.jpg
 ---

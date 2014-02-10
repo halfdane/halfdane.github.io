@@ -3,7 +3,7 @@ layout: post
 title: "Buddelschiff - das Finale"
 description: ""
 category: diy
-tags: [buddelschiff, Holz, Stoff, Microbohrer, Modellbau, Zahnstocher]
+tags: [buddelschiff, holz, stoff, microbohrer, modellbau, zahnstocher]
 group: post
 image: buddel_f.jpg
 series: buddelschiff

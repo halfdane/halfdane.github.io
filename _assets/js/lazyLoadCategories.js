@@ -27,6 +27,11 @@ halfdane.lazyloadCategories = function (categories_target_selector, remaining_co
 
         $.getJSON("json/categories.json", function (categoriesJson) {
             var $categories = $('<ul></ul>').appendTo($categories_target);
+
+            categoriesJson.categories.sort(function (entry1, entry2) {
+                return  (entry1.title < entry2.title) ? -1 : (entry1.title > entry2.title) ? 1 : 0;
+            });
+
             $(categoriesJson.categories).each(function (index, currentCategory) {
                 var $category = $('<li></li>')
                     .addClass('tile')
@@ -46,12 +51,10 @@ halfdane.lazyloadCategories = function (categories_target_selector, remaining_co
 
             $(remaining_contents_selector)
                 .css({display: "inline-block"})
-                .animate({width: 99-targetWidth+"%"}, { duration: 200, queue: false });
+                .animate({width: 99 - targetWidth + "%"}, { duration: 200, queue: false });
             $categories_target
                 .css({display: "inline-block", width: 0})
-                .animate({width: targetWidth+"%"}, { duration: 200, queue: false }, function () {
-                    halfdane.equalheight_blocks(categories_target_selector, remaining_contents_selector);
-                });
+                .animate({width: targetWidth + "%"}, { duration: 200, queue: false });
         });
     }
 };

@@ -2,8 +2,8 @@
 layout: post
 title: "Livestream-Bildergallerie"
 description: ""
-category: computer/javascript
-tags: [javascript, html5, tsp]
+category: Javascript
+tags: [javascript, html5, OTTO]
 group: post
 image: picturedisplay.png
 resources: [/assets/js/picture_display/picture_display.js]

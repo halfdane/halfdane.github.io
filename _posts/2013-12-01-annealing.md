@@ -2,8 +2,8 @@
 layout: post
 title: "TSP in JavaScript (Simulated Annealing)"
 description: ""
-category: computer/javascript
-tags: [javascript, html5, tsp, simulated annealing]
+category: Javascript
+tags: [javascript, tsp, simulated annealing]
 group: post
 image: tsp_annealing.png
 resources: [/assets/js/tsp/tspBase.js, /assets/js/tsp/annealingTsp.js]

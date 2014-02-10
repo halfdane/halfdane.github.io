@@ -3,7 +3,7 @@ layout: post
 title: "Initiale Position der Seite falsch – a Scrollspy Mystery [solved]"
 description: ""
 category: html
-tags: [ html, html forms, javascript, scrollspy]
+tags: [ html5, javascript, scrollspy]
 group: post
 image: scrollspy_mystery.png
 ---
