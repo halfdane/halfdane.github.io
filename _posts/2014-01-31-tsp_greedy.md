@@ -7,6 +7,7 @@ tags: [javascript, html5, tsp, greedy algorithm, momo]
 group: post
 image: tsp_greedy.png
 resources: [/assets/js/tsp/delaunay.js, /assets/js/tsp/tspBase.js, /assets/js/tsp/nearestNeighbourTsp.js]
+series: js-tsp
 ---
 Jetzt hab ich die Nase voll! Diese ganzen randomisierten Näherungsalgorithmen stinken doch: die Implementierung ist umständlich, die Laufzeit katastrophal und das Ergebnis eher so mittelgut. Dabei ist mir die Qualität der Tour nicht mal so wichtig. Zeit für ein bisschen Gier! Ich brauche Beppo Straßenkehrer. 
 
