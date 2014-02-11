@@ -5,7 +5,7 @@ permalink: /:year/:month/:day/:title
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "vendor"]
 pygments: true
 
-development_mode : false
+development_mode : true
 
 # Themes are encouraged to use these universal variables
 # so be sure to set them if your theme uses them.
@@ -80,7 +80,7 @@ JB :
   # Set 'provider' to false to turn commenting off globally.
   #
   comments :
-    provider : disqus
+    provider : false
     disqus :
       short_name : halfdane
     livefyre :
@@ -130,8 +130,8 @@ redcarpet:
   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data", "strikethrough" ]
 
 asset_pipeline:
-  bundle : true
-  compress : true
+  bundle : false
+  compress : false
   output_path : assets
   display_path : nil
   gzip : false

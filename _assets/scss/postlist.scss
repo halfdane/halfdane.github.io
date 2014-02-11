@@ -13,12 +13,6 @@ $tile_borders: rhythm(0.5, $base-font-size);
     margin: $tile_borders 1%;
     vertical-align: top;
     border: 1px solid $postlist_border;
-
-    @include border-radius(2*$tile_borders);
-
-    img {
-      @include border-top-radius(2*$tile_borders);
-    }
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.4);
 
     text-align: left;
@@ -41,7 +35,6 @@ $tile_borders: rhythm(0.5, $base-font-size);
       bottom: 0;
       right: 0;
       background-color: rgba(0, 0, 0, 0.2);
-      @include border-radius(2*$tile_borders);
     }
 
     & * {
@@ -66,7 +59,6 @@ $tile_borders: rhythm(0.5, $base-font-size);
       width: 100%;
       position: absolute;
       bottom: 0;
-      @include border-bottom-radius(2*$tile_borders);
       box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.4);
     }
   }
@@ -118,27 +110,15 @@ $tile_borders: rhythm(0.5, $base-font-size);
   }
 }
 
-$local_max_content: 1600px;
 .content {
-  max-width: $local_max_content;
+  margin: 0 2%;
 }
 
-@media screen and (max-width: #{$local_max_content}) {
-  .content {
-    margin: 0 2%;
-  }
-}
-
-@media screen and (min-width: #{$local_max_content}) {
-  .content {
-    margin: 0 auto;
-  }
-}
 .post {
   width: 30%
 }
 /*small screen*/
-@media screen and (max-width: rhythm(60, $base-font-size)) {
+@media screen and (max-width: rhythm(70, $base-font-size)) {
   .post {
     width: 45%;
   }
