@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Pointillismus in Javascript "
+title: "Pointillismus in Javascript"
 description: ""
 category: javascript
 tags: [javascript, graphic, canvas]
