@@ -80,7 +80,6 @@ JB :
   # Set 'provider' to false to turn commenting off globally.
   #
   comments :
-    provider : disqus
     disqus :
       short_name : halfdane
 
@@ -89,7 +88,6 @@ JB :
   # Set 'provider' to false to turn analytics off globally.
   #        
   analytics :
-    provider: google
     google :
         tracking_id : 'UA-48060090-1'
 
