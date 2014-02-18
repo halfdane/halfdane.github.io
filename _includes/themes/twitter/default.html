@@ -16,14 +16,6 @@
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <!-- Le styles -->
-    {% css_asset_tag global %}
-    - /_assets/scss/halfdane.scss
-    - /_assets/css/slideshow-theme.css
-    - /_assets/css/syntax.css
-    - /_assets/css/magnific-popup.css
-    {% endcss_asset_tag %}
-
     <!-- Le fav and touch icons -->
     <!-- Update these with your own images
       <link rel="shortcut icon" href="images/favicon.ico">
@@ -59,6 +51,15 @@
 
 
 {% include JB/analytics %}
+
+<!-- Le styles -->
+{% css_asset_tag global %}
+- /_assets/scss/halfdane.scss
+- /_assets/css/slideshow-theme.css
+- /_assets/css/syntax.css
+- /_assets/css/magnific-popup.css
+{% endcss_asset_tag %}
+
 
 {% javascript_asset_tag global %}
 - /_assets/js/jquery-1.10.1.min.js
