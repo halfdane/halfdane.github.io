@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" class="wf-loading">
 <head>
     <meta charset="utf-8">
     <title>Halfdane's Canned Nerd - {{ page.title }}</title>
@@ -29,6 +29,32 @@
     <link href="{{ BASE_PATH }}{{ site.JB.rss_path }}" type="application/rss+xml" rel="alternate"
           title="Sitewide RSS Feed">
 
+
+    <style type="text/css">
+        .wf-loading {
+            visibility:hidden;
+        }
+        .wf-inactive { visibility:visible;}
+    </style>
+
+    <script>
+        WebFontConfig = {
+            google: {
+                families: ['Cabin', 'Lobster']
+            }
+        };
+
+        (function() {
+            var wf = document.createElement('script');
+            wf.src = '//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+            wf.type = 'text/javascript';
+            wf.async = 'false';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(wf, s);
+        })();
+    </script>
+
+
 </head>
 
 <body>
@@ -51,15 +77,6 @@
 
 
 {% include JB/analytics %}
-
-<script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
-<script>
-    WebFont.load({
-        google: {
-            families: ['Cabin', 'Lobster']
-        }
-    });
-</script>
 
 <!-- Le styles -->
 {% css_asset_tag global %}
