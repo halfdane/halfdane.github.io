@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" class="wf-loading">
 <head>
     <meta charset="utf-8">
     <title>Halfdane's Canned Nerd - Alle Seiten</title>
@@ -26,6 +26,32 @@
           title="Sitewide ATOM Feed">
     <link href="/rss.xml" type="application/rss+xml" rel="alternate"
           title="Sitewide RSS Feed">
+
+
+    <style type="text/css">
+        .wf-loading {
+            visibility:hidden;
+        }
+        .wf-inactive { visibility:visible;}
+    </style>
+
+    <script>
+        WebFontConfig = {
+            google: {
+                families: ['Cabin', 'Lobster']
+            }
+        };
+
+        (function() {
+            var wf = document.createElement('script');
+            wf.src = '//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+            wf.type = 'text/javascript';
+            wf.async = 'false';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(wf, s);
+        })();
+    </script>
+
 
 </head>
 
@@ -64,14 +90,6 @@
     
       
       	
-      	<li><a href="/about.html">About</a></li>
-      	
-      
-    
-  
-    
-      
-      	
       	<li><a href="/rss.xml">RSS Feed</a></li>
       	
       
@@ -81,22 +99,6 @@
       
       	
       	<li><a href="/sitemap.txt">Sitemap</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/index.html">Navigate by sight</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/archive.html">Einträge</a></li>
       	
       
     
@@ -120,7 +122,7 @@
     
       
       	
-      	<li><a href="/atom.xml">Atom Feed</a></li>
+      	<li><a href="/archive.html">Einträge</a></li>
       	
       
     
@@ -144,23 +146,31 @@
     
       
       	
+      	<li><a href="/atom.xml">Atom Feed</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/about.html">About</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/index.html">Navigate by sight</a></li>
+      	
+      
+    
+  
+    
+      
+      	
       	<li><a href="/categories/diy/index.html">Category: diy</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/categories/linux/index.html">Category: linux</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/categories/nerdery/index.html">Category: nerdery</a></li>
       	
       
     
@@ -176,7 +186,23 @@
     
       
       	
+      	<li><a href="/categories/nerdery/index.html">Category: nerdery</a></li>
+      	
+      
+    
+  
+    
+      
+      	
       	<li><a href="/categories/javascript/index.html">Category: javascript</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories/linux/index.html">Category: linux</a></li>
       	
       
     
@@ -193,6 +219,14 @@
       
       	
       	<li><a href="/tags/holz/index.html">Tag: holz</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags/stoff/index.html">Tag: stoff</a></li>
       	
       
     
@@ -224,23 +258,47 @@
     
       
       	
+      	<li><a href="/tags/liquid/index.html">Tag: liquid</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags/jekyll/index.html">Tag: jekyll</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags/images/index.html">Tag: images</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags/css3/index.html">Tag: css3</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags/html5/index.html">Tag: html5</a></li>
+      	
+      
+    
+  
+    
+      
+      	
       	<li><a href="/tags/gummiband/index.html">Tag: gummiband</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/tags/linux/index.html">Tag: linux</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/tags/ssh/index.html">Tag: ssh</a></li>
       	
       
     
@@ -272,30 +330,6 @@
     
       
       	
-      	<li><a href="/tags/stoff/index.html">Tag: stoff</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/tags/rahmen/index.html">Tag: rahmen</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/tags/ringe/index.html">Tag: ringe</a></li>
-      	
-      
-    
-  
-    
-      
-      	
       	<li><a href="/tags/blende/index.html">Tag: blende</a></li>
       	
       
@@ -312,47 +346,23 @@
     
       
       	
-      	<li><a href="/tags/css/index.html">Tag: css</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/tags/fonts/index.html">Tag: fonts</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/tags/typhographie/index.html">Tag: typhographie</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/tags/html5/index.html">Tag: html5</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/tags/layout/index.html">Tag: layout</a></li>
-      	
-      
-    
-  
-    
-      
-      	
       	<li><a href="/tags/javascript/index.html">Tag: javascript</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags/otto/index.html">Tag: OTTO</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags/scrollspy/index.html">Tag: scrollspy</a></li>
       	
       
     
@@ -376,7 +386,7 @@
     
       
       	
-      	<li><a href="/tags/gitarre/index.html">Tag: gitarre</a></li>
+      	<li><a href="/tags/rahmen/index.html">Tag: rahmen</a></li>
       	
       
     
@@ -384,7 +394,7 @@
     
       
       	
-      	<li><a href="/tags/greedy-algorithm/index.html">Tag: greedy algorithm</a></li>
+      	<li><a href="/tags/ringe/index.html">Tag: ringe</a></li>
       	
       
     
@@ -392,7 +402,7 @@
     
       
       	
-      	<li><a href="/tags/momo/index.html">Tag: momo</a></li>
+      	<li><a href="/tags/linux/index.html">Tag: linux</a></li>
       	
       
     
@@ -400,23 +410,7 @@
     
       
       	
-      	<li><a href="/tags/scrollspy/index.html">Tag: scrollspy</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/tags/simulated-annealing/index.html">Tag: simulated annealing</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/tags/otto/index.html">Tag: OTTO</a></li>
+      	<li><a href="/tags/ssh/index.html">Tag: ssh</a></li>
       	
       
     
@@ -456,22 +450,6 @@
     
       
       	
-      	<li><a href="/tags/blender/index.html">Tag: blender</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/tags/shapeways/index.html">Tag: shapeways</a></li>
-      	
-      
-    
-  
-    
-      
-      	
       	<li><a href="/tags/graphic/index.html">Tag: graphic</a></li>
       	
       
@@ -488,7 +466,7 @@
     
       
       	
-      	<li><a href="/tags/liquid/index.html">Tag: liquid</a></li>
+      	<li><a href="/tags/blender/index.html">Tag: blender</a></li>
       	
       
     
@@ -496,7 +474,7 @@
     
       
       	
-      	<li><a href="/tags/jekyll/index.html">Tag: jekyll</a></li>
+      	<li><a href="/tags/shapeways/index.html">Tag: shapeways</a></li>
       	
       
     
@@ -504,7 +482,7 @@
     
       
       	
-      	<li><a href="/tags/images/index.html">Tag: images</a></li>
+      	<li><a href="/tags/greedy-algorithm/index.html">Tag: greedy algorithm</a></li>
       	
       
     
@@ -512,7 +490,55 @@
     
       
       	
-      	<li><a href="/tags/css3/index.html">Tag: css3</a></li>
+      	<li><a href="/tags/momo/index.html">Tag: momo</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags/gitarre/index.html">Tag: gitarre</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags/simulated-annealing/index.html">Tag: simulated annealing</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags/css/index.html">Tag: css</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags/layout/index.html">Tag: layout</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags/typhographie/index.html">Tag: typhographie</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags/fonts/index.html">Tag: fonts</a></li>
       	
       
     
@@ -547,21 +573,12 @@
 
 
 
-<script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
-<script>
-    WebFont.load({
-        google: {
-            families: ['Cabin', 'Lobster']
-        }
-    });
-</script>
-
 <!-- Le styles -->
-<link href='/assets/global-f99588eea4b2654ecdb1e7e1e79c01e1.css' rel='stylesheet' type='text/css' />
+<link href='/assets/global-ed742dd8117d0c333fd7d3939f1daa95.css' rel='stylesheet' type='text/css' />
 
 
 
-<script src='/assets/global-701678cb3ca8372c8c983b56977cd65e.js' type='text/javascript'></script>
+<script src='/assets/global-97aa8500d8c40352508fc0fb4aacbea9.js' type='text/javascript'></script>
 
 
 </body>
