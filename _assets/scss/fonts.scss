@@ -1,25 +1,4 @@
 @import "compass/css3";
-@include font-face(
-    "Cabin",
-    inline-font-files(
-        'cabin-webfont.woff', woff,
-        'cabin-webfont.ttf', truetype,
-        'cabin-webfont.svg', svg),
-    'cabin-webfont.eot',
-    normal, // font-weight
-    normal  // font-style
-);
-
-@include font-face(
-    "Lobster",
-    inline-font-files(
-        'lobster-webfont.woff', woff,
-        'lobster-webfont.ttf', truetype,
-        'lobster-webfont.svg', svg),
-    'lobster-webfont.eot',
-    normal, // font-weight
-    normal  // font-style
-);
 
 body, body *, * {
   font-family: 'Cabin';
