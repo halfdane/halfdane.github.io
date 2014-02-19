@@ -1,5 +1,45 @@
 ---
 layout: default
 ---
-{% include JB/setup %}
-{% include themes/twitter/post.html %}
+<a href="/">
+    <h6>Halfdane's </h6>
+    <h4>Canned Nerd: Navigate by sight</h4>
+</a>
+{% include navigation %}
+<div class="pagination">
+    <ul>
+        {% if page.next %}
+        <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}"title="{{ page.next.title }}">&larr; <span class="nextTitle">{{ page.next.title }}</span><span class="nextWord">Nächster</span></a></li>
+        {% endif %}
+        {% if page.previous %}
+        <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}"title="{{ page.previous.title }}"><span class="prevTitle">{{ page.previous.title }}</span><span class="prevWord">Voriger</span> &rarr;</a></li>
+        {% endif %}
+    </ul>
+</div>
+
+<div class="fullpost">
+    <h1>{{ page.title }} {% if page.tagline %}
+        <small>{{page.tagline}}</small>
+        {% endif %}
+    </h1>
+    {% if page.date %} <div class="date">– {{ page.date | date: "%-d %B %Y" }} –</div>{% endif %}
+    <div class="text">
+        {% include series.html %}
+        {{ content }}
+    </div>
+</div>
+
+<div class="pagination">
+    <hr>
+    <ul>
+        {% if page.next %}
+        <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}"title="{{ page.next.title }}">&larr; <span class="nextTitle">{{ page.next.title }}</span><span class="nextWord">Nächster</span></a></li>
+        {% endif %}
+        <li><h6><a href="/about.html">Halfdane's </a></h6><h4><a href="/">Canned Nerd: Navigate by sight</a></h4></li>
+        {% if page.previous %}
+        <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}"title="{{ page.previous.title }}"><span class="prevTitle">{{ page.previous.title }}</span><span class="prevWord">Voriger</span> &rarr;</a></li>
+        {% endif %}
+    </ul>
+    <hr>
+</div>
+{% include JB/comments %}
