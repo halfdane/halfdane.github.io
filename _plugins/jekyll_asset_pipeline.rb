@@ -49,4 +49,15 @@ SASS Error >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
       return YUI::JavaScriptCompressor.new(munge: true).compress(@content)
     end
   end
+
+
+  class JavaScriptTagTemplate < JekyllAssetPipeline::Template
+    def self.filetype
+      '.js'
+    end
+
+    def html
+      "<script src='/#{@path}/#{@filename}' async type='text/javascript'></script>\n"
+    end
+  end
 end
