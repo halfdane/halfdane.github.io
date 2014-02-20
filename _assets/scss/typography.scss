@@ -1,16 +1,3 @@
-@import "compass/typography/text/force-wrap";
-
-/*typography*/
-#{headings()} {
-  text-decoration: none;
-  font-weight: normal;
-}
-
-/*vertical rhythm*/
-@import "compass/typography/vertical_rhythm";
-$base-font-size: 21px;
-$base-line-height: 26px;
-$relative-font-sizing: true;
 @include establish-baseline;
 
 .baseline {
@@ -23,6 +10,13 @@ $relative-font-sizing: true;
   @include adjust-font-size-to($px);
   @include rhythm($top, 0, 0, $bottom, $px);
 }
+
+
+#{headings()} {
+  text-decoration: none;
+  font-weight: normal;
+}
+
 
 h1 {
   @include font(2.5, 0, 0);

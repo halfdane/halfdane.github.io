@@ -1,12 +1,11 @@
-@import "compass/reset";
-@import "fonts";
-@import "colors";
-@import "typography";
-@import "postlist";
+@import "compass/typography/vertical_rhythm";
+
+@import "variables";
+
 @import "figure";
-@import "navi";
 @import "post";
 @import "flipper";
+@import "navi";
 
 
 body {

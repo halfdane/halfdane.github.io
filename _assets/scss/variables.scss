@@ -1,4 +1,8 @@
-@import "compass/utilities/color/contrast";
+$base-font-size: 21px;
+$base-line-height: 26px;
+$relative-font-sizing: true;
+
+
 $white: #fff;
 $black: #000;
 $off_black: #685356;
@@ -28,5 +32,3 @@ $pageheader_line_color: $p_main;
 $col_border: $black;
 
 $postlist_border: $gray;
-
-
