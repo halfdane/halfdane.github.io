@@ -5,8 +5,8 @@
         <description>Canned Nerd - Halfdane</description>
         <link>http://halfdane.github.io</link>
         <link>http://halfdane.github.io</link>
-        <lastBuildDate>2014-02-20T13:18:34+00:00</lastBuildDate>
-        <pubDate>2014-02-20T13:18:34+00:00</pubDate>
+        <lastBuildDate>2014-05-01T13:49:24+00:00</lastBuildDate>
+        <pubDate>2014-05-01T13:49:24+00:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -533,7 +533,7 @@ Dummerweise brauchen verschiedene Browser aber auch noch ganz eigene Fonts, so d
 
 &lt;p&gt;&lt;span class=&quot;btn&quot; onclick=&quot;halfdane.picture_demo.run(); return false;&quot;&gt;Click zum Start&lt;/span&gt;&lt;/p&gt;
 
-&lt;p&gt;Der Code ändert sich vermutlich auch noch ein bisschen, die aktuelle Version ist immer hier: &lt;a href=&quot;/assets/js/picture_display.js&quot;&gt;/assets/js/picture_display.js&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Der Code ändert sich vermutlich auch noch ein bisschen, die aktuelle Version ist immer hier: &lt;a href=&quot;/assets/js/picture_display/picture_display.js&quot;&gt;/assets/js/picture_display/picture_display.js&lt;/a&gt;&lt;/p&gt;
 </description>
                 <link>http://halfdane.github.io/2014/01/18/picture_display</link>
                 <guid>http://halfdane.github.io/2014/01/18/picture_display</guid>
