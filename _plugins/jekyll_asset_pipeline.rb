@@ -57,7 +57,7 @@ SASS Error >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     end
 
     def html
-      "<script src='/#{@path}/#{@filename}' async type='text/javascript'></script>\n"
+      "<script src='/#{@path}/#{@filename}' type='text/javascript'></script>\n"
     end
   end
 end
