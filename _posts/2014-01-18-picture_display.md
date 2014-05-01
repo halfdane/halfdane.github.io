@@ -134,4 +134,4 @@ Klick oder Tastendruck beendet die Demo.
 
 <span class="btn" onclick="halfdane.picture_demo.run(); return false;">Click zum Start</span>
 
-Der Code ändert sich vermutlich auch noch ein bisschen, die aktuelle Version ist immer hier: [/assets/js/picture_display.js](/assets/js/picture_display.js)
+Der Code ändert sich vermutlich auch noch ein bisschen, die aktuelle Version ist immer hier: [/assets/js/picture_display/picture_display.js](/assets/js/picture_display/picture_display.js)
