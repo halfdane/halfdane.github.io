@@ -82,7 +82,7 @@
 - /_assets/js/halfdane.js
 {% endjavascript_asset_tag %}
 {% for resource in page.resources %}
-{% if resource contains 'js' %}<script async src="{{ resource }}" ></script>{% else %}<link href="/assets/css{{ resource }}" rel="stylesheet" type="text/css">{% endif %}
+{% if resource contains 'js' %}<script src="{{ resource }}" ></script>{% else %}<link href="/assets/css{{ resource }}" rel="stylesheet" type="text/css">{% endif %}
 {% endfor %}
 
 {% include JB/analytics %}
