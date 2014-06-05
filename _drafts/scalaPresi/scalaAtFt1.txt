@@ -1,0 +1,33 @@
+Scala @ FT1: the good, the bad and the ugly
+===========================================
+:author:    Tom Vollerthun
+:copyright: Tom Vollerthun 2014
+:backend:   slidy
+:data-uri:
+:icons:
+
+
+The Good
+--------
+Scala bringt Spaß:
+
+* Weiterbildung
+* schöne, mächtige Sprache
+* kompakter Code
+* lesbares Testframework [note to self: Zeige #Code]
+* intensive Diskussionen, enge Zusammenarbeit
+
+The Ugly
+--------
+Scala ist keine Garantie für Glücklichkeit:
+
+* es geht auch _zu_ kompakt [Zeige #Code]
+* +implicits+ sind mit Vorsicht zu genießen [Zeige #Code]
+
+The Bad
+-------
+Scala fällt nicht vom Himmel:
+
+* lange Lernkurve
+* Gewohnheiten führen manchmal zu bösen Überraschungen (mockito)
+* ein oder mehrere Entwickler im Team, die Themen vordenken und Ideen für Implementierung haben
