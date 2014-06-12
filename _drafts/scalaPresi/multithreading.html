@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Multithreading: You're doing it wrong!</title>
+		<title>Multithreading: We're doing it wrong!</title>
 
 		<meta name="description" content="The Java-Api for Multithreading is like assembler">
 		<meta name="author" content="Tom Vollerthun">
@@ -44,7 +44,7 @@
 			<div class="slides">
 
 <section>
-  <h1>Multithreading: You're doing it wrong!</h1>
+  <h1>Multithreading: We're doing it wrong!</h1>
 </section>
 
 <section>
@@ -53,7 +53,7 @@
   <li class="fragment"><code>Runnable</code> bzw. <code>Thread.run()</code> für nebenläufige Prozesse</li>
   <li class="fragment"><code>synchronized</code> für shared state</li>
   <li class="fragment">komplexe Konzepte: critical path, locks/semaphoren/mutexes (counting/reentrant), latches</li>
-  <li class="fragment">erheblich besser als Prozesse zu forken, aber BASIC ist ja auch erheblich besser als Assembler :/</li>
+  <li class="fragment">besser als Prozesse zu forken, aber viel mehr auch nicht</li>
   </ul>
 </section>
 
@@ -77,8 +77,12 @@ if (pool.hasMore()) {
   </section>
   <section>
     <h2>Architektur von Web-Applikationen</h2>
-    <p>#Skizze</p>
-    <p>Alle state- und synch-Probleme werden über die Datenbank geregelt.</p>
+    <img src="./webarchitecture.png" />
+  </section>
+  
+  <section>
+    <h2>Architektur von Web-Applikationen</h2>
+    <img src="./webarchitecture1.png" />
   </section>
   
   <section>
@@ -100,20 +104,21 @@ if (pool.hasMore()) {
   </section>
   <section>
     <h2>Mailboxes und Messages</h2>
+    <img src="./actor.png" />
   </section>
   <section>
-    <h2>#Bild</h2>
-  </section>
-  <section>
-    <h2>receive() und become()</h2>
+    <h2>#Code</h2>
+    <p>receive() und become()</p>
   </section>
   <section>
     <h2>Dies ist keine Race-Condition!</h2>
+    <p>#Code</p>
     <p>Zustand und Übergang</p>
   </section>
   <section>
     <h2>Zustandsübergangsdiagramm</h2>
-    <p>#Diagramm</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/1/13/Statemachine-6.png" />
+    <p><small>(danke, wikimedia)</small></p>
   </section>
   <section>
     <h2>FSM-Aktoren</h2>
