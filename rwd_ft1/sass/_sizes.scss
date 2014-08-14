@@ -1,37 +1,29 @@
 
 // Damit man überhaupt sieht, in welcher Größe wir gerade sind
 .sizeDisplayLOL {
-  .small {
-    display: block;
+  .small, .medium, .large, .extra_large {
+    background-color: lightblue;
   }
-  .medium, .large, .extra_large {
-    display: none;
+  
+  .small {
+    background-color: lightgreen;
   }
 
   @include susy-breakpoint($medium-width, $medium-cols) {
     .medium {
-      display: block;
-    }
-    .small, .large, .extra_large {
-      display: none;
+      background-color: lightgreen;
     }
   }
 
   @include susy-breakpoint($large-width, $large-cols) {
     .large {
-      display: block;
-    }
-    .small, .medium , .extra_large{
-      display: none;
+    background-color: lightgreen;
     }
   }
 
   @include susy-breakpoint($extra-large-width, $extra-large-cols) {
     .extra_large {
-      display: block;
-    }
-    .small, .medium , .large{
-      display: none;
+      background-color: lightgreen;
     }
   }
 }

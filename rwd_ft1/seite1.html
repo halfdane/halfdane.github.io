@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="css/seite.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+</head>
+<body class="rwd_order grid">
+
+
+<div class="sizeDisplayLOL">
+    <div class="small">small</div>
+    <div class="medium">medium</div>
+    <div class="large">large</div>
+    <div class="extra_large">extra_large</div>
+</div>
+<h1>Seite 1</h1>
+
+Je nachdem, ob die Seite klein oder groß ist, verhält der Button sich unterschiedlich.
+
+<div class="smallish">
+  <div>Kleine Devices bekommen die Seite direkt angezeigt</div>
+  <button class="withRedirect" href="seite2.html">Button</button>
+</div>
+
+<div class="largish">
+  <div>Große Devices bekommen einen Teil der Seite in einen Dialog gepackt.</div>
+  <button class="inDialog" href="seite2.html">Button</button>
+</div>
+
+</body>
+
+    <script>
+      $(document).ready(function() {
+            $(".inDialog").on('click', function() {
+              var $link = $(this);
+              var dialogElement = $("<div></div>"); 
+              $.ajax({
+                url: $link.attr('href'),
+                type: 'GET',
+                success: function(data, textStatus, jqXHR) {
+                    dialogElement.html(data);
+                    dialogElement.dialog().dialog('open');
+                }
+              });
+            });
+            
+            $(".withRedirect").on('click', function() {
+              var $link = $(this);
+              window.location = $link.attr('href');
+            });
+        });
+    </script>
+    
+</html>

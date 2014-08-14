@@ -25,41 +25,46 @@
   }
 }
 
-/* line 4, ../sass/sizes.scss */
+/* line 4, ../sass/_sizes.scss */
 .sizeDisplayLOL .small, .sizeDisplayLOL .medium, .sizeDisplayLOL .large, .sizeDisplayLOL .extra_large {
   background-color: lightblue;
 }
-/* line 8, ../sass/sizes.scss */
+/* line 8, ../sass/_sizes.scss */
 .sizeDisplayLOL .small {
   background-color: lightgreen;
 }
 @media (min-width: 28em) {
-  /* line 13, ../sass/sizes.scss */
+  /* line 13, ../sass/_sizes.scss */
   .sizeDisplayLOL .medium {
     background-color: lightgreen;
   }
 }
 @media (min-width: 48em) {
-  /* line 19, ../sass/sizes.scss */
+  /* line 19, ../sass/_sizes.scss */
   .sizeDisplayLOL .large {
     background-color: lightgreen;
   }
 }
 @media (min-width: 62em) {
-  /* line 25, ../sass/sizes.scss */
+  /* line 25, ../sass/_sizes.scss */
   .sizeDisplayLOL .extra_large {
     background-color: lightgreen;
   }
 }
 
-/* line 12, ../sass/checkout.scss */
-.rwd_order.checkout .paymentType {
-  border-bottom: solid 1px black;
-  position: relative;
+/* line 10, ../sass/seite.scss */
+.largish {
+  display: none;
 }
-/* line 15, ../sass/checkout.scss */
-.rwd_order.checkout .paymentType .next {
-  position: absolute;
-  right: 0px;
-  top: 0px;
+
+@media (min-width: 48em) {
+  /* line 15, ../sass/seite.scss */
+  .largish {
+    display: block;
+  }
+
+  /* line 18, ../sass/seite.scss */
+  .smallish {
+    display: none;
+  }
 }
