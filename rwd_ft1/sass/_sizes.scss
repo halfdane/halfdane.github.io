@@ -1,0 +1,37 @@
+
+// Damit man überhaupt sieht, in welcher Größe wir gerade sind
+.sizeDisplayLOL {
+  .small {
+    display: block;
+  }
+  .medium, .large, .extra_large {
+    display: none;
+  }
+
+  @include susy-breakpoint($medium-width, $medium-cols) {
+    .medium {
+      display: block;
+    }
+    .small, .large, .extra_large {
+      display: none;
+    }
+  }
+
+  @include susy-breakpoint($large-width, $large-cols) {
+    .large {
+      display: block;
+    }
+    .small, .medium , .extra_large{
+      display: none;
+    }
+  }
+
+  @include susy-breakpoint($extra-large-width, $extra-large-cols) {
+    .extra_large {
+      display: block;
+    }
+    .small, .medium , .large{
+      display: none;
+    }
+  }
+}
