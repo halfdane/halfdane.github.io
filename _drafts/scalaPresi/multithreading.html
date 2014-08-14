@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Multithreading: We're doing it wrong!</title>
+		<title>Multithreading done right</title>
 
 		<meta name="description" content="The Java-Api for Multithreading is like assembler">
 		<meta name="author" content="Tom Vollerthun">
@@ -44,15 +44,15 @@
 			<div class="slides">
 
 <section>
-  <h1>Multithreading: We're doing it wrong!</h1>
+  <h1>Multithreading done right</h1>
 </section>
 
 <section>
-  <h2>Java-Threads sind wie GOTO-Statements</h2>
+  <h2>Java-Threads sind wie Assembler</h2>
   <ul>
   <li class="fragment"><code>Runnable</code> bzw. <code>Thread.run()</code> für nebenläufige Prozesse</li>
   <li class="fragment"><code>synchronized</code> für shared state</li>
-  <li class="fragment">komplexe Konzepte: critical path, locks/semaphoren/mutexes (counting/reentrant), latches</li>
+  <li class="fragment">komplexe Konzepte: locks/semaphoren/mutexes (counting/reentrant), latches um den critical path zu schützen</li>
   <li class="fragment">besser als Prozesse zu forken, aber viel mehr auch nicht</li>
   </ul>
 </section>
