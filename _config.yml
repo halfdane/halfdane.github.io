@@ -3,7 +3,7 @@
 permalink: /:year/:month/:day/:title
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "vendor"]
-pygments: true
+highlighter: pygments
 
 development_mode : false
 
@@ -112,12 +112,11 @@ markdown: redcarpet-pygments
 redcarpet: 
   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data", "strikethrough" ]
 
-asset_pipeline:
-  bundle : true
-  compress : true
-  output_path : assets
-  display_path : nil
-  gzip : false
+assets:
+  js_compressor:  yui
+  css_compress : sass
+  sources:
+    - _assets
 
 mini_magick:
   thumbnail:

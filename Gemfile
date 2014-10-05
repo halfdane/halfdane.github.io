@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 gem 'rake'
-gem 'github-pages'
+#gem 'github-pages'
 gem "sequel"
-gem 'compass'
 gem 'sass'
-gem 'jekyll-asset-pipeline'
+gem 'compass'
+gem 'jekyll-assets'
 gem 'mini_magick'
 gem 'yui-compressor'
 gem 'rainpress'
