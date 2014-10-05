@@ -4,13 +4,44 @@
  <title>Canned Nerd</title>
  <link href="http://halfdane.github.io/" rel="self"/>
  <link href="http://halfdane.github.io"/>
- <updated>2014-05-01T13:49:24+00:00</updated>
+ <updated>2014-10-05T17:08:57+00:00</updated>
  <id>http://halfdane.github.io</id>
  <author>
    <name>Halfdane</name>
    <email>halfdane@gmx.net</email>
  </author>
 
+ 
+ <entry>
+   <title>Roberto Bolaño: die wilden Detektive</title>
+   <link href="http://halfdane.github.io/2014/10/05/bolano_detektive"/>
+   <updated>2014-10-05T00:00:00+00:00</updated>
+   <id>http://halfdane.github.io/2014/10/05/bolano_detektive</id>
+   <content type="html">&lt;p&gt;Wie man an der Lücke zum letzten Eintrag erahnen kann, hat mein Interesse an kleinen Quatschprojekten etwas nachgelassen. Dafür lese ich jetzt wieder, und das ist ja auch nichts schlechtes. &lt;/p&gt;
+
+&lt;p&gt;Weil es mich ärgert, dass ich häufig zwar weiß, dass ich ein bestimmtes Buch gelesen habe, mich aber ums verrecken an nichts erinnern kann -- nicht an Inhalt, Stil oder auch nur ob es mir gefallen hat -- habe ich nun beschlossen, einfach kurze Rezensionen der Bücher zu schreiben, die ich gelesen habe. 
+Und weils so schön ist, nehme ich Filme gleich mit dazu :-) &lt;/p&gt;
+
+&lt;p&gt;Um nicht völlig aus der Übung zu kommen (und natürlich auch, um mal wieder das Erfolgserlebnis zu haben) werde ich das dann hier als Eintrag veröffentlichen - ohne Gewähr, versteht sich: Spoiler, Buch nicht verstanden, andere Meinung, alles ist möglich. Wenn dir etwas nicht gefällt, nutze bitte die Gelegenheit, über Kommentare Kontakt zu mir aufzunehmen, denn an anregenden Diskussionen bin ich immer interessiert! &lt;/p&gt;
+
+&lt;p&gt;Und heute also das erste Buch, zu dem ich etwas geschrieben habe, seit ich die Schule verlassen habe - ein Geschenk von R. und S. (S.s Lieblingsautor) und ich habe ihr folgendes in einer Mail geschrieben:&lt;/p&gt;
+
+&lt;h2 id=&quot;roberto-bolaño:-die-wilden-detektive&quot;&gt;Roberto Bolaño: die wilden Detektive&lt;/h2&gt;
+
+&lt;p&gt;Alter, was für ein Ritt :-) 
+Einfach phantastisch, und unfassbar nervig, fast nicht erträglich! &lt;/p&gt;
+
+&lt;p&gt;Phantastisch, weil er fünfzig oder mehr Personen einführt, die alle realistisch und überhaupt nicht strichmännchenhaft sind. Weil die surrealistischen Dichter mehr oder weniger wirre Sachen von sich geben und passend dazu das ganze Buch auch in diesem Stil geschrieben ist. Weil er fast ein komplettes Jahrhundert mit seinem Spannungsbogen abdeckt und dabei permanent vor und zurück springt, dass mir Hören und Sehen verging. &lt;/p&gt;
+
+&lt;p&gt;Nervig, weil mit den fünfzig Personen auch fünfzig einzelne Geschichten erzählt werden, oder zumindest begonnen werden: größtenteils werden sie nur angerissen, sind aber jedesmal so interessant, dass es mich verrückt macht, dass er die dann einfach fallen lässt und mit dem nächsten Handlungsstrang weitermacht. Abgesehen von einem teils wirren, surrealistischen Schreibstil haben mich die Sprünge zwischen den handelnden Personen und in der Zeit vermutlich am stärksten aus dem Konzept gebracht. &lt;/p&gt;
+
+&lt;p&gt;Das mag ich eigentlich sehr gerne, und deswegen konnte ich mich auch noch nicht entscheiden, ob ich das Buch grandios finden oder es für völlig überkandidelten, pseudointellektuellen Quatsch halten soll. Obwohl, intellektuell (oder sogar pseudointellektuell) ist es ja eigentlich praktisch gar nicht, sondern sehr, sehr nah am Leben und Leiden der Protagonisten. 
+Vielleicht ist das Buch ja auch beides und ich muss nur lernen den Widerspruch auszuhalten... 
+Egal wie das Urteil letztlich sein wird: zumindest hat mich schon lange kein Buch mehr so auf die Palme gebracht, und allein dafür war es lesenswert :-D &lt;/p&gt;
+
+&lt;p&gt;Nachtrag, Monate später: das Buch ist definitiv grandios.&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Pointillismus in Javascript</title>
@@ -37,7 +68,7 @@ Obwohl die Implementierung sicherlich ziemlich reizvoll wäre, bin ich letztlich
 &lt;p&gt;Ich habe mich für eine dritte Variante entschieden, die zwar nicht ganz so gute Ergebnisse liefert wie die Gitternetz-Version, dafür aber schneller ist und nicht annähernd die algorithmische Komplexität hat.
 Soweit ich weiß, gibt es bislang noch keine Veröffentlichung dieser Variante, also handelt es sich was mich angeht um meine eigene Erfindung (yay \o/,  mein erster eigener Algorithmus - vielleicht nenne ich ihn Hinnerk).&lt;/p&gt;
 
-&lt;h2 id=&quot;toc_0&quot;&gt;Beschreibung&lt;/h2&gt;
+&lt;h2 id=&quot;beschreibung&quot;&gt;Beschreibung&lt;/h2&gt;
 
 &lt;p&gt;Eine beliebige Menge von Punkten wird zufällig verteilt, wobei dunklere Bereiche des Bildes bevorzugt werden. Doppelte Punkte werden durch die &lt;code class=&quot;inline-code&quot;&gt;pointsMap&lt;/code&gt; verhindert:&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&lt;a name=&quot;line-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;luminosity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;imgData&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -113,7 +144,7 @@ Damit werden Punkte mit einer gewissen Wahrscheinlichkeit in einen dunkleren Ber
 &lt;a name=&quot;line-23&quot;&gt;&lt;/a&gt;    &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
 &lt;a name=&quot;line-24&quot;&gt;&lt;/a&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id=&quot;toc_1&quot;&gt;Ergebnis&lt;/h2&gt;
+&lt;h2 id=&quot;ergebnis&quot;&gt;Ergebnis&lt;/h2&gt;
 
 &lt;p&gt;Das Ergebnis kann sich sehen lassen und die Implementierung ist nicht annähernd so komplex wie die beiden anderen :-)
 Richtig gelungen sind die Bilder dann, wenn die Größe der Punkte abhängig von der Dunkelheit des Ausgangsbildes gewählt wird:&lt;/p&gt;
@@ -185,13 +216,13 @@ Wie immer hier eine Live-Demo:
 &lt;p&gt;Für das TSP werden eine Reihe von Punkten (z.B. Städte auf einer Landkarte, können aber auch dreidimensional sein) sortiert. Aber nicht einfach irgendwie, sondern so dass beim Durchgehen der Punkte von einem zum nächsten die zurückgelegte Strecke möglichst kurz ist. Wie ein Handelsreisender, der Benzin sparen möchte, daher der Name. Das Problem ist für die Informatik interessant, weil es überraschend schwer ist, es optimal zu lösen. Ein Computer muss bei jedem einzelnen Punkt nämlich erstmal alle anderen Punkte prüfen und schauen, wo der neue an besten hinpasst. Bei vielen Punkten kann die Rechenzeit für eine optimale Lösung mehr Zeit in Anspruch nehmen, als z.B. das Universum existiert. Die Klasse der Probleme, zu der das TSP gehört wird von Profis daher auch &amp;quot;die echt richtig schweren Probleme&amp;quot; genannt. Allerdings ist das Problem nicht nur rein akademisch, sondern unter anderem für Logistik-Unternehmen relevant, also für den Post- oder Hermesboten oder für Containerschiffe. Die benutzen für ihre Tourenoptimierung dann keine optimalen Lösungen (keine Zeit), sondern Annäherungen, die &amp;quot;gut genug&amp;quot; sind. Und da gibt es einen ganzen Sack von Strategien, die ausgesprochen spannend sind - natürlich für eine ganz persönliche Definition von &amp;quot;spannend&amp;quot; :-D&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h2 id=&quot;toc_0&quot;&gt;Gieriger Beppo&lt;/h2&gt;
+&lt;h2 id=&quot;gieriger-beppo&quot;&gt;Gieriger Beppo&lt;/h2&gt;
 
 &lt;p&gt;Ein Greedy (gieriger) Algorithmus versucht erst gar nicht so clever zu sein wie z.B. Simulated Annealing oder evolutionäre Strategien. Man geht den Problemraum einfach Schritt für Schritt durch und wählt immer nur den gerade für den aktuellen Punkt besten nächsten Schritt. Dabei schaut man sich nicht um oder versucht einen Überblick übers große Ganze zu bekommen, sondern bewegt sich wie &lt;a href=&quot;http://de.wikipedia.org/wiki/Momo_%28Roman%29#Personen&quot;&gt;Beppo Straßenkehrer in Momo&lt;/a&gt; Besenstrich um Besenstrich vorwärts. Am Ende ist die ganze Straße gefegt und man hat sich nicht mal angestrengt.&lt;/p&gt;
 
 &lt;p&gt;Es ist offensichtlich, dass man sich auf diese Weise höchstens eine gerade Straße entlang bewegen kann, während man sich in einem Labyrinth wie dem TSP (ein Gewirr von Städten und Straßen) leicht verzettelt, aber so lange Beppo irgendwie durchkommt ist ihm das eigentlich egal.&lt;/p&gt;
 
-&lt;h2 id=&quot;toc_1&quot;&gt;Beppo on the road&lt;/h2&gt;
+&lt;h2 id=&quot;beppo-on-the-road&quot;&gt;Beppo on the road&lt;/h2&gt;
 
 &lt;p&gt;Beim TSP fängt Beppo mit einer beliebigen Stadt an und wählt dann eine nächstgelegene, die noch nicht besucht wurde. Von da aus nimmt er dann wieder die nächstgelegene, unbesuchte Stadt und so weiter. Zum Glück kann er mit dieser Strategie vielleicht nicht die beste (oder auch nur eine gute) Lösung finden, aber immerhin gibt&amp;#39;s am Ende überhaupt eine Tour. Und zwar schnell. &lt;/p&gt;
 
@@ -199,7 +230,7 @@ Wie immer hier eine Live-Demo:
 
 &lt;p&gt;Und soo schnell war&amp;#39;s jetzt echt auch nicht. &lt;/p&gt;
 
-&lt;h2 id=&quot;toc_2&quot;&gt;Die Paten&lt;/h2&gt;
+&lt;h2 id=&quot;die-paten&quot;&gt;Die Paten&lt;/h2&gt;
 
 &lt;p&gt;The Godfathers of TSP-Optimierung sind vermutlich Lin und Kernighan, die einen nach ihnen benannten Algorithmus entworfen haben um eine nicht so gute Lösung in eine bessere Lösung zu überführen. Völlig unverständlich ist das natürlich auch bei &lt;a href=&quot;http://de.wikipedia.org/wiki/Kernighan-Lin-Algorithmus&quot;&gt;Wikipedia&lt;/a&gt; nachlesbar, aber eigentlich werden nur die Städte der Tour immer paarweise vertauscht. Dabei wird jedesmal geschaut, ob&amp;#39;s besser geworden ist. Variationen davon, die auch immer eigene Namen haben, vertauschen drei oder mehr Strecken, aber ich hab&amp;#39;s mir einfach gemacht:&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&lt;a name=&quot;line-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;tour&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;tourSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -226,7 +257,7 @@ Wie immer hier eine Live-Demo:
 
 &lt;p&gt;Glück gehabt, mir ist noch etwas eingefallen. Das ist zwar etwas unkonventionell (lies: ich habe während des Studiums nichts davon gehört), aber das muss ja nichts heißen. Mein Beppo braucht vor allem so viel Zeit, weil er in jeder neuen Stadt erstmal die Entfernung zu allen verbleibenden Städten berechnen muss. Ein Computer ist halt doch kein Mensch wie Beppo, der auf einen Blick sieht, welches die nächsten Städte sind. Es würde helfen, wenn er nicht immer alle Städte begutachten müsste, sondern nur ein paar. &lt;/p&gt;
 
-&lt;h2 id=&quot;toc_3&quot;&gt;Beppo meets Delaunay&lt;/h2&gt;
+&lt;h2 id=&quot;beppo-meets-delaunay&quot;&gt;Beppo meets Delaunay&lt;/h2&gt;
 
 &lt;p&gt;Für meine Diplomarbeit habe ich mich recht intensiv mit Dreicks- und Vierecksgittern beschäftigt, und auch wenn ich das meiste schon vergessen habe, kann ich mich noch daran erinnern, dass die Delaunay-Triangulierung immer drei Punkte zusammenfasst, sodass im entstehenden Dreieck keine weiteren Punkte mehr sind. Die Punkte jedes Dreiecks sind einander also am nächsten. Und das Beste daran ist, dass man diese Triangulierung gut (schnell) berechnen kann. &lt;/p&gt;
 
@@ -315,7 +346,7 @@ Wie immer hier eine Live-Demo:
 &lt;a name=&quot;line-42&quot;&gt;&lt;/a&gt;
 &lt;a name=&quot;line-43&quot;&gt;&lt;/a&gt;&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;tourPoints&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id=&quot;toc_4&quot;&gt;Beppo ist der beste&lt;/h2&gt;
+&lt;h2 id=&quot;beppo-ist-der-beste&quot;&gt;Beppo ist der beste&lt;/h2&gt;
 
 &lt;p&gt;Auch tausend und mehr Städte bringen ihn nicht zum Schwitzen und das Ergebnis ist gut genug für meine Zwecke. Diesen Beppo ziehe ich jederzeit so aufgeblasenen Gesellen wie dem Annealing oder dem Evolutionary vor. &lt;/p&gt;
 
@@ -549,7 +580,7 @@ Dummerweise brauchen verschiedene Browser aber auch noch ganz eigene Fonts, so d
    <id>http://halfdane.github.io/2014/01/14/buddelfinal</id>
    <content type="html">&lt;p&gt;Genug experimentiert, jetzt geht es los. Mit dem Prototypen habe ich gelernt, wie ich die Mastscharniere, die Segel, den Rumpf und die Takelage haben möchte. Nun geht&amp;#39;s darum, die gemachten Fehler und gewonnenen Erkenntnisse in ein Buddelschiff zu übertragen das rockt!&lt;/p&gt;
 
-&lt;h2 id=&quot;toc_0&quot;&gt;Pläne&lt;/h2&gt;
+&lt;h2 id=&quot;pläne&quot;&gt;Pläne&lt;/h2&gt;
 
 &lt;p&gt;Den Rumpf nicht aus Balsaholz zu machen hatte ich mich ja schon recht früh entschieden, auch dass er so groß sein sollte, das er nur in mehreren Teilen durch den Flaschenhals kommt. Zusammen mit der Flaschenform, auf die ich ja nun keinen Einfluss hatte, und der Entscheidung, die Rickmer Rickmers zu bauen ist das alles mehr als genug, um ein paar Pläne zu zeichnen:&lt;/p&gt;
 
@@ -572,7 +603,7 @@ Also eher friedliche Südsee als wilder Kattegat.&lt;/p&gt;
 &lt;/figcaption&gt;&lt;/figure&gt;
 &lt;/div&gt;&lt;button class='previous'&gt;&lt;/button&gt;&lt;button class='next'&gt;&lt;/button&gt;&lt;div class='dots'&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h2 id=&quot;toc_1&quot;&gt;Kiellegung und Rumpf&lt;/h2&gt;
+&lt;h2 id=&quot;kiellegung-und-rumpf&quot;&gt;Kiellegung und Rumpf&lt;/h2&gt;
 
 &lt;p&gt;Den Rumpf habe ich aus zwei nebeneinander gelegten Vierkanthölzern ausgesägt, und noch einen Kiel darunter befestigt. Damit die Teile in der Flasche richtig zusammenflutschen, sind sie mit Holzdübel und Loch versehen. Der Schiffsrumpf lässt sich mit einer Laubsäge eigentlich nur dann gut formen, wenn die Vierkanthölzer wie ein Stück zusammenhägen, sonst verschieben die Teile sich gegeneinander und passen am Ende überhaupt nicht zusammen. Ich habe sie mit doppelseitigem Klebeband verklebt.&lt;/p&gt;
 
@@ -613,7 +644,7 @@ Also eher friedliche Südsee als wilder Kattegat.&lt;/p&gt;
 &lt;/figcaption&gt;&lt;/figure&gt;
 &lt;/div&gt;&lt;button class='previous'&gt;&lt;/button&gt;&lt;button class='next'&gt;&lt;/button&gt;&lt;div class='dots'&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h2 id=&quot;toc_2&quot;&gt;Masten, Rahen und Gaffel&lt;/h2&gt;
+&lt;h2 id=&quot;masten,-rahen-und-gaffel&quot;&gt;Masten, Rahen und Gaffel&lt;/h2&gt;
 
 &lt;p&gt;Es sind diesmal wesentlich mehr Masten als beim Prototypen, und schon da haben sie die Hauptarbeit verursacht. Aber bangemachen gilt nicht: die Zahnstocher und Schaschlickspieße maßstabsgerecht (naja, frei nach Schnauze) zugeschnitten und weiß lackiert - B. fand es angemessen, dass zumindest eines seiner Playmobil-Männchen hilft. Ja, und in Anbetracht der fürchterlichen Menge von Rahen auf der Rickmers fiel mit die Entscheidung leicht, ein bisschen zu schummeln und keine sechs Segel an jeden Mast zu hängen sondern höchstens vier, das erleichtert die Arbeit weil mehr Platz ist und es sieht auch nicht so pisselig klitzeklein aus.&lt;/p&gt;
 
@@ -630,7 +661,7 @@ Also eher friedliche Südsee als wilder Kattegat.&lt;/p&gt;
 &lt;/figcaption&gt;&lt;/figure&gt;
 &lt;/div&gt;&lt;button class='previous'&gt;&lt;/button&gt;&lt;button class='next'&gt;&lt;/button&gt;&lt;div class='dots'&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h2 id=&quot;toc_3&quot;&gt;Segel und Takelung&lt;/h2&gt;
+&lt;h2 id=&quot;segel-und-takelung&quot;&gt;Segel und Takelung&lt;/h2&gt;
 
 &lt;p&gt;Die Segel waren ja schon beim Prototypen ganz gut, nur etwas zu kurz. Diesmal habe ich also etwas mehr Luft einkalkuliert und sie auch nicht ganz so stark gebogen.
 Außerdem ist beim Prototypen schön zu sehen, dass die Segel links und rechts außen total bescheuert wirken, wenn da nicht auch noch ein Faden entlangläuft und es nach hinten zieht. Die Breite der Segel habe ich bei diesem Durchgang also erst nach dem Trocknen zugeschnitten, damit dort in Ruhe ein Faden platziert und verklebt werden kann.&lt;/p&gt;
@@ -654,7 +685,7 @@ Außerdem ist beim Prototypen schön zu sehen, dass die Segel links und rechts a
 &lt;/figcaption&gt;&lt;/figure&gt;
 &lt;/div&gt;&lt;button class='previous'&gt;&lt;/button&gt;&lt;button class='next'&gt;&lt;/button&gt;&lt;div class='dots'&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h2 id=&quot;toc_4&quot;&gt;In der Werft&lt;/h2&gt;
+&lt;h2 id=&quot;in-der-werft&quot;&gt;In der Werft&lt;/h2&gt;
 
 &lt;p&gt;Die Masten werden komplett mit allen Segeln und Tauen zusammengesetzt und verklebt, bevor sie mit einem Stück Draht (Telefonlitze) am Oberdeck befestigt wird.&lt;/p&gt;
 
@@ -683,7 +714,7 @@ Außerdem ist beim Prototypen schön zu sehen, dass die Segel links und rechts a
 &lt;/figcaption&gt;&lt;/figure&gt;
 &lt;/div&gt;&lt;button class='previous'&gt;&lt;/button&gt;&lt;button class='next'&gt;&lt;/button&gt;&lt;div class='dots'&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h2 id=&quot;toc_5&quot;&gt;Stapellauf&lt;/h2&gt;
+&lt;h2 id=&quot;stapellauf&quot;&gt;Stapellauf&lt;/h2&gt;
 
 &lt;p&gt;Jetzt kommt der Augenblick &lt;del&gt;in dem der Elefant das Wasser lässt&lt;/del&gt; der Wahrheit: durch diese hohle Gasse muss es passen. Und was nicht passt wird passend gemacht, denn bangemachen gilt nicht und so jung kommen wir nicht mehr zusammen. Egal, einen Heiermann ins Phrasenschwein und ab dafür.&lt;/p&gt;
 
@@ -768,7 +799,7 @@ Außerdem ist beim Prototypen schön zu sehen, dass die Segel links und rechts a
 &lt;/figcaption&gt;&lt;/figure&gt;
 &lt;/div&gt;&lt;button class='previous'&gt;&lt;/button&gt;&lt;button class='next'&gt;&lt;/button&gt;&lt;div class='dots'&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h2 id=&quot;toc_6&quot;&gt;Wasser&lt;/h2&gt;
+&lt;h2 id=&quot;wasser&quot;&gt;Wasser&lt;/h2&gt;
 
 &lt;p&gt;Traditionell wird vom Rumpf eines Buddelschiffs nur die obere Hälfte benutzt, und auf blaue Knete oder Fensterkitt gedrückt. Das soll dann das Wasser darstellen. Mir schwebt für den Rumpf allerdings etwas anderes vor, deswegen besteht die Konstruktion ja auch aus drei Teilen plus Oberdeck. Ich möchte gerne das ganze Schiff sehen, und zwar nicht wie im Trockendock, sondern auf großer Fahrt, zwecks diesen Behufes sind ja auch die Segel schon gebläht. 
 Deswegen muss das Wasser durchsichtig sein. Ist zwar nicht besonders traditionell, aber das ist dann halt so. 
@@ -807,7 +838,7 @@ Eigentlich wollte ich Epoxy (Gießharz) mit Tusche etwas abtönen und die Oberfl
 &lt;/figcaption&gt;&lt;/figure&gt;
 &lt;/div&gt;&lt;button class='previous'&gt;&lt;/button&gt;&lt;button class='next'&gt;&lt;/button&gt;&lt;div class='dots'&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h2 id=&quot;toc_7&quot;&gt;Korken, Ständer und Wandhalterung&lt;/h2&gt;
+&lt;h2 id=&quot;korken,-ständer-und-wandhalterung&quot;&gt;Korken, Ständer und Wandhalterung&lt;/h2&gt;
 
 &lt;p&gt;Auch wenn ich stolz auf das Schiff bin und es recht gelungen finde, möchte ich es eigentlich nicht so gerne im Regal herumstehen haben. Da nimmt es nur Platz weg, verstaubt und fällt runter. 
 Eine Wandhalterung, die das problemlose Auf- und Abhängen der Flasche erlaubt, sowie ein Kragen für den Flaschenhals, damit sie nicht umkippt, gehören auf jeden Fall noch gemacht. &lt;/p&gt;
@@ -845,7 +876,7 @@ Eine Wandhalterung, die das problemlose Auf- und Abhängen der Flasche erlaubt, 
 &lt;/figcaption&gt;&lt;/figure&gt;
 &lt;/div&gt;&lt;button class='previous'&gt;&lt;/button&gt;&lt;button class='next'&gt;&lt;/button&gt;&lt;div class='dots'&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h2 id=&quot;toc_8&quot;&gt;Fazit(Quellen), Fehler und Fragen&lt;/h2&gt;
+&lt;h2 id=&quot;fazit(quellen),-fehler-und-fragen&quot;&gt;Fazit(Quellen), Fehler und Fragen&lt;/h2&gt;
 
 &lt;figure class=&quot;cap-left p30&quot;&gt;&lt;a href=&quot;/assets/img/buddel_f.jpg&quot; title=&quot;&lt;p&gt;The deed is done. &lt;/p&gt;
 &quot; class=&quot;lightbox&quot;&gt;&lt;img src=&quot;/assets/img/loader.gif&quot; data-src=&quot;/assets/img/normal/buddel_f.jpg&quot; alt=&quot;Done&quot;&gt;&lt;/a&gt;&lt;figcaption&gt;&lt;p&gt;The deed is done. &lt;/p&gt;

@@ -37,8 +37,7 @@
         };
     </script>
     <!-- Le styles -->
-    <link href='/assets/global-f543fae9375fd05e172d43c99b1aa94c.css' rel='stylesheet' type='text/css' />
-
+    <link rel="stylesheet" href="/assets/scss/abovefold-f58bd9ed9c8ee48236f81f47bdeef0b2.css">
     <script src="//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js" async></script>
 </head>
 
@@ -140,6 +139,8 @@
     
         
     
+        
+    
 
     
     <div class="seriesNote">
@@ -203,6 +204,8 @@
             
             
             
+            
+            
         </ul>
     </div>
     
@@ -218,13 +221,13 @@
 <p>Für das TSP werden eine Reihe von Punkten (z.B. Städte auf einer Landkarte, können aber auch dreidimensional sein) sortiert. Aber nicht einfach irgendwie, sondern so dass beim Durchgehen der Punkte von einem zum nächsten die zurückgelegte Strecke möglichst kurz ist. Wie ein Handelsreisender, der Benzin sparen möchte, daher der Name. Das Problem ist für die Informatik interessant, weil es überraschend schwer ist, es optimal zu lösen. Ein Computer muss bei jedem einzelnen Punkt nämlich erstmal alle anderen Punkte prüfen und schauen, wo der neue an besten hinpasst. Bei vielen Punkten kann die Rechenzeit für eine optimale Lösung mehr Zeit in Anspruch nehmen, als z.B. das Universum existiert. Die Klasse der Probleme, zu der das TSP gehört wird von Profis daher auch &quot;die echt richtig schweren Probleme&quot; genannt. Allerdings ist das Problem nicht nur rein akademisch, sondern unter anderem für Logistik-Unternehmen relevant, also für den Post- oder Hermesboten oder für Containerschiffe. Die benutzen für ihre Tourenoptimierung dann keine optimalen Lösungen (keine Zeit), sondern Annäherungen, die &quot;gut genug&quot; sind. Und da gibt es einen ganzen Sack von Strategien, die ausgesprochen spannend sind - natürlich für eine ganz persönliche Definition von &quot;spannend&quot; :-D</p>
 </blockquote>
 
-<h2 id="toc_0">Gieriger Beppo</h2>
+<h2 id="gieriger-beppo">Gieriger Beppo</h2>
 
 <p>Ein Greedy (gieriger) Algorithmus versucht erst gar nicht so clever zu sein wie z.B. Simulated Annealing oder evolutionäre Strategien. Man geht den Problemraum einfach Schritt für Schritt durch und wählt immer nur den gerade für den aktuellen Punkt besten nächsten Schritt. Dabei schaut man sich nicht um oder versucht einen Überblick übers große Ganze zu bekommen, sondern bewegt sich wie <a href="http://de.wikipedia.org/wiki/Momo_%28Roman%29#Personen">Beppo Straßenkehrer in Momo</a> Besenstrich um Besenstrich vorwärts. Am Ende ist die ganze Straße gefegt und man hat sich nicht mal angestrengt.</p>
 
 <p>Es ist offensichtlich, dass man sich auf diese Weise höchstens eine gerade Straße entlang bewegen kann, während man sich in einem Labyrinth wie dem TSP (ein Gewirr von Städten und Straßen) leicht verzettelt, aber so lange Beppo irgendwie durchkommt ist ihm das eigentlich egal.</p>
 
-<h2 id="toc_1">Beppo on the road</h2>
+<h2 id="beppo-on-the-road">Beppo on the road</h2>
 
 <p>Beim TSP fängt Beppo mit einer beliebigen Stadt an und wählt dann eine nächstgelegene, die noch nicht besucht wurde. Von da aus nimmt er dann wieder die nächstgelegene, unbesuchte Stadt und so weiter. Zum Glück kann er mit dieser Strategie vielleicht nicht die beste (oder auch nur eine gute) Lösung finden, aber immerhin gibt&#39;s am Ende überhaupt eine Tour. Und zwar schnell. </p>
 
@@ -232,7 +235,7 @@
 
 <p>Und soo schnell war&#39;s jetzt echt auch nicht. </p>
 
-<h2 id="toc_2">Die Paten</h2>
+<h2 id="die-paten">Die Paten</h2>
 
 <p>The Godfathers of TSP-Optimierung sind vermutlich Lin und Kernighan, die einen nach ihnen benannten Algorithmus entworfen haben um eine nicht so gute Lösung in eine bessere Lösung zu überführen. Völlig unverständlich ist das natürlich auch bei <a href="http://de.wikipedia.org/wiki/Kernighan-Lin-Algorithmus">Wikipedia</a> nachlesbar, aber eigentlich werden nur die Städte der Tour immer paarweise vertauscht. Dabei wird jedesmal geschaut, ob&#39;s besser geworden ist. Variationen davon, die auch immer eigene Namen haben, vertauschen drei oder mehr Strecken, aber ich hab&#39;s mir einfach gemacht:</p>
 <div class="highlight"><pre><code class="javascript"><a name="line-1"></a><span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">tour</span><span class="p">.</span><span class="nx">tourSize</span><span class="p">();</span> <span class="nx">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
@@ -259,7 +262,7 @@
 
 <p>Glück gehabt, mir ist noch etwas eingefallen. Das ist zwar etwas unkonventionell (lies: ich habe während des Studiums nichts davon gehört), aber das muss ja nichts heißen. Mein Beppo braucht vor allem so viel Zeit, weil er in jeder neuen Stadt erstmal die Entfernung zu allen verbleibenden Städten berechnen muss. Ein Computer ist halt doch kein Mensch wie Beppo, der auf einen Blick sieht, welches die nächsten Städte sind. Es würde helfen, wenn er nicht immer alle Städte begutachten müsste, sondern nur ein paar. </p>
 
-<h2 id="toc_3">Beppo meets Delaunay</h2>
+<h2 id="beppo-meets-delaunay">Beppo meets Delaunay</h2>
 
 <p>Für meine Diplomarbeit habe ich mich recht intensiv mit Dreicks- und Vierecksgittern beschäftigt, und auch wenn ich das meiste schon vergessen habe, kann ich mich noch daran erinnern, dass die Delaunay-Triangulierung immer drei Punkte zusammenfasst, sodass im entstehenden Dreieck keine weiteren Punkte mehr sind. Die Punkte jedes Dreiecks sind einander also am nächsten. Und das Beste daran ist, dass man diese Triangulierung gut (schnell) berechnen kann. </p>
 
@@ -348,7 +351,7 @@
 <a name="line-42"></a>
 <a name="line-43"></a><span class="k">return</span> <span class="nx">tourPoints</span><span class="p">;</span>
 </code></pre></div>
-<h2 id="toc_4">Beppo ist der beste</h2>
+<h2 id="beppo-ist-der-beste">Beppo ist der beste</h2>
 
 <p>Auch tausend und mehr Städte bringen ihn nicht zum Schwitzen und das Ergebnis ist gut genug für meine Zwecke. Diesen Beppo ziehe ich jederzeit so aufgeblasenen Gesellen wie dem Annealing oder dem Evolutionary vor. </p>
 
@@ -406,11 +409,19 @@
 
 
 <!-- Le styles -->
-<link href='/assets/global-f638e1b8c640d95a3a27848ddb476085.css' rel='stylesheet' type='text/css' />
+<link rel="stylesheet" href="/assets/scss/belowfold-c9281d52ca8c94ad82a03aff26003d9f.css">
+<link rel="stylesheet" href="/assets/css/slideshow-theme-8bfaeab0594cf94b4286cb08232d7ce5.css">
+<link rel="stylesheet" href="/assets/css/syntax-1686e9be87daa1dd7b1a1dcd9ec6d0af.css">
+<link rel="stylesheet" href="/assets/css/magnific-popup-5c518213de081909ec2d80ee51b6f6a0.css">
 
-
-
-<script src='/assets/global-331fa5ff75f6b962af8c7d3c07cfb7a7.js' type='text/javascript'></script>
+<script src="/assets/js/jquery-1.10.1.min-439e576b5aca2dde1769817f6bfe9d46.js"></script>
+<script src="/assets/js/swipe-3d6c97b00662ddb84e82d42849144fb6.js"></script>
+<script src="/assets/js/jquery.unveil.min-2d57c578dc9bb0ab26f7c4832ca34900.js"></script>
+<script src="/assets/js/jquery.magnific-popup.min-55abc6966df4017fe577982961ae9c06.js"></script>
+<script src="/assets/js/plugins-48a96cd9bbe985ee92d1ce9cd17326f1.js"></script>
+<script src="/assets/js/equalHeightBlocks-31fd41189b649d2f10824e3c5b13b91c.js"></script>
+<script src="/assets/js/lazyLoadCategories-1d2256a15778b171cf9b3313b1f47517.js"></script>
+<script src="/assets/js/halfdane-b3c47e79f486b17972fbb08aa6d5e480.js"></script>
 
 
 <script src="/assets/js/tsp/delaunay.js" ></script>

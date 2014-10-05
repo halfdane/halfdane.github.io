@@ -1,0 +1,363 @@
+/* line 1, /home/travis/build/halfdane/halfdane.github.io/_assets/scss/figure.scss */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 6, /home/travis/build/halfdane/halfdane.github.io/_assets/scss/figure.scss */
+figure,
+.slideshow {
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.4);
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0.61905em;
+  line-height: 0;
+}
+/* line 19, /home/travis/build/halfdane/halfdane.github.io/_assets/scss/figure.scss */
+figure img,
+.slideshow img {
+  width: 100%;
+}
+/* line 23, /home/travis/build/halfdane/halfdane.github.io/_assets/scss/figure.scss */
+figure img[src="/assets/img/loader.gif"],
+.slideshow img[src="/assets/img/loader.gif"] {
+  width: auto;
+}
+/* line 27, /home/travis/build/halfdane/halfdane.github.io/_assets/scss/figure.scss */
+figure *,
+.slideshow * {
+  margin: 0;
+}
+/* line 31, /home/travis/build/halfdane/halfdane.github.io/_assets/scss/figure.scss */
+figure figure,
+.slideshow figure {
+  box-shadow: none;
+  margin: 0;
+}
+/* line 36, /home/travis/build/halfdane/halfdane.github.io/_assets/scss/figure.scss */
+figure figcaption,
+.slideshow figcaption {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  opacity: 0.70;
+  background: #fff;
+  width: 100%;
+  height: auto;
+}
+/* line 46, /home/travis/build/halfdane/halfdane.github.io/_assets/scss/figure.scss */
+figure.p10,
+.slideshow.p10 {
+  max-width: 5em;
+}
+/* line 49, /home/travis/build/halfdane/halfdane.github.io/_assets/scss/figure.scss */
+figure.p20,
+.slideshow.p20 {
+  max-width: 10em;
+}
+/* line 52, /home/travis/build/halfdane/halfdane.github.io/_assets/scss/figure.scss */
+figure.p30,
+.slideshow.p30 {
+  max-width: 20em;
+}
+/* line 55, /home/travis/build/halfdane/halfdane.github.io/_assets/scss/figure.scss */
+figure.p40,
+.slideshow.p40 {
+  max-width: 25em;
+}
+/* line 58, /home/travis/build/halfdane/halfdane.github.io/_assets/scss/figure.scss */
+figure.p50,
+.slideshow.p50 {
+  max-width: 30em;
+}
+/* line 61, /home/travis/build/halfdane/halfdane.github.io/_assets/scss/figure.scss */
+figure.left,
+.slideshow.left {
+  float: left;
+  margin: 0;
+  margin-right: 1em;
+}
+/* line 66, /home/travis/build/halfdane/halfdane.github.io/_assets/scss/figure.scss */
+figure.right,
+.slideshow.right {
+  float: right;
+  margin: 0;
+  margin-left: 1em;
+}
+
+/* line 73, /home/travis/build/halfdane/halfdane.github.io/_assets/scss/figure.scss */
+.swipe-wrap {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
+
+/* line 78, /home/travis/build/halfdane/halfdane.github.io/_assets/scss/figure.scss */
+.swipe-wrap > * {
+  float: left;
+  width: 100%;
+  position: relative;
+}
+
+/* line 84, /home/travis/build/halfdane/halfdane.github.io/_assets/scss/figure.scss */
+.mfp-title {
+  background: black;
+  bottom: 4px;
+  position: absolute;
+}
+
+/* line 1, /home/travis/build/halfdane/halfdane.github.io/_assets/scss/post.scss */
+.fullpost {
+  max-width: 50em;
+  margin: auto;
+}
+/* line 5, /home/travis/build/halfdane/halfdane.github.io/_assets/scss/post.scss */
+.fullpost .seriesNote {
+  margin-left: 10em;
+  margin-right: 10em;
+  margin-bottom: 2em;
+  padding-top: 0.5em;
+  border: 1px solid #eee;
+}
+/* line 11, /home/travis/build/halfdane/halfdane.github.io/_assets/scss/post.scss */
+.fullpost .seriesNote p, .fullpost .seriesNote ul {
+  margin-left: 1em;
+  margin-bottom: 0;
+}
+/* line 15, /home/travis/build/halfdane/halfdane.github.io/_assets/scss/post.scss */
+.fullpost .seriesNote ul {
+  margin-left: 5em;
+}
+
+/* line 22, /home/travis/build/halfdane/halfdane.github.io/_assets/scss/post.scss */
+.text p:nth-of-type(1):first-letter {
+  font-size: 2.5em;
+  line-height: 1em;
+  font-weight: bold;
+  /*keep the same family, but use the bold weight*/
+  float: left;
+  /*make it hang left*/
+  padding: 0 0.1em 0 0;
+  /*pad it out slightly*/
+}
+
+/* line 1, /home/travis/build/halfdane/halfdane.github.io/_assets/scss/flipper.scss */
+.small_picture_demo {
+  height: 10em;
+}
+
+/* line 5, /home/travis/build/halfdane/halfdane.github.io/_assets/scss/flipper.scss */
+.picture_demo {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+/* line 13, /home/travis/build/halfdane/halfdane.github.io/_assets/scss/flipper.scss */
+.panel {
+  float: left;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  -webkit-perspective: 600;
+  -moz-perspective: 600;
+  -ms-perspective: 600;
+  -o-perspective: 600;
+  perspective: 600;
+}
+/* line 21, /home/travis/build/halfdane/halfdane.github.io/_assets/scss/flipper.scss */
+.panel .front, .panel .back {
+  float: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+/* line 34, /home/travis/build/halfdane/halfdane.github.io/_assets/scss/flipper.scss */
+.panel .front {
+  z-index: 900;
+  -webkit-transform: rotateX(0deg) rotateY(0deg);
+  -moz-transform: rotateX(0deg) rotateY(0deg);
+  -ms-transform: rotateX(0deg) rotateY(0deg);
+  -o-transform: rotateX(0deg) rotateY(0deg);
+  transform: rotateX(0deg) rotateY(0deg);
+}
+/* line 38, /home/travis/build/halfdane/halfdane.github.io/_assets/scss/flipper.scss */
+.panel .back {
+  z-index: 800;
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+/* line 44, /home/travis/build/halfdane/halfdane.github.io/_assets/scss/flipper.scss */
+.panel.flip .front {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+/* line 47, /home/travis/build/halfdane/halfdane.github.io/_assets/scss/flipper.scss */
+.panel.flip .back {
+  -webkit-transform: rotateX(0deg) rotateY(0deg);
+  -moz-transform: rotateX(0deg) rotateY(0deg);
+  -ms-transform: rotateX(0deg) rotateY(0deg);
+  -o-transform: rotateX(0deg) rotateY(0deg);
+  transform: rotateX(0deg) rotateY(0deg);
+}
+
+/* line 2, /home/travis/build/halfdane/halfdane.github.io/_assets/scss/navi.scss */
+nav .brand {
+  color: #dfc771;
+}
+/* line 6, /home/travis/build/halfdane/halfdane.github.io/_assets/scss/navi.scss */
+nav ul {
+  font-size: 1.2em;
+  line-height: 2.06349em;
+  margin: 0 0 0.61905em 0;
+  font-weight: lighter;
+  background-color: #fff;
+  list-style: none;
+  display: inline-table;
+  width: 100%;
+}
+/* line 16, /home/travis/build/halfdane/halfdane.github.io/_assets/scss/navi.scss */
+nav ul li {
+  float: left;
+}
+/* line 19, /home/travis/build/halfdane/halfdane.github.io/_assets/scss/navi.scss */
+nav ul li a {
+  padding: 0.20635em 0.5em;
+  display: block;
+  color: #9b9a99;
+}
+/* line 25, /home/travis/build/halfdane/halfdane.github.io/_assets/scss/navi.scss */
+nav ul li a:hover {
+  color: #fff;
+}
+
+/* line 32, /home/travis/build/halfdane/halfdane.github.io/_assets/scss/navi.scss */
+.pagination ul {
+  list-style: none;
+  text-align: center;
+}
+/* line 36, /home/travis/build/halfdane/halfdane.github.io/_assets/scss/navi.scss */
+.pagination .next {
+  float: left;
+}
+/* line 39, /home/travis/build/halfdane/halfdane.github.io/_assets/scss/navi.scss */
+.pagination li {
+  display: inline-block;
+}
+/* line 42, /home/travis/build/halfdane/halfdane.github.io/_assets/scss/navi.scss */
+.pagination .prev {
+  float: right;
+}
+/* line 45, /home/travis/build/halfdane/halfdane.github.io/_assets/scss/navi.scss */
+.pagination hr {
+  clear: both;
+}
+/* line 48, /home/travis/build/halfdane/halfdane.github.io/_assets/scss/navi.scss */
+.pagination .nextTitle, .pagination .prevTitle {
+  display: inline;
+}
+/* line 51, /home/travis/build/halfdane/halfdane.github.io/_assets/scss/navi.scss */
+.pagination .nextWord, .pagination .prevWord {
+  display: none;
+}
+@media screen and (max-width: 61.90476em) {
+  /* line 56, /home/travis/build/halfdane/halfdane.github.io/_assets/scss/navi.scss */
+  .pagination .nextTitle, .pagination .prevTitle {
+    display: none;
+  }
+  /* line 59, /home/travis/build/halfdane/halfdane.github.io/_assets/scss/navi.scss */
+  .pagination .nextWord, .pagination .prevWord {
+    display: inline;
+  }
+}
+
+/* line 12, /home/travis/build/halfdane/halfdane.github.io/_assets/scss/belowfold.scss */
+body {
+  color: #685356;
+  background-color: #fff;
+}
+
+/* line 17, /home/travis/build/halfdane/halfdane.github.io/_assets/scss/belowfold.scss */
+.post {
+  margin: 0 auto;
+}
+
+/* line 21, /home/travis/build/halfdane/halfdane.github.io/_assets/scss/belowfold.scss */
+h1, h2, h3, h4, h5, h6 {
+  color: #373633;
+}
+
+/* line 25, /home/travis/build/halfdane/halfdane.github.io/_assets/scss/belowfold.scss */
+p:empty {
+  display: none;
+}
+
+/* line 29, /home/travis/build/halfdane/halfdane.github.io/_assets/scss/belowfold.scss */
+.clearfix {
+  clear: both;
+}
+
+/* line 33, /home/travis/build/halfdane/halfdane.github.io/_assets/scss/belowfold.scss */
+.hidden {
+  display: none;
+}
+
+/*button*/
+/* line 38, /home/travis/build/halfdane/halfdane.github.io/_assets/scss/belowfold.scss */
+.btn {
+  background-color: #373633;
+  color: #dfc771;
+  text-indent: 0;
+  display: inline-block;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* line 49, /home/travis/build/halfdane/halfdane.github.io/_assets/scss/belowfold.scss */
+.btn:hover {
+  color: #fff;
+}
+
+/* line 53, /home/travis/build/halfdane/halfdane.github.io/_assets/scss/belowfold.scss */
+.btn:active {
+  position: relative;
+  top: 1px;
+}
+
+/* line 59, /home/travis/build/halfdane/halfdane.github.io/_assets/scss/belowfold.scss */
+.chromeframe {
+  text-align: center;
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
