@@ -37,9 +37,7 @@
         };
     </script>
     <!-- Le styles -->
-    {% css_asset_tag global %}
-    - /_assets/scss/abovefold.scss
-    {% endcss_asset_tag %}
+    {% stylesheet scss/abovefold %}
     <script src="//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js" async></script>
 </head>
 
@@ -63,24 +61,20 @@
 
 
 <!-- Le styles -->
-{% css_asset_tag global %}
-- /_assets/scss/belowfold.scss
-- /_assets/css/slideshow-theme.css
-- /_assets/css/syntax.css
-- /_assets/css/magnific-popup.css
-{% endcss_asset_tag %}
+{% stylesheet scss/belowfold %}
+{% stylesheet css/slideshow-theme %}
+{% stylesheet css/syntax %}
+{% stylesheet css/magnific-popup %}
 
+{% javascript js/jquery-1.10.1.min.js %}
+{% javascript js/swipe %}
+{% javascript js/jquery.unveil.min %}
+{% javascript js/jquery.magnific-popup.min %}
+{% javascript js/plugins %}
+{% javascript js/equalHeightBlocks %}
+{% javascript js/lazyLoadCategories %}
+{% javascript js/halfdane %}
 
-{% javascript_asset_tag global %}
-- /_assets/js/jquery-1.10.1.min.js
-- /_assets/js/swipe.js
-- /_assets/js/jquery.unveil.min.js
-- /_assets/js/jquery.magnific-popup.min.js
-- /_assets/js/plugins.js
-- /_assets/js/equalHeightBlocks.js
-- /_assets/js/lazyLoadCategories.js
-- /_assets/js/halfdane.js
-{% endjavascript_asset_tag %}
 {% for resource in page.resources %}
 {% if resource contains 'js' %}<script src="{{ resource }}" ></script>{% else %}<link href="/assets/css{{ resource }}" rel="stylesheet" type="text/css">{% endif %}
 {% endfor %}
