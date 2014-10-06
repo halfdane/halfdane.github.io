@@ -1,0 +1,37 @@
+// Basic settings
+$susy: (
+        columns: 6,
+        gutters: 0,
+        gutter-position: inside,
+        container: 1152px,
+);
+
+// Base is 16px at this point
+// Smartphone			: 448px		 6 columns 	-->  448-UP
+$medium-width			: 28em;
+$medium-cols			: 6;
+
+// Tablet 				: 768px 	 6 columns 	-->  768-UP
+$large-width			: 48em;
+$large-cols			    : 12;
+
+// Desktop 				: 992px 	12 columns 	--> 992-UP
+$extra-large-width		: 62em;
+$extra-large-cols		: 12;
+
+
+// Box model
+@include border-box-sizing;
+
+// Grid container
+.grid {
+  @include container();
+
+  @include show-grid($susy);
+
+  padding: 0 7px;
+
+  @include susy-breakpoint($medium-width, $medium-cols) {
+    padding: 0 15px;
+  }
+}
