@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link href="css/checkout.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+</head>
+<body class="rwd_order checkout grid">
+
+
+<div class="sizeDisplayLOL">
+    <div class="small">small</div>
+    <div class="medium">medium</div>
+    <div class="large">large</div>
+    <div class="extra_large">extra_large</div>
+</div>
+
+<div class="paymentType"> </div>
+<div class="paymentType"> 
+  <a href="paymentSelections.html">
+	  <div>
+		<h3>Zahlungsarten</h3>
+		<span>Rechnung</span>
+	  </div>
+	  <div class="next">&gt;</div>
+  </a>
+</div>
+<div class="paymentType"> 
+  <a class="openInDialog" href="paymentSelections.html">
+	  <div>
+		<h3>im Dialog</h3>
+	  </div>
+	  <div class="next">&gt;</div>
+  </a>
+</div>
+
+<div id="dialog" ></div>
+
+
+</body>
+
+    <script>
+      $(document).ready(function() {
+            $(".openInDialog").each(function() {
+              var $link = $(this);
+		          var $dialog = $('<div></div>')
+			          .load($link.attr('href'))
+			          .dialog({
+				          autoOpen: false,
+			          });
+
+		          $link.click(function() {
+			          $dialog.dialog('open');
+
+			          return false;
+		          });
+            });
+      });
+    </script>
+    
+</html>
