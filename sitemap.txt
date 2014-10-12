@@ -60,6 +60,7 @@ http://halfdane.github.io/categories/diy/index.html
 http://halfdane.github.io/categories/javascript/index.html
 http://halfdane.github.io/categories/buch/index.html
 
+http://halfdane.github.io/2014/10/12/das-letzte-spiel
 http://halfdane.github.io/2014/10/05/bolano_detektive
 http://halfdane.github.io/2014/02/13/pointillism
 http://halfdane.github.io/2014/01/31/tsp_greedy
