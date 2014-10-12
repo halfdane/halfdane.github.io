@@ -3,8 +3,8 @@ http://halfdane.github.io/about.html
 http://halfdane.github.io/archive.html
 http://halfdane.github.io/atom.xml
 http://halfdane.github.io/json/categories.json
-http://halfdane.github.io/index.html
 http://halfdane.github.io/json/index.html
+http://halfdane.github.io/index.html
 http://halfdane.github.io/pages.html
 http://halfdane.github.io/rss.xml
 http://halfdane.github.io/sitemap.txt
@@ -53,14 +53,17 @@ http://halfdane.github.io/tags/graphic/index.html
 http://halfdane.github.io/tags/canvas/index.html
 http://halfdane.github.io/tags/rezension/index.html
 http://halfdane.github.io/tags/buch/index.html
+http://halfdane.github.io/tags/film/index.html
 http://halfdane.github.io/categories/nerdery/index.html
 http://halfdane.github.io/categories/linux/index.html
 http://halfdane.github.io/categories/html/index.html
 http://halfdane.github.io/categories/diy/index.html
 http://halfdane.github.io/categories/javascript/index.html
 http://halfdane.github.io/categories/buch/index.html
+http://halfdane.github.io/categories/film/index.html
 
 http://halfdane.github.io/2014/10/12/das-letzte-spiel
+http://halfdane.github.io/2014/10/09/dallas_buyers_club
 http://halfdane.github.io/2014/10/05/bolano_detektive
 http://halfdane.github.io/2014/02/13/pointillism
 http://halfdane.github.io/2014/01/31/tsp_greedy
