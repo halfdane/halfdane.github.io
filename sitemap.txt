@@ -3,8 +3,8 @@ http://halfdane.github.io/about.html
 http://halfdane.github.io/archive.html
 http://halfdane.github.io/atom.xml
 http://halfdane.github.io/json/categories.json
-http://halfdane.github.io/json/index.html
 http://halfdane.github.io/index.html
+http://halfdane.github.io/json/index.html
 http://halfdane.github.io/pages.html
 http://halfdane.github.io/rss.xml
 http://halfdane.github.io/sitemap.txt
