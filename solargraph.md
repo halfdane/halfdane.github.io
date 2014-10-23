@@ -19,7 +19,7 @@ Falls du dich für weitere Einzelheiten interessierst (oder einfach nur so), dan
 [halfdane@gmx.net mit Nummer der Dose](mailto:halfdane@gmx.net? subject=Solargraph%20gefunden&amp;body=Hallo%20HalfDane,%20ich%20habe%20die%20Dose%20whatever%20gefunden.) >halfdane@gmx.net
 
 
-<a href="mailto:beispiel@example.org?body=Hallo%20Fritz,%0D%0A%0D%0Aich%20wollte%20nur%20sagen,%20dass%20" onclick="window.open('mailto:someone@stoneground.de, '__system');return false;">Mail mit Body</a>
+<a href="mailto:beispiel@example.org" target="_blank">Mail mit Body target blank </a>
 
 
 Danke und schönen Tag noch, 
