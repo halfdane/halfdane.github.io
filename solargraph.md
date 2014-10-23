@@ -22,5 +22,24 @@ Falls du dich für weitere Einzelheiten interessierst (oder einfach nur so), dan
 <a href="mailto:beispiel@example.org" target="_blank">Mail mit Body target blank </a>
 
 
+
+<form id="myform" action="mailto:me@here.com?subject=mysubject" enctype="text/plain" method="post">
+    <table id="page">
+        <thread>
+            <tr>
+                ...
+                ...<label>...<input type=..... id=..... value=..... name=...>
+                    ...
+            <td> ...
+                <textarea  id="firstname" name="getname"></textarea>
+ 
+            <tr id="actions">
+                <td><input type="submit" />
+</tr>
+< /table>
+</form>
+
+
+
 Danke und schönen Tag noch, 
 Halfdane
