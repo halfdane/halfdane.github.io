@@ -17,8 +17,7 @@ Das Projekt läuft bis zum Februar 2015 - wenn du danach auf die Dose gestoßen 
 
 Falls du dich für weitere Einzelheiten interessierst (oder einfach nur so), dann nimm bitte Kontakt zu mir auf (Android Benutzer bitte lange drücken):
 
-{:.replaceme}
-Oops, da ist wohl die Nummer der Dose verlorengegangen. Das ist nicht so schlimm - du kannst den QR-Code einfach nochmal einscannen oder die Nummer von Hand abtippen und an mich schicken: halfdane@gmx.net
+<pre>Oops, da ist wohl die Nummer der Dose verlorengegangen. Das ist nicht so schlimm - du kannst den QR-Code einfach nochmal einscannen oder die Nummer von Hand abtippen und an mich schicken: halfdane@gmx.net</pre>
 
 Danke und schönen Tag noch, 
 Halfdane
