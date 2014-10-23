@@ -3,6 +3,7 @@ layout: page
 title: Solargraph
 header: Solargraph
 #group: navigation
+resources: [/assets/js/solargraph/createMail.js]
 ---
 Hallo. 
 
@@ -16,9 +17,8 @@ Das Projekt läuft bis zum Februar 2015 - wenn du danach auf die Dose gestoßen 
 
 Falls du dich für weitere Einzelheiten interessierst (oder einfach nur so), dann nimm bitte Kontakt zu mir auf (Android Benutzer bitte lange drücken):
 
-[halfdane@gmx.net für Dose <span id="plainid">replace</span>](mailto:halfdane@gmx.net?subject=Solargraph gefunden&body=Hallo Halfdane, %0D%0Aich habe die Dose whatever gefunden.)
-
-<script>var dose=window.location.hash; $('#plainid').text(dose);</script>
+{:.replaceme}
+Oops, da ist wohl die Nummer der Dose verlorengegangen. Das ist nicht so schlimm - du kannst den QR-Code einfach nochmal einscannen oder die Nummer von Hand abtippen und an mich schicken: halfdane@gmx.net
 
 Danke und schönen Tag noch, 
 Halfdane
