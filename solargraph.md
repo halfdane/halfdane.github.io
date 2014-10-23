@@ -17,7 +17,7 @@ Das Projekt läuft bis zum Februar 2015 - wenn du danach auf die Dose gestoßen 
 
 Falls du dich für weitere Einzelheiten interessierst (oder einfach nur so), dann nimm bitte Kontakt zu mir auf (Android Benutzer bitte lange drücken):
 
-[halfdane@gmx.net mit Nummer der Dose](mailto:halfdane@gmx.net? subject=Solargraph gefunden&body=Hallo Halfdane, %0D%0Aich habe die Dose whatever gefunden.)
+[halfdane@gmx.net mit Nummer der Dose](mailto:halfdane@gmx.net?subject=Solargraph gefunden&body=Hallo Halfdane, %0D%0Aich habe die Dose whatever gefunden.)
 
 
 <a href="mailto:your@email.address?cc=jose@email.address&bcc=john@email.address&subject=Comments about the color blue&body=The following is everything I have to say about the color blue.">Contact Us</a>
