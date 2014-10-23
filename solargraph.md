@@ -16,28 +16,10 @@ Das Projekt läuft bis zum Februar 2015 - wenn du danach auf die Dose gestoßen 
 
 Falls du dich für weitere Einzelheiten interessierst (oder einfach nur so), dann nimm bitte Kontakt zu mir auf, unter:
 
-[halfdane@gmx.net mit Nummer der Dose](mailto:halfdane@gmx.net? subject=Solargraph%20gefunden&amp;body=Hallo%20HalfDane,%20ich%20habe%20die%20Dose%20whatever%20gefunden.) >halfdane@gmx.net
+[halfdane@gmx.net mit Nummer der Dose](mailto:halfdane@gmx.net? subject=Solargraph%20gefunden&amp;body=Hallo%20HalfDane,%20ich%20habe%20die%20Dose%20whatever%20gefunden.)
 
 
-<a href="mailto:beispiel@example.org" target="_blank">Mail mit Body target blank </a>
-
-
-
-<form id="myform" action="mailto:me@here.com?subject=mysubject" enctype="text/plain" method="post">
-    <table id="page">
-        <thread>
-            <tr>
-                ...
-                ...<label>...<input type=..... id=..... value=..... name=...>
-                    ...
-            <td> ...
-                <textarea  id="firstname" name="getname"></textarea>
- 
-            <tr id="actions">
-                <td><input type="submit" />
-</tr>
-< /table>
-</form>
+<a href="mailto:your@email.address?cc=jose@email.address&bcc=john@email.address&subject=Comments about the color blue&body=The following is everything I have to say about the color blue.">Contact Us</a>
 
 
 
