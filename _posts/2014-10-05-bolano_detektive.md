@@ -19,7 +19,7 @@ Und heute also das erste Buch, zu dem ich etwas geschrieben habe, seit ich die S
 ## Roberto Bolaño: die wilden Detektive
 
 
-{% image die-wilden_Detektive.jpg "Titelbild Die wilden Detektive" "p50" %}
+{% image die_wilden_Detektive.jpg "Titelbild Die wilden Detektive" "p50" %}
 Das Bild habe ich bei
 [Amazon](http://ecx.images-amazon.com/images/I/41shIYJBqdL._SL1500_.jpg)
 gefunden.
