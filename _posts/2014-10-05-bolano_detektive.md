@@ -5,7 +5,7 @@ description: ""
 category: Buch 
 tags: [rezension, buch]
 group: post
-image: http://ecx.images-amazon.com/images/I/41shIYJBqdL._SL1500_.jpg
+image: die_wilden_Detektive.jpg
 ---
 Wie man an der Lücke zum letzten Eintrag erahnen kann, hat mein Interesse an kleinen Quatschprojekten etwas nachgelassen. Dafür lese ich jetzt wieder, und das ist ja auch nichts schlechtes. 
 
@@ -17,6 +17,13 @@ Um nicht völlig aus der Übung zu kommen (und natürlich auch, um mal wieder da
 Und heute also das erste Buch, zu dem ich etwas geschrieben habe, seit ich die Schule verlassen habe - ein Geschenk von R. und S. (S.s Lieblingsautor) und ich habe ihr folgendes in einer Mail geschrieben:
 
 ## Roberto Bolaño: die wilden Detektive
+
+
+{% image die-wilden_Detektive.jpg "Titelbild Die wilden Detektive" "p50" %}
+Das Bild habe ich bei
+[Amazon](http://ecx.images-amazon.com/images/I/41shIYJBqdL._SL1500_.jpg)
+gefunden.
+{% endimage %}
 
 Alter, was für ein Ritt :-) 
 Einfach phantastisch, und unfassbar nervig, fast nicht erträglich! 
