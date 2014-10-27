@@ -5,7 +5,7 @@ description: ""
 category: Film 
 tags: [rezension, film]
 group: post
-image: http://ia.media-imdb.com/images/M/MV5BMTYwMTA4MzgyNF5BMl5BanBnXkFtZTgwMjEyMjE0MDE@._V1_SX360.jpg
+image: dallas_buyers_club.jpg
 ---
 Der Elektriker Ron Woodroof lebt ein wildes Leben: zwischen Bullenreiten, Drogen Missbrauch, Sex und kleinen Gaunereien genießt er, wie stark er sein in den 50er Jahren der USA geprägtes männliches Rollenbild ausfüllt. Sein Weltbild wie auch seine wahrgenommene Unsterblichkeit kollidieren unsanft mit der Realität, als er nach einem Arbeitsunfall im Krankenhaus erwacht und erfährt, dass er HIV-Positiv ist - etwas das seiner Meinung nach nur Fixern und Homos, wie er sie nennt, passiert. 
 
