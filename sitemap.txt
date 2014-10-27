@@ -3,8 +3,8 @@ http://halfdane.github.io/about.html
 http://halfdane.github.io/archive.html
 http://halfdane.github.io/atom.xml
 http://halfdane.github.io/json/categories.json
-http://halfdane.github.io/json/index.html
 http://halfdane.github.io/index.html
+http://halfdane.github.io/json/index.html
 http://halfdane.github.io/pages.html
 http://halfdane.github.io/rss.xml
 http://halfdane.github.io/sitemap.txt
@@ -63,6 +63,7 @@ http://halfdane.github.io/categories/javascript/index.html
 http://halfdane.github.io/categories/buch/index.html
 http://halfdane.github.io/categories/film/index.html
 
+http://halfdane.github.io/2014/10/27/under_the_skin
 http://halfdane.github.io/2014/10/12/das-letzte-spiel
 http://halfdane.github.io/2014/10/09/dallas_buyers_club
 http://halfdane.github.io/2014/10/05/bolano_detektive
