@@ -16,6 +16,9 @@ gefunden.
 {% endimage %}
 
 Polly macht sich auf den Weg, um das Geld zurück zu bringen und obwohl sie dazu gegen den schrecklichen Mr. Gum kämpfen muss, rettet sie mit Hilfe ihrer Freunde letztlich den Tag. 
+
 Wortgewaltig, hanebüchen und vor sprachlicher Kreativität nur so strotzend nimmt uns Andy Stanton mit auf seine wilde Jagd. 
+
 Der wunderbare Übersetzer Harry Rohwolt ("Winnie Pooh", "In Schwimmen-Zwei-Vögel") sorgt dafür, dass Ironie und Wortwitz nicht verloren gehen und trotzdem auch junge Leser nicht überfordern. 
-James Joyce für Kinder.
+
+James Joyce für Kinder, unbedingt lesen! 
