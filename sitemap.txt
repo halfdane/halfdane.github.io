@@ -63,6 +63,7 @@ http://halfdane.github.io/categories/javascript/index.html
 http://halfdane.github.io/categories/buch/index.html
 http://halfdane.github.io/categories/film/index.html
 
+http://halfdane.github.io/2014/10/30/mr_gum_muerbekeks
 http://halfdane.github.io/2014/10/27/under_the_skin
 http://halfdane.github.io/2014/10/12/das-letzte-spiel
 http://halfdane.github.io/2014/10/09/dallas_buyers_club
