@@ -28,14 +28,12 @@ Solargaphie Herbst 2009
 Solargaphie Herbst 2009
 {% endimage %}
 {% endgallery %}
-{% endgallery %}
-
 
 Das Projekt läuft bis zum Februar 2015 - wenn du danach auf die Dose gestoßen bist, kannst du die Solargraphie behalten. Bei der Entwicklung bin ich dir auch gern behilflich. 
 
 Falls du dich für weitere Einzelheiten interessierst (oder einfach nur so), dann nimm bitte Kontakt zu mir auf (Android Benutzer bitte lange drücken):
 
-<pre>Oops, da ist wohl die Nummer der Dose verlorengegangen. Das ist nicht so schlimm - du kannst den QR-Code einfach nochmal einscannen oder die Nummer von Hand abtippen und an mich schicken: halfdane@gmx.net</pre>
+<pre>Oops, da ist wohl die Nummer der Dose verlorengegangen. Das ist nicht so schlimm - du kannst den QR-Code einfach nochmal einscannen oder die Nummer auf der Dose von Hand abtippen und an mich schicken: halfdane@gmx.net</pre>
 
 Danke und schönen Tag noch, 
 Halfdane
