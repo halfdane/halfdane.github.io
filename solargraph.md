@@ -14,18 +14,18 @@ Du bist vermutlich hier gelandet, weil du meine Lochkamera gefunden hast: Auf de
 Es handelt sich hierbei um ein langfristiges Projekt mit dem Arbeitstitel "Augen-Blick" , bei dem ich die Bewegung der Sonne im Verlauf mehrerer Monate einfangen möchte. Das belichtete Papier wird im Dunkeln eingescannt und dadurch zerstört - die digitale Version wird als Einziges bleiben. Weitere Informationen findest du z.B. bei [Kwerfeldein.de](http://kwerfeldein.de/2010/07/27/solargraphie-extreme-langzeitbelichtung/)
 
 Ich hoffe, dass dabei Aufnahmen entstehen wie diese:
-{% gallery "p30" %}
-{% image http://3.bp.blogspot.com/_f_DZNRNeeHA/S12XcL776wI/AAAAAAAAAKs/AmtTZlFegAM/s1600/contact-scan1.BLOG600px.jpg "Solargraphie 2009" %}
-Solargaphie Herbst 2009
+{% gallery "p50" %}
+{% image solargraphie_info_1.jpg Solargraphie 2009" %}
+[Solargraphie Herbst 2009](http://solargraphie.info/)
 {% endimage %}
-{% image http://2.bp.blogspot.com/_f_DZNRNeeHA/S12XcbeF4EI/AAAAAAAAAK0/cQo9FHcS0ho/s1600/lopezdeherediaScan2BLOG600px.jpg "Solargraphie 2009" %}
-Solargaphie Herbst 2009
+{% image solargraphie_info_2.jpg "Solargraphie 2009" %}
+[Solargraphie Herbst 2009](http://solargraphie.info/)
 {% endimage %}
-{% image http://3.bp.blogspot.com/_f_DZNRNeeHA/S12eJXy6OaI/AAAAAAAAAK8/fW2_9_QIGQI/s1600/GARRAPanetone2BLOG600px.jpg "Solargraphie 2009" %}
-Solargaphie Herbst 2009
+{% image solargraphie_info_3.jpg "Solargraphie 2009" %}
+[Solargraphie Herbst 2009](http://solargraphie.info/)
 {% endimage %}
-{% image http://2.bp.blogspot.com/_f_DZNRNeeHA/S12eJ_f3rJI/AAAAAAAAALM/WZwD66PjuX0/s1600/GARRAF1-solarigrafie-whiskyV2BLOG600px.jpg "Solargraphie 2009" %}
-Solargaphie Herbst 2009
+{% image solargraphie_info_4.jpg "Solargraphie 2009" %}
+[Solargraphie Herbst 2009](http://solargraphie.info/)
 {% endimage %}
 {% endgallery %}
 
