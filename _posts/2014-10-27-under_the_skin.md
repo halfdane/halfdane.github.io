@@ -10,11 +10,9 @@ image: under_the_skin.jpg
 
 Es gibt mehrere Möglichkeiten, diesen Film, wie auch jeden anderen, zu kucken. Die Variante, die ich gewählt habe, war möglicherweise die schlechteste. 
 
-
-{% image under_the_skin.jpg "Filmplakat Under The Ultimate" "p50" %}
+{% image under_the_skin.jpg "Titelbild von Under the Skin" "p50" %}
 Das Bild habe ich bei
-[IMBD](http://ia.media-imdb.com/images/M/MV5BMTU1MDEwMDg4Nl5BMl5BanBnXkFtZTgwOTk3NTcxMTE@._V1_SX680.jpg)
-gefunden.
+[imdb](http://m.imdb.com/title/tt1441395/) gefunden.
 {% endimage %}
 
 Wie ich ihn sah 
