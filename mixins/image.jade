@@ -1,0 +1,6 @@
+mixin image(imgUrl, altText, caption)
+    figure
+        a(href="#{imgUrl}")
+            img(src="#{imgUrl}" alt="#{altText}")
+        figcaption
+            p "#{caption}"

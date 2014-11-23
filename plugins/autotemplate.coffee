@@ -15,6 +15,7 @@ module.exports = (env, callback) ->
   class BlogpostPage extends env.plugins.MarkdownPage
 
     constructor: (@filepath, @metadata) ->
+      console.log("Handling #{ @filepath.relative }" )
       p = /articles\/(\d\d\d\d-\d\d-\d\d)-(.*)\/index.md/.exec @filepath.relative
       # extract date and url-part from directory name
       @metadata.date = p[1]

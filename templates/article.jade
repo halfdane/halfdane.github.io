@@ -31,7 +31,6 @@ block prepend footer
     - var nextArticle = articles[thisPageIndex-1];
     - var prevUrl = prevArticle && prevArticle.metadata ? prevArticle.url : '/';
     - var nextUrl = nextArticle && nextArticle.metadata ? nextArticle.url : '/';
-    include ../mixins/postNavigation.jade
     block paging
         mixin postNavigation('Prev', prevUrl, 'Next', nextUrl)
     a(href=contents.index.url) « Full blog
