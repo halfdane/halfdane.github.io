@@ -17,7 +17,7 @@ module.exports = (env, callback) ->
       p = /articles\/(\d\d\d\d-\d\d-\d\d)-(.*)\/index.md/.exec @filepath.relative
       @metadata.date = p[1]
       @metadata.short_dir = p[2]
-      super(@filepath, @metadata)
+      super
 
     getTemplate: ->
       @metadata.template or options.template or super()
