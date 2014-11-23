@@ -6,22 +6,10 @@ image: mr_gum.jpg
 ---
 Der Milliardär Björn Schneyder wurde früher ausgelacht und versucht jetzt, sich seine Freunde zu kaufen - eine Strategie, die mit Polly natürlich nicht funktionieren kann und spätestens beim Raub der Millionen völlig in sich zusammen fällt.
 
-<figure class="cap-left p50">
-    <a class="lightbox" href="mr_gum.jpg">
-        ![Titelbild von Mr Gum](mr_gum.jpg)
-    </a>
-    <figcaption>
-        <p>
-            Das Bild habe ich bei <a href="http://www.amazon.de/gp/aw/d/3794161750?pc_redir=1413968846&amp;robot_redir=1#immersive-view_1414678264180">amazon</a> gefunden.
-        </p>
-    </figcaption>
-</figure>
+<hr />
 
-
-{% image mr_gum.jpg "Titelbild von Mr Gum" "p50" %}
-Das Bild habe ich bei
-[amazon](http://www.amazon.de/gp/aw/d/3794161750?pc_redir=1413968846&robot_redir=1#immersive-view_1414678264180)
-gefunden.
+{% image mr_gum.jpg "Titelbild von Mr Gum" %}
+Das Bild habe ich bei [amazon](http://www.amazon.de/gp/aw/d/3794161750/ref=mw_dp_img_z?is=l) gefunden.
 {% endimage %}
 
 Polly macht sich auf den Weg, um das Geld zurück zu bringen und obwohl sie dazu gegen den schrecklichen Mr. Gum kämpfen muss, rettet sie mit Hilfe ihrer Freunde letztlich den Tag. 

@@ -5,6 +5,9 @@ tags: [buddelschiff, holz, microbohrer, modellbau, zahnstocher]
 image: buddel4.jpg
 series: buddelschiff
 ---
+Die Takelage sind die Seile, mit denen Masten und Segel gehalten werden.
+Beim Buddelsschiff sind das im Wesentlichen alle Bindfäden :)
+
 {% image buddel4.jpg "Aufgetakelt" "p30 right" %}
 Fertig getakelt und mit aufgerichteten Masten - fesch.
 {% endimage %}

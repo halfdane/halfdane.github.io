@@ -4,6 +4,12 @@ category: html
 tags: [liquid, jekyll, images, css3, html5]
 image: vogel.by.anira.jpg
 ---
+[EDIT: 23.11.2014]
+Dieser Artikel ist veraltet, da ich den Blog inzwischen von Jekyll auf Wintersmith umgestellt habe.
+Der Vollständigkeit halber bleibt der eigentliche Artikel hier natürlich immer noch erhalten.
+[END]
+
+
 {% image vogel.by.anira.jpg "Nice Bird" "p50" %}
 Das Bild habe ich bei
 [the inspiring live](http://www.the-inspiring-life.com/2013/01/ein-logo-fur-meinen-blog.html)

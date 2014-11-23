@@ -5,12 +5,14 @@ tags: [buddelschiff, holz, microbohrer, modellbau, zahnstocher]
 image: buddel1.jpg
 series: buddelschiff
 ---
+Ach nee, die lieben...
+Ich habe kürzlich von R., S. und H. eine schöne Fläche Whisky geschenkt bekommen, der auch wirklich sehr lecker ist.
+Überreicht wurde mit die Flasche mit der Maßgabe, da sollte ein Buddelschiff rein, und zwar nicht so’n lüttes, sondern ein Dreimaster!
+Kann doch nicht so schwer sein – wird ja ganz klein.
 
 {% image http://upload.wikimedia.org/wikipedia/commons/b/b4/Rickmer_Rickmers_Hafen_Hamburg.jpg "Rickmer Rickmers" "right p30" %}
 Rickmer Rickmers im Hafen von Hamburg ([Wikipedia](http://commons.wikimedia.org))
 {% endimage %}
-Ach nee, die lieben...
-Ich habe kürzlich von R., S. und H. eine schöne Fläche Whisky geschenkt bekommen, der auch wirklich sehr lecker ist. Überreicht wurde mit die Flasche mit der Maßgabe, da sollte ein Buddelschiff rein, und zwar nicht so’n lüttes, sondern ein Dreimaster! Kann doch nicht so schwer sein – wird ja ganz klein.
 
 Dann kann das Schiff ja eigentlich nur die Rickmer Rickmers werden, denn die passt perfekt: sie wurde gebaut in Bremerhaven und hat nach einigem herumfahren jetzt einen festen Platz in Hamburg. Es ist ein sogenanntes Dreimast-Vollschiff und die technischen Zeichnungen von der zugehörigen Museumsseite sind hoffentlich eine Hilfe.
 

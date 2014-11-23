@@ -1,5 +1,7 @@
 module.exports = (env, callback) ->
 
+  moment.lang('de')
+
   defaults =
     postsDir: 'articles' # directory containing blog posts
     template: 'article.jade'
@@ -30,18 +32,31 @@ module.exports = (env, callback) ->
         \{%\s*image\s*  # beginning of opening tag
         (\S*)\s*        # first parm is img url
         "([^"]*)"\s*    # second parm is alt text surrounded by "
-        "([^"]*)"\s*    # third parm are additional css classes for the figure tag surrounded by "
-        %}              # end of opening tag
-        ([\s\S]*)       # everything between tags is caption
+        [^%]*%}         # skip everything till end of opening tag
+        ([\s\S]*?)       # everything between tags is caption
         \{%\s*endimage\s*%\} # closing tag
         ///gm
 
-      @markdown = @markdown.replace pattern, (match, imgUrl, altText, cssClasses, caption) =>
-        "<figure class=\"cap-left #{cssClasses}\">
-            <a class=\"lightbox\" href=\"#{imgUrl}\">![#{altText}](#{imgUrl})</a>
+      @markdown = @markdown.replace pattern, (match, imgUrl, altText, caption) =>
+        "<figure class=\"cap-left\">
+            [![#{altText}](#{imgUrl})](#{imgUrl})
             <figcaption><p>#{caption}</p></figcaption>
         </figure>"
       super
+
+    @property 'intro', 'getIntro'
+    getIntro: (base) ->
+      html = @getHtml(base)
+      cutoffs = ['</p>', '<span class="more', '<h2', '<hr']
+      idx = Infinity
+      for cutoff in cutoffs
+        i = html.indexOf cutoff
+        if i isnt -1 and i < idx
+          idx = i
+      if idx isnt Infinity
+        return html.substr 0, idx
+      else
+        return html
 
   # register the plugin
   prefix = if options.postsDir then options.postsDir + '/' else ''

@@ -4,13 +4,13 @@ mixin postNavigation(prevLabel, prevUrl, nextLabel, nextUrl)
             a.pure-u-1-2(href=prevUrl)
                 div.ah-icon-link.newer.left
                     span.text.text-right #{prevLabel}
-                    img.ah-icon.ah-icon-left(src="/svg/53_b.svg")
+                    img.ah-icon.ah-icon-left(src="/svg/left.svg")
         else
             span.pure-u-1-2.left
         if nextLabel
             a.pure-u-1-2(href=nextUrl)
                 div.ah-icon-link.older.right
                     span.text.text-left #{nextLabel}
-                    img.ah-icon.ah-icon-right(src="/svg/54_b.svg")
+                    img.ah-icon.ah-icon-right(src="/svg/right.svg")
         else
             span.pure-u-1-2.right

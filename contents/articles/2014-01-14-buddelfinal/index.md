@@ -310,13 +310,15 @@ Und auch wieder rein: Hält.
 {% endimage %}
 {% endgallery %}
 
+
 ## Fazit(Quellen), Fehler und Fragen
+Das hat Spaß gemacht.
 
 {% image buddel_f.jpg "Done" "p30" %}
 The deed is done. 
 {% endimage %} 
 
-Das hat Spaß gemacht. Dank der Hilfe vieler Internetseiten (allen voran [Ships in bottles](http://www.shipbottle.ru/english/), die verrät wirklich jeden Zaubertrick!) konnte ich dieses unmögliche Projekt tatsächlich zufriedenstellend beenden.
+Dank der Hilfe vieler Internetseiten (allen voran [Ships in bottles](http://www.shipbottle.ru/english/), die verrät wirklich jeden Zaubertrick!) konnte ich dieses unmögliche Projekt tatsächlich zufriedenstellend beenden.
 Als Informations- und Inspirations-Quellen kam folgendes zum Einsatz:
 
 - [Ships in bottles: alles](http://www.shipbottle.ru/english/)
