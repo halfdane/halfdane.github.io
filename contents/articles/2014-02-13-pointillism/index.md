@@ -149,7 +149,7 @@ Wie immer hier eine Live-Demo:
 <div class="automaticInput">
     <div class="imageRow">
         <div class="target">
-            <img src="/assets/img/iris2.jpg"/>
+            ![iris2.jpg](iris2.jpg)
         </div>
     </div>
 </div>

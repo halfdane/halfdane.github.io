@@ -21,6 +21,17 @@ block content
 
 block prepend footer
   div.nav
+    //TODO: refactor this out for better separation of concerns
+    - var articles = env.helpers.getArticles(contents);
+    - var articlesTitles = _.map(articles, function(value, key, list) {
+    -       return value.metadata.title;
+    - });
+    - var thisPageIndex = articlesTitles.indexOf(page.title);
+    - var prevArticle = articles[thisPageIndex+1];
+    - var nextArticle = articles[thisPageIndex-1];
+    - var prevUrl = prevArticle && prevArticle.metadata ? prevArticle.url : '/';
+    - var nextUrl = nextArticle && nextArticle.metadata ? nextArticle.url : '/';
+    include ../mixins/postNavigation.jade
+    block paging
+        mixin postNavigation('Prev', prevUrl, 'Next', nextUrl)
     a(href=contents.index.url) « Full blog
-
-
