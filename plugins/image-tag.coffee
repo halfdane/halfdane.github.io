@@ -10,6 +10,9 @@ module.exports = (env, callback) ->
 
   class ImageTag extends env.plugins.IntroDetection
 
+    @image: (imgUrl, altText, caption) ->
+      return "<figure class=\"cap-left\">[![#{altText}](#{imgUrl})](#{imgUrl})<figcaption><p>#{caption}</p></figcaption></figure>"
+
     getHtml: (base=env.config.baseUrl) ->
       pattern = ///
         \{%\s*image\s*  # beginning of opening tag
@@ -25,6 +28,13 @@ module.exports = (env, callback) ->
             [![#{altText}](#{imgUrl})](#{imgUrl})
             <figcaption><p>#{caption}</p></figcaption>
         </figure>"
+
+      vm = ctx = null
+      @markdown = @markdown.replace /\{\{([\s\S]*?)\}\}/gm, (match, code) =>
+        vm ?= require 'vm'
+        ctx ?= vm.createContext {image: env.plugins.ImageTag.image}
+        return vm.runInContext code, ctx
+
       super
 
   # register the plugin

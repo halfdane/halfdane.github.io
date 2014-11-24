@@ -6,10 +6,9 @@ image: blue_jasmine.jpg
 ---
 Ein reichlich misslungener Film, trotz der wunderbaren Kate Blanchett.
 
-{% image blue_jasmine.jpg "Titelbild von Blue Jasmine" "p50" %}
-Das Bild habe ich bei
-[imdb](http://m.imdb.com/title/tt2334873/) gefunden.
-{% endimage %}
+{{image ('blue_jasmine.jpg',
+    'Titelbild von Blue Jasmine',
+    'Das Bild habe ich bei [imdb](http://m.imdb.com/title/tt2334873/) gefunden.')}}
 
 Insgesamt waren die Schauspieler gut, aber ansonsten war an dem Film kaum etwas stimmig:
 
