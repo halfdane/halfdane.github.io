@@ -12,10 +12,8 @@ module.exports = (env, callback) ->
   for key, value of defaults
     options[key] ?= defaults[key]
 
-  class BlogpostPage extends env.plugins.MarkdownPage
-
+  class BlogpostPage extends env.plugins.ImageTag
     constructor: (@filepath, @metadata) ->
-      console.log("Handling #{ @filepath.relative }" )
       p = /articles\/(\d\d\d\d-\d\d-\d\d)-(.*)\/index.md/.exec @filepath.relative
       # extract date and url-part from directory name
       @metadata.date = p[1]
@@ -27,37 +25,6 @@ module.exports = (env, callback) ->
 
     getFilenameTemplate: ->
       @metadata.filenameTemplate or options.filenameTemplate or super()
-
-    getHtml: (base=env.config.baseUrl) ->
-      pattern = ///
-        \{%\s*image\s*  # beginning of opening tag
-        (\S*)\s*        # first parm is img url
-        "([^"]*)"\s*    # second parm is alt text surrounded by "
-        [^%]*%}         # skip everything till end of opening tag
-        ([\s\S]*?)       # everything between tags is caption
-        \{%\s*endimage\s*%\} # closing tag
-        ///gm
-
-      @markdown = @markdown.replace pattern, (match, imgUrl, altText, caption) =>
-        "<figure class=\"cap-left\">
-            [![#{altText}](#{imgUrl})](#{imgUrl})
-            <figcaption><p>#{caption}</p></figcaption>
-        </figure>"
-      super
-
-    @property 'intro', 'getIntro'
-    getIntro: (base) ->
-      html = @getHtml(base)
-      cutoffs = ['</p>', '<span class="more', '<h2', '<hr']
-      idx = Infinity
-      for cutoff in cutoffs
-        i = html.indexOf cutoff
-        if i isnt -1 and i < idx
-          idx = i
-      if idx isnt Infinity
-        return html.substr 0, idx
-      else
-        return html
 
   # register the plugin
   prefix = if options.postsDir then options.postsDir + '/' else ''

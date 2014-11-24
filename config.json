@@ -6,6 +6,8 @@
     "description": "Navigate by sight"
   },
   "plugins": [
+    "./plugins/intro-detection.coffee",
+    "./plugins/image-tag.coffee",
     "./plugins/autotemplate.coffee",
     "./plugins/paginator.coffee"
   ],

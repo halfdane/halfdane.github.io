@@ -12,20 +12,18 @@ Du bist vermutlich hier gelandet, weil du meine Lochkamera gefunden hast: Auf de
 
 Es handelt sich hierbei um ein langfristiges Projekt mit dem Arbeitstitel "Augen-Blick" , bei dem ich die Bewegung der Sonne im Verlauf mehrerer Monate einfangen möchte. Das belichtete Papier wird im Dunkeln eingescannt und dadurch zerstört - die digitale Version wird als Einziges bleiben. Weitere Informationen findest du z.B. bei [Kwerfeldein.de](http://kwerfeldein.de/2010/07/27/solargraphie-extreme-langzeitbelichtung/)
 
-mixin postNavigation('Prev', 'yada', 'Next', 'pupsi')
-
 Ich hoffe, dass dabei Aufnahmen entstehen wie diese:
 {% gallery "p50" %}
-{% image solargraphie_info_1.jpg Solargraphie 2009" %}
+{% image /img/solargraphie_info_1.jpg "Solargraphie 2009" %}
 [Solargraphie Herbst 2009](http://solargraphie.info/)
 {% endimage %}
-{% image solargraphie_info_2.jpg "Solargraphie 2009" %}
+{% image /img/solargraphie_info_2.jpg "Solargraphie 2009" %}
 [Solargraphie Herbst 2009](http://solargraphie.info/)
 {% endimage %}
-{% image solargraphie_info_3.jpg "Solargraphie 2009" %}
+{% image /img/solargraphie_info_3.jpg "Solargraphie 2009" %}
 [Solargraphie Herbst 2009](http://solargraphie.info/)
 {% endimage %}
-{% image solargraphie_info_4.jpg "Solargraphie 2009" %}
+{% image /img/solargraphie_info_4.jpg "Solargraphie 2009" %}
 [Solargraphie Herbst 2009](http://solargraphie.info/)
 {% endimage %}
 {% endgallery %}
