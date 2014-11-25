@@ -14,6 +14,7 @@ Es handelt sich hierbei um ein langfristiges Projekt mit dem Arbeitstitel "Augen
 
 Ich hoffe, dass dabei Aufnahmen entstehen wie diese:
 
+
 - |image|/img/solargraphie_info_1.jpg|Solargraphie 2009|[Solargraphie Herbst 2009](http://solargraphie.info/)|
 - |image|/img/solargraphie_info_2.jpg|Solargraphie 2009|[Solargraphie Herbst 2009](http://solargraphie.info/)|
 - |image|/img/solargraphie_info_3.jpg|Solargraphie 2009|[Solargraphie Herbst 2009](http://solargraphie.info/)|
