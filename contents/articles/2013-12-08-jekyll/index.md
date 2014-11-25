@@ -10,18 +10,17 @@ Der Vollständigkeit halber bleibt der eigentliche Artikel hier natürlich immer
 [END]
 
 
-{% image vogel.by.anira.jpg "Nice Bird" "p50" %}
-Das Bild habe ich bei
+|image|vogel.by.anira.jpg|Nice Bird|Das Bild habe ich bei
 [the inspiring live](http://www.the-inspiring-life.com/2013/01/ein-logo-fur-meinen-blog.html)
-gefunden.
-{% endimage %}
+gefunden.|
+
 Eine der Sachen, die ich bei Markdown nicht so gut gelungen finde sind Bilder, insbesondere mit Bildunterschriften. Dafür gibt es ja seit HTML5 das `figure`-Tag, das zusammen mit `img` und `figcaption` genau das macht, was Blogger und Designer seit Jahrzehnten nachzubauen versuchen. Dank der Liquid-Template-Sprache, die ich hier einsetzen kann, muss mich das nicht stören, ich kann mit einem einfachen Include selber Bilder einbinden (allerdings vor allem technisch, nicht schön - bin schließlich kein Designer :):
 
 Und das geht so:
 
 In `\_includes` eine Datei namens `image` erstellen, die folgenden Code enthält:
 
-```html+erb
+```html
  {% raw  %}
  <figure>
     <img {% if include.title %}alt="{{ include.title }}" {% endif %}src="{{ ASSET_PATH }}/img/{{ include.img }}"/>
@@ -63,4 +62,4 @@ Fertig. Wenn ich keine Bildunterschrift will, lasse ich das Attribut einfach weg
  {% endraw %}
 ```
 
-{% image mug.jpg "mug" "p50" %}{% endimage %}
+|image|mug.jpg|mug||

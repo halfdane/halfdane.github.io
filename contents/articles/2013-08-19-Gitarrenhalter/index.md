@@ -7,9 +7,7 @@ image: gitarren1.jpg
 
 Klingen ja schön, stehen aber ständig im Weg. Und die käuflichen Halterungen sind echt nicht so wahnsinnig schön.
 
-{% image gitarren1.jpg "Drei Gitarren an der Wand" "p50" %}
-Drei Gitarren platzsparend an der Wand
-{% endimage %}
+|image|gitarren1.jpg|Drei Gitarren an der Wand| Drei Gitarren platzsparend an der Wand |
 
 Aus einem ungenutzten Buchen-Regalbrett habe ich einen 5,7cm breiten und 3,5cm tiefen Schlitz ausgesägt - das passt für alle unsere Saiteninstrumente gleichermaßen. Die "Finger" sind nur etwa 0,65cm dick, das ist bei dem Holz stabil genug.
 
@@ -17,6 +15,4 @@ Die Instrumente brauchen nach hinten etwa fünfeinhalb cm Platz zum schwingen, u
 
 An die Wand geworfen – fertig.
 
-{% image gitarren2.jpg "Halter mit Fingern" "p30" %}
-Nahansicht des Halters mit "Fingern".
-{% endimage %}
+|image|gitarren2.jpg|Halter mit Fingern| Nahansicht des Halters mit "Fingern". |

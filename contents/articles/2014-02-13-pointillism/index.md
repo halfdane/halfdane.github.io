@@ -7,9 +7,9 @@ resources: [/assets/js/pointillism/pointillism.js]
 ---
 Bei meinen Experimenten mit dem Traveling Salesman Problem (Simulated Annealing, Evolutionary und Greedy mit Einsprengseln von Lin-Kernighan/Beppo Straßenkehrer) bin ich für die Anzeige der Graphen immer mal wieder am `canvas` Element vorbeigekommen und habe jetzt eine Ausrede gefunden, mich intensiver damit zu beschäftigen: automatischer Pointillismus.
 
-{% image http://www.artschoolvets.com/news/wp-content/uploads/2011/12/cochran_graffiti_04.jpg "Moderner Pointillismus von James Cochran" %}
+|image|http://www.artschoolvets.com/news/wp-content/uploads/2011/12/cochran_graffiti_04.jpg|Moderner Pointillismus von James Cochran|
 Moderner Pointillismus von [James Cochran](http://www.artschoolvets.com/news/2011/12/13/james-cochran-pointillismus-aus-der-spraydose/)
-{% endimage %}
+|
 
 Pointillismus ist die Kunstform, bei der ein Künstler Bilder aus einzelnen Punkten konstruiert. Diese Punkte werden häufig so gesetzt, dass z.B. möglichst wenige oder große eine so starke Ausdruckskraft haben, das Motiv aber dennoch erkennbar ist.
 Industriell findet der Pointillismus seine Anwendung bei der Rasterung von Bildern, unter anderem als Vorstufe für den Druck in Zeitungen. 
@@ -111,14 +111,9 @@ halfdane.moveToDarkness = function (imgData, givenPoints) {
 Das Ergebnis kann sich sehen lassen und die Implementierung ist nicht annähernd so komplex wie die beiden anderen :-)
 Richtig gelungen sind die Bilder dann, wenn die Größe der Punkte abhängig von der Dunkelheit des Ausgangsbildes gewählt wird:
 
-{% gallery "p30" %}
-{% image pointillism1.png "Vogel" %}
-{% endimage %}
-{% image pointillism3.png "Kofd" %}
-{% endimage %}
-{% image pointillism4.png "noch ein kopf" %}
-{% endimage %}
-{% endgallery %}
+- |image|pointillism1.png|Vogel| |
+- |image|pointillism3.png|Kofd| |
+- |image|pointillism4.png|noch ein kopf| |
 
 
 Drumherum schwirrt noch ein bisschen Logik, um ein Bild ins Dokument zu laden und Canvas-Elemente zu erzeugen, aber das wars schon.

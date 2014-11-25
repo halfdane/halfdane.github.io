@@ -6,11 +6,8 @@ image: dallas_buyers_club.jpg
 ---
 Der Elektriker Ron Woodroof lebt ein wildes Leben: zwischen Bullenreiten, Drogen Missbrauch, Sex und kleinen Gaunereien genießt er, wie stark er sein in den 50er Jahren der USA geprägtes männliches Rollenbild ausfüllt. Sein Weltbild wie auch seine wahrgenommene Unsterblichkeit kollidieren unsanft mit der Realität, als er nach einem Arbeitsunfall im Krankenhaus erwacht und erfährt, dass er HIV-Positiv ist - etwas das seiner Meinung nach nur Fixern und Homos, wie er sie nennt, passiert. 
 
-{% image dallas_buyers_club.jpg "Filmplakat Dallas Buyers Club" "p50" %}
-Das Bild habe ich bei
-[IMBD](http://ia.media-imdb.com/images/M/MV5BMjMzMjA3MzM0OF5BMl5BanBnXkFtZTgwMzEwNzMxMDE@._V1_SX720.jpg)
-gefunden.
-{% endimage %}
+|image|dallas_buyers_club.jpg|Filmplakat Dallas Buyers Club|
+  Das Bild habe ich bei [IMBD](http://ia.media-imdb.com/images/M/MV5BMjMzMjA3MzM0OF5BMl5BanBnXkFtZTgwMzEwNzMxMDE@._V1_SX720.jpg) gefunden. |
 
 Als Woodroof zudem erfahren muss, dass es kein wirksames Medikament gegen die Krankheit oder auch nur die stärksten Symptome gibt, verändert er sich vom wütenden jungen Mann, der das Leben mit beiden Händen packen und verschlingen will, in einen manischen, getriebenen Forscher, der sich mit allen Aspekten seiner Infektion akribisch auseinandersetzt und später in einen Schmuggler, um aus Mexiko ein vielversprechendes Medikament zu überführen, das in den USA nicht zugelassen ist. 
 

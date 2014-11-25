@@ -19,8 +19,10 @@
     position: relative;
 }
 
-.slideshow figure {
+figure {
+    position: relative;
     margin: 0;
+    width: 100%;
 }
 
 .slideshow figure img {
@@ -42,7 +44,7 @@
     position: relative;
 }
 
-.slideshow figcaption {
+figcaption {
     position: absolute;
     font-family: sans-serif;
     font-size: .8em;
@@ -51,11 +53,14 @@
     padding: .25em;
     color: #fff;
     background: #000;
-    background: rgba(0, 0, 0, .25);
+    background: rgba(0, 0, 0, .3);
     border-radius: 2px;
-    opacity: 0;
     -webkit-transition: opacity 1.2s;
     transition: opacity 1.2s;
+}
+
+.slideshow figcaption {
+    opacity: 0;
 }
 
 .slideshow .bss-show figcaption {
@@ -63,7 +68,7 @@
     opacity: 1;
 }
 
-.slideshow figcaption a {
+figcaption a {
     color: #fff;
 }
 
