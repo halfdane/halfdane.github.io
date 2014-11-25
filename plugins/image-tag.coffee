@@ -1,5 +1,4 @@
 module.exports = (env, callback) ->
-
   defaults =
     postsDir: 'articles' # directory containing blog posts
 
@@ -9,11 +8,10 @@ module.exports = (env, callback) ->
     options[key] ?= defaults[key]
 
   class ImageTag extends env.plugins.IntroDetection
-
     @image: (imgUrl, altText, caption) ->
       return "<figure class=\"cap-left\">[![#{altText}](#{imgUrl})](#{imgUrl})<figcaption><p>#{caption}</p></figcaption></figure>"
 
-    getHtml: (base=env.config.baseUrl) ->
+    getHtml: (base = env.config.baseUrl) ->
       pattern = ///
         \{%\s*image\s*  # beginning of opening tag
         (\S*)\s*        # first parm is img url
@@ -24,16 +22,10 @@ module.exports = (env, callback) ->
         ///gm
 
       @markdown = @markdown.replace pattern, (match, imgUrl, altText, caption) =>
-        "<figure class=\"cap-left\">
-            [![#{altText}](#{imgUrl})](#{imgUrl})
-            <figcaption><p>#{caption}</p></figcaption>
-        </figure>"
+        ImageTag.image(imgUrl, altText, caption)
 
-      vm = ctx = null
-      @markdown = @markdown.replace /\{\{([\s\S]*?)\}\}/gm, (match, code) =>
-        vm ?= require 'vm'
-        ctx ?= vm.createContext {image: env.plugins.ImageTag.image}
-        return vm.runInContext code, ctx
+      @markdown = @markdown.replace /\|\s*image\s*\|\s*([^|]*?)\|([^|]*?)\s*\|\s*([^|]*?)\s*\|/gm, (match, imgUrl, altText, caption) =>
+        ImageTag.image(imgUrl, altText, caption)
 
       super
 

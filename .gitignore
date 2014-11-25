@@ -1,6 +1,6 @@
 _site
 vendor
 .sass-cache
-assets/scss
 .idea/
 *.iml
+build
