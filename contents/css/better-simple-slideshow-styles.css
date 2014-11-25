@@ -1,6 +1,6 @@
 .slideshow {
     position: relative;
-    display: block;
+    display: inline-block;
     margin: 0;
 }
 

@@ -12,8 +12,7 @@ body {
 }
 
 .content-wrap {
-  width: 34em;
-  margin: 0 auto;
+  margin: 0 2%;
 }
 
 body, a {
@@ -173,7 +172,8 @@ footer .copy, footer .copy a {
 /* article */
 
 .article {
-  margin: 3em 0 4em;
+  margin: 3em auto 4em;
+  max-width: 50em;
 }
 
 .article header {
@@ -382,6 +382,11 @@ code.lang-markdown .bullet {
   body { font-size: 26px; }
 }
 
+@media (min-width: 500px) {
+  figure {
+    max-width: 500px;
+  }
+}
 @media (max-width: 900px) {
   body { font-size: 18px; }
 }

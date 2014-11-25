@@ -3,7 +3,7 @@ view: none
 ---
 Canned Nerd wird geschrieben und veröffentlicht von Halfdane.
 
-Mein Name ist Halfdane. Meine E-Mail-Adresse ist &lt;name>@gmx.net.
+Mein Name ist Halfdane und meine E-Mail-Adresse ist &lt;name>@gmx.net.
 
 <a href="/about.html">Weitere Informationen.</a>
 
