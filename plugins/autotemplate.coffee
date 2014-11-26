@@ -12,7 +12,7 @@ module.exports = (env, callback) ->
   for key, value of defaults
     options[key] ?= defaults[key]
 
-  class BlogpostPage extends env.plugins.ImageTag
+  class AutotemplatePage extends env.plugins.SplitPage
     constructor: (@filepath, @metadata) ->
       p = /articles\/(\d\d\d\d-\d\d-\d\d)-(.*)\/index.md/.exec @filepath.relative
       # extract date and url-part from directory name
@@ -28,7 +28,7 @@ module.exports = (env, callback) ->
 
   # register the plugin
   prefix = if options.postsDir then options.postsDir + '/' else ''
-  env.registerContentPlugin 'posts', prefix + '**/*.*(markdown|mkd|md)', BlogpostPage
+  env.registerContentPlugin 'posts', prefix + '**/*.*(markdown|mkd|md)', AutotemplatePage
 
   # done!
   callback()
