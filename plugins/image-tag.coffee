@@ -7,7 +7,10 @@ module.exports = (env, callback) ->
             |([^|]*?)\s*\                               # 2. is alt-text
             |\s*([^|]*?)\s*\|                           # everything else is caption
             ///gm, (match, imgUrl, altText, caption) =>
-        "<figure class=\"cap-left\">[![#{altText}](#{imgUrl})](#{imgUrl})<figcaption>#{caption}</figcaption></figure>"
+        "  <figure class=\"cap-left\">" +
+          "  [![#{altText}](#{imgUrl})](#{imgUrl})" +
+          "  <figcaption>#{caption}</figcaption>" +
+          "</figure>"
       super
 
   # register the plugin everywhere in contents
