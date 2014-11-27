@@ -12,7 +12,7 @@ module.exports = (env, callback) ->
   for key, value of defaults
     options[key] ?= defaults[key]
 
-  class AutotemplatePage extends env.plugins.SplitPage
+  class AutotemplatePage extends env.plugins.ImageTag
     constructor: (@filepath, @metadata) ->
       p = /articles\/(\d\d\d\d-\d\d-\d\d)-(.*)\/index.md/.exec @filepath.relative
       # extract date and url-part from directory name
