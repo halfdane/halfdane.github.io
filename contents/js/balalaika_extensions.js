@@ -5,3 +5,11 @@ $.fn.addClass = function (className) {
     });
     return this;
 };
+
+$.fn.find = function (selector) {
+    return this[0].querySelectorAll(selector);
+};
+
+$.fn.findOne = function (selector) {
+    return this[0].querySelector(selector);
+};

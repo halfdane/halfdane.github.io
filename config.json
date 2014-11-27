@@ -22,5 +22,8 @@
   "markdown": {
     "smartLists": true,
     "smartypants": true
+  },
+  "paginator": {
+    "perPage": 3
   }
 }
