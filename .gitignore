@@ -1,5 +1,3 @@
-_site
-vendor
 .sass-cache
 .idea/
 *.iml
