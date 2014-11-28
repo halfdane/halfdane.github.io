@@ -19,10 +19,18 @@
     position: relative;
 }
 
-figure {
+figure,
+img {
     position: relative;
     margin: 0;
-    width: 100%;
+    max-width: 100%;
+}
+
+@media (min-width: 500px) {
+    figure,
+    img {
+        max-width: 500px;
+    }
 }
 
 .slideshow figure img {

@@ -7,11 +7,11 @@
 }
 
 .pagination .next {
-    float: right;
+    float: left;
 }
 
 .pagination .prev {
-    float: left;
+    float: right;
 }
 
 .pagination li {

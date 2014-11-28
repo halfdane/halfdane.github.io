@@ -18,6 +18,11 @@ module.exports = (env, callback) ->
       # extract date and url-part from directory name
       @metadata.date = p[1]
       @metadata.short_dir = p[2]
+
+      if (@metadata.image && @metadata.image.indexOf('http') < 0)
+        @metadata.imageUrl = "articles/#{p[1]}-#{p[2]}/#{@metadata.image}"
+      else
+        @metadata.imageUrl = @metadata.image
       super
 
     getTemplate: ->
