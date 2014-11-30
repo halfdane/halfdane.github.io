@@ -1,7 +1,7 @@
 module.exports = function (grunt) {
     grunt.initConfig({
         clean: {
-            build: [ 'build' ]
+            build: ['build']
         },
         wintersmith: {
             staging: {
@@ -21,7 +21,11 @@ module.exports = function (grunt) {
                 }
             }
         },
-
+        jshint: {
+            work: [
+                'contents/js/*.js',
+                'Gruntfile.js']
+        },
 
         cssmin: {
             production: {
@@ -34,6 +38,7 @@ module.exports = function (grunt) {
     });
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-wintersmith');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
 
     grunt.loadNpmTasks('grunt-contrib-cssmin');
 };
