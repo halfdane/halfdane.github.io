@@ -22,30 +22,25 @@ module.exports = function (grunt) {
             }
         },
         jshint: {
-            work: [
-                'contents/js/*.js',
-                'Gruntfile.js']
+            work: ['contents/js/*.js', 'Gruntfile.js']
         },
         watch: {
             js: {
-                files: [
-                    'contents/js/**/*.js'
-                ],
-                tasks: [
-                    'jshint:work',
-                    'browserify2'
-                ]
+                files: ['contents/js/**/*.js'],
+                tasks: ['jshint:work', 'browserify2']
             },
             sass: {
-                files: [
-                    'contents/sass/**/*.scss'
-                ],
-                tasks: [
-                    'compass:dev'
-                ]
+                files: ['contents/sass/**/*.scss'],
+                tasks: ['compass:dev']
             }
         },
-
+        uglify: {
+            production: {
+                files: {
+                    'build/js/output.js': 'build/js/*.js'
+                }
+            }
+        },
         cssmin: {
             production: {
                 expand: true,
@@ -59,6 +54,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-wintersmith');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
-
+    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
 };
