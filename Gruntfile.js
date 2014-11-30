@@ -26,6 +26,25 @@ module.exports = function (grunt) {
                 'contents/js/*.js',
                 'Gruntfile.js']
         },
+        watch: {
+            js: {
+                files: [
+                    'contents/js/**/*.js'
+                ],
+                tasks: [
+                    'jshint:work',
+                    'browserify2'
+                ]
+            },
+            sass: {
+                files: [
+                    'contents/sass/**/*.scss'
+                ],
+                tasks: [
+                    'compass:dev'
+                ]
+            }
+        },
 
         cssmin: {
             production: {
@@ -39,6 +58,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-wintersmith');
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-watch');
 
     grunt.loadNpmTasks('grunt-contrib-cssmin');
 };
