@@ -1,0 +1,29 @@
+{
+  "locals": {
+    "url": "http://localhost:8080",
+    "name": "Halfdane's Canned Nerd",
+    "owner": "Halfdane",
+    "description": "Navigate by sight"
+  },
+  "plugins": [
+    "./plugins/intro-detection.coffee",
+    "./plugins/image-tag.coffee",
+    "./plugins/autotemplate.coffee",
+    "./plugins/paginator.coffee"
+  ],
+  "require": {
+    "moment": "moment",
+    "_": "underscore",
+    "typogr": "typogr"
+  },
+  "jade": {
+    "pretty": true
+  },
+  "markdown": {
+    "smartLists": true,
+    "smartypants": true
+  },
+  "paginator": {
+    "perPage": 3
+  }
+}

@@ -1,10 +1,28 @@
 module.exports = function (grunt) {
     grunt.initConfig({
         clean: {
-            build: [
-                'build'
-            ]
+            build: [ 'build' ]
         },
+        wintersmith: {
+            staging: {
+                options: {
+                    config: './config-staging.json'
+                }
+            },
+            production: {
+                options: {
+                    config: './config-production.json'
+                }
+            },
+            preview: {
+                options: {
+                    action: "preview",
+                    config: './config-preview.json'
+                }
+            }
+        },
+
+
         cssmin: {
             production: {
                 expand: true,
@@ -15,5 +33,7 @@ module.exports = function (grunt) {
         }
     });
     grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-wintersmith');
+
     grunt.loadNpmTasks('grunt-contrib-cssmin');
 };
