@@ -1,5 +1,10 @@
 module.exports = function (grunt) {
     grunt.initConfig({
+        clean: {
+            build: [
+                'build'
+            ]
+        },
         cssmin: {
             production: {
                 expand: true,
@@ -9,5 +14,6 @@ module.exports = function (grunt) {
             }
         }
     });
+    grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
 };
