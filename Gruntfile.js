@@ -4,11 +4,6 @@ module.exports = function (grunt) {
             build: ['build']
         },
         wintersmith: {
-            staging: {
-                options: {
-                    config: './config-staging.json'
-                }
-            },
             production: {
                 options: {
                     config: './config-production.json'
@@ -37,7 +32,7 @@ module.exports = function (grunt) {
         uglify: {
             production: {
                 files: {
-                    'build/js/output.js': 'build/js/*.js'
+                    'build/js/output.js': 'contents/js/**/*.js'
                 }
             }
         },
@@ -56,4 +51,22 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+
+    grunt.registerTask('preview', [
+        'wintersmith:preview'
+    ]);
+// Tasks that are called within the "public tasks"
+    grunt.registerTask('build', [
+        'prebuild',
+        'wintersmith:production',
+        'postbuild'
+    ]);
+
+    grunt.registerTask('prebuild', [
+        'clean:build'
+    ]);
+    grunt.registerTask('postbuild', [
+        'uglify:production',
+        'cssmin:production'
+    ]);
 };
