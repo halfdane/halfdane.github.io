@@ -5,6 +5,9 @@ $susy: (
         use-custom: (rem: true)
 );
 
+$breakpoint-no-query-fallbacks: true;
+$XL: 800px;
+
 @include border-box-sizing;
 
 body {
@@ -22,11 +25,22 @@ footer {
     .date {
         @include span(12);
     }
+    img,
+    figure{
+        
+    }
+
     .image {
-        @include span(6 of 12);
+        @include span(12);
+        @include breakpoint($XL...) {
+            @include span(6 of 12);
+        }
     }
     .content {
-        @include span(6 of 12 last);
+        @include span(12);
+        @include breakpoint($XL...) {
+            @include span(6 of 12 last);
+        }
     }
 
     .content {

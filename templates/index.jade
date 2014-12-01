@@ -7,7 +7,7 @@ block content
       article.article.intro
         p.date
           span= moment.utc(article.date).format('DD. MMMM YYYY')
-        d.image
+        div.image
           figure
             img(src=article.metadata.imageUrl alt=article.title)
         section.content

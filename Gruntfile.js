@@ -50,7 +50,7 @@ module.exports = function (grunt) {
                 options: {
                     sassDir: 'work/scss',
                     cssDir: 'contents/compiled/css',
-                    require: 'susy',
+                    require: [ 'susy', 'breakpoint' ],
                     environment: 'development'
                 }
             }

@@ -1,5 +1,6 @@
 @import "normalize";
 @import "compass";
+@import "breakpoint";
 @import "susy";
 @import "grid";
 //@import "wintersmith-defaults";
@@ -8,7 +9,7 @@
 
 /*more normalization*/
 img,
-figure {
+figure{
     max-width: 100%;
 }
 
