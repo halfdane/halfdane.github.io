@@ -2,7 +2,7 @@ module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         clean: {
-            build: ['build']
+            build: ['build', 'contents/compiled']
         },
         wintersmith: {
             production: {
@@ -22,11 +22,11 @@ module.exports = function (grunt) {
         },
         watch: {
             js: {
-                files: ['contents/js/**/*.js'],
-                tasks: ['jshint:work', 'browserify2']
+                files: ['work/js/**/*.js'],
+                tasks: ['jshint:work']
             },
             sass: {
-                files: ['contents/sass/**/*.scss'],
+                files: ['work/scss/**/*.scss'],
                 tasks: ['compass:dev']
             }
         },
@@ -41,14 +41,16 @@ module.exports = function (grunt) {
             dist: {
                 options: {
                     sassDir: 'work/scss',
-                    cssDir: 'test/css',
+                    cssDir: 'contents/compiled/css',
+                    require: 'susy',
                     environment: 'production'
                 }
             },
             dev: {
                 options: {
                     sassDir: 'work/scss',
-                    cssDir: 'test/css',
+                    cssDir: 'contents/compiled/css',
+                    require: 'susy',
                     environment: 'development'
                 }
             }
@@ -71,11 +73,14 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
 
     grunt.registerTask('preview', [
+        'prebuild',
+        'compass:dev',
         'wintersmith:preview'
     ]);
 // Tasks that are called within the "public tasks"
     grunt.registerTask('build', [
         'prebuild',
+        'compass:dist',
         'wintersmith:production',
         'postbuild'
     ]);

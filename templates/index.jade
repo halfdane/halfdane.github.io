@@ -7,8 +7,9 @@ block content
       article.article.intro
         p.date
           span= moment.utc(article.date).format('DD. MMMM YYYY')
-        figure
-          img(src=article.metadata.imageUrl alt=article.title)
+        d.image
+          figure
+            img(src=article.metadata.imageUrl alt=article.title)
         section.content
           h2
             a(href=article.url)= article.title

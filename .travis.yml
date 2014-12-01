@@ -15,7 +15,7 @@ before_script:
 - git config --global user.name "halfdane"
 - git clone --quiet --branch=master "https://${GH_TOKEN}@github.com/halfdane/halfdane.github.io" _site
 script:
-- grunt wintersmith:production
+- grunt build
 after_success:
 - #cd _site
 - #git add --all .

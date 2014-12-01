@@ -1,0 +1,35 @@
+$susy: (
+        columns: 12, // The number of columns in your grid
+        gutters: 1/4, // The size of a gutter in relation to a single column
+        global-box-sizing: border-box,
+        use-custom: (rem: true)
+);
+
+@include border-box-sizing;
+
+body {
+    @include container;
+    @include clearfix;
+}
+
+header,
+footer {
+    @include span(12);
+    @include clearfix;
+}
+
+.article.intro {
+    .date {
+        @include span(12);
+    }
+    .image {
+        @include span(6 of 12);
+    }
+    .content {
+        @include span(6 of 12 last);
+    }
+
+    .content {
+        @include clearfix;
+    }
+}
