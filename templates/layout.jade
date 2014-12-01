@@ -15,6 +15,7 @@ html(lang='en')
       link(rel='alternate', href=locals.url+'/feed.xml', type='application/rss+xml', title=locals.description)
       link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300')
       link(rel='stylesheet', href='/compiled/css/main.css')
+      <link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
       script(type="text/javascript" src="/js/vendor/balalaika.js")
       script(type="text/javascript" src="/js/vendor/better-simple-slideshow.js")
       script(type="text/javascript" src="/js/vendor/sloth.js")
@@ -34,7 +35,18 @@ html(lang='en')
     footer
       block footer
         section.about
-          !=contents['about_footer.md'].html
-        section.copy
+          div.me
+            p Canned Nerd wird geschrieben und veröffentlicht von halfdane.
+            p Mein Name ist halfdane und meine E-Mail-Adresse ist &lt;name>@gmx.net.
+            p
+              a(href="/about.html") Weitere Informationen.
+          div.contents
+            p Ohne weitere Absprachen können alle Inhalte von diesen Seiten von dir für nichtkommerzielle Zwecke genutzt werden, solange du nicht so tust, als wärst du der Urheber
+              a(href="http://creativecommons.org/licenses/by-nc-sa/3.0/de/")  (Creative Commons Lizenz).
+          div.sources
+            p Alle meine Quelltexte dürfen studiert, benutzt  und weitergegeben werden, solange die Benutzer des abgeleiteten Werks dieselben Rechte behalten
+              a(href="http://www.gnu.de/documents/gpl.de.html")  (General Public License v.3).
+
+section.copy
           p &copy; #{ new Date().getFullYear() } #{ locals.owner } &mdash; powered by&nbsp;
             a(href='https://github.com/jnordberg/wintersmith') Wintersmith

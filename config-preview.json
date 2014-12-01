@@ -1,8 +1,8 @@
 {
   "locals": {
     "url": "http://localhost:8080",
-    "name": "Halfdane's Canned Nerd",
-    "owner": "Halfdane",
+    "name": "halfdane's Canned Nerd",
+    "owner": "halfdane",
     "description": "Navigate by sight"
   },
   "plugins": [

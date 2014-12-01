@@ -2,11 +2,16 @@
 @import "compass";
 @import "breakpoint";
 @import "susy";
+
 @import "grid";
+@import "code-styling";
+@import "pagination";
+
 @import "index";
+
 //@import "wintersmith-defaults";
 //@import "better-simple-slideshow-styles";
-@import "pagination";
+
 
 /*more normalization*/
 img,
@@ -15,8 +20,18 @@ figure{
 }
 
 /*text behavior*/
-
-header {
-    text-align: center;
+body {
+    font-family: 'Lora', serif;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    a,
+    a:hover {
+        text-decoration: none;
+        color: #171717;
+    }
+}
+
+.header {
+    text-align: center;
+}

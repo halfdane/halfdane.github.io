@@ -28,7 +28,7 @@ Alles was du hier in meinem Blog findest, habe ich selbst erstellt, auch wenn ic
 
 Wenn allerdings kein Verweis auf die Urheberschaft von irgendetwas zu finden ist, bin ich selbst der originäre Urheber und behalte mir alle Rechte vor. 
 
-### <a name="license"></a> Lizenzen
+### Lizenzen
 Ohne weitere Absprachen können alle Inhalte (Texte, Bilder, Designs, Layout u.ä.) auf diesen Seiten von dir für nichtkommerzielle Zwecke genutzt werden, solange du nicht so tust, als wärst du der Urheber. Die zugehörige Lizenz ist die [Creative Commons Lizenz CC BY-NC-SA 3.0 DE](http://creativecommons.org/licenses/by-nc-sa/3.0/de/). 
 
 Alle meine Quelltexte (HTML, CSS, Javascript, Java, Ruby, Jekyll u.ä.) dürfen studiert, benutzt, weiterentwickelt und weitergegeben werden, solange alle Benutzer des abgeleiteten Werks dieselben Rechte behalten. Das ist eine virale Lizenz, wie sie auch für den Linux Kernel benutzt wird: die [General Public License v.3](http://www.gnu.de/documents/gpl.de.html). 

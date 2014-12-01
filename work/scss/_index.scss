@@ -10,6 +10,11 @@
     figure {
         margin: 0;
     }
+    h2 {
+        @include breakpoint($XL...) {
+            margin-top: -0.55em;
+        }
+    }
 
     .image {
         @include span(12);
@@ -18,13 +23,12 @@
         }
     }
     .content {
-        p {
-            text-align: left;
-        }
-
         @include clearfix;
+
+        text-align: center;
         @include span(12);
         @include breakpoint($XL...) {
+            text-align: left;
             @include span(6 of 12 last);
         }
     }

@@ -21,3 +21,15 @@ footer {
     @include span(12);
     @include clearfix;
 }
+
+footer .about {
+    .me {
+        @include span(4 of 12);
+    }
+    .contents {
+        @include span(4 of 12);
+    }
+    .sources {
+        @include span(4 of 12 last);
+    }
+}
