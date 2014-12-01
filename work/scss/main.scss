@@ -3,6 +3,7 @@
 @import "breakpoint";
 @import "susy";
 @import "grid";
+@import "index";
 //@import "wintersmith-defaults";
 //@import "better-simple-slideshow-styles";
 @import "pagination";
@@ -19,6 +20,3 @@ header {
     text-align: center;
 }
 
-.article.intro {
-    text-align: center;
-}

@@ -2,11 +2,12 @@ $susy: (
         columns: 12, // The number of columns in your grid
         gutters: 1/4, // The size of a gutter in relation to a single column
         global-box-sizing: border-box,
-        use-custom: (rem: true)
+        use-custom: (rem: true),
+        container: 60em
 );
 
 $breakpoint-no-query-fallbacks: true;
-$XL: 800px;
+$XL: 600px;
 
 @include border-box-sizing;
 
@@ -19,31 +20,4 @@ header,
 footer {
     @include span(12);
     @include clearfix;
-}
-
-.article.intro {
-    .date {
-        @include span(12);
-    }
-    img,
-    figure{
-        
-    }
-
-    .image {
-        @include span(12);
-        @include breakpoint($XL...) {
-            @include span(6 of 12);
-        }
-    }
-    .content {
-        @include span(12);
-        @include breakpoint($XL...) {
-            @include span(6 of 12 last);
-        }
-    }
-
-    .content {
-        @include clearfix;
-    }
 }

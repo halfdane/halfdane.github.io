@@ -1,0 +1,31 @@
+.article.intro {
+    text-align: center;
+
+    .date {
+        @include span(12);
+    }
+    img {
+        width: 300px;
+    }
+    figure {
+        margin: 0;
+    }
+
+    .image {
+        @include span(12);
+        @include breakpoint($XL...) {
+            @include span(6 of 12);
+        }
+    }
+    .content {
+        p {
+            text-align: left;
+        }
+
+        @include clearfix;
+        @include span(12);
+        @include breakpoint($XL...) {
+            @include span(6 of 12 last);
+        }
+    }
+}

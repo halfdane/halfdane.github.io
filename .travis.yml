@@ -12,6 +12,7 @@ before_install:
 - travis_retry npm install -g grunt-cli
 - travis_retry npm install
 - travis_retry gem install compass
+- travis_retry gem install susy
 - travis_retry gem install breakpoint
 before_script:
 - git config --global user.email "halfdane@gmx.net"
