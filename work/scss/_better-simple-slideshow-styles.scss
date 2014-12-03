@@ -1,7 +1,9 @@
 .slideshow {
     position: relative;
-    display: inline-block;
-    margin: 0;
+    display: block;
+    margin: 0 auto;
+
+    max-width: 30em;
 }
 
 .slideshow:focus {
@@ -24,13 +26,6 @@ img {
     position: relative;
     margin: 0;
     max-width: 100%;
-}
-
-@media (min-width: 500px) {
-    figure,
-    img {
-        max-width: 500px;
-    }
 }
 
 .slideshow figure img {

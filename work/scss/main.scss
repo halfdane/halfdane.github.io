@@ -1,23 +1,18 @@
-@import "normalize";
 @import "compass";
 @import "breakpoint";
 @import "susy";
+
+@import "compass/reset";
 
 @import "grid";
 @import "code-styling";
 @import "pagination";
 
 @import "index";
+@import "article";
 
-//@import "wintersmith-defaults";
-//@import "better-simple-slideshow-styles";
-
-
-/*more normalization*/
-img,
-figure{
-    max-width: 100%;
-}
+@import "wintersmith-defaults";
+@import "better-simple-slideshow-styles";
 
 /*text behavior*/
 body {

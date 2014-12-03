@@ -8,7 +8,7 @@ html(lang='en')
     block head
       meta(charset='utf-8')
       meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
-      meta(name='viewport', content='width=device-width')
+      meta(name='viewport', content='width=device-width, initial-scale=1')
       title
         block title
           = locals.name
@@ -17,6 +17,7 @@ html(lang='en')
       link(rel='stylesheet', href='/compiled/css/main.css')
       <link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
       script(type="text/javascript" src="/js/vendor/balalaika.js")
+      script(type="text/javascript" src="/js/vendor/hammer.js")
       script(type="text/javascript" src="/js/vendor/better-simple-slideshow.js")
       script(type="text/javascript" src="/js/vendor/sloth.js")
       script(type="text/javascript" src="/js/vendor/microajax.js")
@@ -47,6 +48,8 @@ html(lang='en')
             p Alle meine Quelltexte dürfen studiert, benutzt  und weitergegeben werden, solange die Benutzer des abgeleiteten Werks dieselben Rechte behalten
               a(href="http://www.gnu.de/documents/gpl.de.html")  (General Public License v.3).
 
-section.copy
+  section.copy
           p &copy; #{ new Date().getFullYear() } #{ locals.owner } &mdash; powered by&nbsp;
             a(href='https://github.com/jnordberg/wintersmith') Wintersmith
+
+  script(src="//localhost:35729/livereload.js")

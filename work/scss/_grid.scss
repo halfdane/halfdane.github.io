@@ -16,6 +16,8 @@ body {
     @include clearfix;
 }
 
+#articles,
+.copy,
 header,
 footer {
     @include span(12);
@@ -23,6 +25,8 @@ footer {
 }
 
 footer .about {
+    @include span(12);
+    @include clearfix;
     .me {
         @include span(4 of 12);
     }

@@ -28,6 +28,12 @@ module.exports = function (grunt) {
             sass: {
                 files: ['work/scss/**/*.scss'],
                 tasks: ['compass:dev']
+            },
+            all: {
+                files: ['**/*'],
+                options: {
+                    livereload: true
+                }
             }
         },
         uglify: {
@@ -50,7 +56,7 @@ module.exports = function (grunt) {
                 options: {
                     sassDir: 'work/scss',
                     cssDir: 'contents/compiled/css',
-                    require: [ 'susy', 'breakpoint' ],
+                    require: ['susy', 'breakpoint'],
                     environment: 'development'
                 }
             }
