@@ -111,9 +111,9 @@ halfdane.moveToDarkness = function (imgData, givenPoints) {
 Das Ergebnis kann sich sehen lassen und die Implementierung ist nicht annähernd so komplex wie die beiden anderen :-)
 Richtig gelungen sind die Bilder dann, wenn die Größe der Punkte abhängig von der Dunkelheit des Ausgangsbildes gewählt wird:
 
-- |image|pointillism1.png|Vogel| |
-- |image|pointillism3.png|Kofd| |
-- |image|pointillism4.png|noch ein kopf| |
+- |image|pointillism1.png|Vogel||
+- |image|pointillism3.png|Kofd||
+- |image|pointillism4.png|noch ein kopf||
 
 
 Drumherum schwirrt noch ein bisschen Logik, um ein Bild ins Dokument zu laden und Canvas-Elemente zu erzeugen, aber das wars schon.
@@ -144,7 +144,7 @@ Wie immer hier eine Live-Demo:
 <div class="automaticInput">
     <div class="imageRow">
         <div class="target">
-            ![iris2.jpg](iris2.jpg)
+            |image|iris2.jpg|Ein Nerd||
         </div>
     </div>
 </div>
@@ -157,7 +157,9 @@ Und mit der Möglichkeit, ein eigenes Bild zu nutzen:
     </div>
 </div>
 
-Der Code ist selbstverständlich auch wieder [frei](/about.html#license) verfügbar:
+Der Code ist selbstverständlich auch wieder [frei](/about.html#lizenzen) verfügbar:
 [pointillism.js](/assets/js/pointillism/pointillism.js)
 
 
+|include-js|//code.jquery.com/jquery-1.11.2.min.js|
+|include-js|pointillism.js|

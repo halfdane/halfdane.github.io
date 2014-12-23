@@ -7,10 +7,11 @@ module.exports = (env, callback) ->
             |([^|]*?)\s*\                               # 2. is alt-text
             |\s*([^|]*?)\s*\|                           # everything else is caption
             ///gm, (match, imgUrl, altText, caption) =>
-        console.log("imageUrl", imgUrl)
-        "  <figure class=\"cap-left\">" +
-          "  [![#{altText}](#{@metadata.http_dir}/#{imgUrl})](#{@metadata.http_dir}/#{imgUrl})" +
-          "  <figcaption>#{caption}</figcaption>" +
+        url = if /\/\//.test(imgUrl) then "#{imgUrl}" else "#{@metadata.http_dir}/#{imgUrl}"
+        caption = if /./.test(caption) then "<figcaption>#{caption}</figcaption>" else ""
+        "<figure class=\"cap-left\">" +
+          "  [![#{altText}](#{url})](#{url})" +
+          "  #{caption}" +
           "</figure>"
       super
 

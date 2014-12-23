@@ -1,6 +1,6 @@
 .slideshow {
     position: relative;
-    display: block;
+    display: inline-block;
     margin: 0 auto;
 
     max-width: 30em;
@@ -41,7 +41,7 @@ img {
     z-index: 2;
 }
 
-.slideshow .bss-show img {
+.slideshow figure.bss-show img {
     opacity: 1;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
