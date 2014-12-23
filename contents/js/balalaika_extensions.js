@@ -7,9 +7,9 @@ $.fn.addClass = function (className) {
 };
 
 $.fn.find = function (selector) {
-    return this[0].querySelectorAll(selector);
+    return this.querySelectorAll(selector);
 };
 
 $.fn.findOne = function (selector) {
-    return this[0].querySelector(selector);
+    return this.querySelector(selector);
 };

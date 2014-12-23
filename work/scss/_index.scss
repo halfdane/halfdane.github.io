@@ -1,9 +1,13 @@
 #articles {
     text-align: center;
-    background-color: #0000ff;
 }
 .article.intro {
-    margin-top: 4em;
+    margin-top: 10em;
+
+    &:first-child {
+        margin-top: 0;
+    }
+
     padding-top: 2em;
     display: inline-block;
     text-align: center;
@@ -16,7 +20,6 @@
     @include breakpoint($XL...) {
         width: 80%;
     }
-
 
     .date {
         @include span(12);

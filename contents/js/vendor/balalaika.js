@@ -18,6 +18,19 @@ window.$ = (function (window, document, fn, nsRegAndEvents, id, s_EventListener,
                                                 s() :
                                                 $(document).on('DOMContentLoaded', s) :
                                         s);
+        var t = this,
+            $t = t[0];
+        for (var p in $t) {
+            if (typeof($t[p]) === 'object') {
+                t[p] = $t[p];
+            } else if (typeof($t[p]) === 'function') {
+                (function (clos_p) {
+                    t[clos_p] = function () {
+                        return $t[clos_p].apply($t, arguments);
+                    };
+                } (p));
+            }
+        }
     };
 
     $.i[l = 'prototype'] = ( $.extend = function (obj) {

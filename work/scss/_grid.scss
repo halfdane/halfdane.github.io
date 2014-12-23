@@ -13,7 +13,6 @@ $XL: 600px;
 
 body {
     @include container;
-    @include clearfix;
 }
 
 #articles,
