@@ -6,13 +6,13 @@ module.exports = (env, callback) ->
             |\s*([^|]*?)\                               # 1. parm is url
             |([^|]*?)\s*\                               # 2. is alt-text
             |\s*([^|]*?)\s*\|                           # everything else is caption
-            ///gm, (match, imgUrl, altText, caption) =>
-        url = if /\/\//.test(imgUrl) then "#{imgUrl}" else "#{@metadata.http_dir}/#{imgUrl}"
+            ///gm, (match, matched_url, altText, caption) =>
+        url = if /\/\//.test(matched_url) || /^\//.test(matched_url)  then "#{matched_url}" else "#{@metadata.http_dir}/#{matched_url}"
         caption = if /./.test(caption) then "<figcaption>#{caption}</figcaption>" else ""
-        "<figure class=\"cap-left\">" +
+        "<div class=\"figure_container\"><figure>" +
           "  [![#{altText}](#{url})](#{url})" +
           "  #{caption}" +
-          "</figure>"
+          "</figure></div>"
       super
 
   # register the plugin everywhere in contents

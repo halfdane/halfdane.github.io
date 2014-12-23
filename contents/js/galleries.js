@@ -3,7 +3,7 @@ halfdane.galleries = (function () {
     'use strict';
 
     function init() {
-        $('ul>li>figure').forEach(function (el) {
+        $('ul>li>.figure_container>figure').forEach(function (el) {
             var ul = $(el.parentNode.parentNode);
             /*check if all LIs in this UL consist of a FIGURE*/
 

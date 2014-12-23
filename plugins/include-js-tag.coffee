@@ -4,8 +4,8 @@ module.exports = (env, callback) ->
       # Replace |image|url|alt|caption| with proper html
       @markdown = @markdown.replace ///\|\s*include-js\s*   # detect image information
             \|\s*([^|]*?)\s*\|                                # 1. parm is url
-            ///gm, (match, js_url) =>
-        url = if /\/\//.test(js_url) then "#{js_url}" else "#{@metadata.http_dir}/#{js_url}"
+            ///gm, (match, matched_url) =>
+        url = if /\/\//.test(matched_url) || /^\//.test(matched_url)  then "#{matched_url}" else "#{@metadata.http_dir}/#{matched_url}"
         "<script type=\"text/javascript\" src=\"#{url}\"></script>"
       super
 
