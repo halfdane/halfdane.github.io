@@ -1,5 +1,5 @@
 var halfdane = halfdane || {};
-halfdane.lazyload = (function () {
+halfdane.lazyload = (function ($) {
     'use strict';
 
     var iteration = 0;
@@ -45,4 +45,4 @@ halfdane.lazyload = (function () {
     return {
         init: init
     };
-}());
+}($$));

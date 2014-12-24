@@ -1,4 +1,4 @@
-$.fn.addClass = function (className) {
+$$.fn.addClass = function (className) {
     this.forEach(function (item) {
         var classList = item.classList;
         classList.add.apply(classList, className.split(/\s/));
@@ -6,10 +6,10 @@ $.fn.addClass = function (className) {
     return this;
 };
 
-$.fn.find = function (selector) {
+$$.fn.find = function (selector) {
     return this.querySelectorAll(selector);
 };
 
-$.fn.findOne = function (selector) {
+$$.fn.findOne = function (selector) {
     return this.querySelector(selector);
 };

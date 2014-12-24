@@ -8,7 +8,6 @@
   "plugins": [
     "./plugins/intro-detection.coffee",
     "./plugins/image-tag.coffee",
-    "./plugins/include-js-tag.coffee",
     "./plugins/autotemplate.coffee",
     "./plugins/paginator.coffee"
   ],
