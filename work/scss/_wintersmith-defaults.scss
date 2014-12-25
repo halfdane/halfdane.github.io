@@ -1,13 +1,20 @@
 body {
     font-family: 'Lora', serif;
-    font-size: 21px;
     line-height: 1.52;
     background-color: #f8f8f8;
     text-rendering: optimizeLegibility;
-}
+    margin: 0 auto;
+    font-size: 18px;
 
-.content-wrap {
-    margin: 0 2%;
+    @media (min-width: 900px) {
+        font-size: 21px;
+        max-width: 50em;
+    }
+
+    @media (min-width: 1600px) {
+        font-size: 26px;
+    }
+
 }
 
 body, a {
@@ -136,19 +143,7 @@ footer .about {
 
 /* media queries */
 
-@media (min-width: 1600px) {
-    body { font-size: 26px; }
-}
-
-@media (max-width: 900px) {
-    body { font-size: 18px; }
-}
-
 @media (max-width: 690px) {
-    .content-wrap {
-        width: auto;
-        padding: 0 1em;
-    }
     .header {
         margin: 1em 0;
     }
@@ -161,19 +156,6 @@ footer .about {
     }
     .article {
         margin: 1em 0 2.5em;
-    }
-    .archive {
-        width: 80%;
-        margin: 0 auto;
-    }
-    .archive * {
-        float: none !important;
-        line-height: 1.6 !important;
-        width: auto !important;
-        height: auto !important;
-        text-align: left !important;
-        border: 0 !important;
-        margin: 0 !important;
     }
     footer .nav {
         margin: 1em 0;

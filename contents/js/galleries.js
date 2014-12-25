@@ -3,8 +3,8 @@ halfdane.galleries = (function ($, makeBSS) {
     'use strict';
 
     function prepare() {
-        $('ul>li>figure').forEach(function (el) {
-            var ul = $(el.parentNode.parentNode);
+        $('ul>li>.figure__container>figure').forEach(function (el) {
+            var ul = $(el.parentNode.parentNode.parentNode);
             /*check if all LIs in this UL consist of a FIGURE*/
 
             var opts = {

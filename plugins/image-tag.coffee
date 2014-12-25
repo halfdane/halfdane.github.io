@@ -10,10 +10,10 @@ module.exports = (env, callback) ->
             ///gm, (match, matched_url, altText, caption) =>
         url = if /\/\//.test(matched_url) || /^\//.test(matched_url)  then "#{matched_url}" else "#{@metadata.http_dir}/#{matched_url}"
         caption = if /./.test(caption) then "<figcaption>#{caption}</figcaption>" else ""
-        "<figure>" +
+        "<div class=\"figure__container\"><figure>" +
           "  [![#{altText}](#{url})](#{url})" +
           "  #{caption}" +
-          "</figure>"
+          "</figure></div>"
 
     replaceJavaScriptTags = ->
       @markdown = @markdown.replace ///\|\s*include-js\s*   # detect image information

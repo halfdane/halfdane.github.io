@@ -2,27 +2,33 @@ var makeBSS = function (el, options) {
     var $slideshow = {},
             Slideshow = {
                 init: function (el, options) {
-                    this.counter = 0; // to keep track of current slide
-                    this.el = el; // current slideshow container
-                    this.$items = el.querySelectorAll('li'); // a collection of all of the slides, caching for performance
-                    this.numItems = this.$items.length; // total number of slides
+                    var me=this;
+                    me.counter = 0; // to keep track of current slide
+                    me.el = el; // current slideshow container
+                    me.$items = el.querySelectorAll('.figure__container'); // a collection of all of the slides, caching for performance
+                    me.numItems = me.$items.length; // total number of slides
                     options = options || {}; // if options object not passed in, then set to empty object
                     options.auto = options.auto || false; // if options.auto object not passed in, then set to false
-                    this.opts = {
+                    me.opts = {
                         auto: (typeof options.auto === "undefined") ? false : options.auto,
                         speed: (typeof options.auto.speed === "undefined") ? 1500 : options.auto.speed,
                         pauseOnHover: (typeof options.auto.pauseOnHover === "undefined") ? false : options.auto.pauseOnHover,
                         swipe: (typeof options.swipe === "undefined") ? false : options.swipe
                     };
 
-                    this.$items[0].classList.add('bss-show'); // add show class to first figure
-                    this.injectControls(el);
-                    this.addEventListeners(el);
-                    if (this.opts.auto) {
-                        this.autoCycle(this.el, this.opts.speed, this.opts.pauseOnHover);
+                    me.$items[0].classList.add('bss-show'); // add show class to first figure
+
+                    //add controls to all figure containers
+                    [].forEach.call(me.$items, function (el) {
+                        me.injectControls(el);
+                        me.addEventListeners(el);
+                    });
+
+                    if (me.opts.auto) {
+                        me.autoCycle(me.el, me.opts.speed, me.opts.pauseOnHover);
                     }
-                    if (this.opts.swipe) {
-                        this.addSwipe(this.el);
+                    if (me.opts.swipe) {
+                        me.addSwipe(me.el);
                     }
                 },
                 showCurrent: function (i) {
