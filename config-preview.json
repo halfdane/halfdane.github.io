@@ -3,7 +3,8 @@
     "url": "http://localhost:8080",
     "name": "halfdane's Canned Nerd",
     "owner": "halfdane",
-    "description": "Navigate by sight"
+    "description": "Navigate by sight",
+    "lifereload": true
   },
   "plugins": [
     "./plugins/intro-detection.coffee",

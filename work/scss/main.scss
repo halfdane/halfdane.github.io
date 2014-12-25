@@ -1,3 +1,5 @@
+$XL: 600px;
+
 @import "compass";
 @import "breakpoint";
 @import "susy";
@@ -14,25 +16,3 @@
 
 @import "wintersmith-defaults";
 @import "better-simple-slideshow-styles";
-
-/*text behavior*/
-body {
-    font-family: 'Lora', serif;
-    word-wrap: break-word;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    a,
-    a:hover {
-        text-decoration: none;
-        color: #171717;
-    }
-}
-
-.header {
-    text-align: center;
-}
-
-ol {
-    list-style: decimal;
-}
