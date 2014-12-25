@@ -83,7 +83,6 @@ module.exports = function (grunt) {
         'compass:dev',
         'wintersmith:preview'
     ]);
-// Tasks that are called within the "public tasks"
     grunt.registerTask('build', [
         'prebuild',
         'compass:dist',
@@ -91,6 +90,7 @@ module.exports = function (grunt) {
         'postbuild'
     ]);
 
+// Tasks that are called within the "public tasks"
     grunt.registerTask('prebuild', [
         'clean:build'
     ]);
