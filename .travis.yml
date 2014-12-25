@@ -17,12 +17,14 @@ before_install:
 before_script:
 - git config --global user.email "halfdane@gmx.net"
 - git config --global user.name "halfdane"
-- git clone --quiet --branch=master "https://${GH_TOKEN}@github.com/halfdane/halfdane.github.io" _site
+- # git clone --quiet --branch=master "https://${GH_TOKEN}@github.com/halfdane/halfdane.github.io" _site
 script:
 - grunt build
 after_success:
 - cd build
-- git add --all .
-- git commit -m "[ci skip] snapshot $(date '+%m/%d/%y %H:%M')"
-- git push "https://${GH_TOKEN}@github.com/halfdane/halfdane.github.io" master
-- cd ..
+- ls
+- pwd
+- #git add --all .
+- #git commit -m "[ci skip] snapshot $(date '+%m/%d/%y %H:%M')"
+- #git push "https://${GH_TOKEN}@github.com/halfdane/halfdane.github.io" master
+- #cd ..
