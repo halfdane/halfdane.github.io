@@ -1,12 +1,9 @@
-(function() {
+$$(function() {
     'use strict';
 
-    if (halfdane && halfdane.galleries && typeof halfdane.galleries.init === 'function') {
-        window.addEventListener("load", halfdane.galleries.init);
-    }
+    halfdane.galleries.prepare();
 
-    if (halfdane && halfdane.lazyload && typeof halfdane.lazyload.init === 'function') {
-        window.addEventListener("load", halfdane.lazyload.init);
-    }
-}());
+    window.addEventListener("load", halfdane.galleries.init);
+    window.addEventListener("load", halfdane.lazyload.init);
+});
 

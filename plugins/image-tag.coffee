@@ -2,6 +2,7 @@ module.exports = (env, callback) ->
   class CustomTags extends env.plugins.IntroDetection
 
     replaceImageTags = ->
+      # Replace |image|url|alt|caption| with proper html
       @markdown = @markdown.replace ///\|\s*image\s*\   # detect image information
             |\s*([^|]*?)\                               # 1. parm is url
             |([^|]*?)\s*\                               # 2. is alt-text
@@ -22,12 +23,8 @@ module.exports = (env, callback) ->
         "<script type=\"text/javascript\" src=\"#{url}\"></script>"
 
     getHtml: (base = env.config.baseUrl) ->
-      # Replace |image|url|alt|caption| with proper html
       replaceImageTags.call(this)
-      console.log("replacing javascript")
-
       replaceJavaScriptTags.call(this)
-      console.log("DONE")
       super
 
   # register the plugin everywhere in contents

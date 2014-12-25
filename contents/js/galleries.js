@@ -1,38 +1,41 @@
 var halfdane = halfdane || {};
-halfdane.galleries = (function ($) {
+halfdane.galleries = (function ($, makeBSS) {
     'use strict';
 
-    function init() {
+    function prepare() {
         $('ul>li>figure').forEach(function (el) {
             var ul = $(el.parentNode.parentNode);
             /*check if all LIs in this UL consist of a FIGURE*/
+
+            var opts = {
+                //auto-advancing slides? accepts boolean (true/false) or object
+                auto: {
+                    // speed to advance slides at. accepts number of milliseconds
+                    speed: 1000,
+                    // pause advancing on mouseover? accepts boolean
+                    pauseOnHover: true
+                },
+                // support swiping on touch devices? accepts boolean, requires hammer.js
+                swipe: true
+            };
 
             if (ul.is('.slideshow')) {
                 return;
             }
 
-            ul.addClass('slideshow')
-                    .addClass('bss-slides');
+            ul.addClass('slideshow');
+        });
+    }
+
+    function init() {
+        $('.slideshow').forEach(function (el) {
+            makeBSS(el);
         });
 
-        var opts = {
-            //auto-advancing slides? accepts boolean (true/false) or object
-            auto : {
-                // speed to advance slides at. accepts number of milliseconds
-                speed : 1000,
-                // pause advancing on mouseover? accepts boolean
-                pauseOnHover : true
-            },
-            // show fullscreen toggle? accepts boolean
-            fullScreen : true,
-            // support swiping on touch devices? accepts boolean, requires hammer.js
-            swipe : true
-        };
-
-        makeBSS('.slideshow');
     }
 
     return {
-        init: init
+        init: init,
+        prepare: prepare
     };
-}($$));
+}($$, makeBSS));

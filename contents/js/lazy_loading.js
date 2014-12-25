@@ -1,5 +1,5 @@
 var halfdane = halfdane || {};
-halfdane.lazyload = (function ($) {
+halfdane.lazyload = (function ($, sloth, microAjax) {
     'use strict';
 
     var iteration = 0;
@@ -35,14 +35,17 @@ halfdane.lazyload = (function ($) {
     }
 
     function init() {
-        sloth({
-            on: $('#next')[0],
-            threshold: 100,
-            callback: loadNext
-        });
+        var next = $('#next')[0];
+        if (next) {
+            sloth({
+                on: next,
+                threshold: 100,
+                callback: loadNext
+            });
+        }
     }
 
     return {
         init: init
     };
-}($$));
+}($$, sloth, microAjax));

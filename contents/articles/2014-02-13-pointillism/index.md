@@ -5,28 +5,50 @@ tags: [javascript, graphic, canvas]
 image: pointillism1.png
 resources: [/assets/js/pointillism/pointillism.js]
 ---
-Bei meinen Experimenten mit dem Traveling Salesman Problem (Simulated Annealing, Evolutionary und Greedy mit Einsprengseln von Lin-Kernighan/Beppo Straßenkehrer) bin ich für die Anzeige der Graphen immer mal wieder am `canvas` Element vorbeigekommen und habe jetzt eine Ausrede gefunden, mich intensiver damit zu beschäftigen: automatischer Pointillismus.
+Bei meinen Experimenten mit dem Traveling Salesman Problem (Simulated Annealing, Evolutionary und Greedy mit
+Einsprengseln von Lin-Kernighan/Beppo Straßenkehrer) bin ich für die Anzeige der Graphen immer mal wieder am `canvas`
+Element vorbeigekommen und habe jetzt eine Ausrede gefunden, mich intensiver damit zu beschäftigen: automatischer Pointillismus.
 
 |image|http://www.artschoolvets.com/news/wp-content/uploads/2011/12/cochran_graffiti_04.jpg|Moderner Pointillismus von James Cochran|
 Moderner Pointillismus von [James Cochran](http://www.artschoolvets.com/news/2011/12/13/james-cochran-pointillismus-aus-der-spraydose/)
 |
 
-Pointillismus ist die Kunstform, bei der ein Künstler Bilder aus einzelnen Punkten konstruiert. Diese Punkte werden häufig so gesetzt, dass z.B. möglichst wenige oder große eine so starke Ausdruckskraft haben, das Motiv aber dennoch erkennbar ist.
+Pointillismus ist die Kunstform, bei der ein Künstler Bilder aus einzelnen Punkten konstruiert.
+Diese Punkte werden häufig so gesetzt, dass z.B. möglichst wenige oder große eine so starke Ausdruckskraft haben, das Motiv aber dennoch erkennbar ist.
 Industriell findet der Pointillismus seine Anwendung bei der Rasterung von Bildern, unter anderem als Vorstufe für den Druck in Zeitungen. 
 
-Die Rasterung von analogen Bildern für den analogen Druck ist wohlbekannt und erprobt. Algorithmen für digitale Rasterung hingegen sind offenbar nicht Gegenstand intensiver Forschung.
-Genau genommen habe ich zu den Thema überhaupt nur zwei Veröffentlichungen gefunden - vermutlich kommen bei Zeitungen und Magazinen proprietäre (lies: unveröffentlichte) Algorithmen zum Einsatz.
+Die Rasterung von analogen Bildern für den analogen Druck ist wohlbekannt und erprobt.
+Algorithmen für digitale Rasterung hingegen sind offenbar nicht Gegenstand intensiver Forschung.
+Genau genommen habe ich zu den Thema überhaupt nur zwei Veröffentlichungen gefunden - vermutlich kommen bei
+Zeitungen und Magazinen proprietäre (lies: unveröffentlichte) Algorithmen zum Einsatz.
 
-Die erste Veröffentlichung, ["Stippling"](http://roberthodgin.com/stippling/), ist ein globaler Ansatz, der die Punkte als magnetische Kugeln in einem Magnetfeld betrachtet. Die Stärke des Feldes hängt vom ursprünglichen Bild ab, so dass besonders viele Kugeln zu den dunklen Stellen gezogen werden. Verfeinerungen dieser Idee ändern auch für die Größe der Punkte abhängig vom Bild, oder sorgen dafür, dass die Kugeln sich gegenseitig abstoßen, damit nicht zu viele auf einer Stelle enden.
-Obwohl die Implementierung sicherlich ziemlich reizvoll wäre, bin ich letztlich vor der Laufzeit der globalen Kontrolle aller Punkte zurückgeschreckt - das hört sich alles sehr aufwändig und langsam an. Vielleicht mach ich das ja ein anderes mal.
+Die erste Veröffentlichung, ["Stippling"](http://roberthodgin.com/stippling/), ist ein globaler Ansatz, der die
+Punkte als magnetische Kugeln in einem Magnetfeld betrachtet.
+Die Stärke des Feldes hängt vom ursprünglichen Bild ab, so dass besonders viele Kugeln zu den dunklen Stellen gezogen werden.
+Verfeinerungen dieser Idee ändern auch für die Größe der Punkte abhängig vom Bild, oder sorgen dafür, dass die Kugeln sich
+gegenseitig abstoßen, damit nicht zu viele auf einer Stelle enden.
+Obwohl die Implementierung sicherlich ziemlich reizvoll wäre, bin ich letztlich vor der Laufzeit der globalen Kontrolle
+aller Punkte zurückgeschreckt - das hört sich alles sehr aufwändig und langsam an.
+Vielleicht mach ich das ja ein anderes mal.
 
-Die andere Veröffentlichung, ["Weighted Voronoi Stippling"](http://mrl.nyu.edu/~ajsecord/stipples.html), beschäftigt sich mit der Idee ein Gitternetz über dem Bild aufzuspannen und die Knoten Stück für Stück in dunklere Bereiche des Bildes zu verschieben, so dass sich dort die Knoten sammeln. Die Pointillismus-Punkte befinden sich natürlich letztlich an den Knoten. (Genau genommen befinden sie sich im Mittelpunkt der Voronoi-Areale, aber da das genau die Knoten einer Delaunay-Triangulation sind, passt das schon.) Auch hiervor bin ich zurückgeschreckt, wegen des Implementierungsaufwands. Diese spezielle Art von Gitternetz ist überhaupt nicht mein Ding :-)
+Die andere Veröffentlichung, ["Weighted Voronoi Stippling"](http://mrl.nyu.edu/~ajsecord/stipples.html), beschäftigt
+sich mit der Idee ein Gitternetz über dem Bild aufzuspannen und die Knoten Stück für Stück in dunklere Bereiche des
+Bildes zu verschieben, so dass sich dort die Knoten sammeln.
+Die Pointillismus-Punkte befinden sich natürlich letztlich an den Knoten.
+(Genau genommen befinden sie sich im Mittelpunkt der Voronoi-Areale, aber da das genau die Knoten einer Delaunay-Triangulation
+sind, passt das schon.)
+Auch hiervor bin ich zurückgeschreckt, wegen des Implementierungsaufwands.
+Mit dieser speziellen Art von Gitternetz habe ich schon für meine Diplomarbeit gekämpft und finde nach wie vor:
+die ist überhaupt nicht mein Ding :-)
 
-Ich habe mich für eine dritte Variante entschieden, die zwar nicht ganz so gute Ergebnisse liefert wie die Gitternetz-Version, dafür aber schneller ist und nicht annähernd die algorithmische Komplexität hat.
-Soweit ich weiß, gibt es bislang noch keine Veröffentlichung dieser Variante, also handelt es sich was mich angeht um meine eigene Erfindung (yay \o/,  mein erster eigener Algorithmus - vielleicht nenne ich ihn Hinnerk).
+Ich habe mich für eine dritte Variante entschieden, die zwar nicht ganz so gute Ergebnisse liefert wie die
+Gitternetz-Version, dafür aber schneller ist und nicht annähernd die algorithmische Komplexität hat.
+Soweit ich weiß, gibt es bislang noch keine Veröffentlichung dieser Variante, also handelt es sich was mich angeht
+um meine eigene Erfindung (yay \o/,  mein erster eigener Algorithmus - vielleicht nenne ich ihn Hinnerk).
 
 ## Beschreibung
-Eine beliebige Menge von Punkten wird zufällig verteilt, wobei dunklere Bereiche des Bildes bevorzugt werden. Doppelte Punkte werden durch die `pointsMap` verhindert:
+Eine beliebige Menge von Punkten wird zufällig verteilt, wobei dunklere Bereiche des Bildes bevorzugt werden.
+Doppelte Punkte werden durch die `pointsMap` verhindert:
 
 ```javascript
 function luminosity(imgData, index) {
@@ -74,9 +96,13 @@ halfdane.generateRandomPointset = function (imgData, expectedPointAmount) {
 };
 ```
 
-Um klarere Konturen zu bekommen, kann in einem vorhergehenden Schritt der Kontrast erhöht werden oder andere Effekte wie Embossing zum Einsatz kommen. Bei meinen Bildern reichte bislang aber der Kontrast. 
+Um klarere Konturen zu bekommen, kann in einem vorhergehenden Schritt der Kontrast erhöht werden oder andere Effekte
+wie Embossing zum Einsatz kommen.
+Bei meinen Bildern reichte bislang aber der Kontrast.
 
-Bis zu diesem Punkt orientiert sich das Vorgehen an dem in ["Weighted Voronoi Stippling"](http://mrl.nyu.edu/~ajsecord/stipples.html) vorgestellten, aber anstatt die generierten Punkte als Eingabe für ein Voronoi-Gitter zu nutzen und das dann zu glätten, benutze ich eine einfache, modifizierte Kantenerkennung mit einer vergrößerten Matrix.
+Bis zu diesem Punkt orientiert sich das Vorgehen an dem in ["Weighted Voronoi Stippling"](http://mrl.nyu.edu/~ajsecord/stipples.html)
+vorgestellten, aber anstatt die generierten Punkte als Eingabe für ein Voronoi-Gitter zu nutzen und das dann zu glätten,
+benutze ich eine einfache, modifizierte Kantenerkennung mit einer vergrößerten Matrix.
 Damit werden Punkte mit einer gewissen Wahrscheinlichkeit in einen dunkleren Bereich verschoben, so dass sie sich dort sammeln:
 
 ```javascript
@@ -112,9 +138,8 @@ Das Ergebnis kann sich sehen lassen und die Implementierung ist nicht annähernd
 Richtig gelungen sind die Bilder dann, wenn die Größe der Punkte abhängig von der Dunkelheit des Ausgangsbildes gewählt wird:
 
 - |image|pointillism1.png|Vogel||
-- |image|pointillism3.png|Kofd||
+- |image|pointillism3.png|Kopf||
 - |image|pointillism4.png|noch ein kopf||
-
 
 Drumherum schwirrt noch ein bisschen Logik, um ein Bild ins Dokument zu laden und Canvas-Elemente zu erzeugen, aber das wars schon.
 

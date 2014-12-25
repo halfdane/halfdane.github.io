@@ -1,11 +1,10 @@
 var makeBSS = function (el, options) {
-    var $slideshows = document.querySelectorAll(el), // a collection of all of the slideshow
-            $slideshow = {},
+    var $slideshow = {},
             Slideshow = {
                 init: function (el, options) {
                     this.counter = 0; // to keep track of current slide
                     this.el = el; // current slideshow container
-                    this.$items = el.querySelectorAll('figure'); // a collection of all of the slides, caching for performance
+                    this.$items = el.querySelectorAll('li'); // a collection of all of the slides, caching for performance
                     this.numItems = this.$items.length; // total number of slides
                     options = options || {}; // if options object not passed in, then set to empty object
                     options.auto = options.auto || false; // if options.auto object not passed in, then set to false
@@ -13,7 +12,6 @@ var makeBSS = function (el, options) {
                         auto: (typeof options.auto === "undefined") ? false : options.auto,
                         speed: (typeof options.auto.speed === "undefined") ? 1500 : options.auto.speed,
                         pauseOnHover: (typeof options.auto.pauseOnHover === "undefined") ? false : options.auto.pauseOnHover,
-                        fullScreen: (typeof options.fullScreen === "undefined") ? false : options.fullScreen,
                         swipe: (typeof options.swipe === "undefined") ? false : options.swipe
                     };
 
@@ -22,9 +20,6 @@ var makeBSS = function (el, options) {
                     this.addEventListeners(el);
                     if (this.opts.auto) {
                         this.autoCycle(this.el, this.opts.speed, this.opts.pauseOnHover);
-                    }
-                    if (this.opts.fullScreen) {
-                        this.addFullScreen(this.el);
                     }
                     if (this.opts.swipe) {
                         this.addSwipe(this.el);
@@ -104,16 +99,6 @@ var makeBSS = function (el, options) {
                     } // end pauseonhover
 
                 },
-                addFullScreen: function(el){
-                    var that = this,
-                            fsControl = document.createElement("span");
-
-                    fsControl.classList.add('bss-fullscreen');
-                    el.appendChild(fsControl);
-                    el.querySelector('.bss-fullscreen').addEventListener('click', function () {
-                        that.toggleFullScreen(el);
-                    }, false);
-                },
                 addSwipe: function(el){
                     var that = this,
                             ht = new Hammer(el);
@@ -123,39 +108,11 @@ var makeBSS = function (el, options) {
                     ht.on('swipeleft', function(e) {
                         that.showCurrent(1); // increment & show
                     });
-                },
-                toggleFullScreen: function(el){
-                    // https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Using_full_screen_mode
-                    if (!document.fullscreenElement &&    // alternative standard method
-                            !document.mozFullScreenElement && !document.webkitFullscreenElement &&
-                            !document.msFullscreenElement ) {  // current working methods
-                        if (document.documentElement.requestFullscreen) {
-                            el.requestFullscreen();
-                        } else if (document.documentElement.msRequestFullscreen) {
-                            el.msRequestFullscreen();
-                        } else if (document.documentElement.mozRequestFullScreen) {
-                            el.mozRequestFullScreen();
-                        } else if (document.documentElement.webkitRequestFullscreen) {
-                            el.webkitRequestFullscreen(el.ALLOW_KEYBOARD_INPUT);
-                        }
-                    } else {
-                        if (document.exitFullscreen) {
-                            document.exitFullscreen();
-                        } else if (document.msExitFullscreen) {
-                            document.msExitFullscreen();
-                        } else if (document.mozCancelFullScreen) {
-                            document.mozCancelFullScreen();
-                        } else if (document.webkitExitFullscreen) {
-                            document.webkitExitFullscreen();
-                        }
-                    }
-                } // end toggleFullScreen
+                }
 
             }; // end Slideshow object .....
 
     // make instances of Slideshow as needed
-    [].forEach.call($slideshows, function (el) {
-        $slideshow = Object.create(Slideshow);
-        $slideshow.init(el, options);
-    });
+    $slideshow = Object.create(Slideshow);
+    $slideshow.init(el, options);
 };
