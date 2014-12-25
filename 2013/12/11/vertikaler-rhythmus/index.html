@@ -1,269 +1,184 @@
 <!DOCTYPE html>
-<html lang="de" class="wf-loading">
-<head>
+<html lang="en">
+  <head>
     <meta charset="utf-8">
-    <title>Halfdane's Canned Nerd - Vertikaler Rhythmus</title>
-    
-    <meta name="author" content="Halfdane">
-
-    <!-- Enable responsive viewport -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Le fav and touch icons -->
-    <!-- Update these with your own images
-      <link rel="shortcut icon" href="images/favicon.ico">
-      <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-      <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-      <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
-    -->
-    <!-- atom & rss feed -->
-    <link href="/atom.xml" type="application/atom+xml" rel="alternate"
-          title="Sitewide ATOM Feed">
-    <link href="/rss.xml" type="application/rss+xml" rel="alternate"
-          title="Sitewide RSS Feed">
-
-
-    <style type="text/css">
-        .wf-loading h1, .wf-loading p{ visibility:hidden; }
-        .wf-inactive h1, .wf-inactive p{ visibility:visible;}
-    </style>
-    <script>
-        WebFontConfig = {
-            google: {
-                families: ['Cabin', 'Lobster']
-            }
-        };
-    </script>
-    <!-- Le styles -->
-    <link rel="stylesheet" href="/assets/scss/abovefold-f58bd9ed9c8ee48236f81f47bdeef0b2.css">
-    <script src="//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js" async></script>
-</head>
-
-<body>
-
-<div class="container">
-    <div class="content">
-
-        <!--[if lt IE 9]>
-        <p class="chromeframe">Du benutzt einen <strong>veralteten</strong> Browser. Bitte <a href="http://browsehappy.com/">benutze einen aktuelleren</a>, sonst wird hier nichts richtig funktionieren.</p>
-        <![endif]-->
-
-        <a href="/">
-    <h6>Halfdane's </h6>
-    <h4>Canned Nerd: Navigate by sight</h4>
-</a>
-<!--nav>
-    <div class="nav">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vertikaler Rhythmus - halfdane's Canned Nerd
+    </title>
+    <link rel="alternate" href="http://localhost:8080/feed.xml" type="application/rss+xml" title="Navigate by sight">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300">
+    <link rel="stylesheet" href="/compiled/css/main.css"><link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="/js/vendor/balalaika.js"></script>
+    <script type="text/javascript" src="/js/vendor/hammer.js"></script>
+    <script type="text/javascript" src="/js/vendor/better-simple-slideshow.js"></script>
+    <script type="text/javascript" src="/js/vendor/sloth.js"></script>
+    <script type="text/javascript" src="/js/vendor/microajax.js"></script>
+    <script type="text/javascript" src="/js/balalaika_extensions.js"></script>
+    <script type="text/javascript" src="/js/galleries.js"></script>
+    <script type="text/javascript" src="/js/lazy_loading.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+  </head>
+  <body class="article-detail">
+    <header class="header">
+      <div class="logo">
+        <h2><a href="http://localhost:8080">halfdane's Canned Nerd</a></h2>
+        <p class="description">Navigate by sight</p>
+      </div>
+      <div class="pagination">
         <ul>
-            <li><a href="/about">About</a></li>
-            <li><a href="/zwei">zwo</a></li>
-            <li><a href="/drei">drei</a></li>
+          <li class="prev"><a href="/2013/12/08/jekyll/" title="Jekyll, Markdown &amp; Bilder"><span class="prevTitle">Jekyll, Markdown &amp; Bilder</span><span>&rarr;&nbsp;</span></a></li>
+          <li class="next"><a href="/2014/01/14/buddelfinal/" title="Buddelschiff - das Finale"><span>&larr;&nbsp;</span><span class="nextTitle">Buddelschiff - das Finale</span></a></li>
         </ul>
-    </div>
-</nav-->
-<div class="pagination">
-    <ul>
-        
-        <li class="next"><a href="/2014/01/14/buddelfinal"title="Buddelschiff - das Finale">&larr; <span class="nextTitle">Buddelschiff - das Finale</span><span class="nextWord">Nächster</span></a></li>
-        
-        
-        <li class="prev"><a href="/2013/12/08/jekyll"title="Jekyll, Markdown & Bilder"><span class="prevTitle">Jekyll, Markdown & Bilder</span><span class="prevWord">Voriger</span> &rarr;</a></li>
-        
-    </ul>
-</div>
+      </div>
+      <h1>Vertikaler Rhythmus</h1>
+    </header>
+    <article class="article">
+      <section class="content"><p>[<span class="caps">EDIT</span>: 23.11.2014]
+Dieser Artikel ist inzwischen veraltet, da ich mir nach dem Umzug von Jekyll auf Wintersmith nicht mehr die Mühe gemacht habe, nochmal einen vertikalen Rhytmus zu etablieren.
+Der Vollständigkeit halber bleibt der eigentliche Artikel hier natürlich immer noch erhalten.&nbsp;[END]</p>
+<p>Was von vielen kompetenten Designern offenbar für sehr wichtig gehalten wird, ist der vertikale Rhythmus, also das Ausrichten der Schriftzeilen (und der anderen Elemente) an einem konsistenten Raster, nämlich genau den Schrifzeilen eines regulären Absatzes. Dazu muss man so crazy Dinge machen wie die Baseline berechnen (gewünschte Höhe der Schrift durch Höhe der Zeilen teilen), für Überschriften eine Skalierung nach dem goldenen Schnitt berechnen (und zwar für jedes Überschriften-Level einzeln) und einen unteren Margin an Überschriften- und Absatz-Elemente hängen, der genau so abgepasst ist, dass die nächste Schriftzeile ins Raster&nbsp;passt.</p>
+<div class="figure__container"><figure>  <a href="/articles/2013-12-11-vertikaler-rhythmus/baseline.png"><img src="/articles/2013-12-11-vertikaler-rhythmus/baseline.png" alt="Seite mit baseline"></a>  <figcaption>Ausschnitt der Seite im alten Design - die Baseline ist sichbar.</figcaption></figure></div>
 
-<div class="fullpost">
-    <h1>Vertikaler Rhythmus 
-    </h1>
-     <div class="date">– 11 December 2013 –</div>
-    <div class="text">
-        
-        <p>Was von vielen kompetenten Designern offenbar für sehr wichtig gehalten wird, ist der vertikale Rhythmus, also das Ausrichten der Schriftzeilen (und der anderen Elemente) an einem konsistenten Raster, nämlich genau den Schrifzeilen eines regulären Absatzes. Dazu muss man so crazy Dinge machen wie die Baseline berechnen (gewünschte Höhe der Schrift durch Höhe der Zeilen teilen), für Überschriften eine Skalierung nach dem goldenen Schnitt berechnen (und zwar für jedes Überschriften-Level einzeln) und einen unteren Margin an Überschriften- und Absatz-Elemente hängen, der genau so abgepasst ist, dass die nächste Schriftzeile ins Raster passt.</p>
-
-<figure class="cap-left p20 left"><a href="/assets/img/baseline.png" title="<p>Ausschnitt der Seite im alten Design - die Baseline ist sichbar.</p>
-" class="lightbox"><img src="/assets/img/loader.gif" data-src="/assets/img/normal/baseline.png" alt="Seite mit baseline"></a><figcaption><p>Ausschnitt der Seite im alten Design - die Baseline ist sichbar.</p>
-</figcaption></figure>
-
-<p>Dazu kommt, dass ich das Raster (und die Schriften) unbedingt in <code class="inline-code">em</code> haben will, damit
+<p>Dazu kommt, dass ich das Raster (und die Schriften) unbedingt in <code>em</code> haben will, damit
 es gut (und mit <a href="http://joshnh.com/2011/07/26/are-you-using-ems-with-your-media-queries/">wenig Aufwand</a>)
 skaliert, wenn ich für die Responsiveness (das wird dann der nächste Eintrag)
 andere Größen benutzen möchte.
 Und die Schriftgröße soll bitte nicht 14 oder 16 sein, sondern eine richtig große Schrift - das
 heißt insbesondere, dass ich keine der fertigen baselines
-von einer anderen Seite klauen kann :/</p>
-
+von einer anderen Seite klauen kann&nbsp;:/</p>
 <p>Puh!</p>
-
 <p>Zum Glück hat <a href="http://joshnh.com/">Joshua Hibbert</a> einen
-<a href="http://joshnh.com/tools/em-baseline-generator.html">wunderbaren Baseline-Generator</a> gebaut, der die Verhältnisse in <code class="inline-code">em</code> und relativen Größen ausdrücken kann! Dankeschön, ich war schon drauf und dran die Idee in die Tonne zu kloppen.</p>
-
-<p>Ich habe 21 Pixel als Schriftgröße und 31 Pixel als Linienabstand gewählt und das generierte CSS
+<a href="http://joshnh.com/tools/em-baseline-generator.html">wunderbaren Baseline-Generator</a> gebaut, der die Verhältnisse in <code>em</code> und relativen Größen ausdrücken kann! Dankeschön, ich war schon drauf und dran die Idee in die Tonne zu&nbsp;kloppen.</p>
+<p>Ich habe 21 Pixel als Schriftgröße und 31 Pixel als Linienabstand gewählt und das generierte <span class="caps">CSS</span>
 einfach direkt übernommen - naja, die Überschriften habe ich dann doch nicht fett gemacht,
 sondern 500 als Gewicht gewählt. Das wäre dann doch zu
-fett gewesen :)</p>
-
-<p>P.S.: Aber ich kann&#39;s natürlich nicht lassen - nachdem ich zu meiner Bestürzung
+fett gewesen&nbsp;:)</p>
+<p>P.S.: Aber ich kann’s natürlich nicht lassen - nachdem ich zu meiner Bestürzung
 feststellen konnte, dass eine prozentuale Fontsize nicht ausreicht, um in responsive-Stufen den
 Rhythmus zu erhalten, hatte ich die Nase voll: die Stylesheets werden jetzt mit
-<a href="http://sass-lang.com/">SASS</a> berechnet.</p>
-
-<p>P.P.S.: Der Erniedrigungen sind kein Ende: jetzt muss ich vor mir selbst auch noch zugeben, dass ich
+<a href="http://sass-lang.com/"><span class="caps">SASS</span></a>&nbsp;berechnet.</p>
+<p><span class="caps">P.P.</span>S.: Der Erniedrigungen sind kein Ende: jetzt muss ich vor mir selbst auch noch zugeben, dass ich
 nicht in der Lage bin, die Baseline-Berechnungen korrekt selbst zu programmieren. Es gibt einfach
 zu viele Sonderfälle für meinen Geschmack: das fängt mit dem seltsamen Verhalten der prozentualen
-Werte an und hört mit dem Kollabieren aneinandergrenzender Margins noch lange nicht auf.</p>
-
-<p>Da ich ohnehin schon SASS dabei hatte, kann ich auch gleich die Baseline-Funktionen von
+Werte an und hört mit dem Kollabieren aneinandergrenzender Margins noch lange nicht&nbsp;auf.</p>
+<p>Da ich ohnehin schon <span class="caps">SASS</span> dabei hatte, kann ich auch gleich die Baseline-Funktionen von
 <a href="http://compass-style.org/reference/compass/typography/vertical_rhythm/">Compass</a> benutzen.
-War immer noch etwas Arbeit, aber jetzt funktioniert&#39;s auf allen Seiten und beim Verkleinern
-(Vergrößern) des Browsers.</p>
+War immer noch etwas Arbeit, aber jetzt funktioniert’s auf allen Seiten und beim Verkleinern
+(Vergrößern) des&nbsp;Browsers.</p>
+<p>Ich benutze das auf allen Seiten des Blogs, und das Raster sieht so aus: <span class="js_baseline_trigger btn">Click for&nbsp;raster</span></p>
+<p>Dank Compass sieht der Baseline-Code nur noch in etwa so&nbsp;aus:</p>
+<pre><code class="lang-scss"><span class="at_rule">@<span class="keyword">import</span> <span class="string">"compass/typography/vertical_rhythm"</span>;</span>
+$<span class="tag">base</span>-<span class="attribute">font-size</span>       <span class="value">: <span class="number">21</span>px;</span>
+$<span class="tag">base</span>-<span class="attribute">line-height</span>     <span class="value">: <span class="number">26</span>px;</span>
+$<span class="value">relative</span>-<span class="attribute">font</span>-sizing<span class="value">: true;</span>
+<span class="at_rule">@<span class="keyword">include</span><span class="preprocessor"> establish-baseline</span>;</span>
 
-<p>Ich benutze das auf allen Seiten des Blogs, und das Raster sieht so aus: <span class="js_baseline_trigger btn">Click for raster</span></p>
+<span class="at_rule">@<span class="keyword">mixin</span><span class="preprocessor"> font</span>($relation, $top:<span class="preprocessor"> 1</span>, $bottom:<span class="preprocessor"> 1</span>) {</span>
+  $px<span class="value">: $relation * $base-font-size;</span>
+  <span class="at_rule">@<span class="keyword">include</span><span class="preprocessor"> adjust-font-size-to</span>($px);</span>
+  <span class="at_rule">@<span class="keyword">include</span><span class="preprocessor"> rhythm</span>($top,<span class="preprocessor"> 0</span>,<span class="preprocessor"> 0</span>, $bottom, $px);</span>
+}
 
-<p>Dank Compass sieht der Baseline-Code nur noch in etwa so aus:</p>
-<div class="highlight"><pre><code class="scss"><a name="line-1"></a><span class="k">@import</span> <span class="s2">&quot;compass/typography/vertical_rhythm&quot;</span><span class="p">;</span>
-<a name="line-2"></a><span class="nv">$base-font-size</span><span class="o">       :</span> <span class="mi">21</span><span class="kt">px</span><span class="p">;</span>
-<a name="line-3"></a><span class="nv">$base-line-height</span><span class="o">     :</span> <span class="mi">26</span><span class="kt">px</span><span class="p">;</span>
-<a name="line-4"></a><span class="nv">$relative-font-sizing</span><span class="o">:</span> <span class="n-Pseudo">true</span><span class="p">;</span>
-<a name="line-5"></a><span class="k">@include</span><span class="nd"> establish-baseline</span><span class="p">;</span>
-<a name="line-6"></a>
-<a name="line-7"></a><span class="k">@mixin</span><span class="nf"> font</span><span class="p">(</span><span class="nv">$relation</span><span class="o">,</span> <span class="nv">$top</span><span class="o">:</span> <span class="mi">1</span><span class="o">,</span> <span class="nv">$bottom</span><span class="o">:</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
-<a name="line-8"></a>  <span class="nv">$px</span><span class="o">:</span> <span class="nv">$relation</span> <span class="o">*</span> <span class="nv">$base-font-size</span><span class="p">;</span>
-<a name="line-9"></a>  <span class="k">@include</span><span class="nd"> adjust-font-size-to</span><span class="p">(</span><span class="nv">$px</span><span class="p">);</span>
-<a name="line-10"></a>  <span class="k">@include</span><span class="nd"> rhythm</span><span class="p">(</span><span class="nv">$top</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="nv">$bottom</span><span class="o">,</span> <span class="nv">$px</span><span class="p">);</span>
-<a name="line-11"></a><span class="p">}</span>
-<a name="line-12"></a>
-<a name="line-13"></a><span class="nt">h1</span> <span class="p">{</span>
-<a name="line-14"></a>  <span class="k">@include</span><span class="nd"> font</span><span class="p">(</span><span class="mi">4</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">1</span><span class="p">);</span>
-<a name="line-15"></a>  <span class="na">text-align</span><span class="o">:</span> <span class="no">center</span><span class="p">;</span>
-<a name="line-16"></a><span class="p">}</span>
-<a name="line-17"></a>
-<a name="line-18"></a><span class="nt">h2</span> <span class="p">{</span>
-<a name="line-19"></a>  <span class="k">@include</span><span class="nd"> font</span><span class="p">(</span><span class="mi">2</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="p">);</span>
-<a name="line-20"></a><span class="p">}</span>
-<a name="line-21"></a>
-<a name="line-22"></a><span class="nt">h3</span> <span class="p">{</span>
-<a name="line-23"></a>  <span class="k">@include</span><span class="nd"> font</span><span class="p">(</span><span class="mi">1</span><span class="mf">.5</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="p">);</span>
-<a name="line-24"></a><span class="p">}</span>
-<a name="line-25"></a>
-<a name="line-26"></a><span class="nt">p</span><span class="o">,</span> <span class="nt">blockquote</span><span class="o">,</span> <span class="nt">figcaption</span><span class="o">,</span> <span class="nt">ul</span><span class="o">,</span> <span class="nt">pre</span><span class="o">,</span> <span class="nt">code</span> <span class="p">{</span>
-<a name="line-27"></a>  <span class="k">@include</span><span class="nd"> font</span><span class="p">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">0</span><span class="p">);</span>
-<a name="line-28"></a><span class="p">}</span>
-<a name="line-29"></a>
-<a name="line-30"></a><span class="nt">small</span> <span class="p">{</span>
-<a name="line-31"></a>  <span class="k">@include</span><span class="nd"> font</span><span class="p">(</span><span class="mi">0</span><span class="mf">.7</span><span class="o">,</span> <span class="mi">0</span><span class="p">);</span>
-<a name="line-32"></a><span class="p">}</span>
-</code></pre></div>
+<span class="tag">h1</span> {
+  <span class="at_rule">@<span class="keyword">include</span><span class="preprocessor"> font</span>(<span class="number">4</span>,<span class="preprocessor"> 0</span>,<span class="preprocessor"> 1</span>);</span>
+  <span class="attribute">text-align</span><span class="value">: center;</span>
+}
+
+<span class="tag">h2</span> {
+  <span class="at_rule">@<span class="keyword">include</span><span class="preprocessor"> font</span>(<span class="number">2</span>,<span class="preprocessor"> 0</span>,<span class="preprocessor"> 0</span>);</span>
+}
+
+<span class="tag">h3</span> {
+  <span class="at_rule">@<span class="keyword">include</span><span class="preprocessor"> font</span>(<span class="number">1.5</span>,<span class="preprocessor"> 0</span>,<span class="preprocessor"> 0</span>);</span>
+}
+
+<span class="tag">p</span>, <span class="tag">blockquote</span>, <span class="tag">figcaption</span>, <span class="tag">ul</span>, <span class="tag">pre</span>, <span class="tag">code</span> {
+  <span class="at_rule">@<span class="keyword">include</span><span class="preprocessor"> font</span>(<span class="number">1</span>,<span class="preprocessor"> 0</span>);</span>
+}
+
+<span class="tag">small</span> {
+  <span class="at_rule">@<span class="keyword">include</span><span class="preprocessor"> font</span>(<span class="number">0.7</span>,<span class="preprocessor"> 0</span>);</span>
+}
+</code></pre>
 <p>Für die sexy Code-Ansicht habe ich dann noch ein bisschen draufgelegt, damit die
 Zebrastreifen hinter den Zeilen automatisch erzeugt werden und oben und unten jeweils eine halbe Zeile
-frei bleibt:</p>
-<div class="highlight"><pre><code class="scss"><a name="line-1"></a><span class="nt">pre</span> <span class="p">{</span>
-<a name="line-2"></a>  <span class="cm">/*Ja, das ist übertrieben - sue me!*/</span>
-<a name="line-3"></a>  <span class="na">font-family</span><span class="o">:</span> <span class="n">Consolas</span><span class="o">,</span> <span class="s2">&quot;Andale Mono WT&quot;</span><span class="o">,</span> <span class="s2">&quot;Andale Mono&quot;</span><span class="o">,</span> <span class="s2">&quot;Lucida Console&quot;</span><span class="o">,</span> <span class="s2">&quot;Lucida Sans Typewriter&quot;</span><span class="o">,</span> <span class="s2">&quot;DejaVu Sans Mono&quot;</span><span class="o">,</span> <span class="s2">&quot;Bitstream Vera Sans Mono&quot;</span><span class="o">,</span> <span class="s2">&quot;Liberation Mono&quot;</span><span class="o">,</span> <span class="s2">&quot;Nimbus Mono L&quot;</span><span class="o">,</span> <span class="n">Monaco</span><span class="o">,</span> <span class="s2">&quot;Courier New&quot;</span><span class="o">,</span> <span class="n">Courier</span><span class="o">,</span> <span class="no">monospace</span><span class="p">;</span>
-<a name="line-4"></a>
-<a name="line-5"></a>  <span class="na">padding</span><span class="o">:</span> <span class="mi">0</span> <span class="mi">0</span><span class="mf">.8</span><span class="kt">rem</span> <span class="mi">0</span> <span class="mi">1</span><span class="mf">.2</span><span class="kt">rem</span><span class="p">;</span>
-<a name="line-6"></a>  <span class="na">border</span><span class="o">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="no">solid</span> <span class="mh">#ccc</span><span class="p">;</span>
-<a name="line-7"></a>  <span class="na">border-left</span><span class="o">:</span> <span class="mi">1</span><span class="kt">rem</span> <span class="no">solid</span> <span class="mh">#ccc</span><span class="p">;</span>
-<a name="line-8"></a>
-<a name="line-9"></a>  <span class="cm">/*Im Layout oben und unten je eine halbe Zeile Platz*/</span>
-<a name="line-10"></a>  <span class="k">@include</span><span class="nd"> leader</span><span class="p">(</span><span class="mi">0</span><span class="mf">.5</span><span class="o">,</span> <span class="nv">$base-font-size</span><span class="o">,</span> <span class="no">padding</span><span class="p">);</span>
-<a name="line-11"></a>  <span class="k">@include</span><span class="nd"> trailer</span><span class="p">(</span><span class="mi">0</span><span class="mf">.5</span><span class="o">,</span> <span class="nv">$base-font-size</span><span class="o">,</span> <span class="no">padding</span><span class="p">);</span>
-<a name="line-12"></a>
-<a name="line-13"></a>  <span class="cm">/*erst eine Zeile klar, dann eine Zeile Dunkel*/</span>
-<a name="line-14"></a>  <span class="na">background-image</span><span class="o">:</span> <span class="nf">linear-gradient</span><span class="p">(</span><span class="no">transparent</span> <span class="nf">rhythm</span><span class="p">(</span><span class="mi">1</span><span class="o">,</span> <span class="nv">$base-font-size</span><span class="p">)</span><span class="o">,</span> <span class="mh">#ececec</span> <span class="nf">rhythm</span><span class="p">(</span><span class="mi">1</span><span class="o">,</span> <span class="nv">$base-font-size</span><span class="p">));</span>
-<a name="line-15"></a>
-<a name="line-16"></a>  <span class="cm">/*nach zwei Zeilen nicht einfach weiter grau lassen -&gt; repeat*/</span>
-<a name="line-17"></a>  <span class="cm">/*ich hätte zwar erwartet, dass 2 der richtige Wert sein müsse</span>
-<a name="line-18"></a><span class="cm">  (zwei Zeilen), aber da gibt es vielleicht Rundungsfehler*/</span>
-<a name="line-19"></a>  <span class="na">background-size</span><span class="o">:</span> <span class="no">auto</span> <span class="nf">rhythm</span><span class="p">(</span><span class="mi">2</span><span class="mf">.01</span><span class="o">,</span> <span class="nv">$base-font-size</span><span class="p">);</span>
-<a name="line-20"></a>
-<a name="line-21"></a>  <span class="cm">/*den Hintergrund eine halbe Zeile nach unten schieben, damit er zum verschobenen Layout passt */</span>
-<a name="line-22"></a>  <span class="na">background-position</span><span class="o">:</span> <span class="mi">0</span> <span class="nf">rhythm</span><span class="p">(</span><span class="mi">0</span><span class="mf">.5</span><span class="o">,</span> <span class="nv">$base-font-size</span><span class="p">);</span>
-<a name="line-23"></a><span class="p">}</span>
-</code></pre></div>
-<p>Bei der Recherche habe ich einiges an sehr lesenswerten Artikeln gefunden:</p>
+frei&nbsp;bleibt:</p>
+<pre><code class="lang-scss"><span class="tag">pre</span> {
+  <span class="comment">/*Ja, das ist übertrieben - sue me!*/</span>
+  <span class="attribute">font-family</span><span class="value">: Consolas, <span class="string">"Andale Mono <span class="caps">WT</span>"</span>, <span class="string">"Andale Mono"</span>, <span class="string">"Lucida Console"</span>, <span class="string">"Lucida Sans Typewriter"</span>, <span class="string">"DejaVu Sans Mono"</span>, <span class="string">"Bitstream Vera Sans Mono"</span>, <span class="string">"Liberation Mono"</span>, <span class="string">"Nimbus Mono L"</span>, Monaco, <span class="string">"Courier New"</span>, Courier, monospace;</span>
 
+  <span class="attribute">padding</span><span class="value">: <span class="number">0</span> <span class="number">0.8</span>rem <span class="number">0</span> <span class="number">1.2</span>rem;</span>
+  <span class="attribute">border</span><span class="value">: <span class="number">1</span>px solid <span class="hexcolor">#ccc</span>;</span>
+  <span class="attribute">border-left</span><span class="value">: <span class="number">1</span>rem solid <span class="hexcolor">#ccc</span>;</span>
+
+  <span class="comment">/*Im Layout oben und unten je eine halbe Zeile Platz*/</span>
+  <span class="at_rule">@<span class="keyword">include</span><span class="preprocessor"> leader</span>(<span class="number">0.5</span>, $base-font-size,<span class="preprocessor"> padding</span>);</span>
+  <span class="at_rule">@<span class="keyword">include</span><span class="preprocessor"> trailer</span>(<span class="number">0.5</span>, $base-font-size,<span class="preprocessor"> padding</span>);</span>
+
+  <span class="comment">/*erst eine Zeile klar, dann eine Zeile Dunkel*/</span>
+  <span class="attribute">background-image</span><span class="value">: linear-gradient(transparent rhythm(<span class="number">1</span>, $base-font-size), <span class="hexcolor">#ececec</span> rhythm(<span class="number">1</span>, $base-font-size));</span>
+
+  <span class="comment">/*nach zwei Zeilen nicht einfach weiter grau lassen -&gt; repeat*/</span>
+  <span class="comment">/*ich hätte zwar erwartet, dass 2 der richtige Wert sein müsse
+  (zwei Zeilen), aber da gibt es vielleicht Rundungsfehler*/</span>
+  <span class="attribute">background-size</span><span class="value">: auto rhythm(<span class="number">2.01</span>, $base-font-size);</span>
+
+  <span class="comment">/*den Hintergrund eine halbe Zeile nach unten schieben, damit er zum verschobenen Layout passt */</span>
+  <span class="attribute">background-position</span><span class="value">: <span class="number">0</span> rhythm(<span class="number">0.5</span>, $base-font-size);</span>
+}
+</code></pre>
+<p>Bei der Recherche habe ich einiges an sehr lesenswerten Artikeln&nbsp;gefunden:</p>
 <ul>
 <li><a href="http://alistapart.com/article/settingtypeontheweb">http://alistapart.com/article/settingtypeontheweb</a></li>
 <li><a href="http://alistapart.com/article/more-meaningful-typography">http://alistapart.com/article/more-meaningful-typography</a></li>
 <li><a href="http://24ways.org/2006/compose-to-a-vertical-rhythm/">http://24ways.org/2006/compose-to-a-vertical-rhythm/</a></li>
 <li><a href="http://atendesigngroup.com/blog/vertical-rhythm-compass">http://atendesigngroup.com/blog/vertical-rhythm-compass</a></li>
 </ul>
-
-    </div>
-</div>
-
-<div class="pagination">
-    <hr>
-    <ul>
-        
-        <li class="next"><a href="/2014/01/14/buddelfinal"title="Buddelschiff - das Finale">&larr; <span class="nextTitle">Buddelschiff - das Finale</span><span class="nextWord">Nächster</span></a></li>
-        
-        <li><h6><a href="/about.html">Halfdane's </a></h6><h4><a href="/">Canned Nerd: Navigate by sight</a></h4></li>
-        
-        <li class="prev"><a href="/2013/12/08/jekyll"title="Jekyll, Markdown & Bilder"><span class="prevTitle">Jekyll, Markdown & Bilder</span><span class="prevWord">Voriger</span> &rarr;</a></li>
-        
-    </ul>
-    <hr>
-</div>
-
-
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-    var disqus_developer = 1;
-    var disqus_shortname = 'halfdane'; // required: replace example with your forum shortname
-    
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-
-
-
-    </div>
-    <hr>
+</section>
+    </article>
     <footer>
-        <p>&copy; 2014 <a href="/about.html" >Halfdane</a>
-        </p>
+      <div class="nav">
+        <div class="pagination">
+          <ul>
+            <li class="prev"><a href="/2013/12/08/jekyll/" title="Jekyll, Markdown &amp; Bilder"><span class="prevTitle">Jekyll, Markdown &amp; Bilder</span><span>&rarr;&nbsp;</span></a></li>
+            <li class="next"><a href="/2014/01/14/buddelfinal/" title="Buddelschiff - das Finale"><span>&larr;&nbsp;</span><span class="nextTitle">Buddelschiff - das Finale</span></a></li>
+          </ul>
+        </div><a href="/">« Full blog</a>
+      </div>
+      <div id="disqus_thread"></div>
+      <script type="text/javascript">
+        var disqus_shortname = 'halfdane'; // required: replace example with your forum shortname
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a></a>
+      <section class="about">
+        <div class="me">
+          <p>Canned Nerd wird geschrieben und veröffentlicht von halfdane.</p>
+          <p>Mein Name ist halfdane und meine E-Mail-Adresse ist &lt;name>@gmx.net.</p>
+          <p><a href="/about.html">Weitere Informationen</a>.</p>
+        </div>
+        <div class="contents">
+          <p>
+            Ohne weitere Absprachen können alle Inhalte von diesen Seiten von dir für nichtkommerzielle Zwecke genutzt werden, solange du nicht so tust, als wärst du der Urheber
+            (<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/de/">Creative Commons Lizenz</a>).
+          </p>
+        </div>
+        <div class="sources">
+          <p>
+            Alle meine Quelltexte dürfen studiert, benutzt  und weitergegeben werden, solange die Benutzer des abgeleiteten Werks dieselben Rechte behalten
+            (<a href="http://www.gnu.de/documents/gpl.de.html">General Public License v.3</a>).
+          </p>
+        </div>
+      </section>
     </footer>
-</div>
-
-
-<!-- Le styles -->
-<link rel="stylesheet" href="/assets/scss/belowfold-c9281d52ca8c94ad82a03aff26003d9f.css">
-<link rel="stylesheet" href="/assets/css/slideshow-theme-8bfaeab0594cf94b4286cb08232d7ce5.css">
-<link rel="stylesheet" href="/assets/css/syntax-1686e9be87daa1dd7b1a1dcd9ec6d0af.css">
-<link rel="stylesheet" href="/assets/css/magnific-popup-5c518213de081909ec2d80ee51b6f6a0.css">
-
-<script src="/assets/js/jquery-1.10.1.min-439e576b5aca2dde1769817f6bfe9d46.js"></script>
-<script src="/assets/js/swipe-3d6c97b00662ddb84e82d42849144fb6.js"></script>
-<script src="/assets/js/jquery.unveil.min-2d57c578dc9bb0ab26f7c4832ca34900.js"></script>
-<script src="/assets/js/jquery.magnific-popup.min-55abc6966df4017fe577982961ae9c06.js"></script>
-<script src="/assets/js/plugins-48a96cd9bbe985ee92d1ce9cd17326f1.js"></script>
-<script src="/assets/js/equalHeightBlocks-31fd41189b649d2f10824e3c5b13b91c.js"></script>
-<script src="/assets/js/lazyLoadCategories-1d2256a15778b171cf9b3313b1f47517.js"></script>
-<script src="/assets/js/halfdane-b3c47e79f486b17972fbb08aa6d5e480.js"></script>
-
-
-
-
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-48060090-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
-
-
-
-</body>
+  </body>
+  <section class="copy">
+    <p>&copy; 2014 halfdane &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a></p>
+  </section>
 </html>

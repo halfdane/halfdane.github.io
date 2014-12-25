@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>halfdane's Canned Nerd
+    </title>
+    <link rel="alternate" href="http://localhost:8080/feed.xml" type="application/rss+xml" title="Navigate by sight">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300">
+    <link rel="stylesheet" href="/compiled/css/main.css">
+  </head>
+  <body>
+    <section class="content"><p><link href="styles.css" rel="stylesheet"></p>
+<script type="text/javascript" src="picturefill.min.js"></script>
+
+<h1 id="picture-tag">Picture-Tag</h1>
+<p><a href="/responsiveImages/render_stages.html">Zurück zu “Render-Stages”</a>
+<a href="/responsiveImages/picture_tag_different.html">Weiter zu “Picture-Tag -&nbsp;veranschaulicht”</a></p>
+<picture>
+  <source media="(min-width: 800px)" srcset="slideshow_large.jpg">
+  <source media="(min-width: 400px)" srcset="slideshow_medium.jpg">
+  <img src="slideshow_initial.jpg" />
+</picture>
+
+<p>Das Picture-Tag ist ein kommender <span class="caps">HTML</span>-Standard mit Fallback in&nbsp;Javascript.</p>
+<pre><code class="lang-css"><span class="tag">img</span> <span class="rules">{
+  <span class="rule"><span class="attribute">max-width</span>:<span class="value"> <span class="number">100</span>%</span></span>;
+  <span class="rule"><span class="attribute">height</span>:<span class="value"> auto</span></span>;
+<span class="rule">}</span></span>
+</code></pre>
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">picture</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">source</span> <span class="attribute">media</span>=<span class="value">"(min-width: 800px)"</span> <span class="attribute">srcset</span>=<span class="value">"slideshow_large.jpg"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">source</span> <span class="attribute">media</span>=<span class="value">"(min-width: 400px)"</span> <span class="attribute">srcset</span>=<span class="value">"slideshow_medium.jpg"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"slideshow_initial.jpg"</span> /&gt;</span>
+<span class="tag">&lt;/<span class="title">picture</span>&gt;</span>
+</code></pre>
+</section>
+  </body>
+</html>

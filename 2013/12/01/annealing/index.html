@@ -1,432 +1,181 @@
 <!DOCTYPE html>
-<html lang="de" class="wf-loading">
-<head>
+<html lang="en">
+  <head>
     <meta charset="utf-8">
-    <title>Halfdane's Canned Nerd - TSP in JavaScript (Simulated Annealing)</title>
-    
-    <meta name="description" content="">
-    
-    <meta name="author" content="Halfdane">
-
-    <!-- Enable responsive viewport -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Le fav and touch icons -->
-    <!-- Update these with your own images
-      <link rel="shortcut icon" href="images/favicon.ico">
-      <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-      <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-      <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
-    -->
-    <!-- atom & rss feed -->
-    <link href="/atom.xml" type="application/atom+xml" rel="alternate"
-          title="Sitewide ATOM Feed">
-    <link href="/rss.xml" type="application/rss+xml" rel="alternate"
-          title="Sitewide RSS Feed">
-
-
-    <style type="text/css">
-        .wf-loading h1, .wf-loading p{ visibility:hidden; }
-        .wf-inactive h1, .wf-inactive p{ visibility:visible;}
-    </style>
-    <script>
-        WebFontConfig = {
-            google: {
-                families: ['Cabin', 'Lobster']
-            }
-        };
-    </script>
-    <!-- Le styles -->
-    <link rel="stylesheet" href="/assets/scss/abovefold-f58bd9ed9c8ee48236f81f47bdeef0b2.css">
-    <script src="//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js" async></script>
-</head>
-
-<body>
-
-<div class="container">
-    <div class="content">
-
-        <!--[if lt IE 9]>
-        <p class="chromeframe">Du benutzt einen <strong>veralteten</strong> Browser. Bitte <a href="http://browsehappy.com/">benutze einen aktuelleren</a>, sonst wird hier nichts richtig funktionieren.</p>
-        <![endif]-->
-
-        <a href="/">
-    <h6>Halfdane's </h6>
-    <h4>Canned Nerd: Navigate by sight</h4>
-</a>
-<!--nav>
-    <div class="nav">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TSP in JavaScript (Simulated Annealing) - halfdane's Canned Nerd
+    </title>
+    <link rel="alternate" href="http://localhost:8080/feed.xml" type="application/rss+xml" title="Navigate by sight">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300">
+    <link rel="stylesheet" href="/compiled/css/main.css"><link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="/js/vendor/balalaika.js"></script>
+    <script type="text/javascript" src="/js/vendor/hammer.js"></script>
+    <script type="text/javascript" src="/js/vendor/better-simple-slideshow.js"></script>
+    <script type="text/javascript" src="/js/vendor/sloth.js"></script>
+    <script type="text/javascript" src="/js/vendor/microajax.js"></script>
+    <script type="text/javascript" src="/js/balalaika_extensions.js"></script>
+    <script type="text/javascript" src="/js/galleries.js"></script>
+    <script type="text/javascript" src="/js/lazy_loading.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+  </head>
+  <body class="article-detail">
+    <header class="header">
+      <div class="logo">
+        <h2><a href="http://localhost:8080">halfdane's Canned Nerd</a></h2>
+        <p class="description">Navigate by sight</p>
+      </div>
+      <div class="pagination">
         <ul>
-            <li><a href="/about">About</a></li>
-            <li><a href="/zwei">zwo</a></li>
-            <li><a href="/drei">drei</a></li>
+          <li class="prev"><a href="/2013/11/23/buddel3/" title="Buddelschiff (3: Segel)"><span class="prevTitle">Buddelschiff (3: Segel)</span><span>&rarr;&nbsp;</span></a></li>
+          <li class="next"><a href="/2013/12/08/jekyll/" title="Jekyll, Markdown &amp; Bilder"><span>&larr;&nbsp;</span><span class="nextTitle">Jekyll, Markdown &amp; Bilder</span></a></li>
         </ul>
-    </div>
-</nav-->
-<div class="pagination">
-    <ul>
-        
-        <li class="next"><a href="/2013/12/08/jekyll"title="Jekyll, Markdown & Bilder">&larr; <span class="nextTitle">Jekyll, Markdown & Bilder</span><span class="nextWord">Nächster</span></a></li>
-        
-        
-        <li class="prev"><a href="/2013/11/23/buddel3"title="Buddelschiff (3: Segel)"><span class="prevTitle">Buddelschiff (3: Segel)</span><span class="prevWord">Voriger</span> &rarr;</a></li>
-        
-    </ul>
-</div>
+      </div>
+      <h1>TSP in JavaScript (Simulated Annealing)</h1>
+    </header>
+    <article class="article">
+      <section class="content"><p>Um meine JavaScript-Kenntnisse zu vertiefen, habe mich daran gemacht einen Graphen aus Knoten und Kanten zu implementieren. Und weil das zu einfach ist, soll darauf das Traveling Salesman Problem gelöst werden&nbsp;:)</p>
+<p>Für das <span class="caps">TSP</span> werden eine Reihe von Punkten (z.B. Städte auf einer Landkarte, können aber auch dreidimensional sein) sortiert. Aber nicht einfach irgendwie, sondern so dass beim Durchgehen der Punkte von einem zum nächsten die zurückgelegte Strecke möglichst kurz ist. Wie ein Handelsreisender, der Benzin sparen möchte, daher der Name. Das Problem ist für die Informatik interessant, weil es überraschend schwer ist, es optimal zu lösen. Ein Computer muss bei jedem einzelnen Punkt nämlich erstmal alle anderen Punkte prüfen und schauen, wo der neue an besten hinpasst. Bei vielen Punkten kann die Rechenzeit für eine optimale Lösung mehr Zeit in Anspruch nehmen, als z.B. das Universum existiert. Die Klasse der Probleme, zu der das TSP gehört wird von Profis daher auch “die echt richtig schweren Probleme” genannt. Allerdings ist das Problem nicht nur rein akademisch, sondern unter anderem für Logistik-Unternehmen relevant, also für den Post- oder Hermesboten oder für Containerschiffe. Die benutzen für ihre Tourenoptimierung dann keine optimalen Lösungen (keine Zeit), sondern Annäherungen, die “gut genug” sind. Und da gibt es einen ganzen Sack von Strategien, die ausgesprochen spannend sind - natürlich für eine ganz persönliche Definition von “spannend”&nbsp;:-D</p>
+<p>An einige Algorithmen dazu kann ich mich noch ganz gut aus meinem Studium erinnern, aber ehrlich gesagt habe ich nicht so viel Lust, die alten Unterlagen nochmal herauszukramen. Glücklicherweise kann man Inspiration bei <a href="http://www.theprojectspot.com/tutorial-post/simulated-annealing-algorithm-for-beginners/6">the Project Spot</a> finden. Diese Implementierung muss dann ja nur noch nach JavaScript portiert&nbsp;werden.</p>
+<p>Im Kern besteht die Idee darin, paarweise zufällig gewählte Kanten einer Tour zu vertauschen und zu prüfen, ob das Ergebnis besser ist als die bislang beste Tour. Die Wahrscheinlichkeit, dass eine schlechtere Lösung akzeptiert wird (um ein lokales Minimum zu vermeiden) ist direkt abhängig von der&nbsp;“Temperatur”.</p>
+<p>Ausgangspunkt ist eine zufällige&nbsp;Tour.</p>
+<pre><code class="lang-javascript"><span class="function"><span class="keyword">function</span> <span class="title">acceptanceProbability</span><span class="params">(energy,
+                                newEnergy,
+                                temperature)</span> {</span>
+    <span class="comment">// If the new solution is better, accept it</span>
+    <span class="keyword">if</span> (newEnergy &lt; energy) {
+        <span class="keyword">return</span> <span class="number">1.0</span>;
+    }
+    <span class="comment">// If the new solution is worse,</span>
+    <span class="comment">//calculate an acceptance probability</span>
+    <span class="keyword">return</span> <span class="built_in">Math</span>.exp(
+        (energy - newEnergy) / temperature);
+}
+</code></pre>
+<p>Nach jedem Durchgang verringert sich die Temperatur und wenn sie unter 1 gefallen ist, wird das bis dahin beste Ergebnis akzeptiert, daher “Simulated Annealing” - simulierte&nbsp;Erstarrung.</p>
+<pre><code class="lang-javascript"><span class="function"><span class="keyword">function</span> <span class="title">solve</span><span class="params">()</span> {</span>
+    <span class="comment">// Set initial temp</span>
+    <span class="keyword">var</span> temp = <span class="number">10000</span>,
+        <span class="comment">// Cooling rate</span>
+        coolingRate = <span class="number">0.001</span>;
 
-<div class="fullpost">
-    <h1>TSP in JavaScript (Simulated Annealing) 
-    </h1>
-     <div class="date">– 1 December 2013 –</div>
-    <div class="text">
-        
+    ...
 
-    
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-            
-            
-                
-            
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-            
-            
-        
-    
-        
-    
-        
-            
-            
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+    <span class="keyword">while</span> (temp &gt; <span class="number">1</span>) {
 
-    
-    <div class="seriesNote">
-        <p>Dieser Artikel ist <strong>Teil 1</strong> einer <strong>3-teiligen</strong> Serie:</p>
-        <ul>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            <li>Teil 1: Dieser Artikel
-            </li>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            <li>Teil 2: <a href="/2014/01/19/tsp_evolution">TSP in JavaScript (Evolutionary)</a>
-            </li>
-            
-            
-            
-            
-            
-            
-            <li>Teil 3: <a href="/2014/01/31/tsp_greedy">TSP in JavaScript (Greedy)</a>
-            </li>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-        </ul>
-    </div>
-    
+        ...
 
-    
-    
+        <span class="comment">// Cool system</span>
+        temp *= <span class="number">1</span> - coolingRate;
+    }
+}
+</code></pre>
+<p>Drumherum schwirrt noch ein ganzer Sack Code, der für die Liste der Punkte, die Berechnung der euklidischen Distanz zwischen zwei Punkten, die aktuelle Tour, ihre Gesamtlänge und noch viel mehr zuständig&nbsp;ist:</p>
+<pre><code class="lang-javascript">...
+<span class="function"><span class="keyword">function</span> <span class="title">distanceTo</span> <span class="params">(point, otherPoint)</span> {</span>
+    <span class="keyword">var</span> xDistance = <span class="built_in">Math</span>.abs(point.x - otherPoint.x),
+        yDistance = <span class="built_in">Math</span>.abs(point.y - otherPoint.y),
+        <span class="comment">// Skip Math.sqrt - real distance is not</span>
+        <span class="comment">// important, as long as relative distance</span>
+        <span class="comment">// is correct. And it's soo slow!</span>
+        distance = (xDistance * xDistance)
+                + (yDistance * yDistance);
 
-        <p>Um meine JavaScript-Kenntnisse zu vertiefen, habe mich daran gemacht einen Graphen aus Knoten und Kanten zu implementieren. Und weil das zu einfach ist, soll darauf das Traveling Salesman Problem gelöst werden :)</p>
+        <span class="keyword">return</span> distance;
+}
+...
+</code></pre>
+<p>Der ganze Kladderadatsch wird dann mit einem Array von Punkten gefüttert und&nbsp;gestartet:</p>
+<pre><code class="lang-javascript"><span class="keyword">var</span> points = [
+    {x: <span class="number">60</span>, y: <span class="number">200</span>},
+    {x: <span class="number">180</span>, y: <span class="number">200</span>},
+    {x: <span class="number">80</span>, y: <span class="number">180</span>},
+    {x: <span class="number">140</span>, y: <span class="number">180</span>},
+    {x: <span class="number">20</span>, y: <span class="number">160</span>},
+    {x: <span class="number">100</span>, y: <span class="number">160</span>},
+    {x: <span class="number">200</span>, y: <span class="number">160</span>},
+    {x: <span class="number">140</span>, y: <span class="number">140</span>},
+    {x: <span class="number">40</span>, y: <span class="number">120</span>},
+    {x: <span class="number">100</span>, y: <span class="number">120</span>},
+    {x: <span class="number">180</span>, y: <span class="number">100</span>},
+    {x: <span class="number">60</span>, y: <span class="number">80</span>},
+    {x: <span class="number">120</span>, y: <span class="number">80</span>},
+    {x: <span class="number">180</span>, y: <span class="number">60</span>},
+    {x: <span class="number">20</span>, y: <span class="number">40</span>},
+    {x: <span class="number">100</span>, y: <span class="number">40</span>},
+    {x: <span class="number">200</span>, y: <span class="number">40</span>},
+    {x: <span class="number">20</span>, y: <span class="number">20</span>},
+    {x: <span class="number">60</span>, y: <span class="number">20</span>},
+    {x: <span class="number">160</span>, y: <span class="number">20</span>}
+];
 
-<p>Für das TSP werden eine Reihe von Punkten (z.B. Städte auf einer Landkarte, können aber auch dreidimensional sein) sortiert. Aber nicht einfach irgendwie, sondern so dass beim Durchgehen der Punkte von einem zum nächsten die zurückgelegte Strecke möglichst kurz ist. Wie ein Handelsreisender, der Benzin sparen möchte, daher der Name. Das Problem ist für die Informatik interessant, weil es überraschend schwer ist, es optimal zu lösen. Ein Computer muss bei jedem einzelnen Punkt nämlich erstmal alle anderen Punkte prüfen und schauen, wo der neue an besten hinpasst. Bei vielen Punkten kann die Rechenzeit für eine optimale Lösung mehr Zeit in Anspruch nehmen, als z.B. das Universum existiert. Die Klasse der Probleme, zu der das TSP gehört wird von Profis daher auch &quot;die echt richtig schweren Probleme&quot; genannt. Allerdings ist das Problem nicht nur rein akademisch, sondern unter anderem für Logistik-Unternehmen relevant, also für den Post- oder Hermesboten oder für Containerschiffe. Die benutzen für ihre Tourenoptimierung dann keine optimalen Lösungen (keine Zeit), sondern Annäherungen, die &quot;gut genug&quot; sind. Und da gibt es einen ganzen Sack von Strategien, die ausgesprochen spannend sind - natürlich für eine ganz persönliche Definition von &quot;spannend&quot; :-D</p>
+halfdane.tsp.createAnnealing(points).solve();
+</code></pre>
+<p>Insgesamt würde ich beim Anschauen des Ergebnisses sagen: ja, es funktioniert, aber mit den paar Punkten hätte ich das auch manuell machen&nbsp;können.</p>
+<div class="figure__container"><figure>  <a href="/articles/2013-12-01-annealing/tsp_before.png"><img src="/articles/2013-12-01-annealing/tsp_before.png" alt="Ausgangstour"></a>  <figcaption>Ausgangstour</figcaption></figure></div>
 
-<p>An einige Algorithmen dazu kann ich mich noch ganz gut aus meinem Studium erinnern, aber ehrlich gesagt habe ich nicht so viel Lust, die alten Unterlagen nochmal herauszukramen. Glücklicherweise kann man Inspiration bei <a href="http://www.theprojectspot.com/tutorial-post/simulated-annealing-algorithm-for-beginners/6">the Project Spot</a> finden. Diese Implementierung muss dann ja nur noch nach JavaScript portiert werden.</p>
+<div class="figure__container"><figure>  <a href="/articles/2013-12-01-annealing/tsp_annealing.png"><img src="/articles/2013-12-01-annealing/tsp_annealing.png" alt="Ergebnis"></a>  <figcaption>Nach der simulierten Erstarrung</figcaption></figure></div>
 
-<p>Im Kern besteht die Idee darin, paarweise zufällig gewählte Kanten einer Tour zu vertauschen und zu prüfen, ob das Ergebnis besser ist als die bislang beste Tour. Die Wahrscheinlichkeit, dass eine schlechtere Lösung akzeptiert wird (um ein lokales Minimum zu vermeiden) ist direkt abhängig von der &quot;Temperatur&quot;.</p>
+<p>Bei größeren Punktmengen (z.B. 100 Punkte) wird die Rechenzeit schon seeehr lang und das Ergebnis ist trotzdem nicht so richtig&nbsp;beeindruckend:</p>
+<div class="figure__container"><figure>  <a href="/articles/2013-12-01-annealing/tsp_before1.png"><img src="/articles/2013-12-01-annealing/tsp_before1.png" alt="Ausgangstour"></a>  <figcaption>100 Punkte vor dem Durchlauf</figcaption></figure></div>
 
-<p>Ausgangspunkt ist eine zufällige Tour.</p>
-<div class="highlight"><pre><code class="javascript"><a name="line-1"></a><span class="kd">function</span> <span class="nx">acceptanceProbability</span><span class="p">(</span><span class="nx">energy</span><span class="p">,</span>
-<a name="line-2"></a>                                <span class="nx">newEnergy</span><span class="p">,</span>
-<a name="line-3"></a>                                <span class="nx">temperature</span><span class="p">)</span> <span class="p">{</span>
-<a name="line-4"></a>    <span class="c1">// If the new solution is better, accept it</span>
-<a name="line-5"></a>    <span class="k">if</span> <span class="p">(</span><span class="nx">newEnergy</span> <span class="o">&lt;</span> <span class="nx">energy</span><span class="p">)</span> <span class="p">{</span>
-<a name="line-6"></a>        <span class="k">return</span> <span class="mf">1.0</span><span class="p">;</span>
-<a name="line-7"></a>    <span class="p">}</span>
-<a name="line-8"></a>    <span class="c1">// If the new solution is worse,</span>
-<a name="line-9"></a>    <span class="c1">//calculate an acceptance probability</span>
-<a name="line-10"></a>    <span class="k">return</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">exp</span><span class="p">(</span>
-<a name="line-11"></a>        <span class="p">(</span><span class="nx">energy</span> <span class="o">-</span> <span class="nx">newEnergy</span><span class="p">)</span> <span class="o">/</span> <span class="nx">temperature</span><span class="p">);</span>
-<a name="line-12"></a><span class="p">}</span>
-</code></pre></div>
-<p>Nach jedem Durchgang verringert sich die Temperatur und wenn sie unter 1 gefallen ist, wird das bis dahin beste Ergebnis akzeptiert, daher &quot;Simulated Annealing&quot; - simulierte Erstarrung.</p>
-<div class="highlight"><pre><code class="javascript"><a name="line-1"></a><span class="kd">function</span> <span class="nx">solve</span><span class="p">()</span> <span class="p">{</span>
-<a name="line-2"></a>    <span class="c1">// Set initial temp</span>
-<a name="line-3"></a>    <span class="kd">var</span> <span class="nx">temp</span> <span class="o">=</span> <span class="mi">10000</span><span class="p">,</span>
-<a name="line-4"></a>        <span class="c1">// Cooling rate</span>
-<a name="line-5"></a>        <span class="nx">coolingRate</span> <span class="o">=</span> <span class="mf">0.001</span><span class="p">;</span>
-<a name="line-6"></a>
-<a name="line-7"></a>    <span class="p">...</span>
-<a name="line-8"></a>
-<a name="line-9"></a>    <span class="k">while</span> <span class="p">(</span><span class="nx">temp</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
-<a name="line-10"></a>
-<a name="line-11"></a>        <span class="p">...</span>
-<a name="line-12"></a>
-<a name="line-13"></a>        <span class="c1">// Cool system</span>
-<a name="line-14"></a>        <span class="nx">temp</span> <span class="o">*=</span> <span class="mi">1</span> <span class="o">-</span> <span class="nx">coolingRate</span><span class="p">;</span>
-<a name="line-15"></a>    <span class="p">}</span>
-<a name="line-16"></a><span class="p">}</span>
-</code></pre></div>
-<p>Drumherum schwirrt noch ein ganzer Sack Code, der für die Liste der Punkte, die Berechnung der euklidischen Distanz zwischen zwei Punkten, die aktuelle Tour, ihre Gesamtlänge und noch viel mehr zuständig ist:</p>
-<div class="highlight"><pre><code class="javascript"><a name="line-1"></a><span class="p">...</span>
-<a name="line-2"></a><span class="kd">function</span> <span class="nx">distanceTo</span> <span class="p">(</span><span class="nx">point</span><span class="p">,</span> <span class="nx">otherPoint</span><span class="p">)</span> <span class="p">{</span>
-<a name="line-3"></a>    <span class="kd">var</span> <span class="nx">xDistance</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">abs</span><span class="p">(</span><span class="nx">point</span><span class="p">.</span><span class="nx">x</span> <span class="o">-</span> <span class="nx">otherPoint</span><span class="p">.</span><span class="nx">x</span><span class="p">),</span>
-<a name="line-4"></a>        <span class="nx">yDistance</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">abs</span><span class="p">(</span><span class="nx">point</span><span class="p">.</span><span class="nx">y</span> <span class="o">-</span> <span class="nx">otherPoint</span><span class="p">.</span><span class="nx">y</span><span class="p">),</span>
-<a name="line-5"></a>        <span class="c1">// Skip Math.sqrt - real distance is not</span>
-<a name="line-6"></a>        <span class="c1">// important, as long as relative distance</span>
-<a name="line-7"></a>        <span class="c1">// is correct. And it&#39;s soo slow!</span>
-<a name="line-8"></a>        <span class="nx">distance</span> <span class="o">=</span> <span class="p">(</span><span class="nx">xDistance</span> <span class="o">*</span> <span class="nx">xDistance</span><span class="p">)</span>
-<a name="line-9"></a>                <span class="o">+</span> <span class="p">(</span><span class="nx">yDistance</span> <span class="o">*</span> <span class="nx">yDistance</span><span class="p">);</span>
-<a name="line-10"></a>
-<a name="line-11"></a>        <span class="k">return</span> <span class="nx">distance</span><span class="p">;</span>
-<a name="line-12"></a><span class="p">}</span>
-<a name="line-13"></a><span class="p">...</span>
-</code></pre></div>
-<p>Der ganze Kladderadatsch wird dann mit einem Array von Punkten gefüttert und gestartet:</p>
-<div class="highlight"><pre><code class="javascript"><a name="line-1"></a><span class="kd">var</span> <span class="nx">points</span> <span class="o">=</span> <span class="p">[</span>
-<a name="line-2"></a>    <span class="p">{</span><span class="nx">x</span><span class="o">:</span> <span class="mi">60</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mi">200</span><span class="p">},</span>
-<a name="line-3"></a>    <span class="p">{</span><span class="nx">x</span><span class="o">:</span> <span class="mi">180</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mi">200</span><span class="p">},</span>
-<a name="line-4"></a>    <span class="p">{</span><span class="nx">x</span><span class="o">:</span> <span class="mi">80</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mi">180</span><span class="p">},</span>
-<a name="line-5"></a>    <span class="p">{</span><span class="nx">x</span><span class="o">:</span> <span class="mi">140</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mi">180</span><span class="p">},</span>
-<a name="line-6"></a>    <span class="p">{</span><span class="nx">x</span><span class="o">:</span> <span class="mi">20</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mi">160</span><span class="p">},</span>
-<a name="line-7"></a>    <span class="p">{</span><span class="nx">x</span><span class="o">:</span> <span class="mi">100</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mi">160</span><span class="p">},</span>
-<a name="line-8"></a>    <span class="p">{</span><span class="nx">x</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mi">160</span><span class="p">},</span>
-<a name="line-9"></a>    <span class="p">{</span><span class="nx">x</span><span class="o">:</span> <span class="mi">140</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mi">140</span><span class="p">},</span>
-<a name="line-10"></a>    <span class="p">{</span><span class="nx">x</span><span class="o">:</span> <span class="mi">40</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mi">120</span><span class="p">},</span>
-<a name="line-11"></a>    <span class="p">{</span><span class="nx">x</span><span class="o">:</span> <span class="mi">100</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mi">120</span><span class="p">},</span>
-<a name="line-12"></a>    <span class="p">{</span><span class="nx">x</span><span class="o">:</span> <span class="mi">180</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mi">100</span><span class="p">},</span>
-<a name="line-13"></a>    <span class="p">{</span><span class="nx">x</span><span class="o">:</span> <span class="mi">60</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mi">80</span><span class="p">},</span>
-<a name="line-14"></a>    <span class="p">{</span><span class="nx">x</span><span class="o">:</span> <span class="mi">120</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mi">80</span><span class="p">},</span>
-<a name="line-15"></a>    <span class="p">{</span><span class="nx">x</span><span class="o">:</span> <span class="mi">180</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mi">60</span><span class="p">},</span>
-<a name="line-16"></a>    <span class="p">{</span><span class="nx">x</span><span class="o">:</span> <span class="mi">20</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mi">40</span><span class="p">},</span>
-<a name="line-17"></a>    <span class="p">{</span><span class="nx">x</span><span class="o">:</span> <span class="mi">100</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mi">40</span><span class="p">},</span>
-<a name="line-18"></a>    <span class="p">{</span><span class="nx">x</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mi">40</span><span class="p">},</span>
-<a name="line-19"></a>    <span class="p">{</span><span class="nx">x</span><span class="o">:</span> <span class="mi">20</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mi">20</span><span class="p">},</span>
-<a name="line-20"></a>    <span class="p">{</span><span class="nx">x</span><span class="o">:</span> <span class="mi">60</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mi">20</span><span class="p">},</span>
-<a name="line-21"></a>    <span class="p">{</span><span class="nx">x</span><span class="o">:</span> <span class="mi">160</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mi">20</span><span class="p">}</span>
-<a name="line-22"></a><span class="p">];</span>
-<a name="line-23"></a>
-<a name="line-24"></a><span class="nx">halfdane</span><span class="p">.</span><span class="nx">tsp</span><span class="p">.</span><span class="nx">createAnnealing</span><span class="p">(</span><span class="nx">points</span><span class="p">).</span><span class="nx">solve</span><span class="p">();</span>
-</code></pre></div>
-<p>Insgesamt würde ich beim Anschauen des Ergebnisses sagen: ja, es funktioniert, aber mit den paar Punkten hätte ich das auch manuell machen können.</p>
+<div class="figure__container"><figure>  <a href="/articles/2013-12-01-annealing/tsp_annealing1.png"><img src="/articles/2013-12-01-annealing/tsp_annealing1.png" alt="Ergebnis"></a>  <figcaption>Die Ergebnistour</figcaption></figure></div>
 
-<figure class="cap-left p20"><a href="/assets/img/tsp_before.png" title="<p>Ausgangstour</p>
-" class="lightbox"><img src="/assets/img/loader.gif" data-src="/assets/img/normal/tsp_before.png" alt="Ausgangstour"></a><figcaption><p>Ausgangstour</p>
-</figcaption></figure>
-
-<figure class="cap-left p20"><a href="/assets/img/tsp_annealing.png" title="<p>Nach der simulierten Erstarrung</p>
-" class="lightbox"><img src="/assets/img/loader.gif" data-src="/assets/img/normal/tsp_annealing.png" alt="Ergebnis"></a><figcaption><p>Nach der simulierten Erstarrung</p>
-</figcaption></figure>
-
-<p>Bei größeren Punktmengen (z.B. 100 Punkte) wird die Rechenzeit schon seeehr lang und das Ergebnis ist trotzdem nicht so richtig beeindruckend:</p>
-
-<figure class="cap-left p20"><a href="/assets/img/tsp_before1.png" title="<p>100 Punkte vor dem Durchlauf</p>
-" class="lightbox"><img src="/assets/img/loader.gif" data-src="/assets/img/normal/tsp_before1.png" alt="Ausgangstour"></a><figcaption><p>100 Punkte vor dem Durchlauf</p>
-</figcaption></figure>
-
-<figure class="cap-left p20"><a href="/assets/img/tsp_annealing1.png" title="<p>Die Ergebnistour</p>
-" class="lightbox"><img src="/assets/img/loader.gif" data-src="/assets/img/normal/tsp_annealing1.png" alt="Ergebnis"></a><figcaption><p>Die Ergebnistour</p>
-</figcaption></figure>
-
-<p>... und das waren jetzt wirklich nur nur 100 Punkte. Ich wollte eigentlich eher 20-mal so viele. Und das soll auf einem Handy laufen, nicht auf einer Workstation :/ Tja, nicht umsonst gehört das TSP zu der Klasse der echt richtig schwierigen Probleme :).</p>
-
-<p>[UPDATE 19.1.2014]</p>
-
-<p>Ich habe den Code jetzt mal eingebunden und eine Live-Demo vorbereitet - mit 20 Punkten, damit es nicht so lange dauert. Tut es natürlich trotzdem :P</p>
-
-<p>Die Ausgabe ist zunächst die initiale Tour und dann bei jeder Verbesserung ein weiteres Bild. Unten im Bild wird die aktuelle Temperatur angezeigt.</p>
-
+<p>… und das waren jetzt wirklich nur nur 100 Punkte. Ich wollte eigentlich eher 20-mal so viele. Und das soll auf einem Handy laufen, nicht auf einer Workstation :/ Tja, nicht umsonst gehört das <span class="caps">TSP</span> zu der Klasse der echt richtig schwierigen Probleme&nbsp;:).</p>
+<p>[<span class="caps">UPDATE</span>&nbsp;19.1.2014]</p>
+<p>Ich habe den Code jetzt mal eingebunden und eine Live-Demo vorbereitet - mit 20 Punkten, damit es nicht so lange dauert. Tut es natürlich trotzdem&nbsp;:P</p>
+<p>Die Ausgabe ist zunächst die initiale Tour und dann bei jeder Verbesserung ein weiteres Bild. Unten im Bild wird die aktuelle Temperatur&nbsp;angezeigt.</p>
 <p><span class="target"></span>
-<span class="btn" onclick="halfdane.tsp.annealingTest(); return false;">Click zum Start</span></p>
-
-<p>Der zugehörige Code ist hier verfügbar:</p>
-
+<span class="btn" onclick="halfdane.tsp.annealingTest(); return false;">Click zum&nbsp;Start</span></p>
+<p>Der zugehörige Code ist hier&nbsp;verfügbar:</p>
 <ul>
-<li><a href="/assets/js/tsp/tspBase.js">Helfer-Funktionen für Distanz und Touren-Verwaltung</a></li>
-<li><a href="/assets/js/tsp/annealingTsp.js">der eigentliche Annealing-Algorithmus</a></li>
+<li><a href="/assets/js/tsp/tspBase.js">Helfer-Funktionen für Distanz und&nbsp;Touren-Verwaltung</a></li>
+<li><a href="/assets/js/tsp/annealingTsp.js">der eigentliche&nbsp;Annealing-Algorithmus</a></li>
 </ul>
-
-    </div>
-</div>
-
-<div class="pagination">
-    <hr>
-    <ul>
-        
-        <li class="next"><a href="/2013/12/08/jekyll"title="Jekyll, Markdown & Bilder">&larr; <span class="nextTitle">Jekyll, Markdown & Bilder</span><span class="nextWord">Nächster</span></a></li>
-        
-        <li><h6><a href="/about.html">Halfdane's </a></h6><h4><a href="/">Canned Nerd: Navigate by sight</a></h4></li>
-        
-        <li class="prev"><a href="/2013/11/23/buddel3"title="Buddelschiff (3: Segel)"><span class="prevTitle">Buddelschiff (3: Segel)</span><span class="prevWord">Voriger</span> &rarr;</a></li>
-        
-    </ul>
-    <hr>
-</div>
-
-
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-    var disqus_developer = 1;
-    var disqus_shortname = 'halfdane'; // required: replace example with your forum shortname
-    
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-
-
-
-    </div>
-    <hr>
+</section>
+    </article>
     <footer>
-        <p>&copy; 2014 <a href="/about.html" >Halfdane</a>
-        </p>
+      <div class="nav">
+        <div class="pagination">
+          <ul>
+            <li class="prev"><a href="/2013/11/23/buddel3/" title="Buddelschiff (3: Segel)"><span class="prevTitle">Buddelschiff (3: Segel)</span><span>&rarr;&nbsp;</span></a></li>
+            <li class="next"><a href="/2013/12/08/jekyll/" title="Jekyll, Markdown &amp; Bilder"><span>&larr;&nbsp;</span><span class="nextTitle">Jekyll, Markdown &amp; Bilder</span></a></li>
+          </ul>
+        </div><a href="/">« Full blog</a>
+      </div>
+      <div id="disqus_thread"></div>
+      <script type="text/javascript">
+        var disqus_shortname = 'halfdane'; // required: replace example with your forum shortname
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a></a>
+      <section class="about">
+        <div class="me">
+          <p>Canned Nerd wird geschrieben und veröffentlicht von halfdane.</p>
+          <p>Mein Name ist halfdane und meine E-Mail-Adresse ist &lt;name>@gmx.net.</p>
+          <p><a href="/about.html">Weitere Informationen</a>.</p>
+        </div>
+        <div class="contents">
+          <p>
+            Ohne weitere Absprachen können alle Inhalte von diesen Seiten von dir für nichtkommerzielle Zwecke genutzt werden, solange du nicht so tust, als wärst du der Urheber
+            (<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/de/">Creative Commons Lizenz</a>).
+          </p>
+        </div>
+        <div class="sources">
+          <p>
+            Alle meine Quelltexte dürfen studiert, benutzt  und weitergegeben werden, solange die Benutzer des abgeleiteten Werks dieselben Rechte behalten
+            (<a href="http://www.gnu.de/documents/gpl.de.html">General Public License v.3</a>).
+          </p>
+        </div>
+      </section>
     </footer>
-</div>
-
-
-<!-- Le styles -->
-<link rel="stylesheet" href="/assets/scss/belowfold-c9281d52ca8c94ad82a03aff26003d9f.css">
-<link rel="stylesheet" href="/assets/css/slideshow-theme-8bfaeab0594cf94b4286cb08232d7ce5.css">
-<link rel="stylesheet" href="/assets/css/syntax-1686e9be87daa1dd7b1a1dcd9ec6d0af.css">
-<link rel="stylesheet" href="/assets/css/magnific-popup-5c518213de081909ec2d80ee51b6f6a0.css">
-
-<script src="/assets/js/jquery-1.10.1.min-439e576b5aca2dde1769817f6bfe9d46.js"></script>
-<script src="/assets/js/swipe-3d6c97b00662ddb84e82d42849144fb6.js"></script>
-<script src="/assets/js/jquery.unveil.min-2d57c578dc9bb0ab26f7c4832ca34900.js"></script>
-<script src="/assets/js/jquery.magnific-popup.min-55abc6966df4017fe577982961ae9c06.js"></script>
-<script src="/assets/js/plugins-48a96cd9bbe985ee92d1ce9cd17326f1.js"></script>
-<script src="/assets/js/equalHeightBlocks-31fd41189b649d2f10824e3c5b13b91c.js"></script>
-<script src="/assets/js/lazyLoadCategories-1d2256a15778b171cf9b3313b1f47517.js"></script>
-<script src="/assets/js/halfdane-b3c47e79f486b17972fbb08aa6d5e480.js"></script>
-
-
-<script src="/assets/js/tsp/tspBase.js" ></script>
-
-<script src="/assets/js/tsp/annealingTsp.js" ></script>
-
-
-
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-48060090-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
-
-
-
-</body>
+  </body>
+  <section class="copy">
+    <p>&copy; 2014 halfdane &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a></p>
+  </section>
 </html>

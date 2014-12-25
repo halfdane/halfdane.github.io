@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>halfdane's Canned Nerd
+    </title>
+    <link rel="alternate" href="http://localhost:8080/feed.xml" type="application/rss+xml" title="Navigate by sight">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300">
+    <link rel="stylesheet" href="/compiled/css/main.css">
+  </head>
+  <body>
+    <section class="content"><p><link href="styles.css" rel="stylesheet"></p>
+<h1 id="verbreiteter-trick-per-javascript-das-source-attribute-ersetzen">Verbreiteter Trick: per JavaScript das Source-Attribute&nbsp;ersetzen</h1>
+<p><a href="/responsiveImages/large_responsive.html">Zurück zu “Max-Width”</a>
+<a href="/responsiveImages/picture_tag.html">Weiter zu “Picture&nbsp;Tag”</a></p>
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"slideshow_veery_small.jpg"</span> <span class="attribute">data-large-url</span>=<span class="value">"slideshow_large.jpg"</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-javascript"><span class="keyword">if</span> (someLargeBreakpoint) {
+    $(<span class="string">'img'</span>).each(<span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>
+      $img=$(<span class="keyword">this</span>);
+      $img.attr(<span class="string">'src'</span>, $img.data(<span class="string">'large-url'</span>));
+    });
+}
+</code></pre>
+<ol>
+<li>Browser erhält die Antwort als lange&nbsp;Zeichenkette</li>
+<li>Zeichenkette wird in Bestandteile zerlegt (Parsen) - parallel: weitere Resourcen holen, z.B. Bilder, <span class="caps">CSS</span> <span class="amp">&amp;</span>&nbsp;<span class="caps">JS</span></li>
+<li>Bestandteile werden zum <span class="caps">DOM</span>-Baum zusammengesetzt und&nbsp;angezeigt</li>
+<li><span class="caps">CSS</span> wird geparsed und&nbsp;angewandt</li>
+<li><span class="caps">JS</span> wird geparsed und&nbsp;ausgeführt</li>
+</ol>
+</section>
+  </body>
+</html>

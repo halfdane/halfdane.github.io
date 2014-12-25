@@ -1,203 +1,120 @@
 <!DOCTYPE html>
-<html lang="de" class="wf-loading">
-<head>
+<html lang="en">
+  <head>
     <meta charset="utf-8">
-    <title>Halfdane's Canned Nerd - Schriften _wirklich_ in Css einbinden</title>
-    
-    <meta name="description" content="">
-    
-    <meta name="author" content="Halfdane">
-
-    <!-- Enable responsive viewport -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Le fav and touch icons -->
-    <!-- Update these with your own images
-      <link rel="shortcut icon" href="images/favicon.ico">
-      <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-      <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-      <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
-    -->
-    <!-- atom & rss feed -->
-    <link href="/atom.xml" type="application/atom+xml" rel="alternate"
-          title="Sitewide ATOM Feed">
-    <link href="/rss.xml" type="application/rss+xml" rel="alternate"
-          title="Sitewide RSS Feed">
-
-
-    <style type="text/css">
-        .wf-loading h1, .wf-loading p{ visibility:hidden; }
-        .wf-inactive h1, .wf-inactive p{ visibility:visible;}
-    </style>
-    <script>
-        WebFontConfig = {
-            google: {
-                families: ['Cabin', 'Lobster']
-            }
-        };
-    </script>
-    <!-- Le styles -->
-    <link rel="stylesheet" href="/assets/scss/abovefold-f58bd9ed9c8ee48236f81f47bdeef0b2.css">
-    <script src="//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js" async></script>
-</head>
-
-<body>
-
-<div class="container">
-    <div class="content">
-
-        <!--[if lt IE 9]>
-        <p class="chromeframe">Du benutzt einen <strong>veralteten</strong> Browser. Bitte <a href="http://browsehappy.com/">benutze einen aktuelleren</a>, sonst wird hier nichts richtig funktionieren.</p>
-        <![endif]-->
-
-        <a href="/">
-    <h6>Halfdane's </h6>
-    <h4>Canned Nerd: Navigate by sight</h4>
-</a>
-<!--nav>
-    <div class="nav">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Schriften _wirklich_ in Css einbinden - halfdane's Canned Nerd
+    </title>
+    <link rel="alternate" href="http://localhost:8080/feed.xml" type="application/rss+xml" title="Navigate by sight">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300">
+    <link rel="stylesheet" href="/compiled/css/main.css"><link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="/js/vendor/balalaika.js"></script>
+    <script type="text/javascript" src="/js/vendor/hammer.js"></script>
+    <script type="text/javascript" src="/js/vendor/better-simple-slideshow.js"></script>
+    <script type="text/javascript" src="/js/vendor/sloth.js"></script>
+    <script type="text/javascript" src="/js/vendor/microajax.js"></script>
+    <script type="text/javascript" src="/js/balalaika_extensions.js"></script>
+    <script type="text/javascript" src="/js/galleries.js"></script>
+    <script type="text/javascript" src="/js/lazy_loading.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+  </head>
+  <body class="article-detail">
+    <header class="header">
+      <div class="logo">
+        <h2><a href="http://localhost:8080">halfdane's Canned Nerd</a></h2>
+        <p class="description">Navigate by sight</p>
+      </div>
+      <div class="pagination">
         <ul>
-            <li><a href="/about">About</a></li>
-            <li><a href="/zwei">zwo</a></li>
-            <li><a href="/drei">drei</a></li>
+          <li class="prev"><a href="/2014/01/19/tsp_evolution/" title="TSP in JavaScript (Evolutionary)"><span class="prevTitle">TSP in JavaScript (Evolutionary)</span><span>&rarr;&nbsp;</span></a></li>
+          <li class="next"><a href="/2014/01/31/tsp_greedy/" title="TSP in JavaScript (Greedy)"><span>&larr;&nbsp;</span><span class="nextTitle">TSP in JavaScript (Greedy)</span></a></li>
         </ul>
-    </div>
-</nav-->
-<div class="pagination">
-    <ul>
-        
-        <li class="next"><a href="/2014/01/31/tsp_greedy"title="TSP in JavaScript (Greedy)">&larr; <span class="nextTitle">TSP in JavaScript (Greedy)</span><span class="nextWord">Nächster</span></a></li>
-        
-        
-        <li class="prev"><a href="/2014/01/19/tsp_evolution"title="TSP in JavaScript (Evolutionary)"><span class="prevTitle">TSP in JavaScript (Evolutionary)</span><span class="prevWord">Voriger</span> &rarr;</a></li>
-        
-    </ul>
-</div>
-
-<div class="fullpost">
-    <h1>Schriften _wirklich_ in Css einbinden 
-    </h1>
-     <div class="date">– 26 January 2014 –</div>
-    <div class="text">
-        
-        <p>Ja ja, embedded fonts in Css sind ein totgerittenes Pferd. Allerdings wird immer nur darüber geredet, wie ein Font-File auf einem Server referenziert wird, am besten auch noch über <a href="http://www.google.com/fonts">Google-Fonts</a> und das ist einfach falsch, denn das ist eigentlich genau das Gegenteil eines eingebetteten Fonts.</p>
-
-<p>Denn so liegt der ja nach wie vor auf dem Server und muss extra mit einem eigenen Request (oder bei Google-Fonts sogar mit zweien) abgeholt werden, bevor er dann im Browser benutzt werden kann. </p>
-
-<p>Für die meisten Seiten ist die Verzögerung durch zwei überflüssige Requests kein Problem, selbst wenn die reine Anzahl von Requests der Hauptgrund für langsame Seiten ist. Die meisten Seiten sind halt trotzdem noch &quot;schnell genug&quot; oder haben nicht genug Publikum. 
-Dummerweise brauchen verschiedene Browser aber auch noch ganz eigene Fonts, so dass man ganz schnell bei zehn bis zwölf unnötigen requests ist, die auch noch jeder für sich fehlschlagen können.</p>
-
-<p>Denn spätestens, wenn man sich vor Augen hält, dass Werbeblocker, Firewalls oder schlechte / langsame Verbindungen (hat da jemand Mobile First gesagt?) das Laden der Schrift auch völlig verhindern können und damit das gesamte Design der Seite plötzlich kaputt ist, wird klar, dass wir die Schriften auf diese Weise eigentlich kein bisschen einbetten, auch wenn wir das gerne behaupten. </p>
-
-<p>Die Lösung wird bei Logos, Favicons und anderen kleinen Bildern schon lange völlig selbstverständlich benutzt: Data-Uri. Damit kann der komplette Inhalt einer Datei direkt im Quelltext anstelle einer Referenz angegeben werden. Damit wird die Css-Datei natürlich um so größer, aber das sind ja Daten, die der Browser ohnehin geladen hätte, nur jetzt ohne separaten Request.</p>
-
-<p>Die Lobster-Schriftart, die ich für Überschriften einsetze, soll eigentlich so eingebunden werden:</p>
-<div class="highlight"><pre><code class="css"><a name="line-1"></a><span class="k">@import</span> <span class="nt">url</span><span class="o">(//</span><span class="nt">fonts</span><span class="nc">.googleapis.com</span><span class="o">/</span><span class="nt">css</span><span class="o">?</span><span class="nt">family</span><span class="o">=</span><span class="nt">Lobster</span><span class="o">)</span><span class="p">;</span>
-</code></pre></div>
-<p>Damit wird eine weitere Css-Datei vom Google-Server geladen, die die Referenz auf die Woff-Datei mit der Schriftart enthält:</p>
-<div class="highlight"><pre><code class="css"><a name="line-1"></a><span class="k">@font-face</span> <span class="p">{</span>
-<a name="line-2"></a>  <span class="nt">font-family</span><span class="o">:</span> <span class="s1">&#39;Lobster&#39;</span><span class="o">;</span>
-<a name="line-3"></a>  <span class="nt">font-style</span><span class="o">:</span> <span class="nt">normal</span><span class="o">;</span>
-<a name="line-4"></a>  <span class="nt">font-weight</span><span class="o">:</span> <span class="nt">400</span><span class="o">;</span>
-<a name="line-5"></a>  <span class="nt">src</span><span class="o">:</span> <span class="nt">local</span><span class="o">(</span><span class="s1">&#39;Lobster&#39;</span><span class="o">),</span> <span class="nt">url</span><span class="o">(</span><span class="nt">http</span><span class="o">://</span><span class="nt">themes</span><span class="nc">.googleusercontent.com</span><span class="o">/</span><span class="nt">static</span><span class="o">/</span><span class="nt">fonts</span><span class="o">/</span><span class="nt">lobster</span><span class="o">/</span><span class="nt">v6</span><span class="o">/</span><span class="nt">MWVf-Rwh4GLQVBEwbyI61Q</span><span class="nc">.woff</span><span class="o">)</span> <span class="nt">format</span><span class="o">(</span><span class="s1">&#39;woff&#39;</span><span class="o">);</span>
-<a name="line-6"></a><span class="p">}</span>
-</code></pre></div>
-<p>Den ersten Request kann man sich sparen, indem man den Code einfach ins eigene css übernimmt. Für den zweiten muss die Datei zunächst base64-encoded werden. </p>
-<div class="highlight"><pre><code class="bash"><a name="line-1"></a>wget <span class="s1">&#39;http://themes.googleusercontent.com/static/fonts/lobster/v6/MWVf-Rwh4GLQVBEwbyI61Q.woff&#39;</span>
-<a name="line-2"></a>base64 -w0 MWVf-Rwh4GLQVBEwbyI61Q.woff &gt; lobster.b64.woff
-</code></pre></div>
-<p>Der String aus der neuen Datei <code class="inline-code">lobster.b64.woff</code> kann nun als Data-Uri im Css benutzt werden :</p>
-<div class="highlight"><pre><code class="css"><a name="line-1"></a><span class="nt">url</span><span class="o">(</span><span class="s1">&#39;data:application/x-font-woff;base64,d09GRgABAAAAAD6sAAwAAAAAdQgAAQABAAAAAAAAAAAAAAAAAAAAAAA.....&#39;</span><span class="o">)</span>
-</code></pre></div>
-<p>Dieselbe Strategie funktioniert natürlich auch mit TrueType-Fonts für Android-Browser. Dort funktioniert&#39;s jetzt endlich auch. Danke, base64.</p>
-
-<p>Und mit <a href="http://sass-lang.com/">SASS</a>, das ist seit den Experimenten mit dem <a href="/2013/12/11/vertikaler-rhythmus/">Vertialen Rhytmus</a> ja ohnehin benutze, ist das sogar noch einfacher, da wird das Encoding der Font-Files automatisch gemacht:</p>
-<div class="highlight"><pre><code class="sass"><a name="line-1"></a><span class="k">@import</span> <span class="s">&quot;compass/css3&quot;;</span>
-<a name="line-2"></a><span class="k">@include</span><span class="nd"> font-face</span><span class="p">(</span>
-<a name="line-3"></a>    <span class="s2">&quot;Cabin&quot;</span><span class="o">,</span>
-<a name="line-4"></a>    <span class="nt">inline-font-files</span><span class="o">(</span>
-<a name="line-5"></a>        <span class="s1">&#39;</span><span class="s2">cabin.woff&#39;</span><span class="o">,</span> <span class="nt">woff</span><span class="o">,</span>
-<a name="line-6"></a>        <span class="s1">&#39;</span><span class="s2">cabin.ttf&#39;</span><span class="o">,</span> <span class="nt">ttf</span><span class="o">),</span>
-<a name="line-7"></a>    <span class="s1">&#39;</span><span class="s2">&#39;</span><span class="o">,</span> <span class="o">//</span> <span class="nt">ie-fallback</span><span class="o">?</span> <span class="nt">DIE</span> <span class="nt">IE7</span><span class="o">,</span> <span class="nt">DIE</span><span class="o">!</span>
-<a name="line-8"></a>    <span class="nt">400</span><span class="o">,</span> <span class="o">//</span> <span class="nt">font-weight</span>
-<a name="line-9"></a>    <span class="nt">normal</span>  <span class="o">//</span> <span class="nt">font-style</span>
-<a name="line-10"></a><span class="o">);</span>
-</code></pre></div>
-    </div>
-</div>
-
-<div class="pagination">
-    <hr>
-    <ul>
-        
-        <li class="next"><a href="/2014/01/31/tsp_greedy"title="TSP in JavaScript (Greedy)">&larr; <span class="nextTitle">TSP in JavaScript (Greedy)</span><span class="nextWord">Nächster</span></a></li>
-        
-        <li><h6><a href="/about.html">Halfdane's </a></h6><h4><a href="/">Canned Nerd: Navigate by sight</a></h4></li>
-        
-        <li class="prev"><a href="/2014/01/19/tsp_evolution"title="TSP in JavaScript (Evolutionary)"><span class="prevTitle">TSP in JavaScript (Evolutionary)</span><span class="prevWord">Voriger</span> &rarr;</a></li>
-        
-    </ul>
-    <hr>
-</div>
-
-
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-    var disqus_developer = 1;
-    var disqus_shortname = 'halfdane'; // required: replace example with your forum shortname
-    
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-
-
-
-    </div>
-    <hr>
+      </div>
+      <h1>Schriften _wirklich_ in Css einbinden</h1>
+    </header>
+    <article class="article">
+      <section class="content"><p>Ja ja, embedded fonts in Css sind ein totgerittenes Pferd. Allerdings wird immer nur darüber geredet, wie ein Font-File auf einem Server referenziert wird, am besten auch noch über <a href="http://www.google.com/fonts">Google-Fonts</a> und das ist einfach falsch, denn das ist eigentlich genau das Gegenteil eines eingebetteten&nbsp;Fonts.</p>
+<p>Denn so liegt der ja nach wie vor auf dem Server und muss extra mit einem eigenen Request (oder bei Google-Fonts sogar mit zweien) abgeholt werden, bevor er dann im Browser benutzt werden&nbsp;kann. </p>
+<p>Für die meisten Seiten ist die Verzögerung durch zwei überflüssige Requests kein Problem, selbst wenn die reine Anzahl von Requests der Hauptgrund für langsame Seiten ist. Die meisten Seiten sind halt trotzdem noch “schnell genug” oder haben nicht genug Publikum. 
+Dummerweise brauchen verschiedene Browser aber auch noch ganz eigene Fonts, so dass man ganz schnell bei zehn bis zwölf unnötigen requests ist, die auch noch jeder für sich fehlschlagen&nbsp;können.</p>
+<p>Denn spätestens, wenn man sich vor Augen hält, dass Werbeblocker, Firewalls oder schlechte / langsame Verbindungen (hat da jemand Mobile First gesagt?) das Laden der Schrift auch völlig verhindern können und damit das gesamte Design der Seite plötzlich kaputt ist, wird klar, dass wir die Schriften auf diese Weise eigentlich kein bisschen einbetten, auch wenn wir das gerne&nbsp;behaupten. </p>
+<p>Die Lösung wird bei Logos, Favicons und anderen kleinen Bildern schon lange völlig selbstverständlich benutzt: Data-Uri. Damit kann der komplette Inhalt einer Datei direkt im Quelltext anstelle einer Referenz angegeben werden. Damit wird die Css-Datei natürlich um so größer, aber das sind ja Daten, die der Browser ohnehin geladen hätte, nur jetzt ohne separaten&nbsp;Request.</p>
+<p>Die Lobster-Schriftart, die ich für Überschriften einsetze, soll eigentlich so eingebunden&nbsp;werden:</p>
+<pre><code class="lang-css"><span class="at_rule">@<span class="keyword">import</span> <span class="function">url(//fonts.googleapis.com/css?family=Lobster)</span></span>;
+</code></pre>
+<p>Damit wird eine weitere Css-Datei vom Google-Server geladen, die die Referenz auf die Woff-Datei mit der Schriftart&nbsp;enthält:</p>
+<pre><code class="lang-css"><span class="at_rule">@<span class="keyword">font-face</span></span> <span class="rules">{
+  <span class="rule"><span class="attribute">font-family</span>:<span class="value"> <span class="string">'Lobster'</span></span></span>;
+  <span class="rule"><span class="attribute">font-style</span>:<span class="value"> normal</span></span>;
+  <span class="rule"><span class="attribute">font-weight</span>:<span class="value"> <span class="number">400</span></span></span>;
+  <span class="rule"><span class="attribute">src</span>:<span class="value"> <span class="function">local(<span class="string">'Lobster'</span>)</span>, <span class="function">url(http://themes.googleusercontent.com/static/fonts/lobster/v6/MWVf-Rwh4GLQVBEwbyI61Q.woff)</span> <span class="function">format(<span class="string">'woff'</span>)</span></span></span>;
+<span class="rule">}</span></span>
+</code></pre>
+<p>Den ersten Request kann man sich sparen, indem man den Code einfach ins eigene css übernimmt. Für den zweiten muss die Datei zunächst base64-encoded&nbsp;werden. </p>
+<pre><code class="lang-bash">wget <span class="string">'http://themes.googleusercontent.com/static/fonts/lobster/v6/MWVf-Rwh4GLQVBEwbyI61Q.woff'</span>
+base64 -w0 MWVf-Rwh4GLQVBEwbyI61Q.woff &gt; lobster.b64.woff
+</code></pre>
+<p>Der String aus der neuen Datei <code>lobster.b64.woff</code> kann nun als Data-Uri im Css benutzt werden&nbsp;:</p>
+<pre><code class="lang-css">url(&#39;data:application/x-font-woff;base64,d09GRgABAAAAAD6sAAwAAAAAdQgAAQABAAAAAAAAAAAAAAAAAAAAAAA.....&#39;)
+</code></pre>
+<p>Dieselbe Strategie funktioniert natürlich auch mit TrueType-Fonts für Android-Browser. Dort funktioniert’s jetzt endlich auch. Danke,&nbsp;base64.</p>
+<p>Und mit <a href="http://sass-lang.com/"><span class="caps">SASS</span></a>, das ist seit den Experimenten mit dem <a href="/2013/12/11/vertikaler-rhythmus/">Vertialen Rhytmus</a> ja ohnehin benutze, ist das sogar noch einfacher, da wird das Encoding der Font-Files automatisch&nbsp;gemacht:</p>
+<pre><code class="lang-sass">@import &quot;compass/css3&quot;;
+@include font-face(
+    &quot;Cabin&quot;,
+    inline-font-files(
+        &#39;cabin.woff&#39;, woff,
+        &#39;cabin.ttf&#39;, ttf),
+    &#39;&#39;, // ie-fallback? DIE IE7, DIE!
+    400, // font-weight
+    normal  // font-style
+);
+</code></pre>
+</section>
+    </article>
     <footer>
-        <p>&copy; 2014 <a href="/about.html" >Halfdane</a>
-        </p>
+      <div class="nav">
+        <div class="pagination">
+          <ul>
+            <li class="prev"><a href="/2014/01/19/tsp_evolution/" title="TSP in JavaScript (Evolutionary)"><span class="prevTitle">TSP in JavaScript (Evolutionary)</span><span>&rarr;&nbsp;</span></a></li>
+            <li class="next"><a href="/2014/01/31/tsp_greedy/" title="TSP in JavaScript (Greedy)"><span>&larr;&nbsp;</span><span class="nextTitle">TSP in JavaScript (Greedy)</span></a></li>
+          </ul>
+        </div><a href="/">« Full blog</a>
+      </div>
+      <div id="disqus_thread"></div>
+      <script type="text/javascript">
+        var disqus_shortname = 'halfdane'; // required: replace example with your forum shortname
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a></a>
+      <section class="about">
+        <div class="me">
+          <p>Canned Nerd wird geschrieben und veröffentlicht von halfdane.</p>
+          <p>Mein Name ist halfdane und meine E-Mail-Adresse ist &lt;name>@gmx.net.</p>
+          <p><a href="/about.html">Weitere Informationen</a>.</p>
+        </div>
+        <div class="contents">
+          <p>
+            Ohne weitere Absprachen können alle Inhalte von diesen Seiten von dir für nichtkommerzielle Zwecke genutzt werden, solange du nicht so tust, als wärst du der Urheber
+            (<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/de/">Creative Commons Lizenz</a>).
+          </p>
+        </div>
+        <div class="sources">
+          <p>
+            Alle meine Quelltexte dürfen studiert, benutzt  und weitergegeben werden, solange die Benutzer des abgeleiteten Werks dieselben Rechte behalten
+            (<a href="http://www.gnu.de/documents/gpl.de.html">General Public License v.3</a>).
+          </p>
+        </div>
+      </section>
     </footer>
-</div>
-
-
-<!-- Le styles -->
-<link rel="stylesheet" href="/assets/scss/belowfold-c9281d52ca8c94ad82a03aff26003d9f.css">
-<link rel="stylesheet" href="/assets/css/slideshow-theme-8bfaeab0594cf94b4286cb08232d7ce5.css">
-<link rel="stylesheet" href="/assets/css/syntax-1686e9be87daa1dd7b1a1dcd9ec6d0af.css">
-<link rel="stylesheet" href="/assets/css/magnific-popup-5c518213de081909ec2d80ee51b6f6a0.css">
-
-<script src="/assets/js/jquery-1.10.1.min-439e576b5aca2dde1769817f6bfe9d46.js"></script>
-<script src="/assets/js/swipe-3d6c97b00662ddb84e82d42849144fb6.js"></script>
-<script src="/assets/js/jquery.unveil.min-2d57c578dc9bb0ab26f7c4832ca34900.js"></script>
-<script src="/assets/js/jquery.magnific-popup.min-55abc6966df4017fe577982961ae9c06.js"></script>
-<script src="/assets/js/plugins-48a96cd9bbe985ee92d1ce9cd17326f1.js"></script>
-<script src="/assets/js/equalHeightBlocks-31fd41189b649d2f10824e3c5b13b91c.js"></script>
-<script src="/assets/js/lazyLoadCategories-1d2256a15778b171cf9b3313b1f47517.js"></script>
-<script src="/assets/js/halfdane-b3c47e79f486b17972fbb08aa6d5e480.js"></script>
-
-
-
-
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-48060090-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
-
-
-
-</body>
+  </body>
+  <section class="copy">
+    <p>&copy; 2014 halfdane &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a></p>
+  </section>
 </html>
