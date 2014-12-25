@@ -22,9 +22,9 @@ script:
 - grunt build
 after_success:
 - cd build
-- ls
-- pwd
-- #git add --all .
-- #git commit -m "[ci skip] snapshot $(date '+%m/%d/%y %H:%M')"
-- #git push "https://${GH_TOKEN}@github.com/halfdane/halfdane.github.io" master
-- #cd ..
+- git init
+- git remote add upstream "https://${GH_TOKEN}@github.com/halfdane/halfdane.github.io"
+- git fetch upstream && git reset upstream/master
+- git add --all .
+- git commit -m "[ci skip] snapshot $(date '+%m/%d/%y %H:%M')"
+- git push -q upstream HEAD:master
