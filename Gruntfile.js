@@ -43,6 +43,7 @@ module.exports = function (grunt) {
             production: {
                 // overwrites the default config above
                 options: {
+                  .  optimize: "uglify" 
                 }
             },
             preview: {
