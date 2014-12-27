@@ -17,16 +17,13 @@ module.exports = function (grunt) {
                 }
             }
         },
-        jshint: {
-            work: ['contents/js/*.js', 'Gruntfile.js']
-        },
         watch: {
             js: {
-                files: ['work/js/**/*.js'],
-                tasks: ['jshint:work']
+                files: ['work/**/*.js'],
+                tasks: ['requirejs']
             },
             sass: {
-                files: ['work/scss/**/*.scss'],
+                files: ['work/**/*.scss'],
                 tasks: ['compass:dev']
             },
             all: {
@@ -36,10 +33,13 @@ module.exports = function (grunt) {
                 }
             }
         },
-        uglify: {
-            production: {
-                files: {
-                    'build/js/output.js': 'contents/js/**/*.js'
+        requirejs: {
+            compile: {
+                options: {
+                    name: "main",
+                    baseUrl: "work/js/",
+                    mainConfigFile: "work/js/main.js",
+                    out: "contents/compiled/js/site.js"
                 }
             }
         },
@@ -70,7 +70,7 @@ module.exports = function (grunt) {
             }
         },
         concurrent: {
-            develop: ['watch', 'preview'],
+            develop: ['watch', 'server'],
             options: {
                 logConcurrentOutput: true
             }
@@ -85,17 +85,21 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-concurrent');
-    grunt.registerTask('develop', ['concurrent:develop']);
+    grunt.loadNpmTasks('grunt-contrib-requirejs');
 
-    grunt.registerTask('preview', [
+    grunt.registerTask('preview', ['concurrent:develop']);
+
+    grunt.registerTask('server', [
         'clean:build',
         'compass:dev',
+        'requirejs:compile',
         'wintersmith:preview'
     ]);
 
     grunt.registerTask('build', [
         'clean:build',
         'compass:dist',
+        'requirejs:compile',
         'wintersmith:production',
         'uglify:production',
         'cssmin:production'
