@@ -68,8 +68,15 @@ module.exports = function (grunt) {
                 src: ['*.css'],
                 dest: 'build/css'
             }
+        },
+        concurrent: {
+            develop: ['watch', 'preview'],
+            options: {
+                logConcurrentOutput: true
+            }
         }
     });
+
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-wintersmith');
     grunt.loadNpmTasks('grunt-contrib-jshint');
@@ -77,25 +84,25 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-concurrent');
+    grunt.registerTask('develop', ['concurrent:develop']);
 
     grunt.registerTask('preview', [
-        'prebuild',
+        'clean:build',
         'compass:dev',
         'wintersmith:preview'
     ]);
     grunt.registerTask('build', [
-        'prebuild',
+        'clean:build',
         'compass:dist',
         'wintersmith:production',
         'postbuild'
     ]);
 
 // Tasks that are called within the "public tasks"
-    grunt.registerTask('prebuild', [
-        'clean:build'
-    ]);
     grunt.registerTask('postbuild', [
         'uglify:production',
         'cssmin:production'
     ]);
+
 };
