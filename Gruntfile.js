@@ -20,7 +20,7 @@ module.exports = function (grunt) {
         watch: {
             js: {
                 files: ['work/**/*.js'],
-                tasks: ['requirejs']
+                tasks: ['requirejs:preview']
             },
             sass: {
                 files: ['work/**/*.scss'],
@@ -34,15 +34,28 @@ module.exports = function (grunt) {
             }
         },
         requirejs: {
-            compile: {
+            options: {
+                name: "main",
+                baseUrl: "work/js/",
+                mainConfigFile: "work/js/main.js",
+                out: "contents/compiled/js/site.js"
+            },
+            production: {
+                // overwrites the default config above
                 options: {
-                    name: "main",
-                    baseUrl: "work/js/",
-                    mainConfigFile: "work/js/main.js",
-                    out: "contents/compiled/js/site.js"
+                }
+            },
+            preview: {
+                // overwrites the default config above
+                options: {
+                    optimize: "none" // no minification
                 }
             }
         },
+
+
+
+
         compass: {
             dist: {
                 options: {
@@ -92,14 +105,14 @@ module.exports = function (grunt) {
     grunt.registerTask('server', [
         'clean:build',
         'compass:dev',
-        'requirejs:compile',
+        'requirejs:preview',
         'wintersmith:preview'
     ]);
 
     grunt.registerTask('build', [
         'clean:build',
         'compass:dist',
-        'requirejs:compile',
+        'requirejs:production',
         'wintersmith:production',
         'uglify:production',
         'cssmin:production'
