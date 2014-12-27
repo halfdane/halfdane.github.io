@@ -1,9 +1,14 @@
-$$(function() {
+/*global define, require */
+require(['vendor/balalaika', 'galleries', 'lazy_loading'], function ($, galleries, lazyload) {
     'use strict';
 
-    halfdane.galleries.prepare();
+    $(function () {
+        galleries.prepare();
 
-    window.addEventListener("load", halfdane.galleries.init);
-    window.addEventListener("load", halfdane.lazyload.init);
+        window.addEventListener("load", galleries.init);
+        window.addEventListener("load", lazyload.init);
+    });
 });
+
+
 
