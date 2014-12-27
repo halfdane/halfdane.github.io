@@ -13,17 +13,14 @@ html(lang='en')
         block title
           = locals.name
       link(rel='alternate', href=locals.url+'/feed.xml', type='application/rss+xml', title=locals.description)
+
       link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300')
       link(rel='stylesheet', href='/compiled/css/main.css')
       <link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
-      script(type="text/javascript" src="/js/vendor/balalaika.js")
-      script(type="text/javascript" src="/js/vendor/hammer.js")
-      script(type="text/javascript" src="/js/vendor/better-simple-slideshow.js")
-      script(type="text/javascript" src="/js/vendor/sloth.js")
-      script(type="text/javascript" src="/js/vendor/microajax.js")
-      script(type="text/javascript" src="/js/balalaika_extensions.js")
-      script(type="text/javascript" src="/js/galleries.js")
-      script(type="text/javascript" src="/js/lazy_loading.js")
+
+      script(type="text/javascript" data-main="/js/main.js" src="/js/vendor/require.js")
+
+
       script(type="text/javascript" src="/js/main.js")
   body(class=bodyclass)
     header.header

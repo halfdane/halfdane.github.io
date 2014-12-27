@@ -1,15 +1,20 @@
-$$.fn.addClass = function (className) {
-    this.forEach(function (item) {
-        var classList = item.classList;
-        classList.add.apply(classList, className.split(/\s/));
-    });
-    return this;
-};
+/*global define, require */
+define(['vendor/balalaika'], function ($) {
+    'use strict';
 
-$$.fn.find = function (selector) {
-    return this.querySelectorAll(selector);
-};
+    $.fn.addClass = function (className) {
+        this.forEach(function (item) {
+            var classList = item.classList;
+            classList.add.apply(classList, className.split(/\s/));
+        });
+        return this;
+    };
 
-$$.fn.findOne = function (selector) {
-    return this.querySelector(selector);
-};
+    $.fn.find = function (selector) {
+        return this.querySelectorAll(selector);
+    };
+
+    $.fn.findOne = function (selector) {
+        return this.querySelector(selector);
+    };
+});

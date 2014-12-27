@@ -1,11 +1,8 @@
-var halfdane = halfdane || {};
-halfdane.lazyload = (function ($, sloth, microAjax) {
+/*global define, require */
+define(['vendor/balalaika', 'vendor/sloth', 'vendor/microajax', 'balalaika_extensions'], function ($, sloth, microAjax) {
     'use strict';
 
-    var iteration = 0;
-
     function loadNext(element){
-
         microAjax($('#next').getAttribute('href'), function (res) {
             var tempDiv = document.createElement('div');
             tempDiv.innerHTML = res;
@@ -48,4 +45,4 @@ halfdane.lazyload = (function ($, sloth, microAjax) {
     return {
         init: init
     };
-}($$, sloth, microAjax));
+});

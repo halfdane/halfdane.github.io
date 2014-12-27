@@ -92,15 +92,11 @@ module.exports = function (grunt) {
         'compass:dev',
         'wintersmith:preview'
     ]);
+
     grunt.registerTask('build', [
         'clean:build',
         'compass:dist',
         'wintersmith:production',
-        'postbuild'
-    ]);
-
-// Tasks that are called within the "public tasks"
-    grunt.registerTask('postbuild', [
         'uglify:production',
         'cssmin:production'
     ]);

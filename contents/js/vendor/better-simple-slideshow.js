@@ -1,8 +1,9 @@
-var makeBSS = function (el, options) {
-    var $slideshow = {},
+define(['vendor/hammer'], function (Hammer) {
+    return function (el, options) {
+        var $slideshow = {},
             Slideshow = {
                 init: function (el, options) {
-                    var me=this;
+                    var me = this;
                     me.counter = 0; // to keep track of current slide
                     me.el = el; // current slideshow container
                     me.$items = el.querySelectorAll('.figure__container'); // a collection of all of the slides, caching for performance
@@ -52,8 +53,8 @@ var makeBSS = function (el, options) {
                     // build and inject prev/next controls
                     // first create all the new elements
                     var spanPrev = document.createElement("span"),
-                            spanNext = document.createElement("span"),
-                            docFrag = document.createDocumentFragment();
+                        spanNext = document.createElement("span"),
+                        docFrag = document.createDocumentFragment();
 
                     // add classes
                     spanPrev.classList.add('bss-prev');
@@ -89,9 +90,9 @@ var makeBSS = function (el, options) {
                 },
                 autoCycle: function (el, speed, pauseOnHover) {
                     var that = this,
-                            interval = window.setInterval(function () {
-                                that.showCurrent(1); // increment & show
-                            }, speed);
+                        interval = window.setInterval(function () {
+                            that.showCurrent(1); // increment & show
+                        }, speed);
 
                     if (pauseOnHover) {
                         el.addEventListener('mouseover', function () {
@@ -105,20 +106,21 @@ var makeBSS = function (el, options) {
                     } // end pauseonhover
 
                 },
-                addSwipe: function(el){
+                addSwipe: function (el) {
                     var that = this,
-                            ht = new Hammer(el);
-                    ht.on('swiperight', function(e) {
+                        ht = new Hammer(el);
+                    ht.on('swiperight', function (e) {
                         that.showCurrent(-1); // decrement & show
                     });
-                    ht.on('swipeleft', function(e) {
+                    ht.on('swipeleft', function (e) {
                         that.showCurrent(1); // increment & show
                     });
                 }
 
             }; // end Slideshow object .....
 
-    // make instances of Slideshow as needed
-    $slideshow = Object.create(Slideshow);
-    $slideshow.init(el, options);
-};
+        // make instances of Slideshow as needed
+        $slideshow = Object.create(Slideshow);
+        $slideshow.init(el, options);
+    };
+});
