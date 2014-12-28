@@ -3,12 +3,11 @@ module.exports = (env, callback) ->
 
     replaceImageTags = ->
       # Replace |image|url|alt|caption| with proper html
-      @markdown = @markdown.replace ///\|\s*image\s*\   # detect image information
-            |\s*([^|]*?)\                               # 1. parm is url
-            |([^|]*?)\s*\                               # 2. is alt-text
-            |\s*([^|]*?)\s*\|                           # everything else is caption
+      @markdown = @markdown.replace ///\|\s*image\s*\|   # detect image information
+            \s*([^|]*?)\s*\|                               # 1. parm is url
+            \s*([^|]*?)\s*\|                               # 2. is alt-text
+            \s*([^|]*?)\s*\|                           # everything else is caption
             ///gm, (match, url, altText, caption) =>
-        console.log("#{url}")
         caption = if /./.test(caption) then "<figcaption>#{caption}</figcaption>" else ""
         "<div class=\"figure__container\"><figure>" +
           "  [![#{altText}](#{url})](#{url})" +

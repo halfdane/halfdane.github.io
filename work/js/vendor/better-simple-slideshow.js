@@ -19,11 +19,9 @@ define(['vendor/hammer'], function (Hammer) {
 
                     me.$items[0].classList.add('bss-show'); // add show class to first figure
 
-                    //add controls to all figure containers
-                    [].forEach.call(me.$items, function (el) {
-                        me.injectControls(el);
-                        me.addEventListeners(el);
-                    });
+                    //add controls
+                    me.injectControls(el);
+                    me.addEventListeners(el);
 
                     if (me.opts.auto) {
                         me.autoCycle(me.el, me.opts.speed, me.opts.pauseOnHover);
