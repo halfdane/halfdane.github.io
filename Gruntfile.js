@@ -20,7 +20,7 @@ module.exports = function (grunt) {
         watch: {
             js: {
                 files: ['work/**/*.js'],
-                tasks: ['requirejs:preview']
+                tasks: ['requirejs']
             },
             sass: {
                 files: ['work/**/*.scss'],
@@ -34,26 +34,16 @@ module.exports = function (grunt) {
             }
         },
         requirejs: {
-            options: {
-                name: "main",
-                baseUrl: "work/js/",
-                mainConfigFile: "work/js/main.js",
-                out: "contents/compiled/js/site.js"
-            },
-            production: {
-                // overwrites the default config above
+            compile: {
                 options: {
-                optimize: "uglify" 
-                }
-            },
-            preview: {
-                // overwrites the default config above
-                options: {
-                    optimize: "none" // no minification
+                    name: "main",
+                    baseUrl: "work/js/",
+                    mainConfigFile: "work/js/main.js",
+                    out: "contents/compiled/js/site.js",
+                    optimize: "none"
                 }
             }
         },
-
         uglify: {
             production: {
                 files: {
@@ -61,14 +51,12 @@ module.exports = function (grunt) {
                 }
             }
         },
-
-
         compass: {
             dist: {
                 options: {
                     sassDir: 'work/scss',
                     cssDir: 'contents/compiled/css',
-                    require: 'susy',
+                    require: ['susy', 'breakpoint'],
                     environment: 'production'
                 }
             },
@@ -112,17 +100,17 @@ module.exports = function (grunt) {
     grunt.registerTask('server', [
         'clean:build',
         'compass:dev',
-        'requirejs:preview',
+        'requirejs',
         'wintersmith:preview'
     ]);
 
     grunt.registerTask('build', [
         'clean:build',
         'compass:dist',
-        'requirejs:production',
-        'wintersmith:production',
+        'requirejs',
         'uglify:production',
-        'cssmin:production'
+        'cssmin:production',
+        'wintersmith:production'
     ]);
 
 };
