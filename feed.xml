@@ -1299,18 +1299,6 @@ Die anderen Apps sind Titanium Backup und das Spiel Osmos.&lt;/p&gt;
 </description>
     </item>
     <item>
-      <title>Tensegrity</title>
-      <link>http://halfdane.github.io/2013/05/24/tensegrity/</link>
-      <pubDate>Fri, 24 May 2013 00:00:00 +0000</pubDate>
-      <guid isPermaLink="true">http://halfdane.github.io/2013/05/24/tensegrity/</guid>
-      <author></author>
-      <description>&lt;p&gt;Nachdem ich bereits vor Wochen auf der MAKE-Webseite über die Anleitung zu einem schnuckeligen, kleinen &lt;a href=&quot;http://makezine.com/2013/04/29/diy-tensegrity/&quot;&gt;Tensegrity-Objekt&lt;/a&gt; gestolpert bin und das erstmal nur bei meiner &lt;a href=&quot;http://www.highdefdigest.com/blog/twin-peaks-cooper-tapes/&quot;&gt;Diane&lt;/a&gt; geparkt habe, hatte ich heute mal eine Viertelstunde Muse:&lt;/p&gt;
-&lt;div class=&quot;figure__container&quot;&gt;&lt;figure&gt;  &lt;a href=&quot;http://halfdane.github.io/articles/2013-05-24-tensegrity/cam00009.jpg&quot;&gt;&lt;img src=&quot;http://halfdane.github.io/articles/2013-05-24-tensegrity/cam00009.jpg&quot; alt=&quot;Tensegrity-Objekt&quot;&gt;&lt;/a&gt;  &lt;figcaption&gt;Das Objekt stellt sich selbstständig auf.&lt;/figcaption&gt;&lt;/figure&gt;&lt;/div&gt;
-
-&lt;p&gt;Funktioniert :-)&lt;/p&gt;
-</description>
-    </item>
-    <item>
       <title>Initiale Position der Seite falsch – a Scrollspy Mystery [solved]</title>
       <link>http://halfdane.github.io/2013/05/24/scrollspymystery/</link>
       <pubDate>Fri, 24 May 2013 00:00:00 +0000</pubDate>
@@ -1322,6 +1310,18 @@ Die anderen Apps sind Titanium Backup und das Spiel Osmos.&lt;/p&gt;
 &lt;p&gt;Letztendlich war der Fehler doch selbstverschuldet: in einer Form in der Mitte der Seite hatte ein Eingabefeld das Attribut “autofocus”, und der Browser hat den Cursor dann dahin gesetzt. Inklusive scrollen.&lt;/p&gt;
 &lt;p&gt;Ein völlig korrektes Verhalten – mit dem Entfernen des Attributes funktioniert die Seite jetzt auch wieder richtig.&lt;/p&gt;
 &lt;p&gt;Das zeigt mir mal wieder, dass es auch mit reinem HTML durchaus möglich ist, das Verhalten der Seite zu zerbrechen – und dass nicht immer die anderen Schuld sind.&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>Tensegrity</title>
+      <link>http://halfdane.github.io/2013/05/24/tensegrity/</link>
+      <pubDate>Fri, 24 May 2013 00:00:00 +0000</pubDate>
+      <guid isPermaLink="true">http://halfdane.github.io/2013/05/24/tensegrity/</guid>
+      <author></author>
+      <description>&lt;p&gt;Nachdem ich bereits vor Wochen auf der MAKE-Webseite über die Anleitung zu einem schnuckeligen, kleinen &lt;a href=&quot;http://makezine.com/2013/04/29/diy-tensegrity/&quot;&gt;Tensegrity-Objekt&lt;/a&gt; gestolpert bin und das erstmal nur bei meiner &lt;a href=&quot;http://www.highdefdigest.com/blog/twin-peaks-cooper-tapes/&quot;&gt;Diane&lt;/a&gt; geparkt habe, hatte ich heute mal eine Viertelstunde Muse:&lt;/p&gt;
+&lt;div class=&quot;figure__container&quot;&gt;&lt;figure&gt;  &lt;a href=&quot;http://halfdane.github.io/articles/2013-05-24-tensegrity/cam00009.jpg&quot;&gt;&lt;img src=&quot;http://halfdane.github.io/articles/2013-05-24-tensegrity/cam00009.jpg&quot; alt=&quot;Tensegrity-Objekt&quot;&gt;&lt;/a&gt;  &lt;figcaption&gt;Das Objekt stellt sich selbstständig auf.&lt;/figcaption&gt;&lt;/figure&gt;&lt;/div&gt;
+
+&lt;p&gt;Funktioniert :-)&lt;/p&gt;
 </description>
     </item>
     <item>
