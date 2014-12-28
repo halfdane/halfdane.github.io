@@ -2,7 +2,7 @@ module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         clean: {
-            build: ['build', 'contents/compiled']
+            build: ['build']
         },
         wintersmith: {
             production: {
@@ -82,6 +82,24 @@ module.exports = function (grunt) {
             options: {
                 logConcurrentOutput: true
             }
+        },
+        responsive_images: {
+            dev: {
+                options: {
+                    engine: "im"
+                },
+                sizes: [
+                    { width: 320},
+                    { width: 640},
+                    { width: 1024, quality: 0.6}
+                ],
+                files: [{
+                    expand: true,
+                    src: ['**/*.{jpg,gif,png}', '!**/*-{small,medium,large}.*'],
+                    cwd: 'contents/',
+                    dest: 'contents/'
+                }]
+            }
         }
     });
 
@@ -94,6 +112,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-concurrent');
     grunt.loadNpmTasks('grunt-contrib-requirejs');
+    grunt.loadNpmTasks('grunt-responsive-images');
 
     grunt.registerTask('preview', ['concurrent:develop']);
 
@@ -101,6 +120,7 @@ module.exports = function (grunt) {
         'clean:build',
         'compass:dev',
         'requirejs',
+        'responsive_images:dev',
         'wintersmith:preview'
     ]);
 
@@ -108,6 +128,7 @@ module.exports = function (grunt) {
         'clean:build',
         'compass:dist',
         'requirejs',
+        'responsive_images:dev',
         'uglify:production',
         'cssmin:production',
         'wintersmith:production'

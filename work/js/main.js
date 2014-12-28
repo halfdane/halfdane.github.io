@@ -1,5 +1,5 @@
 /*global define, require */
-require(['vendor/balalaika', 'galleries', 'lazy_loading'], function ($, galleries, lazyload) {
+require(['vendor/balalaika', 'vendor/picturefill', 'galleries', 'lazy_loading'], function ($, pic, galleries, lazyload) {
     'use strict';
 
     $(function () {
