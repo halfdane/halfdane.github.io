@@ -4,8 +4,8 @@ require(['vendor/balalaika', 'vendor/picturefill', 'galleries', 'lazy_loading'],
 
     $(function () {
         galleries.prepare();
+        galleries.init();
 
-        window.addEventListener("load", galleries.init);
         window.addEventListener("load", lazyload.init);
     });
 });

@@ -20,7 +20,7 @@ module.exports = function (grunt) {
         watch: {
             js: {
                 files: ['work/**/*.js'],
-                tasks: ['requirejs']
+                tasks: ['requirejs', 'uglify:preview']
             },
             sass: {
                 files: ['work/**/*.scss'],
@@ -40,14 +40,24 @@ module.exports = function (grunt) {
                     baseUrl: "work/js/",
                     mainConfigFile: "work/js/main.js",
                     out: "contents/compiled/js/site.js",
-                    optimize: "none"
+                    compress: "none"
                 }
             }
         },
         uglify: {
             production: {
                 files: {
-                    'contents/compiled/js/site.js': 'contents/compiled/js/site.js'
+                    'contents/compiled/js/site.js': ['work/js/vendor/require.js', 'contents/compiled/js/site.js']
+                }
+            },
+            preview: {
+                files: {
+                    'contents/compiled/js/site.js': ['work/js/vendor/require.js', 'contents/compiled/js/site.js']
+                },
+                options: {
+                    mangle: false,
+                    compress: false,
+                    preserveComments: 'all'
                 }
             }
         },
@@ -121,6 +131,7 @@ module.exports = function (grunt) {
         'compass:dev',
         'requirejs',
         'responsive_images:dev',
+        'uglify:preview',
         'wintersmith:preview'
     ]);
 
