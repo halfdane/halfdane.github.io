@@ -100,8 +100,8 @@ module.exports = function (grunt) {
                 },
                 sizes: [
                     { width: 320},
-                    { width: 640},
-                    { width: 1024, quality: 0.6}
+                    { width: 640, quality: 0.6},
+                    { width: 800, quality: 0.6}
                 ],
                 files: [{
                     expand: true,

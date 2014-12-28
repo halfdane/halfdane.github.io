@@ -8,7 +8,7 @@ mixin img(url, alt)
       - var large = base+"-large"+ext
       - var medium = base+"-medium"+ext
       - var small = base+"-small"+ext
-    img(src=small alt=alt srcset="#{small} 320w, #{medium} 640w, #{large} 1024w" sizes="(min-width: 600px) 50vw, 100vw")
+    img(src=small alt=alt srcset="#{small} 320w, #{medium} 640w, #{large} 800w" sizes="(min-width: 600px) 50vw, 100vw")
 
 block content
   div#articles

@@ -24,7 +24,7 @@ module.exports = (env, callback) ->
         small = if imageIsLocal then "#{base}-small#{ext}" else full
 
         "<div class=\"figure__container\"><figure>" +
-          "  <a href=\"#{full}\"><img src=\"#{small}\" alt=\"#{altText}\" srcset=\"#{small} 320w, #{medium} 640w, #{large} 1024w\", "+
+          "  <a href=\"#{full}\"><img src=\"/loader.gif\" alt=\"#{altText}\" srcset=\"#{small} 320w, #{medium} 640w, #{large} 800w\", "+
           "    sizes=\"(min-width: 600px) 50vw, 100vw\"/></a>" +
           "  #{caption}" +
           "</figure></div>"
