@@ -1,13 +1,14 @@
 extends layout
 
 mixin img(url, alt)
-  block variables
-    - var ext = "."+url.split('.').pop()
-    - var base = url.slice(0, -(ext.length))
-    - var large = base+"-large"+ext
-    - var medium = base+"-medium"+ext
-    - var small = base+"-small"+ext
-  img(src=small alt=alt srcset="#{small} 320w, #{medium} 640w, #{large} 1024w" sizes="(min-width: 600px) 50vw, 100vw")
+  if url
+    block variables
+      - var ext = "."+url.split('.').pop()
+      - var base = url.slice(0, -(ext.length))
+      - var large = base+"-large"+ext
+      - var medium = base+"-medium"+ext
+      - var small = base+"-small"+ext
+    img(src=small alt=alt srcset="#{small} 320w, #{medium} 640w, #{large} 1024w" sizes="(min-width: 600px) 50vw, 100vw")
 
 block content
   div#articles
