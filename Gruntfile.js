@@ -54,7 +54,13 @@ module.exports = function (grunt) {
             }
         },
 
-
+        uglify: {
+            production: {
+                files: {
+                    'contents/compiled/js/site.js': 'contents/compiled/js/site.js'
+                }
+            }
+        },
 
 
         compass: {
