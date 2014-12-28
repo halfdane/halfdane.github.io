@@ -30,7 +30,7 @@ module.exports = (env, callback) ->
       @metadata.template or options.template or super()
 
     getFilenameTemplate: ->
-      @metadata.filenameTemplate or options.filenameTemplate or super()
+      super()
 
   # register the plugin
   prefix = if options.postsDir then options.postsDir + '/' else ''

@@ -185,6 +185,5 @@ Und mit der Möglichkeit, ein eigenes Bild zu nutzen:
 Der Code ist selbstverständlich auch wieder [frei](/about.html#lizenzen) verfügbar:
 [pointillism.js](/assets/js/pointillism/pointillism.js)
 
-
-|include-js|//code.jquery.com/jquery-1.11.2.min.js|
-|include-js|pointillism.js|
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="pointillism.js"></script>

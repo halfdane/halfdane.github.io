@@ -5,6 +5,6 @@ $(function() {
 	var subject='Solargraph-Dose '+dose+' gefunden';
 	var body='Hallo Halfdane,\nich habe die Dose '+dose+' gefunden.\n\nMit freundlichen Grüßen '
 	var mailto='mailto:halfdane@gmx.net?subject='+encodeURIComponent(subject)+'&body'+encodeURIComponent(body);
-	$('pre').replaceWith($('<a>').attr('href',mailto).text(content));
+	$('.noJs').replaceWith($('<a>').attr('href',mailto).text(content));
   }
 });

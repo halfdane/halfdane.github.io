@@ -1,11 +1,7 @@
 module.exports = (env, callback) ->
 
-  moment.lang('de')
-
   defaults =
     postsDir: 'articles' # directory containing blog posts
-    template: 'article.jade'
-    filenameTemplate: '/:year/:month/:day/{{page.metadata.short_dir}}/index.html' # Here's the magic part
 
   # assign defaults for any option not set in the config file
   options = env.config.blog or {}
