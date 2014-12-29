@@ -1,45 +1,56 @@
 /*global define, require */
+
+/**
+ * handles lazy loading elements of the form
+ *
+ * <div class="someTargetContainer">
+ * </div>
+ * ...
+ * <div class="lazyload" data-lazyhref="url for ajax request" data-lazytarget=".someTargetContainer">scroll down to here for loading</div>
+ *
+ * the ajax request must contain one or more elements with a class .lazycontent: these will be appended into
+ * the target container and the next lazyload-element will be put in place of the previous.
+ */
 define(['vendor/balalaika', 'vendor/sloth', 'vendor/microajax', 'balalaika_extensions'], function ($, sloth, microAjax) {
     'use strict';
 
-    function loadNext(element){
-        microAjax($('#next').getAttribute('href'), function (res) {
-            var tempDiv = document.createElement('div');
-            tempDiv.innerHTML = res;
+    function loadElement(element) {
+        var loader = $('<img>')[0],
+            href = element.getAttribute('data-lazyhref'),
+            targetSelector = element.getAttribute('data-lazytarget');
 
-            var node = $('#articles');
-            var next = $('#next');
+        loader.setAttribute('src', '/loader.gif');
+        element.insertAdjacentElement('afterend', loader);
+        element.parentNode.removeChild(element);
 
-            var newArticles = $(tempDiv).find('.article');
+        microAjax(href, function (res) {
+            var lazyContent = $('<div>');
+            lazyContent[0].innerHTML = res;
 
-            $(newArticles).forEach(function(el){
-                node.appendChild(el);
+            // insert lazy contents into dom
+            var target = $(targetSelector);
+            $(lazyContent.find('.lazycontent')).forEach(function (el) {
+                target.appendChild(el);
             });
 
-            var nextNext = $(tempDiv).findOne('#next');
-            if (nextNext !== null) {
-                next.setAttribute('href', nextNext.getAttribute('href'));
-                sloth({
-                    on: next[0],
-                    threshold: 100,
-                    callback: loadNext
-                });
-            } else {
-                next.parentNode.removeChild(next);
+            //find next .lazyload and append current to it.
+            var nextLoad = lazyContent.findOne('.lazyload');
+            if (nextLoad !== null) {
+                loader.insertAdjacentElement('afterend', nextLoad);
+                init();
             }
-
+            loader.parentNode.removeChild(loader);
         });
     }
 
     function init() {
-        var next = $('#next')[0];
-        if (next) {
+        $('.lazyload').forEach(function (el) {
             sloth({
-                on: next,
+                on: el,
                 threshold: 100,
-                callback: loadNext
+                callback: loadElement
             });
-        }
+        });
     }
 
     return {

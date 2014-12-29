@@ -13,7 +13,7 @@ mixin img(url, alt)
 block content
   div#articles
     each article in articles
-      article.article.intro
+      article.article.intro.lazycontent
         p.date
           span= moment.utc(article.date).format('DD. MMMM YYYY')
         div.image
@@ -31,9 +31,9 @@ block content
 block prepend footer
   div.nav
     if prevPage
-      a(href=prevPage.url rel='prev' id='prev') « Newer
+      a(href=prevPage.url rel='prev').prev « Vorige Seite
     if nextPage
-      a(href=nextPage.url rel='next' id='next') Next page »
+      a(href=nextPage.url rel='next' data-lazyhref=nextPage.url data-lazytarget="#articles").next.lazyload Nächste Seite »
 
 
 
