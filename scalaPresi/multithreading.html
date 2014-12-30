@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Multithreading done right</title>
+
+		<meta name="description" content="The Java-Api for Multithreading is like assembler">
+		<meta name="author" content="Tom Vollerthun">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+<section>
+  <h1>Multithreading done right</h1>
+</section>
+
+<section>
+  <h2>Java-Threads sind wie Assembler</h2>
+  <ul>
+  <li class="fragment"><code>Runnable</code> bzw. <code>Thread.run()</code> für nebenläufige Prozesse</li>
+  <li class="fragment"><code>synchronized</code> für shared state</li>
+  <li class="fragment">komplexe Konzepte: locks/semaphoren/mutexes (counting/reentrant), latches um den critical path zu schützen</li>
+  <li class="fragment">besser als Prozesse zu forken, aber viel mehr auch nicht</li>
+  </ul>
+</section>
+
+<section>
+  <section>
+    <h2>Race-Conditions</h2>
+    <p>Sind schnell eingebaut, aber schwer zu finden und zu fixen</p>
+    <img src="http://s2.quickmeme.com/img/45/4520fd451ac58eded571616dfa1897e467e57d14a3532697de1cfb01e9a9bd86.jpg" />
+  </section>
+  <section>
+    <img src="raceCondition.png" />
+  </section>
+  
+  <section>
+    <h2>Spot the error</h2>
+    <pre><code data-trim contenteditable>
+if (pool.hasMore()) {
+    return pool.get();
+}
+    </code></pre>
+  </section>
+  <section>
+    <h2>Architektur von Web-Applikationen</h2>
+    <img src="webarchitecture.png" />
+  </section>
+  
+  <section>
+    <h2>Architektur von Web-Applikationen</h2>
+    <img src="webarchitecture1.png" />
+  </section>
+  
+  <section>
+    <h2>Wichtigstes Ritual</h2>
+    <p>keine Variablen in Services oder Controllern</p>
+    <p>(höchstens als ThreadLocal)</p>
+    <h2 class="fragment">Weil wir in Wirklichkeit <em>immer</em> Multithreaded sind!</h2>
+  </section>
+  
+  <section>
+    <h2>Kein state in den wichtigsten Objekten</h2>
+    <p>Objektorientierter Entwurf hilft nicht sondern stört in Multithreaded-Applikationen</p>
+  </section>
+</section>
+
+<section>
+  <section>
+    <h2>Aktor vs. Objekt</h2>
+  </section>
+  <section>
+    <h2>Mailboxes und Messages</h2>
+    <img src="actor.png" />
+  </section>
+  <section>
+    <h2>#Code</h2>
+    <p>receive() und become() im CEPA</p>
+    <p>Keine Race-Condition!</p>
+    <p>Zustand und Übergang</p>
+  </section>
+  <section>
+    <h2>Zustandsübergangsdiagramm</h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/1/13/Statemachine-6.png" />
+    <p><small>(danke, wikimedia)</small></p>
+  </section>
+  <section>
+    <h2>FSM-Aktoren</h2>
+    <p>ImportCoordinatorFSM when(Idle)</p>
+    <p>PartialImportFSM onTransition</p>
+  </section>
+  <section>
+    <h2>Race-Conditions sind immer noch möglich</h2>
+    <p>Wenn man sich etwas Mühe gibt</p>
+    <p>Aber zumindest sind sie offensichtlicher</p>
+  </section>
+</section>
+<section>
+  <h2>Evaluiert Aktoren!</h2>
+</section>
+				
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

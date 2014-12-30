@@ -420,7 +420,10 @@ Richtig gelungen sind die Bilder dann, wenn die Größe der Punkte abhängig von
 &lt;/div&gt;
 &lt;span class=&quot;target&quot;&gt;&lt;/span&gt;
 &lt;span class=&quot;btn&quot; onclick=&quot;halfdane.tsp.greedyTest($('#pointsCount').val()); return false;&quot;&gt;Click zum Start&lt;/span&gt;&lt;/p&gt;
-</description>
+&lt;script src=&quot;//code.jquery.com/jquery-1.11.2.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;tspBase.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;delaunay.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;nearestNeighbourTsp.js&quot;&gt;&lt;/script&gt;</description>
     </item>
     <item>
       <title>Schriften _wirklich_ in Css einbinden</title>
@@ -487,10 +490,14 @@ base64 -w0 MWVf-Rwh4GLQVBEwbyI61Q.woff &amp;gt; lobster.b64.woff
 &lt;p&gt;Ich habe wiederum eine Demo vorbereitet, damit man den Algorithmus in Aktion sehen kann: 100 Generationen auf 20 Punkten. Ach ja, beim &lt;a href=&quot;http://halfdane.github.io/2013/12/01/annealing/&quot;&gt;Eintrag zum Simulated Annealing&lt;/a&gt; habe ich die Live-Demo und den Code auch noch nachgereicht :)&lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;target&quot;&gt;&lt;/span&gt;
 &lt;span class=&quot;btn&quot; onclick=&quot;halfdane.tsp.evolutionaryTest(); return false;&quot;&gt;Click zum Start&lt;/span&gt;&lt;/p&gt;
+&lt;script src=&quot;//code.jquery.com/jquery-1.11.2.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;tspBase.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;evolutionaryTsp.js&quot;&gt;&lt;/script&gt;
+
 &lt;p&gt;Der zugehörige Code ist hier verfügbar:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://halfdane.github.io/assets/js/tsp/tspBase.js&quot;&gt;Helfer-Funktionen für Distanz und Touren-Verwaltung&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://halfdane.github.io/assets/js/tsp/evolutionaryTsp.js&quot;&gt;Der Evolutionäre-Algorithmus&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://halfdane.github.io/articles/2014-01-19-tsp_evolution/tspBase.js&quot;&gt;Helfer-Funktionen für Distanz und Touren-Verwaltung&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://halfdane.github.io/articles/2014-01-19-tsp_evolution/evolutionaryTsp.js&quot;&gt;Der evolutionäre Algorithmus&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
@@ -593,7 +600,7 @@ halfdane.picture_display = halfdane.picture_display || (&lt;span class=&quot;fun
     &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;($targetElement)&lt;/span&gt; {&lt;/span&gt;
         $target = $targetElement;
         &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; i;
-        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (i = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i &amp;lt; &lt;span class=&quot;number&quot;&gt;200&lt;/span&gt;; i += &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;) {
+        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (i = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; @import &lt;span class=&quot;string&quot;&gt;&quot;compass/css3/shared&quot;&lt;/span&gt;;i &amp;lt; &lt;span class=&quot;number&quot;&gt;200&lt;/span&gt;; i += &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;) {
             createFrame();
         }
     }
@@ -608,8 +615,10 @@ halfdane.picture_display = halfdane.picture_display || (&lt;span class=&quot;fun
 &lt;p&gt;Für die Demo habe ich einfach hundert Bilder von der Google-Bildersuche gemopst und iteriere darüber. Die Kacheln werden in einem &lt;code&gt;div&lt;/code&gt; angezeigt, das die gesamte Seite einnimmt.&lt;/p&gt;
 &lt;p&gt;Klick oder Tastendruck beendet die Demo.&lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;btn&quot; onclick=&quot;halfdane.picture_demo.run(); return false;&quot;&gt;Click zum Start&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Der Code ändert sich vermutlich auch noch ein bisschen, die aktuelle Version ist immer hier: &lt;a href=&quot;http://halfdane.github.io/assets/js/picture_display/picture_display.js&quot;&gt;/assets/js/picture_display/picture_display.js&lt;/a&gt;&lt;/p&gt;
-</description>
+&lt;p&gt;Der Code ändert sich vermutlich auch noch ein bisschen, die aktuelle Version ist immer hier: &lt;a href=&quot;http://halfdane.github.io/articles/2014-01-18-picture_display/picture_display.js&quot;&gt;picture_display.js&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/compiled/css/picture_display.css&quot;&gt;&lt;/link&gt;&lt;/p&gt;
+&lt;script src=&quot;//code.jquery.com/jquery-1.11.2.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;picture_display.js&quot;&gt;&lt;/script&gt;</description>
     </item>
     <item>
       <title>Buddelschiff - das Finale</title>
@@ -910,15 +919,15 @@ halfdane.tsp.createAnnealing(points).solve();
 &lt;p&gt;Ich habe den Code jetzt mal eingebunden und eine Live-Demo vorbereitet - mit 20 Punkten, damit es nicht so lange dauert. Tut es natürlich trotzdem :P&lt;/p&gt;
 &lt;p&gt;Die Ausgabe ist zunächst die initiale Tour und dann bei jeder Verbesserung ein weiteres Bild. Unten im Bild wird die aktuelle Temperatur angezeigt.&lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;target&quot;&gt;&lt;/span&gt;
-&lt;span class=&quot;btn&quot; onclick=&quot;halfdane.tsp.annealingTest(); return false;&quot;&gt;Click zum Start&lt;/span&gt;&lt;/p&gt;
+&lt;span class=&quot;btn&quot; onclick=&quot;halfdane.tsp.annealingTest(); return false;&quot;&gt;Hier klicken zum Start&lt;/span&gt;&lt;/p&gt;
 &lt;script src=&quot;//code.jquery.com/jquery-1.11.2.min.js&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;tspBase.js&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;annealingTsp.js&quot;&gt;&lt;/script&gt;
 
 &lt;p&gt;Der zugehörige Code ist hier verfügbar:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://halfdane.github.io/assets/js/tsp/tspBase.js&quot;&gt;Helfer-Funktionen für Distanz und Touren-Verwaltung&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://halfdane.github.io/assets/js/tsp/annealingTsp.js&quot;&gt;der eigentliche Annealing-Algorithmus&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://halfdane.github.io/articles/2013-12-01-annealing/tspBase.js&quot;&gt;Helfer-Funktionen für Distanz und Touren-Verwaltung&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://halfdane.github.io/articles/2013-12-01-annealing/annealingTsp.js&quot;&gt;der eigentliche Annealing-Algorithmus&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
@@ -1147,6 +1156,18 @@ Die anderen Apps sind Titanium Backup und das Spiel Osmos.&lt;/p&gt;
 </description>
     </item>
     <item>
+      <title>Tensegrity</title>
+      <link>http://halfdane.github.io/articles/2013-05-24-tensegrity/</link>
+      <pubDate>Fri, 24 May 2013 00:00:00 +0000</pubDate>
+      <guid isPermaLink="true">http://halfdane.github.io/articles/2013-05-24-tensegrity/</guid>
+      <author></author>
+      <description>&lt;p&gt;Nachdem ich bereits vor Wochen auf der MAKE-Webseite über die Anleitung zu einem schnuckeligen, kleinen &lt;a href=&quot;http://makezine.com/2013/04/29/diy-tensegrity/&quot;&gt;Tensegrity-Objekt&lt;/a&gt; gestolpert bin und das erstmal nur bei meiner &lt;a href=&quot;http://www.highdefdigest.com/blog/twin-peaks-cooper-tapes/&quot;&gt;Diane&lt;/a&gt; geparkt habe, hatte ich heute mal eine Viertelstunde Muse:&lt;/p&gt;
+&lt;div class=&quot;figure__container&quot;&gt;&lt;figure&gt;  &lt;a href=&quot;cam00009.jpg&quot;&gt;&lt;img src=&quot;/loader.gif&quot; alt=&quot;Tensegrity-Objekt&quot; srcset=&quot;cam00009-small.jpg 320w, cam00009-medium.jpg 640w, cam00009-large.jpg 800w&quot;,     sizes=&quot;(min-width: 600px) 50vw, 100vw&quot;/&gt;&lt;/a&gt;  &lt;figcaption&gt;Das Objekt stellt sich selbstständig auf.&lt;/figcaption&gt;&lt;/figure&gt;&lt;/div&gt;
+
+&lt;p&gt;Funktioniert :-)&lt;/p&gt;
+</description>
+    </item>
+    <item>
       <title>Initiale Position der Seite falsch – a Scrollspy Mystery [solved]</title>
       <link>http://halfdane.github.io/articles/2013-05-24-scrollspymystery/</link>
       <pubDate>Fri, 24 May 2013 00:00:00 +0000</pubDate>
@@ -1158,18 +1179,6 @@ Die anderen Apps sind Titanium Backup und das Spiel Osmos.&lt;/p&gt;
 &lt;p&gt;Letztendlich war der Fehler doch selbstverschuldet: in einer Form in der Mitte der Seite hatte ein Eingabefeld das Attribut “autofocus”, und der Browser hat den Cursor dann dahin gesetzt. Inklusive scrollen.&lt;/p&gt;
 &lt;p&gt;Ein völlig korrektes Verhalten – mit dem Entfernen des Attributes funktioniert die Seite jetzt auch wieder richtig.&lt;/p&gt;
 &lt;p&gt;Das zeigt mir mal wieder, dass es auch mit reinem HTML durchaus möglich ist, das Verhalten der Seite zu zerbrechen – und dass nicht immer die anderen Schuld sind.&lt;/p&gt;
-</description>
-    </item>
-    <item>
-      <title>Tensegrity</title>
-      <link>http://halfdane.github.io/articles/2013-05-24-tensegrity/</link>
-      <pubDate>Fri, 24 May 2013 00:00:00 +0000</pubDate>
-      <guid isPermaLink="true">http://halfdane.github.io/articles/2013-05-24-tensegrity/</guid>
-      <author></author>
-      <description>&lt;p&gt;Nachdem ich bereits vor Wochen auf der MAKE-Webseite über die Anleitung zu einem schnuckeligen, kleinen &lt;a href=&quot;http://makezine.com/2013/04/29/diy-tensegrity/&quot;&gt;Tensegrity-Objekt&lt;/a&gt; gestolpert bin und das erstmal nur bei meiner &lt;a href=&quot;http://www.highdefdigest.com/blog/twin-peaks-cooper-tapes/&quot;&gt;Diane&lt;/a&gt; geparkt habe, hatte ich heute mal eine Viertelstunde Muse:&lt;/p&gt;
-&lt;div class=&quot;figure__container&quot;&gt;&lt;figure&gt;  &lt;a href=&quot;cam00009.jpg&quot;&gt;&lt;img src=&quot;/loader.gif&quot; alt=&quot;Tensegrity-Objekt&quot; srcset=&quot;cam00009-small.jpg 320w, cam00009-medium.jpg 640w, cam00009-large.jpg 800w&quot;,     sizes=&quot;(min-width: 600px) 50vw, 100vw&quot;/&gt;&lt;/a&gt;  &lt;figcaption&gt;Das Objekt stellt sich selbstständig auf.&lt;/figcaption&gt;&lt;/figure&gt;&lt;/div&gt;
-
-&lt;p&gt;Funktioniert :-)&lt;/p&gt;
 </description>
     </item>
     <item>
