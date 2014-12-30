@@ -1,12 +1,11 @@
 /*global define, require */
-require(['vendor/balalaika', 'vendor/picturefill', 'galleries', 'lazy_loading'], function ($, pic, galleries, lazyload) {
+require(['vendor/balalaika', 'vendor/picturefill', 'galleries', 'lazy_loading'], function ($, picturefill, galleries, lazyload) {
     'use strict';
 
-    $(function () {
-        galleries.prepare();
+    $(function initializePage () {
+        picturefill();
         galleries.init();
-
-        window.addEventListener("load", lazyload.init);
+        lazyload.init(initializePage);
     });
 });
 

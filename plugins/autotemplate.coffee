@@ -14,7 +14,7 @@ module.exports = (env, callback) ->
   class AutotemplatePage extends env.plugins.CustomTags
     constructor: (@filepath, @metadata) ->
       # extract date and url-part from directory name
-      @metadata.http_dir = ( /(.*)\/index.md/.exec @filepath.relative )[1]
+      @metadata.http_dir = ( /(.*)\/[^/]*\.md/.exec @filepath.relative )[1]
       @metadata.date = (/articles\/(\d\d\d\d-\d\d-\d\d)-(.*)/.exec @metadata.http_dir)[1]
 
       if (@metadata.image && @metadata.image.indexOf('http') < 0)

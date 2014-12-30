@@ -10,6 +10,18 @@ define(['vendor/balalaika'], function ($) {
         return this;
     };
 
+    $.fn.removeClass = function( className ) {
+        this.forEach( function( item ) {
+            var classList = item.classList;
+            classList.remove.apply( classList, className.split( /\s/ ) );
+        });
+        return this;
+    };
+
+    $.fn.hasClass = function( className ) {
+        return !!this[ 0 ] && this[ 0 ].classList.contains( className );
+    };
+
     $.fn.find = function (selector) {
         return this.querySelectorAll(selector);
     };

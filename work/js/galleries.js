@@ -2,20 +2,18 @@
 define(['vendor/balalaika', 'vendor/better-simple-slideshow'], function ($, makeBSS) {
     'use strict';
 
-    function prepare() {
+    function init() {
         $('ul>li>.figure__container>figure').forEach(function (el) {
             var ul = $(el.parentNode.parentNode.parentNode);
             /*check if all LIs in this UL consist of a FIGURE*/
 
-            if (ul.is('.slideshow')) {
-                return;
+            if (!ul.hasClass('slideshow')) {
+                ul.addClass('slideshow')
+                    .addClass('slideshow--prepare');
             }
 
-            ul.addClass('slideshow');
         });
-    }
 
-    function init() {
         var opts = {
             //auto-advancing slides? accepts boolean (true/false) or object
             auto: {
@@ -28,14 +26,13 @@ define(['vendor/balalaika', 'vendor/better-simple-slideshow'], function ($, make
             swipe: true
         };
 
-        $('.slideshow').forEach(function (el) {
+        $('.slideshow--prepare').forEach(function (el) {
+            $(el).removeClass('slideshow--prepare');
             makeBSS(el, opts);
         });
-
     }
 
     return {
-        init: init,
-        prepare: prepare
+        init: init
     };
 });
