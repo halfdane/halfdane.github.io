@@ -121,6 +121,10 @@ Die Ausgabe ist zunächst die initiale Tour und dann bei jeder Verbesserung ein 
 <span class="target"></span>
 <span class="btn" onclick="halfdane.tsp.annealingTest(); return false;">Hier klicken zum Start</span>
 
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="tspBase.js"></script>
+<script src="annealingTsp.js"></script>
+
 Der zugehörige Code ist hier verfügbar:
 
 - [Helfer-Funktionen für Distanz und Touren-Verwaltung](tspBase.js)
