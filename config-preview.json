@@ -4,7 +4,8 @@
     "name": "halfdane's Canned Nerd",
     "owner": "halfdane",
     "description": "Navigate by sight",
-    "lifereload": true
+    "lifereload": true,
+    "hideComments": true
   },
   "plugins": [
     "./plugins/intro-detection.coffee",

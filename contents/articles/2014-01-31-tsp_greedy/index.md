@@ -1,10 +1,6 @@
 ---
 title: "TSP in JavaScript (Greedy)"
-category: Javascript
-tags: [javascript, tsp, greedy algorithm, momo]
 image: tsp_greedy.png
-resources: [/assets/js/tsp/delaunay.js, /assets/js/tsp/tspBase.js, /assets/js/tsp/nearestNeighbourTsp.js]
-series: js-tsp
 ---
 Jetzt hab ich die Nase voll! Diese ganzen randomisierten Näherungsalgorithmen stinken doch: die Implementierung ist umständlich, die Laufzeit katastrophal und das Ergebnis eher so mittelgut. Dabei ist mir die Qualität der Tour nicht mal so wichtig. Zeit für ein bisschen Gier! Ich brauche Beppo Straßenkehrer. 
 
@@ -159,3 +155,8 @@ Als Beweis habe ich wie immer eine kleine Demo vorbereitet, nur diesmal nicht mi
 </div>
 <span class="target"></span>
 <span class="btn" onclick="halfdane.tsp.greedyTest($('#pointsCount').val()); return false;">Click zum Start</span>
+
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="tspBase.js"></script>
+<script src="delaunay.js"></script>
+<script src="nearestNeighbourTsp.js"></script>

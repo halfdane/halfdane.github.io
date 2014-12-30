@@ -36,7 +36,7 @@ halfdane.picture_display = halfdane.picture_display || (function () {
     }
 
     function init($targetElement) {
-        var testDiv = $('<span></span>').addClass('panel').appendTo('body');
+        var testDiv = $('<div></div>').addClass('panel').appendTo('body');
         var inRow = Math.floor($targetElement.width() / testDiv.width());
         var inCol = Math.floor($targetElement.height() / testDiv.height());
 

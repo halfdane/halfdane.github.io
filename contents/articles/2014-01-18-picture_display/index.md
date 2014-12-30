@@ -1,9 +1,6 @@
 ---
 title: "Livestream-Bildergallerie"
-category: Javascript
-tags: [javascript, html5, OTTO]
 image: picturedisplay.png
-resources: [picture_display.js]
 ---
 Als kleines Gimmick am Rande hatten Schmiddie und ich die Idee, man könne die aktuellen Käufe auf der OTTO-Seite darstellen, damit wir eine Vorstellung davon bekommen, was da überhaupt passiert. Bei rund 100 Kaufvorgängen pro Minute, die jeweils mehrere Produkte enthalten, gibt es eigentlich nur die Möglichkeit zu abstrahieren. Statistiken haben wir schon genug, wir wollen etwas weniger praktisches. Also zeigen wir die Bilder der Produkte, die gerade gekauft werden :) Genaugenommen war das alles Schmiddies Idee, mich hat er ja bloß angesprochen weil ich an der Bezahlstrecke arbeite...
 
@@ -111,7 +108,7 @@ halfdane.picture_display = halfdane.picture_display || (function () {
     function init($targetElement) {
         $target = $targetElement;
         var i;
-        for (i = 0; i < 200; i += 1) {
+        for (i = 0; @import "compass/css3/shared";i < 200; i += 1) {
             createFrame();
         }
     }
@@ -131,4 +128,8 @@ Klick oder Tastendruck beendet die Demo.
 
 <span class="btn" onclick="halfdane.picture_demo.run(); return false;">Click zum Start</span>
 
-Der Code ändert sich vermutlich auch noch ein bisschen, die aktuelle Version ist immer hier: [/assets/js/picture_display/picture_display.js](/assets/js/picture_display/picture_display.js)
+Der Code ändert sich vermutlich auch noch ein bisschen, die aktuelle Version ist immer hier: [picture_display.js](picture_display.js)
+
+<link rel="stylesheet" href="/compiled/css/picture_display.css"></link>
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="picture_display.js"></script>

@@ -1,10 +1,6 @@
 ---
 title: "TSP in JavaScript (Simulated Annealing)"
-category: Javascript
-tags: [javascript, tsp, simulated annealing]
 image: tsp_annealing.png
-resources: [/assets/js/tsp/tspBase.js, /assets/js/tsp/annealingTsp.js]
-series: js-tsp
 ---
 Um meine JavaScript-Kenntnisse zu vertiefen, habe mich daran gemacht einen Graphen aus Knoten und Kanten zu implementieren. Und weil das zu einfach ist, soll darauf das Traveling Salesman Problem gelöst werden :)
 
@@ -123,7 +119,7 @@ Ich habe den Code jetzt mal eingebunden und eine Live-Demo vorbereitet - mit 20 
 Die Ausgabe ist zunächst die initiale Tour und dann bei jeder Verbesserung ein weiteres Bild. Unten im Bild wird die aktuelle Temperatur angezeigt.
 
 <span class="target"></span>
-<span class="btn" onclick="halfdane.tsp.annealingTest(); return false;">Click zum Start</span>
+<span class="btn" onclick="halfdane.tsp.annealingTest(); return false;">Hier klicken zum Start</span>
 
 
 <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
@@ -132,5 +128,5 @@ Die Ausgabe ist zunächst die initiale Tour und dann bei jeder Verbesserung ein 
 
 Der zugehörige Code ist hier verfügbar:
 
-- [Helfer-Funktionen für Distanz und Touren-Verwaltung](/assets/js/tsp/tspBase.js)
-- [der eigentliche Annealing-Algorithmus](/assets/js/tsp/annealingTsp.js)
+- [Helfer-Funktionen für Distanz und Touren-Verwaltung](tspBase.js)
+- [der eigentliche Annealing-Algorithmus](annealingTsp.js)

@@ -1,9 +1,5 @@
 ---
 title: "TSP in JavaScript (Evolutionary)"
-category: Javascript
-tags: [javascript, tsp, evolutionary algorithm]
-image: tsp_evolutionary.png
-resources: [/assets/js/tsp/tspBase.js, /assets/js/tsp/evolutionaryTsp.js]
 series: js-tsp
 ---
 Nachdem die "Simulated Annealing"-Strategie zur Lösung des Traveling Salesman Problems [nicht so beeindruckend war](/2013/12/01/annealing/), versuche ich mich jetzt mal an der Implementierung eines evolutionären Algorithmus' in Javascript.
@@ -29,7 +25,12 @@ Ich habe wiederum eine Demo vorbereitet, damit man den Algorithmus in Aktion seh
 <span class="target"></span>
 <span class="btn" onclick="halfdane.tsp.evolutionaryTest(); return false;">Click zum Start</span>
 
+
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="tspBase.js"></script>
+<script src="evolutionaryTsp.js"></script>
+
 Der zugehörige Code ist hier verfügbar:
 
-- [Helfer-Funktionen für Distanz und Touren-Verwaltung](/assets/js/tsp/tspBase.js)
-- [Der Evolutionäre-Algorithmus](/assets/js/tsp/evolutionaryTsp.js)
+- [Helfer-Funktionen für Distanz und Touren-Verwaltung](tspBase.js)
+- [Der evolutionäre Algorithmus](evolutionaryTsp.js)
