@@ -1,8 +1,3 @@
----
-title: "Buddelschiff - das Finale"
-image: buddel_f.jpg
-template: article.jade
----
 ## Stapellauf
 Jetzt kommt der Augenblick ~~in dem der Elefant das Wasser lässt~~ der Wahrheit: durch diese hohle Gasse muss es passen.
 Und was nicht passt wird passend gemacht, denn bangemachen gilt nicht und so jung kommen wir nicht mehr zusammen.

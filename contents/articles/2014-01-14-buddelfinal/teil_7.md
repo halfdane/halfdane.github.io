@@ -1,8 +1,3 @@
----
-title: "Buddelschiff - das Finale"
-image: buddel_f.jpg
-template: article.jade
----
 ## Fazit(Quellen), Fehler und Fragen
 Das hat Spaß gemacht.
 |image|buddel_f.jpg|Done|The deed is done.|

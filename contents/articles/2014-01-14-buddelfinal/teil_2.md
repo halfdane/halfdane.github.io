@@ -1,8 +1,3 @@
----
-title: "Buddelschiff - das Finale"
-image: buddel_f.jpg
-template: article.jade
----
 ## Masten, Rahen und Gaffel
 Es sind diesmal wesentlich mehr Masten als beim Prototypen, und schon da haben sie die Hauptarbeit verursacht. Aber bangemachen gilt nicht: die Zahnstocher und Schaschlickspieße maßstabsgerecht (naja, frei nach Schnauze) zugeschnitten und weiß lackiert - B. fand es angemessen, dass zumindest eines seiner Playmobil-Männchen hilft. Ja, und in Anbetracht der fürchterlichen Menge von Rahen auf der Rickmers fiel mit die Entscheidung leicht, ein bisschen zu schummeln und keine sechs Segel an jeden Mast zu hängen sondern höchstens vier, das erleichtert die Arbeit weil mehr Platz ist und es sieht auch nicht so pisselig klitzeklein aus.
 

@@ -1,8 +1,3 @@
----
-title: "Buddelschiff - das Finale"
-image: buddel_f.jpg
-template: article.jade
----
 ## In der Werft
 Die Masten werden komplett mit allen Segeln und Tauen zusammengesetzt und verklebt, bevor sie mit einem Stück Draht (Telefonlitze) am Oberdeck befestigt wird.
 

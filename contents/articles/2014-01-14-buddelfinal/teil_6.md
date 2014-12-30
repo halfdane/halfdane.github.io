@@ -1,8 +1,3 @@
----
-title: "Buddelschiff - das Finale"
-image: buddel_f.jpg
-template: article.jade
----
 ## Korken, Ständer und Wandhalterung
 Auch wenn ich stolz auf das Schiff bin und es recht gelungen finde, möchte ich es eigentlich nicht so gerne im Regal herumstehen haben.
 Da nimmt es nur Platz weg, verstaubt und fällt runter.

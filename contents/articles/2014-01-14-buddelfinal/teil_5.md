@@ -1,8 +1,3 @@
----
-title: "Buddelschiff - das Finale"
-image: buddel_f.jpg
-template: article.jade
----
 ## Wasser
 Traditionell wird vom Rumpf eines Buddelschiffs nur die obere Hälfte benutzt, und auf blaue Knete oder Fensterkitt gedrückt.
 Das soll dann das Wasser darstellen.
