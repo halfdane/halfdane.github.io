@@ -20,10 +20,10 @@ block header
   - var prevArticle = articles[thisPageIndex+1];
   - var nextArticle = articles[thisPageIndex-1];
   mixin postNavigation(prevArticle, nextArticle)
-  h1= page.title
 
 block content
   article.article
+    h1= page.title
     section.content.lazycontent!= typogr(page.html).typogrify()
 
 block prepend footer

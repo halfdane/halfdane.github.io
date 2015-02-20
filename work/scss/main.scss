@@ -2,17 +2,17 @@ $XL: 600px;
 
 @import "compass";
 @import "breakpoint";
-@import "susy";
 
 @import "compass/reset";
 
-@import "grid";
 @import "code-styling";
 @import "pagination";
 
 @import "index";
 @import "article";
 @import "article-details";
+@import "header";
+@import "footer";
 
 @import "wintersmith-defaults";
 @import "better-simple-slideshow-styles";

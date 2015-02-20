@@ -1,0 +1,51 @@
+h1 {
+    font-size: 2.6em;
+    text-align: center;
+    font-weight: 700;
+    margin: 0;
+
+    @include breakpoint($XL...) {
+        font-size: 1.4em;
+        margin-bottom: 0.6em;
+    }
+}
+
+.header {
+    text-shadow: 1px 1px 1px #000;
+    color: #fff;
+    a {
+        color: #fff;
+    }
+
+    .logo {
+        margin-top: 3em;
+        display: inline-block;
+    }
+
+    margin: 0;
+    text-align: center;
+
+    h2 {
+        font-style: italic;
+        text-align: center;
+        font-weight: 400;
+        margin: 0.8em 0;
+        font-size: 1.4em;
+    }
+
+    a:hover {
+        text-decoration: none;
+        color: #171717;
+    }
+
+    .description {
+        font-size: 1.2em;
+        font-style: italic;
+        text-align: center;
+        margin-top: -0.3em;
+
+        @include breakpoint($XL...) {
+            font-size: 1em;
+        }
+    }
+}

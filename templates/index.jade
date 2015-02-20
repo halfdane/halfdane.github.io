@@ -11,9 +11,11 @@ mixin img(url, alt)
     img(src=small alt=alt srcset="#{small} 320w, #{medium} 640w, #{large} 800w" sizes="(min-width: 600px) 50vw, 100vw")
 
 block content
-  div#articles
+  div.centering
+    div.connected Well hello there
+  div#articles.centering
     each article in articles
-      article.article.intro.lazycontent
+      article.article.intro.lazycontent.connected
         p.date
           span= moment.utc(article.date).format('DD. MMMM YYYY')
         div.image
