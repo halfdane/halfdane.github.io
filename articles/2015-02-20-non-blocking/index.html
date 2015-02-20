@@ -29,33 +29,33 @@
 <div class="figure__container"><figure>  <a href="Kolejka.jpg"><img src="/loader.gif" alt="Jump the waiting queue with non-blocking algorithms" srcset="Kolejka-small.jpg 320w, Kolejka-medium.jpg 640w, Kolejka-large.jpg 800w",     sizes="(min-width: 600px) 50vw, 100vw"/></a>  <figcaption>Jump the waiting queue with non-blocking algorithms (<a href="http://en.wikipedia.org/wiki/Queue_area">Wikipedia</a>).</figcaption></figure></div>
 
 <p>Die einfachste Variante des&nbsp;Stack-Interfaces:</p>
-<pre><code class="lang-java">public interface Stack&lt;I&gt; {
-    /*lege ein item oben auf den Stack*/
-    void push(I item);
+<pre><code class="lang-java">interface Stack&lt;I&gt; {
+    <span class="comment">/*lege ein item oben auf den Stack*/</span>
+    <span class="keyword">void</span> push(I item);
 
-    /*hole das oberste item vom Stack zurück*/
+    <span class="comment">/*hole das oberste item vom Stack zurück*/</span>
     I pop();
 }
 </code></pre>
 <p>Eine naive Implementierung dieses Interfaces mit einer ArrayList kann z.B. so&nbsp;aussehen:</p>
-<pre><code class="lang-java">public class BlockingStack&lt;I&gt; implements Stack&lt;I&gt; {
+<pre><code class="lang-java">class BlockingStack&lt;I&gt; implements Stack&lt;I&gt; {
 
-    private int top = -1;
-    private final List&lt;I&gt; storage = new ArrayList&lt;&gt;();
+    <span class="keyword">private</span> <span class="keyword">int</span> top = -<span class="number">1</span>;
+    <span class="keyword">private</span> <span class="keyword">final</span> List&lt;I&gt; storage = <span class="keyword">new</span> ArrayList&lt;&gt;();
 
-    public synchronized void push(final I value) {
+    <span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title">push</span>(<span class="keyword">final</span> I value) {
         top++;
         storage.add(top, value);
     }
 
-    public synchronized I pop() {
-        if (top &lt; 0) {
-            return null;
+    <span class="keyword">public</span> <span class="keyword">synchronized</span> I <span class="title">pop</span>() {
+        <span class="keyword">if</span> (top &lt; <span class="number">0</span>) {
+            <span class="keyword">return</span> <span class="keyword">null</span>;
         }
 
-        final I item = storage.get(top);
+        <span class="keyword">final</span> I item = storage.get(top);
         top--;
-        return item;
+        <span class="keyword">return</span> item;
     }
 }
 </code></pre>
@@ -68,21 +68,21 @@ Im Wesentlichen benutzt diese Klasse von Algorithmen eine Optimistic-Locking-Str
 Man benötigt also immer beide: den ursprünglichen und den neuen&nbsp;Wert.</p>
 <p>Falls der Wert sich zwischenzeitlich aber doch geändert hat, wird die Berechnung mit dem aktuellen Wert wiederholt, 
 bis der neue Wert erfolgreich gesetzt wurde. Hier ein Ausschnitt, der die Push-Methode und die Container-Klasse&nbsp;zeigt:  </p>
-<pre><code class="lang-java">    public void push(final E item) {
-        final Node&lt;E&gt; newHead = new Node&lt;E&gt;(item);
+<pre><code class="lang-java">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title">push</span>(<span class="keyword">final</span> E item) {
+        <span class="keyword">final</span> Node&lt;E&gt; newHead = <span class="keyword">new</span> Node&lt;E&gt;(item);
         Node&lt;E&gt; oldHead;
         do {
             oldHead = head.get();
             newHead.next = oldHead;
-        } while (!head.compareAndSet(oldHead, newHead));
+        } <span class="keyword">while</span> (!head.compareAndSet(oldHead, newHead));
     }
 
-    public class Node&lt;I&gt; {
+    class Node&lt;I&gt; {
         I item;
         Node&lt;I&gt; next;
 
-        public Node(final I item) {
-            this.item = item;
+        <span class="keyword">public</span> <span class="title">Node</span>(<span class="keyword">final</span> I item) {
+            <span class="keyword">this</span>.item = item;
         }
     }
 </code></pre>

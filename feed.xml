@@ -17,33 +17,33 @@
 &lt;div class=&quot;figure__container&quot;&gt;&lt;figure&gt;  &lt;a href=&quot;Kolejka.jpg&quot;&gt;&lt;img src=&quot;/loader.gif&quot; alt=&quot;Jump the waiting queue with non-blocking algorithms&quot; srcset=&quot;Kolejka-small.jpg 320w, Kolejka-medium.jpg 640w, Kolejka-large.jpg 800w&quot;,     sizes=&quot;(min-width: 600px) 50vw, 100vw&quot;/&gt;&lt;/a&gt;  &lt;figcaption&gt;Jump the waiting queue with non-blocking algorithms (&lt;a href=&quot;http://en.wikipedia.org/wiki/Queue_area&quot;&gt;Wikipedia&lt;/a&gt;).&lt;/figcaption&gt;&lt;/figure&gt;&lt;/div&gt;
 
 &lt;p&gt;Die einfachste Variante des Stack-Interfaces:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-java&quot;&gt;public interface Stack&amp;lt;I&amp;gt; {
-    /*lege ein item oben auf den Stack*/
-    void push(I item);
+&lt;pre&gt;&lt;code class=&quot;lang-java&quot;&gt;interface Stack&amp;lt;I&amp;gt; {
+    &lt;span class=&quot;comment&quot;&gt;/*lege ein item oben auf den Stack*/&lt;/span&gt;
+    &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; push(I item);
 
-    /*hole das oberste item vom Stack zurück*/
+    &lt;span class=&quot;comment&quot;&gt;/*hole das oberste item vom Stack zurück*/&lt;/span&gt;
     I pop();
 }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Eine naive Implementierung dieses Interfaces mit einer ArrayList kann z.B. so aussehen:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-java&quot;&gt;public class BlockingStack&amp;lt;I&amp;gt; implements Stack&amp;lt;I&amp;gt; {
+&lt;pre&gt;&lt;code class=&quot;lang-java&quot;&gt;class BlockingStack&amp;lt;I&amp;gt; implements Stack&amp;lt;I&amp;gt; {
 
-    private int top = -1;
-    private final List&amp;lt;I&amp;gt; storage = new ArrayList&amp;lt;&amp;gt;();
+    &lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; top = -&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;
+    &lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;final&lt;/span&gt; List&amp;lt;I&amp;gt; storage = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; ArrayList&amp;lt;&amp;gt;();
 
-    public synchronized void push(final I value) {
+    &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;synchronized&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;push&lt;/span&gt;(&lt;span class=&quot;keyword&quot;&gt;final&lt;/span&gt; I value) {
         top++;
         storage.add(top, value);
     }
 
-    public synchronized I pop() {
-        if (top &amp;lt; 0) {
-            return null;
+    &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;synchronized&lt;/span&gt; I &lt;span class=&quot;title&quot;&gt;pop&lt;/span&gt;() {
+        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (top &amp;lt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;) {
+            &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;null&lt;/span&gt;;
         }
 
-        final I item = storage.get(top);
+        &lt;span class=&quot;keyword&quot;&gt;final&lt;/span&gt; I item = storage.get(top);
         top--;
-        return item;
+        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; item;
     }
 }
 &lt;/code&gt;&lt;/pre&gt;
@@ -56,21 +56,21 @@ Im Wesentlichen benutzt diese Klasse von Algorithmen eine Optimistic-Locking-Str
 Man benötigt also immer beide: den ursprünglichen und den neuen Wert.&lt;/p&gt;
 &lt;p&gt;Falls der Wert sich zwischenzeitlich aber doch geändert hat, wird die Berechnung mit dem aktuellen Wert wiederholt, 
 bis der neue Wert erfolgreich gesetzt wurde. Hier ein Ausschnitt, der die Push-Methode und die Container-Klasse zeigt:  &lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-java&quot;&gt;    public void push(final E item) {
-        final Node&amp;lt;E&amp;gt; newHead = new Node&amp;lt;E&amp;gt;(item);
+&lt;pre&gt;&lt;code class=&quot;lang-java&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;push&lt;/span&gt;(&lt;span class=&quot;keyword&quot;&gt;final&lt;/span&gt; E item) {
+        &lt;span class=&quot;keyword&quot;&gt;final&lt;/span&gt; Node&amp;lt;E&amp;gt; newHead = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Node&amp;lt;E&amp;gt;(item);
         Node&amp;lt;E&amp;gt; oldHead;
         do {
             oldHead = head.get();
             newHead.next = oldHead;
-        } while (!head.compareAndSet(oldHead, newHead));
+        } &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt; (!head.compareAndSet(oldHead, newHead));
     }
 
-    public class Node&amp;lt;I&amp;gt; {
+    class Node&amp;lt;I&amp;gt; {
         I item;
         Node&amp;lt;I&amp;gt; next;
 
-        public Node(final I item) {
-            this.item = item;
+        &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Node&lt;/span&gt;(&lt;span class=&quot;keyword&quot;&gt;final&lt;/span&gt; I item) {
+            &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.item = item;
         }
     }
 &lt;/code&gt;&lt;/pre&gt;
