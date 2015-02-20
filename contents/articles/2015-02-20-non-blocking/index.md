@@ -10,7 +10,7 @@ Um den Performance-Hit von `synchronized` zu vermeiden, kann man dank Compare-An
 Die einfachste Variante des Stack-Interfaces:
 
 ```java
-public interface Stack<I> {
+interface Stack<I> {
     /*lege ein item oben auf den Stack*/
     void push(I item);
 
@@ -22,7 +22,7 @@ public interface Stack<I> {
 Eine naive Implementierung dieses Interfaces mit einer ArrayList kann z.B. so aussehen:
  
 ```java
-public class BlockingStack<I> implements Stack<I> {
+class BlockingStack<I> implements Stack<I> {
 
     private int top = -1;
     private final List<I> storage = new ArrayList<>();
@@ -67,7 +67,7 @@ bis der neue Wert erfolgreich gesetzt wurde. Hier ein Ausschnitt, der die Push-M
         } while (!head.compareAndSet(oldHead, newHead));
     }
     
-    public class Node<I> {
+    class Node<I> {
         I item;
         Node<I> next;
 
