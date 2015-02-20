@@ -39,17 +39,11 @@ figure, img, .figure__container {
     max-width: 30em;
 
     .transition--off {
-        opacity: 0;
-        -webkit-transition: opacity 1.2s;
-        transition: opacity 1.2s;
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
         display: none;
     }
 
     .transition--on {
-        opacity: 1;
-        display: inline-block;
+        display: injavascript line-block;
     }
 
     .figure__container {
