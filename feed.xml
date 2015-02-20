@@ -5,8 +5,178 @@
     <atom:link href="http://halfdane.github.io/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://halfdane.github.io</link>
     <description>Navigate by sight</description>
-    <pubDate>Sun, 16 Nov 2014 00:00:00 +0000</pubDate>
+    <pubDate>Fri, 20 Feb 2015 00:00:00 +0000</pubDate>
     <language>de</language>
+    <item>
+      <title>Non-Blocking Stack in Java</title>
+      <link>http://halfdane.github.io/articles/2015-02-20-non-blocking/</link>
+      <pubDate>Fri, 20 Feb 2015 00:00:00 +0000</pubDate>
+      <guid isPermaLink="true">http://halfdane.github.io/articles/2015-02-20-non-blocking/</guid>
+      <author></author>
+      <description>&lt;p&gt;Um den Performance-Hit von &lt;code&gt;synchronized&lt;/code&gt; zu vermeiden, kann man dank Compare-And-Set (bzw. der Java-Implementierung als &lt;code&gt;Atomic*&lt;/code&gt;) auch Non-Blocking Algorithmen benutzen.&lt;/p&gt;
+&lt;div class=&quot;figure__container&quot;&gt;&lt;figure&gt;  &lt;a href=&quot;Kolejka.jpg&quot;&gt;&lt;img src=&quot;/loader.gif&quot; alt=&quot;Jump the waiting queue with non-blocking algorithms&quot; srcset=&quot;Kolejka-small.jpg 320w, Kolejka-medium.jpg 640w, Kolejka-large.jpg 800w&quot;,     sizes=&quot;(min-width: 600px) 50vw, 100vw&quot;/&gt;&lt;/a&gt;  &lt;figcaption&gt;Jump the waiting queue with non-blocking algorithms (&lt;a href=&quot;http://en.wikipedia.org/wiki/Queue_area&quot;&gt;Wikipedia&lt;/a&gt;).&lt;/figcaption&gt;&lt;/figure&gt;&lt;/div&gt;
+
+&lt;p&gt;Die einfachste Variante des Stack-Interfaces:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-java&quot;&gt;public interface Stack&amp;lt;I&amp;gt; {
+    /*lege ein item oben auf den Stack*/
+    void push(I item);
+
+    /*hole das oberste item vom Stack zurück*/
+    I pop();
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Eine naive Implementierung dieses Interfaces mit einer ArrayList kann z.B. so aussehen:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-java&quot;&gt;public class BlockingStack&amp;lt;I&amp;gt; implements Stack&amp;lt;I&amp;gt; {
+
+    private int top = -1;
+    private final List&amp;lt;I&amp;gt; storage = new ArrayList&amp;lt;&amp;gt;();
+
+    public synchronized void push(final I value) {
+        top++;
+        storage.add(top, value);
+    }
+
+    public synchronized I pop() {
+        if (top &amp;lt; 0) {
+            return null;
+        }
+
+        final I item = storage.get(top);
+        top--;
+        return item;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Man beachte dabei insbesondere das &lt;code&gt;synchronized&lt;/code&gt;-Keyword, das verhindert, dass mehrere Threads gleichzeitig den so geschützten Codeblock durchlaufen.
+Jeder Thread muss davor warten und darf erst durch, wenn er an der Reihe ist.&lt;/p&gt;
+&lt;p&gt;Bei massiv parallelen Anwendungen können sich solche Bereiche als Performance-Problem herausstellen. 
+Ein Bottleneck wird der geschützte Bereich insbesondere, wenn viele Threads gleichzeitig durch “diese hohle Gasse” kommen müssen. &lt;/p&gt;
+&lt;p&gt;In solchen Situationen kann es sich lohnen, den Implementierungsaufwand eines Non-Blocking-Algorithmus in Betracht zu ziehen.
+Im Wesentlichen benutzt diese Klasse von Algorithmen eine Optimistic-Locking-Strategie: der neue Wert wird nur dann gesetzt, wenn der alte sich inzwischen nicht geändert hat.
+Man benötigt also immer beide: den ursprünglichen und den neuen Wert.&lt;/p&gt;
+&lt;p&gt;Falls der Wert sich zwischenzeitlich aber doch geändert hat, wird die Berechnung mit dem aktuellen Wert wiederholt, 
+bis der neue Wert erfolgreich gesetzt wurde. Hier ein Ausschnitt, der die Push-Methode und die Container-Klasse zeigt:  &lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-java&quot;&gt;    public void push(final E item) {
+        final Node&amp;lt;E&amp;gt; newHead = new Node&amp;lt;E&amp;gt;(item);
+        Node&amp;lt;E&amp;gt; oldHead;
+        do {
+            oldHead = head.get();
+            newHead.next = oldHead;
+        } while (!head.compareAndSet(oldHead, newHead));
+    }
+
+    public class Node&amp;lt;I&amp;gt; {
+        I item;
+        Node&amp;lt;I&amp;gt; next;
+
+        public Node(final I item) {
+            this.item = item;
+        }
+    }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Um zu schauen, ab wann sich das lohnt, habe ich vom &lt;a href=&quot;http://www.ibm.com/developerworks/library/j-jtp04186/&quot;&gt;DeveloperWorks-Blog&lt;/a&gt; 
+die non-blocking Stack-Implementierung geklaut und in einem Multithreading-Test neben eine blockierende Implementierung gestellt.&lt;/p&gt;
+&lt;p&gt;Nach ersten simplen Tests scheint sich zu bestätigen, dass man erstmal die Anzahl konkurrierender Threads so weit hochdrehen muss,
+dass sie sich gegenseitig auf den Füßen herumstehen: erst so ab tausend gleichzeitigen Threads wird der NonBlocking-Thread erheblich effizienter.&lt;/p&gt;
+&lt;p&gt;Um sicherzustellen, dass die Threads auch wirklich alle gleichzeitig loslaufen, benutze ich CountDownLatches:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-java&quot;&gt;    &lt;span class=&quot;annotation&quot;&gt;@Test&lt;/span&gt;
+    &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;shouldSupportMultithreadedPush&lt;/span&gt;() &lt;span class=&quot;keyword&quot;&gt;throws&lt;/span&gt; InterruptedException {
+        &lt;span class=&quot;comment&quot;&gt;// given&lt;/span&gt;
+        &lt;span class=&quot;keyword&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; count = &lt;span class=&quot;number&quot;&gt;100&lt;/span&gt;;
+        &lt;span class=&quot;keyword&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; threadCount = &lt;span class=&quot;number&quot;&gt;1000&lt;/span&gt;;
+
+        &lt;span class=&quot;comment&quot;&gt;// when&lt;/span&gt;
+        &lt;span class=&quot;keyword&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;long&lt;/span&gt; timingBlocking = getTimingFor(&lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; BlockingStack&amp;lt;&amp;gt;(), count, threadCount);
+        &lt;span class=&quot;keyword&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;long&lt;/span&gt; timingNonBlocking = getTimingFor(&lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; NonBlockingStack&amp;lt;&amp;gt;(), count, threadCount);
+
+        &lt;span class=&quot;comment&quot;&gt;// then: well, nothing really&lt;/span&gt;
+        System.out.println(format(&lt;span class=&quot;string&quot;&gt;&quot;   Blocking: \t%d&quot;&lt;/span&gt;, timingBlocking));
+        System.out.println(format(&lt;span class=&quot;string&quot;&gt;&quot;NonBlocking: \t%d&quot;&lt;/span&gt;, timingNonBlocking));
+    }
+
+    &lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;getTimingFor&lt;/span&gt;(&lt;span class=&quot;keyword&quot;&gt;final&lt;/span&gt; Stack&amp;lt;Integer&amp;gt; stack, &lt;span class=&quot;keyword&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; count, &lt;span class=&quot;keyword&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; threadCount)
+            &lt;span class=&quot;keyword&quot;&gt;throws&lt;/span&gt; InterruptedException {
+
+        &lt;span class=&quot;comment&quot;&gt;/*Alle Worker-Threads warten darauf, dass synchStart 0 wird, bevor es losgeht*/&lt;/span&gt;
+        &lt;span class=&quot;keyword&quot;&gt;final&lt;/span&gt; CountDownLatch synchStart = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; CountDownLatch(&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;);
+
+        &lt;span class=&quot;comment&quot;&gt;/*Alle Worker-Threads zählen synchEnd runter, sodass in diesem Thread darauf gewartet werden kann*/&lt;/span&gt;
+        &lt;span class=&quot;keyword&quot;&gt;final&lt;/span&gt; CountDownLatch synchEnd = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; CountDownLatch(threadCount);
+
+        &lt;span class=&quot;comment&quot;&gt;/*Erzeuge viiieele Worker-Threads ... */&lt;/span&gt;
+        &lt;span class=&quot;keyword&quot;&gt;final&lt;/span&gt; ArrayList&amp;lt;StackingThread&amp;gt; threads = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; ArrayList&amp;lt;&amp;gt;();
+        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i &amp;lt; threadCount; i++) {
+            &lt;span class=&quot;keyword&quot;&gt;final&lt;/span&gt; StackingThread stackingThread = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; StackingThread(stack, count, synchStart, synchEnd);
+            threads.add(stackingThread);
+            &lt;span class=&quot;comment&quot;&gt;/*... die auch alle gleich loslaufen - und erstmal auf den synchStart-latch warten */&lt;/span&gt;
+            stackingThread.start();
+        }
+
+        &lt;span class=&quot;keyword&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;long&lt;/span&gt; start = System.nanoTime();
+
+        &lt;span class=&quot;comment&quot;&gt;/*der startschuss:*/&lt;/span&gt;
+        synchStart.countDown();
+        &lt;span class=&quot;comment&quot;&gt;/*warte darauf, dass alle Threads diesen Latch bis auf 0 herunterzählen*/&lt;/span&gt;
+        synchEnd.await();
+
+        &lt;span class=&quot;keyword&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;long&lt;/span&gt; stop = System.nanoTime();
+
+        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; stop - start;
+    }
+
+    &lt;span class=&quot;javadoc&quot;&gt;/**Um Thread-contention zu testen, braucht man insbesondere auch Threads.*/&lt;/span&gt;
+    &lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;StackingThread&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Thread&lt;/span&gt; {&lt;/span&gt;
+        &lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;final&lt;/span&gt; Stack&amp;lt;Integer&amp;gt; stack;
+        &lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; count;
+        &lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;final&lt;/span&gt; CountDownLatch synchStart;
+        &lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;final&lt;/span&gt; CountDownLatch synchEnd;
+
+        &lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;StackingThread&lt;/span&gt;(&lt;span class=&quot;keyword&quot;&gt;final&lt;/span&gt; Stack&amp;lt;Integer&amp;gt; stack,
+                               &lt;span class=&quot;keyword&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; count,
+                               &lt;span class=&quot;keyword&quot;&gt;final&lt;/span&gt; CountDownLatch synchStart,
+                               &lt;span class=&quot;keyword&quot;&gt;final&lt;/span&gt; CountDownLatch synchEnd) {
+            &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.stack = stack;
+            &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.count = count;
+            &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.synchStart = synchStart;
+            &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.synchEnd = synchEnd;
+        }
+
+        &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;run&lt;/span&gt;() {
+            &lt;span class=&quot;keyword&quot;&gt;try&lt;/span&gt; {
+                &lt;span class=&quot;comment&quot;&gt;/*await blockiert, bis der Wert des latches 0 ist.
+                 *so laufen alle Threads gleichzeitig los */&lt;/span&gt;
+                synchStart.await();
+            } &lt;span class=&quot;keyword&quot;&gt;catch&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;final&lt;/span&gt; InterruptedException e) {
+                &lt;span class=&quot;keyword&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; RuntimeException(e);
+            }
+
+            &lt;span class=&quot;comment&quot;&gt;/*ein bisschen was mit dem stack machen*/&lt;/span&gt;
+            &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i &amp;lt; count; i++) {
+                stack.push(&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;);
+                Thread.yield();
+            }
+            &lt;span class=&quot;comment&quot;&gt;/*noch ein bisschen mehr*/&lt;/span&gt;
+            &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i &amp;lt; count; i++) {
+                stack.pop();
+                Thread.yield();
+            }
+
+            &lt;span class=&quot;comment&quot;&gt;/*und den anderen latch herunterzählen, auf den der main-Thread wartet.*/&lt;/span&gt;
+            synchEnd.countDown();
+        }
+    }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Offensichtlich ist der Test nur ein lahmer Versuch, einfach mal irgendwas zu machen, und berücksichtigt in keinster Weise die
+Code-Optimierungen des Just-In-Time-Compilers oder das Laufzeitverhalten von modernen CPUs, aber das ist mir egal :P&lt;/p&gt;
+&lt;p&gt;Um den Test nachzuvollziehen, kannst du hier den Source-Code benutzen:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://halfdane.github.io/articles/2015-02-20-non-blocking/Stack.java&quot;&gt;Stack.java&lt;/a&gt; (gemeinsames Interface)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://halfdane.github.io/articles/2015-02-20-non-blocking/BlockingStack.java&quot;&gt;BlockingStack.java&lt;/a&gt; (Implementierung mit &lt;code&gt;synchronized&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://halfdane.github.io/articles/2015-02-20-non-blocking/NonBlockingStack.java&quot;&gt;NonBlockingStack.java&lt;/a&gt; (Implementierung mit &lt;code&gt;Atomic*&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://halfdane.github.io/articles/2015-02-20-non-blocking/StackTest.java&quot;&gt;StackTest.java&lt;/a&gt; (Multithreaded-Test)&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     <item>
       <title>Blue Jasmine</title>
       <link>http://halfdane.github.io/articles/2014-11-16-blue-jasmine/</link>
@@ -1156,6 +1326,18 @@ Die anderen Apps sind Titanium Backup und das Spiel Osmos.&lt;/p&gt;
 </description>
     </item>
     <item>
+      <title>Tensegrity</title>
+      <link>http://halfdane.github.io/articles/2013-05-24-tensegrity/</link>
+      <pubDate>Fri, 24 May 2013 00:00:00 +0000</pubDate>
+      <guid isPermaLink="true">http://halfdane.github.io/articles/2013-05-24-tensegrity/</guid>
+      <author></author>
+      <description>&lt;p&gt;Nachdem ich bereits vor Wochen auf der MAKE-Webseite über die Anleitung zu einem schnuckeligen, kleinen &lt;a href=&quot;http://makezine.com/2013/04/29/diy-tensegrity/&quot;&gt;Tensegrity-Objekt&lt;/a&gt; gestolpert bin und das erstmal nur bei meiner &lt;a href=&quot;http://www.highdefdigest.com/blog/twin-peaks-cooper-tapes/&quot;&gt;Diane&lt;/a&gt; geparkt habe, hatte ich heute mal eine Viertelstunde Muse:&lt;/p&gt;
+&lt;div class=&quot;figure__container&quot;&gt;&lt;figure&gt;  &lt;a href=&quot;cam00009.jpg&quot;&gt;&lt;img src=&quot;/loader.gif&quot; alt=&quot;Tensegrity-Objekt&quot; srcset=&quot;cam00009-small.jpg 320w, cam00009-medium.jpg 640w, cam00009-large.jpg 800w&quot;,     sizes=&quot;(min-width: 600px) 50vw, 100vw&quot;/&gt;&lt;/a&gt;  &lt;figcaption&gt;Das Objekt stellt sich selbstständig auf.&lt;/figcaption&gt;&lt;/figure&gt;&lt;/div&gt;
+
+&lt;p&gt;Funktioniert :-)&lt;/p&gt;
+</description>
+    </item>
+    <item>
       <title>Initiale Position der Seite falsch – a Scrollspy Mystery [solved]</title>
       <link>http://halfdane.github.io/articles/2013-05-24-scrollspymystery/</link>
       <pubDate>Fri, 24 May 2013 00:00:00 +0000</pubDate>
@@ -1167,18 +1349,6 @@ Die anderen Apps sind Titanium Backup und das Spiel Osmos.&lt;/p&gt;
 &lt;p&gt;Letztendlich war der Fehler doch selbstverschuldet: in einer Form in der Mitte der Seite hatte ein Eingabefeld das Attribut “autofocus”, und der Browser hat den Cursor dann dahin gesetzt. Inklusive scrollen.&lt;/p&gt;
 &lt;p&gt;Ein völlig korrektes Verhalten – mit dem Entfernen des Attributes funktioniert die Seite jetzt auch wieder richtig.&lt;/p&gt;
 &lt;p&gt;Das zeigt mir mal wieder, dass es auch mit reinem HTML durchaus möglich ist, das Verhalten der Seite zu zerbrechen – und dass nicht immer die anderen Schuld sind.&lt;/p&gt;
-</description>
-    </item>
-    <item>
-      <title>Tensegrity</title>
-      <link>http://halfdane.github.io/articles/2013-05-24-tensegrity/</link>
-      <pubDate>Fri, 24 May 2013 00:00:00 +0000</pubDate>
-      <guid isPermaLink="true">http://halfdane.github.io/articles/2013-05-24-tensegrity/</guid>
-      <author></author>
-      <description>&lt;p&gt;Nachdem ich bereits vor Wochen auf der MAKE-Webseite über die Anleitung zu einem schnuckeligen, kleinen &lt;a href=&quot;http://makezine.com/2013/04/29/diy-tensegrity/&quot;&gt;Tensegrity-Objekt&lt;/a&gt; gestolpert bin und das erstmal nur bei meiner &lt;a href=&quot;http://www.highdefdigest.com/blog/twin-peaks-cooper-tapes/&quot;&gt;Diane&lt;/a&gt; geparkt habe, hatte ich heute mal eine Viertelstunde Muse:&lt;/p&gt;
-&lt;div class=&quot;figure__container&quot;&gt;&lt;figure&gt;  &lt;a href=&quot;cam00009.jpg&quot;&gt;&lt;img src=&quot;/loader.gif&quot; alt=&quot;Tensegrity-Objekt&quot; srcset=&quot;cam00009-small.jpg 320w, cam00009-medium.jpg 640w, cam00009-large.jpg 800w&quot;,     sizes=&quot;(min-width: 600px) 50vw, 100vw&quot;/&gt;&lt;/a&gt;  &lt;figcaption&gt;Das Objekt stellt sich selbstständig auf.&lt;/figcaption&gt;&lt;/figure&gt;&lt;/div&gt;
-
-&lt;p&gt;Funktioniert :-)&lt;/p&gt;
 </description>
     </item>
     <item>
