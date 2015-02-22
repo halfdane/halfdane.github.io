@@ -1,12 +1,11 @@
 .article {
     background-color: #ffffff;
-
+    display: block;
     padding-top: 1em;
 
     @include breakpoint($XL...) {
         padding-right: 2em;
         padding-left: 2em;
-        padding-bottom: 2em;
 
         margin-left: 1em;
         margin-right: 1em;

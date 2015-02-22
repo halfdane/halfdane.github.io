@@ -1,10 +1,14 @@
-$XL: 600px;
+$XL: 700px;
 
 @import "compass";
 @import "breakpoint";
 
 @import "compass/reset";
+@import "compass/css3/border-radius";
+@import "compass/css3/background-size";
+@import "compass/css3/box-sizing";
 
+@import "basics";
 @import "code-styling";
 @import "index";
 @import "article";
@@ -14,9 +18,3 @@ $XL: 600px;
 
 @import "wintersmith-defaults";
 @import "better-simple-slideshow-styles";
-@import "compass/css3/background-size";
-@import "compass/css3/box-sizing";
-
-*, *:before, *:after {
-    @include box-sizing(border-box);
-}

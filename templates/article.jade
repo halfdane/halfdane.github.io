@@ -17,7 +17,7 @@ block header
   mixin postNavigation(prevArticle, nextArticle)
 
 block content
-  article.article
+  article.connected.article
     h1= page.title
     section.content.lazycontent!= typogr(page.html).typogrify()
 
