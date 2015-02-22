@@ -1,6 +1,7 @@
 .article.intro {
     max-width: 50em;
     width: 100%;
+    display: inline-block;
 
     @include breakpoint($XL...) {
         width: 80%;
