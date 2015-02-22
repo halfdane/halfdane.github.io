@@ -14,19 +14,6 @@ h1 {
     margin: 0;
     text-align: center;
     position: relative;
-    a {
-        color: #fff;
-        text-decoration: none;
-        &:hover {
-            text-decoration: none;
-            color: #bbb;
-        }
-    }
-
-    .logo {
-        margin-top: 3em;
-    }
-
     h1 {
         text-shadow: 1px 1px 1px #000;
         color: #fff;
@@ -38,6 +25,19 @@ h1 {
         font-weight: 400;
         margin: 0.8em 0;
         font-size: 1.4em;
+    }
+
+    a {
+        color: #fff;
+        text-decoration: none;
+        &:hover {
+            text-decoration: none;
+            color: #bbb;
+        }
+    }
+
+    .logo {
+        margin-top: 3em;
     }
 
     .description {
@@ -54,21 +54,29 @@ h1 {
             font-size: 1em;
         }
     }
-
-    .pagination {
-        width: 100%;
-        position: absolute;
-        margin-top: -3em;
-    }
 }
 
 .pagination {
+    z-index: 1;
+    width: 100%;
+    position: absolute;
+    margin-top: -6em;
+    text-shadow: 1px 1px 1px #000;
     overflow: hidden;
+    a {
+        color: #fff;
+        &:hover {
+            color: #bbb;
+        }
+    }
     .next {
         float: left;
+        width: 40%;
     }
 
     .prev {
+        width: 40%;
         float: right;
+        text-align: right;
     }
 }
