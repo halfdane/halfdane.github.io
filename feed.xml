@@ -178,19 +178,6 @@ Code-Optimierungen des Just-In-Time-Compilers oder das Laufzeitverhalten von mod
 </description>
     </item>
     <item>
-      <title>Luftkissen-CD</title>
-      <link>http://halfdane.github.io/articles/2015-02-14-luftkissencd/</link>
-      <pubDate>Sat, 14 Feb 2015 00:00:00 +0000</pubDate>
-      <guid isPermaLink="true">http://halfdane.github.io/articles/2015-02-14-luftkissencd/</guid>
-      <author></author>
-      <description>&lt;div class=&quot;figure__container&quot;&gt;&lt;figure&gt;  &lt;a href=&quot;luftkissencd-01.jpg&quot;&gt;&lt;img src=&quot;/loader.gif&quot; alt=&quot;&quot; srcset=&quot;luftkissencd-01-small.jpg 320w, luftkissencd-01-medium.jpg 640w, luftkissencd-01-large.jpg 800w&quot;,     sizes=&quot;(min-width: 600px) 50vw, 100vw&quot;/&gt;&lt;/a&gt;  &lt;figcaption&gt;.&lt;/figcaption&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;div class=&quot;figure__container&quot;&gt;&lt;figure&gt;  &lt;a href=&quot;luftkissencd-02.jpg&quot;&gt;&lt;img src=&quot;/loader.gif&quot; alt=&quot;&quot; srcset=&quot;luftkissencd-02-small.jpg 320w, luftkissencd-02-medium.jpg 640w, luftkissencd-02-large.jpg 800w&quot;,     sizes=&quot;(min-width: 600px) 50vw, 100vw&quot;/&gt;&lt;/a&gt;  &lt;figcaption&gt;.&lt;/figcaption&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;div class=&quot;figure__container&quot;&gt;&lt;figure&gt;  &lt;a href=&quot;luftkissencd-03.jpg&quot;&gt;&lt;img src=&quot;/loader.gif&quot; alt=&quot;&quot; srcset=&quot;luftkissencd-03-small.jpg 320w, luftkissencd-03-medium.jpg 640w, luftkissencd-03-large.jpg 800w&quot;,     sizes=&quot;(min-width: 600px) 50vw, 100vw&quot;/&gt;&lt;/a&gt;  &lt;figcaption&gt;.&lt;/figcaption&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;div class=&quot;figure__container&quot;&gt;&lt;figure&gt;  &lt;a href=&quot;luftkissencd-04.jpg&quot;&gt;&lt;img src=&quot;/loader.gif&quot; alt=&quot;&quot; srcset=&quot;luftkissencd-04-small.jpg 320w, luftkissencd-04-medium.jpg 640w, luftkissencd-04-large.jpg 800w&quot;,     sizes=&quot;(min-width: 600px) 50vw, 100vw&quot;/&gt;&lt;/a&gt;  &lt;figcaption&gt;.&lt;/figcaption&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;div class=&quot;figure__container&quot;&gt;&lt;figure&gt;  &lt;a href=&quot;luftkissencd-05.jpg&quot;&gt;&lt;img src=&quot;/loader.gif&quot; alt=&quot;&quot; srcset=&quot;luftkissencd-05-small.jpg 320w, luftkissencd-05-medium.jpg 640w, luftkissencd-05-large.jpg 800w&quot;,     sizes=&quot;(min-width: 600px) 50vw, 100vw&quot;/&gt;&lt;/a&gt;  &lt;figcaption&gt;.&lt;/figcaption&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;div class=&quot;figure__container&quot;&gt;&lt;figure&gt;  &lt;a href=&quot;luftkissencd-final.jpg&quot;&gt;&lt;img src=&quot;/loader.gif&quot; alt=&quot;&quot; srcset=&quot;luftkissencd-final-small.jpg 320w, luftkissencd-final-medium.jpg 640w, luftkissencd-final-large.jpg 800w&quot;,     sizes=&quot;(min-width: 600px) 50vw, 100vw&quot;/&gt;&lt;/a&gt;  &lt;figcaption&gt;.&lt;/figcaption&gt;&lt;/figure&gt;&lt;/div&gt;</description>
-    </item>
-    <item>
       <title>Blue Jasmine</title>
       <link>http://halfdane.github.io/articles/2014-11-16-blue-jasmine/</link>
       <pubDate>Sun, 16 Nov 2014 00:00:00 +0000</pubDate>
