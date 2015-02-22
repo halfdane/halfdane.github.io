@@ -10,20 +10,29 @@ h1 {
     }
 }
 
+h2 {
+    font-style: italic;
+    text-align: center;
+    font-weight: 700;
+    margin: 0.8em 0;
+    font-size: 1.4em;
+}
+
 .header {
     margin: 0;
     text-align: center;
+    color: #fff;
     h1 {
         text-shadow: 1px 1px 1px #000;
-        color: #fff;
+        display: inline-block;
+        border-top: solid 1px rgba(247,247,247,.5);
+        border-bottom: solid 1px rgba(247,247,247,.5);
+        line-height: 2.5em;
+        font-size: 2.5em;
+        margin-bottom: 0;
     }
-
     h2 {
-        font-style: italic;
-        text-align: center;
-        font-weight: 400;
-        margin: 0.8em 0;
-        font-size: 1.4em;
+        line-height: 2em;
     }
 
     a {
@@ -36,7 +45,9 @@ h1 {
     }
 
     .logo {
-        margin-top: 3em;
+        margin-top: 5em;
+        text-align: center;
+        display: block;
     }
 
     .description {
@@ -48,9 +59,19 @@ h1 {
         padding-right: 1em;
         padding-left: 1em;
         padding-bottom: 0.6em;
+        color: #171717;
 
         @include breakpoint($XL...) {
             font-size: 1em;
+        }
+    }
+
+    .nav {
+        border-bottom: solid 1px rgba(247,247,247,.5);
+        display: inline-block;
+        .entry {
+            margin: 0 2em;
+            display: inline;
         }
     }
 }
@@ -58,9 +79,7 @@ h1 {
 .pagination {
     z-index: 1;
     width: 100%;
-    position: absolute;
-    margin-top: -6em;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
     text-shadow: 1px 1px 1px #000;
     overflow: hidden;
     a {

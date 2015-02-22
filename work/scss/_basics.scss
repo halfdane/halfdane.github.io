@@ -6,12 +6,15 @@
     text-align: center;
 }
 
+.bubble {
+    background-color: #ffffff;
+    @include border-radius(25px);
+}
+
 .connected {
     margin-bottom: 9em;
     position: relative;
     display: inline-block;
-    background-color: #ffffff;
-    @include border-radius(25px);
 
     &:before {
         content: '';

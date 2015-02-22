@@ -13,7 +13,7 @@ mixin img(url, alt)
 block content
   div#articles.centering
     each article in articles
-      article.article.intro.lazycontent.connected
+      article.article.intro.lazycontent.connected.bubble
         p.date
           span= moment.utc(article.date).format('DD. MMMM YYYY')
         div.image
