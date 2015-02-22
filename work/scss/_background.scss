@@ -1,0 +1,11 @@
+.background {
+    position:fixed;
+    left:0;
+    top:0;
+
+    background:url(/back03.jpg) center bottom/cover no-repeat;
+    @include background-size(cover);
+    width:100%;
+    height:125%;
+    z-index:-1
+}
