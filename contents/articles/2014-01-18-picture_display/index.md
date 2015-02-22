@@ -128,8 +128,10 @@ Klick oder Tastendruck beendet die Demo.
 
 <span class="btn" onclick="halfdane.picture_demo.run(); return false;">Click zum Start</span>
 
-Der Code ändert sich vermutlich auch noch ein bisschen, die aktuelle Version ist immer hier: [picture_display.js](picture_display.js)
+Der Code ändert sich vermutlich auch noch ein bisschen, die aktuelle Version ist immer hier: 
+- [picture_display.js](picture_display.js)
+- [picture_display.scss](picture_display.scss) (und compiliert zu css: [picture_display.css](picture_display.css))
 
-<link rel="stylesheet" href="/compiled/css/picture_display.css"></link>
+<link rel="stylesheet" href="picture_display.css"></link>
 <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
 <script src="picture_display.js"></script>
