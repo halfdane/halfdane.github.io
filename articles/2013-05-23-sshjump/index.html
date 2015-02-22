@@ -7,7 +7,7 @@
     <title>Transparenter SSH-Login via Jumpbox - halfdane's Canned Nerd
     </title>
     <link rel="alternate" href="http://halfdane.github.io/feed.xml" type="application/rss+xml" title="Navigate by sight">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700">
     <link rel="stylesheet" href="/compiled/css/main.css">
     <script type="text/javascript" src="/compiled/js/site.js"></script>
   </head>
@@ -16,18 +16,19 @@
       <div class="overlay"></div>
     </div>
     <header class="header">
-      <div class="logo">
+      <nav class="nav">
+        <h2 class="entry"><a href="/about.html">About</a></h2>
+        <h2 class="entry"><a href="/#articles">Blog</a></h2>
+      </nav>
+      <div class="logo connected">
         <h1><a href="http://halfdane.github.io">halfdane's Canned Nerd</a></h1>
-        <div class="connected">
-          <div class="description">Navigate by sight</div>
-        </div>
       </div>
     </header>
     <div class="pagination">
       <div class="prev"><a href="/articles/2013-05-11-shapeways/" title="Shapeways"><span class="prevTitle">Shapeways&nbsp;&rarr;</span></a></div>
       <div class="next"><a href="/articles/2013-05-24-scrollspymystery/" title="Initiale Position der Seite falsch – a Scrollspy Mystery [solved]"><span class="nextTitle">&larr;&nbsp;Initiale Position der Seite falsch – a Scrollspy Mystery [solved]</span></a></div>
     </div>
-    <article class="connected article">
+    <article class="connected bubble article">
       <h1>Transparenter SSH-Login via Jumpbox</h1>
       <section class="content lazycontent"><p>Man kommt ja auf live Umgebungen (oder auf die Maschinen von Kunden) meist nur über eine dedizierte Jumpbox, auf die man sich einloggt um dann von dort aus auf den eigentlichen Server zu&nbsp;kommen.</p>
 <p>Um den Workflow zu vereinfachen und den Zwischen-Login zu vermeiden, habe ich bisher meist einen Ssh-Tunnel benutzt, aber das funktioniert nur, wenn auf der Jumpbox Port-Forwarding erlaubt ist – bei kompetenten Admins also meistens nicht&nbsp;:-\</p>

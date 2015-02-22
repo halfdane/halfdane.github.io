@@ -7,7 +7,7 @@
     <title>Initiale Position der Seite falsch – a Scrollspy Mystery [solved] - halfdane's Canned Nerd
     </title>
     <link rel="alternate" href="http://halfdane.github.io/feed.xml" type="application/rss+xml" title="Navigate by sight">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700">
     <link rel="stylesheet" href="/compiled/css/main.css">
     <script type="text/javascript" src="/compiled/js/site.js"></script>
   </head>
@@ -16,18 +16,19 @@
       <div class="overlay"></div>
     </div>
     <header class="header">
-      <div class="logo">
+      <nav class="nav">
+        <h2 class="entry"><a href="/about.html">About</a></h2>
+        <h2 class="entry"><a href="/#articles">Blog</a></h2>
+      </nav>
+      <div class="logo connected">
         <h1><a href="http://halfdane.github.io">halfdane's Canned Nerd</a></h1>
-        <div class="connected">
-          <div class="description">Navigate by sight</div>
-        </div>
       </div>
     </header>
     <div class="pagination">
       <div class="prev"><a href="/articles/2013-05-23-sshjump/" title="Transparenter SSH-Login via Jumpbox"><span class="prevTitle">Transparenter SSH-Login via Jumpbox&nbsp;&rarr;</span></a></div>
       <div class="next"><a href="/articles/2013-05-24-tensegrity/" title="Tensegrity"><span class="nextTitle">&larr;&nbsp;Tensegrity</span></a></div>
     </div>
-    <article class="connected article">
+    <article class="connected bubble article">
       <h1>Initiale Position der Seite falsch – a Scrollspy Mystery [solved]</h1>
       <section class="content lazycontent"><p>Auf einer internen Seite, die Twitter-Bootstrap nicht ganz unähnlich ist, trat das Problem auf, dass der Browser irgendwo in die Mitte der Seite gesprungen ist (also etwa so: <a href="http://twitter.github.io/bootstrap/base-css.html#forms">http://twitter.github.io/bootstrap/base-css.html#forms</a> aber ohne #forms am Ende&nbsp;).</p>
 <p>Meine erste Vermutung war, dass der Scrollspy-Code buggy sein müsse (Fehler machen immer nur die anderen, right?), aber auch ganz ohne Javascript sprang der Browser in die Mitte der Seite&nbsp;:/</p>

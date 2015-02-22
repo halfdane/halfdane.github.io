@@ -7,7 +7,7 @@
     <title>TSP in JavaScript (Evolutionary) - halfdane's Canned Nerd
     </title>
     <link rel="alternate" href="http://halfdane.github.io/feed.xml" type="application/rss+xml" title="Navigate by sight">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700">
     <link rel="stylesheet" href="/compiled/css/main.css">
     <script type="text/javascript" src="/compiled/js/site.js"></script>
   </head>
@@ -16,18 +16,19 @@
       <div class="overlay"></div>
     </div>
     <header class="header">
-      <div class="logo">
+      <nav class="nav">
+        <h2 class="entry"><a href="/about.html">About</a></h2>
+        <h2 class="entry"><a href="/#articles">Blog</a></h2>
+      </nav>
+      <div class="logo connected">
         <h1><a href="http://halfdane.github.io">halfdane's Canned Nerd</a></h1>
-        <div class="connected">
-          <div class="description">Navigate by sight</div>
-        </div>
       </div>
     </header>
     <div class="pagination">
       <div class="prev"><a href="/articles/2014-01-18-picture_display/" title="Livestream-Bildergallerie"><span class="prevTitle">Livestream-Bildergallerie&nbsp;&rarr;</span></a></div>
       <div class="next"><a href="/articles/2014-01-26-base64_fonts_in_css/" title="Schriften _wirklich_ in Css einbinden"><span class="nextTitle">&larr;&nbsp;Schriften _wirklich_ in Css einbinden</span></a></div>
     </div>
-    <article class="connected article">
+    <article class="connected bubble article">
       <h1>TSP in JavaScript (Evolutionary)</h1>
       <section class="content lazycontent"><p>Nachdem die “Simulated Annealing”-Strategie zur Lösung des Traveling Salesman Problems <a href="/2013/12/01/annealing/">nicht so beeindruckend war</a>, versuche ich mich jetzt mal an der Implementierung eines evolutionären Algorithmus’ in&nbsp;Javascript.</p>
 <p>Eine sehr lange und komplizierte Erklärung des <span class="caps">TSP</span> findet man natürlich <a href="http://de.wikipedia.org/wiki/Problem_des_Handlungsreisenden">bei Wikipedia</a>, aber ehrlich gesagt gefällt mir meine aus <a href="/2013/12/01/annealing/">dem vorigen Artikel</a>&nbsp;besser:</p>

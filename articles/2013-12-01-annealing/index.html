@@ -7,7 +7,7 @@
     <title>TSP in JavaScript (Simulated Annealing) - halfdane's Canned Nerd
     </title>
     <link rel="alternate" href="http://halfdane.github.io/feed.xml" type="application/rss+xml" title="Navigate by sight">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700">
     <link rel="stylesheet" href="/compiled/css/main.css">
     <script type="text/javascript" src="/compiled/js/site.js"></script>
   </head>
@@ -16,18 +16,19 @@
       <div class="overlay"></div>
     </div>
     <header class="header">
-      <div class="logo">
+      <nav class="nav">
+        <h2 class="entry"><a href="/about.html">About</a></h2>
+        <h2 class="entry"><a href="/#articles">Blog</a></h2>
+      </nav>
+      <div class="logo connected">
         <h1><a href="http://halfdane.github.io">halfdane's Canned Nerd</a></h1>
-        <div class="connected">
-          <div class="description">Navigate by sight</div>
-        </div>
       </div>
     </header>
     <div class="pagination">
       <div class="prev"><a href="/articles/2013-11-23-buddel3/" title="Buddelschiff (3: Segel)"><span class="prevTitle">Buddelschiff (3: Segel)&nbsp;&rarr;</span></a></div>
       <div class="next"><a href="/articles/2013-12-08-jekyll/" title="Jekyll, Markdown &amp; Bilder"><span class="nextTitle">&larr;&nbsp;Jekyll, Markdown &amp; Bilder</span></a></div>
     </div>
-    <article class="connected article">
+    <article class="connected bubble article">
       <h1>TSP in JavaScript (Simulated Annealing)</h1>
       <section class="content lazycontent"><p>Um meine JavaScript-Kenntnisse zu vertiefen, habe mich daran gemacht einen Graphen aus Knoten und Kanten zu implementieren. Und weil das zu einfach ist, soll darauf das Traveling Salesman Problem gelöst werden&nbsp;:)</p>
 <p>Für das <span class="caps">TSP</span> werden eine Reihe von Punkten (z.B. Städte auf einer Landkarte, können aber auch dreidimensional sein) sortiert. Aber nicht einfach irgendwie, sondern so dass beim Durchgehen der Punkte von einem zum nächsten die zurückgelegte Strecke möglichst kurz ist. Wie ein Handelsreisender, der Benzin sparen möchte, daher der Name. Das Problem ist für die Informatik interessant, weil es überraschend schwer ist, es optimal zu lösen. Ein Computer muss bei jedem einzelnen Punkt nämlich erstmal alle anderen Punkte prüfen und schauen, wo der neue an besten hinpasst. Bei vielen Punkten kann die Rechenzeit für eine optimale Lösung mehr Zeit in Anspruch nehmen, als z.B. das Universum existiert. Die Klasse der Probleme, zu der das TSP gehört wird von Profis daher auch “die echt richtig schweren Probleme” genannt. Allerdings ist das Problem nicht nur rein akademisch, sondern unter anderem für Logistik-Unternehmen relevant, also für den Post- oder Hermesboten oder für Containerschiffe. Die benutzen für ihre Tourenoptimierung dann keine optimalen Lösungen (keine Zeit), sondern Annäherungen, die “gut genug” sind. Und da gibt es einen ganzen Sack von Strategien, die ausgesprochen spannend sind - natürlich für eine ganz persönliche Definition von “spannend”&nbsp;:-D</p>

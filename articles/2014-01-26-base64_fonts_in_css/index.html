@@ -7,7 +7,7 @@
     <title>Schriften _wirklich_ in Css einbinden - halfdane's Canned Nerd
     </title>
     <link rel="alternate" href="http://halfdane.github.io/feed.xml" type="application/rss+xml" title="Navigate by sight">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700">
     <link rel="stylesheet" href="/compiled/css/main.css">
     <script type="text/javascript" src="/compiled/js/site.js"></script>
   </head>
@@ -16,18 +16,19 @@
       <div class="overlay"></div>
     </div>
     <header class="header">
-      <div class="logo">
+      <nav class="nav">
+        <h2 class="entry"><a href="/about.html">About</a></h2>
+        <h2 class="entry"><a href="/#articles">Blog</a></h2>
+      </nav>
+      <div class="logo connected">
         <h1><a href="http://halfdane.github.io">halfdane's Canned Nerd</a></h1>
-        <div class="connected">
-          <div class="description">Navigate by sight</div>
-        </div>
       </div>
     </header>
     <div class="pagination">
       <div class="prev"><a href="/articles/2014-01-19-tsp_evolution/" title="TSP in JavaScript (Evolutionary)"><span class="prevTitle">TSP in JavaScript (Evolutionary)&nbsp;&rarr;</span></a></div>
       <div class="next"><a href="/articles/2014-01-31-tsp_greedy/" title="TSP in JavaScript (Greedy)"><span class="nextTitle">&larr;&nbsp;TSP in JavaScript (Greedy)</span></a></div>
     </div>
-    <article class="connected article">
+    <article class="connected bubble article">
       <h1>Schriften _wirklich_ in Css einbinden</h1>
       <section class="content lazycontent"><p>Ja ja, embedded fonts in Css sind ein totgerittenes Pferd. Allerdings wird immer nur darüber geredet, wie ein Font-File auf einem Server referenziert wird, am besten auch noch über <a href="http://www.google.com/fonts">Google-Fonts</a> und das ist einfach falsch, denn das ist eigentlich genau das Gegenteil eines eingebetteten&nbsp;Fonts.</p>
 <p>Denn so liegt der ja nach wie vor auf dem Server und muss extra mit einem eigenen Request (oder bei Google-Fonts sogar mit zweien) abgeholt werden, bevor er dann im Browser benutzt werden&nbsp;kann. </p>
