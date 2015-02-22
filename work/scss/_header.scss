@@ -13,17 +13,17 @@ h1 {
 .header {
     text-shadow: 1px 1px 1px #000;
     color: #fff;
+    margin: 0;
+    text-align: center;
+    position: relative;
     a {
         color: #fff;
     }
 
     .logo {
         margin-top: 3em;
-        display: inline-block;
     }
 
-    margin: 0;
-    text-align: center;
 
     h2 {
         font-style: italic;
@@ -47,5 +47,22 @@ h1 {
         @include breakpoint($XL...) {
             font-size: 1em;
         }
+    }
+
+    .pagination {
+        width: 100%;
+        position: absolute;
+        margin-top: -3em;
+    }
+}
+
+.pagination {
+    overflow: hidden;
+    .next {
+        float: left;
+    }
+
+    .prev {
+        float: right;
     }
 }

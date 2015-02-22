@@ -7,11 +7,6 @@ block prepend title
   | #{ page.title + " - "}
 
 block header
-  div.logo
-    h2
-      a(href=locals.url)= locals.name
-    p.description= locals.description
-
   - var articles = env.helpers.getArticles(contents);
   - var articlesTitles = _.map(articles, function(value, key, list) {
   -       return value.metadata.title;
@@ -29,7 +24,7 @@ block content
 block prepend footer
   div.nav
     mixin postNavigation(prevArticle, nextArticle)
-    a(href=contents.index.url) « Full blog
+    a(href=contents.index.url) Full blog
   if (! locals.hideComments)
     div(id="disqus_thread")
     script(type="text/javascript").

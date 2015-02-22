@@ -1,11 +1,15 @@
 .article {
     background-color: #ffffff;
 
+    padding-top: 1em;
+
     @include breakpoint($XL...) {
-        padding: 2em;
+        padding-right: 2em;
+        padding-left: 2em;
+        padding-bottom: 2em;
+
         margin-left: 1em;
         margin-right: 1em;
-        margin-top: 1em;
     }
 
     header {
