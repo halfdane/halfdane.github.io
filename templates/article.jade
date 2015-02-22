@@ -6,7 +6,7 @@ block append vars
 block prepend title
   | #{ page.title + " - "}
 
-block header
+block content
   - var articles = env.helpers.getArticles(contents);
   - var articlesTitles = _.map(articles, function(value, key, list) {
   -       return value.metadata.title;
@@ -15,8 +15,6 @@ block header
   - var prevArticle = articles[thisPageIndex+1];
   - var nextArticle = articles[thisPageIndex-1];
   mixin postNavigation(prevArticle, nextArticle)
-
-block content
   article.connected.article
     h1= page.title
     section.content.lazycontent!= typogr(page.html).typogrify()
