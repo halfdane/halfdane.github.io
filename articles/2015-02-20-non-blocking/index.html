@@ -18,13 +18,15 @@
     <header class="header">
       <div class="logo">
         <h1><a href="http://halfdane.github.io">halfdane's Canned Nerd</a></h1>
-        <p class="description connected">Navigate by sight</p>
+        <div class="connected">
+          <div class="description">Navigate by sight</div>
+        </div>
       </div>
       <div class="pagination">
         <div class="prev"><a href="/articles/2014-11-16-blue-jasmine/" title="Blue Jasmine"><span class="prevTitle">Blue Jasmine</span><span>&rarr;&nbsp;</span></a></div>
       </div>
     </header>
-    <article class="article">
+    <article class="connected article">
       <h1>Non-Blocking Stack in Java</h1>
       <section class="content lazycontent"><p>Um den Performance-Hit von <code>synchronized</code> zu vermeiden, kann man dank Compare-And-Set (bzw. der Java-Implementierung als <code>Atomic*</code>) auch Non-Blocking Algorithmen&nbsp;benutzen.</p>
 <div class="figure__container"><figure>  <a href="Kolejka.jpg"><img src="/loader.gif" alt="Jump the waiting queue with non-blocking algorithms" srcset="Kolejka-small.jpg 320w, Kolejka-medium.jpg 640w, Kolejka-large.jpg 800w",     sizes="(min-width: 600px) 50vw, 100vw"/></a>  <figcaption>Jump the waiting queue with non-blocking algorithms (<a href="http://en.wikipedia.org/wiki/Queue_area">Wikipedia</a>).</figcaption></figure></div>
