@@ -3,10 +3,8 @@ mixin postNavigation(prevArticle, nextArticle)
         if prevArticle
             div.prev
                 a(href="#{prevArticle.url}" title="#{prevArticle.title}")
-                    span.prevTitle #{prevArticle.title}
-                    span &rarr;&nbsp;
+                    span.prevTitle #{prevArticle.title}&nbsp;&rarr;
         if nextArticle
             div.next
                 a(href="#{nextArticle.url}" title="#{nextArticle.title}")
-                    span &larr;&nbsp;
-                    span.nextTitle #{nextArticle.title}
+                    span.nextTitle &larr;&nbsp;#{nextArticle.title}
