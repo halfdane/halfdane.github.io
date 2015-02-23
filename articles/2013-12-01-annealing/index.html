@@ -11,23 +11,25 @@
     <link rel="stylesheet" href="/compiled/css/main.css">
     <script type="text/javascript" src="/compiled/js/site.js"></script>
   </head>
-  <body class="article-detail">
+  <body id="top" class="article-detail">
     <div class="background">
       <div class="overlay"></div>
     </div>
     <header class="header">
       <nav class="nav">
-        <h2 class="entry"><a href="/about.html">About</a></h2>
+        <h2 class="entry"><a href="/">Home</a></h2>
         <h2 class="entry"><a href="/#articles">Blog</a></h2>
+        <h2 class="entry"><a href="/about.html">About</a></h2>
       </nav>
       <div class="logo connected">
         <h1><a href="http://halfdane.github.io">halfdane's Canned Nerd</a></h1>
+        <h2 class="description">Navigate by sight</h2>
       </div>
     </header>
-    <div class="pagination">
-      <div class="prev"><a href="/articles/2013-11-23-buddel3/" title="Buddelschiff (3: Segel)"><span class="prevTitle">Buddelschiff (3: Segel)&nbsp;&rarr;</span></a></div>
-      <div class="next"><a href="/articles/2013-12-08-jekyll/" title="Jekyll, Markdown &amp; Bilder"><span class="nextTitle">&larr;&nbsp;Jekyll, Markdown &amp; Bilder</span></a></div>
-    </div>
+    <nav class="pagination">
+      <div class="prev"><a href="/articles/2013-11-23-buddel3/" title="Buddelschiff (3: Segel)">Buddelschiff (3: Segel)&nbsp;&rarr;</a></div>
+      <div class="next"><a href="/articles/2013-12-08-jekyll/" title="Jekyll, Markdown &amp; Bilder">&larr;&nbsp;Jekyll, Markdown &amp; Bilder</a></div>
+    </nav>
     <article class="connected bubble article">
       <h1>TSP in JavaScript (Simulated Annealing)</h1>
       <section class="content lazycontent"><p>Um meine JavaScript-Kenntnisse zu vertiefen, habe mich daran gemacht einen Graphen aus Knoten und Kanten zu implementieren. Und weil das zu einfach ist, soll darauf das Traveling Salesman Problem gelöst werden&nbsp;:)</p>
@@ -135,12 +137,10 @@ halfdane.tsp.createAnnealing(points).solve();
 </section>
     </article>
     <footer>
-      <div class="nav">
-        <div class="pagination">
-          <div class="prev"><a href="/articles/2013-11-23-buddel3/" title="Buddelschiff (3: Segel)"><span class="prevTitle">Buddelschiff (3: Segel)&nbsp;&rarr;</span></a></div>
-          <div class="next"><a href="/articles/2013-12-08-jekyll/" title="Jekyll, Markdown &amp; Bilder"><span class="nextTitle">&larr;&nbsp;Jekyll, Markdown &amp; Bilder</span></a></div>
-        </div><a href="/">Full blog</a>
-      </div>
+      <nav class="pagination">
+        <div class="prev"><a href="/articles/2013-11-23-buddel3/" title="Buddelschiff (3: Segel)">Buddelschiff (3: Segel)&nbsp;&rarr;</a></div>
+        <div class="next"><a href="/articles/2013-12-08-jekyll/" title="Jekyll, Markdown &amp; Bilder">&larr;&nbsp;Jekyll, Markdown &amp; Bilder</a></div>
+      </nav>
       <div id="disqus_thread"></div>
       <script type="text/javascript">
         var disqus_shortname = 'halfdane'; // required: replace example with your forum shortname
@@ -152,7 +152,7 @@ halfdane.tsp.createAnnealing(points).solve();
         })();
       </script>
       <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a></a>
-      <section class="about">
+      <section class="about connected">
         <div class="me">
           <p>Canned Nerd wird geschrieben und veröffentlicht von halfdane.</p>
           <p>Mein Name ist halfdane und meine E-Mail-Adresse ist &lt;name>@gmx.net.</p>
@@ -171,9 +171,10 @@ halfdane.tsp.createAnnealing(points).solve();
           </p>
         </div>
       </section>
+      <nav class="bottomNavigation"><a href="#top" class="bubble entry">Nach oben</a></nav>
+      <section class="copy">
+        <p>&copy; 2015 halfdane &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a></p>
+      </section>
     </footer>
   </body>
-  <section class="copy">
-    <p>&copy; 2015 halfdane &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a></p>
-  </section>
 </html>

@@ -11,23 +11,25 @@
     <link rel="stylesheet" href="/compiled/css/main.css">
     <script type="text/javascript" src="/compiled/js/site.js"></script>
   </head>
-  <body class="article-detail">
+  <body id="top" class="article-detail">
     <div class="background">
       <div class="overlay"></div>
     </div>
     <header class="header">
       <nav class="nav">
-        <h2 class="entry"><a href="/about.html">About</a></h2>
+        <h2 class="entry"><a href="/">Home</a></h2>
         <h2 class="entry"><a href="/#articles">Blog</a></h2>
+        <h2 class="entry"><a href="/about.html">About</a></h2>
       </nav>
       <div class="logo connected">
         <h1><a href="http://halfdane.github.io">halfdane's Canned Nerd</a></h1>
+        <h2 class="description">Navigate by sight</h2>
       </div>
     </header>
-    <div class="pagination">
-      <div class="prev"><a href="/articles/2014-10-09-dallas_buyers_club/" title="Dallas Buyers Club"><span class="prevTitle">Dallas Buyers Club&nbsp;&rarr;</span></a></div>
-      <div class="next"><a href="/articles/2014-10-27-under_the_skin/" title="Under The Skin"><span class="nextTitle">&larr;&nbsp;Under The Skin</span></a></div>
-    </div>
+    <nav class="pagination">
+      <div class="prev"><a href="/articles/2014-10-09-dallas_buyers_club/" title="Dallas Buyers Club">Dallas Buyers Club&nbsp;&rarr;</a></div>
+      <div class="next"><a href="/articles/2014-10-27-under_the_skin/" title="Under The Skin">&larr;&nbsp;Under The Skin</a></div>
+    </nav>
     <article class="connected bubble article">
       <h1>Leonore Pothast: Das letzte Spiel</h1>
       <section class="content lazycontent"><p>Ein Messer, ein Ring, eine Statue.
@@ -37,12 +39,10 @@ Einbrüche, Verrat, eine unfassbare Intrige, dazu Familie und Freunde, Morde und
 </section>
     </article>
     <footer>
-      <div class="nav">
-        <div class="pagination">
-          <div class="prev"><a href="/articles/2014-10-09-dallas_buyers_club/" title="Dallas Buyers Club"><span class="prevTitle">Dallas Buyers Club&nbsp;&rarr;</span></a></div>
-          <div class="next"><a href="/articles/2014-10-27-under_the_skin/" title="Under The Skin"><span class="nextTitle">&larr;&nbsp;Under The Skin</span></a></div>
-        </div><a href="/">Full blog</a>
-      </div>
+      <nav class="pagination">
+        <div class="prev"><a href="/articles/2014-10-09-dallas_buyers_club/" title="Dallas Buyers Club">Dallas Buyers Club&nbsp;&rarr;</a></div>
+        <div class="next"><a href="/articles/2014-10-27-under_the_skin/" title="Under The Skin">&larr;&nbsp;Under The Skin</a></div>
+      </nav>
       <div id="disqus_thread"></div>
       <script type="text/javascript">
         var disqus_shortname = 'halfdane'; // required: replace example with your forum shortname
@@ -54,7 +54,7 @@ Einbrüche, Verrat, eine unfassbare Intrige, dazu Familie und Freunde, Morde und
         })();
       </script>
       <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a></a>
-      <section class="about">
+      <section class="about connected">
         <div class="me">
           <p>Canned Nerd wird geschrieben und veröffentlicht von halfdane.</p>
           <p>Mein Name ist halfdane und meine E-Mail-Adresse ist &lt;name>@gmx.net.</p>
@@ -73,9 +73,10 @@ Einbrüche, Verrat, eine unfassbare Intrige, dazu Familie und Freunde, Morde und
           </p>
         </div>
       </section>
+      <nav class="bottomNavigation"><a href="#top" class="bubble entry">Nach oben</a></nav>
+      <section class="copy">
+        <p>&copy; 2015 halfdane &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a></p>
+      </section>
     </footer>
   </body>
-  <section class="copy">
-    <p>&copy; 2015 halfdane &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a></p>
-  </section>
 </html>

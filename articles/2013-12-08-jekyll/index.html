@@ -11,23 +11,25 @@
     <link rel="stylesheet" href="/compiled/css/main.css">
     <script type="text/javascript" src="/compiled/js/site.js"></script>
   </head>
-  <body class="article-detail">
+  <body id="top" class="article-detail">
     <div class="background">
       <div class="overlay"></div>
     </div>
     <header class="header">
       <nav class="nav">
-        <h2 class="entry"><a href="/about.html">About</a></h2>
+        <h2 class="entry"><a href="/">Home</a></h2>
         <h2 class="entry"><a href="/#articles">Blog</a></h2>
+        <h2 class="entry"><a href="/about.html">About</a></h2>
       </nav>
       <div class="logo connected">
         <h1><a href="http://halfdane.github.io">halfdane's Canned Nerd</a></h1>
+        <h2 class="description">Navigate by sight</h2>
       </div>
     </header>
-    <div class="pagination">
-      <div class="prev"><a href="/articles/2013-12-01-annealing/" title="TSP in JavaScript (Simulated Annealing)"><span class="prevTitle">TSP in JavaScript (Simulated Annealing)&nbsp;&rarr;</span></a></div>
-      <div class="next"><a href="/articles/2013-12-11-vertikaler-rhythmus/" title="Vertikaler Rhythmus"><span class="nextTitle">&larr;&nbsp;Vertikaler Rhythmus</span></a></div>
-    </div>
+    <nav class="pagination">
+      <div class="prev"><a href="/articles/2013-12-01-annealing/" title="TSP in JavaScript (Simulated Annealing)">TSP in JavaScript (Simulated Annealing)&nbsp;&rarr;</a></div>
+      <div class="next"><a href="/articles/2013-12-11-vertikaler-rhythmus/" title="Vertikaler Rhythmus">&larr;&nbsp;Vertikaler Rhythmus</a></div>
+    </nav>
     <article class="connected bubble article">
       <h1>Jekyll, Markdown &amp; Bilder</h1>
       <section class="content lazycontent"><p>[<span class="caps">EDIT</span>: 23.11.2014]
@@ -74,12 +76,10 @@ gefunden.</figcaption></figure></div>
 <div class="figure__container"><figure>  <a href="mug.jpg"><img src="/loader.gif" alt="mug" srcset="mug-small.jpg 320w, mug-medium.jpg 640w, mug-large.jpg 800w",     sizes="(min-width: 600px) 50vw, 100vw"/></a>  </figure></div></section>
     </article>
     <footer>
-      <div class="nav">
-        <div class="pagination">
-          <div class="prev"><a href="/articles/2013-12-01-annealing/" title="TSP in JavaScript (Simulated Annealing)"><span class="prevTitle">TSP in JavaScript (Simulated Annealing)&nbsp;&rarr;</span></a></div>
-          <div class="next"><a href="/articles/2013-12-11-vertikaler-rhythmus/" title="Vertikaler Rhythmus"><span class="nextTitle">&larr;&nbsp;Vertikaler Rhythmus</span></a></div>
-        </div><a href="/">Full blog</a>
-      </div>
+      <nav class="pagination">
+        <div class="prev"><a href="/articles/2013-12-01-annealing/" title="TSP in JavaScript (Simulated Annealing)">TSP in JavaScript (Simulated Annealing)&nbsp;&rarr;</a></div>
+        <div class="next"><a href="/articles/2013-12-11-vertikaler-rhythmus/" title="Vertikaler Rhythmus">&larr;&nbsp;Vertikaler Rhythmus</a></div>
+      </nav>
       <div id="disqus_thread"></div>
       <script type="text/javascript">
         var disqus_shortname = 'halfdane'; // required: replace example with your forum shortname
@@ -91,7 +91,7 @@ gefunden.</figcaption></figure></div>
         })();
       </script>
       <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a></a>
-      <section class="about">
+      <section class="about connected">
         <div class="me">
           <p>Canned Nerd wird geschrieben und veröffentlicht von halfdane.</p>
           <p>Mein Name ist halfdane und meine E-Mail-Adresse ist &lt;name>@gmx.net.</p>
@@ -110,9 +110,10 @@ gefunden.</figcaption></figure></div>
           </p>
         </div>
       </section>
+      <nav class="bottomNavigation"><a href="#top" class="bubble entry">Nach oben</a></nav>
+      <section class="copy">
+        <p>&copy; 2015 halfdane &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a></p>
+      </section>
     </footer>
   </body>
-  <section class="copy">
-    <p>&copy; 2015 halfdane &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a></p>
-  </section>
 </html>
