@@ -1,5 +1,4 @@
 .article {
-    background-color: #ffffff;
     display: block;
     padding-top: 1em;
 
@@ -11,20 +10,7 @@
         margin-right: 1em;
     }
 
-    header {
-        border-top: 1px dashed #d2d2d2;
-        h2 a {
-            text-decoration: none;
-            .date {
-                text-align: center;
-                font-size: 0.8em;
-                margin-top: -0.7em;
-                span {
-                    background-color: #f8f8f8;
-                    padding: 0 0.7em;
-                }
-            }
-        }
+    .content {
+        overflow: auto;
     }
-
 }

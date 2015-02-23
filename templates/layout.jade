@@ -17,24 +17,25 @@ html(lang='en')
       link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700')
       link(rel='stylesheet', href='/compiled/css/main.css')
       script(type="text/javascript" src="/compiled/js/site.js")
-  body(class=bodyclass)
+  body(class=bodyclass)#top
     div.background
       div.overlay
     header.header
       nav.nav
         h2.entry
-          a(href="/about.html") About
+          a(href="/") Home
         h2.entry
           a(href="/#articles") Blog
+        h2.entry
+          a(href="/about.html") About
       div.logo.connected
         h1
           a(href=locals.url)= locals.name
-      block header
-        div.description.connected.bubble= locals.description
+        h2.description= locals.description
     block content
     footer
       block footer
-        section.about
+        section.about.connected
           div.me
             p Canned Nerd wird geschrieben und veröffentlicht von halfdane.
             p Mein Name ist halfdane und meine E-Mail-Adresse ist &lt;name>@gmx.net.
@@ -51,8 +52,10 @@ html(lang='en')
               |(
               a(href="http://www.gnu.de/documents/gpl.de.html") General Public License v.3
               |).
+        nav.bottomNavigation
+          a(href='#top').bubble.entry Nach oben
 
-  section.copy
+      section.copy
           p &copy; #{ new Date().getFullYear() } #{ locals.owner } &mdash; powered by&nbsp;
             a(href='https://github.com/jnordberg/wintersmith') Wintersmith
 

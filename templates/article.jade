@@ -22,9 +22,7 @@ block content
     section.content.lazycontent!= typogr(page.html).typogrify()
 
 block prepend footer
-  div.nav
-    mixin postNavigation(prevArticle, nextArticle)
-    a(href=contents.index.url) Full blog
+  mixin postNavigation(prevArticle, nextArticle)
   if (! locals.hideComments)
     div(id="disqus_thread")
     script(type="text/javascript").

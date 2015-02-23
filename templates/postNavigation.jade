@@ -1,10 +1,8 @@
 mixin postNavigation(prevArticle, nextArticle)
-    div.pagination
+    nav.pagination
         if prevArticle
             div.prev
-                a(href="#{prevArticle.url}" title="#{prevArticle.title}")
-                    span.prevTitle #{prevArticle.title}&nbsp;&rarr;
+                a(href="#{prevArticle.url}" title="#{prevArticle.title}") #{prevArticle.title}&nbsp;&rarr;
         if nextArticle
             div.next
-                a(href="#{nextArticle.url}" title="#{nextArticle.title}")
-                    span.nextTitle &larr;&nbsp;#{nextArticle.title}
+                a(href="#{nextArticle.url}" title="#{nextArticle.title}") &larr;&nbsp;#{nextArticle.title}
