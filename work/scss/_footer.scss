@@ -9,13 +9,21 @@ footer {
         border-bottom: solid 1px rgba(247,247,247,.5);
         font-size: 0.9em;
         padding-top: 1.6em;
-        > div {
+        .information {
+            overflow: hidden;
+        }
+
+        .entry {
             float: left;
             margin: 0 1%;
 
             @include breakpoint($XL...) {
                 width: 31%;
             }
+        }
+
+        .copy {
+            text-align: center;
         }
     }
 
@@ -24,5 +32,11 @@ footer {
         .entry {
             padding: 1em;
         }
+    }
+
+    #disqus_thread {
+        display: block;
+        border-top: solid 1px rgba(247,247,247,.5);
+        border-bottom: solid 1px rgba(247,247,247,.5);
     }
 }

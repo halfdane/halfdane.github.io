@@ -24,7 +24,7 @@ block content
 block prepend footer
   mixin postNavigation(prevArticle, nextArticle)
   if (! locals.hideComments)
-    div(id="disqus_thread")
+    div(id="disqus_thread").connected
     script(type="text/javascript").
       var disqus_shortname = 'halfdane'; // required: replace example with your forum shortname
       /* * * DON'T EDIT BELOW THIS LINE * * */
