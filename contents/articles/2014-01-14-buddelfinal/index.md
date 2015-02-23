@@ -34,4 +34,4 @@ Wie bei den Rumpfteilen gibt es auch hier einen kleinen Nuppel aus einem Schasch
 - |image|buddel_f_rohrumpf7.jpg|Hauptrumpf passt in Flasche 2| Passt grade mal so - vom Nippel rechts am Flaschenhals musste noch ein bisschen ab, damit es geht. |
 - |image|buddel_f_rohrumpf8.jpg|Innenansicht| Der Rumpf ohne linkes Hauptrumpf-Teil - eine Innenansicht. |
 
-<div class="lazyload" data-lazyhref="teil_2.html" data-lazytarget=".article .content">Nächste Seite</div>
+<a class="lazyload" data-lazyhref="teil_2.html" href="teil_2.html" data-lazytarget=".article .content">Nächste Seite</a>

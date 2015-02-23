@@ -32,4 +32,4 @@ Zur Unterstützung der habe ich die Hängestangen eines kaputten Wäscheständer
 - |image|buddel_f_stapellauf16.jpg|Fertig| Die Masten sind aufgerichtet und die Fäden verklebt und abgeschnitten. |
 - |image|buddel_f_stapellauf15.jpg|Pause| Für heute ist Schluss. Die Buddel bekommt ein Nachquartier im Bücherregal. |
 
-<div class="lazyload" data-lazyhref="teil_5.html" data-lazytarget=".article .content">Nächste Seite</div>
+<a class="lazyload" data-lazyhref="teil_5.html" href="teil_5.html" data-lazytarget=".article .content">Nächste Seite</a>

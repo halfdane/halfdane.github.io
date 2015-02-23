@@ -33,4 +33,4 @@ Die Plastikfolie, die als Rutsche durch den Flaschenhals dienen sollte, ist beim
 - |image|buddel_f_wasser5.jpg|Drin| Das Wasser ist glücklich drin gelandet. |
 - |image|buddel_f_wasser4.jpg|Kein Atlantik| Auch ohne Brille und mit zusammengekniffenen Augen wird daraus kein aufgepeitschter Atlantik ... |
 
-<div class="lazyload" data-lazyhref="teil_6.html" data-lazytarget=".article .content">Nächste Seite</div>
+<a class="lazyload" data-lazyhref="teil_6.html" href="teil_6.html" data-lazytarget=".article .content">Nächste Seite</a>

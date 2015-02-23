@@ -30,4 +30,4 @@ Noch an die Wand werfen, aber dann lass ich es auch gut sein.
 - |image|buddel_f_staender4.jpg|Wandhalter und Ständer unverbunden| Der Ständer kann jederzeit einfach aus der Wandhalterung genommen werden. |
 - |image|buddel_f_staender5.jpg|Wandhalter und Ständer verbunden| Und auch wieder rein: Hält. |
 
-<div class="lazyload" data-lazyhref="teil_7.html" data-lazytarget=".article .content">Nächste Seite</div>
+<a class="lazyload" data-lazyhref="teil_7.html" href="teil_7.html" data-lazytarget=".article .content">Nächste Seite</a>

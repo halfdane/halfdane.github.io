@@ -18,4 +18,4 @@ Jetzt ist der Punkt erreicht, an dem offensichtlich wird, wie so ein Buddelschif
 - |image|buddel_f_kiellegung2.jpg|Mit befestigten Masten| Die Masten und die Wanten sind am Oberdeck befestigt. |
 - |image|buddel_f_kiellegung4.jpg|Stage durch Klüver| Die Stagen laufen wirklich _durch_ den Klüverbaum |
 
-<div class="lazyload" data-lazyhref="teil_4.html" data-lazytarget=".article .content">Nächste Seite</div>
+<a class="lazyload" data-lazyhref="teil_4.html" href="teil_4.html" data-lazytarget=".article .content">Nächste Seite</a>

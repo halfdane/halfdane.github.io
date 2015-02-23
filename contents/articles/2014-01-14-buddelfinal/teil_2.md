@@ -16,4 +16,4 @@ Als Segeltuch kommt sehr feiner Baumwollstoff, der etwa 10 Minuten mit zwei Löf
 - |image|buddel_f_segel4.jpg|Großmast mit Segeln vorne| Vorderansicht der vier Segel am Großmast. |
 - |image|buddel_f_segel5.jpg|Großmast mit Segeln hinten| Hinteransicht: Jedes Segel ist mit vier Fäden an der oberen Rahe befestigt und mit den beiden äußeren Fäden an der darunterliegenden. Die zwei Fäden des untersten Segels werden am Deck festgeklebt. |
 
-<div class="lazyload" data-lazyhref="teil_3.html" data-lazytarget=".article .content">Nächste Seite</div>
+<a class="lazyload" data-lazyhref="teil_3.html" href="teil_3.html" data-lazytarget=".article .content">Nächste Seite</a>

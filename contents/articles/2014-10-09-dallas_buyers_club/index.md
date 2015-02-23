@@ -4,7 +4,8 @@ category: Film
 tags: [rezension, film]
 image: dallas_buyers_club.jpg
 ---
-Der Elektriker Ron Woodroof lebt ein wildes Leben: zwischen Bullenreiten, Drogen Missbrauch, Sex und kleinen Gaunereien genießt er, wie stark er sein in den 50er Jahren der USA geprägtes männliches Rollenbild ausfüllt. Sein Weltbild wie auch seine wahrgenommene Unsterblichkeit kollidieren unsanft mit der Realität, als er nach einem Arbeitsunfall im Krankenhaus erwacht und erfährt, dass er HIV-Positiv ist - etwas das seiner Meinung nach nur Fixern und Homos, wie er sie nennt, passiert. 
+Der Elektriker Ron Woodroof lebt ein wildes Leben: zwischen Bullenreiten, Drogenmissbrauch, Sex und kleinen Gaunereien genießt er, wie stark er sein in den 50er Jahren der USA geprägtes männliches Rollenbild ausfüllt. 
+Sein Weltbild wie auch seine wahrgenommene Unsterblichkeit kollidieren unsanft mit der Realität, als er nach einem Arbeitsunfall im Krankenhaus erwacht und erfährt, dass er HIV-Positiv ist - etwas das seiner Meinung nach nur Fixern und Homos, wie er sie nennt, passiert. 
 
 |image|dallas_buyers_club.jpg|Filmplakat Dallas Buyers Club|
   Das Bild habe ich bei [IMBD](http://ia.media-imdb.com/images/M/MV5BMjMzMjA3MzM0OF5BMl5BanBnXkFtZTgwMzEwNzMxMDE@._V1_SX720.jpg) gefunden. |
