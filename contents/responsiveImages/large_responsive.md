@@ -2,9 +2,9 @@
 template: minimal.jade
 ---
 <link href="styles.css" rel="stylesheet">
-# Mit max-width und height
-[Zurück zu "Unresponsive"](index.html)
-[Weiter zu "Render-Stages"](render_stages.html)
+# Using max-width and height
+[Go to "Unresponsive"](index.html)
+[Go to "Render-Stages"](render_stages.html)
 
 ```css
 img {

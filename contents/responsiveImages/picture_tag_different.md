@@ -4,8 +4,9 @@ template: minimal.jade
 <link href="styles.css" rel="stylesheet">
 <script type="text/javascript" src="picturefill.min.js"></script>
 
-# Picture-Tag veranschaulicht
-[Zurück zu "Picture-Tag"](picture_tag.html)
+# Picture-Tag - different pics
+[Go to "Picture-Tag"](picture_tag.html)
+[Return to presentation](index.html#/jump_back)
 
 ```css
 img {

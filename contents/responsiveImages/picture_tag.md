@@ -5,8 +5,8 @@ template: minimal.jade
 <script type="text/javascript" src="picturefill.min.js"></script>
 
 # Picture-Tag
-[Zurück zu "Render-Stages"](render_stages.html)
-[Weiter zu "Picture-Tag - veranschaulicht"](picture_tag_different.html)
+[Go to "Render-Stages"](render_stages.html)
+[Go to "Picture-Tag - different pics"](picture_tag_different.html)
 
 ```css
 img {

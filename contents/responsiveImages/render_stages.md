@@ -2,9 +2,9 @@
 template: minimal.jade
 ---
 <link href="styles.css" rel="stylesheet">
-# Verbreiteter Trick: per JavaScript das Source-Attribute ersetzen
-[Zurück zu "Max-Width"](large_responsive.html)
-[Weiter zu "Picture Tag"](picture_tag.html)
+# 2010 Trick: set the source attribute via JavaScript
+[Go to "Max-Width"](large_responsive.html)
+[Go to "Picture Tag"](picture_tag.html)
 
 ```html
 <img src="slideshow_veery_small.jpg" data-large-url="slideshow_large.jpg">
@@ -19,8 +19,8 @@ if (someLargeBreakpoint) {
 }
 ```
 
-1. Browser erhält die Antwort als lange Zeichenkette
-2. Zeichenkette wird in Bestandteile zerlegt (Parsen) - parallel: weitere Resourcen holen, z.B. Bilder, CSS & JS
-3. Bestandteile werden zum DOM-Baum zusammengesetzt und angezeigt
-4. CSS wird geparsed und angewandt
-5. JS wird geparsed und ausgeführt
+1. Browse receives the server response as a long string without much of a structure
+2. String is split up into its parts (parsing) - parallel: fetching more resources like pictures, CSS, JS
+3. the Parts interpreted to build up the DOM tree -> first rendering
+4. CSS is parsed and applied
+5. JS is parsed and applied
