@@ -6,8 +6,6 @@ template: minimal.jade
 [Zurück zu "Unresponsive"](index.html)
 [Weiter zu "Render-Stages"](render_stages.html)
 
-<img src="slideshow_large.jpg">
-
 ```css
 img {
   max-width: 100%;
@@ -18,3 +16,6 @@ img {
 ```html
 <img src="slideshow_large.jpg">
 ```
+
+<img src="slideshow_large.jpg">
+
