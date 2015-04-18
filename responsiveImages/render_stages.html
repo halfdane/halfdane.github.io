@@ -12,9 +12,9 @@
   </head>
   <body>
     <section class="content"><p><link href="styles.css" rel="stylesheet"></p>
-<h1 id="verbreiteter-trick-per-javascript-das-source-attribute-ersetzen">Verbreiteter Trick: per JavaScript das Source-Attribute&nbsp;ersetzen</h1>
-<p><a href="/responsiveImages/large_responsive.html">Zurück zu “Max-Width”</a>
-<a href="/responsiveImages/picture_tag.html">Weiter zu “Picture&nbsp;Tag”</a></p>
+<h1 id="2010-trick-set-the-source-attribute-via-javascript">2010 Trick: set the source attribute via&nbsp;JavaScript</h1>
+<p><a href="/responsiveImages/large_responsive.html">Go to “Max-Width”</a>
+<a href="/responsiveImages/picture_tag.html">Go to “Picture&nbsp;Tag”</a></p>
 <pre><code class="lang-html"><span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"slideshow_veery_small.jpg"</span> <span class="attribute">data-large-url</span>=<span class="value">"slideshow_large.jpg"</span>&gt;</span>
 </code></pre>
 <pre><code class="lang-javascript"><span class="keyword">if</span> (someLargeBreakpoint) {
@@ -25,11 +25,11 @@
 }
 </code></pre>
 <ol>
-<li>Browser erhält die Antwort als lange&nbsp;Zeichenkette</li>
-<li>Zeichenkette wird in Bestandteile zerlegt (Parsen) - parallel: weitere Resourcen holen, z.B. Bilder, <span class="caps">CSS</span> <span class="amp">&amp;</span>&nbsp;<span class="caps">JS</span></li>
-<li>Bestandteile werden zum <span class="caps">DOM</span>-Baum zusammengesetzt und&nbsp;angezeigt</li>
-<li><span class="caps">CSS</span> wird geparsed und&nbsp;angewandt</li>
-<li><span class="caps">JS</span> wird geparsed und&nbsp;ausgeführt</li>
+<li>Browse receives the server response as a long string without much of a&nbsp;structure</li>
+<li>String is split up into its parts (parsing) - parallel: fetching more resources like pictures, <span class="caps">CSS</span>,&nbsp;JS</li>
+<li>the Parts interpreted to build up the <span class="caps">DOM</span> tree -&gt; first&nbsp;rendering</li>
+<li><span class="caps">CSS</span> is parsed and&nbsp;applied</li>
+<li><span class="caps">JS</span> is parsed and&nbsp;applied</li>
 </ol>
 </section>
   </body>
