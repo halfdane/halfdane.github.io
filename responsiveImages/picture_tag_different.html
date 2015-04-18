@@ -16,12 +16,6 @@
 
 <h1 id="picture-tag-veranschaulicht">Picture-Tag&nbsp;veranschaulicht</h1>
 <p><a href="/responsiveImages/picture_tag.html">Zurück zu&nbsp;“Picture-Tag”</a></p>
-<picture>
-  <source media="(min-width: 800px)" srcset="slideshow_large.jpg" >
-  <source media="(min-width: 400px)" srcset="buecher.jpg" >
-  <img src="comedia.jpg" />
-</picture>
-
 <pre><code class="lang-css"><span class="tag">img</span> <span class="rules">{
 <span class="rule"><span class="attribute">max-width</span>:<span class="value"> <span class="number">100</span>%</span></span>;
 <span class="rule"><span class="attribute">height</span>:<span class="value"> auto</span></span>;
@@ -33,6 +27,12 @@
   <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"comedia.jpg"</span> /&gt;</span>
 <span class="tag">&lt;/<span class="title">picture</span>&gt;</span>
 </code></pre>
+<picture>
+  <source media="(min-width: 800px)" srcset="slideshow_large.jpg" >
+  <source media="(min-width: 400px)" srcset="buecher.jpg" >
+  <img src="comedia.jpg" />
+</picture>
+
 </section>
   </body>
 </html>
