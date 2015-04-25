@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Blender Anfänger - halfdane's Canned Nerd
+    <title>Untitled - halfdane's Canned Nerd
     </title>
     <link rel="alternate" href="http://halfdane.github.io/feed.xml" type="application/rss+xml" title="Navigate by sight">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700">
@@ -27,30 +27,64 @@
       </div>
     </header>
     <nav class="pagination">
-      <div class="prev"><a href="/articles/2013-05-24-scrollspymystery/" title="Initiale Position der Seite falsch – a Scrollspy Mystery [solved]">Initiale Position der Seite falsch – a Scrollspy Mystery [solved]&nbsp;&rarr;</a></div>
-      <div class="next"><a href="/articles/2013-05-30-3gToggle/" title="Automatischer Toggle für 2G / 3G">&larr;&nbsp;Automatischer Toggle für 2G / 3G</a></div>
+      <div class="prev"><a href="/articles/2015-04-25-jsunconf/" title="Untitled">Untitled&nbsp;&rarr;</a></div>
     </nav>
     <article class="connected bubble article">
-      <h1>Blender Anfänger</h1>
-      <section class="content lazycontent"><p>Ich habe inzwischen beschlossen, dass ich mit Blender doch ganz gut umgehen können muss, um bei Shapeways auf einen grünen Zweig zu kommen: die anpassbaren Modelle dort finde ich eher&nbsp;unbefriedigend.</p>
-<p>Blender hat zwar eine steile Lernkurve, aber 1. kommt mir das Zupass und 2. steigt die Arbeitsgeschwindigkeit danach offenbar&nbsp;exponentiell.</p>
-<p>Nach den ersten Tutorials hatte ich dieses beeindruckende&nbsp;Ergebnis:</p>
-<div class="figure__container"><figure>  <a href="blender_pig.png"><img src="/loader.gif" alt="Ein sehr simples Schwein aus einfachen Primitiven" srcset="blender_pig-small.png 320w, blender_pig-medium.png 640w, blender_pig-large.png 800w",     sizes="(min-width: 600px) 50vw, 100vw"/></a>  <figcaption>Ein sehr simples Schwein aus einfachen Primitiven</figcaption></figure></div>
-
-<p>Oder auch so&nbsp;etwas:</p>
-<div class="figure__container"><figure>  <a href="blender_lighthouse.png"><img src="/loader.gif" alt="Simpler Leuchtturm" srcset="blender_lighthouse-small.png 320w, blender_lighthouse-medium.png 640w, blender_lighthouse-large.png 800w",     sizes="(min-width: 600px) 50vw, 100vw"/></a>  <figcaption>Ein Leuchtturm mit kleinem Häuschen anbei. Nicht mehr total primitiv, aber auch nicht besonders toll.</figcaption></figure></div>
-
-<p>Eher nicht so super – zumindest nichts, was ich unbedingt gedruckt haben&nbsp;wollte…</p>
-<p>Beim nächsten Versuch wollte ich gerne mit Flüssigkeitssimulationen spielen und das Ergebnis war dann schon etwas&nbsp;beeindruckender:</p>
-<div class="figure__container"><figure>  <a href="blender_water.png"><img src="/loader.gif" alt="Fett" srcset="blender_water-small.png 320w, blender_water-medium.png 640w, blender_water-large.png 800w",     sizes="(min-width: 600px) 50vw, 100vw"/></a>  <figcaption>Eindrucksvolles Bild von simuliertem Wasser, das in ein simuliertes Glass gegossen wird.</figcaption></figure></div>
-
-<p>Das ist zwar immer noch nicht mit einem 3D-Drucker druckbar, aber zumindest muss ich mich damit nicht mehr verstecken&nbsp;:)</p>
+      <h1>Untitled</h1>
+      <section class="content lazycontent"><h1 id="jsunconf">JSUnconf</h1>
+<h2 id="continuous-delivery-with-docker-non-blocking-delivery-pipeline-">Continuous Delivery with Docker (Non-blocking delivery&nbsp;pipeline)</h2>
+<p>(lowsky.github.io/dockerMeetupSlides/)</p>
+<ul>
+<li>They use Kanban-Workflow for 4-8&nbsp;people</li>
+<li>Migrate to multiple&nbsp;pipelines</li>
+<li>gitflow with feature, develop, release, hotfix&nbsp;branches</li>
+<li>Pipeline can become a bottleneck - wait for commit to&nbsp;build</li>
+<li>Tests are slow and block&nbsp;development</li>
+<li>waffle.io: link project to see your github-issues (like trello for&nbsp;jira)</li>
+<li>use pull requests to integrate feature&nbsp;commits/branches</li>
+<li>nice integration of github-commits to&nbsp;jenkins-builds</li>
+<li>deploy feature branches to docker to see it&nbsp;working</li>
+<li>pre-commit testing to avoid merge conflicts&nbsp;etc.</li>
+<li>docker: layered filesystems, topmost is&nbsp;writeable</li>
+<li>tag the new image with&nbsp;feature-branch-name</li>
+<li>deploy to a dedicated machine and use ngnix-proxy’s url-rewriting (docker-image) to have it dns-named like the&nbsp;branch</li>
+<li>start docker with virtual-host&nbsp;parameter</li>
+<li><code>docker events</code> can be used to listen to lifecycle messages of other images on same&nbsp;machine</li>
+<li><code>docker logs</code></li>
+<li>Mesos/Marathon +&nbsp;HAproxy</li>
+<li>blog.codecentric.de</li>
+</ul>
+<h2 id="more-functional-programming-higher-order-functions-to-transducers-">More functional programming (higher order functions to&nbsp;transducers)</h2>
+<ul>
+<li>yalst.de (live support&nbsp;tool?)</li>
+<li>rambda.js (functional js&nbsp;library)</li>
+</ul>
+<h2 id="precompiler-hell">Precompiler&nbsp;Hell</h2>
+<ul>
+<li>transpiler (less, sass, coffeescript,&nbsp;typescript)</li>
+<li>first: immediate feedback without jobs waiting&nbsp;for</li>
+<li>build loops are run hundrets or thousand times a&nbsp;day</li>
+<li>less can run within the browser, so it’s still kinda&nbsp;immediate</li>
+<li>project gets bigger, in-browser compilation gets&nbsp;slower</li>
+<li>server compiles&nbsp;sass-stuff</li>
+<li>problems arise when javascript gets&nbsp;compiled</li>
+<li>tooling problems (linter for&nbsp;coffeescript?)</li>
+<li>filesystem as interface: request one file type and have it compiled&nbsp;transparently</li>
+<li>fusile
+— autoprefixing
+— sourcemaps
+— caching
+—&nbsp;filewatching</li>
+</ul>
+<h2 id="hints-anbei">Hints&nbsp;anbei</h2>
+<ul>
+<li>X2go.org</li>
+</ul>
 </section>
     </article>
     <footer>
       <nav class="pagination">
-        <div class="prev"><a href="/articles/2013-05-24-scrollspymystery/" title="Initiale Position der Seite falsch – a Scrollspy Mystery [solved]">Initiale Position der Seite falsch – a Scrollspy Mystery [solved]&nbsp;&rarr;</a></div>
-        <div class="next"><a href="/articles/2013-05-30-3gToggle/" title="Automatischer Toggle für 2G / 3G">&larr;&nbsp;Automatischer Toggle für 2G / 3G</a></div>
+        <div class="prev"><a href="/articles/2015-04-25-jsunconf/" title="Untitled">Untitled&nbsp;&rarr;</a></div>
       </nav>
       <div id="disqus_thread" class="connected"></div>
       <script type="text/javascript">

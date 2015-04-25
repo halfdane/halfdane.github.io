@@ -5,8 +5,65 @@
     <atom:link href="http://halfdane.github.io/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://halfdane.github.io</link>
     <description>Navigate by sight</description>
-    <pubDate>Mon, 23 Feb 2015 00:00:00 +0000</pubDate>
+    <pubDate>Sat, 25 Apr 2015 00:00:00 +0000</pubDate>
     <language>de</language>
+    <item>
+      <title>Untitled</title>
+      <link>http://halfdane.github.io/articles/2015-04-25-jsunconf/</link>
+      <pubDate>Sat, 25 Apr 2015 00:00:00 +0000</pubDate>
+      <guid isPermaLink="true">http://halfdane.github.io/articles/2015-04-25-jsunconf/</guid>
+      <author></author>
+      <description>&lt;h1 id=&quot;jsunconf&quot;&gt;JSUnconf&lt;/h1&gt;
+&lt;h2 id=&quot;continuous-delivery-with-docker-non-blocking-delivery-pipeline-&quot;&gt;Continuous Delivery with Docker (Non-blocking delivery pipeline)&lt;/h2&gt;
+&lt;p&gt;(lowsky.github.io/dockerMeetupSlides/)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;They use Kanban-Workflow for 4-8 people&lt;/li&gt;
+&lt;li&gt;Migrate to multiple pipelines&lt;/li&gt;
+&lt;li&gt;gitflow with feature, develop, release, hotfix branches&lt;/li&gt;
+&lt;li&gt;Pipeline can become a bottleneck - wait for commit to build&lt;/li&gt;
+&lt;li&gt;Tests are slow and block development&lt;/li&gt;
+&lt;li&gt;waffle.io: link project to see your github-issues (like trello for jira)&lt;/li&gt;
+&lt;li&gt;use pull requests to integrate feature commits/branches&lt;/li&gt;
+&lt;li&gt;nice integration of github-commits to jenkins-builds&lt;/li&gt;
+&lt;li&gt;deploy feature branches to docker to see it working&lt;/li&gt;
+&lt;li&gt;pre-commit testing to avoid merge conflicts etc.&lt;/li&gt;
+&lt;li&gt;docker: layered filesystems, topmost is writeable&lt;/li&gt;
+&lt;li&gt;tag the new image with feature-branch-name&lt;/li&gt;
+&lt;li&gt;deploy to a dedicated machine and use ngnix-proxy’s url-rewriting (docker-image) to have it dns-named like the branch&lt;/li&gt;
+&lt;li&gt;start docker with virtual-host parameter&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;docker events&lt;/code&gt; can be used to listen to lifecycle messages of other images on same machine&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;docker logs&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Mesos/Marathon + HAproxy&lt;/li&gt;
+&lt;li&gt;blog.codecentric.de&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;more-functional-programming-higher-order-functions-to-transducers-&quot;&gt;More functional programming (higher order functions to transducers)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;yalst.de (live support tool?)&lt;/li&gt;
+&lt;li&gt;rambda.js (functional js library)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;precompiler-hell&quot;&gt;Precompiler Hell&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;transpiler (less, sass, coffeescript, typescript)&lt;/li&gt;
+&lt;li&gt;first: immediate feedback without jobs waiting for&lt;/li&gt;
+&lt;li&gt;build loops are run hundrets or thousand times a day&lt;/li&gt;
+&lt;li&gt;less can run within the browser, so it’s still kinda immediate&lt;/li&gt;
+&lt;li&gt;project gets bigger, in-browser compilation gets slower&lt;/li&gt;
+&lt;li&gt;server compiles sass-stuff&lt;/li&gt;
+&lt;li&gt;problems arise when javascript gets compiled&lt;/li&gt;
+&lt;li&gt;tooling problems (linter for coffeescript?)&lt;/li&gt;
+&lt;li&gt;filesystem as interface: request one file type and have it compiled transparently&lt;/li&gt;
+&lt;li&gt;fusile
+— autoprefixing
+— sourcemaps
+— caching
+— filewatching&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;hints-anbei&quot;&gt;Hints anbei&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;X2go.org&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     <item>
       <title>Luftkissen-CD</title>
       <link>http://halfdane.github.io/articles/2015-02-23-luftkissencd/</link>
@@ -1357,18 +1414,6 @@ Die anderen Apps sind Titanium Backup und das Spiel Osmos.&lt;/p&gt;
 </description>
     </item>
     <item>
-      <title>Tensegrity</title>
-      <link>http://halfdane.github.io/articles/2013-05-24-tensegrity/</link>
-      <pubDate>Fri, 24 May 2013 00:00:00 +0000</pubDate>
-      <guid isPermaLink="true">http://halfdane.github.io/articles/2013-05-24-tensegrity/</guid>
-      <author></author>
-      <description>&lt;p&gt;Nachdem ich bereits vor Wochen auf der MAKE-Webseite über die Anleitung zu einem schnuckeligen, kleinen &lt;a href=&quot;http://makezine.com/2013/04/29/diy-tensegrity/&quot;&gt;Tensegrity-Objekt&lt;/a&gt; gestolpert bin und das erstmal nur bei meiner &lt;a href=&quot;http://www.highdefdigest.com/blog/twin-peaks-cooper-tapes/&quot;&gt;Diane&lt;/a&gt; geparkt habe, hatte ich heute mal eine Viertelstunde Muse:&lt;/p&gt;
-&lt;div class=&quot;figure__container&quot;&gt;&lt;figure&gt;  &lt;a href=&quot;cam00009.jpg&quot;&gt;&lt;img src=&quot;/loader.gif&quot; alt=&quot;Tensegrity-Objekt&quot; srcset=&quot;cam00009-small.jpg 320w, cam00009-medium.jpg 640w, cam00009-large.jpg 800w&quot;,     sizes=&quot;(min-width: 600px) 50vw, 100vw&quot;/&gt;&lt;/a&gt;  &lt;figcaption&gt;Das Objekt stellt sich selbstständig auf.&lt;/figcaption&gt;&lt;/figure&gt;&lt;/div&gt;
-
-&lt;p&gt;Funktioniert :-)&lt;/p&gt;
-</description>
-    </item>
-    <item>
       <title>Initiale Position der Seite falsch – a Scrollspy Mystery [solved]</title>
       <link>http://halfdane.github.io/articles/2013-05-24-scrollspymystery/</link>
       <pubDate>Fri, 24 May 2013 00:00:00 +0000</pubDate>
@@ -1380,6 +1425,18 @@ Die anderen Apps sind Titanium Backup und das Spiel Osmos.&lt;/p&gt;
 &lt;p&gt;Letztendlich war der Fehler doch selbstverschuldet: in einer Form in der Mitte der Seite hatte ein Eingabefeld das Attribut “autofocus”, und der Browser hat den Cursor dann dahin gesetzt. Inklusive scrollen.&lt;/p&gt;
 &lt;p&gt;Ein völlig korrektes Verhalten – mit dem Entfernen des Attributes funktioniert die Seite jetzt auch wieder richtig.&lt;/p&gt;
 &lt;p&gt;Das zeigt mir mal wieder, dass es auch mit reinem HTML durchaus möglich ist, das Verhalten der Seite zu zerbrechen – und dass nicht immer die anderen Schuld sind.&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>Tensegrity</title>
+      <link>http://halfdane.github.io/articles/2013-05-24-tensegrity/</link>
+      <pubDate>Fri, 24 May 2013 00:00:00 +0000</pubDate>
+      <guid isPermaLink="true">http://halfdane.github.io/articles/2013-05-24-tensegrity/</guid>
+      <author></author>
+      <description>&lt;p&gt;Nachdem ich bereits vor Wochen auf der MAKE-Webseite über die Anleitung zu einem schnuckeligen, kleinen &lt;a href=&quot;http://makezine.com/2013/04/29/diy-tensegrity/&quot;&gt;Tensegrity-Objekt&lt;/a&gt; gestolpert bin und das erstmal nur bei meiner &lt;a href=&quot;http://www.highdefdigest.com/blog/twin-peaks-cooper-tapes/&quot;&gt;Diane&lt;/a&gt; geparkt habe, hatte ich heute mal eine Viertelstunde Muse:&lt;/p&gt;
+&lt;div class=&quot;figure__container&quot;&gt;&lt;figure&gt;  &lt;a href=&quot;cam00009.jpg&quot;&gt;&lt;img src=&quot;/loader.gif&quot; alt=&quot;Tensegrity-Objekt&quot; srcset=&quot;cam00009-small.jpg 320w, cam00009-medium.jpg 640w, cam00009-large.jpg 800w&quot;,     sizes=&quot;(min-width: 600px) 50vw, 100vw&quot;/&gt;&lt;/a&gt;  &lt;figcaption&gt;Das Objekt stellt sich selbstständig auf.&lt;/figcaption&gt;&lt;/figure&gt;&lt;/div&gt;
+
+&lt;p&gt;Funktioniert :-)&lt;/p&gt;
 </description>
     </item>
     <item>
