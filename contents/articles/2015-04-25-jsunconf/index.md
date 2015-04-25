@@ -1,6 +1,6 @@
-#JSUnconf
+# JSUnconf
 
-##Continuous Delivery with Docker (Non-blocking delivery pipeline)
+## Continuous Delivery with Docker (Non-blocking delivery pipeline)
 (lowsky.github.io/dockerMeetupSlides/)
 
 - They use Kanban-Workflow for 4-8 people
@@ -21,3 +21,27 @@
 - `docker logs`
 - Mesos/Marathon + HAproxy
 - blog.codecentric.de
+
+## More functional programming (higher order functions to transducers)
+- yalst.de (live support tool?)
+- rambda.js (functional js library)
+
+## Precompiler Hell
+- transpiler (less, sass, coffeescript, typescript)
+- first: immediate feedback without jobs waiting for
+- build loops are run hundrets or thousand times a day
+- less can run within the browser, so it's still kinda immediate
+- project gets bigger, in-browser compilation gets slower
+- server compiles sass-stuff
+- problems arise when javascript gets compiled
+- tooling problems (linter for coffeescript?)
+- filesystem as interface: request one file type and have it compiled transparently
+- fusile
+-- autoprefixing
+-- sourcemaps
+-- caching
+-- filewatching
+
+
+## Hints anbei
+- X2go.org
