@@ -36,12 +36,13 @@
 - problems arise when javascript gets compiled
 - tooling problems (linter for coffeescript?)
 - filesystem as interface: request one file type and have it compiled transparently
-- fusile
+- fusile (depends on daccord)
 -- autoprefixing
 -- sourcemaps
 -- caching
 -- filewatching
-
+- https://github.com/Munter/fusile
+- https://github.com/jenius/accord
 
 ## Hints anbei
 - X2go.org
