@@ -36,13 +36,26 @@
 - problems arise when javascript gets compiled
 - tooling problems (linter for coffeescript?)
 - filesystem as interface: request one file type and have it compiled transparently
-- fusile (depends on daccord)
+- [fusile](https://github.com/Munter/fusile) (depends on [daccord](https://github.com/jenius/accord))
 -- autoprefixing
 -- sourcemaps
 -- caching
 -- filewatching
-- https://github.com/Munter/fusile
-- https://github.com/jenius/accord
+
+## What I learned teaching 150 young women programming
+- Women's International Leadership Conference
+- Choose JS as intro-language because
+-- 2hrs slot doesn't allow for tool setup, so no Java, Lua
+-- not even an editor necessary: [Mozilla Thimble](https://thimble.webmaker.org/)
+- variables, arrays, loops, functions, operators, conditions
+- prepare duckhunt skeleton game empty spaces to fill (moveTheDuck, isDuckHit, isDuckDead)
+- be prepared to give a working answer, just in case people don't get it
+- challenge noobs: newcomers can to more than expected
+- typography 
+-- make sure things on slides look exactly the same as on their screen
+-- make sure characters can be easily distinguished.
+- FIND INSPIRING ROLEMODELS. 
+
 
 ## Hints anbei
 - X2go.org
