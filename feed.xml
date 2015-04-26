@@ -52,11 +52,13 @@
 &lt;li&gt;problems arise when javascript gets compiled&lt;/li&gt;
 &lt;li&gt;tooling problems (linter for coffeescript?)&lt;/li&gt;
 &lt;li&gt;filesystem as interface: request one file type and have it compiled transparently&lt;/li&gt;
-&lt;li&gt;fusile
+&lt;li&gt;fusile (depends on daccord)
 — autoprefixing
 — sourcemaps
 — caching
 — filewatching&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/Munter/fusile&quot;&gt;https://github.com/Munter/fusile&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/jenius/accord&quot;&gt;https://github.com/jenius/accord&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;hints-anbei&quot;&gt;Hints anbei&lt;/h2&gt;
 &lt;ul&gt;
