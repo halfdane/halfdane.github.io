@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+}
+
+.bar {
+    margin-top: 50%;
+}
+
+.bar-unfill {
+    height: 15px;
+    background: #222;
+    border-radius: 8px
+}
+
+.bar-fill {
+    height: 15px;
+    background: #D5281E;
+    width: 0;
+    border-radius: 8px;
+
+    -webkit-transition: width .8s;
+    -moz-transition: width .8s;
+    transition: width .8s;
+
+    -webkit-animation: progressbar 2s;
+    animation: progressbar 2s;
+
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes progressbar {
+    from {
+        width: 0
+    }
+    to {
+        width: 100%
+    }
+}
+
+/* Standard syntax */
+@keyframes progressbar {
+    from {
+        width: 0
+    }
+    to {
+        width: 100%
+    }
+}
+
+.game_area {
+    text-align: center;
+}
+
+.game_area img {
+    display: inline;
+    position: relative;
+    width: 100%;
+    height: auto;
+}
