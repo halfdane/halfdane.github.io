@@ -2,60 +2,84 @@ body {
     margin: 0;
 }
 
-.bar {
-    margin-top: 50%;
-}
-
-.bar-unfill {
-    height: 15px;
-    background: #222;
-    border-radius: 8px
-}
-
-.bar-fill {
-    height: 15px;
-    background: #D5281E;
-    width: 0;
-    border-radius: 8px;
-
-    -webkit-transition: width .8s;
-    -moz-transition: width .8s;
-    transition: width .8s;
-
-    -webkit-animation: progressbar 2s;
-    animation: progressbar 2s;
-
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-}
-
-/* Chrome, Safari, Opera */
-@-webkit-keyframes progressbar {
-    from {
-        width: 0
-    }
-    to {
-        width: 100%
-    }
-}
-
-/* Standard syntax */
-@keyframes progressbar {
-    from {
-        width: 0
-    }
-    to {
-        width: 100%
-    }
-}
-
-.game_area {
+#game_area {
     text-align: center;
 }
 
-.game_area img {
-    display: inline;
+#game_area img {
     position: relative;
     width: 100%;
     height: auto;
+}
+
+#game_area #controls img {
+    z-index: 1000;
+    position: absolute;
+    bottom: 2%;
+    width: 20%;
+    height: auto;
+}
+
+#love {
+    right: 2%
+}
+
+#hate{
+    left: 2%
+}
+
+img#back{
+    top: 2%;
+    left: 2%;
+}
+
+#fullscreen,
+#fullscreen-exit {
+    right: 40%;
+}
+
+#fullscreen-exit {
+    display: none;
+}
+
+:-webkit-full-screen #fullscreen{
+    display: none;
+}
+
+:-moz-full-screen #fullscreen{
+    display: none;
+}
+
+:-ms-fullscreen #fullscreen{
+    display: none;
+}
+
+:full-screen #fullscreen{ /*pre-spec */
+    display: none;
+}
+
+:fullscreen #fullscreen{ /* spec */
+    display: none;
+}
+
+
+
+:-webkit-full-screen #fullscreen-exit{
+    display: block;
+}
+
+:-moz-full-screen #fullscreen-exit{
+    display: block;
+}
+
+:-ms-fullscreen #fullscreen-exit{
+    display: block;
+}
+
+:full-screen #fullscreen-exit{ /*pre-spec */
+    display: block;
+}
+
+:fullscreen #fullscreen-exit{ /* spec */
+    display: block;
 }

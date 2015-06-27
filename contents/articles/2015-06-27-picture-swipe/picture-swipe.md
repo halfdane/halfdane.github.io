@@ -4,13 +4,15 @@ template: empty.jade
 
 <link rel="stylesheet" href="picture-swipe.css">
 
-<div class="game_area">
+<div id="game_area">
     <div id="target">
-        <div class="bar">
-            <div class="bar-unfill">
-                <div class="bar-fill"></div>
-            </div>
-         </div>
+    </div>
+    <div id="controls">
+        <img id="hate" src="hate.fixed.png">
+        <img id="fullscreen" src="fullscreen.fixed.svg">
+        <img id="fullscreen-exit" src="fullscreen-exit.fixed.svg">
+        <img id="love" src="love.fixed.png">
+        <img id="back" src="back.fixed.png">
     </div>
 </div>
 
