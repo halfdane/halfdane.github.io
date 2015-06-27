@@ -9,5 +9,7 @@ Jetzt möchte ich gerne herausfinden, wie schwer es ist, so einen Swiping-Client
 <a href="picture-swipe.html">Starte den Client</a>
 
 Der Code ist selbstverständlich auch wieder [frei](/about.html#lizenzen) verfügbar:
-[picture-swipe.js](/assets/js/picture-swipe/picture-swipe.js)
+[picture-swipe.js](http://halfdane.github.io/articles/2015-06-27-picture-swipe/picture-swipe.js)
+
+Die Icons habe ich mit der Google-Bildersuche gefunden und die Bilder kommen von OTTO.
 
