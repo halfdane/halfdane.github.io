@@ -1,85 +1,55 @@
-body {
+html,
+body,
+.game_area {
     margin: 0;
+    background-color: #867976;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
-#game_area {
+.recommendation {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: auto;
+
+    border: 1px solid #ece9e2;
     text-align: center;
 }
 
-#game_area img {
-    position: relative;
-    width: 100%;
-    height: auto;
-}
-
-#game_area #controls img {
+.control {
     z-index: 1000;
     position: absolute;
     bottom: 2%;
-    width: 20%;
-    height: auto;
+    width: 64px;
+    height: 64px;
+    background-size: cover;
 }
 
-#love {
-    right: 2%
+.love {
+    right: 5%;
 }
 
-#hate{
-    left: 2%
+.hate {
+    left: 5%;
 }
 
-img#back{
-    top: 2%;
-    left: 2%;
+.love {
+    background-image: url('love.fixed.png');
 }
 
-#fullscreen,
-#fullscreen-exit {
-    right: 40%;
+.love.active {
+    background-image: url('love.fixed.png');
 }
 
-#fullscreen-exit {
-    display: none;
+.hate {
+    background-image: url('hate.fixed.png');
 }
 
-:-webkit-full-screen #fullscreen{
-    display: none;
-}
-
-:-moz-full-screen #fullscreen{
-    display: none;
-}
-
-:-ms-fullscreen #fullscreen{
-    display: none;
-}
-
-:full-screen #fullscreen{ /*pre-spec */
-    display: none;
-}
-
-:fullscreen #fullscreen{ /* spec */
-    display: none;
+.hate.active {
+    background-image: url('hate.fixed.png');
 }
 
 
-
-:-webkit-full-screen #fullscreen-exit{
-    display: block;
-}
-
-:-moz-full-screen #fullscreen-exit{
-    display: block;
-}
-
-:-ms-fullscreen #fullscreen-exit{
-    display: block;
-}
-
-:full-screen #fullscreen-exit{ /*pre-spec */
-    display: block;
-}
-
-:fullscreen #fullscreen-exit{ /* spec */
-    display: block;
-}

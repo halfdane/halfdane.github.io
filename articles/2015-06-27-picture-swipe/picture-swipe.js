@@ -36,24 +36,24 @@ halfdane.fullscreen = {
     start: function (element) {
         'use strict';
 
-        if(element.requestFullscreen) {
+        if (element.requestFullscreen) {
             element.requestFullscreen();
-        } else if(element.mozRequestFullScreen) {
+        } else if (element.mozRequestFullScreen) {
             element.mozRequestFullScreen();
-        } else if(element.webkitRequestFullscreen) {
+        } else if (element.webkitRequestFullscreen) {
             element.webkitRequestFullscreen();
-        } else if(element.msRequestFullscreen) {
+        } else if (element.msRequestFullscreen) {
             element.msRequestFullscreen();
         }
     },
-    exit: function() {
+    exit: function () {
         'use strict';
 
-        if(document.exitFullscreen) {
+        if (document.exitFullscreen) {
             document.exitFullscreen();
-        } else if(document.mozCancelFullScreen) {
+        } else if (document.mozCancelFullScreen) {
             document.mozCancelFullScreen();
-        } else if(document.webkitExitFullscreen) {
+        } else if (document.webkitExitFullscreen) {
             document.webkitExitFullscreen();
         }
     }
@@ -69,6 +69,7 @@ halfdane.pictureswipe = function (dataprovider) {
         image.setAttribute('id', 'target');
         image.setAttribute('src', item.imageUrl);
         image.setAttribute('data-articleNumber', item.articleNumber);
+        image.classList.add('recommendation');
 
         var target = document.getElementById('target');
         target.parentNode.replaceChild(image, target);
@@ -79,8 +80,8 @@ halfdane.pictureswipe = function (dataprovider) {
     function dragElement(event) {
         var element = document.getElementById('target');
         element.style.transition = "0";
-        // deltaX tracks the distance dragged along the x-axis since the initial touch.
-        element.style.transform = "translateX(" + event.gesture.deltaX + "px)";
+        element.style.transform = "translate(" + event.gesture.deltaX + "px, " + 0 + "px) rotate(" +
+        (event.gesture.deltaX / 10) + "deg)";
     }
 
     function deleteElement(event, emotion) {
@@ -108,8 +109,8 @@ halfdane.pictureswipe = function (dataprovider) {
 
     function resetElement(event) {
         var element = document.getElementById('target');
-        element.style.transition = "1s ease-in-out";
-        element.style.transform = 'translateX(0px)';
+        element.style.transition = "0.05s ease-in-out";
+        element.style.transform = 'translate(0px, 0px) rotate(0deg)';
     }
 
     // Swipe options as recommended by:
@@ -125,15 +126,8 @@ halfdane.pictureswipe = function (dataprovider) {
     }
 
     function bindControls() {
-        document.getElementById('fullscreen').addEventListener('click', function() {
-            halfdane.fullscreen.start(document.getElementById('game_area'));
-        });
-        document.getElementById('fullscreen-exit').addEventListener('click', halfdane.fullscreen.exit);
         document.getElementById('love').addEventListener('click', loveElement);
         document.getElementById('hate').addEventListener('click', hateElement);
-        document.getElementById('back').addEventListener('click', function() {
-            window.history.back();
-        });
     }
 
     function start() {
