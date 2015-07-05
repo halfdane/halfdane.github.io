@@ -5,8 +5,12 @@ template: empty.jade
 <link rel="stylesheet" type="text/css" href="jTinder.css">
 
 <div id="tinderslide">
-    <ul>
+    <ul class="target">
     </ul>
+</div>
+<div class="actions">
+    <a class="like"><i>like</i></a>
+    <a class="dislike"><i>dislike</i></a>
 </div>
 
 <!-- jQuery lib -->

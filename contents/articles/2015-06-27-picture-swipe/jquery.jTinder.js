@@ -117,17 +117,17 @@
 						panes.eq(current_pane).css("transform", "translate(" + posX + "px," + posY + "px) rotate(" + (percent / 2) + "deg)");
 
 						var opa = (Math.abs(deltaX) / $that.settings.threshold) / 100 + 0.2;
+                        panes.eq(current_pane).find($that.settings.dislikeSelector).css('opacity', 0);
+                        panes.eq(current_pane).find($that.settings.likeSelector).css('opacity', 0);
 						if(opa > 1.0) {
-							opa = 1.0;
-						}
-						if (posX >= 0) {
-							panes.eq(current_pane).find($that.settings.likeSelector).css('opacity', opa);
-							panes.eq(current_pane).find($that.settings.dislikeSelector).css('opacity', 0);
-						} else if (posX < 0) {
+                            opa = 1.0;
 
-							panes.eq(current_pane).find($that.settings.dislikeSelector).css('opacity', opa);
-							panes.eq(current_pane).find($that.settings.likeSelector).css('opacity', 0);
-						}
+                            if (posX >= 0) {
+                                panes.eq(current_pane).find($that.settings.likeSelector).css('opacity', opa);
+                            } else if (posX < 0) {
+                                panes.eq(current_pane).find($that.settings.dislikeSelector).css('opacity', opa);
+                            }
+                        }
 					}
 					break;
 				case 'mouseup':

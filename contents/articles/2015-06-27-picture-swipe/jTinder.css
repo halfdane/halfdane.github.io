@@ -1,20 +1,13 @@
 html, body {
-    height: 100%;
-    padding: 0;
-    margin: 0;
     position: relative;
-}
-
-body {
+    margin: 0;
+    background-color: #867976;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
 }
 
 /* Wrapper with padding */
-.wrap {
-    height: 300px;
-    padding: 5%;
-}
-
 #tinderslide {
     position: relative;
     background: #fff;
@@ -22,7 +15,7 @@ body {
     height: 100%;
 }
 
-#tinderslide ul {
+#tinderslide .target {
     margin: 0;
     position: relative;
     display: block;
@@ -58,7 +51,7 @@ body {
 }
 
 /* Image text */
-#tinderslide li h2 {
+#tinderslide .recommendation h2 {
     color: #fff;
     font-size: 30px;
     text-align: center;
@@ -69,24 +62,7 @@ body {
     text-shadow: -1px -1px 0 rgba(0, 0, 0, .2);
 }
 
-/* Image rotation */
-#tinderslide li.pane1 {
-    -webkit-transform: rotate(-1deg);
-    -moz-transform: rotate(-1deg);
-    -o-transform: rotate(-1deg);
-    -ms-transform: rotate(-1deg);
-    transform: rotate(-1deg);
-}
-
-#tinderslide li.pane2 {
-    -webkit-transform: rotate(2deg);
-    -moz-transform: rotate(2deg);
-    -o-transform: rotate(2deg);
-    -ms-transform: rotate(2deg);
-    transform: rotate(2deg);
-}
-
-/* Like & dislike badge images *
+/* Like & dislike badge images */
 #tinderslide .like,
 #tinderslide .dislike {
     background: url("love.fixed.png") no-repeat scroll 0 0;
@@ -112,7 +88,7 @@ body {
     left: auto;
     background: url("hate.fixed.png") no-repeat scroll 0 0;
 }
-*/
+
 /* Image container */
 #tinderslide .img {
     height: auto;
@@ -160,6 +136,7 @@ body {
 }
 
 .actions a {
+    z-index: 10;
     float: left;
     display: block;
     background-color: #f7f7f7;
