@@ -36,71 +36,222 @@ halfdane.fake_model = (function () {
     }
 
     return {
-        getRecommendations: getRecommendations
+        getRecommendations: getRecommendations,
+        setDecision: function () {
+        }
     };
 }());
 
-halfdane.tinderswipe = function (model) {
+halfdane.dragger = function (drag, drop) {
     'use strict';
 
-    var jTinder = null;
+    var touchStart = false;
+    var xStart = 0, yStart = 0;
+    var posX = 0, posY = 0;
+    var lastPosX = 0, lastPosY = 0;
 
-    function onNewRecommendationsArrived(recommendations) {
-        recommendations.forEach(function (item) {
-            var image = $('<img>')
-                    .attr('id', 'target')
-                    .attr('src', item.imageUrl)
-                    .attr('data-articleNumber', item.articleNumber)
-                    .addClass('img');
+    function handler(ev) {
+        ev.preventDefault();
 
-            $('<li>')
-                    .addClass('recommendation')
-                    .append(image)
-                    .append($('<div>').addClass('like'))
-                    .append($('<div>').addClass('dislike'))
-                    .prependTo('#tinderslide ul');
-        });
+        switch (ev.type) {
+            case 'touchstart':
+                if (touchStart === false) {
+                    touchStart = true;
+                    xStart = ev.touches[0].pageX;
+                    yStart = ev.touches[0].pageY;
+                }
+                break;
+            case 'mousedown':
+                if (touchStart === false) {
+                    touchStart = true;
+                    xStart = ev.pageX;
+                    yStart = ev.pageY;
+                }
+                break;
+            case 'mousemove':
+            case 'touchmove':
+                if (touchStart === true) {
+                    var pageX = typeof ev.touches[0].pageX === 'undefined' ? ev.pageX : ev.touches[0].pageX;
+                    var pageY = typeof ev.touches[0].pageY === 'undefined' ? ev.pageY : ev.touches[0].pageY;
+                    var deltaX = parseInt(pageX) - parseInt(xStart);
+                    var deltaY = parseInt(pageY) - parseInt(yStart);
+                    posX = deltaX + lastPosX;
+                    posY = deltaY + lastPosY;
 
-    }
+                    drag(deltaX, deltaY);
+                }
+                break;
+            case 'mouseup':
+            case 'touchend':
+                touchStart = false;
+                var pageX = (typeof ev.changedTouches[0].pageX === 'undefined') ? ev.pageX : ev.changedTouches[0].pageX;
+                var pageY = (typeof ev.changedTouches[0].pageY === 'undefined') ? ev.pageY : ev.changedTouches[0].pageY;
+                var deltaX = parseInt(pageX) - parseInt(xStart);
+                var deltaY = parseInt(pageY) - parseInt(yStart);
 
-    function hate(element) {
-        element.remove();
-        refill();
-    }
+                posX = deltaX + lastPosX;
+                posY = deltaY + lastPosY;
 
-    function love(element) {
-        element.remove();
-        refill();
-    }
-
-    function refill() {
-        if ($('.recommendation').length < 5) {
-            model.getRecommendations(onNewRecommendationsArrived);
-            $("#tinderslide").jTinder('startOver');
+                drop(deltaX, deltaY);
+                break;
         }
     }
 
-    function init() {
-        jTinder = $("#tinderslide").jTinder({
-            onDislike: hate,
-            onLike: love,
-            threshold: 1
-        });
-
-        $('.actions .like').on('click tap', function () {
-            $("#tinderslide").jTinder('like');
-        });
-
-        $('.actions .dislike').on('click tap', function () {
-            $("#tinderslide").jTinder('dislike');
-        });
-
-        refill();
+    function bind(element) {
+        element.addEventListener('touchstart', handler);
+        element.addEventListener('mousedown', handler);
+        element.addEventListener('touchmove', handler);
+        element.addEventListener('mousemove', handler);
+        element.addEventListener('touchend', handler);
+        element.addEventListener('mouseup', handler);
     }
 
     return {
-        init: init
+        bind: bind
     };
 };
 
-document.addEventListener('DOMContentLoaded', halfdane.tinderswipe(halfdane.fake_model).init);
+halfdane.pictureswipe = function (model) {
+    'use strict';
+
+    function distanceSquared(deltaX, deltaY) {
+        return Math.pow(deltaX, 2.0) + Math.pow(deltaY, 2.0)
+    }
+
+    function imagesContainer() {
+        return document.getElementById('images');
+    }
+
+    function currentTopImage() {
+        return imagesContainer().lastElementChild;
+    }
+
+    function deleteElement(isHot) {
+        var element = currentTopImage();
+        var articleNumber = element.getAttribute('data-articleNumber');
+        model.setDecision(articleNumber, isHot);
+
+        element.addEventListener("transitionend", function transitionEndListener(e) {
+            e.target.removeEventListener(e.type, transitionEndListener);
+
+            imagesContainer().removeChild(currentTopImage());
+
+            document.getElementById('love').classList.remove('active');
+            document.getElementById('hate').classList.remove('active');
+
+            initTouchListeners();
+
+            if (imagesContainer().childElementCount < 5) {
+                loadSomeImages();
+            }
+        });
+
+        window.requestAnimationFrame(function () {
+            var imageThrowTarget = window.innerWidth * (isHot ? 1 : -1);
+            element.style.transition = "0.2s";
+            element.style.transform = "translate(" + imageThrowTarget + "px, " + 0 + "px) rotate(" +
+            (imageThrowTarget / 10) + "deg)";
+            element.style.opacity = "0";
+        });
+
+    }
+
+    function isLovingOrHating(deltaX, loveCallback, hateCallback) {
+        console.log(deltaX, (window.innerWidth * 0.2));
+        var overTheEdge = Math.abs(deltaX) > (window.innerWidth * 0.2);
+        if (overTheEdge) {
+            if (deltaX > 0) {
+                loveCallback && loveCallback();
+            } else {
+                hateCallback && hateCallback();
+            }
+        }
+
+        return overTheEdge;
+    }
+
+    function loveElement() {
+        document.getElementById('love').classList.add('active');
+        deleteElement(true);
+    }
+
+    function hateElement() {
+        document.getElementById('hate').classList.add('active');
+        deleteElement(false);
+    }
+
+    function dragElement(deltaX) {
+        window.requestAnimationFrame(function () {
+            var element = currentTopImage();
+
+            document.getElementById('love').classList.remove('active');
+            document.getElementById('hate').classList.remove('active');
+            isLovingOrHating(deltaX, function () {
+                document.getElementById('love').classList.add('active');
+            }, function () {
+                document.getElementById('hate').classList.add('active');
+            });
+
+            element.style.transition = "0";
+            element.style.transform = "translate(" + deltaX + "px, " + 0 + "px) rotate(" + (deltaX / 20) + "deg)";
+        });
+    }
+
+    function resetElement(deltaX) {
+        if (!isLovingOrHating(deltaX, loveElement, hateElement)) {
+            window.requestAnimationFrame(function () {
+                var element = currentTopImage();
+                element.style.transition = "0.05s ease-in-out";
+                element.style.transform = 'translate(0px, 0px) rotate(0deg)';
+            });
+        }
+
+    }
+
+    function initTouchListeners() {
+        halfdane.dragger(dragElement, resetElement)
+                .bind(currentTopImage());
+    }
+
+    function addImageItem(item, onload) {
+        var image = document.createElement('img');
+        image.onload = onload;
+        image.src = item.imageUrl;
+        image.setAttribute('data-articleNumber', item.articleNumber);
+        image.classList.add("recommendation");
+        imagesContainer().insertBefore(image, imagesContainer().firstElementChild);
+    }
+
+    function loadSomeImages(afterLoad) {
+        model.getRecommendations(function (recommendations) {
+
+            if (recommendations[0]) {
+                addImageItem(recommendations[0], function () {
+                    for (var i = 1; i < recommendations.length; i++) {
+                        addImageItem(recommendations[i]);
+                    }
+                });
+            }
+
+            if (afterLoad) {
+                afterLoad();
+            }
+        });
+    }
+
+    function start() {
+        document.getElementById('love').addEventListener('click', loveElement);
+        document.getElementById('hate').addEventListener('click', hateElement);
+        loadSomeImages(initTouchListeners);
+    }
+
+    return {
+        start: start
+    };
+};
+
+document.addEventListener('DOMContentLoaded', function () {
+    'use strict';
+
+    halfdane.pictureswipe(halfdane.fake_model).start();
+});

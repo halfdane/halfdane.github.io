@@ -4,13 +4,13 @@ template: empty.jade
 
 <link rel="stylesheet" type="text/css" href="jTinder.css">
 
-<div id="tinderslide">
-    <ul class="target">
-    </ul>
-</div>
-<div class="actions">
-    <a class="like"><i>like</i></a>
-    <a class="dislike"><i>dislike</i></a>
+<div class="game_area">
+    <div id="images">
+    </div>
+    <div id="controls">
+        <div class="control hate" id="hate"></div>
+        <div class="control love" id="love"></div>
+    </div>
 </div>
 
 <!-- jQuery lib -->
