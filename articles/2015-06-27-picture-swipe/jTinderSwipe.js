@@ -56,6 +56,8 @@ halfdane.tinderswipe = function (model) {
             $('<li>')
                     .addClass('recommendation')
                     .append(image)
+                    .append($('<div>').addClass('like'))
+                    .append($('<div>').addClass('dislike'))
                     .prependTo('#tinderslide ul');
         });
 
@@ -81,7 +83,16 @@ halfdane.tinderswipe = function (model) {
     function init() {
         jTinder = $("#tinderslide").jTinder({
             onDislike: hate,
-            onLike: love
+            onLike: love,
+            threshold: 1
+        });
+
+        $('.actions .like').on('click tap', function () {
+            $("#tinderslide").jTinder('like');
+        });
+
+        $('.actions .dislike').on('click tap', function () {
+            $("#tinderslide").jTinder('dislike');
         });
 
         refill();
