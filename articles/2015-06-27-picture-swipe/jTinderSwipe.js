@@ -47,8 +47,7 @@ halfdane.dragger = function (drag, drop) {
 
     var touchStart = false;
     var xStart = 0, yStart = 0;
-    var posX = 0, posY = 0;
-    var lastPosX = 0, lastPosY = 0;
+    var pageX = 0, pageY = 0;
 
     function handler(ev) {
         ev.preventDefault();
@@ -71,28 +70,19 @@ halfdane.dragger = function (drag, drop) {
             case 'mousemove':
             case 'touchmove':
                 if (touchStart === true) {
-                    var pageX = typeof ev.touches[0].pageX === 'undefined' ? ev.pageX : ev.touches[0].pageX;
-                    var pageY = typeof ev.touches[0].pageY === 'undefined' ? ev.pageY : ev.touches[0].pageY;
-                    var deltaX = parseInt(pageX) - parseInt(xStart);
-                    var deltaY = parseInt(pageY) - parseInt(yStart);
-                    posX = deltaX + lastPosX;
-                    posY = deltaY + lastPosY;
+                    pageX = typeof ev.touches === 'undefined' ? ev.pageX : ev.touches[0].pageX;
+                    pageY = typeof ev.touches === 'undefined' ? ev.pageY : ev.touches[0].pageY;
 
-                    drag(deltaX, deltaY);
+                    drag(parseInt(pageX) - parseInt(xStart), parseInt(pageY) - parseInt(yStart));
                 }
                 break;
             case 'mouseup':
             case 'touchend':
                 touchStart = false;
-                var pageX = (typeof ev.changedTouches[0].pageX === 'undefined') ? ev.pageX : ev.changedTouches[0].pageX;
-                var pageY = (typeof ev.changedTouches[0].pageY === 'undefined') ? ev.pageY : ev.changedTouches[0].pageY;
-                var deltaX = parseInt(pageX) - parseInt(xStart);
-                var deltaY = parseInt(pageY) - parseInt(yStart);
+                pageX = (typeof ev.changedTouches === 'undefined') ? ev.pageX : ev.changedTouches[0].pageX;
+                pageY = (typeof ev.changedTouches === 'undefined') ? ev.pageY : ev.changedTouches[0].pageY;
 
-                posX = deltaX + lastPosX;
-                posY = deltaY + lastPosY;
-
-                drop(deltaX, deltaY);
+                drop(parseInt(pageX) - parseInt(xStart), parseInt(pageY) - parseInt(yStart));
                 break;
         }
     }
@@ -113,17 +103,13 @@ halfdane.dragger = function (drag, drop) {
 
 halfdane.pictureswipe = function (model) {
     'use strict';
-
-    function distanceSquared(deltaX, deltaY) {
-        return Math.pow(deltaX, 2.0) + Math.pow(deltaY, 2.0)
-    }
-
-    function imagesContainer() {
-        return document.getElementById('images');
-    }
+    
+    var imagesContainer = document.getElementById('images');
+    var love = document.getElementById('love');
+    var hate = document.getElementById('hate');
 
     function currentTopImage() {
-        return imagesContainer().lastElementChild;
+        return imagesContainer.lastElementChild;
     }
 
     function deleteElement(isHot) {
@@ -134,14 +120,13 @@ halfdane.pictureswipe = function (model) {
         element.addEventListener("transitionend", function transitionEndListener(e) {
             e.target.removeEventListener(e.type, transitionEndListener);
 
-            imagesContainer().removeChild(currentTopImage());
-
-            document.getElementById('love').classList.remove('active');
-            document.getElementById('hate').classList.remove('active');
+            imagesContainer.removeChild(element);
+            love.classList.remove('active');
+            hate.classList.remove('active');
 
             initTouchListeners();
 
-            if (imagesContainer().childElementCount < 5) {
+            if (imagesContainer.childElementCount < 5) {
                 loadSomeImages();
             }
         });
@@ -157,13 +142,16 @@ halfdane.pictureswipe = function (model) {
     }
 
     function isLovingOrHating(deltaX, loveCallback, hateCallback) {
-        console.log(deltaX, (window.innerWidth * 0.2));
         var overTheEdge = Math.abs(deltaX) > (window.innerWidth * 0.2);
         if (overTheEdge) {
             if (deltaX > 0) {
-                loveCallback && loveCallback();
+                if (loveCallback) {
+                    loveCallback();
+                }
             } else {
-                hateCallback && hateCallback();
+                if (hateCallback) {
+                    hateCallback();
+                }
             }
         }
 
@@ -171,12 +159,12 @@ halfdane.pictureswipe = function (model) {
     }
 
     function loveElement() {
-        document.getElementById('love').classList.add('active');
+        love.classList.add('active');
         deleteElement(true);
     }
 
     function hateElement() {
-        document.getElementById('hate').classList.add('active');
+        hate.classList.add('active');
         deleteElement(false);
     }
 
@@ -184,16 +172,17 @@ halfdane.pictureswipe = function (model) {
         window.requestAnimationFrame(function () {
             var element = currentTopImage();
 
-            document.getElementById('love').classList.remove('active');
-            document.getElementById('hate').classList.remove('active');
+            love.classList.remove('active');
+            hate.classList.remove('active');
             isLovingOrHating(deltaX, function () {
-                document.getElementById('love').classList.add('active');
+                love.classList.add('active');
             }, function () {
-                document.getElementById('hate').classList.add('active');
+                hate.classList.add('active');
             });
 
             element.style.transition = "0";
             element.style.transform = "translate(" + deltaX + "px, " + 0 + "px) rotate(" + (deltaX / 20) + "deg)";
+            element.style.opacity = window.innerWidth / Math.abs(deltaX * 5);
         });
     }
 
@@ -203,6 +192,7 @@ halfdane.pictureswipe = function (model) {
                 var element = currentTopImage();
                 element.style.transition = "0.05s ease-in-out";
                 element.style.transform = 'translate(0px, 0px) rotate(0deg)';
+                element.style.opacity = '1.0';
             });
         }
 
@@ -219,7 +209,7 @@ halfdane.pictureswipe = function (model) {
         image.src = item.imageUrl;
         image.setAttribute('data-articleNumber', item.articleNumber);
         image.classList.add("recommendation");
-        imagesContainer().insertBefore(image, imagesContainer().firstElementChild);
+        imagesContainer.insertBefore(image, imagesContainer.firstElementChild);
     }
 
     function loadSomeImages(afterLoad) {
@@ -240,8 +230,8 @@ halfdane.pictureswipe = function (model) {
     }
 
     function start() {
-        document.getElementById('love').addEventListener('click', loveElement);
-        document.getElementById('hate').addEventListener('click', hateElement);
+        love.addEventListener('click', loveElement);
+        hate.addEventListener('click', hateElement);
         loadSomeImages(initTouchListeners);
     }
 
