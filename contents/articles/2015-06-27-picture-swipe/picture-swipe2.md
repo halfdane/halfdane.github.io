@@ -5,8 +5,7 @@ template: empty.jade
 <link rel="stylesheet" type="text/css" href="jTinder.css">
 
 <div class="game_area">
-    <div id="images">
-    </div>
+    <ul id="images"></ul>
     <div id="controls">
         <div class="control hate" id="hate"></div>
         <div class="control love" id="love"></div>
