@@ -1,16 +1,12 @@
 ---
 template: empty.jade
 ---
-
 <link rel="stylesheet" type="text/css" href="jTinder.css">
-
 <div class="game_area">
     <ul id="images"></ul>
-    <div id="controls">
-        <div class="control hate" id="hate"></div>
-        <div class="control love" id="love"></div>
-    </div>
 </div>
+<a href="#" class="action hate" id="hate" ><i></i></a>
+<a href="#" class="action love" id="love" ><i></i></a>
 
 <!-- jQuery lib -->
 <script type="text/javascript" src="jquery.min.js"></script>

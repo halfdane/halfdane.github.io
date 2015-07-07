@@ -46,49 +46,34 @@ halfdane.fake_model = (function () {
 halfdane.pictureswipe = function (model) {
     'use strict';
 
-    var $imagesContainer = $('#images');
-    var imagesContainer = $imagesContainer[0];
     var $love = $('#love');
     var $hate = $('#hate');
-    var love = $love[0];
-    var hate = $hate[0];
+    var $gameArea = $(".game_area");
 
-    var jTinder = null;
-
-    function currentTopImage() {
-        return imagesContainer.lastElementChild;
-    }
-
-    function deleteElement(isHot, $element) {
-        var articleNumber = $element.attr('data-articleNumber');
+    function deleteElement(isHot, element) {
+        var articleNumber = element.attr('data-articleNumber');
         model.setDecision(articleNumber, isHot);
-
-        $element.remove();
-        love.classList.remove('active');
-        hate.classList.remove('active');
-
+        element.remove();
         refill();
     }
 
     function loveElement(element) {
-        love.classList.add('active');
         deleteElement(true, element);
     }
 
     function hateElement(element) {
-        hate.classList.add('active');
         deleteElement(false, element);
     }
 
     function addImageItem(item, onload) {
-        //<li class="pane1"><div class="img"></div><div>Miami Beach</div><div class="like"></div><div class="dislike"></div></li>
-        $imagesContainer.append(
-                $('<li>').append(
-                        $('<img>')
+        $('#images').append($('<li>')
+                        .append($('<img>')
                                 .attr('src', item.imageUrl)
-                                .attr('data-articleNumber', item.articleNumber)
                                 .addClass('recommendation')
-                                .on('load', onload)));
+                                .attr('data-articleNumber', item.articleNumber)
+                                .on('load', onload))
+                        .append($('<div>').addClass('like'))
+                        .append($('<div>').addClass('dislike')));
     }
 
     function refill() {
@@ -99,7 +84,7 @@ halfdane.pictureswipe = function (model) {
                         for (var i = 1; i < recommendations.length; i++) {
                             addImageItem(recommendations[i]);
                         }
-                        $(".game_area").jTinder('startOver');
+                        $gameArea.jTinder('startOver');
                     });
                 }
             });
@@ -107,18 +92,18 @@ halfdane.pictureswipe = function (model) {
     }
 
     function start() {
-        jTinder = $(".game_area").jTinder({
+        $gameArea.jTinder({
             onDislike: hateElement,
             onLike: loveElement,
-            threshold: 1
+            threshold: 2
         });
 
-        $love.on('click tap', function () {
-            $(".game_area").jTinder('like');
+        $love.on('click', function () {
+            $gameArea.jTinder('like');
         });
 
-        $hate.on('click tap', function () {
-            $(".game_area").jTinder('dislike');
+        $hate.on('click', function () {
+            $gameArea.jTinder('dislike');
         });
 
         refill();
