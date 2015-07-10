@@ -27,10 +27,9 @@ var halfdane = (function () {
             if (touchStart === true) {
                 var pageX = ev.pageX || ev.touches[0].pageX;
                 var deltaX = parseInt(pageX) - parseInt(xStart);
-                var opa = (Math.abs(deltaX) / threshold) / 100 + 0.2;
 
                 if (moveHandler) {
-                    moveHandler(deltaX, opa);
+                    moveHandler(deltaX);
                 }
             }
         }
@@ -40,10 +39,9 @@ var halfdane = (function () {
             touchStart = false;
             var pageX = ev.pageX || ev.changedTouches[0].pageX;
             var deltaX = parseInt(pageX) - parseInt(xStart);
-            var opa = (Math.abs(deltaX) / threshold) / 100 + 0.2;
 
             if (endMoveHandler) {
-                endMoveHandler(deltaX, opa);
+                endMoveHandler(deltaX);
             }
         }
 
@@ -67,7 +65,7 @@ var halfdane = (function () {
     var view = (function () {
         var animTime = 200;
         var revertTime = 100;
-        var pane_width = (window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth) * 1.5;
+        var pane_width = (window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth);
         var removingCurrent = false;
 
         function setStyleWithVendorPrefix(el, prop, val) {
@@ -108,6 +106,7 @@ var halfdane = (function () {
             img.src = item.imageUrl;
             img.classList.add('recommendation');
             img.setAttribute('data-articlenumber', item.articleNumber);
+            img.setAttribute('data-rnd', Math.random());
 
             var like = document.createElement('div');
             like.classList.add('love');
@@ -135,6 +134,9 @@ var halfdane = (function () {
                 var element = lastPane();
                 setStyleWithVendorPrefix(element, 'transition-duration', animTime + 'ms');
                 setStyleWithVendorPrefix(element, 'transform', translateTo(leftOrRight * pane_width));
+                element.style.opacity = 0.5;
+                setStyleWithVendorPrefix(element, 'transition', 'opacity ' + animTime + 'ms');
+
                 onAnimationEnd(element, function () {
                     callback(element);
                     element.parentNode.removeChild(element);
@@ -143,16 +145,41 @@ var halfdane = (function () {
             }
         }
 
+        function percentMoved(pos) {
+            return Math.abs(pos / pane_width);
+        }
+
+        function isOut(pos) {
+            return percentMoved(pos) >= 0.3;
+        }
+
         function moveCurrentTo(targetPosition) {
             var element = lastPane();
             setStyleWithVendorPrefix(element, 'transition-duration', 0);
             setStyleWithVendorPrefix(element, 'transform', translateTo(targetPosition));
+
+            element.style.opacity = 1 - percentMoved(targetPosition) * 0.5;
+
+            if (isOut(targetPosition)) {
+                if (targetPosition >= 0) {
+                    currentLoveBadge().style.opacity = 1.0;
+                    currentHateBadge().style.opacity = 0.0;
+                } else {
+                    currentLoveBadge().style.opacity = 0.0;
+                    currentHateBadge().style.opacity = 1.0;
+                }
+            } else {
+                currentLoveBadge().style.opacity = 0.0;
+                currentHateBadge().style.opacity = 0.0;
+            }
+
         }
 
         function revertCurrent() {
             var lastPane = view.lastPane();
             setStyleWithVendorPrefix(lastPane, 'transition-duration', revertTime);
             setStyleWithVendorPrefix(lastPane, 'transform', translateTo(0));
+            lastPane.style.opacity = 1.0;
 
             var loveBadge = view.currentLoveBadge();
             setStyleWithVendorPrefix(loveBadge, 'transition', 'opacity ' + revertTime + 'ms');
@@ -203,14 +230,15 @@ var halfdane = (function () {
             currentHateBadge: currentHateBadge,
             removeCurrentAt: removeCurrentAt,
             moveCurrentTo: moveCurrentTo,
-            revertCurrent: revertCurrent
+            revertCurrent: revertCurrent,
+            isOut: isOut
         };
 
     }());
 
     var presenter = function (model) {
         (function initializer() {
-            swiper.addEventhandler(view.imagecontainer(), moving, endMove);
+            swiper.addEventhandler(view.imagecontainer(), view.moveCurrentTo, endMove);
             view.addLoveAndHateHandler(love, hate);
             refill();
         }());
@@ -229,23 +257,8 @@ var halfdane = (function () {
             });
         }
 
-        function moving(deltaX, opa) {
-            view.moveCurrentTo(deltaX);
-
-            if (opa > 1.0) {
-                opa = 1.0;
-            }
-            if (deltaX >= 0) {
-                view.currentLoveBadge().style.opacity = opa;
-                view.currentHateBadge().style.opacity = 0.0;
-            } else {
-                view.currentHateBadge().style.opacity = opa;
-                view.currentLoveBadge().style.opacity = 0.0;
-            }
-        }
-
-        function endMove(deltaX, opa) {
-            if (opa >= 1) {
+        function endMove(deltaX) {
+            if (view.isOut(deltaX)) {
                 if (deltaX > 0) {
                     love();
                 } else {
