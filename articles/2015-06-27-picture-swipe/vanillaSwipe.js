@@ -1,12 +1,14 @@
 document.addEventListener('DOMContentLoaded', function () {
     'use strict';
-    halfdane.pictureswipe(halfdane.fake_model);
+    halfdane(halfdane.fake_model).init();
 });
 
-var halfdane = (function () {
+var halfdane = function (model) {
     'use strict';
 
-    var swiper = (function () {
+    var module = {};
+
+    module.swiper = (function () {
         var touchStart = false;
         var xStart = 0;
 
@@ -61,7 +63,7 @@ var halfdane = (function () {
         };
     }());
 
-    var view = (function () {
+    module.view = (function () {
         var animTime = 400;
         var revertTime = 200;
         var pane_width = 1.2 * (window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth);
@@ -127,18 +129,50 @@ var halfdane = (function () {
             return 'translateX(' + pos + 'px) rotate(' + ((pos / pane_width) * 50) + 'deg)';
         }
 
+        function addLoveAndHateHandler(love, hate) {
+            document.getElementById('love').addEventListener('click', love);
+            document.getElementById('hate').addEventListener('click', hate);
+        }
+
+        function showLoveAndHateBadges(pos) {
+            if (isOut(pos)) {
+                if (pos >= 0) {
+                    currentLoveBadge().style.opacity = 1.0;
+                    document.getElementById('love').classList.add('active');
+
+                    currentHateBadge().style.opacity = 0.0;
+                    document.getElementById('hate').classList.remove('active');
+                } else {
+                    currentLoveBadge().style.opacity = 0.0;
+                    document.getElementById('love').classList.remove('active');
+
+                    currentHateBadge().style.opacity = 1.0;
+                    document.getElementById('hate').classList.add('active');
+                }
+            } else {
+                currentLoveBadge().style.opacity = 0.0;
+                document.getElementById('love').classList.remove('active');
+
+                currentHateBadge().style.opacity = 0.0;
+                document.getElementById('hate').classList.remove('active');
+            }
+        }
+
         function removeCurrentAt(leftOrRight, callback) {
             if (!removingCurrent) {
                 removingCurrent = true;
                 var element = lastPane();
-                setStyleWithVendorPrefix(element, 'transition-duration', animTime + 'ms');
-                setStyleWithVendorPrefix(element, 'transform', translateTo(leftOrRight * pane_width));
 
                 onAnimationEnd(element, function () {
                     callback(element);
                     element.parentNode.removeChild(element);
                     removingCurrent = false;
                 });
+
+                setStyleWithVendorPrefix(element, 'transition-duration', animTime + 'ms');
+                setStyleWithVendorPrefix(element, 'transform', translateTo(leftOrRight * pane_width));
+
+                showLoveAndHateBadges(leftOrRight);
             }
         }
 
@@ -147,19 +181,7 @@ var halfdane = (function () {
             setStyleWithVendorPrefix(element, 'transition-duration', 0 + 'ms');
             setStyleWithVendorPrefix(element, 'transform', translateTo(targetPosition));
 
-            if (isOut(targetPosition)) {
-                if (targetPosition >= 0) {
-                    currentLoveBadge().style.opacity = 1.0;
-                    currentHateBadge().style.opacity = 0.0;
-                } else {
-                    currentLoveBadge().style.opacity = 0.0;
-                    currentHateBadge().style.opacity = 1.0;
-                }
-            } else {
-                currentLoveBadge().style.opacity = 0.0;
-                currentHateBadge().style.opacity = 0.0;
-            }
-
+            showLoveAndHateBadges(targetPosition);
         }
 
         function revertCurrent() {
@@ -174,11 +196,6 @@ var halfdane = (function () {
             setStyleWithVendorPrefix(hateBadge, 'transition', 'opacity ' + revertTime + 'ms');
         }
 
-        function addLoveAndHateHandler(love, hate) {
-            document.getElementById('love').addEventListener('click', love);
-            document.getElementById('hate').addEventListener('click', hate);
-        }
-
         function lastPane() {
             return imagecontainer().querySelector('.slide:last-child');
         }
@@ -188,7 +205,7 @@ var halfdane = (function () {
         }
 
         function isOut(pos) {
-            return percentMoved(pos) >= 0.3;
+            return percentMoved(pos) >= 0.1;
         }
 
         function articleNumber(slide) {
@@ -223,15 +240,9 @@ var halfdane = (function () {
             revertCurrent: revertCurrent,
             isOut: isOut
         };
-
     }());
 
-    var presenter = function (model) {
-        (function initializer() {
-            view.addLoveAndHateHandler(love, hate);
-            refill();
-        }());
-
+    module.presenter = function (model, view, swiper) {
         function hate() {
             view.removeCurrentAt(-1, function (element) {
                 model.setDecision(view.articleNumber(element), false);
@@ -271,13 +282,19 @@ var halfdane = (function () {
                 });
             }
         }
+
+        return {
+            init: function initializer() {
+                view.addLoveAndHateHandler(love, hate);
+                refill();
+            }
+        };
     };
 
     return {
-        pictureswipe: presenter
+        init: module.presenter(model, module.view, module.swiper).init
     };
-
-}());
+};
 
 halfdane.fake_model = (function () {
     'use strict';
