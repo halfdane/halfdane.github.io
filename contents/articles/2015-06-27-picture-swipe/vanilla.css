@@ -21,8 +21,6 @@ body {
     position: absolute;
 }
 
-
-
 #images .slide {
     height: auto;
     overflow: hidden;
@@ -57,7 +55,6 @@ body {
     -webkit-transform-style: preserve-3d;
 }
 
-/* Like & dislike badge images */
 #images .love,
 #images .hate {
     background: url("love.fixed.png") no-repeat scroll 0 0;
@@ -86,7 +83,6 @@ body {
 
 .action {
     position: absolute;
-    background-size: cover;
     width: 50px;
     height: 50px;
     bottom: 6%;
@@ -98,8 +94,16 @@ body {
     background-size: cover;
 }
 
+.action.hate.active {
+    background-color: red;
+}
+
 .action.love {
     right: 6%;
     background: url("love.fixed.png") no-repeat scroll center center;
     background-size: cover;
+}
+
+.action.love.active {
+    background-color: green;
 }
