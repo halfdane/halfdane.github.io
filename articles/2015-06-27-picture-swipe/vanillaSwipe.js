@@ -166,13 +166,14 @@ var halfdane = function (model) {
                 onAnimationEnd(element, function () {
                     callback(element);
                     element.parentNode.removeChild(element);
+                    showLoveAndHateBadges(0);
                     removingCurrent = false;
                 });
 
                 setStyleWithVendorPrefix(element, 'transition-duration', animTime + 'ms');
                 setStyleWithVendorPrefix(element, 'transform', translateTo(leftOrRight * pane_width));
 
-                showLoveAndHateBadges(leftOrRight);
+                showLoveAndHateBadges(leftOrRight * pane_width);
             }
         }
 
