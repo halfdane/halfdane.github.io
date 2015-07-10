@@ -3,7 +3,7 @@ template: empty.jade
 ---
 <link rel="stylesheet" type="text/css" href="jTinder.css">
 <div class="game_area">
-    <ul id="images"></ul>
+    <ul id="images" class="container"></ul>
 </div>
 <a href="#" class="action hate" id="hate" ><i></i></a>
 <a href="#" class="action love" id="love" ><i></i></a>

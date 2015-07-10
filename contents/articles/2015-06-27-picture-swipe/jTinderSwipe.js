@@ -53,7 +53,7 @@ halfdane.pictureswipe = function (model) {
     function deleteElement(isHot, element) {
         var articleNumber = element.attr('data-articleNumber');
         model.setDecision(articleNumber, isHot);
-        element.remove();
+
         refill();
     }
 
@@ -67,13 +67,14 @@ halfdane.pictureswipe = function (model) {
 
     function addImageItem(item, onload) {
         $('#images').append($('<li>')
-                        .append($('<img>')
-                                .attr('src', item.imageUrl)
-                                .addClass('recommendation')
-                                .attr('data-articleNumber', item.articleNumber)
-                                .on('load', onload))
-                        .append($('<div>').addClass('like'))
-                        .append($('<div>').addClass('dislike')));
+                .addClass('slide')
+                .append($('<img>')
+                        .attr('src', item.imageUrl)
+                        .addClass('recommendation')
+                        .attr('data-articleNumber', item.articleNumber)
+                        .on('load', onload))
+                .append($('<div>').addClass('like'))
+                .append($('<div>').addClass('dislike')));
     }
 
     function refill() {
@@ -84,7 +85,7 @@ halfdane.pictureswipe = function (model) {
                         for (var i = 1; i < recommendations.length; i++) {
                             addImageItem(recommendations[i]);
                         }
-                        $gameArea.jTinder('startOver');
+                        jTinder.startOver($gameArea);
                     });
                 }
             });
@@ -92,18 +93,18 @@ halfdane.pictureswipe = function (model) {
     }
 
     function start() {
-        $gameArea.jTinder({
+        jTinder.init($gameArea, {
             onDislike: hateElement,
             onLike: loveElement,
             threshold: 2
         });
 
         $love.on('click', function () {
-            $gameArea.jTinder('like');
+            jTinder.love();
         });
 
         $hate.on('click', function () {
-            $gameArea.jTinder('dislike');
+            jTinder.hate();
         });
 
         refill();
