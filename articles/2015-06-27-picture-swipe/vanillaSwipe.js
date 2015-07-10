@@ -1,4 +1,3 @@
-/*global $ */
 document.addEventListener('DOMContentLoaded', function () {
     'use strict';
     halfdane.pictureswipe(halfdane.fake_model);
@@ -28,10 +27,9 @@ var halfdane = (function () {
             if (touchStart === true) {
                 var pageX = ev.pageX || ev.touches[0].pageX;
                 var deltaX = parseInt(pageX) - parseInt(xStart);
-                var opa = (Math.abs(deltaX) / threshold) / 100 + 0.2;
 
                 if (moveHandler) {
-                    moveHandler(deltaX, opa);
+                    moveHandler(deltaX);
                 }
             }
         }
@@ -41,10 +39,9 @@ var halfdane = (function () {
             touchStart = false;
             var pageX = ev.pageX || ev.changedTouches[0].pageX;
             var deltaX = parseInt(pageX) - parseInt(xStart);
-            var opa = (Math.abs(deltaX) / threshold) / 100 + 0.2;
 
             if (endMoveHandler) {
-                endMoveHandler(deltaX, opa);
+                endMoveHandler(deltaX);
             }
         }
 
@@ -66,121 +63,20 @@ var halfdane = (function () {
     }());
 
     var view = (function () {
-        function imagecontainer() {
-            return document.getElementById('images');
-        }
+        var animTime = 200;
+        var revertTime = 100;
+        var pane_width = (window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth);
+        var removingCurrent = false;
 
-        function addImageItem(item, onload) {
-            var img = new Image();
-            img.onload = onload;
-            img.src = item.imageUrl;
-            img.classList.add('recommendation');
-            img.setAttribute('data-articlenumber', item.articleNumber);
+        function setStyleWithVendorPrefix(el, prop, val) {
+            var vendors = ['-moz-', '-webkit-', '-o-', '-ms-', '-khtml-', ''];
 
-            var like = document.createElement('div');
-            like.classList.add('like');
+            function toCamelCase(str) {
+                return str.toLowerCase().replace(/(\-[a-z])/g, function ($1) {
+                    return $1.toUpperCase().replace('-', '');
+                });
+            }
 
-            var dislike = document.createElement('div');
-            dislike.classList.add('dislike');
-
-            var li = document.createElement('li');
-            li.classList.add('slide');
-            li.appendChild(img);
-            li.appendChild(like);
-            li.appendChild(dislike);
-
-            var images = imagecontainer();
-            images.insertBefore(li, images.firstChild);
-        }
-
-        function articleNumber(slide) {
-            return slide.firstChild.getAttribute('data-articlenumber');
-        }
-
-        function lastPane() {
-            return imagecontainer().querySelector('.slide:last-child');
-        }
-
-        function addLoveAndHateHandler(love, hate) {
-            document.getElementById('love').addEventListener('click', love);
-            document.getElementById('hate').addEventListener('click', hate);
-        }
-
-        function imageCount() {
-            return imagecontainer().querySelectorAll('.recommendation').length;
-        }
-
-        return {
-            addImageItem: addImageItem,
-            articleNumber: articleNumber,
-            imagecontainer: imagecontainer,
-            lastPane: lastPane,
-            addLoveAndHateHandler: addLoveAndHateHandler,
-            imageCount: imageCount
-        };
-
-    }());
-
-    var presenter = function (model) {
-        var animTime = 400;
-        var revertTime = 200;
-
-        var pane_width = 0;
-        var likeSelector = '.like';
-        var dislikeSelector = '.dislike';
-
-        (function initializer() {
-            swiper.addEventhandler(
-                    view.imagecontainer(),
-                    moving,
-                    endMove);
-
-            view.addLoveAndHateHandler(love, hate);
-
-            var $element = $(view.imagecontainer());
-            pane_width = $element.width() * 1.5;
-            refill();
-        }());
-
-        function translateTo(pos) {
-            return 'translateX(' + pos + 'px) rotate(' + ((pos / pane_width) * 50) + 'deg)';
-        }
-
-        function hate() {
-            var element = view.lastPane();
-            var current = $(element);
-
-            setCss3Style(element, 'transition-duration', animTime + 'ms');
-            setCss3Style(element, 'transform', translateTo(-pane_width));
-            onAnimationEnd(element, function () {
-                model.setDecision(view.articleNumber(element), false);
-                refill();
-                current.remove();
-            });
-        }
-
-        function love() {
-            var element = view.lastPane();
-            var current = $(element);
-
-            setCss3Style(element, 'transition-duration', animTime + 'ms');
-            setCss3Style(element, 'transform', translateTo(pane_width));
-            onAnimationEnd(element, function () {
-                model.setDecision(view.articleNumber(element), true);
-                refill();
-                current.remove();
-            });
-        }
-
-        var vendors = ['-moz-', '-webkit-', '-o-', '-ms-', '-khtml-', ''];
-
-        function toCamelCase(str) {
-            return str.toLowerCase().replace(/(\-[a-z])/g, function ($1) {
-                return $1.toUpperCase().replace('-', '');
-            });
-        }
-
-        function setCss3Style(el, prop, val) {
             for (var i = 0, l = vendors.length; i < l; i++) {
                 var p = toCamelCase(vendors[i] + prop);
                 if (p in el.style) {
@@ -204,40 +100,172 @@ var halfdane = (function () {
             element.addEventListener("transitionend", realCallback, false);
         }
 
-        function moving(deltaX, opa) {
-            var element = view.lastPane();
+        function addImageItem(item, onload) {
+            var img = new Image();
+            img.onload = onload;
+            img.src = item.imageUrl;
+            img.classList.add('recommendation');
+            img.setAttribute('data-articlenumber', item.articleNumber);
+            img.setAttribute('data-rnd', Math.random());
 
-            setCss3Style(element, 'transition-duration', 0);
-            setCss3Style(element, 'transform', translateTo(deltaX));
+            var like = document.createElement('div');
+            like.classList.add('love');
 
-            var currentPane = $(element);
+            var dislike = document.createElement('div');
+            dislike.classList.add('hate');
 
-            if (opa > 1.0) {
-                opa = 1.0;
-            }
-            if (deltaX >= 0) {
-                currentPane.find(likeSelector).css('opacity', opa);
-                currentPane.find(dislikeSelector).css('opacity', 0);
-            } else {
-                currentPane.find(dislikeSelector).css('opacity', opa);
-                currentPane.find(likeSelector).css('opacity', 0);
+            var li = document.createElement('li');
+            li.classList.add('slide');
+            li.appendChild(img);
+            li.appendChild(like);
+            li.appendChild(dislike);
+
+            var images = imagecontainer();
+            images.insertBefore(li, images.firstChild);
+        }
+
+        function translateTo(pos) {
+            return 'translateX(' + pos + 'px) rotate(' + ((pos / pane_width) * 50) + 'deg)';
+        }
+
+        function removeCurrentAt(leftOrRight, callback) {
+            if (!removingCurrent) {
+                removingCurrent = true;
+                var element = lastPane();
+                setStyleWithVendorPrefix(element, 'transition-duration', animTime + 'ms');
+                setStyleWithVendorPrefix(element, 'transform', translateTo(leftOrRight * pane_width));
+                element.style.opacity = 0.5;
+                setStyleWithVendorPrefix(element, 'transition', 'opacity ' + animTime + 'ms');
+
+                onAnimationEnd(element, function () {
+                    callback(element);
+                    element.parentNode.removeChild(element);
+                    removingCurrent = false;
+                });
             }
         }
 
-        function endMove(deltaX, opa) {
-            if (opa >= 1) {
+        function percentMoved(pos) {
+            return Math.abs(pos / pane_width);
+        }
+
+        function isOut(pos) {
+            return percentMoved(pos) >= 0.3;
+        }
+
+        function moveCurrentTo(targetPosition) {
+            var element = lastPane();
+            setStyleWithVendorPrefix(element, 'transition-duration', 0);
+            setStyleWithVendorPrefix(element, 'transform', translateTo(targetPosition));
+
+            element.style.opacity = 1 - percentMoved(targetPosition) * 0.5;
+
+            if (isOut(targetPosition)) {
+                if (targetPosition >= 0) {
+                    currentLoveBadge().style.opacity = 1.0;
+                    currentHateBadge().style.opacity = 0.0;
+                } else {
+                    currentLoveBadge().style.opacity = 0.0;
+                    currentHateBadge().style.opacity = 1.0;
+                }
+            } else {
+                currentLoveBadge().style.opacity = 0.0;
+                currentHateBadge().style.opacity = 0.0;
+            }
+
+        }
+
+        function revertCurrent() {
+            var lastPane = view.lastPane();
+            setStyleWithVendorPrefix(lastPane, 'transition-duration', revertTime);
+            setStyleWithVendorPrefix(lastPane, 'transform', translateTo(0));
+            lastPane.style.opacity = 1.0;
+
+            var loveBadge = view.currentLoveBadge();
+            setStyleWithVendorPrefix(loveBadge, 'transition', 'opacity ' + revertTime + 'ms');
+            loveBadge.style.opacity = 0.0;
+
+            var hateBadge = view.currentHateBadge();
+            setStyleWithVendorPrefix(hateBadge, 'transition', 'opacity ' + revertTime + 'ms');
+            hateBadge.style.opacity = 0.0;
+        }
+
+        function addLoveAndHateHandler(love, hate) {
+            document.getElementById('love').addEventListener('click', love);
+            document.getElementById('hate').addEventListener('click', hate);
+        }
+
+        function articleNumber(slide) {
+            return slide.firstChild.getAttribute('data-articlenumber');
+        }
+
+        function imagecontainer() {
+            return document.getElementById('images');
+        }
+
+        function lastPane() {
+            return imagecontainer().querySelector('.slide:last-child');
+        }
+
+        function imageCount() {
+            return imagecontainer().querySelectorAll('.recommendation').length;
+        }
+
+        function currentLoveBadge() {
+            return lastPane().querySelector('.love');
+        }
+
+        function currentHateBadge() {
+            return lastPane().querySelector('.hate');
+        }
+
+        return {
+            addImageItem: addImageItem,
+            articleNumber: articleNumber,
+            imagecontainer: imagecontainer,
+            lastPane: lastPane,
+            addLoveAndHateHandler: addLoveAndHateHandler,
+            imageCount: imageCount,
+            currentLoveBadge: currentLoveBadge,
+            currentHateBadge: currentHateBadge,
+            removeCurrentAt: removeCurrentAt,
+            moveCurrentTo: moveCurrentTo,
+            revertCurrent: revertCurrent,
+            isOut: isOut
+        };
+
+    }());
+
+    var presenter = function (model) {
+        (function initializer() {
+            swiper.addEventhandler(view.imagecontainer(), view.moveCurrentTo, endMove);
+            view.addLoveAndHateHandler(love, hate);
+            refill();
+        }());
+
+        function hate() {
+            view.removeCurrentAt(-1, function (element) {
+                model.setDecision(view.articleNumber(element), false);
+                refill();
+            });
+        }
+
+        function love() {
+            view.removeCurrentAt(1, function (element) {
+                model.setDecision(view.articleNumber(element), true);
+                refill();
+            });
+        }
+
+        function endMove(deltaX) {
+            if (view.isOut(deltaX)) {
                 if (deltaX > 0) {
                     love();
                 } else {
                     hate();
                 }
             } else {
-                setCss3Style(view.lastPane(), 'transition-duration', revertTime);
-                setCss3Style(view.lastPane(), 'transform', translateTo(0));
-
-                var currentPane = $(view.lastPane());
-                currentPane.find(likeSelector).animate({"opacity": 0}, revertTime);
-                currentPane.find(dislikeSelector).animate({"opacity": 0}, revertTime);
+                view.revertCurrent();
             }
         }
 
