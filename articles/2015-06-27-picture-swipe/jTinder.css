@@ -1,8 +1,7 @@
-body {
-    margin: 0;
-}
-
-#images {
+html,
+body,
+.content,
+.game_area {
     height: 100%;
     padding: 0;
     margin: 0;
@@ -13,7 +12,7 @@ body {
     width: 100%;
 }
 
-#images .slide {
+.game_area li {
     top: 10%;
     left: 10%;
     right: 10%;
@@ -35,24 +34,9 @@ body {
     -webkit-backface-visibility: hidden;
 }
 
-#images .recommendation {
-    height: auto;
-    width: 100%;
-    position: relative;
-    -webkit-transform: translate3d(0%, 0, 0) scale3d(1, 1, 1);
-    -moz-transform: translate3d(0%, 0, 0) scale3d(1, 1, 1);
-    -ms-transform: translate3d(0%, 0, 0) scale3d(1, 1, 1);
-    -o-transform: translate3d(0%, 0, 0) scale3d(1, 1, 1);
-    transform: translate3d(0%, 0, 0) scale3d(1, 1, 1);
-    overflow: hidden;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    -webkit-transform-style: preserve-3d;
-}
-
 /* Like & dislike badge images */
-#images .like,
-#images .dislike {
+.game_area .like,
+.game_area .dislike {
     background: url("love.fixed.png") no-repeat scroll 0 0;
     opacity: 0;
     height: 80px;
@@ -71,10 +55,25 @@ body {
     backface-visibility: hidden;
 }
 
-#images .dislike {
+.game_area .dislike {
     right: 45px;
     left: auto;
     background: url("hate.fixed.png") no-repeat scroll 0 0;
+}
+
+.game_area .recommendation {
+    height: auto;
+    width: 100%;
+    position: relative;
+    -webkit-transform: translate3d(0%, 0, 0) scale3d(1, 1, 1);
+    -moz-transform: translate3d(0%, 0, 0) scale3d(1, 1, 1);
+    -ms-transform: translate3d(0%, 0, 0) scale3d(1, 1, 1);
+    -o-transform: translate3d(0%, 0, 0) scale3d(1, 1, 1);
+    transform: translate3d(0%, 0, 0) scale3d(1, 1, 1);
+    overflow: hidden;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
 }
 
 .action {
@@ -90,7 +89,6 @@ body {
     background: url("hate.fixed.png") no-repeat scroll center center;
     background-size: cover;
 }
-
 .action.love {
     right: 6%;
     background: url("love.fixed.png") no-repeat scroll center center;
