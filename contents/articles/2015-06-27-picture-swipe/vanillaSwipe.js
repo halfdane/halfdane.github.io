@@ -9,7 +9,6 @@ var halfdane = (function () {
     var swiper = (function () {
         var touchStart = false;
         var xStart = 0;
-        var threshold = 1;
 
         var moveHandler;
         var endMoveHandler;
@@ -63,9 +62,9 @@ var halfdane = (function () {
     }());
 
     var view = (function () {
-        var animTime = 200;
-        var revertTime = 100;
-        var pane_width = (window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth);
+        var animTime = 400;
+        var revertTime = 200;
+        var pane_width = 1.2 * (window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth);
         var removingCurrent = false;
 
         function setStyleWithVendorPrefix(el, prop, val) {
@@ -100,9 +99,9 @@ var halfdane = (function () {
             element.addEventListener("transitionend", realCallback, false);
         }
 
-        function addImageItem(item, onload) {
+        function addImageItem(item, createOnLoad) {
             var img = new Image();
-            img.onload = onload;
+            img.onload = createOnLoad(img);
             img.src = item.imageUrl;
             img.classList.add('recommendation');
             img.setAttribute('data-articlenumber', item.articleNumber);
@@ -134,8 +133,6 @@ var halfdane = (function () {
                 var element = lastPane();
                 setStyleWithVendorPrefix(element, 'transition-duration', animTime + 'ms');
                 setStyleWithVendorPrefix(element, 'transform', translateTo(leftOrRight * pane_width));
-                element.style.opacity = 0.5;
-                setStyleWithVendorPrefix(element, 'transition', 'opacity ' + animTime + 'ms');
 
                 onAnimationEnd(element, function () {
                     callback(element);
@@ -145,20 +142,10 @@ var halfdane = (function () {
             }
         }
 
-        function percentMoved(pos) {
-            return Math.abs(pos / pane_width);
-        }
-
-        function isOut(pos) {
-            return percentMoved(pos) >= 0.3;
-        }
-
         function moveCurrentTo(targetPosition) {
             var element = lastPane();
-            setStyleWithVendorPrefix(element, 'transition-duration', 0);
+            setStyleWithVendorPrefix(element, 'transition-duration', 0 + 'ms');
             setStyleWithVendorPrefix(element, 'transform', translateTo(targetPosition));
-
-            element.style.opacity = 1 - percentMoved(targetPosition) * 0.5;
 
             if (isOut(targetPosition)) {
                 if (targetPosition >= 0) {
@@ -176,23 +163,32 @@ var halfdane = (function () {
         }
 
         function revertCurrent() {
-            var lastPane = view.lastPane();
-            setStyleWithVendorPrefix(lastPane, 'transition-duration', revertTime);
-            setStyleWithVendorPrefix(lastPane, 'transform', translateTo(0));
-            lastPane.style.opacity = 1.0;
+            var pane = lastPane();
+            setStyleWithVendorPrefix(pane, 'transition-duration', revertTime + 'ms');
+            setStyleWithVendorPrefix(pane, 'transform', translateTo(0));
 
-            var loveBadge = view.currentLoveBadge();
+            var loveBadge = currentLoveBadge();
             setStyleWithVendorPrefix(loveBadge, 'transition', 'opacity ' + revertTime + 'ms');
-            loveBadge.style.opacity = 0.0;
 
-            var hateBadge = view.currentHateBadge();
+            var hateBadge = currentHateBadge();
             setStyleWithVendorPrefix(hateBadge, 'transition', 'opacity ' + revertTime + 'ms');
-            hateBadge.style.opacity = 0.0;
         }
 
         function addLoveAndHateHandler(love, hate) {
             document.getElementById('love').addEventListener('click', love);
             document.getElementById('hate').addEventListener('click', hate);
+        }
+
+        function lastPane() {
+            return imagecontainer().querySelector('.slide:last-child');
+        }
+
+        function percentMoved(pos) {
+            return Math.abs(pos / pane_width);
+        }
+
+        function isOut(pos) {
+            return percentMoved(pos) >= 0.3;
         }
 
         function articleNumber(slide) {
@@ -201,10 +197,6 @@ var halfdane = (function () {
 
         function imagecontainer() {
             return document.getElementById('images');
-        }
-
-        function lastPane() {
-            return imagecontainer().querySelector('.slide:last-child');
         }
 
         function imageCount() {
@@ -220,14 +212,12 @@ var halfdane = (function () {
         }
 
         return {
+            lastPane: lastPane,
             addImageItem: addImageItem,
             articleNumber: articleNumber,
             imagecontainer: imagecontainer,
-            lastPane: lastPane,
             addLoveAndHateHandler: addLoveAndHateHandler,
             imageCount: imageCount,
-            currentLoveBadge: currentLoveBadge,
-            currentHateBadge: currentHateBadge,
             removeCurrentAt: removeCurrentAt,
             moveCurrentTo: moveCurrentTo,
             revertCurrent: revertCurrent,
@@ -238,7 +228,6 @@ var halfdane = (function () {
 
     var presenter = function (model) {
         (function initializer() {
-            swiper.addEventhandler(view.imagecontainer(), view.moveCurrentTo, endMove);
             view.addLoveAndHateHandler(love, hate);
             refill();
         }());
@@ -272,7 +261,13 @@ var halfdane = (function () {
         function refill() {
             if (view.imageCount() <= 5) {
                 model.getRecommendations(function (recommendations) {
-                    recommendations.forEach(view.addImageItem);
+                    recommendations.forEach(function (recommendation) {
+                        view.addImageItem(recommendation, function (img) {
+                            return function () {
+                                swiper.addEventhandler(img, view.moveCurrentTo, endMove);
+                            };
+                        });
+                    });
                 });
             }
         }

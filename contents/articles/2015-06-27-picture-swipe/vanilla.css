@@ -2,21 +2,28 @@ body {
     margin: 0;
 }
 
-#images {
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-    background-color: #867976;
+.game_area {
     position: absolute;
     top: 0;
     width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #867976;
 }
 
-#images .slide {
+#images {
+    padding: 0;
+    margin: 0;
+
     top: 10%;
     left: 10%;
     right: 10%;
+    position: absolute;
+}
+
+
+
+#images .slide {
     height: auto;
     overflow: hidden;
     position: absolute;
