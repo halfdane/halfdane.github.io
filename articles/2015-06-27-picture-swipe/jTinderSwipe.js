@@ -106,12 +106,17 @@ var halfdane = (function () {
             document.getElementById('hate').addEventListener('click', hate);
         }
 
+        function imageCount() {
+            return imagecontainer().querySelectorAll('.recommendation').length;
+        }
+
         return {
             addImageItem: addImageItem,
             articleNumber: articleNumber,
             imagecontainer: imagecontainer,
             lastPane: lastPane,
-            addLoveAndHateHandler: addLoveAndHateHandler
+            addLoveAndHateHandler: addLoveAndHateHandler,
+            imageCount: imageCount
         };
 
     }());
@@ -124,34 +129,88 @@ var halfdane = (function () {
         var likeSelector = '.like';
         var dislikeSelector = '.dislike';
 
+        (function initializer() {
+            swiper.addEventhandler(
+                    view.imagecontainer(),
+                    moving,
+                    endMove);
+
+            view.addLoveAndHateHandler(love, hate);
+
+            var $element = $(view.imagecontainer());
+            pane_width = $element.width() * 1.5;
+            refill();
+        }());
+
         function translateTo(pos) {
-            return {transform: "translateX(" + pos + "px) rotate(" + ((pos / pane_width) * 50) + "deg)"};
+            return 'translateX(' + pos + 'px) rotate(' + ((pos / pane_width) * 50) + 'deg)';
         }
 
         function hate() {
-            var current = $(view.lastPane());
-            current.animate(translateTo(-pane_width), animTime,
-                    function () {
-                        model.setDecision(view.articleNumber(current[0]), false);
-                        refill();
-                        current.remove();
-                    });
+            var element = view.lastPane();
+            var current = $(element);
+
+            setCss3Style(element, 'transition-duration', animTime + 'ms');
+            setCss3Style(element, 'transform', translateTo(-pane_width));
+            onAnimationEnd(element, function () {
+                model.setDecision(view.articleNumber(element), false);
+                refill();
+                current.remove();
+            });
         }
 
         function love() {
-            var current = $(view.lastPane());
-            current.animate(translateTo(pane_width), animTime,
-                    function () {
-                        model.setDecision(view.articleNumber(current[0]), true);
-                        refill();
-                        current.remove();
-                    });
+            var element = view.lastPane();
+            var current = $(element);
+
+            setCss3Style(element, 'transition-duration', animTime + 'ms');
+            setCss3Style(element, 'transform', translateTo(pane_width));
+            onAnimationEnd(element, function () {
+                model.setDecision(view.articleNumber(element), true);
+                refill();
+                current.remove();
+            });
+        }
+
+        var vendors = ['-moz-', '-webkit-', '-o-', '-ms-', '-khtml-', ''];
+
+        function toCamelCase(str) {
+            return str.toLowerCase().replace(/(\-[a-z])/g, function ($1) {
+                return $1.toUpperCase().replace('-', '');
+            });
+        }
+
+        function setCss3Style(el, prop, val) {
+            for (var i = 0, l = vendors.length; i < l; i++) {
+                var p = toCamelCase(vendors[i] + prop);
+                if (p in el.style) {
+                    el.style[p] = val;
+                }
+            }
+        }
+
+        function onAnimationEnd(element, callback) {
+            var realCallback = function (event) {
+                event.target.removeEventListener(event.type, realCallback, false);
+
+                if (callback) {
+                    callback();
+                }
+            };
+
+            element.addEventListener("webkitTransitionEnd", realCallback, false);
+            element.addEventListener("MSTransitionEnd", realCallback, false);
+            element.addEventListener("oTransitionEnd", realCallback, false);
+            element.addEventListener("transitionend", realCallback, false);
         }
 
         function moving(deltaX, opa) {
-            var currentPane = $(view.lastPane());
+            var element = view.lastPane();
 
-            currentPane.css(translateTo(deltaX));
+            setCss3Style(element, 'transition-duration', 0);
+            setCss3Style(element, 'transform', translateTo(deltaX));
+
+            var currentPane = $(element);
 
             if (opa > 1.0) {
                 opa = 1.0;
@@ -166,8 +225,6 @@ var halfdane = (function () {
         }
 
         function endMove(deltaX, opa) {
-            var currentPane = $(view.lastPane());
-
             if (opa >= 1) {
                 if (deltaX > 0) {
                     love();
@@ -175,35 +232,22 @@ var halfdane = (function () {
                     hate();
                 }
             } else {
-                currentPane.animate(translateTo(0), revertTime);
+                setCss3Style(view.lastPane(), 'transition-duration', revertTime);
+                setCss3Style(view.lastPane(), 'transform', translateTo(0));
+
+                var currentPane = $(view.lastPane());
                 currentPane.find(likeSelector).animate({"opacity": 0}, revertTime);
                 currentPane.find(dislikeSelector).animate({"opacity": 0}, revertTime);
             }
         }
 
         function refill() {
-            if ($('.recommendation').length <= 5) {
+            if (view.imageCount() <= 5) {
                 model.getRecommendations(function (recommendations) {
                     recommendations.forEach(view.addImageItem);
                 });
             }
         }
-
-        function start() {
-            var $element = $(view.imagecontainer());
-
-            swiper.addEventhandler(
-                    view.imagecontainer(),
-                    moving,
-                    endMove);
-
-            view.addLoveAndHateHandler(love, hate);
-
-            pane_width = $element.width() * 1.5;
-            refill();
-        }
-
-        start();
     };
 
     return {
