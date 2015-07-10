@@ -14,8 +14,4 @@ template: empty.jade
 <!-- transform2d lib -->
 <script type="text/javascript" src="jquery.transform2d.js"></script>
 
-<!-- jTinder lib -->
-<script type="text/javascript" src="jquery.jTinder.js"></script>
-
-
-<script type="text/javascript" src="jTinderSwipe.js"></script>
+<script type="text/javascript" src="vanillaSwipe.js"></script>
