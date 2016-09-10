@@ -1,6 +1,6 @@
 ---
 title: "Picture-Swipe"
-image: luftkissen_cd_final.jpg
+image: picture-swipe.png
 ---
 Für die OTTO-InnoDays hat mein Team die Idee "Hot or not for Fashion" umgesetzt und dazu die Otto-Empfehlungsengine umgebaut, 
 einen MicroService für die Datenversorgung erstellt und eine Android-App zum Swipen von Mode-Bildern gebaut.
