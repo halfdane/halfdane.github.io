@@ -11,3 +11,5 @@ compiled
 **/*-small.png
 **/*-medium.png
 **/*-large.png
+
+node_modules
