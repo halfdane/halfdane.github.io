@@ -8,13 +8,18 @@ window.exponential.graph = function(canvas) {
     var maxX = 5;
     var maxY = 100000;
     
-    var iteration = (maxX - minX) / 100;
+    var iteration = (maxX - minX) / 1000;
     
     var rangeX = maxX - minX;
     var rangeY = maxY - minY;
     
     var scaleX = canvas.width / rangeX;
     var scaleY = canvas.height / rangeY;
+    
+    var animateHighlight;
+    var highlightStart=4;
+    var highlightEnd=3.5;
+    var currentHighlight;
     
     function drawAxes() {
         ctx.save();
@@ -66,18 +71,34 @@ window.exponential.graph = function(canvas) {
             }
         });
         
+        if (animateHighlight && currentHighlight > highlightEnd) {
+            currentHighlight -= iteration;
+        }
+        
         inGraph({color: 'blue'}, function(){
-            ctx.moveTo(3, 0);
-            ctx.lineTo(3, equation(3));
+            ctx.moveTo(currentHighlight, 0);
+            ctx.lineTo(currentHighlight, equation(currentHighlight));
             
-            ctx.moveTo(0, equation(3));
-            ctx.lineTo(3, equation(3));
+            ctx.moveTo(0, equation(currentHighlight));
+            ctx.lineTo(currentHighlight, equation(currentHighlight));
         });
 
         
     }
+    
+    function activateHighlightAnimation() {
+        animateHighlight = true;
+    }
+    
+    function resetAnimation() {
+        animateHighlight=false;
+        currentHighlight = highlightStart;
+    }
+    
     return {
-        draw: draw
+        draw: draw,
+        resetAnimation: resetAnimation,
+        activateHighlightAnimation: activateHighlightAnimation
     }
 };
 
@@ -85,6 +106,8 @@ window.exponential.simple = (function() {
     
     var running = false;
     var graph;
+    var steps;
+    var currentStep=0;
     
     function init(current){
         
@@ -95,9 +118,12 @@ window.exponential.simple = (function() {
         
         
         graph = exponential.graph($canvas[0]);
-        
+        steps=[graph.activateHighlightAnimation]
+    }
+    
+    function start() {
         running = true;
-        
+        graph.resetAnimation();
         window.requestAnimationFrame(draw);
     }
     
@@ -105,6 +131,13 @@ window.exponential.simple = (function() {
         running = false;
     }
     
+    function moreSteps() {
+        return currentStep < steps.length;
+    }
+    
+    function step() {
+        steps[currentStep++]();
+    }
 
     function draw(timestamp) {
         if (!running) {
@@ -120,6 +153,9 @@ window.exponential.simple = (function() {
 
     return {
         init: init,
+        moreSteps: moreSteps,
+        step: step,
+        start: start,
         stop: stop
     };
 })();

@@ -92,13 +92,23 @@
   $(function() {
     $.deck('.slide');
     
-    $(document).bind('deck.change', function(event, from, to) {
-        var current = $.deck('getSlide', to);
-        var isExponentialSlide = current.hasClass('exponential');
-        if (isExponentialSlide) {
-           exponential.simple.init(current);
-        } else {
-            exponential.simple.stop();
+    $(document).bind('deck.beforeChange', function(event, from, to) {
+        var current = $.deck('getSlide', from);
+        var upComing = $.deck('getSlide', to);
+        var exponentialComing = upComing.hasClass('exponential');
+        var isExponential = current.hasClass('exponential');
+        
+        if (exponentialComing) {
+            exponential.simple.init(upComing);
+            exponential.simple.start();
+        }
+        if (isExponential) {
+            if (exponential.simple.moreSteps()) {
+                event.preventDefault();
+                exponential.simple.step();
+            } else {
+                exponential.simple.stop();
+            }
         }
     });
     
