@@ -76,7 +76,11 @@
       <h3>Modulo</h3>
     </section>
     
-    <section class="slide exponential">
+    <section data-graphType="continuous" class="slide exponential">
+        <canvas/>
+    </section>
+    
+    <section data-graphType="discrete" class="slide exponential">
         <canvas/>
     </section>
     
@@ -187,26 +191,56 @@
 
 <!-- Initialize the deck. You can put this in an external file if desired. -->
 <script>
+  
+
   $(function() {
+    var graphType = {
+        'continuous': {
+                equation: function (x) {
+                    return Math.pow(17,x);
+                },
+                draw: function(ctx, x,y) {
+                    ctx.lineTo(x, y);
+                },
+                maxX: 5,
+                maxY: 100000,
+                highlighStart: 4,
+                highlighEnd: 3
+            },
+        'discrete': {
+                equation: function (x) {
+                    return Math.pow(17,x) % 97;
+                },
+                draw: function(ctx,x,y) {
+                    ctx.fillRect(x,y,1,1);
+                },
+                maxX: 100,
+                maxY: 100,
+                highlighStart: 50,
+                highlighEnd: 30
+            }
+    }
+    
+  
     $.deck('.slide');
     
     $(document).bind('deck.beforeChange', function(event, from, to) {
         var current = $.deck('getSlide', from);
         var upComing = $.deck('getSlide', to);
+        
         var isExponentialComing = upComing.hasClass('exponential');
         var isCurrentlyExponential = current.hasClass('exponential');
         var isGoingRight = from < to
         
-        if (isExponentialComing) {
-            exponential.simple.init(upComing);
-            exponential.simple.start();
-        } else if (isCurrentlyExponential && isGoingRight) {
+        if (isCurrentlyExponential && isGoingRight) {
             if (exponential.simple.hasMoreSteps()) {
                 event.preventDefault();
                 exponential.simple.step();
             } else {
                 exponential.simple.stop();
             }
+        } else if (isExponentialComing) {
+            exponential.simple.init(upComing, graphType[upComing.data('graphtype')]);
         }
     });
     
