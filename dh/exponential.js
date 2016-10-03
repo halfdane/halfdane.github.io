@@ -16,6 +16,8 @@ window.exponential.graph = function(canvas) {
     var scaleX = canvas.width / rangeX;
     var scaleY = canvas.height / rangeY;
     
+    var lastTime;
+    
     var animateHighlight;
     var highlightStart=4;
     var highlightEnd=3.5;
@@ -59,7 +61,25 @@ window.exponential.graph = function(canvas) {
         ctx.stroke();
     }
     
-    function draw(equation) {
+    function drawHighlight(timestamp, equation) {
+        if (animateHighlight && currentHighlight > highlightEnd) {
+            if (!lastTime) lastTime = timestamp;
+            var progress = (timestamp - lastTime)/20;
+            lastTime = timestamp;
+            
+            currentHighlight -= (iteration*progress);
+        }
+        
+        inGraph({color: 'blue'}, function(){
+            ctx.moveTo(currentHighlight, 0);
+            ctx.lineTo(currentHighlight, equation(currentHighlight));
+            
+            ctx.moveTo(0, equation(currentHighlight));
+            ctx.lineTo(currentHighlight, equation(currentHighlight));
+        });
+    }
+    
+    function draw(timestamp, equation) {
         ctx.clearRect(0,0,canvas.width,canvas.height);
         
         drawAxes();
@@ -71,19 +91,14 @@ window.exponential.graph = function(canvas) {
             }
         });
         
-        if (animateHighlight && currentHighlight > highlightEnd) {
-            currentHighlight -= iteration;
+        if (shouldDrawHightlight) {
+            drawHighlight(timestamp, equation);
         }
         
-        inGraph({color: 'blue'}, function(){
-            ctx.moveTo(currentHighlight, 0);
-            ctx.lineTo(currentHighlight, equation(currentHighlight));
-            
-            ctx.moveTo(0, equation(currentHighlight));
-            ctx.lineTo(currentHighlight, equation(currentHighlight));
-        });
-
-        
+    }
+    
+    function activateHighlight() {
+        shouldDrawHightlight = true;
     }
     
     function activateHighlightAnimation() {
@@ -92,12 +107,15 @@ window.exponential.graph = function(canvas) {
     
     function resetAnimation() {
         animateHighlight=false;
+        shouldDrawHightlight = false;
         currentHighlight = highlightStart;
+        lastTime = null;
     }
     
     return {
         draw: draw,
         resetAnimation: resetAnimation,
+        activateHighlight: activateHighlight,
         activateHighlightAnimation: activateHighlightAnimation
     }
 };
@@ -107,22 +125,25 @@ window.exponential.simple = (function() {
     var running = false;
     var graph;
     var steps;
-    var currentStep=0;
+    var currentStep;
     
     function init(current){
+        if (!!graph) {
+            return;
+        }
         
         var $canvas = current.find('canvas')
                 .width('100%')
                 .prop({width: 500, height: 500});
         $canvas.trigger('resize.deckscale');
         
-        
         graph = exponential.graph($canvas[0]);
-        steps=[graph.activateHighlightAnimation]
+        steps=[graph.activateHighlight, graph.activateHighlightAnimation]
     }
     
     function start() {
         running = true;
+        currentStep=0;
         graph.resetAnimation();
         window.requestAnimationFrame(draw);
     }
@@ -131,7 +152,7 @@ window.exponential.simple = (function() {
         running = false;
     }
     
-    function moreSteps() {
+    function hasMoreSteps() {
         return currentStep < steps.length;
     }
     
@@ -144,7 +165,7 @@ window.exponential.simple = (function() {
             return;
         }
         
-        graph.draw(function equation(x) {
+        graph.draw(timestamp, function equation(x) {
             return Math.pow(17, x);
         });
 
@@ -153,7 +174,7 @@ window.exponential.simple = (function() {
 
     return {
         init: init,
-        moreSteps: moreSteps,
+        hasMoreSteps: hasMoreSteps,
         step: step,
         start: start,
         stop: stop
