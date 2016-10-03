@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=1024, user-scalable=no">
 
-  <title>Your deck.js Presentation</title>
+  <title>Diffie-Hellmann for Everyone</title>
 
   <!-- Required stylesheet -->
   <link rel="stylesheet" media="screen" href="core/deck.core.css">
@@ -32,20 +32,108 @@
 <body>
   <div class="deck-container">
 
-    <!-- Begin slides. Just make elements with a class of slide. -->
-
     <section class="slide">
-      <h1>Slide</h1>
+      <h1>Diffie-Hellmann <br> (für den Rest von uns)</h1>
     </section>
-
+    
+    <section class="slide">
+      <h2>Tom Vollerthun</h2>
+      <h2>halfdane@gmx.net</h2>
+    </section>
+    
+    <section class="slide">
+      <h2>Das Problem</h2>
+      <ul>
+        <li>Verbindung zwischen A und B</li>
+        <li>PIN oder so von A nach B</li>
+        <li>Verbindung ist HTTP - Plaintext</li>
+        <li>Verschlüsseln
+            <ul>
+                <li>Naiv: addieren und subtrahieren einfach die gleiche Zahl und nennen sie Schlüssel</li>
+                <li>aber wie bekommt man den Schlüssel rüber? </li>
+                <li>Bis in die 60-er wurden One-Time-Pads benutzt</li>
+            </ul>
+        </li>
+        <li>Diffie und Hellmanns Idee: keinen Schlüssel rüberschicken - es reicht, wenn A und B sich irgendwie sonst auf einen Schlüssel einigen</li>
+      </ul>
+    </section>
+    
+    <section class="slide">
+        <h2>Grundidee</h2>
+        <blockquote cite="http://example.org">
+            <p>Wir benutzen einfach eine Funktion, die zwei Bedingungen erfüllt:</p>
+            <ol>
+                <li>in die eine Richtung einfach, in die andere Richtung sehr, sehr schwer</li>
+                <li>es ist egal, ob erst ich und dann du sie ausführst, oder erst du und dann ich</li>
+            </ol>
+            <p><cite>Diffie und Hellmann (nicht bestätigt)</cite></p>
+        </blockquote>
+    </section>
+    
+    <section class="slide">
+      <h2>Einwegfunktion</h2>
+      <p>Potenzrechnung mit Modulo</p>
+      <h3>Modulo</h3>
+    </section>
+    
     <section class="slide exponential">
         <canvas/>
     </section>
-
+    
     <section class="slide">
-      <h1>Here</h1>
+        <h2>Taschenrechner</h2>
+        <p class="slide">Benutzt bitte nicht den Taschenrechner auf eurem Handy, der kann kein Modulo rechnen</p>
+        <p class="slide">Nein, auch nicht der auf dem IPhone!</p>
+        <p style="font-size: 150%;">www.britnex.de</p>
     </section>
 
+    <section class="slide">
+      <h2>Kommutativ</h2>
+      
+      <div style="font-size: 150%;">
+        $$
+        3^{\color{blue} 4\color{black}^{\color{green}5}}\color{black} = 
+        3^{\color{blue} 4\color{black}* \color{green}5}\color{black} ==
+        3^{\color{green}5\color{black}* \color{blue} 4}\color{black} = 
+        3^{\color{green}5\color{black}^{\color{blue} 4}}\color{black}
+        $$
+      </div>
+      <div class="slide">
+        $$
+        3^{\color{blue} 4}
+        $$
+      </div>
+      <div class="slide">
+        $$
+        3^{\color{green} 5}
+        $$
+      </div>
+      <div class="slide">
+        $$
+        3^{\color{blue} 4\color{black}^{\color{green}5}}\color{black}
+        $$
+      </div>
+      <div class="slide">
+        $$
+        3^{\color{green}5\color{black}^{\color{blue} 4}}\color{black}
+        $$
+      </div>
+    </section>
+
+    <section class="slide">
+        <h2>Und so funktioniert's</h2>
+        <p>Hier mit Formular durchspielen</p>
+        <p class="slide">Jetzt seid ihr dran</p>
+    </section>
+    
+    <section class="slide">
+        <h1>Elliptische Kurven</h1>
+    </section>
+    
+    <section class="slide">
+        <h1>Danke</h1>
+    </section>
+    
     <!-- End slides. -->
 
     <!-- Begin extension snippets. Add or remove as needed. -->
@@ -76,6 +164,16 @@
 
 <!-- Required JS files. -->
 <script src="jquery.min.js"></script>
+
+<!-- mathjax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {extensions: ["color.js"]},
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['\\[','\\]'], ['$$','$$']]}});
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
 <script src="core/deck.core.js"></script>
 
 <!-- Extension JS files. Add or remove as needed. -->
@@ -95,15 +193,15 @@
     $(document).bind('deck.beforeChange', function(event, from, to) {
         var current = $.deck('getSlide', from);
         var upComing = $.deck('getSlide', to);
-        var exponentialComing = upComing.hasClass('exponential');
-        var isExponential = current.hasClass('exponential');
+        var isExponentialComing = upComing.hasClass('exponential');
+        var isCurrentlyExponential = current.hasClass('exponential');
+        var isGoingRight = from < to
         
-        if (exponentialComing) {
+        if (isExponentialComing) {
             exponential.simple.init(upComing);
             exponential.simple.start();
-        }
-        if (isExponential) {
-            if (exponential.simple.moreSteps()) {
+        } else if (isCurrentlyExponential && isGoingRight) {
+            if (exponential.simple.hasMoreSteps()) {
                 event.preventDefault();
                 exponential.simple.step();
             } else {
