@@ -1,3 +1,5 @@
+'use strict';
+
 window.exponential = window.exponential || {};
 
 window.exponential.graph = function (canvas) {
@@ -9,14 +11,16 @@ window.exponential.graph = function (canvas) {
     var scaleY;
 
     var animateHighlight;
-    var currentHighlight;
     var shouldDrawHighlight;
+    var currentHighlight;
+    var highlightEnd;
 
-    var g, s;
-
-    var shouldZoom;
+    var drawFct;
+    var equationFct;
 
     var maxX = 5, maxY = 100000;
+    var targetMaxX;
+    var targetMaxY;
     var xStep, yStep;
 
     function scaleTo(maxX, maxY) {
@@ -26,23 +30,39 @@ window.exponential.graph = function (canvas) {
         scaleY = canvas.height / maxY;
     }
 
-    function resetAnimation(graphType) {
-        g = graphType;
+    function useEquation(equationFunction) {
+        return function () {
+            equationFct = equationFunction;
+        };
     }
 
-    function zoomTo(scaleType) {
-        s = scaleType;
+    function zoomTo(newMaxX, newMaxY) {
+        return function () {
+            animateHighlight = false;
+            shouldDrawHighlight = false;
 
-        shouldZoom = false;
-        animateHighlight = false;
-        shouldDrawHighlight = false;
+            targetMaxX = newMaxX;
+            targetMaxY = newMaxY;
 
-        currentHighlight = s.highlightStart;
+            xStep = (targetMaxX - maxX) / 100;
+            yStep = (targetMaxY - maxY) / 100;
 
-        xStep = (s.maxX - maxX) / 100;
-        yStep = (s.maxY - maxY) / 100;
+            scaleTo(maxX, maxY);
+        };
+    }
 
-        scaleTo(maxX, maxY);
+    function activateHighlight(highlightStart) {
+        return function () {
+            shouldDrawHighlight = true;
+            currentHighlight = highlightStart;
+        };
+    }
+
+    function activateHighlightAnimation(to) {
+        return function () {
+            animateHighlight = true;
+            highlightEnd = to;
+        };
     }
 
     function drawAxes() {
@@ -67,7 +87,7 @@ window.exponential.graph = function (canvas) {
         ctx.restore();
     }
 
-    function inGraph(lineOpts, callback) {
+    function inGraph(callback) {
         ctx.save();
         ctx.translate(0, canvas.height);
         ctx.scale(scaleX, -scaleY);
@@ -79,13 +99,12 @@ window.exponential.graph = function (canvas) {
 
         ctx.lineJoin = 'round';
         ctx.lineWidth = 1;
-        ctx.strokeStyle = lineOpts.color;
         ctx.stroke();
     }
 
-    function zoomScale(s) {
-        var xDiff = Math.abs(s.maxX - maxX);
-        var yDiff = Math.abs(s.maxY - maxY);
+    function zoomScale() {
+        var xDiff = Math.abs(targetMaxX - maxX);
+        var yDiff = Math.abs(targetMaxY - maxY);
 
         if (xDiff > 0.1 || yDiff > 0.1) {
             if (xDiff > 0.1) {
@@ -100,18 +119,19 @@ window.exponential.graph = function (canvas) {
     }
 
     function drawHighlight(equation) {
-        if (currentHighlight > s.highlightEnd) {
+        if (currentHighlight > highlightEnd) {
             if (animateHighlight) {
                 currentHighlight -= iteration;
             }
         }
 
-        inGraph({color: 'blue'}, function () {
+        inGraph(function () {
             ctx.moveTo(currentHighlight, 0);
             ctx.lineTo(currentHighlight, equation(currentHighlight));
 
             ctx.moveTo(0, equation(currentHighlight));
             ctx.lineTo(currentHighlight, equation(currentHighlight));
+            ctx.strokeStyle = 'blue';
         });
     }
 
@@ -120,31 +140,23 @@ window.exponential.graph = function (canvas) {
 
         drawAxes();
 
-        inGraph({color: 'red'}, function () {
-            ctx.moveTo(0, g.equation(0));
+        inGraph(function () {
             for (var x = 0 + iteration; x <= maxX; x += iteration) {
-                g.draw(ctx, x, g.equation(x));
+                ctx.fillStyle = 'red';
+                ctx.fillRect(x, equationFct(x), 2 / scaleX, 2 / scaleY);
             }
         });
 
         if (shouldDrawHighlight) {
-            drawHighlight(g.equation);
+            drawHighlight(equationFct);
         }
 
-        zoomScale(s);
-    }
-
-    function activateHighlight() {
-        shouldDrawHighlight = true;
-    }
-
-    function activateHighlightAnimation() {
-        animateHighlight = true;
+        zoomScale();
     }
 
     return {
         draw: draw,
-        resetAnimation: resetAnimation,
+        useEquation: useEquation,
         activateHighlight: activateHighlight,
         activateHighlightAnimation: activateHighlightAnimation,
         zoomTo: zoomTo
@@ -158,28 +170,28 @@ window.exponential.simple = (function () {
     var steps;
     var currentStep;
 
-    function init(current, graphTypes) {
+    function init(current) {
         var $canvas = current.find('canvas')
                 .width('100%')
                 .prop({width: 500, height: 500});
         $canvas.trigger('resize.deckscale');
 
         graph = exponential.graph($canvas[0]);
-        graph.resetAnimation(graphTypes[0].graph);
-        graph.zoomTo(graphTypes[0].scale);
+        graph.useEquation(function (x) {
+            return Math.pow(17, x);
+        })();
+        graph.zoomTo(5, 100000)();
+
         steps = [
-            graph.activateHighlight,
-            graph.activateHighlightAnimation,
-            function () {
-                graph.resetAnimation(graphTypes[1].graph);
-            },
-            function () {
-                graph.zoomTo(graphTypes[1].scale);
-            },
-            graph.activateHighlight,
-            graph.activateHighlightAnimation,
-        ]
-        ;
+            graph.activateHighlight(4),
+            graph.activateHighlightAnimation(3),
+            graph.zoomTo(100, 100),
+            graph.useEquation(function (x) {
+                return Math.pow(17, x) % 97;
+            }),
+            graph.activateHighlight(50),
+            graph.activateHighlightAnimation(30)
+        ];
         running = true;
         currentStep = 0;
 
@@ -195,11 +207,7 @@ window.exponential.simple = (function () {
     }
 
     function step() {
-        var currentFunction = steps[currentStep];
-        console.log('Executing %d step: %s', currentStep,
-                currentFunction.toString().substr(0, currentFunction.toString().indexOf('(')));
-        currentFunction();
-        currentStep++;
+        steps[currentStep++]();
     }
 
     function draw(timestamp) {

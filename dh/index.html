@@ -52,6 +52,9 @@
             <li>Diffie und Hellmanns Idee: keinen Schlüssel rüberschicken - es reicht, wenn A und B sich irgendwie sonst auf einen
                 Schlüssel einigen
             </li>
+            <li>
+                Das Ziel ist ein sicherer Kanal, nicht die Authentifizierung von A oder B
+            </li>
         </ul>
     </section>
 
@@ -61,7 +64,7 @@
             <p>Wir benutzen einfach eine Funktion, die zwei Bedingungen erfüllt:</p>
             <ol>
                 <li>in die eine Richtung einfach, in die andere Richtung sehr, sehr schwer</li>
-                <li>es ist egal, ob erst ich und dann du sie ausführst, oder erst du und dann ich</li>
+                <li>wer von uns sie zuerst ausführt ist egal, solange beide sie ausführen</li>
             </ol>
             <p><cite>Diffie und Hellmann (nicht bestätigt)</cite></p>
         </blockquote>
@@ -169,6 +172,8 @@
     TeX: {extensions: ["color.js"]},
     tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']],
     displayMath: [['\\[','\\]'], ['$$','$$']]}});
+
+
 </script>
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
@@ -187,38 +192,6 @@
 
 
     $(function () {
-        var graphTypes = [{
-            graph: {
-                equation: function (x) {
-                    return Math.pow(17, x);
-                },
-                draw: function (ctx, x, y) {
-                    ctx.lineTo(x, y);
-                }
-            },
-            scale: {
-                maxX: 5,
-                maxY: 100000,
-                highlightStart: 4,
-                highlightEnd: 3
-            }
-        }, {
-            graph: {
-                equation: function (x) {
-                    return Math.pow(17, x) % 97;
-                },
-                draw: function (ctx, x, y) {
-                    ctx.fillRect(x, y, 0.5, 0.5);
-                }
-            },
-            scale: {
-                maxX: 100,
-                maxY: 100,
-                highlightStart: 50,
-                highlightEnd: 30
-            }
-        }];
-
         $.deck('.slide');
 
         $(document).bind('deck.beforeChange', function (event, from, to) {
@@ -230,7 +203,7 @@
             var isGoingRight = from < to;
 
             if (isExponentialComing) {
-                exponential.simple.init(upComing, graphTypes);
+                exponential.simple.init(upComing);
             }
             if (isCurrentlyExponential && isGoingRight) {
                 if (exponential.simple.hasMoreSteps()) {
