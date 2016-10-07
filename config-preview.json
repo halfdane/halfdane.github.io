@@ -1,12 +1,13 @@
 {
   "locals": {
-    "url": "http://localhost:8080",
+    "url": "http://localhost:9595",
     "name": "halfdane's Canned Nerd",
     "owner": "halfdane",
     "description": "Navigate by sight",
     "lifereload": true,
     "hideComments": true
   },
+  "port": 9595,
   "plugins": [
     "./plugins/intro-detection.coffee",
     "./plugins/image-tag.coffee",
