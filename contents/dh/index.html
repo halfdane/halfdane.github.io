@@ -40,8 +40,23 @@
         <h1>Das "S" in HTTPS</h1>
     </section>
 
+    <section class="slide JB">
+        <h2>Das Problem <span class="JB__title">von James Bond</span></h2>
+        <div class="JS__secret">Geheime Informationen <span class="JB__secret-encoded">verschlüsselt mit Code</span></div>
+        <div class="slide" style="float: left; width: 60%;">James Bond</div>
+        <div class="slide" style="float: right; width: 40%; text-align: right;">Q</div>
+        <div class="anim-show slide" data-what=".JS__secret"></div>
+        <div class="anim-addclass slide" data-what=".JS__secret" data-class="JB__secret-atQ"></div>
+        <div class="slide">Der Böse</div>
+        <div class="anim-removeclass slide" data-what=".JS__secret" data-class="JB__secret-atQ"></div>
+        <div class="slide">Codebuch -> Code</div>
+        <div class="anim-show slide" data-what=".JB__secret-encoded"></div>
+        <div class="anim-addclass slide" data-what=".JS__secret" data-class="JB__secret-atQ"></div>
+        <div class="anim-show slide" data-what=".JB__title"></div>
+    </section>
+
     <section class="slide">
-        <h2>Das Problem</h2>
+        <h2>Das Problem von uns</h2>
         <ul>
             <li>Verbindung zwischen A und B</li>
             <li>PIN oder so von A nach B</li>
@@ -170,6 +185,10 @@
     displayMath: [['\\[','\\]'], ['$$','$$']]}});
 
 
+
+
+
+
 </script>
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
@@ -180,6 +199,7 @@
 <script src="deck.js/extensions/status/deck.status.js"></script>
 <script src="deck.js/extensions/navigation/deck.navigation.js"></script>
 <script src="deck.js/extensions/scale/deck.scale.js"></script>
+<script src="deck.js/extensions/step/deck.step.js"></script>
 <script src="deck.js/extensions/events/deck.events.js"></script>
 <script src="deck.js/extensions/anim/deck.anim.js"></script>
 
