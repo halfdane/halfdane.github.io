@@ -185,6 +185,11 @@ that use the API provided by core.
     ].join(', ');
 
     $document.unbind('keydown.deck').bind('keydown.deck', function(event) {
+      if (event.altKey) {
+        // ignore events when the ALT key is down
+        // NB: browsers use ALT+arrow to navigate history
+        return;
+      }
       var isNext = event.which === options.keys.next;
       var isPrev = event.which === options.keys.previous;
       isNext = isNext || $.inArray(event.which, options.keys.next) > -1;
@@ -313,11 +318,12 @@ that use the API provided by core.
   var setupHashBehaviors = function() {
     $fragmentLinks = $();
     $.each(slides, function(i, $slide) {
-      var hash;
+      var hash, altHash;
 
       assignSlideId(i, $slide);
       hash = '#' + $slide.attr('id');
-      if (hash === window.location.hash) {
+      altHash = '#/' + $slide.attr('id');
+      if (hash === window.location.hash || altHash === window.location.hash) {
         setTimeout(function() {
           $.deck('go', i);
         }, 1);
@@ -394,6 +400,10 @@ that use the API provided by core.
       initSlidesArray(options.selectors.slides);
       // Pre init event for preprocessing hooks
       beforeInitEvent.done = function() {
+        // reInitSlidesArray is meant only for beforeInit
+        methods['reInitSlidesArray'] = function() {
+            alert('Deck.js method "reInitSlidesArray" is meant to be called in the beforeInit phase only.');
+        }
         // re-populate the array of slides
         slides = [];
         initSlidesArray(options.selectors.slides);
@@ -411,10 +421,9 @@ that use the API provided by core.
         $document.trigger(events.initialize);
       };
 
+      beforeInitEvent.lockInit();
       $document.trigger(beforeInitEvent);
-      if (!beforeInitEvent.locks) {
-        beforeInitEvent.done();
-      }
+      beforeInitEvent.releaseInit();
       window.setTimeout(function() {
         if (beforeInitEvent.locks) {
           if (window.console) {
@@ -425,6 +434,19 @@ that use the API provided by core.
           beforeInitEvent.done();
         }
       }, options.initLockTimeout);
+    },
+
+    /*
+    jQuery.deck('reInitSlidesArray')
+    
+    Force a recomputation of the "slides" array. This method is meant
+    to be used by extensions that generate new slides in the
+    beforeInit phase.
+    */
+
+    reInitSlidesArray: function() {
+        slides = [];
+        initSlidesArray(options.selectors.slides);
     },
 
     /*
@@ -601,7 +623,12 @@ that use the API provided by core.
       return methods[method].apply(this, args);
     }
     else {
-      return methods.init(method, arg);
+      if (window.defaultDeckCallIsAnError) {
+        alert("'" + method + "' not found (or meant to be a parameter-less init)");
+      }
+      else {
+        return methods.init(method, arg);
+      }
     }
   };
 
