@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Das S in HTTPS</title>
+
+    <meta name="author" content="Halfdane">
+    <meta name="venue" content="TODO:">
+    <meta name="date" content="TODO: 2015-08-30">
+
+    <script src="deck.js/extensions/scale/deck.scale.js"></script>
+
+    <script>
+        //var cssAndJs = ["light-red-dense.css"]; // include the theme (can add any css or js to the list)
+        //var options = {}; // to override default deck.js options
+        includedeck("profile-1");
+    </script>
+</head>
+<body>
+<div class="deck-container">
+
+    <!-- splash screen when loading -->
+    <div class="deck-loading-splash" style="background: black; color: chartreuse;">
+        <span class="vcenter" style="font-size: 30px; font-family: Arial; ">Please wait, while the deck is loading…</span>
+    </div>
+
+
+    <!-- --------------------------- -->
+    <!-- slides in extended markdown -->
+    <section class="smart">
+
+        # <span class="var-title-br"></span> {*no-status title-slide}
+        - Diffie-Hellmann <br> (für den Rest von uns)
+        - <span class="var-author"></span>
+        - <span class="var-date"></span>
+
+        ## Das Problem
+        - Verbindung zwischen A und B
+        - PIN oder so von A nach B
+        - Verbindung ist HTTP - Plaintext
+        - Verschlüsseln
+        - Naiv: addieren und subtrahieren einfach die gleiche Zahl und nennen sie Schlüssel
+        - aber wie bekommt man den Schlüssel rüber?
+        - Bis in die 60-er wurden One-Time-Pads benutzt
+        - Diffie und Hellmanns Idee: keinen Schlüssel rüberschicken - es reicht, wenn A und B sich irgendwie sonst auf einen Schlüssel einigen
+        - Das Ziel ist ein sicherer Kanal, nicht die Authentifizierung von A oder B
+
+        ## Grundidee
+        <blockquote cite="http://example.org">
+            <p>Wir benutzen einfach eine Funktion, die zwei Bedingungen erfüllt:</p>
+            <ol>
+                <li>in die eine Richtung einfach, in die andere Richtung sehr, sehr schwer</li>
+                <li>wer von uns sie zuerst ausführt ist egal, solange beide sie ausführen</li>
+            </ol>
+            <p><cite>Diffie und Hellmann (nicht bestätigt)</cite></p>
+        </blockquote>
+
+
+    </section>
+
+    <!-- footer and other decorations -->
+    <p class="deck-status deck-progress-10">
+        <span class="deck-status-current"></span> / <span class="deck-status-total"></span> − <span class="var-author">automatically replaced by the author</span> − <span class="var-title">automatically replaced by the title</span>
+    </p>
+
+
+</div>
+</body>
+
+</html>

@@ -1,3 +1,14 @@
+
+This repository is a merge of:
+
+- the main deck.js project
+- the deck.events.js extension project (+ my patch)
+- all my extensions (SVG, anim, clone/presenter view, ...)
+
+
+NB: the README below is the one from deck.js, as is.
+
+
 #deck.js
 
 A JavaScript library for building modern HTML presentations. deck.js is flexible enough to let advanced CSS and JavaScript authors craft highly customized decks, but also provides templates and themes for the HTML novice to build a standard slideshow.
@@ -21,7 +32,7 @@ Take a look at [the wiki](https://github.com/imakewebthings/deck.js/wiki) for li
 
 ## Tests & Support
 
-Unit tests are written with [Jasmine](http://pivotal.github.com/jasmine/) and [jasmine-jquery](https://github.com/velesin/jasmine-jquery). You can [run them here](http://imakewebthings.github.com/deck.js/test).
+Unit tests are written with [Jasmine](http://jasmine.github.io/) and [jasmine-jquery](https://github.com/velesin/jasmine-jquery). You can [run them here](http://imakewebthings.github.com/deck.js/test).
 
 deck.js has been tested with jQuery 1.6+ and works in IE7+, Chrome, FF, Safari, and Opera. The more capable browsers receive greater enhancements, but a basic cutaway slideshow will work for all browsers listed above. Please don't give your presentations in IE6.
 
@@ -54,7 +65,10 @@ Copyright (c) 2011-2014 Caleb Troughton
 
 Licensed under the [MIT license](https://github.com/imakewebthings/deck.js/blob/master/MIT-license.txt)
 
+<!--
 ## Donations
 
 [![Gittip donate
 button](http://img.shields.io/gittip/imakewebthings.png)](https://www.gittip.com/imakewebthings/ "Donate weekly to this project using Gittip")
+
+-->
