@@ -3,51 +3,63 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=1024, user-scalable=no">
 
-    <title>Das S in HTTPS</title>
+    <title>Diffie-Hellmann for Everyone</title>
 
-    <meta name="author" content="Halfdane">
-    <meta name="venue" content="TODO:">
-    <meta name="date" content="TODO: 2015-08-30">
+    <!-- Required stylesheet -->
+    <link rel="stylesheet" media="screen" href="deck.js/extensions/style-chunks/core.css">
 
-    <script src="deck.js/extensions/scale/deck.scale.js"></script>
+    <!-- Extension CSS files go here. Remove or add as needed. -->
+    <link rel="stylesheet" media="screen" href="deck.js/extensions/menu/deck.menu.css">
+    <link rel="stylesheet" media="screen" href="deck.js/extensions/navigation/deck.navigation.css">
+    <link rel="stylesheet" media="screen" href="deck.js/extensions/status/deck.status.css">
+    <link rel="stylesheet" media="screen" href="deck.js/extensions/scale/deck.scale.css">
 
-    <script>
-        //var cssAndJs = ["light-red-dense.css"]; // include the theme (can add any css or js to the list)
-        //var options = {}; // to override default deck.js options
-        includedeck("profile-1");
-    </script>
+    <link rel="stylesheet" media="screen" href="deck.js/themes/style/web-2.0.css">
+    <link rel="stylesheet" media="screen" href="deck.js/themes/transition/horizontal-slide.css">
+
+    <!-- Basic black and white deck.js/print styles -->
+    <link rel="stylesheet" media="print" href="deck.js/core/print.css">
+
+    <!-- Required Modernizr file -->
+    <script src="deck.js/modernizr.custom.js"></script>
 </head>
 <body>
 <div class="deck-container">
 
-    <!-- splash screen when loading -->
-    <div class="deck-loading-splash" style="background: black; color: chartreuse;">
-        <span class="vcenter" style="font-size: 30px; font-family: Arial; ">Please wait, while the deck is loading…</span>
+    <div class="deck-loading-splash" style="background: green; font-size: 30px; font-family: Arial;">
+        Securing The Cyber...
     </div>
 
+    <section class="slide">
+        <h1>Das "S" in HTTPS</h1>
+    </section>
 
-    <!-- --------------------------- -->
-    <!-- slides in extended markdown -->
-    <section class="smart">
+    <section class="slide">
+        <h2>Das Problem</h2>
+        <ul>
+            <li>Verbindung zwischen A und B</li>
+            <li>PIN oder so von A nach B</li>
+            <li>Verbindung ist HTTP - Plaintext</li>
+            <li>Verschlüsseln
+                <ul>
+                    <li>Naiv: addieren und subtrahieren einfach die gleiche Zahl und nennen sie Schlüssel</li>
+                    <li>aber wie bekommt man den Schlüssel rüber?</li>
+                    <li>Bis in die 60-er wurden One-Time-Pads benutzt</li>
+                </ul>
+            </li>
+            <li>Diffie und Hellmanns Idee: keinen Schlüssel rüberschicken - es reicht, wenn A und B sich irgendwie sonst auf einen
+                Schlüssel einigen
+            </li>
+            <li>
+                Das Ziel ist ein sicherer Kanal, nicht die Authentifizierung von A oder B
+            </li>
+        </ul>
+    </section>
 
-        # <span class="var-title-br"></span> {*no-status title-slide}
-        - Diffie-Hellmann <br> (für den Rest von uns)
-        - <span class="var-author"></span>
-        - <span class="var-date"></span>
-
-        ## Das Problem
-        - Verbindung zwischen A und B
-        - PIN oder so von A nach B
-        - Verbindung ist HTTP - Plaintext
-        - Verschlüsseln
-        - Naiv: addieren und subtrahieren einfach die gleiche Zahl und nennen sie Schlüssel
-        - aber wie bekommt man den Schlüssel rüber?
-        - Bis in die 60-er wurden One-Time-Pads benutzt
-        - Diffie und Hellmanns Idee: keinen Schlüssel rüberschicken - es reicht, wenn A und B sich irgendwie sonst auf einen Schlüssel einigen
-        - Das Ziel ist ein sicherer Kanal, nicht die Authentifizierung von A oder B
-
-        ## Grundidee
+    <section class="slide">
+        <h2>Grundidee</h2>
         <blockquote cite="http://example.org">
             <p>Wir benutzen einfach eine Funktion, die zwei Bedingungen erfüllt:</p>
             <ol>
@@ -56,17 +68,123 @@
             </ol>
             <p><cite>Diffie und Hellmann (nicht bestätigt)</cite></p>
         </blockquote>
-
-
     </section>
 
-    <!-- footer and other decorations -->
-    <p class="deck-status deck-progress-10">
-        <span class="deck-status-current"></span> / <span class="deck-status-total"></span> − <span class="var-author">automatically replaced by the author</span> − <span class="var-title">automatically replaced by the title</span>
+    <section class="slide">
+        <h2>Einwegfunktion</h2>
+        <p>Potenzrechnung mit Modulo</p>
+        <h3>Modulo</h3>
+    </section>
+
+    <section class="slide exponential">
+        <canvas></canvas>
+    </section>
+
+    <section class="slide">
+        <h2>Taschenrechner</h2>
+        <p class="slide">Benutzt bitte nicht den Taschenrechner auf eurem Handy, der kann kein Modulo rechnen</p>
+        <p class="slide">Nein, auch nicht der auf dem IPhone!</p>
+        <p style="font-size: 150%;">www.britnex.de</p>
+        <p>Die ganze Formel in einem Stück eingeben</p>
+    </section>
+
+    <section class="slide">
+        <h2>Kommutativ</h2>
+
+        <div style="font-size: 150%;">
+            $$
+            3^{\color{blue} 4\color{black}^{\color{green}5}}\color{black} =
+            3^{\color{blue} 4\color{black}* \color{green}5}\color{black} ==
+            3^{\color{green}5\color{black}* \color{blue} 4}\color{black} =
+            3^{\color{green}5\color{black}^{\color{blue} 4}}\color{black}
+            $$
+        </div>
+        <div class="slide">
+            $$
+            3^{\color{blue} 4}
+            $$
+        </div>
+        <div class="slide">
+            $$
+            3^{\color{green} 5}
+            $$
+        </div>
+        <div class="slide">
+            $$
+            3^{\color{blue} 4\color{black}^{\color{green}5}}\color{black}
+            $$
+        </div>
+        <div class="slide">
+            $$
+            3^{\color{green}5\color{black}^{\color{blue} 4}}\color{black}
+            $$
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2>Und so funktioniert's</h2>
+        <p>Hier mit Formular durchspielen</p>
+        <p class="slide">Jetzt seid ihr dran</p>
+    </section>
+
+    <section class="slide">
+        <h1>Elliptische Kurven</h1>
+    </section>
+
+    <section class="slide">
+        <h1>Danke</h1>
+    </section>
+
+
+    <!-- Begin extension snippets. Add or remove as needed. -->
+
+    <!-- deck.navigation snippet -->
+    <div aria-role="navigation">
+        <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+        <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+    </div>
+
+    <!-- deck.status snippet -->
+    <p class="deck-status" aria-role="status">
+        <span class="deck-status-current"></span>
+        /
+        <span class="deck-status-total"></span>
     </p>
 
+    <!-- End extension snippets. -->
 
 </div>
-</body>
 
+
+<script src="deck.js/jquery.min.js"></script>
+
+
+<script src="deck.js/core/deck.core.js"></script>
+
+<link rel="stylesheet" media="screen" href="deck.js/extensions/fit/deck.fit-fs.css">
+<script src="deck.js/libs/display-latex2.user.js"></script>
+<script src="deck.js/extensions/simplemath/deck.simplemath.js"></script>
+<script src="deck.js/extensions/goto/deck.goto.js"></script>
+<link rel="stylesheet" media="screen" href="deck.js/extensions/progress/deck.progress.css">
+<script src="deck.js/extensions/progress/deck.progress.js"></script>
+<script src="deck.js/extensions/navigation/deck.navigation.js"></script>
+<script src="deck.js/extensions/menu/deck.menu.js"></script>
+<script src="deck.js/extensions/step/deck.step.js"></script>
+<script src="deck.js/extensions/events/deck.events.js"></script>
+<script src="deck.js/extensions/anim/deck.anim.js"></script>
+<script src="deck.js/extensions/svg/deck.svg.js"></script>
+
+<script src="deck.js/extensions/status/deck.status.js"></script>
+<script src="deck.js/extensions/scale/deck.scale.js"></script>
+
+<script src="deck.js/extensions/container-styling/deck.container-styling.js"></script>
+
+<script src="exponential.js"></script>
+<script>
+    $(function () {
+        $.deck('.slide');
+        $.deck('enableScale');
+    });
+</script>
+</body>
 </html>
