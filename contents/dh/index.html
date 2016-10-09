@@ -18,13 +18,15 @@
     <link rel="stylesheet" media="screen" href="deck.js/extensions/scale/deck.scale.css">
 
     <!-- Style theme. More available in /themes/style/ or create your own. -->
-    <link rel="stylesheet" media="screen" href="deck.js/themes/style/web-2.0.css">
+    <link rel="stylesheet" media="screen" href="deck.js/themes/style/swiss.css">
 
     <!-- Transition theme. More available in /themes/transition/ or create your own. -->
     <link rel="stylesheet" media="screen" href="deck.js/themes/transition/horizontal-slide.css">
 
     <!-- Basic black and white print styles -->
     <link rel="stylesheet" media="print" href="deck.js/core/print.css">
+
+    <link rel="stylesheet" media="screen" href="resources/css/main.css">
 
     <!-- Required Modernizr file -->
     <script src="deck.js/modernizr.custom.js"></script>
@@ -42,17 +44,30 @@
 
     <section class="slide JB">
         <h2>Das Problem <span class="JB__title">von James Bond</span></h2>
-        <div class="JS__secret">Geheime Informationen <span class="JB__secret-encoded">verschlüsselt mit Code</span></div>
-        <div class="slide" style="float: left; width: 60%;">James Bond</div>
-        <div class="slide" style="float: right; width: 40%; text-align: right;">Q</div>
-        <div class="anim-show slide" data-what=".JS__secret"></div>
-        <div class="anim-addclass slide" data-what=".JS__secret" data-class="JB__secret-atQ"></div>
-        <div class="slide">Der Böse</div>
-        <div class="anim-removeclass slide" data-what=".JS__secret" data-class="JB__secret-atQ"></div>
+        <div class="JB__secret">Geheime Informationen <span class="JB__secret-encoded">verschlüsselt mit Code</span></div>
+        <div class="JB__secret-copy JB__secret-atCenter">Geheime Informationen <span class="JB__secret-encoded">verschlüsselt mit Code</span></div>
+        <div class="JB__mi6">
+            <img class="JB__connery-img" src="resources/img/sean_connery.jpg"/>
+            <img class="JB__m-img" src="resources/img/m.jpg"/>
+        </div>
+        <div>
+            <img class="JB__drNo-img" src="resources/img/dr_no.jpg"/>
+        </div>
+        <div class="anim-show slide" data-what=".JB__connery-img"></div>
+        <div class="anim-show slide" data-what=".JB__m-img"></div>
+        <div class="anim-show slide" data-what=".JB__secret"></div>
+        <div class="anim-show slide" data-what=".JB__drNo-img"></div>
+        <div class="anim-addclass slide" data-what=".JB__secret" data-class="JB__secret-atCenter"></div>
+        <div class="anim-show slide" data-what=".JB__secret-copy"></div>
+        <div class="anim-addclass slide anim-continue" data-what=".JB__secret" data-class="JB__secret-atQ"></div>
+        <div class="anim-addclass slide anim-continue" data-what=".JB__secret-copy" data-class="JB__secret-atDrNo"></div>
+
+        <div class="anim-removeclass slide" data-what=".JB__secret" data-class="JB__secret-atQ"></div>
         <div class="slide">Codebuch -> Code</div>
         <div class="anim-show slide" data-what=".JB__secret-encoded"></div>
-        <div class="anim-addclass slide" data-what=".JS__secret" data-class="JB__secret-atQ"></div>
+        <div class="anim-addclass slide" data-what=".JB__secret" data-class="JB__secret-atQ"></div>
         <div class="anim-show slide" data-what=".JB__title"></div>
+
     </section>
 
     <section class="slide">
@@ -189,6 +204,19 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 </script>
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
@@ -203,7 +231,7 @@
 <script src="deck.js/extensions/events/deck.events.js"></script>
 <script src="deck.js/extensions/anim/deck.anim.js"></script>
 
-<script src="exponential.js"></script>
+<script src="resources/js/exponential.js"></script>
 
 <script>
 
