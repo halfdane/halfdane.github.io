@@ -1,0 +1,54 @@
+.JB__mi6 {
+    position: relative;
+    overflow: hidden;
+}
+
+.JB__connery-img {
+    float: left;
+    width: 5em;
+}
+
+.JB__m-img {
+    float: right;
+    width: 5em;
+}
+
+.JB__secret, .JB__secret-copy {
+    height: 5ex;
+    width: 7em;
+    transition: 1s ease-in-out;
+}
+
+.JB__secret-copy {
+    position: absolute;
+}
+
+.JB__secret-copy-atDrNo {
+
+}
+
+.JB__secret-atCenter {
+    margin-left: 40%;
+}
+
+.JB__secret-atQ {
+    margin-left: 80%;
+}
+
+.JB__evil {
+    margin-left: 50%;
+}
+
+.hr {
+    height:15px;
+    padding-bottom: 15px;
+    width: 25%;
+    float: left;
+}
+
+.line {
+    width: 100%;
+    float: left;
+    margin-top:13px;
+    border-bottom: 2px solid black;
+}
