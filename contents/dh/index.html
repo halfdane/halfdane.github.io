@@ -207,7 +207,6 @@
 
 
 
-
 </script>
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
@@ -236,23 +235,25 @@
             var isGoingRight = from < to;
             var currentHasMoreSteps = steppable.hasMoreSteps();
 
-            if (isCurrentlySteppable && isGoingRight) {
-                if (currentHasMoreSteps) {
-                    event.preventDefault();
-                    steppable.step();
-                } else {
-                    steppable.stop();
-                }
+            if (isCurrentlySteppable && (!currentHasMoreSteps || !isGoingRight)) {
+                steppable.stop();
             }
-            if (isSteppableComing && !(isGoingRight && currentHasMoreSteps)) {
+            if (isCurrentlySteppable && isGoingRight && currentHasMoreSteps) {
+                event.preventDefault();
+                steppable.step();
+            }
+            if (isSteppableComing && (!currentHasMoreSteps || !isGoingRight)) {
                 steppable.init(upComing);
             }
+
+
         };
     }
 
     $(function () {
         $.deck('.slide');
-        $(document).bind('deck.beforeChange', createAnimationHandle('exponential', exponential.simple));
+
+        $(document).bind('deck.beforeChange', createAnimationHandle('exponential', exponential.graph));
 
     });
 </script>

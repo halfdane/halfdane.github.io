@@ -2,9 +2,10 @@
 
 window.exponential = window.exponential || {};
 
-window.exponential.graph = function (canvas) {
+window.exponential.graph = (function () {
 
-    var ctx = canvas.getContext('2d');
+    var canvas;
+    var ctx;
 
     var scaled = (function () {
         var iteration;
@@ -61,19 +62,16 @@ window.exponential.graph = function (canvas) {
                 if (yDiff > 0.1) {
                     maxY += yStep;
                 }
-
                 set(maxX, maxY);
             }
         }
 
-        set(5, 100000);
-
         return {
+            set: set,
             draw: draw,
             zoomTo: zoomTo,
             zoomStep: zoomStep
         };
-
     })();
 
     var axes = (function () {
@@ -104,7 +102,7 @@ window.exponential.graph = function (canvas) {
         }
     })();
 
-    var equation = (function(){
+    var equation = (function () {
         var equationFunction;
 
         function set(newEquationFunction) {
@@ -157,13 +155,13 @@ window.exponential.graph = function (canvas) {
                 return;
             }
 
-            if (currentHighlight > highlightEnd) {
-                if (animateHighlight) {
-                    currentHighlight--;
+            scaled.draw(function (iteration) {
+                if (currentHighlight > highlightEnd) {
+                    if (animateHighlight) {
+                        currentHighlight -= iteration;
+                    }
                 }
-            }
 
-            scaled.draw(function () {
                 ctx.moveTo(currentHighlight, 0);
                 ctx.lineTo(currentHighlight, equation.calculate(currentHighlight));
 
@@ -181,55 +179,64 @@ window.exponential.graph = function (canvas) {
         }
     })(equation);
 
+    var steps = (function(){
+        var running = false;
+        var steps = [
+            function () {
+                highLight.activate(4);
+            },
+            function () {
+                highLight.animateTo(3)
+            },
+            function () {
+                highLight.reset();
+                scaled.zoomTo(100, 100);
+            },
+            function () {
+                equation.set(function (x) {
+                    return Math.pow(17, x) % 97;
+                });
+            },
+            function () {
+                highLight.activate(50);
+            },
+            function () {
+                highLight.animateTo(30)
+            }
+        ];
+        var currentStep = 0;
 
-    function useEquation(equationFunction) {
-        return function () {
-            equation.set(equationFunction);
-        };
-    }
+        function init() {
+            running = true;
+            currentStep = 0;
+        }
 
-    function zoomTo(newMaxX, newMaxY) {
-        return function () {
-            highLight.reset();
-            scaled.zoomTo(newMaxX, newMaxY);
-        };
-    }
+        function stop() {
+            running = false;
+        }
 
-    function activateHighlight(highlightStart) {
-        return function () {
-            highLight.activate(highlightStart);
-        };
-    }
+        function hasMoreSteps() {
+            return running && currentStep < steps.length;
+        }
 
-    function activateHighlightAnimation(to) {
-        return function () {
-            highLight.animateTo(to)
-        };
-    }
+        function step() {
+            steps[currentStep++]();
+        }
 
-    function draw() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        axes.draw();
-        equation.draw();
-        highLight.draw();
-        scaled.zoomStep();
-    }
+        function isRunning() {
+            return running;
+        }
 
-    return {
-        draw: draw,
-        useEquation: useEquation,
-        activateHighlight: activateHighlight,
-        activateHighlightAnimation: activateHighlightAnimation,
-        zoomTo: zoomTo
-    }
-};
+        return {
+            init: init,
+            stop: stop,
+            hasMoreSteps: hasMoreSteps,
+            isRunning: isRunning,
+            step: step
+        }
+    })();
 
-window.exponential.simple = (function () {
 
-    var running = false;
-    var graph;
-    var steps;
-    var currentStep = 0;
 
     function init(current) {
         var $canvas = current.find('canvas')
@@ -237,46 +244,25 @@ window.exponential.simple = (function () {
                 .prop({width: 500, height: 500});
         $canvas.trigger('resize.deckscale');
 
-        graph = exponential.graph($canvas[0]);
-        graph.useEquation(function (x) {
-            return Math.pow(17, x);
-        })();
-        graph.zoomTo(5, 100000)();
+        canvas = $canvas[0];
+        ctx = canvas.getContext('2d');
+        steps.init();
 
-        steps = [
-            graph.activateHighlight(4),
-            graph.activateHighlightAnimation(3),
-            graph.zoomTo(100, 100),
-            graph.useEquation(function (x) {
-                return Math.pow(17, x) % 97;
-            }),
-            graph.activateHighlight(50),
-            graph.activateHighlightAnimation(30)
-        ];
-        running = true;
-        currentStep = 0;
+        equation.set(function (x) {
+            return Math.pow(17, x);
+        });
+        highLight.reset();
+        scaled.set(5, 100000);
+        scaled.zoomTo(5, 100000);
+
 
         window.requestAnimationFrame(draw);
     }
 
-    function stop() {
-        running = false;
-    }
-
-    function hasMoreSteps() {
-        return steps && currentStep < steps.length;
-    }
-
-    function step() {
-        steps[currentStep++]();
-    }
-
-    function draw(timestamp) {
-        if (!running) {
+    function draw() {
+        if (!steps.isRunning()) {
             return;
         }
-
-        graph.draw(timestamp);
 
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         axes.draw();
@@ -284,15 +270,14 @@ window.exponential.simple = (function () {
         highLight.draw();
         scaled.zoomStep();
 
-
         window.requestAnimationFrame(draw);
     }
 
     return {
         init: init,
-        hasMoreSteps: hasMoreSteps,
-        step: step,
-        stop: stop
+        hasMoreSteps: steps.hasMoreSteps,
+        step: steps.step,
+        stop: steps.stop
     };
 })();
   
