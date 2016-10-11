@@ -45,7 +45,8 @@
     <section class="slide JB">
         <h2>Das Problem <span class="JB__title">von James Bond</span></h2>
         <div class="JB__secret">Geheime Informationen <span class="JB__secret-encoded">verschlüsselt mit Code</span></div>
-        <div class="JB__secret-copy JB__secret-atCenter">Geheime Informationen <span class="JB__secret-encoded">verschlüsselt mit Code</span></div>
+        <div class="JB__secret-copy JB__secret-atCenter">Geheime Informationen <span class="JB__secret-encoded">verschlüsselt mit Code</span>
+        </div>
         <div class="JB__mi6">
             <img class="JB__connery-img" src="resources/img/sean_connery.jpg"/>
             <img class="JB__m-img" src="resources/img/m.jpg"/>
@@ -108,6 +109,10 @@
         <h2>Einwegfunktion</h2>
         <p>Potenzrechnung mit Modulo</p>
         <h3>Modulo</h3>
+    </section>
+
+    <section class="slide exponential">
+        <canvas></canvas>
     </section>
 
     <section class="slide exponential">
@@ -202,21 +207,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </script>
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
@@ -235,30 +225,35 @@
 
 <script>
 
+    function createAnimationHandle(className, steppable) {
+        return function (event, from, to) {
+            var current = $.deck('getSlide', from);
+            var upComing = $.deck('getSlide', to);
+
+            var isSteppableComing = upComing.hasClass(className);
+            var isCurrentlySteppable = current.hasClass(className);
+            var isGoingRight = from < to;
+            var currentHasMoreSteps = steppable.hasMoreSteps();
+
+            if (isCurrentlySteppable && (!currentHasMoreSteps || !isGoingRight)) {
+                steppable.stop();
+            }
+            if (isCurrentlySteppable && isGoingRight && currentHasMoreSteps) {
+                event.preventDefault();
+                steppable.step();
+            }
+            if (isSteppableComing && (!currentHasMoreSteps || !isGoingRight)) {
+                steppable.init(upComing);
+            }
+
+
+        };
+    }
 
     $(function () {
         $.deck('.slide');
 
-        $(document).bind('deck.beforeChange', function (event, from, to) {
-            var current = $.deck('getSlide', from);
-            var upComing = $.deck('getSlide', to);
-
-            var isExponentialComing = upComing.hasClass('exponential');
-            var isCurrentlyExponential = current.hasClass('exponential');
-            var isGoingRight = from < to;
-
-            if (isExponentialComing) {
-                exponential.simple.init(upComing);
-            }
-            if (isCurrentlyExponential && isGoingRight) {
-                if (exponential.simple.hasMoreSteps()) {
-                    event.preventDefault();
-                    exponential.simple.step();
-                } else {
-                    exponential.simple.stop();
-                }
-            }
-        });
+        $(document).bind('deck.beforeChange', createAnimationHandle('exponential', exponential.graph));
 
     });
 </script>
