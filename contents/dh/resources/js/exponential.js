@@ -4,10 +4,7 @@ window.exponential = window.exponential || {};
 
 window.exponential.graph = (function () {
 
-    var canvas;
-    var ctx;
-
-    var scaled = (function () {
+    function createScaler (canvasWidth, canvasHeight, ctx) {
         var iteration;
 
         var scaleX;
@@ -21,11 +18,11 @@ window.exponential.graph = (function () {
 
         function draw(callback) {
             ctx.save();
-            ctx.translate(0, canvas.height);
+            ctx.translate(0, canvasHeight);
             ctx.scale(scaleX, -scaleY);
             ctx.beginPath();
 
-            callback(iteration, maxX, scaleX, scaleY);
+            callback(ctx, iteration, maxX, scaleX, scaleY);
 
             ctx.restore();
 
@@ -47,8 +44,8 @@ window.exponential.graph = (function () {
         function set(maxX, maxY) {
             iteration = maxX / 1000;
 
-            scaleX = canvas.width / maxX;
-            scaleY = canvas.height / maxY;
+            scaleX = canvasWidth / maxX;
+            scaleY = canvasHeight / maxY;
         }
 
         function zoomStep() {
@@ -72,24 +69,24 @@ window.exponential.graph = (function () {
             zoomTo: zoomTo,
             zoomStep: zoomStep
         };
-    })();
+    }
 
-    var axes = (function () {
+    function createAxes(canvasWidth, canvasHeight, ctx) {
         function draw() {
             ctx.save();
-            ctx.translate(0, canvas.height);
+            ctx.translate(0, canvasHeight);
             ctx.scale(1, -1);
 
             ctx.beginPath();
             ctx.moveTo(0, 0);
-            ctx.lineTo(canvas.width, 0);
+            ctx.lineTo(canvasWidth, 0);
             ctx.strokeStyle = '#aaa';
             ctx.lineWidth = 2;
             ctx.stroke();
 
             ctx.beginPath();
             ctx.moveTo(0, 0);
-            ctx.lineTo(0, canvas.height);
+            ctx.lineTo(0, canvasHeight);
             ctx.strokeStyle = '#aaa';
             ctx.lineWidth = 2;
             ctx.stroke();
@@ -100,9 +97,9 @@ window.exponential.graph = (function () {
         return {
             draw: draw
         }
-    })();
+    }
 
-    var equation = (function () {
+    function createEquation(scaled) {
         var equationFunction;
 
         function set(newEquationFunction) {
@@ -114,7 +111,7 @@ window.exponential.graph = (function () {
         }
 
         function draw() {
-            scaled.draw(function (iteration, maxX, scaleX, scaleY) {
+            scaled.draw(function (ctx, iteration, maxX, scaleX, scaleY) {
                 for (var x = 0 + iteration; x <= maxX; x += iteration) {
                     ctx.fillStyle = 'red';
                     ctx.fillRect(x, equationFunction(x), 2 / scaleX, 2 / scaleY);
@@ -127,9 +124,9 @@ window.exponential.graph = (function () {
             draw: draw,
             calculate: calculate
         }
-    })(scaled);
+    }
 
-    var highLight = (function (equation) {
+    function createHighLight(scaled, equation) {
         var animateHighlight;
         var shouldDrawHighlight;
         var currentHighlight;
@@ -155,7 +152,7 @@ window.exponential.graph = (function () {
                 return;
             }
 
-            scaled.draw(function (iteration) {
+            scaled.draw(function (ctx, iteration) {
                 if (currentHighlight > highlightEnd) {
                     if (animateHighlight) {
                         currentHighlight -= iteration;
@@ -177,10 +174,12 @@ window.exponential.graph = (function () {
             animateTo: animateTo,
             draw: draw
         }
-    })(equation);
+    }
 
-    var steps = (function(){
+    var steps = (function () {
+
         var running = false;
+        var highLight, scaled, equation;
         var steps = [
             function () {
                 highLight.activate(4);
@@ -206,9 +205,13 @@ window.exponential.graph = (function () {
         ];
         var currentStep = 0;
 
-        function init() {
+        function init(newHighLight, newScaled, newEquation) {
             running = true;
             currentStep = 0;
+
+            highLight = newHighLight;
+            scaled = newScaled;
+            equation = newEquation;
         }
 
         function stop() {
@@ -236,39 +239,44 @@ window.exponential.graph = (function () {
         }
     })();
 
-
-
     function init(current) {
         var $canvas = current.find('canvas')
                 .width('100%')
                 .prop({width: 500, height: 500});
         $canvas.trigger('resize.deckscale');
 
-        canvas = $canvas[0];
-        ctx = canvas.getContext('2d');
-        steps.init();
+        var canvas = $canvas[0];
+        var ctx = canvas.getContext('2d');
 
-        equation.set(function (x) {
-            return Math.pow(17, x);
-        });
-        highLight.reset();
+        var scaled = createScaler(canvas.width, canvas.height, ctx);
         scaled.set(5, 100000);
         scaled.zoomTo(5, 100000);
 
+        var equation = createEquation(scaled, ctx);
+        equation.set(function (x) {
+                    return Math.pow(17, x);
+                });
 
-        window.requestAnimationFrame(draw);
-    }
+        var highLight = createHighLight(scaled, equation);
+        highLight.reset();
 
-    function draw() {
-        if (!steps.isRunning()) {
-            return;
+        steps.init(highLight, scaled, equation);
+
+        var axes = createAxes(canvas.width, canvas.height, ctx);
+
+        function draw() {
+            if (!steps.isRunning()) {
+                return;
+            }
+
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            axes.draw();
+            equation.draw();
+            highLight.draw();
+            scaled.zoomStep();
+
+            window.requestAnimationFrame(draw);
         }
-
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        axes.draw();
-        equation.draw();
-        highLight.draw();
-        scaled.zoomStep();
 
         window.requestAnimationFrame(draw);
     }
