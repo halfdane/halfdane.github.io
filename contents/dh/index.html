@@ -115,37 +115,17 @@
     <section class="slide">
         <h2>Einwegfunktion: Potenzrechnung mit Modulo</h2>
         <h3>Modulo: Teilen mit Rest</h3>
-        <div class="slide">
-            $$
-            4\:mod\:3 = 1
-            $$
-        </div>
-        <div class="slide">
-            $$
-            5\:mod\:3 = 2
-            $$
-        </div>
-        <div class="slide">
-            $$
-            6\:mod\:3 = 0
-            $$
-        </div>
-        <div class="slide">
-            $$
-            irgendwas\:mod\:p = [0..p-1]
-            $$
-        </div>
-        <div class="slide">
-            $$
-            \mathbb Z_{/ p}
-            $$
-        </div>
+        <div class="slide">$$4\:mod\:3 = 1$$</div>
+        <div class="slide">$$5\:mod\:3 = 2$$</div>
+        <div class="slide">$$6\:mod\:3 = 0$$</div>
+        <div class="slide">$$irgendwas\:mod\:p = [0\:..\:p-1]$$</div>
+        <div class="slide">$$\mathbb Z_{/ p}$$</div>
     </section>
 
     <section class="slide">
         <h2>Einwegfunktion: Potenzrechnung mit Modulo</h2>
         <h3>Modulo: Teilen mit Rest</h3>
-        <div>Kreisartigkeit mit durchzählen</div>
+        <div>Kreisartigkeit von $\mathbb Z_{/ p}$ mit durchzählen</div>
         <div class="slide">Potenzierung: Glücksrad mit ungewissem Ausgang</div>
     </section>
 
@@ -161,36 +141,28 @@
         <p>Die ganze Formel in einem Stück eingeben</p>
     </section>
 
-    <section class="slide">
+    <div class="slide">
         <h2>Kommutativ</h2>
 
-        <div style="font-size: 150%;">
-            $$
-            3^{\color{blue} 4\color{black}^{\color{green}5}}\color{black} =
-            3^{\color{blue} 4\color{black}* \color{green}5}\color{black} ==
-            3^{\color{green}5\color{black}* \color{blue} 4}\color{black} =
-            3^{\color{green}5\color{black}^{\color{blue} 4}}\color{black}
-            $$
+        <div  style="font-size: 150%;">$  3^{\color{blue} 4\color{black}^{\color{green}5}}\color{black}$
+            <span class="kommutativ_2">$= 3^{\color{blue} 4\color{black}* \color{green}5}\color{black}$</span>
+            <span class="kommutativ_3">$==3^{\color{green}5\color{black}* \color{blue} 4}\color{black}$</span>
+            <span class="kommutativ_4">$= 3^{\color{green}5\color{black}^{\color{blue} 4}}\color{black}$</span>
         </div>
-        <div class="slide">
-            $$
-            3^{\color{blue} 4}
-            $$
-        </div>
-        <div class="slide">
-            $$
-            3^{\color{green} 5}
-            $$
-        </div>
-        <div class="slide">
-            $$
-            3^{\color{blue} 4\color{black}^{\color{green}5}}\color{black}
-            $$
-        </div>
-        <div class="slide">
-            $$
-            3^{\color{green}5\color{black}^{\color{blue} 4}}\color{black}
-            $$
+        <div class="anim-show  slide" data-what=".kommutativ_2"></div>
+        <div class="anim-show  slide" data-what=".kommutativ_3"></div>
+        <div class="anim-show  slide" data-what=".kommutativ_4"></div>
+        <div class="kommutativ_exchange" style="position: relative">
+            <div class="slide alice left">$3^{\color{blue} 4}$</div>
+            <div class="slide bob right">$3^{\color{green}5}$</div>
+
+            <div class="alice double hidden left">$8^{\color{blue} 4}$</div>
+            <div class="anim-removeclass slide anim-continue" data-what=".alice.double" data-class="hidden"></div>
+            <div class="anim-removeclass slide anim-continue" data-what=".alice.double" data-class="left"></div>
+            <div class="anim-addclass slide" data-what=".alice.double" data-class="right"></div>
+
+            <div class="slide kommutativ_exchange-2-left ">$3^{\color{green}5\color{black}^{\color{blue} 4}}\color{black}$</div>
+            <div class="slide kommutativ_exchange-2-right">$3^{\color{blue} 4\color{black}^{\color{green}5}}\color{black}$</div>
         </div>
     </section>
 
