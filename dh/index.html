@@ -42,6 +42,10 @@
         <h1>Das "S" in HTTPS</h1>
     </section>
 
+    <section class="slide intro">
+        <canvas></canvas>
+    </section>
+
     <section class="slide JB">
         <h2>Das Problem <span class="JB__title">von James Bond</span></h2>
         <div class="JB__secret">Geheime Informationen <span class="JB__secret-encoded">verschlüsselt mit Code</span></div>
@@ -109,10 +113,6 @@
         <h2>Einwegfunktion</h2>
         <p>Potenzrechnung mit Modulo</p>
         <h3>Modulo</h3>
-    </section>
-
-    <section class="slide exponential">
-        <canvas></canvas>
     </section>
 
     <section class="slide exponential">
@@ -222,6 +222,7 @@
 <script src="deck.js/extensions/anim/deck.anim.js"></script>
 
 <script src="resources/js/exponential.js"></script>
+<script src="resources/js/intro.js"></script>
 
 <script>
 
@@ -243,17 +244,22 @@
                 steppable.step();
             }
             if (isSteppableComing && (!currentHasMoreSteps || !isGoingRight)) {
-                steppable.init(upComing);
+
+                var $canvas = upComing.find('canvas')
+                        .width('100%')
+                        .prop({width: 500, height: 500})
+                        .trigger('resize.deckscale');
+
+                steppable.init($canvas[0]);
             }
-
-
         };
     }
 
     $(function () {
         $.deck('.slide');
 
-        $(document).bind('deck.beforeChange', createAnimationHandle('exponential', exponential.graph));
+        $(document).bind('deck.beforeChange', createAnimationHandle('intro', dh.intro));
+        $(document).bind('deck.beforeChange', createAnimationHandle('exponential', dh.exponential));
 
     });
 </script>
