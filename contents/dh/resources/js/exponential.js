@@ -1,8 +1,8 @@
 'use strict';
 
-window.exponential = window.exponential || {};
+window.dh = window.dh || {};
 
-window.exponential.graph = (function () {
+window.dh.exponential = (function () {
 
     function createScaler (canvasWidth, canvasHeight, ctx) {
         var iteration;
@@ -239,20 +239,14 @@ window.exponential.graph = (function () {
         }
     })();
 
-    function init(current) {
-        var $canvas = current.find('canvas')
-                .width('100%')
-                .prop({width: 500, height: 500});
-        $canvas.trigger('resize.deckscale');
-
-        var canvas = $canvas[0];
+    function init(canvas) {
         var ctx = canvas.getContext('2d');
 
         var scaled = createScaler(canvas.width, canvas.height, ctx);
         scaled.set(5, 100000);
         scaled.zoomTo(5, 100000);
 
-        var equation = createEquation(scaled, ctx);
+        var equation = createEquation(scaled);
         equation.set(function (x) {
                     return Math.pow(17, x);
                 });
