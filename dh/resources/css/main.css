@@ -1,54 +1,34 @@
-.JB__mi6 {
-    position: relative;
-    overflow: hidden;
+.kommutativ_exchange .MathJax {
+    transition: all 1s ease-in-out;
 }
 
-.JB__connery-img {
-    float: left;
-    width: 5em;
+.hidden {
+    visibility: hidden;
 }
 
-.JB__m-img {
-    float: right;
-    width: 5em;
+.left .MathJax{
+    margin-left: 2%;
 }
 
-.JB__secret, .JB__secret-copy {
-    height: 5ex;
-    width: 7em;
-    transition: 1s ease-in-out;
+.right .MathJax{
+    margin-left: 95%;
 }
 
-.JB__secret-copy {
-    position: absolute;
+.alice .MathJax,
+.alice.double .MathJax {
+    margin-top: 2em;
+}
+.right .MathJax {
+    margin-top: 5em;
+    visibility: visible;
 }
 
-.JB__secret-copy-atDrNo {
-
+.alice .MathJax {
+    margin-left: 2%;
+    margin-top: 2em;
 }
-
-.JB__secret-atCenter {
-    margin-left: 40%;
-}
-
-.JB__secret-atQ {
-    margin-left: 80%;
-}
-
-.JB__evil {
-    margin-left: 50%;
-}
-
-.hr {
-    height:15px;
-    padding-bottom: 15px;
-    width: 25%;
-    float: left;
-}
-
-.line {
-    width: 100%;
-    float: left;
-    margin-top:13px;
-    border-bottom: 2px solid black;
+.right1.moveLeft .MathJax {
+    right: auto;
+    left: 2%;
+    margin-top: 5em;
 }
