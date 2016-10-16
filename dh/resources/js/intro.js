@@ -91,7 +91,7 @@ window.dh.intro = (function () {
     };
 
     var createMessage = function (ctx, x, y, str) {
-        var targetX , targetY, xStep, yStep,
+        var targetX, targetY, xStep, yStep,
                 moveX, moveY,
                 xOffset, yOffset,
                 message;
@@ -235,8 +235,10 @@ window.dh.intro = (function () {
                 protocol.activate,
                 message.moveToHalf,
                 protocolDots.activate,
-                protocolListener.activate,
-                intruder.activate,
+                function () {
+                    protocolListener.activate();
+                    intruder.activate();
+                },
                 function () {
                     message.moveToFull();
                     messageCopy.activate();
@@ -294,6 +296,7 @@ window.dh.intro = (function () {
                 function () {
                     message.setStart(1);
                     messageCopy.deactivate();
+                    messageCopy.setStart(maxWidth - actorWidth);
                     client.useNormal();
                     server.useNormal();
                     intruder.useNormal();
@@ -303,7 +306,9 @@ window.dh.intro = (function () {
                     codebook2.deactivate();
                 },
                 function () {
-                    message.setMessage('7626 + ????');
+                    message.setMessage('7626 + Schlüssel');
+                    messageCopy.activate();
+                    messageCopy.setMessage('Schlüssel');
                 }
             ];
         }
