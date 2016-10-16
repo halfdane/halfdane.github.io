@@ -44,39 +44,71 @@
 
     <section class="slide intro">
         <canvas></canvas>
+        <aside style="display: none">
+            <li>Wenn ich im Internet etwas</li>
+            <li>bei ebay oder sonstwo bestelle, muss ich</li>
+            <li>vielleicht eine PIN oder Kreditkartennummer an ebay senden.</li>
+            <li>Weil ich das Internet benutze, kommt das HTTP-Protokoll zum Einsatz</li>
+            <li>und weil das das Internet ist, liegen zwischen mir und ebay</li>
+            <li>einige andere server</li>
+            <li>und weil HTTP alles im Plaintext verschickt,
+                kann an diesen zwischenliegenden Servern jeder (z.B. auch ein Hacker)
+            </li>
+            <li>mitlesen, was so über die Leitung geht. Das ist unschön.</li>
+
+            <li>Wenn das hier 1970 wäre und ich James Bond wäre</li>
+            <li>und meine Position an M. schicken will, damit der weiß,
+                wo die geheime Basis von Dr. No ist
+            </li>
+            <li>der natürlich die Telefonleitung abhört,
+                dann möchte ich verhindern, dass er ebenfalls meine Position kennt.
+                Ähnlich wie eine PIN ist das also eine schützenswerte Information.
+            </li>
+            <li>Weil ich im Auftrag der Queen unterwegs bin, haben wir natürlich vorher
+                ein Codebuch ausgetauscht, in dem z.B. für jeden Tag ein
+                Verschlüsselungscode steht.
+            </li>
+            <li>Ich suche mir also den Schlüssel für heute heraus und addiere ihn zu meiner
+                schützenswerten Information
+            </li>
+            <li>so</li>
+            <li>Wenn ich das jetzt an M. schicke</li>
+            <li>bekommt Dr. No nur Zahlenwust</li>
+            <li>während M. aus dem Codebuch einfach ebenfalls den Schlüssel für heute heraussucht</li>
+            <li>und ihn von meiner Nachricht abzieht und so an die ursprüngliche Nachricht kommt.</li>
+
+
+            <li>Aber ich bin nicht James Bond</li>
+            <li>und ebay käme nie auf die Idee, mit mir und allen anderen Kunden ein Codebuch auszutauschen.</li>
+            <li>Wie können ebay und ich uns trotzdem auf einen Schlüssel einigen, mit dem wir
+                ausgetauschte Nachrichten schützen können?
+            </li>
+        </aside>
     </section>
 
     <section class="slide">
-        <h2>Das Problem von uns</h2>
+        <h2>Ausgangs-Situation</h2>
         <ul>
-            <li>Verbindung zwischen A und B</li>
-            <li>PIN oder so von A nach B</li>
-            <li>Verbindung ist HTTP - Plaintext</li>
-            <li>Verschlüsseln
-                <ul>
-                    <li>Naiv: addieren und subtrahieren einfach die gleiche Zahl und nennen sie Schlüssel</li>
-                    <li>aber wie bekommt man den Schlüssel rüber?</li>
-                    <li>Bis in die 60-er wurden One-Time-Pads benutzt</li>
-                </ul>
+            <li>Der gemeinsame Schlüssel darf nicht über die Leitung gehen <span class="idee__plain">weil HTTP ein Plaintext-Protokoll ist</span>
             </li>
-            <li>Diffie und Hellmanns Idee: keinen Schlüssel rüberschicken - es reicht, wenn A und B sich irgendwie sonst auf einen
-                Schlüssel einigen
-            </li>
-            <li>
-                Das Ziel ist ein sicherer Kanal, nicht die Authentifizierung von A oder B
+            <div class="anim-show slide" data-what=".idee__plain"></div>
+            <li class="slide">es reicht, wenn ebay und ich uns auf den gleichen Schlüssel einigen</li>
+            <li class="slide">auch wenn wir auf verschiedenen Wegen zum selben Ziel kommen</li>
+            <li class="slide">Das Ziel ist ein sicherer Kanal, nicht die Authentifizierung von ebay oder mir - dazu werden
+                Zertifikate benutzt
             </li>
         </ul>
     </section>
 
     <section class="slide">
-        <h2>Grundidee</h2>
+        <h2>Grundidee von Diffie und Hellmann</h2>
         <blockquote cite="http://example.org">
-            <p>Wir benutzen einfach eine Funktion, die zwei Bedingungen erfüllt:</p>
+            <p>Wir benutzen einfach eine Funktion, die zwei Sachen kann:</p>
             <ol>
-                <li>in die eine Richtung einfach, in die andere Richtung sehr, sehr schwer</li>
-                <li>wer von uns sie zuerst ausführt ist egal, solange beide sie ausführen</li>
+                <li class="slide">Wer von uns sie zuerst ausführt ist egal, solange beide sie ausführen (kommutativ)</li>
+                <li class="slide">In die eine Richtung ist sie einfach, in die andere Richtung sehr, sehr schwer (Einweg-Funktion)</li>
             </ol>
-            <p><cite>Diffie und Hellmann (nicht bestätigt)</cite></p>
+            <p><cite>Diffie und Hellmann 1976 (nicht bestätigt :)</cite></p>
         </blockquote>
     </section>
 
@@ -174,6 +206,7 @@
     TeX: {extensions: ["color.js"]},
     tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']],
     displayMath: [['\\[','\\]'], ['$$','$$']]}});
+
 
 
 
