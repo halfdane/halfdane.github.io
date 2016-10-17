@@ -2,7 +2,7 @@
     text-align: center;
 }
 
-.kommutativ_original, .kommutativ_double, .kommutativ_final {
+.kommutativ_original, .kommutativ_double, .kommutativ_final, .kommutativ_head {
     position: relative;
 }
 
@@ -10,7 +10,7 @@
     transition: all 1s ease-in-out;
 }
 
-.alice, .bob, .equals {
+.alice, .bob, .equals, .kommutativ_head * {
     position: absolute;
 }
 
@@ -29,13 +29,13 @@
 }
 
 .left{
-    margin-left: 10%;
+    margin-left: 30%;
 }
 
 .right {
-    margin-left: 90%;
+    margin-left: 70%;
 }
 
 .center {
-    margin-left: 45%;
+    margin-left: 48%;
 }
