@@ -1,34 +1,41 @@
-.kommutativ_exchange .MathJax {
+.kommutativ_formula{
+    text-align: center;
+}
+
+.kommutativ_original, .kommutativ_double, .kommutativ_final {
+    position: relative;
+}
+
+.alice, .bob, .kommutativ_double {
     transition: all 1s ease-in-out;
+}
+
+.alice, .bob, .equals {
+    position: absolute;
 }
 
 .hidden {
     visibility: hidden;
 }
 
-.left .MathJax{
-    margin-left: 2%;
+.kommutativ_original,
+.kommutativ_double,
+.kommutativ_final{
+    margin-top: 3em;
 }
 
-.right .MathJax{
-    margin-left: 95%;
+.kommutativ_double.down {
+    margin-top: 6em;
 }
 
-.alice .MathJax,
-.alice.double .MathJax {
-    margin-top: 2em;
-}
-.right .MathJax {
-    margin-top: 5em;
-    visibility: visible;
+.left{
+    margin-left: 10%;
 }
 
-.alice .MathJax {
-    margin-left: 2%;
-    margin-top: 2em;
+.right {
+    margin-left: 90%;
 }
-.right1.moveLeft .MathJax {
-    right: auto;
-    left: 2%;
-    margin-top: 5em;
+
+.center {
+    margin-left: 45%;
 }

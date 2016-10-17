@@ -105,7 +105,9 @@
         <blockquote cite="http://example.org">
             <p>Wir benutzen einfach eine Funktion, die zwei Sachen kann:</p>
             <ol>
-                <li class="slide">In die eine Richtung ist sie einfach, in die andere Richtung sehr, sehr schwer (Einweg-Funktion)</li>
+                <li class="slide">In die eine Richtung ist sie einfach, in die andere Richtung sehr, sehr schwer
+                    (Einweg-Funktion)
+                </li>
                 <li class="slide">Wer von uns sie zuerst ausführt ist egal, solange beide sie ausführen (kommutativ)</li>
             </ol>
             <p><cite>Diffie und Hellmann 1976 (nicht bestätigt :)</cite></p>
@@ -141,29 +143,52 @@
         <p>Die ganze Formel in einem Stück eingeben</p>
     </section>
 
-    <div class="slide">
+    <section class="slide">
         <h2>Kommutativ</h2>
 
-        <div  style="font-size: 150%;">$  3^{\color{blue} 4\color{black}^{\color{green}5}}\color{black}$
+        <h3 class="kommutativ_formula">$ 3^{\color{blue} 4\color{black}^{\color{green}5}}\color{black}$
             <span class="kommutativ_2">$= 3^{\color{blue} 4\color{black}* \color{green}5}\color{black}$</span>
             <span class="kommutativ_3">$==3^{\color{green}5\color{black}* \color{blue} 4}\color{black}$</span>
             <span class="kommutativ_4">$= 3^{\color{green}5\color{black}^{\color{blue} 4}}\color{black}$</span>
-        </div>
+        </h3>
         <div class="anim-show  slide" data-what=".kommutativ_2"></div>
         <div class="anim-show  slide" data-what=".kommutativ_3"></div>
         <div class="anim-show  slide" data-what=".kommutativ_4"></div>
-        <div class="kommutativ_exchange" style="position: relative">
-            <div class="slide alice left">$3^{\color{blue} 4}$</div>
-            <div class="slide bob right">$3^{\color{green}5}$</div>
 
-            <div class="alice double hidden left">$8^{\color{blue} 4}$</div>
-            <div class="anim-removeclass slide anim-continue" data-what=".alice.double" data-class="hidden"></div>
-            <div class="anim-removeclass slide anim-continue" data-what=".alice.double" data-class="left"></div>
-            <div class="anim-addclass slide" data-what=".alice.double" data-class="right"></div>
-
-            <div class="slide kommutativ_exchange-2-left ">$3^{\color{green}5\color{black}^{\color{blue} 4}}\color{black}$</div>
-            <div class="slide kommutativ_exchange-2-right">$3^{\color{blue} 4\color{black}^{\color{green}5}}\color{black}$</div>
+        <div class="kommutativ_original">
+            <span class="alice left">$3^{\color{blue} 4}$</span>
+            <span class="bob right">$3^{\color{green}5}$</span>
+            <div class="anim-show slide" data-what=".alice"></div>
+            <div class="anim-show slide" data-what=".bob"></div>
         </div>
+
+        <div class="kommutativ_double">
+            <span class="bob hidden right">$3^{\color{green} 5}$</span>
+            <span class="alice hidden left">$3^{\color{blue} 4}$</span>
+
+            <div class="anim-removeclass slide anim-continue" data-what=".kommutativ_double .alice" data-class="hidden"></div>
+            <div class="anim-removeclass slide anim-continue" data-what=".kommutativ_double .alice" data-class="left"></div>
+            <div class="anim-addclass slide anim-continue" data-what=".kommutativ_double .alice" data-class="right"></div>
+
+            <div class="anim-removeclass slide anim-continue" data-what=".kommutativ_double .bob" data-class="hidden"></div>
+            <div class="anim-removeclass slide anim-continue" data-what=".kommutativ_double .bob" data-class="right"></div>
+            <div class="anim-addclass slide anim-continue" data-what=".kommutativ_double .bob" data-class="left"></div>
+
+            <div class="anim-addclass slide" data-what=".kommutativ_double" data-class="down"></div>
+        </div>
+
+        <div class="kommutativ_final">
+            <span class="bob hidden left">$3^{\color{green}5\color{black}^{\color{blue} 4}}\color{black}$</span>
+            <span class="equals hidden center">$==$</span>
+            <span class="alice hidden right">$3^{\color{blue} 4\color{black}^{\color{green}5}}\color{black}$</span>
+
+            <div class="anim-addclass slide anim-continue" data-what=".kommutativ_double .alice" data-class="hidden"></div>
+            <div class="anim-addclass slide anim-continue" data-what=".kommutativ_double .bob" data-class="hidden"></div>
+            <div class="anim-removeclass slide anim-continue" data-what=".kommutativ_final .alice" data-class="hidden"></div>
+            <div class="anim-removeclass slide" data-what=".kommutativ_final .bob" data-class="hidden"></div>
+            <div class="anim-removeclass slide" data-what=".kommutativ_final .equals" data-class="hidden"></div>
+        </div>
+
     </section>
 
     <section class="slide">
@@ -198,13 +223,13 @@
     </p>
 
     <!-- End extension snippets. -->
-</div>
+    </section>
 
-<!-- Required JS files. -->
-<script src="deck.js/jquery.min.js"></script>
+    <!-- Required JS files. -->
+    <script src="deck.js/jquery.min.js"></script>
 
-<!-- mathjax -->
-<script type="text/x-mathjax-config">
+    <!-- mathjax -->
+    <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     TeX: {extensions: ["color.js"]},
     tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']],
@@ -214,61 +239,63 @@
 
 
 
-</script>
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-<script src="deck.js/core/deck.core.js"></script>
 
-<!-- Extension JS files. Add or remove as needed. -->
-<script src="deck.js/extensions/menu/deck.menu.js"></script>
-<script src="deck.js/extensions/status/deck.status.js"></script>
-<script src="deck.js/extensions/navigation/deck.navigation.js"></script>
-<script src="deck.js/extensions/scale/deck.scale.js"></script>
-<script src="deck.js/extensions/step/deck.step.js"></script>
-<script src="deck.js/extensions/events/deck.events.js"></script>
-<script src="deck.js/extensions/anim/deck.anim.js"></script>
+    </script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-<script src="resources/js/exponential.js"></script>
-<script src="resources/js/intro.js"></script>
+    <script src="deck.js/core/deck.core.js"></script>
 
-<script>
+    <!-- Extension JS files. Add or remove as needed. -->
+    <script src="deck.js/extensions/menu/deck.menu.js"></script>
+    <script src="deck.js/extensions/status/deck.status.js"></script>
+    <script src="deck.js/extensions/navigation/deck.navigation.js"></script>
+    <script src="deck.js/extensions/scale/deck.scale.js"></script>
+    <script src="deck.js/extensions/step/deck.step.js"></script>
+    <script src="deck.js/extensions/events/deck.events.js"></script>
+    <script src="deck.js/extensions/anim/deck.anim.js"></script>
 
-    function createAnimationHandle(className, steppable) {
-        return function (event, from, to) {
-            var current = $.deck('getSlide', from);
-            var upComing = $.deck('getSlide', to);
+    <script src="resources/js/exponential.js"></script>
+    <script src="resources/js/intro.js"></script>
 
-            var isSteppableComing = upComing.hasClass(className);
-            var isCurrentlySteppable = current.hasClass(className);
-            var isGoingRight = from < to;
-            var currentHasMoreSteps = steppable.hasMoreSteps();
+    <script>
 
-            if (isCurrentlySteppable && (!currentHasMoreSteps || !isGoingRight)) {
-                steppable.stop();
-            }
-            if (isCurrentlySteppable && isGoingRight && currentHasMoreSteps) {
-                event.preventDefault();
-                steppable.step();
-            }
-            if (isSteppableComing && (!currentHasMoreSteps || !isGoingRight)) {
+        function createAnimationHandle(className, steppable) {
+            return function (event, from, to) {
+                var current = $.deck('getSlide', from);
+                var upComing = $.deck('getSlide', to);
 
-                var $canvas = upComing.find('canvas')
-                        .width('100%')
-                        .prop({width: 500, height: 500})
-                        .trigger('resize.deckscale');
+                var isSteppableComing = upComing.hasClass(className);
+                var isCurrentlySteppable = current.hasClass(className);
+                var isGoingRight = from < to;
+                var currentHasMoreSteps = steppable.hasMoreSteps();
 
-                steppable.init($canvas[0]);
-            }
-        };
-    }
+                if (isCurrentlySteppable && (!currentHasMoreSteps || !isGoingRight)) {
+                    steppable.stop();
+                }
+                if (isCurrentlySteppable && isGoingRight && currentHasMoreSteps) {
+                    event.preventDefault();
+                    steppable.step();
+                }
+                if (isSteppableComing && (!currentHasMoreSteps || !isGoingRight)) {
 
-    $(function () {
-        $.deck('.slide');
+                    var $canvas = upComing.find('canvas')
+                            .width('100%')
+                            .prop({width: 500, height: 500})
+                            .trigger('resize.deckscale');
 
-        $(document).bind('deck.beforeChange', createAnimationHandle('intro', dh.intro));
-        $(document).bind('deck.beforeChange', createAnimationHandle('exponential', dh.exponential));
+                    steppable.init($canvas[0]);
+                }
+            };
+        }
 
-    });
-</script>
+        $(function () {
+            $.deck('.slide');
+
+            $(document).bind('deck.beforeChange', createAnimationHandle('intro', dh.intro));
+            $(document).bind('deck.beforeChange', createAnimationHandle('exponential', dh.exponential));
+
+        });
+    </script>
 </body>
 </html>
