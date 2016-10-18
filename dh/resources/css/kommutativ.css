@@ -1,0 +1,41 @@
+.kommutativ_formula{
+    text-align: center;
+}
+
+.kommutativ_original, .kommutativ_double, .kommutativ_final, .kommutativ_head {
+    position: relative;
+}
+
+.alice, .bob, .kommutativ_double {
+    transition: all 1s ease-in-out;
+}
+
+.alice, .bob, .equals, .kommutativ_head * {
+    position: absolute;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.kommutativ_original,
+.kommutativ_double,
+.kommutativ_final{
+    margin-top: 3em;
+}
+
+.kommutativ_double.down {
+    margin-top: 6em;
+}
+
+.left {
+    margin-left: 30%;
+}
+
+.right {
+    margin-left: 70%;
+}
+
+.center {
+    margin-left: 48%;
+}
