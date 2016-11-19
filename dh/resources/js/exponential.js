@@ -41,11 +41,13 @@ window.dh.exponential = (function () {
             zoomStep(maxX, maxY);
         }
 
-        function set(maxX, maxY) {
-            iteration = maxX / 1000;
+        function set(newMaxX, newMaxY) {
+            maxX = newMaxX;
+            maxY = newMaxY;
+            iteration = newMaxX / 1000;
 
-            scaleX = canvasWidth / maxX;
-            scaleY = canvasHeight / maxY;
+            scaleX = canvasWidth / newMaxX;
+            scaleY = canvasHeight / newMaxY;
         }
 
         function zoomStep() {
@@ -159,11 +161,13 @@ window.dh.exponential = (function () {
                     }
                 }
 
+                var x = equation.calculate(currentHighlight);
+                
                 ctx.moveTo(currentHighlight, 0);
-                ctx.lineTo(currentHighlight, equation.calculate(currentHighlight));
+                ctx.lineTo(currentHighlight, x);
 
-                ctx.moveTo(0, equation.calculate(currentHighlight));
-                ctx.lineTo(currentHighlight, equation.calculate(currentHighlight));
+                ctx.moveTo(0, x);
+                ctx.lineTo(currentHighlight, x);
                 ctx.strokeStyle = 'blue';
             });
         }
@@ -181,6 +185,30 @@ window.dh.exponential = (function () {
         var running = false;
         var highLight, scaled, equation;
         var steps = [
+            function () {
+                equation.set(function (x) {
+                    return 17+x % 97;
+                });
+            },
+            function () {
+                equation.set(function (x) {
+                    return 17*x;
+                });
+            },
+            function () {
+                equation.set(function (x) {
+                    return 17*x % 97;
+                });
+            },
+            function () {
+                equation.set(function (x) {
+                    return Math.pow(17, x);
+                });
+            },
+            function () {
+                highLight.reset();
+                scaled.zoomTo(5, 100000);
+            },
             function () {
                 highLight.activate(4);
             },
@@ -243,12 +271,12 @@ window.dh.exponential = (function () {
         var ctx = canvas.getContext('2d');
 
         var scaled = createScaler(canvas.width, canvas.height, ctx);
-        scaled.set(5, 100000);
-        scaled.zoomTo(5, 100000);
+        scaled.set(500, 100);
+        scaled.zoomTo(500, 100);
 
         var equation = createEquation(scaled);
         equation.set(function (x) {
-                    return Math.pow(17, x);
+                    return 17 + x;
                 });
 
         var highLight = createHighLight(scaled, equation);

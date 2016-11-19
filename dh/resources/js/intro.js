@@ -306,9 +306,9 @@ window.dh.intro = (function () {
                     codebook2.deactivate();
                 },
                 function () {
-                    message.setMessage('7626 + Schlüssel');
+                    message.setMessage('7626 + Key');
                     messageCopy.activate();
-                    messageCopy.setMessage('Schlüssel');
+                    messageCopy.setMessage('Key');
                 }
             ];
         }

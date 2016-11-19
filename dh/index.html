@@ -29,6 +29,7 @@
     <link rel="stylesheet" media="screen" href="resources/css/main.css">
     <link rel="stylesheet" media="screen" href="resources/css/kommutativ.css">
     <link rel="stylesheet" media="screen" href="resources/css/modulo.css">
+    <link rel="stylesheet" media="screen" href="resources/css/formular.css">
 
     <!-- Required Modernizr file -->
     <script src="deck.js/modernizr.custom.js"></script>
@@ -130,8 +131,8 @@
         <div class="slide">$$4\:mod\:3 = 1$$</div>
         <div class="slide">$$5\:mod\:3 = 2$$</div>
         <div class="slide">$$6\:mod\:3 = 0$$</div>
-        <div class="slide">$$irgendwas\:mod\:p = [0\:..\:p-1]$$</div>
-        <div class="slide">$$\mathbb Z_{/ p}$$</div>
+        <div class="slide">$$7\:mod\:3 = 1$$</div>
+        <div class="slide">$$8\:mod\:3 = 2$$</div>
     </section>
 
     <section class="slide">
@@ -153,8 +154,6 @@
             <div class="mod deg288">0</div>
             <div class="mod deg320">1</div>
         </div>
-
-        background-color: gold;
 
         <div class="anim-addclass slide" data-what=".deg160" data-class="highlight"></div>
         <div class="anim-removeclass slide anim-continue" data-what=".deg160" data-class="highlight"></div>
@@ -178,15 +177,7 @@
         <canvas></canvas>
     </section>
 
-    <section class="slide">
-        <h2>Taschenrechner</h2>
-        <p class="slide">Benutzt bitte nicht den Taschenrechner auf eurem Handy, der kann kein Modulo rechnen</p>
-        <p class="slide">Nein, auch nicht der auf dem IPhone!</p>
-        <p style="font-size: 150%;">www.britnex.de</p>
-        <p>Die ganze Formel in einem Stück eingeben</p>
-    </section>
-
-    <section class="slide">
+    <section class="slide kommutativ">
         <h2>Kommutativ</h2>
 
         <h3 class="kommutativ_formula">$ 3^{\color{blue} 4\color{black}^{\color{green}5}}\color{black}$
@@ -241,13 +232,72 @@
             <div class="anim-removeclass slide" data-what=".kommutativ_final .bob" data-class="hidden"></div>
             <div class="anim-removeclass slide" data-what=".kommutativ_final .equals" data-class="hidden"></div>
         </div>
+    </section>
 
+    <section class="slide">
+        <h2>Taschenrechner</h2>
+        <p class="slide">Benutzt bitte nicht den Taschenrechner auf eurem Handy, der kann kein Modulo rechnen</p>
+        <p class="slide">Nein, auch nicht der auf dem IPhone!</p>
+        <p style="font-size: 150%;">www.britnex.de</p>
+        <p>Die ganze Formel in einem Stück eingeben</p>
     </section>
 
     <section class="slide">
         <h2>Und so funktioniert's</h2>
-        <p>Hier mit Formular durchspielen</p>
-        <p class="slide">Jetzt seid ihr dran</p>
+        <div class="formulare">
+            <img class="form left" src="resources/img/DH-Form-small.png">
+            <div class="primegroup center">g=7 p=11</div>
+            <img class="form right" src="resources/img/DH-Form-small.png">
+
+            <div class="alice a hidden">17</div>
+            <div class="bob a hidden">282</div>
+
+            <div class="alice a hidden">17</div>
+            <div class="bob a hidden">282</div>
+
+            <div class="alice g hidden">7</div>
+            <div class="bob g hidden">7</div>
+
+            <div class="alice p hidden">11</div>
+            <div class="bob p hidden">11</div>
+
+            <div class="alice bigA raw hidden">$7^{17}\:mod\:11$</div>
+            <div class="alice bigA result hidden">6</div>
+            <div class="bob bigA raw hidden">$7^{282}\:mod\:11$</div>
+            <div class="bob bigA result hidden">5</div>
+
+            <div class="alice bigB hidden">6</div>
+            <div class="bob bigB hidden">5</div>
+
+
+            <div class="alice bigK raw hidden">$5^{17}\:mod\:11$</div>
+            <div class="bob bigK raw hidden">$6^{282}\:mod\:11$</div>
+
+
+            <div class="anim-show slide" data-what=".primegroup"></div>
+            <div class="anim-removeclass slide" data-what=".alice.a" data-class="hidden"></div>
+            <div class="anim-removeclass slide" data-what=".bob.a" data-class="hidden"></div>
+
+            <div class="anim-removeclass slide anim-continue" data-what=".alice.g" data-class="hidden"></div>
+            <div class="anim-removeclass slide anim-continue" data-what=".alice.p" data-class="hidden"></div>
+
+            <div class="anim-removeclass slide anim-continue" data-what=".bob.g" data-class="hidden"></div>
+            <div class="anim-removeclass slide" data-what=".bob.p" data-class="hidden"></div>
+
+            <div class="anim-removeclass slide" data-what=".alice.bigA.raw" data-class="hidden"></div>
+            <div class="anim-addclass slide anim-continue" data-what=".alice.bigA.raw" data-class="hidden"></div>
+            <div class="anim-removeclass slide" data-what=".alice.bigA.result" data-class="hidden"></div>
+
+            <div class="anim-removeclass slide" data-what=".bob.bigA.raw" data-class="hidden"></div>
+            <div class="anim-addclass slide anim-continue" data-what=".bob.bigA.raw" data-class="hidden"></div>
+            <div class="anim-removeclass slide" data-what=".bob.bigA.result" data-class="hidden"></div>
+
+            <div class="anim-removeclass slide anim-continue" data-what=".alice.bigB" data-class="hidden"></div>
+            <div class="anim-addclass slide" data-what=".alice.bigB" data-class="over"></div>
+
+            <div class="anim-addclass slide" data-what=".bob.bigB" data-class="over"></div>
+
+        </div>
     </section>
 
     <section class="slide">

@@ -1,0 +1,61 @@
+.formulare {
+    position: relative;
+}
+
+.formulare * {
+    position: absolute;
+}
+
+.formulare .hidden {
+    visibility: hidden;
+}
+
+.formulare .left {
+    left: 0;
+}
+
+.formulare .right {
+    right: 0;
+}
+
+.formulare .center {
+    left: 40%;
+}
+
+.formulare .alice,
+.formulare .bob {
+    transition: all 1s ease-in-out;
+}
+
+.formulare .alice {
+    left: 76px;
+}
+.formulare .bob {
+    right: 200px;
+}
+
+.formulare .a {
+    top: 34px;
+}
+
+.formulare .g {
+    top: 92px;
+}
+
+.formulare .p {
+    top: 150px;
+}
+
+.formulare .bigA, .formulare .bigB {
+    top: 215px;
+}
+
+.formulare .alice.bigB.over {
+    top: 320px;
+    right: 200px;
+    left: auto;
+}
+
+.formulare .bigK {
+    top: 341px;
+}
