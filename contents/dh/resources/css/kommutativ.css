@@ -2,19 +2,27 @@
     text-align: center;
 }
 
-.kommutativ_original, .kommutativ_double, .kommutativ_final, .kommutativ_head {
+.kommutativ_original,
+.kommutativ_double,
+.kommutativ_final,
+.kommutativ_head {
     position: relative;
 }
 
-.alice, .bob, .kommutativ_double {
+.kommutativ .alice,
+.kommutativ .bob,
+.kommutativ_double {
     transition: all 1s ease-in-out;
 }
 
-.alice, .bob, .equals, .kommutativ_head * {
+.kommutativ .alice,
+.kommutativ .bob,
+.kommutativ .equals,
+.kommutativ_head * {
     position: absolute;
 }
 
-.hidden {
+.kommutativ .hidden {
     visibility: hidden;
 }
 
@@ -28,14 +36,14 @@
     margin-top: 6em;
 }
 
-.left {
+.kommutativ .left {
     margin-left: 30%;
 }
 
-.right {
+.kommutativ .right {
     margin-left: 70%;
 }
 
-.center {
+.kommutativ .center {
     margin-left: 48%;
 }
