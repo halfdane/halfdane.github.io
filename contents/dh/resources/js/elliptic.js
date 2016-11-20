@@ -47,6 +47,7 @@ window.dh.elliptic = (function () {
             x^3 = -ax -b + y^2
 
             */
+            // http://jsxgraph.uni-bayreuth.de/wiki/index.php/Category:Examples
             Math.sqrt(x*x*x+a.Value()*x+b.Value());
 
             return 1;
