@@ -271,17 +271,14 @@
             <div class="primegroup center">g=7 <br> p=11</div>
             <img class="form right" src="resources/img/DH-Form-small.png">
 
-            <div class="alice a hidden">17</div>
-            <div class="bob a hidden">282</div>
-
-            <div class="alice a hidden">17</div>
-            <div class="bob a hidden">282</div>
-
             <div class="alice g hidden">7</div>
             <div class="bob g hidden">7</div>
 
             <div class="alice p hidden">11</div>
             <div class="bob p hidden">11</div>
+
+            <div class="alice a hidden">17</div>
+            <div class="bob a hidden">282</div>
 
             <div class="alice bigA formular hidden">$g^{a}\:mod\:p$</div>
             <div class="alice bigA raw hidden">$7^{17}\:mod\:11$</div>
@@ -306,15 +303,15 @@
             <!-- someone selects the public parameters g, p -->
             <div class="anim-show slide" data-what=".primegroup"></div>
 
-            <!-- alice and bob choose their private keys-->
-            <div class="anim-removeclass slide" data-what=".alice.a" data-class="hidden"></div>
-            <div class="anim-removeclass slide" data-what=".bob.a" data-class="hidden"></div>
-
             <!-- alice and bob enter the public parameters-->
             <div class="anim-removeclass slide anim-continue" data-what=".alice.g" data-class="hidden"></div>
             <div class="anim-removeclass slide anim-continue" data-what=".alice.p" data-class="hidden"></div>
             <div class="anim-removeclass slide anim-continue" data-what=".bob.g" data-class="hidden"></div>
             <div class="anim-removeclass slide" data-what=".bob.p" data-class="hidden"></div>
+
+            <!-- alice and bob choose their private keys-->
+            <div class="anim-removeclass slide" data-what=".alice.a" data-class="hidden"></div>
+            <div class="anim-removeclass slide" data-what=".bob.a" data-class="hidden"></div>
 
             <!-- alice calculates her public key -->
             <div class="anim-removeclass slide" data-what=".alice.bigA.formular" data-class="hidden"></div>
