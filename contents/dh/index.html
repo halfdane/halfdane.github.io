@@ -30,6 +30,7 @@
     <link rel="stylesheet" media="screen" href="resources/css/kommutativ.css">
     <link rel="stylesheet" media="screen" href="resources/css/modulo.css">
     <link rel="stylesheet" media="screen" href="resources/css/formular.css">
+    <link rel="stylesheet" media="screen" href="resources/css/britnex.css">
 
     <!-- Required Modernizr file -->
     <script src="deck.js/modernizr.custom.js"></script>
@@ -122,7 +123,7 @@
     </section>
 
     <section class="slide">
-        <div >$$f(x) = g^a\:mod\:p$$</div>
+        <div>$$f(x) = g^a\:mod\:p$$</div>
     </section>
 
     <section class="slide">
@@ -239,7 +240,28 @@
         <p class="slide">Benutzt bitte nicht den Taschenrechner auf eurem Handy, der kann kein Modulo rechnen</p>
         <p class="slide">Nein, auch nicht der auf dem IPhone!</p>
         <p style="font-size: 150%;">www.britnex.de</p>
-        <p>Die ganze Formel in einem Stück eingeben</p>
+        <p class="slide">Die ganze Formel in einem Stück eingeben</p>
+        <p class="slide"><span>$7^{17}\:mod\:11=$</span><span class="result">${\color{red}\:6}$</span></p>
+        <p>
+            <img class="britnex 1 hidden" src="resources/img/britnex_7.png">
+            <img class="britnex 2 hidden" src="resources/img/britnex_pow.png">
+            <img class="britnex 3 hidden" src="resources/img/britnex_1.png">
+            <img class="britnex 4 hidden" src="resources/img/britnex_7.png">
+            <img class="britnex 5 hidden" src="resources/img/britnex_mod.png">
+            <img class="britnex 6 hidden" src="resources/img/britnex_1.png">
+            <img class="britnex 7 hidden" src="resources/img/britnex_1.png">
+            <img class="britnex equals hidden" src="resources/img/britnex_equals.png">
+        </p>
+        <div class="anim-removeclass slide" data-what=".britnex.1" data-class="hidden"></div>
+        <div class="anim-removeclass slide" data-what=".britnex.2" data-class="hidden"></div>
+        <div class="anim-removeclass slide anim-continue" data-what=".britnex.3" data-class="hidden"></div>
+        <div class="anim-removeclass slide" data-what=".britnex.4" data-class="hidden"></div>
+        <div class="anim-removeclass slide" data-what=".britnex.5" data-class="hidden"></div>
+        <div class="anim-removeclass slide anim-continue" data-what=".britnex.6" data-class="hidden"></div>
+        <div class="anim-removeclass slide" data-what=".britnex.7" data-class="hidden"></div>
+        <div class="anim-removeclass slide" data-what=".britnex.equals" data-class="hidden"></div>
+
+        <div class="anim-show slide" data-what=".result"></div>
     </section>
 
     <section class="slide">
@@ -370,6 +392,7 @@
     TeX: {extensions: ["color.js"]},
     tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']],
     displayMath: [['\\[','\\]'], ['$$','$$']]}});
+
 </script>
 <script type="text/javascript"
         src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>

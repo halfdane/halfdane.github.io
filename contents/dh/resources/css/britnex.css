@@ -1,0 +1,11 @@
+.britnex {
+    height: 2em;
+    display: inline;
+}
+.britnex.equals {
+    height: 3em;
+}
+
+.britnex.hidden {
+    visibility: hidden;
+}
