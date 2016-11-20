@@ -13,6 +13,7 @@
 .kommutativ .bob,
 .kommutativ_double {
     transition: all 1s ease-in-out;
+    transition-property: margin-left, margin-right, margin-top;
 }
 
 .kommutativ .alice,
