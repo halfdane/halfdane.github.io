@@ -355,6 +355,11 @@
         <h1>Elliptische Kurven</h1>
     </section>
 
+
+    <section class="slide elliptic">
+        <canvas></canvas>
+    </section>
+
     <section class="slide">
         <h1>Danke</h1>
     </section>
@@ -405,8 +410,9 @@
 <script src="deck.js/extensions/events/deck.events.js"></script>
 <script src="deck.js/extensions/anim/deck.anim.js"></script>
 
-<script src="resources/js/exponential.js"></script>
 <script src="resources/js/intro.js"></script>
+<script src="resources/js/exponential.js"></script>
+<script src="resources/js/elliptic.js"></script>
 
 <script>
 
@@ -444,6 +450,7 @@
 
         $(document).bind('deck.beforeChange', createAnimationHandle('intro', dh.intro));
         $(document).bind('deck.beforeChange', createAnimationHandle('exponential', dh.exponential));
+        $(document).bind('deck.beforeChange', createAnimationHandle('elliptic', dh.elliptic));
 
     });
 </script>
