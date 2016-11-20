@@ -246,7 +246,7 @@
         <h2>Und so funktioniert's</h2>
         <div class="formulare">
             <img class="form left" src="resources/img/DH-Form-small.png">
-            <div class="primegroup center">g=7 p=11</div>
+            <div class="primegroup center">g=7 <br> p=11</div>
             <img class="form right" src="resources/img/DH-Form-small.png">
 
             <div class="alice a hidden">17</div>
@@ -261,42 +261,74 @@
             <div class="alice p hidden">11</div>
             <div class="bob p hidden">11</div>
 
+            <div class="alice bigA formular hidden">$g^{a}\:mod\:p$</div>
             <div class="alice bigA raw hidden">$7^{17}\:mod\:11$</div>
             <div class="alice bigA result hidden">6</div>
+
+            <div class="bob bigA formular hidden">$g^{a}\:mod\:p$</div>
             <div class="bob bigA raw hidden">$7^{282}\:mod\:11$</div>
             <div class="bob bigA result hidden">5</div>
 
             <div class="alice bigB hidden">6</div>
             <div class="bob bigB hidden">5</div>
 
-
+            <div class="alice bigK formular hidden">$B^{a}\:mod\:p$</div>
             <div class="alice bigK raw hidden">$5^{17}\:mod\:11$</div>
+            <div class="alice bigK result hidden">3</div>
+
+            <div class="bob bigK formular hidden">$B^{a}\:mod\:p$</div>
             <div class="bob bigK raw hidden">$6^{282}\:mod\:11$</div>
+            <div class="bob bigK result hidden">3</div>
 
 
+            <!-- someone selects the public parameters g, p -->
             <div class="anim-show slide" data-what=".primegroup"></div>
+
+            <!-- alice and bob choose their private keys-->
             <div class="anim-removeclass slide" data-what=".alice.a" data-class="hidden"></div>
             <div class="anim-removeclass slide" data-what=".bob.a" data-class="hidden"></div>
 
+            <!-- alice and bob enter the public parameters-->
             <div class="anim-removeclass slide anim-continue" data-what=".alice.g" data-class="hidden"></div>
             <div class="anim-removeclass slide anim-continue" data-what=".alice.p" data-class="hidden"></div>
-
             <div class="anim-removeclass slide anim-continue" data-what=".bob.g" data-class="hidden"></div>
             <div class="anim-removeclass slide" data-what=".bob.p" data-class="hidden"></div>
 
+            <!-- alice calculates her public key -->
+            <div class="anim-removeclass slide" data-what=".alice.bigA.formular" data-class="hidden"></div>
+            <div class="anim-addclass slide anim-continue" data-what=".alice.bigA.formular" data-class="hidden"></div>
             <div class="anim-removeclass slide" data-what=".alice.bigA.raw" data-class="hidden"></div>
             <div class="anim-addclass slide anim-continue" data-what=".alice.bigA.raw" data-class="hidden"></div>
             <div class="anim-removeclass slide" data-what=".alice.bigA.result" data-class="hidden"></div>
 
+            <!-- bob calculates his public key-->
+            <div class="anim-removeclass slide" data-what=".bob.bigA.formular" data-class="hidden"></div>
+            <div class="anim-addclass slide anim-continue" data-what=".bob.bigA.formular" data-class="hidden"></div>
             <div class="anim-removeclass slide" data-what=".bob.bigA.raw" data-class="hidden"></div>
             <div class="anim-addclass slide anim-continue" data-what=".bob.bigA.raw" data-class="hidden"></div>
             <div class="anim-removeclass slide" data-what=".bob.bigA.result" data-class="hidden"></div>
 
+            <!-- alice passes her public key over to bob -->
             <div class="anim-removeclass slide anim-continue" data-what=".alice.bigB" data-class="hidden"></div>
             <div class="anim-addclass slide" data-what=".alice.bigB" data-class="over"></div>
 
+            <!-- bob passes his public key over to alice-->
+            <div class="anim-removeclass slide anim-continue" data-what=".bob.bigB" data-class="hidden"></div>
             <div class="anim-addclass slide" data-what=".bob.bigB" data-class="over"></div>
 
+            <!-- alice calculates the shared key-->
+            <div class="anim-removeclass slide" data-what=".alice.bigK.formular" data-class="hidden"></div>
+            <div class="anim-addclass slide anim-continue" data-what=".alice.bigK.formular" data-class="hidden"></div>
+            <div class="anim-removeclass slide" data-what=".alice.bigK.raw" data-class="hidden"></div>
+            <div class="anim-addclass slide anim-continue" data-what=".alice.bigK.raw" data-class="hidden"></div>
+            <div class="anim-removeclass slide" data-what=".alice.bigK.result" data-class="hidden"></div>
+
+            <!-- bob calculates the shared key-->
+            <div class="anim-removeclass slide" data-what=".bob.bigK.formular" data-class="hidden"></div>
+            <div class="anim-addclass slide anim-continue" data-what=".bob.bigK.formular" data-class="hidden"></div>
+            <div class="anim-removeclass slide" data-what=".bob.bigK.raw" data-class="hidden"></div>
+            <div class="anim-addclass slide anim-continue" data-what=".bob.bigK.raw" data-class="hidden"></div>
+            <div class="anim-removeclass slide" data-what=".bob.bigK.result" data-class="hidden"></div>
         </div>
     </section>
 

@@ -1,5 +1,6 @@
 .formulare {
     position: relative;
+    text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
 }
 
 .formulare * {
@@ -18,13 +19,17 @@
     right: 0;
 }
 
-.formulare .center {
-    left: 40%;
+.formulare .primegroup {
+    left: 44%;
+    border: medium solid blue;
+    padding: 11px;
+    border-radius: 16px;
 }
 
 .formulare .alice,
 .formulare .bob {
     transition: all 1s ease-in-out;
+    transition-property: left, right, top;
 }
 
 .formulare .alice {
@@ -47,15 +52,32 @@
 }
 
 .formulare .bigA, .formulare .bigB {
-    top: 215px;
+    top: 213px;
 }
 
+.formulare .bigB.over {
+    top: 270px;
+}
+
+.formulare .alice.bigB {
+    right: 80%;
+    left: auto;
+}
 .formulare .alice.bigB.over {
-    top: 320px;
     right: 200px;
     left: auto;
 }
 
+.formulare .bob.bigB {
+    left: 80%;
+    right: auto;
+}
+
+.formulare .bob.bigB.over {
+    left: 76px;
+    right: auto;
+}
+
 .formulare .bigK {
-    top: 341px;
+    top: 333px;
 }
