@@ -30,6 +30,7 @@
     <link rel="stylesheet" media="screen" href="resources/css/kommutativ.css">
     <link rel="stylesheet" media="screen" href="resources/css/modulo.css">
     <link rel="stylesheet" media="screen" href="resources/css/formular.css">
+    <link rel="stylesheet" media="screen" href="resources/css/britnex.css">
 
     <!-- Required Modernizr file -->
     <script src="deck.js/modernizr.custom.js"></script>
@@ -122,7 +123,7 @@
     </section>
 
     <section class="slide">
-        <div >$$f(x) = g^a\:mod\:p$$</div>
+        <div>$$f(x) = g^a\:mod\:p$$</div>
     </section>
 
     <section class="slide">
@@ -239,14 +240,35 @@
         <p class="slide">Benutzt bitte nicht den Taschenrechner auf eurem Handy, der kann kein Modulo rechnen</p>
         <p class="slide">Nein, auch nicht der auf dem IPhone!</p>
         <p style="font-size: 150%;">www.britnex.de</p>
-        <p>Die ganze Formel in einem Stück eingeben</p>
+        <p class="slide">Die ganze Formel in einem Stück eingeben</p>
+        <p class="slide"><span>$7^{17}\:mod\:11=$</span><span class="result">${\color{red}\:6}$</span></p>
+        <p>
+            <img class="britnex 1 hidden" src="resources/img/britnex_7.png">
+            <img class="britnex 2 hidden" src="resources/img/britnex_pow.png">
+            <img class="britnex 3 hidden" src="resources/img/britnex_1.png">
+            <img class="britnex 4 hidden" src="resources/img/britnex_7.png">
+            <img class="britnex 5 hidden" src="resources/img/britnex_mod.png">
+            <img class="britnex 6 hidden" src="resources/img/britnex_1.png">
+            <img class="britnex 7 hidden" src="resources/img/britnex_1.png">
+            <img class="britnex equals hidden" src="resources/img/britnex_equals.png">
+        </p>
+        <div class="anim-removeclass slide" data-what=".britnex.1" data-class="hidden"></div>
+        <div class="anim-removeclass slide" data-what=".britnex.2" data-class="hidden"></div>
+        <div class="anim-removeclass slide anim-continue" data-what=".britnex.3" data-class="hidden"></div>
+        <div class="anim-removeclass slide" data-what=".britnex.4" data-class="hidden"></div>
+        <div class="anim-removeclass slide" data-what=".britnex.5" data-class="hidden"></div>
+        <div class="anim-removeclass slide anim-continue" data-what=".britnex.6" data-class="hidden"></div>
+        <div class="anim-removeclass slide" data-what=".britnex.7" data-class="hidden"></div>
+        <div class="anim-removeclass slide" data-what=".britnex.equals" data-class="hidden"></div>
+
+        <div class="anim-show slide" data-what=".result"></div>
     </section>
 
     <section class="slide">
         <h2>Und so funktioniert's</h2>
         <div class="formulare">
             <img class="form left" src="resources/img/DH-Form-small.png">
-            <div class="primegroup center">g=7 p=11</div>
+            <div class="primegroup center">g=7 <br> p=11</div>
             <img class="form right" src="resources/img/DH-Form-small.png">
 
             <div class="alice a hidden">17</div>
@@ -261,42 +283,74 @@
             <div class="alice p hidden">11</div>
             <div class="bob p hidden">11</div>
 
+            <div class="alice bigA formular hidden">$g^{a}\:mod\:p$</div>
             <div class="alice bigA raw hidden">$7^{17}\:mod\:11$</div>
             <div class="alice bigA result hidden">6</div>
+
+            <div class="bob bigA formular hidden">$g^{a}\:mod\:p$</div>
             <div class="bob bigA raw hidden">$7^{282}\:mod\:11$</div>
             <div class="bob bigA result hidden">5</div>
 
             <div class="alice bigB hidden">6</div>
             <div class="bob bigB hidden">5</div>
 
-
+            <div class="alice bigK formular hidden">$B^{a}\:mod\:p$</div>
             <div class="alice bigK raw hidden">$5^{17}\:mod\:11$</div>
+            <div class="alice bigK result hidden">3</div>
+
+            <div class="bob bigK formular hidden">$B^{a}\:mod\:p$</div>
             <div class="bob bigK raw hidden">$6^{282}\:mod\:11$</div>
+            <div class="bob bigK result hidden">3</div>
 
 
+            <!-- someone selects the public parameters g, p -->
             <div class="anim-show slide" data-what=".primegroup"></div>
+
+            <!-- alice and bob choose their private keys-->
             <div class="anim-removeclass slide" data-what=".alice.a" data-class="hidden"></div>
             <div class="anim-removeclass slide" data-what=".bob.a" data-class="hidden"></div>
 
+            <!-- alice and bob enter the public parameters-->
             <div class="anim-removeclass slide anim-continue" data-what=".alice.g" data-class="hidden"></div>
             <div class="anim-removeclass slide anim-continue" data-what=".alice.p" data-class="hidden"></div>
-
             <div class="anim-removeclass slide anim-continue" data-what=".bob.g" data-class="hidden"></div>
             <div class="anim-removeclass slide" data-what=".bob.p" data-class="hidden"></div>
 
+            <!-- alice calculates her public key -->
+            <div class="anim-removeclass slide" data-what=".alice.bigA.formular" data-class="hidden"></div>
+            <div class="anim-addclass slide anim-continue" data-what=".alice.bigA.formular" data-class="hidden"></div>
             <div class="anim-removeclass slide" data-what=".alice.bigA.raw" data-class="hidden"></div>
             <div class="anim-addclass slide anim-continue" data-what=".alice.bigA.raw" data-class="hidden"></div>
             <div class="anim-removeclass slide" data-what=".alice.bigA.result" data-class="hidden"></div>
 
+            <!-- bob calculates his public key-->
+            <div class="anim-removeclass slide" data-what=".bob.bigA.formular" data-class="hidden"></div>
+            <div class="anim-addclass slide anim-continue" data-what=".bob.bigA.formular" data-class="hidden"></div>
             <div class="anim-removeclass slide" data-what=".bob.bigA.raw" data-class="hidden"></div>
             <div class="anim-addclass slide anim-continue" data-what=".bob.bigA.raw" data-class="hidden"></div>
             <div class="anim-removeclass slide" data-what=".bob.bigA.result" data-class="hidden"></div>
 
+            <!-- alice passes her public key over to bob -->
             <div class="anim-removeclass slide anim-continue" data-what=".alice.bigB" data-class="hidden"></div>
             <div class="anim-addclass slide" data-what=".alice.bigB" data-class="over"></div>
 
+            <!-- bob passes his public key over to alice-->
+            <div class="anim-removeclass slide anim-continue" data-what=".bob.bigB" data-class="hidden"></div>
             <div class="anim-addclass slide" data-what=".bob.bigB" data-class="over"></div>
 
+            <!-- alice calculates the shared key-->
+            <div class="anim-removeclass slide" data-what=".alice.bigK.formular" data-class="hidden"></div>
+            <div class="anim-addclass slide anim-continue" data-what=".alice.bigK.formular" data-class="hidden"></div>
+            <div class="anim-removeclass slide" data-what=".alice.bigK.raw" data-class="hidden"></div>
+            <div class="anim-addclass slide anim-continue" data-what=".alice.bigK.raw" data-class="hidden"></div>
+            <div class="anim-removeclass slide" data-what=".alice.bigK.result" data-class="hidden"></div>
+
+            <!-- bob calculates the shared key-->
+            <div class="anim-removeclass slide" data-what=".bob.bigK.formular" data-class="hidden"></div>
+            <div class="anim-addclass slide anim-continue" data-what=".bob.bigK.formular" data-class="hidden"></div>
+            <div class="anim-removeclass slide" data-what=".bob.bigK.raw" data-class="hidden"></div>
+            <div class="anim-addclass slide anim-continue" data-what=".bob.bigK.raw" data-class="hidden"></div>
+            <div class="anim-removeclass slide" data-what=".bob.bigK.result" data-class="hidden"></div>
         </div>
     </section>
 
@@ -338,6 +392,7 @@
     TeX: {extensions: ["color.js"]},
     tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']],
     displayMath: [['\\[','\\]'], ['$$','$$']]}});
+
 </script>
 <script type="text/javascript"
         src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
