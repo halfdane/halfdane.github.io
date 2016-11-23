@@ -6,17 +6,34 @@ window.dh.elliptic2 = (function () {
 
     var steps = (function () {
         var running = false;
+
+        var objects = {};
+
         var steps = [
             function () {
+                objects.graph = objects.board.create('functiongraph', [objects.ellipticFunction]);
+                objects.board.create('functiongraph', [objects.negEllipticFunction]);
+            },
+            function () {
+                var point = objects.board.create('glider', [objects.graph]);
+                var q2 = objects.board.create('point', [function () {
+                    return point.X() + 0.01;
+                },
+                    function () {
+                        return objects.ellipticFunction(point.X() + 0.01);
+                    }], {face: '[]', size: 2});
 
+                objects.board.create('line', [point, q2], {strokeColor: '#ff0000', dash: 2});
             }
         ];
         var currentStep = 0;
 
-        function init() {
+        function init(board, ellipticFunction, negEllipticFunction) {
             running = true;
             currentStep = 0;
-
+            objects.board = board;
+            objects.ellipticFunction = ellipticFunction;
+            objects.negEllipticFunction = negEllipticFunction;
         }
 
         function stop() {
@@ -45,7 +62,6 @@ window.dh.elliptic2 = (function () {
     })();
 
     function init(target) {
-        steps.init();
         var a = -3;
         var b = 3;
 
@@ -58,21 +74,7 @@ window.dh.elliptic2 = (function () {
             return -f(x);
         };
 
-        board.create('functiongraph', [f]);
-        board.create('functiongraph', [fNeg]);
-
-
-        board = JXG.JSXGraph.initBoard('box2', {boundingbox: [-5, 10, 7, -6], axis: true});
-
-        // var f = function (x) {
-        //     return (Math.abs(x));
-        // };
-        // qf2 = board.create('point', [function () {
-        //     return qf.X() + sf.Value();
-        // },
-        //     function () {
-        //         return f(qf.X() + sf.Value());
-        //     }], {face: '[]', size: 2});
+        steps.init(board, f, fNeg);
     }
 
     return {
