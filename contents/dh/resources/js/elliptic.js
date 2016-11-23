@@ -39,7 +39,7 @@ window.dh.elliptic = (function () {
         var b = 3;
         //y^2 = x^3 -3x + 3;
 
-        var xEquationFunction = function (y) {
+        var equationFunction = function (x) {
             /*
             y^2 = x^3 -3x + 3;
 
@@ -48,23 +48,16 @@ window.dh.elliptic = (function () {
 
             */
             // http://jsxgraph.uni-bayreuth.de/wiki/index.php/Category:Examples
-            Math.sqrt(x*x*x+a.Value()*x+b.Value());
-
-            return 1;
+            return Math.sqrt(x*x*x + a*x + b);
         };
 
-        var yEquationFunction = function (x) {
-            //y2 = x3 + ax + b;
-            return 0;
-        };
 
         function draw() {
             scaled.draw(function (ctx, iteration, maxX, maxY, scaleX, scaleY) {
-                for (var x = 0 + iteration; x <= maxX; x += iteration) {
-                    for (var y = 0 + iteration; y <= maxY; y += iteration) {
-                        ctx.fillStyle = 'red';
-                        ctx.fillRect(xEquationFunction(y), yEquationFunction(x), 2 / scaleX, 2 / scaleY);
-                    }
+                for (var x = -maxX + iteration; x <= maxX; x += iteration) {
+                    ctx.fillStyle = 'red';
+                    ctx.fillRect(x, equationFunction(x), 2 / scaleX, 2 / scaleY);
+                    ctx.fillRect(x, -equationFunction(x), 2 / scaleX, 2 / scaleY);
                 }
             });
         }
