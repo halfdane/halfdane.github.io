@@ -32,6 +32,9 @@
     <link rel="stylesheet" media="screen" href="resources/css/formular.css">
     <link rel="stylesheet" media="screen" href="resources/css/britnex.css">
 
+    <link rel="stylesheet" type="text/css" href="resources/css/jsxgraph.css"/>
+    <script type="text/javascript" src="resources/js/jsxgraphcore.js"></script>
+
     <!-- Required Modernizr file -->
     <script src="deck.js/modernizr.custom.js"></script>
 </head>
@@ -47,7 +50,7 @@
     </section>
 
     <section class="slide intro">
-        <canvas></canvas>
+        <canvas class="content"></canvas>
         <aside style="display: none">
             <ul>
                 <li>Wenn ich im Internet etwas</li>
@@ -175,7 +178,7 @@
     </section>
 
     <section class="slide exponential">
-        <canvas></canvas>
+        <canvas class="content"></canvas>
     </section>
 
     <section class="slide kommutativ">
@@ -357,7 +360,11 @@
 
 
     <section class="slide elliptic">
-        <canvas></canvas>
+        <canvas class="content"></canvas>
+    </section>
+
+    <section class="slide elliptic2">
+        <div class="jxgbox content"></div>
     </section>
 
     <section class="slide">
@@ -410,9 +417,11 @@
 <script src="deck.js/extensions/events/deck.events.js"></script>
 <script src="deck.js/extensions/anim/deck.anim.js"></script>
 
+<script src="resources/js/stepper.js"></script>
 <script src="resources/js/intro.js"></script>
 <script src="resources/js/exponential.js"></script>
 <script src="resources/js/elliptic.js"></script>
+<script src="resources/js/elliptic2.js"></script>
 
 <script>
 
@@ -435,12 +444,14 @@
             }
             if (isSteppableComing && (!currentHasMoreSteps || !isGoingRight)) {
 
-                var $canvas = upComing.find('canvas')
+                var $content = upComing.find('.content')
+                        .attr('id', className)
                         .width('100%')
                         .prop({width: 500, height: 500})
+                        .css({width: 500, height: 500})
                         .trigger('resize.deckscale');
 
-                steppable.init($canvas[0]);
+                steppable.init($content[0]);
             }
         };
     }
@@ -451,6 +462,7 @@
         $(document).bind('deck.beforeChange', createAnimationHandle('intro', dh.intro));
         $(document).bind('deck.beforeChange', createAnimationHandle('exponential', dh.exponential));
         $(document).bind('deck.beforeChange', createAnimationHandle('elliptic', dh.elliptic));
+        $(document).bind('deck.beforeChange', createAnimationHandle('elliptic2', dh.elliptic2));
 
     });
 </script>
