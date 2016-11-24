@@ -358,11 +358,6 @@
         <h1>Elliptische Kurven</h1>
     </section>
 
-
-    <section class="slide elliptic">
-        <canvas class="content"></canvas>
-    </section>
-
     <section class="slide elliptic2">
         <div class="jxgbox content"></div>
     </section>
@@ -402,6 +397,7 @@
     tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']],
     displayMath: [['\\[','\\]'], ['$$','$$']]}});
 
+
 </script>
 <script type="text/javascript"
         src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
@@ -420,7 +416,6 @@
 <script src="resources/js/stepper.js"></script>
 <script src="resources/js/intro.js"></script>
 <script src="resources/js/exponential.js"></script>
-<script src="resources/js/elliptic.js"></script>
 <script src="resources/js/elliptic2.js"></script>
 
 <script>
@@ -447,8 +442,8 @@
                 var $content = upComing.find('.content')
                         .attr('id', className)
                         .width('100%')
-                        .prop({width: 500, height: 500})
-                        .css({width: 500, height: 500})
+                        .prop({width: 700, height: 700})
+                        .css({width: 700, height: 700, margin: 'auto'})
                         .trigger('resize.deckscale');
 
                 steppable.init($content[0]);
@@ -461,7 +456,6 @@
 
         $(document).bind('deck.beforeChange', createAnimationHandle('intro', dh.intro));
         $(document).bind('deck.beforeChange', createAnimationHandle('exponential', dh.exponential));
-        $(document).bind('deck.beforeChange', createAnimationHandle('elliptic', dh.elliptic));
         $(document).bind('deck.beforeChange', createAnimationHandle('elliptic2', dh.elliptic2));
 
     });
