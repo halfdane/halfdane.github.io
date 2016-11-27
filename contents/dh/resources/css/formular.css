@@ -19,15 +19,29 @@
     right: 0;
 }
 
-.formulare .primegroup {
+.formulare .center {
     left: 44%;
+}
+
+.formulare .primegroup {
     border: medium solid blue;
     padding: 11px;
     border-radius: 16px;
 }
 
+.formulare .dh_formula1 {
+    top: 6.6em;
+}
+
+.formulare .dh_formula2 {
+    top: 11em;
+}
+
 .formulare .alice,
-.formulare .bob {
+.formulare .bob,
+.formulare .alice *,
+.formulare .bob * {
+    font-weight: bold;
     transition: all 1s ease-in-out;
     transition-property: left, right, top;
 }
@@ -35,8 +49,13 @@
 .formulare .alice {
     left: 76px;
 }
+
 .formulare .bob {
-    right: 200px;
+    right: 170px;
+}
+
+.formulare .bob.raw {
+    right: 335px;
 }
 
 .formulare .g {
@@ -63,8 +82,9 @@
     right: 80%;
     left: auto;
 }
+
 .formulare .alice.bigB.over {
-    right: 200px;
+    right: 170px;
     left: auto;
 }
 
