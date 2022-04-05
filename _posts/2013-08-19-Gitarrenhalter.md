@@ -16,4 +16,4 @@ Die Instrumente brauchen nach hinten etwa fünfeinhalb cm Platz zum schwingen, u
 
 An die Wand geworfen – fertig.
 
-{% include figure image_path="/assets/images/gitarren2.jpg" alt="Halter mit Fingern" caption="Nahansicht des Halters mit "Fingern"." %}
+{% include figure image_path="/assets/images/gitarren2.jpg" alt="Halter mit Fingern" caption="Nahansicht des Halters mit 'Fingern'." %}
