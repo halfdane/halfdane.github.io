@@ -32,14 +32,23 @@ author:
   bio      : "Software Engineer by trade, reckless tinkerer by passion."
   location : "Germany"
   links:
-    - label: "Reddit Handle"
-      url: "https://www.reddit.com/user/half_dane/"
-    - label: "Gamestop profile"
-      url: "https://beta.nft.gamestop.com/halfdane.eth"
     - label: "Superstonk"
       url: "https://www.reddit.com/r/Superstonk/"
+
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/halfdane"
+    - label: "Reddit"
+      icon: "fab fa-fw fa-reddit"
+      url: "https://www.reddit.com/user/half_dane"
     - label: "halfdane.eth"
+      icon: "fab fa-fw fa-ethereum"
       url: "https://etherscan.io/address/0xff33d93d62735088abdb8d8489d0e95367266926"
+    - label: "Gamestop profile"
+      url: "https://beta.nft.gamestop.com/halfdane.eth"
+
 
 
 minimal_mistakes_skin: "dark"
