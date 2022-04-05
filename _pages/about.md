@@ -3,6 +3,7 @@ layout: page
 title: About
 header: About
 group: navigation
+permalink: /about/
 ---
 
 ### Canned
