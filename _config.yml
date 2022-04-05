@@ -19,6 +19,14 @@ defaults:
     values:
       show_date: true
       read_time: true
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+
 
 social:
   links:
@@ -46,13 +54,15 @@ footer:
     - label: "halfdane.eth"
       icon: "fab fa-fw fa-ethereum"
       url: "https://etherscan.io/address/0xff33d93d62735088abdb8d8489d0e95367266926"
-    - label: "Gamestop profile"
+    - label: "Gamestop NFT Marketplace"
       url: "https://beta.nft.gamestop.com/halfdane.eth"
 
 
 
 minimal_mistakes_skin: "dark"
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+
+include: ["_pages"]
 
 plugins:
   - jekyll-paginate
