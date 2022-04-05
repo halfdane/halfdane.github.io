@@ -1,3 +1,15 @@
+title: "Canned Nerd"
+subtitle: "Navigate By Sight"
+name: "halfdane"
+
+description: | 
+  Sometimes, I'm a little bit like a squirrel: I'll do whatever catches my fancy.
+  At least in my private time.
+  This is where I keep what I've done.
+url: "https://halfdane.github.io"
+
+
+minimal_mistakes_skin: "dark"
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 
 plugins:
