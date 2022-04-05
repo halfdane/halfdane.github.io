@@ -1,8 +1,13 @@
 ---
-category: nerdery
-tags: [blender, linux, shapeways]
+title: "Shapeways"
+categories:
+- nerdery
+tags:
+- blender
+- linux
+- shapeways
 ---
-# Shapeways
+
 Dass 3D-Drucken “die Zukunft der Fabrikation ist” und eine zweite industrielle Revolution verursachen wird, interessiert mich nicht so sehr wie die Tatsache, dass ich damit irgendwelche Sachen aus meinem Computer herstellen kann.
 
 Sachen machen, das finde ich toll – leider kann ich nur mit Holz einerseits und ‘nem Lötkolben andererseits vernünftig umgehen. Glas, Metall, Keramik und Plastik sind mir völlig unzugänglich.
