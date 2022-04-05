@@ -27,8 +27,8 @@ Eher nicht so super – zumindest nichts, was ich unbedingt gedruckt haben wollt
 
 Beim nächsten Versuch wollte ich gerne mit Flüssigkeitssimulationen spielen und das Ergebnis war dann schon etwas beeindruckender:
 
-{% image blender_water.png "Fett" %}
+{% include figure image_path="/assets/images/blender_water.png" alt="Fett" caption="
 Eindrucksvolles Bild von simuliertem Wasser, das in ein simuliertes Glass gegossen wird.
-{% endimage %}
+" %}
 
 Das ist zwar immer noch nicht mit einem 3D-Drucker druckbar, aber zumindest muss ich mich damit nicht mehr verstecken :)

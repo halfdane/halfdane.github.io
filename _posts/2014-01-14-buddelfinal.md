@@ -12,22 +12,22 @@ Genug experimentiert, jetzt geht es los. Mit dem Prototypen habe ich gelernt, wi
 Den Rumpf nicht aus Balsaholz zu machen hatte ich mich ja schon recht früh entschieden, auch dass er so groß sein sollte, das er nur in mehreren Teilen durch den Flaschenhals kommt. Zusammen mit der Flaschenform, auf die ich ja nun keinen Einfluss hatte, und der Entscheidung, die Rickmer Rickmers zu bauen ist das alles mehr als genug, um ein paar Pläne zu zeichnen:
 
 {% gallery "p30" %}
-{% image buddel_f_plan1.jpg "Schiff in der Buddel als Übersicht" %}
+{% include figure image_path="/assets/images/buddel_f_plan1.jpg" alt="Schiff in der Buddel als Übersicht" caption="
 So hatte ich mir vorgestellt, dass das Schiff in der Buddel aussehen würde - bei der Anzahl der Segel und dem Mast/Rumpf-Verhältnis habe ich bei der Ausführung etwas geschummelt, aber insgesamt hat das meiste überraschend gut geklappt.
-{% endimage %}
+" %}
 
-{% image buddel_f_plan2.jpg "Mast-Mechaniken permutiert" %}
+{% include figure image_path="/assets/images/buddel_f_plan2.jpg" alt="Mast-Mechaniken permutiert" caption="
 Um ein Gefühl dafür zu bekommen, wie so ein umklappbarer Mast auf dem Rumpf befestigt werden kann, habe ich ein paar Variationen und ihre Vor- und Nachteile einmal durchgespielt. Und die meisten verworfen.
-{% endimage %}
+" %}
 
-{% image buddel_f_plan3.jpg "Rumpf in Teilen und Segeldetails" %}
+{% include figure image_path="/assets/images/buddel_f_plan3.jpg" alt="Rumpf in Teilen und Segeldetails" caption="
 Der Rumpf soll auf jeden Fall mehrteilig in die Flasche und das geht ja nicht von selbst. Rechts und unten sind Detailansichten der Segelarten, die an dem Schiff vorkommen. Ich freue mich besonders über das Gaffelsegel am Besanmast :)
-{% endimage %}
+" %}
 
-{% image buddel_f_plan4.jpg "Rah-Details und Szenerie in der Flasche" %}
+{% include figure image_path="/assets/images/buddel_f_plan4.jpg" alt="Rah-Details und Szenerie in der Flasche" caption="
 Um ein bisschen Dynamik in die Flasche zu bringen, soll das Schiff mit geblähten Segeln durch Wellen stampfen in dem Moment eingefroren sein, in dem es gerade auf einen Wellenkamm steigt. Das Wasser soll grau eingefärbt und stürmisch aufgepeitscht sein. Dieser Teil des Plans hat sich als zu kompliziert für mich herausgestellt, und ich bin letzlich auf klares und nur leicht gewelltes Wasser umgestiegen.
 Also eher friedliche Südsee als wilder Kattegat.
-{% endimage %}
+" %}
 
 {% endgallery %}
 
@@ -45,37 +45,37 @@ Insgesamt habe ich für diesen Schritt drei Durchgänge gebraucht. Die besondere
 Wie bei den Rumpfteilen gibt es auch hier einen kleinen Nuppel aus einem Schaschlick-Spieß-Stückchen, das in ein genau passend gegenüberliegendes Loch (Bleistift-Späne zwischen zusammengehörigen Teilen helfen dabei, die Markierungen richtig zu machen) rutschen kann. So hält alles gut zusammen.
 
 {% gallery "p50" %}
-{% image buddel_f_rohrumpf1.jpg "Zubehör zum Schiffsrumpf" %}
+{% include figure image_path="/assets/images/buddel_f_rohrumpf1.jpg" alt="Zubehör zum Schiffsrumpf" caption="
 Vierkantleiste für den Rumpf, sehr schmale Leiste für's Oberdeck und Laubsäge mit kaputtem Sägeblatt - finde den Fehler.
-{% endimage %}
+" %}
 
-{% image buddel_f_rohrumpf2.jpg "Fertiger Rumpf" %}
+{% include figure image_path="/assets/images/buddel_f_rohrumpf2.jpg" alt="Fertiger Rumpf" caption="
 Die drei Schichten von Kiel, Hauptrumpf und Oberdeck zusammengesteckt.
-{% endimage %}
+" %}
 
-{% image buddel_f_rohrumpf3.jpg "Oberdeck-Detail" %}
+{% include figure image_path="/assets/images/buddel_f_rohrumpf3.jpg" alt="Oberdeck-Detail" caption="
 Das Oberdeck mit den Führungsleisten und dem Schaschlick-Nippel.
-{% endimage %}
+" %}
 
-{% image buddel_f_rohrumpf4.jpg "Kiel-Detail" %}
+{% include figure image_path="/assets/images/buddel_f_rohrumpf4.jpg" alt="Kiel-Detail" caption="
 Der Kiel hängt mit zwei Schaschlick-Nippeln an den beiden Teilen des Hauptrumpfs.
-{% endimage %}
+" %}
 
-{% image buddel_f_rohrumpf5.jpg "Hauptrumpf-Detail" %}
+{% include figure image_path="/assets/images/buddel_f_rohrumpf5.jpg" alt="Hauptrumpf-Detail" caption="
 Der Hauptrumpf der Länge nach zerlegt.
-{% endimage %}
+" %}
 
-{% image buddel_f_rohrumpf6.jpg "Hauptrumpf passt in Flasche" %}
+{% include figure image_path="/assets/images/buddel_f_rohrumpf6.jpg" alt="Hauptrumpf passt in Flasche" caption="
 Der Hauptrumpf passt durch den Flaschenhals.
-{% endimage %}
+" %}
 
-{% image buddel_f_rohrumpf7.jpg "Hauptrumpf passt in Flasche 2" %}
+{% include figure image_path="/assets/images/buddel_f_rohrumpf7.jpg" alt="Hauptrumpf passt in Flasche 2" caption="
 Passt grade mal so - vom Nippel rechts am Flaschenhals musste noch ein bisschen ab, damit es geht.
-{% endimage %}
+" %}
 
-{% image buddel_f_rohrumpf8.jpg "Innenansicht" %}
+{% include figure image_path="/assets/images/buddel_f_rohrumpf8.jpg" alt="Innenansicht" caption="
 Der Rumpf ohne linkes Hauptrumpf-Teil - eine Innenansicht.
-{% endimage %}
+" %}
 
 {% endgallery %}
 
@@ -83,17 +83,17 @@ Der Rumpf ohne linkes Hauptrumpf-Teil - eine Innenansicht.
 Es sind diesmal wesentlich mehr Masten als beim Prototypen, und schon da haben sie die Hauptarbeit verursacht. Aber bangemachen gilt nicht: die Zahnstocher und Schaschlickspieße maßstabsgerecht (naja, frei nach Schnauze) zugeschnitten und weiß lackiert - B. fand es angemessen, dass zumindest eines seiner Playmobil-Männchen hilft. Ja, und in Anbetracht der fürchterlichen Menge von Rahen auf der Rickmers fiel mit die Entscheidung leicht, ein bisschen zu schummeln und keine sechs Segel an jeden Mast zu hängen sondern höchstens vier, das erleichtert die Arbeit weil mehr Platz ist und es sieht auch nicht so pisselig klitzeklein aus.
 
 {% gallery "p50" %}
-{% image buddel_f_masten2.jpg "Zugeschnittene Masten und Rahen" %}
+{% include figure image_path="/assets/images/buddel_f_masten2.jpg" alt="Zugeschnittene Masten und Rahen" caption="
 Die Masten und Rahen sind zugeschnitten - zwar nicht besonders maßstabsgetreu, aber für mein Landratten-Auge okay.
-{% endimage %}
+" %}
 
-{% image buddel_f_masten3.jpg "Lackierwerkstatt" %}
+{% include figure image_path="/assets/images/buddel_f_masten3.jpg" alt="Lackierwerkstatt" caption="
 Geordnet nach Mast, damit die Rahen nicht durcheinander kommen.
-{% endimage %}
+" %}
 
-{% image buddel_f_masten5.jpg "Lackierer bei der Arbeit" %}
+{% include figure image_path="/assets/images/buddel_f_masten5.jpg" alt="Lackierer bei der Arbeit" caption="
 Der Lackierer bei der Arbeit.
-{% endimage %}
+" %}
 
 {% endgallery %}
 
@@ -104,21 +104,21 @@ Außerdem ist beim Prototypen schön zu sehen, dass die Segel links und rechts a
 Als Segeltuch kommt sehr feiner Baumwollstoff, der etwa 10 Minuten mit zwei Löffeln Darjeeling gekocht wurde, zum Einsatz. Vom Prototypen war glücklicherweise noch genug übrig, dass alle Segel daraus geschnitten werden konnten.
 
 {% gallery "p50" %}
-{% image buddel_f_segel2.jpg "Segelplan für Fockmast" %}
+{% include figure image_path="/assets/images/buddel_f_segel2.jpg" alt="Segelplan für Fockmast" caption="
 Die Segel für den Fockmast: Bramsegel, Marssegel und Focksegel. Drei müssen reichen.
-{% endimage %}
+" %}
 
-{% image buddel_f_segel3.jpg "Segelplan für Großmast" %}
+{% include figure image_path="/assets/images/buddel_f_segel3.jpg" alt="Segelplan für Großmast" caption="
 Die Segel für den Großmast: Bramsegel, Obermars- und Marssegel sowie Großsegel.
-{% endimage %}
+" %}
 
-{% image buddel_f_segel4.jpg "Großmast mit Segeln vorne" %}
+{% include figure image_path="/assets/images/buddel_f_segel4.jpg" alt="Großmast mit Segeln vorne" caption="
 Vorderansicht der vier Segel am Großmast.
-{% endimage %}
+" %}
 
-{% image buddel_f_segel5.jpg "Großmast mit Segeln hinten" %}
+{% include figure image_path="/assets/images/buddel_f_segel5.jpg" alt="Großmast mit Segeln hinten" caption="
 Hinteransicht: Jedes Segel ist mit vier Fäden an der oberen Rahe befestigt und mit den beiden äußeren Fäden an der darunterliegenden. Die zwei Fäden des untersten Segels werden am Deck festgeklebt.
-{% endimage %}
+" %}
 
 {% endgallery %}
 
@@ -138,17 +138,17 @@ Der Rumpf ist mit wasserlöslicher Acrylfarbe in Weiß, Grün und Rot bemalt. Me
 Jetzt ist der Punkt erreicht, an dem offensichtlich wird, wie so ein Buddelschiff funktioniert: die Masten können umgeklappt werden und mit den Fäden, die vorne herauskommen wieder aufgerichtet werden.
 
 {% gallery "p50" %}
-{% image buddel_f_kiellegung1.jpg "Der Rumpf bekommt seine Farbe" %}
+{% include figure image_path="/assets/images/buddel_f_kiellegung1.jpg" alt="Der Rumpf bekommt seine Farbe" caption="
 Der Rumpf bekommt die richtigen Farben - in drei Schichten, damit's gut deckt.
-{% endimage %}
+" %}
 
-{% image buddel_f_kiellegung2.jpg "Mit befestigten Masten" %}
+{% include figure image_path="/assets/images/buddel_f_kiellegung2.jpg" alt="Mit befestigten Masten" caption="
 Die Masten und die Wanten sind am Oberdeck befestigt.
-{% endimage %}
+" %}
 
-{% image buddel_f_kiellegung4.jpg "Stage durch Klüver" %}
+{% include figure image_path="/assets/images/buddel_f_kiellegung4.jpg" alt="Stage durch Klüver" caption="
 Die Stagen laufen wirklich _durch_ den Klüverbaum
-{% endimage %}
+" %}
 
 {% endgallery %}
 
@@ -164,73 +164,73 @@ Oder als... ach schiet op, nu is dat shipp ja drin inner buddel.
 Zur Unterstützung der habe ich die Hängestangen eines kaputten Wäscheständers zweckentfremdet: Der eine hat einen Haken ans Ende bekommen, ein weiterer eine Öse. Einen sehr feinen Pinsel, einen Zahnstocher und die Abbrech-Klinge eines Teppichmessers habe ich auch noch an Stangen untergebracht. Diese Werkzeuge haben mir gute Dienste geleistet, insbesondere beim kaschieren der diversen kleinen Fehler, die beim Reinschieben des Oberdecks mit den Masten entstanden sind.
 
 {% gallery "p50" %}
-{% image buddel_f_stapellauf01.jpg "Einzelteile" %}
+{% include figure image_path="/assets/images/buddel_f_stapellauf01.jpg" alt="Einzelteile" caption="
 Die fertigen Einzelteile, bereit zur Endmontage in der Flasche. 
-{% endimage %}
+" %}
 
-{% image buddel_f_stapellauf02.jpg "Teile mit Flasche und Werkzeug" %}
+{% include figure image_path="/assets/images/buddel_f_stapellauf02.jpg" alt="Teile mit Flasche und Werkzeug" caption="
 Die Schiffsteile und die Werkzeuge, mit denen sie in der Flasche hantiert werden können. 
-{% endimage %}
+" %}
 
-{% image buddel_f_stapellauf03.jpg "Rumpf vor der Montage" %}
+{% include figure image_path="/assets/images/buddel_f_stapellauf03.jpg" alt="Rumpf vor der Montage" caption="
 Die beiden Rumpfteile vor der Montage. 
-{% endimage %}
+" %}
 
-{% image buddel_f_stapellauf04.jpg "Rumpf nach der Montage" %}
+{% include figure image_path="/assets/images/buddel_f_stapellauf04.jpg" alt="Rumpf nach der Montage" caption="
 Die beiden Teile sind nicht so locker zusammen gerutscht wie geplant, aber letztendlich hat's geklappt. Ein Tropfen Leim hält sie in Position. 
-{% endimage %}
+" %}
 
-{% image buddel_f_stapellauf05.jpg "Blick durch den Flaschenhals" %}
+{% include figure image_path="/assets/images/buddel_f_stapellauf05.jpg" alt="Blick durch den Flaschenhals" caption="
 Ja, es ist wirklich drin. 
-{% endimage %}
+" %}
 
-{% image buddel_f_stapellauf06.jpg "Kieltransport" %}
+{% include figure image_path="/assets/images/buddel_f_stapellauf06.jpg" alt="Kieltransport" caption="
 Ein Faden um den Kiel und durch die Drahtöse gibt die nötige Stabilität, um ihn auf den Rumpf kleben zu können.
-{% endimage %}
+" %}
 
-{% image buddel_f_stapellauf07.jpg "Fertiger Rumpf im Kopfstand" %}
+{% include figure image_path="/assets/images/buddel_f_stapellauf07.jpg" alt="Fertiger Rumpf im Kopfstand" caption="
 Drei montierte Rumpfteile im Kopfstand -  möge diese Übung gelingen. 
-{% endimage %}
+" %}
 
-{% image buddel_f_stapellauf08.jpg "Fertiger Rumpf richtig herum." %}
+{% include figure image_path="/assets/images/buddel_f_stapellauf08.jpg" alt="Fertiger Rumpf richtig herum." caption="
 Tadaa, der fertige Rumpf in der Flasche. 
-{% endimage %}
+" %}
 
-{% image buddel_f_stapellauf09.jpg "Noch ein Blick durch den Flaschenhals" %}
+{% include figure image_path="/assets/images/buddel_f_stapellauf09.jpg" alt="Noch ein Blick durch den Flaschenhals" caption="
 Ja, ist immer noch drin.
-{% endimage %}
+" %}
 
-{% image buddel_f_stapellauf10.jpg "Oberdeck: bereit halten" %}
+{% include figure image_path="/assets/images/buddel_f_stapellauf10.jpg" alt="Oberdeck: bereit halten" caption="
 Das letzte Mal außerhalb der Flasche.
-{% endimage %}
+" %}
 
-{% image buddel_f_stapellauf11.jpg "Oberdeck in Flaschenhals: 1" %}
+{% include figure image_path="/assets/images/buddel_f_stapellauf11.jpg" alt="Oberdeck in Flaschenhals: 1" caption="
 Passt es?
 
 Ugh, Stückchen ...
-{% endimage %}
+" %}
 
-{% image buddel_f_stapellauf12.jpg "Oberdeck in Flaschenhals: 2" %}
+{% include figure image_path="/assets/images/buddel_f_stapellauf12.jpg" alt="Oberdeck in Flaschenhals: 2" caption="
 ... für Stückchen ...
-{% endimage %}
+" %}
 
-{% image buddel_f_stapellauf13.jpg "Oberdeck in Flaschenhals: 3" %}
+{% include figure image_path="/assets/images/buddel_f_stapellauf13.jpg" alt="Oberdeck in Flaschenhals: 3" caption="
 ... für Stückchen ...
-{% endimage %}
+" %}
 
-{% image buddel_f_stapellauf14.jpg "Oberdeck in Flaschenhals: 4" %}
+{% include figure image_path="/assets/images/buddel_f_stapellauf14.jpg" alt="Oberdeck in Flaschenhals: 4" caption="
 ... bis es ganz drin ist.
 
 Das Aufsetzen auf den Rumpf hat fast zwei Stunden gedauert und brauchte em Ende auch noch ein Gutteil roher Gewalt. Notiz an mich selbst: beim nächsten Buddelschiff (haha, also niemals) die Teile mit mehr Luft planen.
-{% endimage %}
+" %}
 
-{% image buddel_f_stapellauf16.jpg "Fertig" %}
+{% include figure image_path="/assets/images/buddel_f_stapellauf16.jpg" alt="Fertig" caption="
 Die Masten sind aufgerichtet und die Fäden verklebt und abgeschnitten.
-{% endimage %}
+" %}
 
-{% image buddel_f_stapellauf15.jpg "Pause" %}
+{% include figure image_path="/assets/images/buddel_f_stapellauf15.jpg" alt="Pause" caption="
 Für heute ist Schluss. Die Buddel bekommt ein Nachquartier im Bücherregal.
-{% endimage %}
+" %}
 
 {% endgallery %}
 
@@ -248,27 +248,27 @@ Der Wermutstropfen ist die Erkenntnis, dass es sich nicht gut einfärben lässt 
 Die Plastikfolie, die als Rutsche durch den Flaschenhals dienen sollte, ist beim ersten Experiment direkt geschmolzen, aber die leere Milchtüte hat ihren Zweck sehr schön erfüllt. 
 
 {% gallery "p50" %}
-{% image buddel_f_wasser1.jpg "Zutaten" %}
+{% include figure image_path="/assets/images/buddel_f_wasser1.jpg" alt="Zutaten" caption="
 Zutaten: eine Tüte Milch und ... Kerzengel?
 
 Lecker :/
-{% endimage %}
+" %}
 
-{% image buddel_f_wasser2.jpg "Wie Götterspeise" %}
+{% include figure image_path="/assets/images/buddel_f_wasser2.jpg" alt="Wie Götterspeise" caption="
 Kalt hat das Gel etwa die Konsistenz von sehr, sehr fester Götterspeise.
-{% endimage %}
+" %}
 
-{% image buddel_f_wasser3.jpg "Kein Gießen" %}
+{% include figure image_path="/assets/images/buddel_f_wasser3.jpg" alt="Kein Gießen" caption="
 Vom Reingießen gibt's kein Bild, da brauchte ich beide Hände. Dafür noch eins vom Gel im Topf.
-{% endimage %}
+" %}
 
-{% image buddel_f_wasser5.jpg "Drin" %}
+{% include figure image_path="/assets/images/buddel_f_wasser5.jpg" alt="Drin" caption="
 Das Wasser ist glücklich drin gelandet.
-{% endimage %}
+" %}
 
-{% image buddel_f_wasser4.jpg "Kein Atlantik" %}
+{% include figure image_path="/assets/images/buddel_f_wasser4.jpg" alt="Kein Atlantik" caption="
 Auch ohne Brille und mit zusammengekniffenen Augen wird daraus kein aufgepeitschter Atlantik ...
-{% endimage %}
+" %}
 
 {% endgallery%}
 
@@ -290,25 +290,25 @@ Noch an die Wand werfen, aber dann lass ich es auch gut sein.
 
 
 {% gallery "p50" %}
-{% image buddel_f_staender1.jpg "Ständer in Planung" %}
+{% include figure image_path="/assets/images/buddel_f_staender1.jpg" alt="Ständer in Planung" caption="
 Schnittmusterbogen für Buddelschiff-Ständer
-{% endimage %}
+" %}
 
-{% image buddel_f_staender2.jpg "Buddelschiff-Ständer in progress" %}
+{% include figure image_path="/assets/images/buddel_f_staender2.jpg" alt="Buddelschiff-Ständer in progress" caption="
 Ausgeschnittener Ständer mit Planung für Flaschenhals-Loch
-{% endimage %}
+" %}
 
-{% image buddel_f_staender3.jpg "Unmöglicher Korken" %}
+{% include figure image_path="/assets/images/buddel_f_staender3.jpg" alt="Unmöglicher Korken" caption="
 "... den kriegt man da doch unmöglich rein ..."
-{% endimage %}
+" %}
 
-{% image buddel_f_staender4.jpg "Wandhalter und Ständer unverbunden" %}
+{% include figure image_path="/assets/images/buddel_f_staender4.jpg" alt="Wandhalter und Ständer unverbunden" caption="
 Der Ständer kann jederzeit einfach aus der Wandhalterung genommen werden.
-{% endimage %}
+" %}
 
-{% image buddel_f_staender5.jpg "Wandhalter und Ständer verbunden" %}
+{% include figure image_path="/assets/images/buddel_f_staender5.jpg" alt="Wandhalter und Ständer verbunden" caption="
 Und auch wieder rein: Hält.
-{% endimage %}
+" %}
 {% endgallery %}
 
 ## Fazit(Quellen), Fehler und Fragen

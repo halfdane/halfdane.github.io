@@ -59,9 +59,9 @@ Jeder Farbblock etwa 5-6 Reihen, zu je einer halben bis einer ganzen Stunde mach
 
 Dank N. ist das Ergebnis nicht einfarbig olivgrün, sondern richtig schön. Und K. hat mich auf die Idee gebracht, dass man nicht nur auf Internetseiten und Programmen Eastereggs verstecken kann:
 
-{% image space4.jpg "Easteregg" %}
+{% include figure image_path="/assets/images/space4.jpg" alt="Easteregg" caption="
 Up-Up-Down-Down-Left-Right-Left-Right-B-A
-{% endimage %}
+" %}
 
 
 Statt des Wellenmusters habe ich hier einfach nur Stäbchen geradeaus gehäkelt und immer zwei als ein Pixel benutzt. Die jeweils andere Farbe läuft untenrum zwischen den Schlaufen fast unsichtbar mit. Keine Ahnung, ob man das so macht, aber es scheint zu funktionieren :-)
