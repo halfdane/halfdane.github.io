@@ -24,20 +24,14 @@ Aber das sollte sich diesmal ändern, schließlich wollte ich auch keine Topflap
 Groß halt. Etwa einsfuffzig mal einsachzig? Abgemacht.
 
 Also Luftmaschen sind immer noch nicht schwer:
-{% image http://www.labbe.de/zzzebra/handarbeiten/haekeln_luftmaschen1.gif "Luftmaschen" "p30" %}
-Beispielhaft bei [labbe.de](http://www.labbe.de)
-{% endimage %}
+{% include figure image_path="/assets/images/http://www.labbe.de/zzzebra/handarbeiten/haekeln_luftmaschen1.gif" alt="Luftmaschen" caption="Beispielhaft bei [labbe.de](http://www.labbe.de)" %}
 
 Stäbchen fand ich schon schwieriger:
-{% image http://www.labbe.de/zzzebra/handarbeiten/haekeln_staebchen2.gif "Luftmaschen" "p30" %}
-Wieder [labbe.de](http://www.labbe.de)
-{% endimage %}
+{% include figure image_path="/assets/images/http://www.labbe.de/zzzebra/handarbeiten/haekeln_staebchen2.gif" alt="Luftmaschen" caption="Wieder [labbe.de](http://www.labbe.de)" %}
 Um Wellen zu häkeln, ist es das vermutlich das einfachste, in regelmäßigen Abständen
 Maschen zu- und abzunehmen, zum Beispiel so:
 
-{% image space2.jpg "Wellen" "p30" %}
-Anleitungen wie Wellen gehäkelt werden, gibt es dutzendfach im Internet, aber das hier ist meine :)
-{% endimage %}
+{% include figure image_path="/assets/images/space2.jpg" alt="Wellen" caption="Anleitungen wie Wellen gehäkelt werden, gibt es dutzendfach im Internet, aber das hier ist meine :)" %}
 
 Vier Stäbchen, zwei mal zwei Maschen abnehmen, vier Stäbchen, zwei mal zwei Maschen zunehmen. Immer und immer wieder.
 

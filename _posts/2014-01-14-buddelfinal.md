@@ -313,9 +313,7 @@ Und auch wieder rein: Hält.
 
 ## Fazit(Quellen), Fehler und Fragen
 
-{% image buddel_f.jpg "Done" "p30" %}
-The deed is done. 
-{% endimage %} 
+{% include figure image_path="/assets/images/buddel_f.jpg" alt="Done" caption="The deed is done. " %} 
 
 Das hat Spaß gemacht. Dank der Hilfe vieler Internetseiten (allen voran [Ships in bottles](http://www.shipbottle.ru/english/), die verrät wirklich jeden Zaubertrick!) konnte ich dieses unmögliche Projekt tatsächlich zufriedenstellend beenden.
 Als Informations- und Inspirations-Quellen kam folgendes zum Einsatz:
