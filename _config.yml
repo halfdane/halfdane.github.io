@@ -19,6 +19,7 @@ defaults:
       layout: single
       show_date: true
       read_time: true
+      author_profile: true
   # _pages
   - scope:
       path: ""
@@ -27,21 +28,26 @@ defaults:
       layout: single
       author_profile: true
 
-
-social:
-  links:
-    - "https://www.reddit.com/user/half_dane/"
-    - "https://beta.nft.gamestop.com/halfdane.eth"
-    - "https://www.reddit.com/r/Superstonk/"
-
 author:
   name     : "HalfDane (he/him)"
   avatar   : "/assets/images/halfdane.png"
   bio      : "Software Engineer by trade, reckless tinkerer by passion."
   location : "Germany"
   links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/halfdane"
+    - label: "Reddit"
+      icon: "fab fa-fw fa-reddit"
+      url: "https://www.reddit.com/user/half_dane"
+    - label: "halfdane.eth"
+      icon: "fab fa-fw fa-ethereum"
+      url: "https://etherscan.io/address/0xff33d93d62735088abdb8d8489d0e95367266926"
+    - label: "Gamestop NFT Marketplace"
+      url: "https://beta.nft.gamestop.com/halfdane.eth"
     - label: "Superstonk"
       url: "https://www.reddit.com/r/Superstonk/"
+
 
 footer:
   links:
