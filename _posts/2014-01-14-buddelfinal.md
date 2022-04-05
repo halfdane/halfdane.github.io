@@ -144,7 +144,7 @@ Noch an die Wand werfen, aber dann lass ich es auch gut sein.
 
 {% include figure image_path="/assets/images/buddel_f_staender1.jpg" alt="Ständer in Planung" caption="Schnittmusterbogen für Buddelschiff-Ständer" %}
 {% include figure image_path="/assets/images/buddel_f_staender2.jpg" alt="Buddelschiff-Ständer in progress" caption="Ausgeschnittener Ständer mit Planung für Flaschenhals-Loch" %}
-{% include figure image_path="/assets/images/buddel_f_staender3.jpg" alt="Unmöglicher Korken" caption=""... den kriegt man da doch unmöglich rein ..."" %}
+{% include figure image_path="/assets/images/buddel_f_staender3.jpg" alt="Unmöglicher Korken" caption="\"... den kriegt man da doch unmöglich rein ...\"" %}
 {% include figure image_path="/assets/images/buddel_f_staender4.jpg" alt="Wandhalter und Ständer unverbunden" caption="Der Ständer kann jederzeit einfach aus der Wandhalterung genommen werden." %}
 {% include figure image_path="/assets/images/buddel_f_staender5.jpg" alt="Wandhalter und Ständer verbunden" caption="Und auch wieder rein: Hält." %}
 
