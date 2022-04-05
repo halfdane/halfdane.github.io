@@ -8,9 +8,7 @@ image: /assets/images/ringhalter.jpg
 
 T. wünscht sich eine Aufbewahrungsmöglichkeit für ihre Ringe. Randbedingungen sind: es soll nicht herumstehen und muss nur etwa zehn Ringe halten.
 
-{% image ringhalter.jpg "Der Ringhalter an der Wand" "right" %}
-So sieht's in Aktion aus
-{% endimage %}
+{% include figure image_path="/assets/images/ringhalter.jpg" alt="Der Ringhalter an der Wand" caption="So sieht's in Aktion aus" %}
 
 In den schön geschnitzten goldenen Bilderrahmen vom Flohmarkt habe ich vier schmale Rollen aus einem alten (aber sauberen :-) Handtuch geklebt und zunächst prototypisch mit weißem Stoff bezogen. Ein kleiner Test mit Schlüsselringen und Einkaufswagen-Chips ist vielversprechend: vermutlich passt die richtige Anzahl an Ringen hinein.
 

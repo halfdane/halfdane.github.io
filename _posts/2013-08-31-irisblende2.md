@@ -14,6 +14,4 @@ Eine fertige Blende auf der rechten Seite, zusammen mit dem Werkzeug sowie den E
 
 <p class="clearfix">Denn wenn man zwei kleine Blenden hat, bleibt einem ja gar nichts anderes übrig, als eine nerdige Steampunk-Brille daraus zu machen :</p>
 
-{% image iris2.jpg "Nerd" "p20" %}
-Halfdane ist ein Nerd :)
-{% endimage %}
+{% include figure image_path="/assets/images/iris2.jpg" alt="Nerd" caption="Halfdane ist ein Nerd :)" %}

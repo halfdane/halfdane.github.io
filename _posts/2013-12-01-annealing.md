@@ -102,25 +102,17 @@ halfdane.tsp.createAnnealing(points).solve();
 
 Insgesamt würde ich beim Anschauen des Ergebnisses sagen: ja, es funktioniert, aber mit den paar Punkten hätte ich das auch manuell machen können.
 
-{% image tsp_before.png "Ausgangstour" "p20" %}
-Ausgangstour
-{% endimage %}
+{% include figure image_path="/assets/images/tsp_before.png" alt="Ausgangstour" caption="Ausgangstour" %}
 
-{% image tsp_annealing.png "Ergebnis" "p20" %}
-Nach der simulierten Erstarrung
-{% endimage %}
+{% include figure image_path="/assets/images/tsp_annealing.png" alt="Ergebnis" caption="Nach der simulierten Erstarrung" %}
 
 Bei größeren Punktmengen (z.B. 100 Punkte) wird die Rechenzeit schon seeehr lang und das Ergebnis ist trotzdem nicht so richtig beeindruckend:
 
 
 
-{% image tsp_before1.png "Ausgangstour" "p20" %}
-100 Punkte vor dem Durchlauf
-{% endimage %}
+{% include figure image_path="/assets/images/tsp_before1.png" alt="Ausgangstour" caption="100 Punkte vor dem Durchlauf" %}
 
-{% image tsp_annealing1.png "Ergebnis" "p20" %}
-Die Ergebnistour
-{% endimage %}
+{% include figure image_path="/assets/images/tsp_annealing1.png" alt="Ergebnis" caption="Die Ergebnistour" %}
 
 ... und das waren jetzt wirklich nur nur 100 Punkte. Ich wollte eigentlich eher 20-mal so viele. Und das soll auf einem Handy laufen, nicht auf einer Workstation :/ Tja, nicht umsonst gehört das TSP zu der Klasse der echt richtig schwierigen Probleme :).
 

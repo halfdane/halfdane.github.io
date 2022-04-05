@@ -8,9 +8,7 @@ image: /assets/images/space3.jpg
 Ich hätte es eigentlich wissen müssen: häkeln ist echt langweilig! Dummerweise kam ich nun nicht drumherum.
 Aufgrund von etwas almost completely, but not quite, unlike einer Kneipenwette. Es fing ganz spaßig an: ich kann mich auch gut erinnern, das ich Luftmaschen in der 3. Klasse auch schon mochte, aber nie so recht darüber hinaus kam.
 
-{% image space1.jpg "Detailansicht" "right" %}
-Und damit ich nicht auf die Idee komme, nochmal mit so etwas anzufangen, noch eine besonders langweilige Detailansicht.
-{% endimage %}
+{% include figure image_path="/assets/images/space1.jpg" alt="Detailansicht" caption="Und damit ich nicht auf die Idee komme, nochmal mit so etwas anzufangen, noch eine besonders langweilige Detailansicht." %}
 
 Aber das sollte sich diesmal ändern, schließlich wollte ich auch keine Topflappen oder ähnliche Kinkerlitzchen häkeln, sondern eine Decke – und zwar eine Männerdecke, d.h.
 
@@ -53,9 +51,7 @@ Meine Güte, worauf hatte ich mich eingelassen: bei dem Tempo würde mir bis Mit
 
 Gut zwei Monate später, habe ich 42 (:) Knäuel Wolle verhäkelt und gut zwei Kilogramm Decke produziert:
 
-{% image space3.jpg "Unendliche Weiten" "break" %}
-Jeder Farbblock etwa 5-6 Reihen, zu je einer halben bis einer ganzen Stunde macht: EINE EWIGKEIT!
-{% endimage %}
+{% include figure image_path="/assets/images/space3.jpg" alt="Unendliche Weiten" caption="Jeder Farbblock etwa 5-6 Reihen, zu je einer halben bis einer ganzen Stunde macht: EINE EWIGKEIT!" %}
 
 Dank N. ist das Ergebnis nicht einfarbig olivgrün, sondern richtig schön. Und K. hat mich auf die Idee gebracht, dass man nicht nur auf Internetseiten und Programmen Eastereggs verstecken kann:
 
