@@ -7,6 +7,31 @@ description: |
   At least in my private time.
   This is where I keep what I've done.
 url: "https://halfdane.github.io"
+repository: "halfdane/halfdane.github.io"
+logo: "/assets/images/88x88.png"
+search: true
+
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      show_date: true
+      read_time: true
+
+social:
+  links:
+    - "https://www.reddit.com/user/half_dane/"
+    - "https://beta.nft.gamestop.com/halfdane.eth"
+    - "https://www.reddit.com/r/Superstonk/"
+
+author:
+  name     : "HalfDane (he/him)"
+  avatar   : "/assets/images/halfdane.png"
+  bio      : "Software Engineer by trade, reckless tinkerer by passion."
+  location : "Germany"
+
 
 
 minimal_mistakes_skin: "dark"
