@@ -6,7 +6,8 @@ tags:
 - html5
 - javascript
 - scrollspy
-image: scrollspy_mystery.png
+header:
+  image: /assets/images/scrollspy_mystery.png
 ---
 
 Auf einer internen Seite, die Twitter-Bootstrap nicht ganz unähnlich ist, trat das Problem auf, dass der Browser irgendwo in die Mitte der Seite gesprungen ist (also etwa so: http://twitter.github.io/bootstrap/base-css.html#forms aber ohne #forms am Ende ).
