@@ -63,10 +63,12 @@ footer:
     - label: "Gamestop NFT Marketplace"
       url: "https://beta.nft.gamestop.com/halfdane.eth"
 
-
-
 minimal_mistakes_skin: "dark"
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+
+paginate: 5 # amount of posts to show
+paginate_path: /page:num/
+
 
 plugins:
   - jekyll-paginate
@@ -83,6 +85,7 @@ exclude:
   - "*.sublime-workspace"
   - vendor
   - .asset-cache
+  - .idea
   - .bundle
   - .jekyll-assets-cache
   - .sass-cache
