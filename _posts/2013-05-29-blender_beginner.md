@@ -3,7 +3,8 @@ title: "Blender Anfänger"
 categories:
 - nerdery
 tags: [blender, linux, shapeways]
-image: /assets/images/blender_water.png
+header:
+  teaser: /assets/images/blender_water.png
 ---
 
 Ich habe inzwischen beschlossen, dass ich mit Blender doch ganz gut umgehen können muss, um bei Shapeways auf einen grünen Zweig zu kommen: die anpassbaren Modelle dort finde ich eher unbefriedigend.

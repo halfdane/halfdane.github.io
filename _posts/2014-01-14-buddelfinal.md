@@ -3,7 +3,8 @@ title: "Buddelschiff - das Finale"
 categories:
 - diy
 tags: [buddelschiff, holz, stoff, microbohrer, modellbau, zahnstocher]
-image: /assets/images/buddel_f.jpg
+header:
+  teaser: /assets/images/buddel_f.jpg
 series: buddelschiff
 ---
 Genug experimentiert, jetzt geht es los. Mit dem Prototypen habe ich gelernt, wie ich die Mastscharniere, die Segel, den Rumpf und die Takelage haben möchte. Nun geht's darum, die gemachten Fehler und gewonnenen Erkenntnisse in ein Buddelschiff zu übertragen das rockt!

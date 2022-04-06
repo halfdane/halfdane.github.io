@@ -3,7 +3,8 @@ title: "Irisblende^2"
 categories:
 - diy
 tags: [blende, pappe]
-image: /assets/images/iris1.jpg
+header:
+  teaser: /assets/images/iris1.jpg
 ---
 
 Diese [Blende](http://www.instructables.com/id/Cardboard-Aperture-v2/) lässt sich recht einfach nachbauen und nachdem ich letzte Woche einen größeren Prototypen aus Wellpappe gemacht habe und alles gut funktioniert hat, habe ich mich heute an eine verkleinerte Version gemacht.

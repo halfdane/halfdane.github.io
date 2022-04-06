@@ -3,7 +3,8 @@ title: "TSP in JavaScript (Greedy)"
 categories:
 - Javascript
 tags: [javascript, tsp, greedy algorithm, momo]
-image: /assets/images/tsp_greedy.png
+header:
+  teaser: /assets/images/tsp_greedy.png
 resources: [/assets/js/tsp/delaunay.js, /assets/js/tsp/tspBase.js, /assets/js/tsp/nearestNeighbourTsp.js]
 series: js-tsp
 ---

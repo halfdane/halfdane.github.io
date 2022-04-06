@@ -3,7 +3,8 @@ title: "Wandhalterung für Gitarren"
 categories:
 - diy
 tags: [holz, gitarre]
-image: /assets/images/gitarren1.jpg
+header:
+  teaser: /assets/images/gitarren1.jpg
 ---
 
 Klingen ja schön, stehen aber ständig im Weg. Und die käuflichen Halterungen sind echt nicht so wahnsinnig schön.

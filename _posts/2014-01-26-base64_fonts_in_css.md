@@ -3,7 +3,8 @@ title: "Schriften _wirklich_ in Css einbinden"
 categories:
 - Html
 tags: [css, fonts, typhographie]
-image: /assets/images/font_embed.png
+header:
+  teaser: /assets/images/font_embed.png
 ---
 Ja ja, embedded fonts in Css sind ein totgerittenes Pferd. Allerdings wird immer nur darüber geredet, wie ein Font-File auf einem Server referenziert wird, am besten auch noch über [Google-Fonts](http://www.google.com/fonts) und das ist einfach falsch, denn das ist eigentlich genau das Gegenteil eines eingebetteten Fonts.
 

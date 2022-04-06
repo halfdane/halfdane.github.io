@@ -3,7 +3,8 @@ title: "TSP in JavaScript (Evolutionary)"
 categories:
 - Javascript
 tags: [javascript, tsp, evolutionary algorithm]
-image: /assets/images/tsp_evolutionary.png
+header:
+  teaser: /assets/images/tsp_evolutionary.png
 resources: [/assets/js/tsp/tspBase.js, /assets/js/tsp/evolutionaryTsp.js]
 series: js-tsp
 ---

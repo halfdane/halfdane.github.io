@@ -3,7 +3,8 @@ title: "Pointillismus in Javascript"
 categories:
 - javascript
 tags: [javascript, graphic, canvas]
-image: /assets/images/pointillism1.png
+header:
+  teaser: /assets/images/pointillism1.png
 resources: [/assets/js/pointillism/pointillism.js]
 ---
 Bei meinen Experimenten mit dem Traveling Salesman Problem (Simulated Annealing, Evolutionary und Greedy mit Einsprengseln von Lin-Kernighan/Beppo Straßenkehrer) bin ich für die Anzeige der Graphen immer mal wieder am `canvas` Element vorbeigekommen und habe jetzt eine Ausrede gefunden, mich intensiver damit zu beschäftigen: automatischer Pointillismus.

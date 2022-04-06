@@ -3,7 +3,8 @@ title: "Shabby chic Ringhalter"
 categories:
 - diy
 tags: [stoff, rahmen, ringe]
-image: /assets/images/ringhalter.jpg
+header:
+  teaser: /assets/images/ringhalter.jpg
 ---
 
 T. wünscht sich eine Aufbewahrungsmöglichkeit für ihre Ringe. Randbedingungen sind: es soll nicht herumstehen und muss nur etwa zehn Ringe halten.
