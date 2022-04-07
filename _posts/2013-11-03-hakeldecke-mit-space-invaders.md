@@ -5,6 +5,7 @@ categories:
 tags: [decke, häkeln, langweilig, welle]
 header:
   teaser: /assets/images/space3.jpg
+  overlay_image: /assets/images/space4.jpg
 ---
 Ich hätte es eigentlich wissen müssen: häkeln ist echt langweilig! Dummerweise kam ich nun nicht drumherum.
 Aufgrund von etwas almost completely, but not quite, unlike einer Kneipenwette. Es fing ganz spaßig an: ich kann mich auch gut erinnern, das ich Luftmaschen in der 3. Klasse auch schon mochte, aber nie so recht darüber hinaus kam.

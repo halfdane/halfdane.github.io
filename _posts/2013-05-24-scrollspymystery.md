@@ -1,5 +1,5 @@
 ---
-title: "Initiale Position der Seite falsch – a Scrollspy Mystery [solved]"
+title: "Initiale Position der Seite falsch – <br> A Scrollspy Mystery [solved]"
 categories:
 - html
 tags:
@@ -8,7 +8,9 @@ tags:
 - scrollspy
 header:
   teaser: /assets/images/scrollspy_mystery.png
-  image: /assets/images/scrollspy_mystery.png
+  overlay_image: /assets/images/scrollspy_mystery.png
+  overlay_filter: rgba(100, 100, 0, 0.5)
+
 ---
 
 Auf einer internen Seite, die Twitter-Bootstrap nicht ganz unähnlich ist, trat das Problem auf, dass der Browser irgendwo in die Mitte der Seite gesprungen ist (also etwa so: http://twitter.github.io/bootstrap/base-css.html#forms aber ohne #forms am Ende ).

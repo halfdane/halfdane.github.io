@@ -5,6 +5,7 @@ categories:
 tags: [stoff, rahmen, ringe]
 header:
   teaser: /assets/images/ringhalter.jpg
+  overlay_image: /assets/images/ringhalter.jpg
 ---
 
 T. wünscht sich eine Aufbewahrungsmöglichkeit für ihre Ringe. Randbedingungen sind: es soll nicht herumstehen und muss nur etwa zehn Ringe halten.

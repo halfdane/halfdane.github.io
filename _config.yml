@@ -20,6 +20,8 @@ defaults:
       show_date: true
       read_time: true
       author_profile: true
+      header:
+        show_overlay_excerpt: false
   # _pages
   - scope:
       path: ""
@@ -27,6 +29,7 @@ defaults:
     values:
       layout: single
       author_profile: true
+
 
 author:
   name     : "HalfDane (he/him)"
