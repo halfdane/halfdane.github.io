@@ -7,6 +7,7 @@ tags:
 - javascript
 - scrollspy
 header:
+  teaser: /assets/images/scrollspy_mystery.png
   image: /assets/images/scrollspy_mystery.png
 ---
 

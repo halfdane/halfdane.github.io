@@ -1,0 +1,11 @@
+{% if page.footer_css %}
+{% for css in page.footer_css %}
+    <link rel="stylesheet" type="text/css" href="{{ css | relative_url }}" media=”screen” />
+{% endfor %}
+{% endif %}
+
+{% if page.footer_scripts %}
+  {% for script in page.footer_scripts %}
+    <script src="{{ script | relative_url }}"></script>
+  {% endfor %}
+{% endif %}
