@@ -1,3 +1,8 @@
 .page__hero-image {
     height: 20vw;
 }
+
+canvas {
+    background-color: white;
+    margin: 5px;
+}

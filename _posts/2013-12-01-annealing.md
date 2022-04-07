@@ -5,7 +5,7 @@ categories:
 tags: [javascript, tsp, simulated annealing]
 header:
   teaser: /assets/images/tsp_annealing.png
-resources: [/assets/js/tsp/tspBase.js, /assets/js/tsp/annealingTsp.js]
+footer_scripts: [/assets/js/tsp/tspBase.js, /assets/js/tsp/annealingTsp.js]
 series: js-tsp
 ---
 Um meine JavaScript-Kenntnisse zu vertiefen, habe mich daran gemacht einen Graphen aus Knoten und Kanten zu implementieren. Und weil das zu einfach ist, soll darauf das Traveling Salesman Problem gelöst werden :)
@@ -125,7 +125,7 @@ Ich habe den Code jetzt mal eingebunden und eine Live-Demo vorbereitet - mit 20 
 Die Ausgabe ist zunächst die initiale Tour und dann bei jeder Verbesserung ein weiteres Bild. Unten im Bild wird die aktuelle Temperatur angezeigt.
 
 <span class="target"></span>
-<span class="btn" onclick="halfdane.tsp.annealingTest(); return false;">Click zum Start</span>
+<span class="btn btn--primary btn--x-large" onclick="halfdane.tsp.annealingTest(); return false;">Click zum Start</span>
 
 Der zugehörige Code ist hier verfügbar:
 
