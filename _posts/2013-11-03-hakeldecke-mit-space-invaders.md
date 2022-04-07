@@ -2,6 +2,7 @@
 title: "Häkeldecke mit Space Invaders"
 categories:
 - diy
+- portfolio
 tags: [decke, häkeln, langweilig, welle]
 header:
   teaser: /assets/images/space3.jpg

@@ -2,6 +2,7 @@
 title: "Pointillismus in Javascript"
 categories:
 - javascript
+- portfolio
 tags: [javascript, graphic, canvas]
 header:
   teaser: /assets/images/pointillism1.png
