@@ -5,6 +5,7 @@ categories:
 tags: [javascript, tsp, simulated annealing]
 header:
   teaser: /assets/images/tsp_annealing.png
+  overlay_image: /assets/images/tsp_annealing.png
 footer_scripts: [/assets/js/tsp/tspBase.js, /assets/js/tsp/annealingTsp.js]
 series: js-tsp
 ---
