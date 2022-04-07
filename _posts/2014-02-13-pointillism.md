@@ -9,7 +9,7 @@ resources: [/assets/js/pointillism/pointillism.js]
 ---
 Bei meinen Experimenten mit dem Traveling Salesman Problem (Simulated Annealing, Evolutionary und Greedy mit Einsprengseln von Lin-Kernighan/Beppo Straßenkehrer) bin ich für die Anzeige der Graphen immer mal wieder am `canvas` Element vorbeigekommen und habe jetzt eine Ausrede gefunden, mich intensiver damit zu beschäftigen: automatischer Pointillismus.
 
-{% include figure image_path="/assets/images/http://www.artschoolvets.com/news/wp-content/uploads/2011/12/cochran_graffiti_04.jpg" alt="Moderner Pointillismus von James Cochran" caption="Moderner Pointillismus von [James Cochran](http://www.artschoolvets.com/news/2011/12/13/james-cochran-pointillismus-aus-der-spraydose/)" %}
+{% include figure image_path="http://www.artschoolvets.com/news/wp-content/uploads/2011/12/cochran_graffiti_04.jpg" alt="Moderner Pointillismus von James Cochran" caption="Moderner Pointillismus von [James Cochran](http://www.artschoolvets.com/news/2011/12/13/james-cochran-pointillismus-aus-der-spraydose/)" %}
 
 Pointillismus ist die Kunstform, bei der ein Künstler Bilder aus einzelnen Punkten konstruiert. Diese Punkte werden häufig so gesetzt, dass z.B. möglichst wenige oder große eine so starke Ausdruckskraft haben, das Motiv aber dennoch erkennbar ist.
 Industriell findet der Pointillismus seine Anwendung bei der Rasterung von Bildern, unter anderem als Vorstufe für den Druck in Zeitungen. 
