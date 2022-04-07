@@ -5,11 +5,11 @@ categories:
 tags: [javascript, graphic, canvas]
 header:
   teaser: /assets/images/pointillism1.png
-resources: [/assets/js/pointillism/pointillism.js]
+footer_scripts: [/assets/js/pointillism/pointillism.js]
 ---
 Bei meinen Experimenten mit dem Traveling Salesman Problem (Simulated Annealing, Evolutionary und Greedy mit Einsprengseln von Lin-Kernighan/Beppo Straßenkehrer) bin ich für die Anzeige der Graphen immer mal wieder am `canvas` Element vorbeigekommen und habe jetzt eine Ausrede gefunden, mich intensiver damit zu beschäftigen: automatischer Pointillismus.
 
-{% include figure image_path="http://www.artschoolvets.com/news/wp-content/uploads/2011/12/cochran_graffiti_04.jpg" alt="Moderner Pointillismus von James Cochran" caption="Moderner Pointillismus von [James Cochran](http://www.artschoolvets.com/news/2011/12/13/james-cochran-pointillismus-aus-der-spraydose/)" %}
+{% include figure image_path="http://whudat.de/images/cochran_graffiti_04.jpg" alt="Moderner Pointillismus von James Cochran" caption="Moderner Pointillismus von [James Cochran](https://www.whudat.de/streetart-james-cochran-graffiti-pointillism-6-pictures-clip/)" %}
 
 Pointillismus ist die Kunstform, bei der ein Künstler Bilder aus einzelnen Punkten konstruiert. Diese Punkte werden häufig so gesetzt, dass z.B. möglichst wenige oder große eine so starke Ausdruckskraft haben, das Motiv aber dennoch erkennbar ist.
 Industriell findet der Pointillismus seine Anwendung bei der Rasterung von Bildern, unter anderem als Vorstufe für den Druck in Zeitungen. 
@@ -17,10 +17,15 @@ Industriell findet der Pointillismus seine Anwendung bei der Rasterung von Bilde
 Die Rasterung von analogen Bildern für den analogen Druck ist wohlbekannt und erprobt. Algorithmen für digitale Rasterung hingegen sind offenbar nicht Gegenstand intensiver Forschung.
 Genau genommen habe ich zu den Thema überhaupt nur zwei Veröffentlichungen gefunden - vermutlich kommen bei Zeitungen und Magazinen proprietäre (lies: unveröffentlichte) Algorithmen zum Einsatz.
 
-Die erste Veröffentlichung, ["Stippling"](http://roberthodgin.com/stippling/), ist ein globaler Ansatz, der die Punkte als magnetische Kugeln in einem Magnetfeld betrachtet. Die Stärke des Feldes hängt vom ursprünglichen Bild ab, so dass besonders viele Kugeln zu den dunklen Stellen gezogen werden. Verfeinerungen dieser Idee ändern auch für die Größe der Punkte abhängig vom Bild, oder sorgen dafür, dass die Kugeln sich gegenseitig abstoßen, damit nicht zu viele auf einer Stelle enden.
-Obwohl die Implementierung sicherlich ziemlich reizvoll wäre, bin ich letztlich vor der Laufzeit der globalen Kontrolle aller Punkte zurückgeschreckt - das hört sich alles sehr aufwändig und langsam an. Vielleicht mach ich das ja ein anderes mal.
+Die erste Veröffentlichung, ["Stippling"](http://roberthodgin.com/stippling/) ([inzwischen entfernt - hier ein Ausschnitt](https://www.are.na/block/4070257)), 
+ist ein globaler Ansatz, der die Punkte als magnetische Kugeln in einem Magnetfeld betrachtet. 
+Die Stärke des Feldes hängt vom ursprünglichen Bild ab, so dass besonders viele Kugeln zu den dunklen Stellen gezogen werden. 
+Verfeinerungen dieser Idee ändern auch für die Größe der Punkte abhängig vom Bild, oder sorgen dafür, 
+dass die Kugeln sich gegenseitig abstoßen, damit nicht zu viele auf einer Stelle enden.
+Obwohl die Implementierung sicherlich ziemlich reizvoll wäre, bin ich letztlich vor der Laufzeit der globalen 
+Kontrolle aller Punkte zurückgeschreckt - das hört sich alles sehr aufwändig und langsam an. Vielleicht mach ich das ja ein anderes mal.
 
-Die andere Veröffentlichung, ["Weighted Voronoi Stippling"](http://mrl.nyu.edu/~ajsecord/stipples.html), beschäftigt sich mit der Idee ein Gitternetz über dem Bild aufzuspannen und die Knoten Stück für Stück in dunklere Bereiche des Bildes zu verschieben, so dass sich dort die Knoten sammeln. Die Pointillismus-Punkte befinden sich natürlich letztlich an den Knoten. (Genau genommen befinden sie sich im Mittelpunkt der Voronoi-Areale, aber da das genau die Knoten einer Delaunay-Triangulation sind, passt das schon.) Auch hiervor bin ich zurückgeschreckt, wegen des Implementierungsaufwands. Diese spezielle Art von Gitternetz ist überhaupt nicht mein Ding :-)
+Die andere Veröffentlichung, ["Weighted Voronoi Stippling"](http://mrl.nyu.edu/~ajsecord/stipples.html) ([inzwischen entfernt - hier eine Alternative](https://www.evilmadscientist.com/2012/stipplegen-weighted-voronoi-stippling-and-tsp-paths-in-processing/)), beschäftigt sich mit der Idee ein Gitternetz über dem Bild aufzuspannen und die Knoten Stück für Stück in dunklere Bereiche des Bildes zu verschieben, so dass sich dort die Knoten sammeln. Die Pointillismus-Punkte befinden sich natürlich letztlich an den Knoten. (Genau genommen befinden sie sich im Mittelpunkt der Voronoi-Areale, aber da das genau die Knoten einer Delaunay-Triangulation sind, passt das schon.) Auch hiervor bin ich zurückgeschreckt, wegen des Implementierungsaufwands. Diese spezielle Art von Gitternetz ist überhaupt nicht mein Ding :-)
 
 Ich habe mich für eine dritte Variante entschieden, die zwar nicht ganz so gute Ergebnisse liefert wie die Gitternetz-Version, dafür aber schneller ist und nicht annähernd die algorithmische Komplexität hat.
 Soweit ich weiß, gibt es bislang noch keine Veröffentlichung dieser Variante, also handelt es sich was mich angeht um meine eigene Erfindung (yay \o/,  mein erster eigener Algorithmus - vielleicht nenne ich ihn Hinnerk).
@@ -119,6 +124,7 @@ Drumherum schwirrt noch ein bisschen Logik, um ein Bild ins Dokument zu laden un
 
 <style>
     .imageRow img {
+        float: left;
         height: 300px;
     }
 
@@ -127,6 +133,7 @@ Drumherum schwirrt noch ein bisschen Logik, um ein Bild ins Dokument zu laden un
     }
 
     .imageRow canvas {
+        float: left;
         max-height: 300px;
     }
 
@@ -143,10 +150,12 @@ Wie immer hier eine Live-Demo:
 <div class="automaticInput">
     <div class="imageRow">
         <div class="target">
-            <img src="/assets/img/iris2.jpg"/>
+            <img src="/assets/images/iris2.jpg"/>
         </div>
     </div>
 </div>
+
+<div style="clear: both"></div>
 
 Und mit der Möglichkeit, ein eigenes Bild zu nutzen:
 <div class="manualInput">
@@ -156,7 +165,10 @@ Und mit der Möglichkeit, ein eigenes Bild zu nutzen:
     </div>
 </div>
 
-Der Code ist selbstverständlich auch wieder [frei](/about.html#license) verfügbar:
+<div style="clear: both"></div>
+
+
+Der Code ist selbstverständlich auch wieder [frei](/about/#urheberschaft) verfügbar:
 [pointillism.js](/assets/js/pointillism/pointillism.js)
 
 

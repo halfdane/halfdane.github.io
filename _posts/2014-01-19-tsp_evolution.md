@@ -4,8 +4,9 @@ categories:
 - Javascript
 tags: [javascript, tsp, evolutionary algorithm]
 header:
-  teaser: /assets/images/tsp_evolutionary.png
-resources: [/assets/js/tsp/tspBase.js, /assets/js/tsp/evolutionaryTsp.js]
+  teaser: /assets/images/tsp_evolutionary.png 
+  overlay_image: /assets/images/tsp_evolutionary.png 
+footer_scripts: [/assets/js/tsp/tspBase.js, /assets/js/tsp/evolutionaryTsp.js]
 series: js-tsp
 ---
 Nachdem die "Simulated Annealing"-Strategie zur Lösung des Traveling Salesman Problems [nicht so beeindruckend war] (/2013/12/01/annealing/), versuche ich mich jetzt mal an der Implementierung eines evolutionären Algorithmus' in Javascript.
@@ -30,7 +31,7 @@ Aber (wie schon beim [Simulated Annealing Algorithmus] (/2013/12/01/annealing/))
 Ich habe wiederum eine Demo vorbereitet, damit man den Algorithmus in Aktion sehen kann: 100 Generationen auf 20 Punkten. Ach ja, beim [Eintrag zum Simulated Annealing](/2013/12/01/annealing/) habe ich die Live-Demo und den Code auch noch nachgereicht :)
 
 <span class="target"></span>
-<span class="btn" onclick="halfdane.tsp.evolutionaryTest(); return false;">Click zum Start</span>
+<span class="btn btn--primary btn--x-large" onclick="halfdane.tsp.evolutionaryTest(); return false;">Click zum Start</span>
 
 Der zugehörige Code ist hier verfügbar:
 

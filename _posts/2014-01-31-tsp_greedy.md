@@ -5,7 +5,7 @@ categories:
 tags: [javascript, tsp, greedy algorithm, momo]
 header:
   teaser: /assets/images/tsp_greedy.png
-resources: [/assets/js/tsp/delaunay.js, /assets/js/tsp/tspBase.js, /assets/js/tsp/nearestNeighbourTsp.js]
+footer_scripts: [/assets/js/tsp/delaunay.js, /assets/js/tsp/tspBase.js, /assets/js/tsp/nearestNeighbourTsp.js]
 series: js-tsp
 ---
 Jetzt hab ich die Nase voll! Diese ganzen randomisierten Näherungsalgorithmen stinken doch: die Implementierung ist umständlich, die Laufzeit katastrophal und das Ergebnis eher so mittelgut. Dabei ist mir die Qualität der Tour nicht mal so wichtig. Zeit für ein bisschen Gier! Ich brauche Beppo Straßenkehrer. 
@@ -161,4 +161,4 @@ Als Beweis habe ich wie immer eine kleine Demo vorbereitet, nur diesmal nicht mi
 <label for="#pointsCount">Anzahl der Punkte</label><input id="pointsCount" value="200"/>
 </div>
 <span class="target"></span>
-<span class="btn" onclick="halfdane.tsp.greedyTest($('#pointsCount').val()); return false;">Click zum Start</span>
+<span class="btn btn--primary btn--x-large" onclick="halfdane.tsp.greedyTest($('#pointsCount').val()); return false;">Click zum Start</span>
