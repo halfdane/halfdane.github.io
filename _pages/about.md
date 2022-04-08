@@ -4,36 +4,42 @@ title: "About"
 ---
 
 ## Canned
-Um ein bisschen den Überblick zu behalten, schreibe ich hier einfach auf, was mir so über den Weg läuft:
-damit ich Sachen, die ich mal wusste, auf einfache Weise wiederfinden kann.
-(Manchmal auch nur um anzugeben :)
+To keep track of things, I'm using this site to write down whatever catches my eye: 
+so that I can easily find the stuff I used to know (and a little bit to show it off as well :) 
 
 ## Nerd
-Ich mag es, alles mögliche auszuprobieren und zu lernen.
-Nicht um gut zu sein, sondern um zu lernen. Das gibt mir Energie.
+I like experimenting, trying out new ideas and learning.
+Not to be good, but to learn. It energizes me. 
 
 ## Navigate by sight
-Meine Projekte kommen zu mir ohne zu fragen - ich lasse mich gerne von instructables inspirieren,
-aber auch Freunde und Verwandte setzen mir häufig einen Floh ins Ohr.
-Ich weiß häufig noch nicht so genau, was ich als nächstes machen werde, obwohl ich seit einem halben Jahr
- meine persönliche [Diane](http://www.highdefdigest.com/blog/twin-peaks-cooper-tapes/) als Ideenspeicher benutze, damit mir nichts mehr flöten geht.
+My projects find me by themselves - I'm often inspired by instructables, 
+but friends and family love to put a bee in my bonnet as well.
+Often I'm not entirely clear about what to do next, because I don't like to plan these projects far ahead - 
+this is my private time, and I'll spend it as I please.
 
 ## &#35;
-Vielleicht findest Du hier ja etwas, das Dich interessiert – oder auch ärgert.
-Dann schreib doch bitte einen Kommentar: du kannst sicher sein,
-dass ich alle Kommentare lese und darauf antworte.
+Maybe you find something you like - or maybe something that annoys you.
+Feel free to reach out to me: I'm responding to everyone.
 
-## Urheberschaft 
-Alles was du hier in meinem Blog findest, habe ich selbst erstellt, auch wenn ich natürlich auf den Schultern von Giganten stehe. Ich habe mich also fast überall von allen möglichen Quellen inspirieren lassen, und auch wenn ich mich stets bemühe, sie zu kenntlich zu machen, ist dies keine Doktorarbeit. Wenn du also Fehler findest oder feststellst, dass ich ohne Nennung etwas von dir benutze (oder sogar behaupte es sei meines), dann zögere bitte nicht Kontakt zu mir aufzunehmen. 
+## Copyright
+Everything you find here was created by myself, but of course I'm standing on the shoulders of giants.
+I'm getting my inspiration from all kinds of sources, and while I'm trying to point them out, this isn't a doctoral thesis.
 
-Wenn allerdings kein Verweis auf die Urheberschaft von irgendetwas zu finden ist, bin ich selbst der originäre Urheber und behalte mir alle Rechte vor. 
+So please don't hesitate to reach out to me if you find an error,
+or if you notice that I'm using something of yours without giving credit (or even pretend it's mine).
 
-## <a name="license"></a> Lizenzen
-Ohne weitere Absprachen können alle Inhalte (Texte, Bilder, Designs, Layout u.ä.) auf diesen Seiten von dir für nichtkommerzielle Zwecke genutzt werden, solange du nicht so tust, als wärst du der Urheber. 
-Die zugehörige Lizenz ist die [Creative Commons Lizenz CC BY-NC-SA 3.0 DE](http://creativecommons.org/licenses/by-nc-sa/3.0/de/). 
+If something isn't marked as the creation of someone else however, I myself am the original creator and 
+I'm reserving all rights.
 
-Alle meine Quelltexte (HTML, CSS, Javascript, Java, Ruby, Jekyll u.ä.) dürfen studiert, benutzt, weiterentwickelt und weitergegeben werden, solange alle Benutzer des abgeleiteten Werks dieselben Rechte behalten. 
-Das ist eine virale Lizenz, wie sie auch für den Linux Kernel benutzt wird: die [General Public License v.3](http://www.gnu.de/documents/gpl.de.html). 
+## <a name="license"></a> Licence
+Without any further requests, you're welcome to use all the content (text, images, designs, layout etc.)
+for non-commercial purposes, as long as you don't pretend you're the creator.
+The corresponding licence is the [Creative Commons Lizenz CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
-Falls du damit nicht einverstanden bist, solltest du nichts von hier benutzen oder Kontakt zu mir aufnehmen. 
-Mein Name ist halfdane und du kannst mich unter &lt;name>@gmx.net erreichen.
+All of my source code (HTML, CSS, Javascript, Java, Ruby, Jekyll etc) is free to be studied, improved upon, remixed and shared, 
+provided that these freedoms are passed on to the recipients of the resulting work.
+This is a viral licence, comparable to the one from the Linux kernel: the [General Public License v.3](http://www.gnu.de/documents/gpl.en.html)
+
+If you don't agree with that, you shouldn't use anything from here or reach out to me.
+
+My name is halfdane and you can reach me through &lt;name>@gmx.net
