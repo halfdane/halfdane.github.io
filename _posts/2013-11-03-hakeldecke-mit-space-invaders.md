@@ -1,8 +1,6 @@
 ---
 title: "Häkeldecke mit Space Invaders"
-categories:
-- diy
-- portfolio
+category: haekeldecke
 tags: [decke, häkeln, langweilig, welle]
 header:
   teaser: /assets/images/space3.jpg
@@ -25,10 +23,10 @@ Aber das sollte sich diesmal ändern, schließlich wollte ich auch keine Topflap
 Groß halt. Etwa einsfuffzig mal einsachzig? Abgemacht.
 
 Also Luftmaschen sind immer noch nicht schwer:
-{% include figure image_path="/assets/images/http://www.labbe.de/zzzebra/handarbeiten/haekeln_luftmaschen1.gif" alt="Luftmaschen" caption="Beispielhaft bei [labbe.de](http://www.labbe.de)" %}
+{% include figure image_path="https://www.labbe.de/media/ed/42/f1/1605442951/haekeln_luftmaschen1.svg" alt="Luftmaschen" caption="Beispielhaft bei [labbe.de](http://www.labbe.de)" %}
 
 Stäbchen fand ich schon schwieriger:
-{% include figure image_path="/assets/images/http://www.labbe.de/zzzebra/handarbeiten/haekeln_staebchen2.gif" alt="Luftmaschen" caption="Wieder [labbe.de](http://www.labbe.de)" %}
+{% include figure image_path="https://www.labbe.de/media/9a/8d/e2/1606395050/haekeln_staebchen2.svg" alt="Stäbchen" caption="Wieder [labbe.de](http://www.labbe.de)" %}
 Um Wellen zu häkeln, ist es das vermutlich das einfachste, in regelmäßigen Abständen
 Maschen zu- und abzunehmen, zum Beispiel so:
 

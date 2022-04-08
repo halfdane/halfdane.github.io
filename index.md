@@ -1,14 +1,14 @@
 ---
 layout: archive
-permalink: /
-title: "Top reads"
+title: "Unapologetically Nerdy"
 
 header:
   overlay_image: /assets/images/space4.jpg
 ---
 
+{% assign projects = site.pages | where_exp:'item', "item.name contains 'project_'" %}
 <div class="feature__wrapper">
-  {% for post in site.categories["portfolio"] %}
+  {% for post in projects %}
 
     {% if post.header.teaser %}
       {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
@@ -39,9 +39,4 @@ header:
       </div>
     </div>
   {% endfor %}
-
 </div>
-
-
-
-

@@ -1,8 +1,6 @@
 ---
 title: "Buddelschiff"
-categories:
-- diy
-- portfolio
+category: buddelschiff
 tags: [buddelschiff, holz, stoff, microbohrer, modellbau, zahnstocher]
 header:
   teaser: /assets/images/buddel_f_kiellegung4.jpg

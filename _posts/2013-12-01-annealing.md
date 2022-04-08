@@ -1,7 +1,6 @@
 ---
 title: "TSP in JavaScript (Simulated Annealing)"
-categories:
-- Javascript
+category: tsp_javascript
 tags: [javascript, tsp, simulated annealing]
 header:
   teaser: /assets/images/tsp_annealing.png

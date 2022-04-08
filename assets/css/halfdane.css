@@ -6,3 +6,10 @@ canvas {
     background-color: white;
     margin: 5px;
 }
+
+.page__title {
+     display: inline-block;
+     background: rgb(37,42,52, 0.7);
+     border-radius: 4px;
+     padding: 9px;
+ }
